@@ -1,0 +1,2 @@
+# No external Python dependencies.
+# The standalone MVP uses only the Python standard library.
