@@ -906,10 +906,23 @@ input:focus, select:focus {
   text-decoration: none;
 }
 
+.delta-theme {
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 248, 236, 0.72);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
 .delta-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+  margin-bottom: 18px;
 }
 
 .delta-card {
@@ -970,73 +983,70 @@ input:focus, select:focus {
 .delta-badge--down span { color: #b42318; }
 .delta-badge--flat span { color: #475569; }
 
-.delta-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-.delta-stat {
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 10px 12px;
-  background: rgba(255, 248, 236, 0.56);
-}
-
-.delta-stat span {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--muted);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 11px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.delta-stat strong {
-  display: block;
-  font-size: 24px;
-  line-height: 1;
-}
-
-.delta-reasons {
-  display: grid;
-  gap: 10px;
-}
-
-.delta-reason {
-  display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 12px;
+.delta-event {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255, 248, 236, 0.5);
 }
 
-.delta-reason time {
-  color: var(--muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.delta-reason h4 {
-  margin: 0 0 6px;
+.delta-event h4 {
+  margin: 8px 0 6px;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
-.delta-reason p,
-.delta-note {
+.delta-event p {
   margin: 0;
   color: var(--muted);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 13px;
   line-height: 1.55;
 }
+
+.delta-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.delta-hint {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 248, 236, 0.5);
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.delta-perspective {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 248, 236, 0.72);
+}
+
+.delta-perspective h3 {
+  margin: 0 0 10px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.delta-perspective p {
+  margin: 0 0 10px;
+  color: #3e352d;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.delta-perspective p:last-child { margin-bottom: 0; }
+
 
 .dimensions {
   width: min(1320px, calc(100vw - 40px));
@@ -1110,9 +1120,7 @@ input:focus, select:focus {
   .control-panel { position: static; }
   .bars, .summary-tags { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .method-grid, .coverage-grid { grid-template-columns: 1fr; }
-  .delta-grid,
-  .delta-stats { grid-template-columns: 1fr; }
-  .delta-reason,
+  .delta-grid { grid-template-columns: 1fr; }
   .event,
   .scored-action { grid-template-columns: 1fr; }
 }

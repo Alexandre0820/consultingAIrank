@@ -568,83 +568,123 @@ function scoreDeltaMeta(delta) {
 
 function buildScoreDeltaRows() {
   const priorDate = previousWeekDate();
-  const topCompositeIds = new Set(rankedCompanies().slice(0, 12).map(({ company }) => company.id));
-  return data.companies
-    .map((company) => {
+  const currentRows = rankedCompanies();
+  const previousRankMap = buildPreviousWeekRankMap(currentRows);
+  const topIds = new Set(currentRows.slice(0, 15).map(({ company }) => company.id));
+
+  return currentRows
+    .map(({ company }, index) => {
+      const currentRank = index + 1;
+      const previousRank = previousRankMap.get(company.id) || currentRank;
+      const rankDelta = previousRank - currentRank;
       const current = recentActionScore(company);
       const previous = historicalRecentActionDetail(company, priorDate);
       const previousTitles = new Set(previous.events.map((event) => event.title));
-      const newDrivers = current.events
+      const newEvents = company.events
         .filter((event) => !previousTitles.has(event.title) && eventTimestamp(event.date) > eventTimestamp(priorDate))
-        .slice(0, 2);
+        .sort((a, b) => (b.event_score ?? 0) - (a.event_score ?? 0));
       return {
         company,
+        currentRank,
+        previousRank,
+        rankDelta,
         currentScore: current.score,
         previousScore: previous.score,
-        delta: Math.round((current.score - previous.score) * 10) / 10,
-        drivers: newDrivers,
+        scoreDelta: Math.round((current.score - previous.score) * 10) / 10,
+        newEvents,
         latestTimestamp: latestCompanySignal(company).latestTimestamp,
       };
     })
-    .filter((row) => row.delta > 0.5 && row.drivers.length && topCompositeIds.has(row.company.id))
-    .sort((a, b) => b.delta - a.delta || b.latestTimestamp - a.latestTimestamp)
-    .slice(0, 6);
+    .filter((row) => row.rankDelta > 0 && topIds.has(row.company.id))
+    .sort((a, b) => b.rankDelta - a.rankDelta || a.currentRank - b.currentRank)
+    .slice(0, 8);
+}
+
+function deltaThemeLabel(rows) {
+  const openaiCount = rows.filter((r) => r.newEvents.some((e) => /openai|frontier/i.test(e.title))).length;
+  const clientCount = rows.filter((r) => r.newEvents.some((e) => e.type === "client_proof")).length;
+  const platformCount = rows.filter((r) => r.newEvents.some((e) => e.type === "platform")).length;
+
+  if (openaiCount >= 2) return "OpenAI 生态合作带动多家排名上升";
+  if (clientCount >= 2) return "客户案例落地推动行动力上修";
+  if (platformCount >= 2) return "自研平台发布拉高技术资产分";
+  return null;
+}
+
+function deltaPerspective(rows) {
+  const paragraphs = [];
+  const allNewEvents = rows.flatMap((r) => r.newEvents.map((e) => ({ company: r.company, event: e })));
+  const topRisers = rows.slice(0, 3).map((r) => r.company.cn);
+
+  // Paragraph 1: Structural observation
+  if (allNewEvents.length >= 3) {
+    paragraphs.push(`本周 ${rows.length} 家公司排名上升，${topRisers.join("、")} 位次变化最为显著。新增事件覆盖 ${[...new Set(allNewEvents.map((e) => typeLabel(e.event.type)))].join("、")} 等方向，<b>AI 咨询竞争已从单一合作签约扩展至多维能力比拼</b>。`);
+  } else if (allNewEvents.length >= 1) {
+    paragraphs.push(`本周 ${rows.length} 家公司排名上升，但新增事件仅 ${allNewEvents.length} 条，排名变化主要源于评分模型中新鲜度因子的自然衰减。<b>头部格局正在固化，动作频率本身正在成为竞争壁垒</b>——持续有新事件的公司与停滞的公司之间的分差在拉大。`);
+  } else {
+    paragraphs.push(`本周 ${rows.length} 家公司排名上升，无实质性新增事件，排名变化主要源于旧事件权重的自然衰减。这表明当前头部梯队处于动态均衡状态，<b>任何一条新的高信号事件都可能引发排位变动</b>。`);
+  }
+
+  // Paragraph 2: Client proof analysis
+  const clientEvents = allNewEvents.filter((e) => e.event.type === "client_proof");
+  if (clientEvents.length >= 1) {
+    const names = [...new Set(clientEvents.map((e) => e.company.cn))].join("、");
+    paragraphs.push(`${names} 本周展示了客户交付案例。<b>客户证明是行动力评分中权重最高的信号类型之一</b>——它标志着 AI 能力已从内部试验阶段进入客户生产环境。从行业演进角度看，咨询公司的 AI 竞争正在从"能力声明"阶段向"价值验证"阶段过渡，能拿出可量化客户成果的公司将在下一竞争周期中占据结构性优势。`);
+  }
+
+  // Paragraph 3: OpenAI ecosystem
+  const openaiEvents = allNewEvents.filter((e) => /openai|frontier/i.test(e.event.title));
+  if (openaiEvents.length >= 2) {
+    const names = [...new Set(openaiEvents.map((e) => e.company.cn))].join("、");
+    paragraphs.push(`OpenAI Partner Network 首发名单的公布正在重塑咨询行业的 AI 生态格局。${names} 等入选公司获得了模型厂商层面的战略背书，<b>生态合作正在成为继自研平台之后的第二条竞争主轴</b>。对于未进入该生态的公司而言，市场定位压力将持续上升。`);
+  }
+
+  // Paragraph 4: Forward-looking
+  if (rows.length >= 3) {
+    paragraphs.push(`从趋势判断，AI 咨询行业正在经历从"声量竞争"到"交付竞争"的范式转换。<b>持续产出客户案例、平台产品和生态合作的公司正在建立可累积的竞争优势</b>，而依赖单次合作公告或研究报告维持声量的公司面临排名侵蚀风险。未来 6-12 个月，这一分化预计将进一步加速。`);
+  } else if (rows.length >= 2) {
+    paragraphs.push(`当前头部梯队的分差已进入极窄区间，排位对新增事件高度敏感。<b>对于中间梯队而言，这是一个战略窗口期</b>——在下一个评估周期内拿出高信号事件（尤其是客户证明或平台发布），有望实现排名跃升。`);
+  }
+
+  return paragraphs.join("\n\n");
 }
 
 function renderScoreDelta() {
   if (!els.scoreDelta) return;
   const rows = buildScoreDeltaRows();
   if (!rows.length) {
-    els.scoreDelta.innerHTML = `<div class="empty">本周暂无足够明显的分数变化。</div>`;
+    els.scoreDelta.innerHTML = `<div class="empty">本周暂无明显排名上升。</div>`;
     return;
   }
 
-  els.scoreDelta.innerHTML = rows.map(({ company, currentScore, previousScore, delta, drivers }) => {
-    const meta = scoreDeltaMeta(delta);
+  const themeLabel = deltaThemeLabel(rows);
+  const perspective = deltaPerspective(rows);
+
+  const companyCards = rows.map((row) => {
     return `
       <article class="delta-card">
         <div class="delta-card__top">
           <div>
-            <strong>${escapeHtml(company.name)}</strong>
-            <p>${escapeHtml(company.cn)} · ${escapeHtml(company.tier)}</p>
+            <strong>${escapeHtml(row.company.name)}</strong>
+            <p>${escapeHtml(row.company.cn)} · ${escapeHtml(row.company.tier)}</p>
           </div>
-          <div class="delta-badge delta-badge--${meta.className}">
-            <span>${meta.arrow}</span>
-            <em>${escapeHtml(meta.label)}</em>
+          <div class="delta-badge delta-badge--up">
+            <span>↑ ${row.rankDelta}</span>
+            <em>第 ${row.currentRank} 名</em>
           </div>
-        </div>
-        <div class="delta-stats">
-          <div class="delta-stat">
-            <span>本周</span>
-            <strong>${currentScore.toFixed(1)}</strong>
-          </div>
-          <div class="delta-stat">
-            <span>上周</span>
-            <strong>${previousScore.toFixed(1)}</strong>
-          </div>
-          <div class="delta-stat">
-            <span>变化</span>
-            <strong>${delta > 0 ? `+${delta.toFixed(1)}` : delta.toFixed(1)}</strong>
-          </div>
-        </div>
-        <div class="delta-reasons">
-          ${drivers.length
-            ? drivers.map((event) => `
-              <article class="delta-reason">
-                <time>${escapeHtml(shortDate(event.date))}</time>
-                <div>
-                  <span class="badge" style="--event-color:${typeColor(event.type)}">${escapeHtml(typeLabel(event.type))}</span>
-                  <span class="event-contribution">新增贡献 ${event.contribution_score.toFixed(1)} 分</span>
-                  <h4>${escapeHtml(event.title)}</h4>
-                  <p>${escapeHtml(scoreReason(event))}</p>
-                </div>
-              </article>
-            `).join("")
-            : `<div class="delta-note">本周变化更多来自既有高分事件的新鲜度变化或排序权重调整，而不是新增事件。</div>`}
         </div>
       </article>
     `;
   }).join("");
+
+  els.scoreDelta.innerHTML = `
+    ${themeLabel ? `<div class="delta-theme"><strong>${escapeHtml(themeLabel)}</strong></div>` : ""}
+    <div class="delta-grid">${companyCards}</div>
+    <div class="delta-perspective">
+      <h3>我们的观察</h3>
+      <p>${escapeHtml(perspective).replaceAll("&lt;b&gt;", "<b>").replaceAll("&lt;/b&gt;", "</b>").split("\n\n").join("</p><p>")}</p>
+    </div>
+  `;
 }
 
 function movementMeta(currentRank, previousRank) {
