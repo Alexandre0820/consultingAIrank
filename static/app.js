@@ -17,6 +17,7 @@ const els = {
   scoreboard: document.querySelector("#scoreboard"),
   insightsGrid: document.querySelector("#insightsGrid"),
   newsSummary: document.querySelector("#newsSummary"),
+  scoreDelta: document.querySelector("#scoreDelta"),
 };
 
 let data = null;
@@ -502,6 +503,44 @@ function historicalActionScore(company, asOfDate) {
   return Math.round(Math.min(100, total / 2.2) * 10) / 10;
 }
 
+function historicalRecentActionDetail(company, asOfDate) {
+  const now = Date.parse(`${asOfDate}T00:00:00Z`) || Date.now();
+  const rows = company.events
+    .filter((event) => eventTimestamp(event.date) <= now)
+    .map((event) => {
+      const rawScore = Number(event.event_score ?? 0);
+      const ageDays = Math.max(0, (now - eventTimestamp(event.date)) / (1000 * 60 * 60 * 24));
+      const recencyFactor = ageDays <= 30 ? 1 : ageDays <= 90 ? 0.92 : ageDays <= 180 ? 0.82 : ageDays <= 365 ? 0.72 : 0.58;
+      const confidenceFactor = event.confidence === "high" ? 1 : event.confidence === "medium" ? 0.93 : 0.82;
+      const sourceFactor = event.source_level === "official" || event.source_level === "official_press_release"
+        ? 1
+        : event.source_level === "vendor_official"
+          ? 0.96
+          : event.source_level === "media"
+            ? 0.9
+            : 0.86;
+      return {
+        event,
+        weighted: rawScore * recencyFactor * confidenceFactor * sourceFactor,
+      };
+    })
+    .sort((a, b) => b.weighted - a.weighted);
+
+  const topRows = rows.slice(0, 3);
+  const weightedRows = topRows.map((row, index) => ({
+    ...row,
+    contribution: row.weighted * (index === 0 ? 1 : index === 1 ? 0.7 : 0.5),
+  }));
+  const total = weightedRows.reduce((sum, row) => sum + row.contribution, 0);
+  return {
+    score: Math.round(Math.min(100, total / 2.2) * 10) / 10,
+    events: weightedRows.map((row) => ({
+      ...row.event,
+      contribution_score: Math.round((row.contribution / 2.2) * 10) / 10,
+    })),
+  };
+}
+
 function previousWeekDate() {
   const current = new Date(`${data.meta.updated_at}T00:00:00Z`);
   current.setUTCDate(current.getUTCDate() - 7);
@@ -519,6 +558,93 @@ function buildPreviousWeekRankMap(rows) {
     .sort((a, b) => b.score - a.score || b.latestTimestamp - a.latestTimestamp);
 
   return new Map(previousRows.map((row, index) => [row.company.id, index + 1]));
+}
+
+function scoreDeltaMeta(delta) {
+  if (delta > 0.3) return { arrow: "↑", className: "up", label: `较上周 +${delta.toFixed(1)}` };
+  if (delta < -0.3) return { arrow: "↓", className: "down", label: `较上周 ${delta.toFixed(1)}` };
+  return { arrow: "→", className: "flat", label: "较上周基本持平" };
+}
+
+function buildScoreDeltaRows() {
+  const priorDate = previousWeekDate();
+  const topCompositeIds = new Set(rankedCompanies().slice(0, 12).map(({ company }) => company.id));
+  return data.companies
+    .map((company) => {
+      const current = recentActionScore(company);
+      const previous = historicalRecentActionDetail(company, priorDate);
+      const previousTitles = new Set(previous.events.map((event) => event.title));
+      const newDrivers = current.events
+        .filter((event) => !previousTitles.has(event.title) && eventTimestamp(event.date) > eventTimestamp(priorDate))
+        .slice(0, 2);
+      return {
+        company,
+        currentScore: current.score,
+        previousScore: previous.score,
+        delta: Math.round((current.score - previous.score) * 10) / 10,
+        drivers: newDrivers,
+        latestTimestamp: latestCompanySignal(company).latestTimestamp,
+      };
+    })
+    .filter((row) => row.delta > 0.5 && row.drivers.length && topCompositeIds.has(row.company.id))
+    .sort((a, b) => b.delta - a.delta || b.latestTimestamp - a.latestTimestamp)
+    .slice(0, 6);
+}
+
+function renderScoreDelta() {
+  if (!els.scoreDelta) return;
+  const rows = buildScoreDeltaRows();
+  if (!rows.length) {
+    els.scoreDelta.innerHTML = `<div class="empty">本周暂无足够明显的分数变化。</div>`;
+    return;
+  }
+
+  els.scoreDelta.innerHTML = rows.map(({ company, currentScore, previousScore, delta, drivers }) => {
+    const meta = scoreDeltaMeta(delta);
+    return `
+      <article class="delta-card">
+        <div class="delta-card__top">
+          <div>
+            <strong>${escapeHtml(company.name)}</strong>
+            <p>${escapeHtml(company.cn)} · ${escapeHtml(company.tier)}</p>
+          </div>
+          <div class="delta-badge delta-badge--${meta.className}">
+            <span>${meta.arrow}</span>
+            <em>${escapeHtml(meta.label)}</em>
+          </div>
+        </div>
+        <div class="delta-stats">
+          <div class="delta-stat">
+            <span>本周</span>
+            <strong>${currentScore.toFixed(1)}</strong>
+          </div>
+          <div class="delta-stat">
+            <span>上周</span>
+            <strong>${previousScore.toFixed(1)}</strong>
+          </div>
+          <div class="delta-stat">
+            <span>变化</span>
+            <strong>${delta > 0 ? `+${delta.toFixed(1)}` : delta.toFixed(1)}</strong>
+          </div>
+        </div>
+        <div class="delta-reasons">
+          ${drivers.length
+            ? drivers.map((event) => `
+              <article class="delta-reason">
+                <time>${escapeHtml(shortDate(event.date))}</time>
+                <div>
+                  <span class="badge" style="--event-color:${typeColor(event.type)}">${escapeHtml(typeLabel(event.type))}</span>
+                  <span class="event-contribution">新增贡献 ${event.contribution_score.toFixed(1)} 分</span>
+                  <h4>${escapeHtml(event.title)}</h4>
+                  <p>${escapeHtml(scoreReason(event))}</p>
+                </div>
+              </article>
+            `).join("")
+            : `<div class="delta-note">本周变化更多来自既有高分事件的新鲜度变化或排序权重调整，而不是新增事件。</div>`}
+        </div>
+      </article>
+    `;
+  }).join("");
 }
 
 function movementMeta(currentRank, previousRank) {
@@ -735,6 +861,7 @@ function renderAll() {
   renderScoreboard();
   renderInsights();
   renderNewsSummary();
+  renderScoreDelta();
 }
 
 function resetFilters() {

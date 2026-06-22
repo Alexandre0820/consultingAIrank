@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
-    "version": "standalone-mvp-0.1",
-    "updated_at": "2026-06-19",
+    "version": "standalone-mvp-0.2",
+    "updated_at": "2026-06-22",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-06-19 起纳入 2026-06-15 至 2026-06-19 的增量新闻与公开研究信号，并继续采用事件信号分、来源可信度和双层层级：新闻/事件信号分 + 公司九维综合分。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-06-22 起纳入 2026-06 上旬至中旬的新增官方生态合作、客户交付与评测信号，并继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -141,6 +141,34 @@
       ],
       "events": [
         {
+          "date": "2026-06-14",
+          "type": "partnership",
+          "title": "McKinsey / QuantumBlack 成为 OpenAI Partner Network 首发全球合作伙伴",
+          "summary": "OpenAI 官方将 McKinsey / QuantumBlack 列为 OpenAI Partner Network 首发全球合作伙伴之一，强调 McKinsey 的战略与技术能力、QuantumBlack 的交付能力可帮助客户加速 adoption、create real value 并 deliver impact。",
+          "url": "https://openai.com/index/introducing-openai-partner-network/",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "discovery_channel": "vendor_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "strategy_signal"
+          ],
+          "event_score": 88
+        },
+        {
+          "date": "2026-05-11",
+          "type": "investment",
+          "title": "OpenAI DeployCo 获多家咨询与资本机构投资，McKinsey 被报道参与",
+          "summary": "多家媒体报道 OpenAI 推出 Deployment Company，获得40亿美元以上初始资本，并收购 Tomoro 获取约150名 forward deployed engineers；报道提到 McKinsey、Bain & Company、Capgemini 等参与投资。该事件待官方链接复核。",
+          "url": "https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026",
+          "source_level": "media",
+          "confidence": "low",
+          "event_score": 91,
+          "notes": ""
+        },
+        {
           "date": "2026-02-23",
           "type": "partnership",
           "title": "McKinsey 与 OpenAI 通过 Frontier Alliance 扩展合作",
@@ -159,17 +187,6 @@
           "source_level": "official",
           "confidence": "medium",
           "event_score": 76
-        },
-        {
-          "date": "2026-05-11",
-          "type": "investment",
-          "title": "OpenAI DeployCo 获多家咨询与资本机构投资，McKinsey 被报道参与",
-          "summary": "多家媒体报道 OpenAI 推出 Deployment Company，获得40亿美元以上初始资本，并收购 Tomoro 获取约150名 forward deployed engineers；报道提到 McKinsey、Bain & Company、Capgemini 等参与投资。该事件待官方链接复核。",
-          "url": "https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026",
-          "source_level": "media",
-          "confidence": "low",
-          "event_score": 91,
-          "notes": ""
         }
       ],
       "traditional_capabilities": {
@@ -195,7 +212,7 @@
         "delivery_production": 5,
         "capital_ma": 3,
         "industry_coverage": 5,
-        "client_value_proof": 4,
+        "client_value_proof": 5,
         "governance_risk": 5,
         "thought_leadership": 5
       },
@@ -221,6 +238,42 @@
           "confidence": "medium",
           "event_score": 78,
           "notes": "待补官方 Global CMO Survey 直链。"
+        },
+        {
+          "date": "2026-06-14",
+          "type": "partnership",
+          "title": "BCG 成为 OpenAI Partner Network 首发全球合作伙伴",
+          "summary": "OpenAI 官方宣布推出 OpenAI Partner Network，BCG 作为首发全球合作伙伴之一被点名，OpenAI 特别强调其 transformation expertise、BCG X 技术能力与 forward deployed engineering talent，将帮助客户从 pilots 走向 applied AI at scale。",
+          "url": "https://openai.com/index/introducing-openai-partner-network/",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "discovery_channel": "vendor_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "strategy_signal"
+          ],
+          "event_score": 89,
+          "notes": "厂商官方直接点名，并给出合作定位与交付能力描述。"
+        },
+        {
+          "date": "2026-06-04",
+          "type": "partnership",
+          "title": "BCG 承诺到 2030 年投入 5 亿美元推进 AI for Social Impact，并与 Anthropic 合作交付",
+          "summary": "BCG 官方宣布到 2030 年投入 5 亿美元用于 AI-driven social impact，并与 Anthropic Beneficial Deployments 团队合作，在 2026 年为最多 20 家高影响力组织提供模型、培训与交付支持。",
+          "url": "https://www.bcg.com/press/4june2026-ai-transform-social-impact",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "strategy_signal",
+            "tech_partnership",
+            "delivery_production",
+            "client_value_proof"
+          ],
+          "event_score": 86
         },
         {
           "date": "2026-02-23",
@@ -282,6 +335,23 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-06-14",
+          "type": "partnership",
+          "title": "Bain 成为 OpenAI Partner Network 首发全球合作伙伴",
+          "summary": "OpenAI 官方将 Bain 列为 OpenAI Partner Network 首发全球合作伙伴之一，并强调 Bain 将 OpenAI frontier AI 与战略、技术和 enterprise transformation 能力结合，帮助客户把 AI ambition 变成 enterprise-wide impact。",
+          "url": "https://openai.com/index/introducing-openai-partner-network/",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "discovery_channel": "vendor_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "strategy_signal",
+            "delivery_production"
+          ],
+          "event_score": 87
+        },
         {
           "date": "2026-05-11",
           "type": "investment",
@@ -403,16 +473,6 @@
       ],
       "events": [
         {
-          "date": "2026",
-          "type": "partnership",
-          "title": "Kearney 与 ServiceNow 合作推进 agentic AI",
-          "summary": "Kearney 与 ServiceNow 合作，通过 ServiceNow AI Platform 帮助客户推进企业级转型、运营效率和流程优化。",
-          "url": "https://www.prnewswire.com/news-releases/kearney-announces-partnership-with-servicenow-to-accelerate-enterprise-transformation-through-agentic-ai-302684466.html",
-          "source_level": "official_press_release",
-          "confidence": "high",
-          "event_score": 80
-        },
-        {
           "date": "2026-06-03",
           "type": "platform",
           "title": "Kearney 与 Beroe 推出 Beroe MAX powered by Kearney",
@@ -422,6 +482,16 @@
           "confidence": "high",
           "event_score": 89,
           "notes": ""
+        },
+        {
+          "date": "2026",
+          "type": "partnership",
+          "title": "Kearney 与 ServiceNow 合作推进 agentic AI",
+          "summary": "Kearney 与 ServiceNow 合作，通过 ServiceNow AI Platform 帮助客户推进企业级转型、运营效率和流程优化。",
+          "url": "https://www.prnewswire.com/news-releases/kearney-announces-partnership-with-servicenow-to-accelerate-enterprise-transformation-through-agentic-ai-302684466.html",
+          "source_level": "official_press_release",
+          "confidence": "high",
+          "event_score": 80
         }
       ],
       "traditional_capabilities": {
@@ -464,16 +534,6 @@
       ],
       "events": [
         {
-          "date": "2026",
-          "type": "service_line",
-          "title": "Quotient – AI by Oliver Wyman",
-          "summary": "Oliver Wyman 官方页面将 Quotient 定位为 AI 咨询能力，覆盖 strategy、delivery、governance、build、transformation 和 operations。",
-          "url": "https://www.oliverwyman.com/our-expertise/capabilities/digital/ai-consulting-quotient.html",
-          "source_level": "official",
-          "confidence": "high",
-          "event_score": 74
-        },
-        {
           "date": "2026-05",
           "type": "client_proof",
           "title": "Oliver Wyman 与 Nippon Life 用生成式AI评估治理对话质量",
@@ -483,6 +543,16 @@
           "confidence": "high",
           "event_score": 85,
           "notes": ""
+        },
+        {
+          "date": "2026",
+          "type": "service_line",
+          "title": "Quotient – AI by Oliver Wyman",
+          "summary": "Oliver Wyman 官方页面将 Quotient 定位为 AI 咨询能力，覆盖 strategy、delivery、governance、build、transformation 和 operations。",
+          "url": "https://www.oliverwyman.com/our-expertise/capabilities/digital/ai-consulting-quotient.html",
+          "source_level": "official",
+          "confidence": "high",
+          "event_score": 74
         }
       ],
       "traditional_capabilities": {
@@ -503,12 +573,12 @@
       "confidence": "high",
       "scores": {
         "strategy_signal": 5,
-        "tech_partnership": 4,
+        "tech_partnership": 5,
         "proprietary_assets": 5,
         "delivery_production": 5,
         "capital_ma": 3,
         "industry_coverage": 5,
-        "client_value_proof": 4,
+        "client_value_proof": 5,
         "governance_risk": 5,
         "thought_leadership": 5
       },
@@ -524,6 +594,35 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-06-17",
+          "type": "client_proof",
+          "title": "Deloitte 在 Databricks Summit 展示多项 agentic AI 客户交付案例",
+          "summary": "Deloitte 官方活动页集中展示多项 Databricks Data + AI Summit 2026 客户案例，包括 M&T Bank 的 governed data science workbench、Southern Glazer 的 AI-powered semantic engineering，以及 First Horizon Bank 的 governed data marketplace 和 agentic use cases。",
+          "url": "https://www.deloitte.com/us/en/alliances/events/databricks-data-ai-summit.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "delivery_production",
+            "client_value_proof",
+            "governance_risk",
+            "industry_coverage"
+          ],
+          "event_score": 85
+        },
+        {
+          "date": "2026-06",
+          "type": "partnership",
+          "title": "Deloitte 与 Ironclad 合作推进 AI-powered contracting",
+          "summary": "法律科技媒体报道 Deloitte 与 Ironclad 合作，将 Deloitte Legal Business Services 与 Ironclad AI-powered contracting platform 结合，为合同管理提供AI能力。该事件待官方链接复核。",
+          "url": "https://www.law.com/legaltechnews/2026/06/12/legaltech-rundown-legora-announces-partnership-with-wolters-kluwer-harvey-teams-up-with-datasite-and-more-",
+          "source_level": "media",
+          "confidence": "medium",
+          "event_score": 74,
+          "notes": ""
+        },
         {
           "date": "2026",
           "type": "research",
@@ -543,17 +642,6 @@
           "source_level": "official_press_release",
           "confidence": "high",
           "event_score": 82
-        },
-        {
-          "date": "2026-06",
-          "type": "partnership",
-          "title": "Deloitte 与 Ironclad 合作推进 AI-powered contracting",
-          "summary": "法律科技媒体报道 Deloitte 与 Ironclad 合作，将 Deloitte Legal Business Services 与 Ironclad AI-powered contracting platform 结合，为合同管理提供AI能力。该事件待官方链接复核。",
-          "url": "https://www.law.com/legaltechnews/2026/06/12/legaltech-rundown-legora-announces-partnership-with-wolters-kluwer-harvey-teams-up-with-datasite-and-more-",
-          "source_level": "media",
-          "confidence": "medium",
-          "event_score": 74,
-          "notes": ""
         }
       ],
       "traditional_capabilities": {
@@ -656,24 +744,32 @@
           "event_score": 84
         },
         {
-          "date": "2023-04-26",
-          "type": "investment",
-          "title": "PwC US 三年投入 10 亿美元扩展 AI 能力",
-          "summary": "PwC US 宣布三年 10 亿美元 AI 投资，基于 Microsoft 与 OpenAI 技术扩展生成式 AI 服务。",
-          "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases/pwc-us-makes-billion-investment-in-ai-capabilities.html",
-          "source_level": "official",
+          "date": "2026-06-14",
+          "type": "partnership",
+          "title": "PwC 成为 OpenAI Partner Network 首发全球合作伙伴",
+          "summary": "OpenAI 官方将 PwC 列为 OpenAI Partner Network 首发全球合作伙伴之一。OpenAI 页面直接引用 PwC 观点，强调将 frontier capabilities 与 transformation expertise 结合，帮助客户以 responsible 方式大规模部署 AI。",
+          "url": "https://openai.com/index/introducing-openai-partner-network/",
+          "source_level": "vendor_official",
           "confidence": "high",
-          "event_score": 82
+          "discovery_channel": "vendor_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "governance_risk",
+            "delivery_production"
+          ],
+          "event_score": 88
         },
         {
-          "date": "2026",
-          "type": "service_line",
-          "title": "AI consulting and transformation services",
-          "summary": "PwC 官方 AI 服务页强调从 pilot 到 practice，覆盖 AI strategy、genAI、enterprise implementation、governance 和 industry AI solutions。",
-          "url": "https://www.pwc.com/us/en/services/ai.html",
-          "source_level": "official",
-          "confidence": "high",
-          "event_score": 68
+          "date": "2026-05-14",
+          "type": "partnership",
+          "title": "PwC 与 Anthropic 扩大合作，Claude 进入 PwC 交付体系",
+          "summary": "行业报道显示 PwC 与 Anthropic 扩大合作，计划培训并认证3万名美国专业人员使用 Claude，并将 Claude Code、Claude Cowork 等能力扩展到全球专业服务体系。该事件待官方复核。",
+          "url": "https://www.digitalapplied.com/blog/pwc-anthropic-30000-professionals-claude",
+          "source_level": "media",
+          "confidence": "medium",
+          "event_score": 86,
+          "notes": ""
         },
         {
           "date": "2026-05-04",
@@ -687,15 +783,24 @@
           "notes": ""
         },
         {
-          "date": "2026-05-14",
-          "type": "partnership",
-          "title": "PwC 与 Anthropic 扩大合作，Claude 进入 PwC 交付体系",
-          "summary": "行业报道显示 PwC 与 Anthropic 扩大合作，计划培训并认证3万名美国专业人员使用 Claude，并将 Claude Code、Claude Cowork 等能力扩展到全球专业服务体系。该事件待官方复核。",
-          "url": "https://www.digitalapplied.com/blog/pwc-anthropic-30000-professionals-claude",
-          "source_level": "media",
-          "confidence": "medium",
-          "event_score": 86,
-          "notes": ""
+          "date": "2026",
+          "type": "service_line",
+          "title": "AI consulting and transformation services",
+          "summary": "PwC 官方 AI 服务页强调从 pilot 到 practice，覆盖 AI strategy、genAI、enterprise implementation、governance 和 industry AI solutions。",
+          "url": "https://www.pwc.com/us/en/services/ai.html",
+          "source_level": "official",
+          "confidence": "high",
+          "event_score": 68
+        },
+        {
+          "date": "2023-04-26",
+          "type": "investment",
+          "title": "PwC US 三年投入 10 亿美元扩展 AI 能力",
+          "summary": "PwC US 宣布三年 10 亿美元 AI 投资，基于 Microsoft 与 OpenAI 技术扩展生成式 AI 服务。",
+          "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases/pwc-us-makes-billion-investment-in-ai-capabilities.html",
+          "source_level": "official",
+          "confidence": "high",
+          "event_score": 82
         }
       ],
       "traditional_capabilities": {
@@ -789,16 +894,6 @@
       "events": [
         {
           "date": "2026-05-21",
-          "type": "partnership",
-          "title": "EY 与 Microsoft 联合投资超过 10 亿美元推进企业 AI",
-          "summary": "EY 与 Microsoft 扩展联盟，五年投入超过 10 亿美元，帮助客户规模化 AI，并在 EY 内部向 40 万+ 人扩展 Copilot。",
-          "url": "https://news.microsoft.com/source/2026/05/21/ey-and-microsoft-announce-global-initiative-to-help-clients-scale-ai-enterprisewide-value-creation-and-move-beyond-experimentation/",
-          "source_level": "vendor_official",
-          "confidence": "high",
-          "event_score": 82
-        },
-        {
-          "date": "2026-05-21",
           "type": "client_proof",
           "title": "EY 作为 Client Zero 验证 Microsoft AI 企业部署并披露内部量化结果",
           "summary": "EY 与 Microsoft 扩展联盟，EY 作为 Client Zero 将 Copilot 扩展到全球40万+人；此前 Copilot 初始部署覆盖15万人并记录15%生产力提升，审计多智能体框架覆盖13万名 Assurance 专业人员及16万个审计项目。",
@@ -818,6 +913,16 @@
           "confidence": "high",
           "event_score": 88,
           "notes": ""
+        },
+        {
+          "date": "2026-05-21",
+          "type": "partnership",
+          "title": "EY 与 Microsoft 联合投资超过 10 亿美元推进企业 AI",
+          "summary": "EY 与 Microsoft 扩展联盟，五年投入超过 10 亿美元，帮助客户规模化 AI，并在 EY 内部向 40 万+ 人扩展 Copilot。",
+          "url": "https://news.microsoft.com/source/2026/05/21/ey-and-microsoft-announce-global-initiative-to-help-clients-scale-ai-enterprisewide-value-creation-and-move-beyond-experimentation/",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "event_score": 82
         }
       ],
       "traditional_capabilities": {
@@ -845,7 +950,7 @@
         "industry_coverage": 4,
         "client_value_proof": 4,
         "governance_risk": 5,
-        "thought_leadership": 4
+        "thought_leadership": 5
       },
       "notes": "KPMG 的亮点是治理和 agent 管理：通过 Microsoft Agent 365 强化 Trusted AI framework，并向 27.6 万专业人员铺开 Copilot。",
       "reports": [
@@ -861,6 +966,17 @@
       "events": [
         {
           "date": "2026-06-09",
+          "type": "governance",
+          "title": "KPMG 采用 Microsoft Agent 365 管理 AI agents 生命周期",
+          "summary": "KPMG 将 Microsoft Agent 365 用于 AI agents 的部署、管理、监控和更新，并向全球27.6万+专业人员扩展 Microsoft 365 Copilot；重点强调治理、可见性、问责和生命周期管理。",
+          "url": "https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "event_score": 90,
+          "notes": ""
+        },
+        {
+          "date": "2026-06-09",
           "type": "partnership",
           "title": "KPMG 与 Microsoft 扩展 AI agents 与 Copilot 部署",
           "summary": "KPMG 采用 Microsoft Agent 365 管理、监控和保护 AI agents，并向全球 27.6 万+ 专业人员扩展 Microsoft 365 Copilot。",
@@ -870,15 +986,20 @@
           "event_score": 82
         },
         {
-          "date": "2026-06-09",
-          "type": "governance",
-          "title": "KPMG 采用 Microsoft Agent 365 管理 AI agents 生命周期",
-          "summary": "KPMG 将 Microsoft Agent 365 用于 AI agents 的部署、管理、监控和更新，并向全球27.6万+专业人员扩展 Microsoft 365 Copilot；重点强调治理、可见性、问责和生命周期管理。",
-          "url": "https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/",
-          "source_level": "vendor_official",
+          "date": "2026",
+          "type": "research",
+          "title": "KPMG Global Tech Report 2026 强调 agent-empowered workforce 与 ROI",
+          "summary": "KPMG 2026 全球技术报告基于 27 个国家 2,500 名技术高管调研，强调 organizations 正从 experimentation 走向 scale，并把 ROI、adaptive strategy 和 agent-empowered workforce 作为 2026 核心议题。",
+          "url": "https://kpmg.com/fi/en/insights/ai-and-technology/kpmg-global-tech-report-2026.html",
+          "source_level": "official",
           "confidence": "high",
-          "event_score": 90,
-          "notes": ""
+          "discovery_channel": "research_page",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 79
         }
       ],
       "traditional_capabilities": {
@@ -902,11 +1023,11 @@
         "tech_partnership": 5,
         "proprietary_assets": 4,
         "delivery_production": 5,
-        "capital_ma": 3,
+        "capital_ma": 4,
         "industry_coverage": 5,
         "client_value_proof": 5,
         "governance_risk": 5,
-        "thought_leadership": 4
+        "thought_leadership": 5
       },
       "notes": "Accenture 更像 AI-first SI 与转型伙伴，OpenAI 合作和全球交付能力使其在企业级部署上很强。",
       "reports": [
@@ -921,14 +1042,56 @@
       ],
       "events": [
         {
-          "date": "2025",
+          "date": "2026-06-14",
           "type": "partnership",
-          "title": "OpenAI 与 Accenture 加速企业 reinvention",
-          "summary": "双方合作推出旗舰 AI 项目，结合 OpenAI 企业产品与 Accenture 的行业、职能和交付能力，帮助客户把传统流程变成 AI-powered workflows。",
-          "url": "https://newsroom.accenture.com/news/2025/openai-and-accenture-accelerate-enterprise-reinvention-with-advanced-ai",
+          "title": "Accenture 成为 OpenAI Partner Network 首发全球合作伙伴",
+          "summary": "OpenAI 官方将 Accenture 列为 OpenAI Partner Network 首发全球合作伙伴之一，并强调其 unmatched industry depth、global delivery scale 和把先进技术嵌入企业核心运营的能力。",
+          "url": "https://openai.com/index/introducing-openai-partner-network/",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "discovery_channel": "vendor_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "strategy_signal"
+          ],
+          "event_score": 89
+        },
+        {
+          "date": "2026-06-08",
+          "type": "research",
+          "title": "Accenture 与 CMU SEI 推出 AI Adoption Maturity Model",
+          "summary": "Accenture 官方宣布与 Carnegie Mellon University Software Engineering Institute 推出 research-validated AI Adoption Maturity Model，帮助组织从 AI experimentation 走向可预测、可重复的规模化结果。",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-and-the-carnegie-mellon-university-software-engineering-institute-launch-ai-adoption-maturity-model-to-help-organizations-scale-ai-with-predictable-outcomes",
           "source_level": "official",
           "confidence": "high",
-          "event_score": 88
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "governance_risk"
+          ],
+          "event_score": 84
+        },
+        {
+          "date": "2026-06-03",
+          "type": "investment",
+          "title": "Accenture 投资 AlphaSense，并合作把市场情报嵌入 agentic workflows",
+          "summary": "Accenture 官方宣布通过 Accenture Ventures 投资 AlphaSense，并联合把 market intelligence 嵌入企业核心 agentic workflows，目标是提升决策速度、可靠性与业务结果。",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-and-alphasense-announce-strategic-investment-and-partnership-to-bring-agentic-workflows-for-market-intelligence-to-enterprises",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "capital_ma",
+            "proprietary_assets",
+            "delivery_production",
+            "client_value_proof"
+          ],
+          "event_score": 86
         },
         {
           "date": "2026-06",
@@ -940,6 +1103,16 @@
           "confidence": "medium",
           "event_score": 83,
           "notes": ""
+        },
+        {
+          "date": "2025",
+          "type": "partnership",
+          "title": "OpenAI 与 Accenture 加速企业 reinvention",
+          "summary": "双方合作推出旗舰 AI 项目，结合 OpenAI 企业产品与 Accenture 的行业、职能和交付能力，帮助客户把传统流程变成 AI-powered workflows。",
+          "url": "https://newsroom.accenture.com/news/2025/openai-and-accenture-accelerate-enterprise-reinvention-with-advanced-ai",
+          "source_level": "official",
+          "confidence": "high",
+          "event_score": 88
         }
       ],
       "traditional_capabilities": {
@@ -982,16 +1155,6 @@
       ],
       "events": [
         {
-          "date": "2026-02-23",
-          "type": "partnership",
-          "title": "Capgemini 加入 OpenAI Frontier Alliance",
-          "summary": "Capgemini 与 OpenAI 建立多年战略伙伴关系，围绕 Frontier 平台构建企业 AI 转型、行业解决方案和治理框架。",
-          "url": "https://www.capgemini.com/us-en/news/press-releases/capgemini-joins-forces-with-openai-to-accelerate-new-era-of-ai-powered-enterprise-transformation-with-frontier-alliance/",
-          "source_level": "official",
-          "confidence": "high",
-          "event_score": 82
-        },
-        {
           "date": "2026-05-11",
           "type": "investment",
           "title": "OpenAI DeployCo 获多家咨询与资本机构投资，Capgemini 被报道参与",
@@ -1001,6 +1164,16 @@
           "confidence": "low",
           "event_score": 91,
           "notes": ""
+        },
+        {
+          "date": "2026-02-23",
+          "type": "partnership",
+          "title": "Capgemini 加入 OpenAI Frontier Alliance",
+          "summary": "Capgemini 与 OpenAI 建立多年战略伙伴关系，围绕 Frontier 平台构建企业 AI 转型、行业解决方案和治理框架。",
+          "url": "https://www.capgemini.com/us-en/news/press-releases/capgemini-joins-forces-with-openai-to-accelerate-new-era-of-ai-powered-enterprise-transformation-with-frontier-alliance/",
+          "source_level": "official",
+          "confidence": "high",
+          "event_score": 82
         }
       ],
       "traditional_capabilities": {
@@ -1043,16 +1216,6 @@
       ],
       "events": [
         {
-          "date": "2026-03-10",
-          "type": "platform",
-          "title": "IQ.AI Studio 与 agentic capabilities",
-          "summary": "FTI Technology 推出 IQ.AI Studio，作为专有 AI tasks、models 和 processes 库，并展示法律、合规、调查等场景的效率结果。",
-          "url": "https://www.fticonsulting.com/about/newsroom/press-releases/iqai-by-fti-technology-achieves-measurable-results-globally-for-worlds-largest-inhouse-legal-teams-a",
-          "source_level": "official",
-          "confidence": "high",
-          "event_score": 82
-        },
-        {
           "date": "2026-05-19",
           "type": "research",
           "title": "FTI 发布 2026 Private Equity AI Radar",
@@ -1073,6 +1236,16 @@
           "confidence": "high",
           "event_score": 82,
           "notes": ""
+        },
+        {
+          "date": "2026-03-10",
+          "type": "platform",
+          "title": "IQ.AI Studio 与 agentic capabilities",
+          "summary": "FTI Technology 推出 IQ.AI Studio，作为专有 AI tasks、models 和 processes 库，并展示法律、合规、调查等场景的效率结果。",
+          "url": "https://www.fticonsulting.com/about/newsroom/press-releases/iqai-by-fti-technology-achieves-measurable-results-globally-for-worlds-largest-inhouse-legal-teams-a",
+          "source_level": "official",
+          "confidence": "high",
+          "event_score": 82
         }
       ],
       "traditional_capabilities": {
@@ -1115,14 +1288,15 @@
       ],
       "events": [
         {
-          "date": "2026-05-05",
-          "type": "organization",
-          "title": "A&M 扩展 AI 能力并成立 Global AI Board",
-          "summary": "A&M 宣布新 AI leadership 和 Global AI Board，强调把 AI 嵌入客户交付、治理、风险管理和可衡量结果。",
-          "url": "https://www.alvarezandmarsal.com/press-release/alvarez-marsal-announces-expansion-of-ai-capabilities",
+          "date": "2026-05-19",
+          "type": "research",
+          "title": "A&M：PE 价值创造中 AI 采用率提升",
+          "summary": "A&M 私募股权价值创造调研显示，63%受访PE机构在价值创造活动中使用AI，高于2025年的41%；39%已在多个组合公司职能中部署AI并交付可衡量价值。",
+          "url": "https://www.alvarezandmarsal.com/press-release/private-equity-firms-turn-to-operational-value-creation-as-geopolitical-shocks-derail-deal-recovery",
           "source_level": "official",
           "confidence": "high",
-          "event_score": 78
+          "event_score": 78,
+          "notes": ""
         },
         {
           "date": "2026-05-05",
@@ -1136,15 +1310,14 @@
           "notes": ""
         },
         {
-          "date": "2026-05-19",
-          "type": "research",
-          "title": "A&M：PE 价值创造中 AI 采用率提升",
-          "summary": "A&M 私募股权价值创造调研显示，63%受访PE机构在价值创造活动中使用AI，高于2025年的41%；39%已在多个组合公司职能中部署AI并交付可衡量价值。",
-          "url": "https://www.alvarezandmarsal.com/press-release/private-equity-firms-turn-to-operational-value-creation-as-geopolitical-shocks-derail-deal-recovery",
+          "date": "2026-05-05",
+          "type": "organization",
+          "title": "A&M 扩展 AI 能力并成立 Global AI Board",
+          "summary": "A&M 宣布新 AI leadership 和 Global AI Board，强调把 AI 嵌入客户交付、治理、风险管理和可衡量结果。",
+          "url": "https://www.alvarezandmarsal.com/press-release/alvarez-marsal-announces-expansion-of-ai-capabilities",
           "source_level": "official",
           "confidence": "high",
-          "event_score": 78,
-          "notes": ""
+          "event_score": 78
         }
       ],
       "traditional_capabilities": {
