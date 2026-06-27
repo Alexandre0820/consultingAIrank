@@ -111,11 +111,22 @@
       <div class="news-summary-grid" id="newsSummary"></div>
     </section>
 
+    <section class="weekly-events panel" aria-label="本周净新增事件">
+      <div class="panel-title">
+        <div>
+          <h2>本周净新增事件</h2>
+          <p id="weeklyWindow">按上一版快照对比，展示本次刷新真正新增入库的 AI 公开信号。</p>
+        </div>
+      </div>
+      <div class="weekly-stats" id="weeklyStats"></div>
+      <div class="news-summary-grid" id="weeklyEvents"></div>
+    </section>
+
     <section class="score-delta panel" aria-label="本周变化归因">
       <div class="panel-title">
         <div>
           <h2>本周变化归因</h2>
-          <p>本周排名上升的公司、关键事件与我们的观察。</p>
+          <p id="scoreDeltaWindow">相对上一版快照的排名上升公司、关键事件与我们的观察。</p>
         </div>
       </div>
       <div id="scoreDelta"></div>
@@ -147,7 +158,7 @@
     <section class="dimensions panel">
       <div class="panel-title">
         <h2>评分维度</h2>
-        <p>当前 MVP 采用 8 个维度，分数为 0–5 的人工 provisional score。</p>
+        <p>当前 MVP 采用 9 个维度，分数为 0–5 的人工 provisional score。</p>
       </div>
       <div class="dimension-grid" id="dimensionGrid"></div>
     </section>

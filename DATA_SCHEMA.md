@@ -2,8 +2,8 @@
 
 ## 顶层字段
 
-- `meta`：产品名、版本、更新时间、状态说明。
-- `dimensions`：8 个评分维度及其权重。
+- `meta`：产品名、版本、上一版快照时间、更新时间、状态说明。
+- `dimensions`：9 个评分维度及其权重。
 - `event_types`：AI 动作类型标签。
 - `companies`：公司清单。
 
@@ -17,7 +17,7 @@
 - `brand_note`：品牌说明，例如 Strategy& 归属 PwC。
 - `focus`：AI 动作关注点。
 - `confidence`：整体置信度：`high` / `medium` / `low`。
-- `scores`：8 个维度的 0–5 provisional score。
+- `scores`：9 个维度的 0–5 provisional score。
 - `notes`：人工观察摘要。
 - `reports`：公开 AI 报告 / 洞察列表，用于体现公司在 AI 议题上的持续研究与公开表达。
 - `coverage`：当前公司样本的覆盖质量信息，用于说明证据是否足够厚、是否存在公开披露偏差。
@@ -34,6 +34,13 @@
 - `confidence`：事件置信度：`high` / `medium` / `low`。
 - `discovery_channel`：发现渠道，例如 `company_official` / `partner_official` / `media_search` / `research_page`。
 - `verification_status`：核验状态，例如 `verified` / `partially_verified` / `pending`。
+- `discovery_channel` 与 `verification_status` 在周更时尤其重要，用来区分“新发现的净增量”与“旧事件的重复传播”。
+
+## Meta 字段补充
+
+- `meta.previous_updated_at`：上一版样本库的更新时间，用作本周净新增事件和排名变化的比较基准。
+- `meta.updated_at`：当前样本库的更新时间。
+- `meta.method_note`：当前这次周更的纳入口径说明。
 
 ## 报告字段
 

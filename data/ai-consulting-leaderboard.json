@@ -2,10 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "updated_at": "2026-06-22",
+    "previous_updated_at": "2026-06-22",
+    "updated_at": "2026-06-27",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-06-22 起纳入 2026-06 上旬至中旬的新增官方生态合作、客户交付与评测信号，并继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-06-27 起按周更口径纳入 2026-06-22 至 2026-06-27 的净新增 AI 公开信号：仅补充发布时间晚于上一版快照、且库中原先不存在的事件；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -595,6 +596,24 @@
       ],
       "events": [
         {
+          "date": "2026-06-26",
+          "type": "platform",
+          "title": "Deloitte 在 Omnia 中推出统一 agentic intelligence network",
+          "summary": "Accounting Today 报道 Deloitte 将统一 agentic intelligence network 纳入全球审计与鉴证平台 Omnia，让新旧 AI agents 在同一框架下协同执行完整工作流，包括风险识别、上下文响应、初步程序执行、证据分析与文档起草。",
+          "url": "https://www.accountingtoday.com/list/tech-news-deloitte-announces-unified-agentic-intelligence-network",
+          "source_level": "media",
+          "confidence": "medium",
+          "discovery_channel": "media_search",
+          "verification_status": "pending",
+          "dimension_tags": [
+            "proprietary_assets",
+            "delivery_production",
+            "governance_risk",
+            "client_value_proof"
+          ],
+          "event_score": 79
+        },
+        {
           "date": "2026-06-17",
           "type": "client_proof",
           "title": "Deloitte 在 Databricks Summit 展示多项 agentic AI 客户交付案例",
@@ -733,6 +752,23 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-06-23",
+          "type": "research",
+          "title": "PwC AI Jobs Barometer 获新一轮媒体引用，强调 AI 岗位与薪资继续走强",
+          "summary": "Consultancy.uk 依据 PwC 的最新 AI Jobs Barometer 报道，英国 AI 相关招聘与薪资继续跑赢整体就业市场；基于超过 10 亿条招聘广告的分析，PwC 指出企业对 AI 能力的需求正在加速，并从泛化兴趣转向更明确的专业能力要求。",
+          "url": "https://www.consultancy.uk/news/44646/uk-ai-hiringand-wages-surge-as-they-outpace-jobs-market",
+          "source_level": "media",
+          "confidence": "medium",
+          "discovery_channel": "media_search",
+          "verification_status": "pending",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage"
+          ],
+          "event_score": 74
+        },
         {
           "date": "2026-06-15",
           "type": "research",
@@ -892,6 +928,24 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-06-27",
+          "type": "platform",
+          "title": "EY 发布 enterprise-scale agentic AI operating system 案例",
+          "summary": "EY 于 2026-06-27 发布案例文章，披露其将既有 GenAI 进展整合为全球 agentic AI operating system，用统一平台支撑内部工作方式变革，并帮助客户加速 AI at scale。",
+          "url": "https://www.ey.com/en_se/insights/ai/building-an-enterprise-scale-agentic-ai-operating-system",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "proprietary_assets",
+            "delivery_production",
+            "client_value_proof",
+            "strategy_signal"
+          ],
+          "event_score": 90
+        },
         {
           "date": "2026-05-21",
           "type": "client_proof",

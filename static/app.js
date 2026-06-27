@@ -17,6 +17,10 @@ const els = {
   scoreboard: document.querySelector("#scoreboard"),
   insightsGrid: document.querySelector("#insightsGrid"),
   newsSummary: document.querySelector("#newsSummary"),
+  weeklyWindow: document.querySelector("#weeklyWindow"),
+  weeklyStats: document.querySelector("#weeklyStats"),
+  weeklyEvents: document.querySelector("#weeklyEvents"),
+  scoreDeltaWindow: document.querySelector("#scoreDeltaWindow"),
   scoreDelta: document.querySelector("#scoreDelta"),
 };
 
@@ -547,8 +551,29 @@ function previousWeekDate() {
   return current.toISOString().slice(0, 10);
 }
 
+function comparisonStartDate() {
+  return data.meta.previous_updated_at || previousWeekDate();
+}
+
+function comparisonRangeLabel() {
+  return `${comparisonStartDate()} - ${data.meta.updated_at}`;
+}
+
+function isNetNewEvent(event) {
+  const eventDate = eventTimestamp(event.date);
+  return eventDate > eventTimestamp(comparisonStartDate()) && eventDate <= eventTimestamp(data.meta.updated_at);
+}
+
+function collectWeeklyNetNewEvents() {
+  return data.companies
+    .flatMap((company) => company.events
+      .filter((event) => isNetNewEvent(event))
+      .map((event) => ({ company, event })))
+    .sort((a, b) => eventTimestamp(b.event.date) - eventTimestamp(a.event.date) || (b.event.event_score ?? 0) - (a.event.event_score ?? 0));
+}
+
 function buildPreviousWeekRankMap(rows) {
-  const priorDate = previousWeekDate();
+  const priorDate = comparisonStartDate();
   const previousRows = rows
     .map(({ company }) => ({
       company,
@@ -561,13 +586,13 @@ function buildPreviousWeekRankMap(rows) {
 }
 
 function scoreDeltaMeta(delta) {
-  if (delta > 0.3) return { arrow: "↑", className: "up", label: `较上周 +${delta.toFixed(1)}` };
-  if (delta < -0.3) return { arrow: "↓", className: "down", label: `较上周 ${delta.toFixed(1)}` };
-  return { arrow: "→", className: "flat", label: "较上周基本持平" };
+  if (delta > 0.3) return { arrow: "↑", className: "up", label: `较上期 +${delta.toFixed(1)}` };
+  if (delta < -0.3) return { arrow: "↓", className: "down", label: `较上期 ${delta.toFixed(1)}` };
+  return { arrow: "→", className: "flat", label: "较上期基本持平" };
 }
 
 function buildScoreDeltaRows() {
-  const priorDate = previousWeekDate();
+  const priorDate = comparisonStartDate();
   const currentRows = rankedCompanies();
   const previousRankMap = buildPreviousWeekRankMap(currentRows);
   const topIds = new Set(currentRows.slice(0, 15).map(({ company }) => company.id));
@@ -581,7 +606,7 @@ function buildScoreDeltaRows() {
       const previous = historicalRecentActionDetail(company, priorDate);
       const previousTitles = new Set(previous.events.map((event) => event.title));
       const newEvents = company.events
-        .filter((event) => !previousTitles.has(event.title) && eventTimestamp(event.date) > eventTimestamp(priorDate))
+        .filter((event) => !previousTitles.has(event.title) && isNetNewEvent(event))
         .sort((a, b) => (b.event_score ?? 0) - (a.event_score ?? 0));
       return {
         company,
@@ -598,6 +623,58 @@ function buildScoreDeltaRows() {
     .filter((row) => row.rankDelta > 0 && topIds.has(row.company.id))
     .sort((a, b) => b.rankDelta - a.rankDelta || a.currentRank - b.currentRank)
     .slice(0, 8);
+}
+
+function renderWeeklyEvents() {
+  if (!els.weeklyEvents || !els.weeklyStats) return;
+  const weeklyEvents = collectWeeklyNetNewEvents();
+  const affectedCompanies = new Set(weeklyEvents.map(({ company }) => company.id)).size;
+  const officialCount = weeklyEvents.filter(({ event }) => ["official", "official_press_release", "vendor_official"].includes(event.source_level)).length;
+  const mediaCount = weeklyEvents.length - officialCount;
+
+  if (els.weeklyWindow) {
+    els.weeklyWindow.textContent = `比较窗口：${comparisonRangeLabel()}。只统计发布时间晚于上一版快照、且本次新纳入库的公开 AI 信号。`;
+  }
+
+  els.weeklyStats.innerHTML = `
+    <article class="weekly-stat">
+      <span>净新增事件</span>
+      <strong>${weeklyEvents.length}</strong>
+    </article>
+    <article class="weekly-stat">
+      <span>涉及公司</span>
+      <strong>${affectedCompanies}</strong>
+    </article>
+    <article class="weekly-stat">
+      <span>高可信来源</span>
+      <strong>${officialCount}</strong>
+    </article>
+    <article class="weekly-stat">
+      <span>媒体来源</span>
+      <strong>${mediaCount}</strong>
+    </article>
+  `;
+
+  if (!weeklyEvents.length) {
+    els.weeklyEvents.innerHTML = `<div class="empty">本次刷新没有识别到净新增事件。</div>`;
+    return;
+  }
+
+  els.weeklyEvents.innerHTML = weeklyEvents
+    .map(({ company, event }) => `
+      <article class="news-card news-card--weekly">
+        <time>${escapeHtml(shortDate(event.date))}</time>
+        <span class="badge" style="--event-color:${typeColor(event.type)}">${escapeHtml(typeLabel(event.type))}</span>
+        <strong>${escapeHtml(company.name)}</strong>
+        <p>${escapeHtml(event.title)}</p>
+        <div class="dimension-chips">
+          <span class="dimension-chip">${escapeHtml(sourceLabel(event.source_level))}</span>
+          ${eventDimensionTags(event).slice(0, 2).map((tag) => `<span class="dimension-chip">${escapeHtml(dimensionName(tag))}</span>`).join("")}
+        </div>
+        <a href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">查看来源</a>
+      </article>
+    `)
+    .join("");
 }
 
 function deltaThemeLabel(rows) {
@@ -652,8 +729,11 @@ function deltaPerspective(rows) {
 function renderScoreDelta() {
   if (!els.scoreDelta) return;
   const rows = buildScoreDeltaRows();
+  if (els.scoreDeltaWindow) {
+    els.scoreDeltaWindow.textContent = `比较窗口：${comparisonRangeLabel()}。展示相对上一版快照排名上升的公司、对应净新增事件与我们的判断。`;
+  }
   if (!rows.length) {
-    els.scoreDelta.innerHTML = `<div class="empty">本周暂无明显排名上升。</div>`;
+    els.scoreDelta.innerHTML = `<div class="empty">本次刷新暂无明显排名上升。</div>`;
     return;
   }
 
@@ -690,9 +770,9 @@ function renderScoreDelta() {
 function movementMeta(currentRank, previousRank) {
   if (!previousRank) return { arrow: "☆", label: "新进入榜单", className: "flat" };
   const diff = previousRank - currentRank;
-  if (diff > 0) return { arrow: "↑", label: `较上周上升 ${diff} 位`, className: "up" };
-  if (diff < 0) return { arrow: "↓", label: `较上周下降 ${Math.abs(diff)} 位`, className: "down" };
-  return { arrow: "→", label: "较上周持平", className: "flat" };
+  if (diff > 0) return { arrow: "↑", label: `较上期上升 ${diff} 位`, className: "up" };
+  if (diff < 0) return { arrow: "↓", label: `较上期下降 ${Math.abs(diff)} 位`, className: "down" };
+  return { arrow: "→", label: "较上期持平", className: "flat" };
 }
 
 function renderActionCard(company, rank, previousRankMap) {
@@ -901,6 +981,7 @@ function renderAll() {
   renderScoreboard();
   renderInsights();
   renderNewsSummary();
+  renderWeeklyEvents();
   renderScoreDelta();
 }
 
@@ -920,7 +1001,7 @@ async function init() {
   eventTypes = data.event_types;
   dimensions = data.dimensions;
 
-  els.updatedAt.textContent = `数据更新：${data.meta.updated_at}`;
+  els.updatedAt.textContent = `数据更新：${data.meta.updated_at}（对比 ${comparisonStartDate()}）`;
   els.companyCount.textContent = String(data.companies.length);
   if (els.methodIntro) {
     els.methodIntro.textContent = `我们不对单条新闻做公开排名，而是把新闻、公开报告与长期能力一起映射到公司的两套评分，并公开展示证据厚度、待核验状态与覆盖置信度。当前方法参照 ${data.meta.scoring_model_file || "SCORING_MODEL.md"}。`;
