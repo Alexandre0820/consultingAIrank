@@ -7,6 +7,45 @@
 - `event_types`：AI 动作类型标签。
 - `companies`：公司清单。
 
+## 日采集暂存层
+
+建议在 `data/daily-intake/` 下按日期存放每日研究结果，例如：
+
+- `data/daily-intake/2026-06-29.json`
+
+该层的目的不是立刻改榜，而是把当天研究到的候选事件先沉淀下来，供下一次周更时统一筛选、去重、合并。
+
+### `daily-intake` 顶层字段
+
+- `meta.research_date`：本次采集日期。
+- `meta.timezone`：采集使用的时区。
+- `meta.leaderboard_snapshot_date`：当前正式榜单最近一次 `meta.updated_at`，用于判断候选事件是否晚于正式快照。
+- `meta.status`：建议使用 `staging`。
+- `meta.collection_method`：说明本次采集使用的工具或回退方式。
+- `meta.notes`：对当天采集覆盖范围、缺口或口径做简短说明。
+- `items`：当天候选事件列表。
+
+### `daily-intake` 事件字段
+
+- `id`：候选事件唯一 ID。
+- `published_at`：来源发布日期。
+- `discovered_at`：纳入日采集池的日期。
+- `scope`：`company` / `multi_company` / `sector`。
+- `company_ids`：关联到榜单中的公司 ID 列表；纯行业观察可为空数组。
+- `company_names`：关联公司名列表，便于人工阅读。
+- `candidate_event_type`：候选事件类型，建议沿用正式榜单的事件类型枚举。
+- `title`：候选事件标题。
+- `summary`：事件摘要。
+- `why_it_matters`：为什么值得后续周更时复核或纳入。
+- `url`：来源链接。
+- `source_level`：来源可信度。
+- `confidence`：当前事件置信度。
+- `discovery_channel`：发现渠道，例如 `tavily_search` / `web_search_fallback`。
+- `verification_status`：例如 `pending` / `partially_verified` / `verified`。
+- `dimension_tags`：建议影响到的维度标签。
+- `merge_recommendation`：建议值可用 `review_for_merge` / `hold` / `skip`。
+- `merge_rationale`：说明为什么建议并入或暂不并入正式榜单。
+
 ## 公司字段
 
 - `id`：公司内部 ID。

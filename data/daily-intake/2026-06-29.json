@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "research_date": "2026-06-29",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-06-27",
+    "status": "staging",
+    "collection_method": "Primary plan is Tavily-first. In this run Tavily MCP was not available in-session, so candidates were collected with web search fallback and source-date screening.",
+    "notes": "This file stores daily research candidates for the next weekly leaderboard refresh. Items here do not change the official ranking until reviewed, deduplicated, and merged into the main dataset."
+  },
+  "items": [
+    {
+      "id": "2026-06-29-ey-agentic-os-followon",
+      "published_at": "2026-06-27",
+      "discovered_at": "2026-06-29",
+      "scope": "company",
+      "company_ids": [
+        "ey"
+      ],
+      "company_names": [
+        "EY"
+      ],
+      "candidate_event_type": "platform",
+      "title": "EY 发布 enterprise-scale agentic AI operating system 案例",
+      "summary": "EY 发布案例文章，披露其将既有 GenAI 进展整合为全球 agentic AI operating system，用统一平台支撑内部工作方式变革，并帮助客户加速 AI at scale。",
+      "why_it_matters": "这是强平台化和生产化信号，表明 EY 在内部 operating model 与外部 client enablement 上都在推进 agentic AI。",
+      "url": "https://www.ey.com/en_se/insights/ai/building-an-enterprise-scale-agentic-ai-operating-system",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "web_search_fallback",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "proprietary_assets",
+        "delivery_production",
+        "client_value_proof",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "This event is already present in the official leaderboard dataset dated 2026-06-27, so it should not be re-merged."
+    },
+    {
+      "id": "2026-06-29-deloitte-omnia-agentic-network-followon",
+      "published_at": "2026-06-26",
+      "discovered_at": "2026-06-29",
+      "scope": "company",
+      "company_ids": [
+        "deloitte"
+      ],
+      "company_names": [
+        "Deloitte"
+      ],
+      "candidate_event_type": "platform",
+      "title": "Deloitte 在 Omnia 中推出统一 agentic intelligence network",
+      "summary": "媒体报道 Deloitte 将统一 agentic intelligence network 纳入全球审计与鉴证平台 Omnia，让不同 AI agents 在同一框架下协同执行风险识别、证据分析和文档起草等工作流。",
+      "why_it_matters": "体现 Deloitte 正把 agentic AI 嵌入高频专业工作流，是典型的平台资产与交付工业化信号。",
+      "url": "https://www.accountingtoday.com/list/tech-news-deloitte-announces-unified-agentic-intelligence-network",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "web_search_fallback",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "proprietary_assets",
+        "delivery_production",
+        "governance_risk",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "This event is already present in the official leaderboard dataset dated 2026-06-27 and should stay there without duplication."
+    },
+    {
+      "id": "2026-06-29-pwc-ai-jobs-barometer-followon",
+      "published_at": "2026-06-23",
+      "discovered_at": "2026-06-29",
+      "scope": "company",
+      "company_ids": [
+        "pwc"
+      ],
+      "company_names": [
+        "PwC"
+      ],
+      "candidate_event_type": "research",
+      "title": "PwC AI Jobs Barometer 获新一轮媒体引用，强调 AI 岗位与薪资继续走强",
+      "summary": "媒体基于 PwC 的 AI Jobs Barometer 报道英国 AI 相关招聘与薪资继续跑赢整体就业市场，反映 PwC 在 AI 与劳动力议题上的公开研究影响力。",
+      "why_it_matters": "属于典型的 thought leadership 信号，但本质上仍是对既有 PwC 研究的媒体扩散。",
+      "url": "https://www.consultancy.uk/news/44646/uk-ai-hiringand-wages-surge-as-they-outpace-jobs-market",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "web_search_fallback",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "This event was already merged in the 2026-06-27 snapshot, so it should remain in the intake history only as a duplicate guardrail."
+    },
+    {
+      "id": "2026-06-29-kpmg-microsoft-agent-365-watch",
+      "published_at": "2026-06-09",
+      "discovered_at": "2026-06-29",
+      "scope": "company",
+      "company_ids": [
+        "kpmg"
+      ],
+      "company_names": [
+        "KPMG"
+      ],
+      "candidate_event_type": "governance",
+      "title": "KPMG 与 Microsoft 扩展 Agent 365 与 Copilot 的全球部署",
+      "summary": "Microsoft 披露 KPMG 将 Agent 365 用于 AI agents 的部署、监控和更新，并扩大 Microsoft 365 Copilot 的使用范围，重点强调 governance 与 lifecycle management。",
+      "why_it_matters": "这是 KPMG 在治理、生命周期管理和大规模内部部署上的强信号，但发布日期早于当前正式榜单快照。",
+      "url": "https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "web_search_fallback",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "governance_risk",
+        "tech_partnership",
+        "delivery_production"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "High-quality signal, but older than the current official snapshot date 2026-06-27. Keep only as a watch item or backfill note, not as next week's net-new addition."
+    },
+    {
+      "id": "2026-06-29-openai-partner-network-sector-check",
+      "published_at": "2026-06-14",
+      "discovered_at": "2026-06-29",
+      "scope": "multi_company",
+      "company_ids": [
+        "accenture",
+        "pwc",
+        "bcg",
+        "bain",
+        "mckinsey"
+      ],
+      "company_names": [
+        "Accenture",
+        "PwC",
+        "BCG",
+        "Bain",
+        "McKinsey / QuantumBlack"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "OpenAI Partner Network 首发名单覆盖多家头部咨询公司",
+      "summary": "OpenAI 官方在 2026-06-14 公布首发 Partner Network 名单，包含多家全球咨询公司，并强调 transformation expertise、forward deployed engineering 与 enterprise deployment 能力。",
+      "why_it_matters": "这是横向可比的高价值生态证据，适合持续作为行业比较锚点，但已早于当前快照且已并入正式榜单。",
+      "url": "https://openai.com/index/introducing-openai-partner-network/",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "web_search_fallback",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "Already reflected in the current official leaderboard and useful here only as a sector-level reference point for daily tracking."
+    }
+  ]
+}

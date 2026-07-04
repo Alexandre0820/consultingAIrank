@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-06-22",
-    "updated_at": "2026-06-27",
+    "previous_updated_at": "2026-06-27",
+    "updated_at": "2026-07-04",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-06-27 起按周更口径纳入 2026-06-22 至 2026-06-27 的净新增 AI 公开信号：仅补充发布时间晚于上一版快照、且库中原先不存在的事件；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-07-04 起按周更口径纳入 2026-06-27 至 2026-07-04 的净新增 AI 公开信号，同时补充各公司更具代表性的 AI 转型/agentic AI 官方研究入口，并修正一条 L.E.K. 下误挂 Deloitte 新闻的数据错误；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -333,6 +333,14 @@
           "url": "https://www.bain.com/insights/topics/artificial-intelligence/",
           "source_level": "official",
           "summary": "Bain 的 AI 专题页持续聚合企业级生成式 AI、价值落地与行业影响研究，体现其面向管理层的 AI 判断框架。"
+        },
+        {
+          "title": "Bain and OpenAI: a new venture to deploy AI at enterprise scale",
+          "date": "2026-05-11",
+          "publisher": "Bain & Company",
+          "url": "https://www.bain.com/about/media-center/press-releases/2026/bain-company-openai-a-new-venture-to-deploy-ai-at-enterprise-scale/",
+          "source_level": "official_press_release",
+          "summary": "Bain 与 OpenAI Deployment Company 的合作说明其 AI 叙事已从 advisory 转向 enterprise-scale deployment，本身也是极强的转型信号。"
         }
       ],
       "events": [
@@ -410,6 +418,14 @@
           "url": "https://www.rolandberger.com/en/Insights/Global-Topics/Artificial-Intelligence/",
           "source_level": "official",
           "summary": "Roland Berger 持续围绕欧洲工业、转型和 AI agents 发布专题洞察，研究密度高于一般营销内容。"
+        },
+        {
+          "title": "Our recent publications",
+          "date": "2026",
+          "publisher": "Roland Berger",
+          "url": "https://www.rolandberger.com/en/Insights/",
+          "source_level": "official",
+          "summary": "Roland Berger 的 Insights 总入口持续沉淀 AI、工业转型与 agentic 相关专题，适合后续持续补抓其更具体的 AI 研究文章。"
         }
       ],
       "events": [
@@ -470,6 +486,14 @@
           "url": "https://www.kearney.com/service/procurement/article/-/insights/how-ai-can-power-a-procurement-transformation",
           "source_level": "official",
           "summary": "Kearney 的公开 AI 洞察更偏采购和运营场景，方法聚焦流程重构与执行价值。"
+        },
+        {
+          "title": "Kearney AI Trends Report 2026",
+          "date": "2026",
+          "publisher": "Kearney",
+          "url": "https://www.kearney.com/service/digital-analytics/article/kearney-ai-trends-report-2026",
+          "source_level": "official",
+          "summary": "Kearney 已有更明确的年度 AI 趋势型输出，可作为其从单点场景洞察走向更系统 AI 观点表达的代表。"
         }
       ],
       "events": [
@@ -592,6 +616,14 @@
           "url": "https://www.deloitte.com/us/en/about/press-room/state-of-ai-report-2026.html",
           "source_level": "official",
           "summary": "Deloitte 的 State of AI 系列具备持续性和管理框架完整性，是企业 AI 采用成熟度的重要公开参照。"
+        },
+        {
+          "title": "CMOs that embrace AI transformation are well-positioned to be future CEOs",
+          "date": "2026-06-26",
+          "publisher": "Deloitte Digital",
+          "url": "https://www.deloitte.com/us/en/services/consulting/articles/cmos-ai-transformation-future-ceos.html",
+          "source_level": "official",
+          "summary": "Deloitte Digital 从管理层转型与组织领导力视角讨论 AI transformation，补强 Deloitte 在 AI 组织变革与业务重构方面的公开方法论信号。"
         }
       ],
       "events": [
@@ -630,6 +662,24 @@
             "industry_coverage"
           ],
           "event_score": 85
+        },
+        {
+          "date": "2026-06-18",
+          "type": "client_proof",
+          "title": "Deloitte 为 USGA/GHIN 提供 Rules AI 规则助手试点",
+          "summary": "媒体报道显示 Deloitte 为 USGA 的 GHIN 应用提供 Rules AI 规则助手试点，把规则解释嵌入移动端产品，体现其把 AI 交付为面向终端用户的生产级数字体验。",
+          "url": "https://www.sbnation.com/golf/1119055/deloitte-ai-us-open-rules",
+          "source_level": "media",
+          "confidence": "medium",
+          "discovery_channel": "media_search",
+          "verification_status": "pending",
+          "dimension_tags": [
+            "client_value_proof",
+            "delivery_production",
+            "industry_coverage"
+          ],
+          "event_score": 72,
+          "notes": "由 L.E.K. 条目下误挂修正回 Deloitte；待补 Deloitte 或 USGA 官方产品说明。"
         },
         {
           "date": "2026-06",
@@ -749,6 +799,14 @@
           "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer.html",
           "source_level": "official",
           "summary": "PwC 的 AI Jobs Barometer 用劳动力与岗位视角研究 AI 影响，体现其把 AI 与组织、人才和经济结构结合的思考力。"
+        },
+        {
+          "title": "OpenAI and PwC finance collaboration",
+          "date": "2026-05-04",
+          "publisher": "OpenAI / PwC",
+          "url": "https://openai.com/so-DJ/index/openai-pwc-finance-collaboration/",
+          "source_level": "vendor_official",
+          "summary": "这不是传统白皮书，但它系统展示了 PwC 如何将 AI agents 嵌入 CFO Office 流程，兼具 client zero、流程重构与企业转型方法论价值。"
         }
       ],
       "events": [
@@ -925,6 +983,14 @@
           "url": "https://www.ey.com/en_gl/insights/ai",
           "source_level": "official",
           "summary": "EY 已形成 AI insights 专题，但相较 McKinsey、Deloitte、PwC 等仍更偏洞察集合而非单一旗舰指数。"
+        },
+        {
+          "title": "Building an enterprise-scale agentic AI operating system",
+          "date": "2026-06-27",
+          "publisher": "EY",
+          "url": "https://www.ey.com/en_se/insights/ai/building-an-enterprise-scale-agentic-ai-operating-system",
+          "source_level": "official",
+          "summary": "EY 用 operating system 语言来定义 agentic AI 规模化部署路径，这份案例兼具平台、治理和组织转型视角，应视为其代表性 AI 转型研究/案例之一。"
         }
       ],
       "events": [
@@ -1092,6 +1158,14 @@
           "url": "https://www.accenture.com/us-en/insights/technology/technology-trends-2025",
           "source_level": "official",
           "summary": "Accenture 的 Technology Vision 系列虽不只聚焦 AI，但对 agentic systems 与 enterprise reinvention 的框架影响很强。"
+        },
+        {
+          "title": "AI Adoption Maturity Model",
+          "date": "2026-06-08",
+          "publisher": "Accenture / Carnegie Mellon University Software Engineering Institute",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-and-the-carnegie-mellon-university-software-engineering-institute-launch-ai-adoption-maturity-model-to-help-organizations-scale-ai-with-predictable-outcomes",
+          "source_level": "official",
+          "summary": "Accenture 把 AI 从 experimentation 走向 predictable outcomes 的成熟度模型公开化，这比泛泛趋势报告更接近企业 AI 转型方法论资产。"
         }
       ],
       "events": [
@@ -1205,6 +1279,14 @@
           "url": "https://www.capgemini.com/insights/research-library/?topics=generative-ai",
           "source_level": "official",
           "summary": "Capgemini Research Institute 在生成式 AI、行业应用和企业采用上持续有结构化研究输出。"
+        },
+        {
+          "title": "Rise of agentic AI: How trust is the key to human-AI collaboration",
+          "date": "2025-07-16",
+          "publisher": "Capgemini Research Institute",
+          "url": "https://www.capgemini.com/news/press-releases/trust-and-human-ai-collaboration-set-to-define-the-next-era-of-agentic-ai-unlocking-450-billion-opportunity-by-2028/",
+          "source_level": "official",
+          "summary": "Capgemini 对 agentic AI 的规模化采用、信任与 human-in-the-loop 的研究很成体系，应作为其 AI 转型公开思考力的代表性样本之一。"
         }
       ],
       "events": [
@@ -1410,20 +1492,17 @@
           "url": "https://www.lek.com/insights/artificial-intelligence",
           "source_level": "official",
           "summary": "L.E.K. 在行业专题上有一定 AI 研究积累，但更偏垂直行业文章集合，体系化程度一般。"
+        },
+        {
+          "title": "Revolution or extinction? Rethinking SaaS in the age of agentic AI",
+          "date": "2026",
+          "publisher": "L.E.K. Consulting",
+          "url": "https://www.lek.com/insights/technology/revolution-or-extinction-rethinking-saas-age-agentic-ai",
+          "source_level": "official",
+          "summary": "L.E.K. 对 agentic AI 对 SaaS 模式冲击的专题研究，比一般行业文章更接近公司级 AI 转型与商业模式重构判断。"
         }
       ],
       "events": [
-        {
-          "date": "2026-06-18",
-          "type": "client_proof",
-          "title": "Deloitte 为 USGA/GHIN 提供 Rules AI 规则助手试点",
-          "summary": "媒体报道显示 Deloitte 为 USGA 的 GHIN 应用提供 Rules AI 规则助手试点，把规则解释嵌入移动端产品，体现其把 AI 交付为面向终端用户的生产级数字体验。",
-          "url": "https://www.sbnation.com/golf/1119055/deloitte-ai-us-open-rules",
-          "source_level": "media",
-          "confidence": "medium",
-          "event_score": 72,
-          "notes": "待补 Deloitte 或 USGA 官方产品说明。"
-        },
         {
           "date": "2026",
           "type": "research",
