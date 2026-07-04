@@ -1,4 +1,4 @@
-{
+window.AIConsultingLeaderboardData = {
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
@@ -1635,4 +1635,4 @@
       "<60": "观察项：暂不作为正式评分依据"
     }
   }
-}
+};

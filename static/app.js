@@ -1,4 +1,4 @@
-const DATA_URL = "/data/ai-consulting-leaderboard.json";
+const DATA_URL = "../data/ai-consulting-leaderboard.json";
 
 const els = {
   updatedAt: document.querySelector("#updatedAt"),
@@ -264,19 +264,30 @@ function compositeCapabilityScore(company) {
   return longTermBase * 0.6 + action * 0.4;
 }
 
-function rankedCompanies() {
-  return data.companies
+function actionRankedCompanies(companies = data.companies) {
+  return companies
     .map((company) => ({
       company,
       action: recentActionScore(company).score,
       composite: compositeCapabilityScore(company),
-      topEvent: [...company.events].sort((a, b) => Number(b.event_score ?? 0) - Number(a.event_score ?? 0))[0] || null,
+      latestTimestamp: latestCompanySignal(company).latestTimestamp,
     }))
-    .sort((a, b) => b.composite - a.composite || b.action - a.action);
+    .sort((a, b) => b.action - a.action || b.latestTimestamp - a.latestTimestamp);
+}
+
+function compositeRankedCompanies(companies = data.companies) {
+  return companies
+    .map((company) => ({
+      company,
+      action: recentActionScore(company).score,
+      composite: compositeCapabilityScore(company),
+      latestTimestamp: latestCompanySignal(company).latestTimestamp,
+    }))
+    .sort((a, b) => b.composite - a.composite || b.action - a.action || b.latestTimestamp - a.latestTimestamp);
 }
 
 function buildInsights() {
-  const rows = rankedCompanies();
+  const rows = compositeRankedCompanies();
   const topTwo = rows.slice(0, 2).map(({ company }) => company.name).join(" 和 ");
   const topBigFour = rows.filter(({ company }) => company.tier === "Big Four").slice(0, 4);
   const mbbLeader = rows.filter(({ company }) => company.tier === "MBB")[0];
@@ -475,10 +486,10 @@ function recentActionScore(company) {
   };
 }
 
-function historicalActionScore(company, asOfDate) {
+function historicalActionScore(company, asOfDate, filterFn = () => true) {
   const now = Date.parse(`${asOfDate}T00:00:00Z`) || Date.now();
   const rows = company.events
-    .filter((event) => eventTimestamp(event.date) <= now)
+    .filter((event) => eventTimestamp(event.date) <= now && filterFn(event))
     .map((event) => {
       const rawScore = Number(event.event_score ?? 0);
       const ageDays = Math.max(0, (now - eventTimestamp(event.date)) / (1000 * 60 * 60 * 24));
@@ -561,7 +572,7 @@ function comparisonRangeLabel() {
 
 function isNetNewEvent(event) {
   const eventDate = eventTimestamp(event.date);
-  return eventDate > eventTimestamp(comparisonStartDate()) && eventDate <= eventTimestamp(data.meta.updated_at);
+  return eventDate >= eventTimestamp(comparisonStartDate()) && eventDate <= eventTimestamp(data.meta.updated_at);
 }
 
 function collectWeeklyNetNewEvents() {
@@ -585,6 +596,18 @@ function buildPreviousWeekRankMap(rows) {
   return new Map(previousRows.map((row, index) => [row.company.id, index + 1]));
 }
 
+function buildEventDrivenRankMap(rows) {
+  const baselineRows = rows
+    .map(({ company }) => ({
+      company,
+      score: historicalActionScore(company, data.meta.updated_at, (event) => !isNetNewEvent(event)),
+      latestTimestamp: latestCompanySignal(company).latestTimestamp,
+    }))
+    .sort((a, b) => b.score - a.score || b.latestTimestamp - a.latestTimestamp);
+
+  return new Map(baselineRows.map((row, index) => [row.company.id, index + 1]));
+}
+
 function scoreDeltaMeta(delta) {
   if (delta > 0.3) return { arrow: "↑", className: "up", label: `较上期 +${delta.toFixed(1)}` };
   if (delta < -0.3) return { arrow: "↓", className: "down", label: `较上期 ${delta.toFixed(1)}` };
@@ -592,9 +615,8 @@ function scoreDeltaMeta(delta) {
 }
 
 function buildScoreDeltaRows() {
-  const priorDate = comparisonStartDate();
-  const currentRows = rankedCompanies();
-  const previousRankMap = buildPreviousWeekRankMap(currentRows);
+  const currentRows = actionRankedCompanies();
+  const previousRankMap = buildEventDrivenRankMap(currentRows);
   const topIds = new Set(currentRows.slice(0, 15).map(({ company }) => company.id));
 
   return currentRows
@@ -602,25 +624,19 @@ function buildScoreDeltaRows() {
       const currentRank = index + 1;
       const previousRank = previousRankMap.get(company.id) || currentRank;
       const rankDelta = previousRank - currentRank;
-      const current = recentActionScore(company);
-      const previous = historicalRecentActionDetail(company, priorDate);
-      const previousTitles = new Set(previous.events.map((event) => event.title));
       const newEvents = company.events
-        .filter((event) => !previousTitles.has(event.title) && isNetNewEvent(event))
+        .filter((event) => isNetNewEvent(event))
         .sort((a, b) => (b.event_score ?? 0) - (a.event_score ?? 0));
       return {
         company,
         currentRank,
         previousRank,
         rankDelta,
-        currentScore: current.score,
-        previousScore: previous.score,
-        scoreDelta: Math.round((current.score - previous.score) * 10) / 10,
         newEvents,
         latestTimestamp: latestCompanySignal(company).latestTimestamp,
       };
     })
-    .filter((row) => row.rankDelta > 0 && topIds.has(row.company.id))
+    .filter((row) => row.rankDelta > 0 && row.newEvents.length > 0 && topIds.has(row.company.id))
     .sort((a, b) => b.rankDelta - a.rankDelta || a.currentRank - b.currentRank)
     .slice(0, 8);
 }
@@ -633,7 +649,19 @@ function renderWeeklyEvents() {
   const mediaCount = weeklyEvents.length - officialCount;
 
   if (els.weeklyWindow) {
-    els.weeklyWindow.textContent = `比较窗口：${comparisonRangeLabel()}。只统计发布时间晚于上一版快照、且本次新纳入库的公开 AI 信号。`;
+    els.weeklyWindow.textContent = `比较窗口：${comparisonRangeLabel()}。统计上一版快照日期至本次更新日期之间、且本次新纳入库的公开 AI 信号。`;
+  }
+
+  if (!weeklyEvents.length) {
+    els.weeklyStats.innerHTML = `
+      <article class="weekly-stat weekly-stat--empty">
+        <span>本次刷新说明</span>
+        <strong>暂无净新增事件</strong>
+        <p>本次窗口内没有新纳入的周内事件；如果排名仍有变化，就说明比较口径需要继续校验。</p>
+      </article>
+    `;
+    els.weeklyEvents.innerHTML = `<div class="empty">本次刷新没有识别到净新增事件。</div>`;
+    return;
   }
 
   els.weeklyStats.innerHTML = `
@@ -654,11 +682,6 @@ function renderWeeklyEvents() {
       <strong>${mediaCount}</strong>
     </article>
   `;
-
-  if (!weeklyEvents.length) {
-    els.weeklyEvents.innerHTML = `<div class="empty">本次刷新没有识别到净新增事件。</div>`;
-    return;
-  }
 
   els.weeklyEvents.innerHTML = weeklyEvents
     .map(({ company, event }) => `
@@ -899,16 +922,19 @@ function renderScoreboard() {
   const query = els.searchInput.value.trim();
   const tier = els.tierFilter.value;
   const eventType = els.eventFilter.value;
-  const rows = data.companies
+  const companies = data.companies
     .filter((company) => tier === "all" || company.tier === tier)
     .filter((company) => {
       if (eventType === "all") return true;
       return company.events.some((event) => event.type === eventType);
     })
-    .filter((company) => companyMatches(company, query))
-    .map((company) => ({ company, action: recentActionScore(company), latestTimestamp: latestCompanySignal(company).latestTimestamp }))
-    .sort((a, b) => b.action.score - a.action.score || b.latestTimestamp - a.latestTimestamp);
-  const previousRankMap = buildPreviousWeekRankMap(rows);
+    .filter((company) => companyMatches(company, query));
+  const rows = activeBoard === "action"
+    ? actionRankedCompanies(companies)
+    : compositeRankedCompanies(companies);
+  const previousRankMap = activeBoard === "action"
+    ? buildEventDrivenRankMap(rows)
+    : buildPreviousWeekRankMap(rows);
 
   if (!rows.length) {
     els.scoreboard.innerHTML = `<div class="panel-title"><div><h2>${activeBoard === "action" ? "AI 行动力评分榜" : "综合能力评分榜"}</h2><p>${activeBoard === "action" ? "根据最近新闻动作对公司的 AI 行动力进行评估，新闻本身不单独展示分数。" : "结合 AI 动作与公司长期能力底座的综合评分。"}</p></div></div><div class="view-switch" role="tablist" aria-label="榜单切换"><button class="view-switch__button ${activeBoard === "action" ? "is-active" : ""}" type="button">AI 行动力评分榜</button><button class="view-switch__button ${activeBoard === "composite" ? "is-active" : ""}" type="button">综合能力评分榜</button></div><div class="empty">没有匹配的公司。试试重置筛选，或搜索“OpenAI / Microsoft / agentic / IQ.AI”。</div>`;
@@ -994,9 +1020,15 @@ function resetFilters() {
 }
 
 async function init() {
-  const response = await fetch(DATA_URL);
-  if (!response.ok) throw new Error(`数据加载失败：${response.status}`);
-  data = await response.json();
+  if (window.location.protocol === "file:" && window.AIConsultingLeaderboardData) {
+    data = window.AIConsultingLeaderboardData;
+  } else if (window.location.protocol === "file:") {
+    throw new Error("本地文件模式未加载到数据文件，请确认 data/ai-consulting-leaderboard.js 与 index.html 相对路径正确。");
+  } else {
+    const response = await fetch(DATA_URL);
+    if (!response.ok) throw new Error(`数据加载失败：${response.status}`);
+    data = await response.json();
+  }
 
   eventTypes = data.event_types;
   dimensions = data.dimensions;
