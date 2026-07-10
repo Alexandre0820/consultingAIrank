@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-06-27",
-    "updated_at": "2026-07-04",
+    "previous_updated_at": "2026-07-04",
+    "updated_at": "2026-07-10",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-07-04 起按周更口径纳入 2026-06-27 至 2026-07-04 的净新增 AI 公开信号，同时补充各公司更具代表性的 AI 转型/agentic AI 官方研究入口，并修正一条 L.E.K. 下误挂 Deloitte 新闻的数据错误；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-07-10 本次刷新按周更口径纳入 2026-07-04 至 2026-07-10 的净新增 AI 公开信号；本周采取保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作与 thought leadership 更新，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -1091,6 +1091,23 @@
           "source_level": "vendor_official",
           "confidence": "high",
           "event_score": 82
+        },
+        {
+          "date": "2026-07-07",
+          "type": "service_line",
+          "title": "EY 更新 AI & Data Challenge Program 页面",
+          "summary": "EY 的 AI & Data Challenge Program 页面显示 2026-07-07 日期，属于本周可确认的 AI 能力与人才项目公开更新。这类专题页更新不如重大合作强，但能反映公司在 AI 人才、方法和品牌资产上的持续投入。",
+          "url": "https://ey.com/en_gl/careers/data-science-challenge",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "proprietary_assets",
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 72
         }
       ],
       "traditional_capabilities": {
@@ -1217,6 +1234,23 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-07-08",
+          "type": "partnership",
+          "title": "Accenture 与 Google Cloud 面向中型企业推出 agentic AI 方案",
+          "summary": "ITPro 于 2026-07-08 报道，Google Cloud 与 Accenture 推出面向中型企业的新方案，目标是帮助更多企业把 AI 从 pilot 推向 production，并以更低复杂度部署 agentic AI 工作流。这是一条周内净新增的生态与交付信号，强化了 Accenture 在企业级 AI 生产化上的执行位势。",
+          "url": "https://www.itpro.com/business/business-strategy/ai-projects-are-stalling-at-mid-market-firms-google-cloud-and-accenture-want-to-solve-that",
+          "source_level": "media",
+          "confidence": "medium",
+          "discovery_channel": "media",
+          "verification_status": "single_source",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "industry_coverage"
+          ],
+          "event_score": 79
+        },
         {
           "date": "2026-06-30",
           "type": "governance",
@@ -1446,6 +1480,23 @@
           "source_level": "official",
           "confidence": "high",
           "event_score": 82
+        },
+        {
+          "date": "2026-07-08",
+          "type": "research",
+          "title": "FTI 发布 Unintended consequences: future AI cyber risk",
+          "summary": "FTI 于 2026-07-08 发布 AI 网络风险主题文章，讨论 agentic AI 与新型攻击面的治理含义。这是一条本周可确认日期的 thought leadership 信号，强化了 FTI 在风险、调查和合规场景中的 AI 观察能力。",
+          "url": "https://fticonsulting.com/insights/articles/unintended-consequences-future-ai-cyber-risk",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "governance_risk",
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 76
         }
       ],
       "traditional_capabilities": {
