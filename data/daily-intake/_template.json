@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "research_date": "2026-07-13",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-07-13",
+    "status": "staging",
+    "collection_method": "manual_or_tavily_research",
+    "notes": "将当天收集到的候选新闻先放入池中，周更时再筛选并入正式榜单。"
+  },
+  "items": [
+    {
+      "id": "candidate-example-001",
+      "published_at": "2026-07-13",
+      "discovered_at": "2026-07-13",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "示例标题：某咨询公司发布新的 AI 合作或产品消息",
+      "summary": "一句话摘要，描述发生了什么。",
+      "why_it_matters": "说明这条新闻为什么值得进入周更复核，例如体现交付能力、客户价值或生态绑定。",
+      "url": "https://example.com/news/example",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "manual_input",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "如果它晚于正式快照、证据充分且不重复，建议并入。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    }
+  ]
+}

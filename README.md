@@ -16,6 +16,9 @@ AI咨询行动榜/
   app.py
   data/
     ai-consulting-leaderboard.json
+    daily-intake/
+      _template.json
+      YYYY-MM-DD.json
   static/
     index.html
     styles.css
@@ -31,7 +34,7 @@ AI咨询行动榜/
 ## 当前 MVP 覆盖
 
 - 17 家传统咨询 / 专业服务公司底表。
-- 8 个评分维度：
+- 9 个评分维度：
   - 战略信号
   - 科技合作深度
   - 自有 AI 平台与技术资产
@@ -40,6 +43,7 @@ AI咨询行动榜/
   - 行业场景覆盖
   - 客户价值证明
   - AI 治理与风险能力
+  - AI 思考力 / 公开研究信号
 - 事件类型：
   - 科技合作
   - 平台/工具
@@ -50,6 +54,20 @@ AI咨询行动榜/
   - 研究/指数
   - 客户证明
 - 每条事件包含日期、类型、标题、摘要、来源 URL、来源可信度和置信度。
+
+## 数据文件怎么分工
+
+- `data/ai-consulting-leaderboard.json`：正式榜单唯一数据源，前端和 HTTP 服务都只读这一份
+- `data/daily-intake/YYYY-MM-DD.json`：外部新闻候选池，先收集、后筛选、周更时再并入正式榜单
+- `research/`：研究备忘或人工资料，不直接参与页面渲染和评分计算
+
+你以后如果要手工补新闻，直接放这里：
+
+`/Users/shengyun/lobsterai/project/AI咨询行动榜/data/daily-intake/YYYY-MM-DD.json`
+
+推荐从这个模板复制一份开始填：
+
+`/Users/shengyun/lobsterai/project/AI咨询行动榜/data/daily-intake/_template.json`
 
 ## 本地启动
 

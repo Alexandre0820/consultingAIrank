@@ -12,8 +12,29 @@
 建议在 `data/daily-intake/` 下按日期存放每日研究结果，例如：
 
 - `data/daily-intake/2026-06-29.json`
+- `data/daily-intake/2026-07-13.json`
+- `data/daily-intake/_template.json`
 
 该层的目的不是立刻改榜，而是把当天研究到的候选事件先沉淀下来，供下一次周更时统一筛选、去重、合并。
+
+建议把这里视为唯一的“外部新闻候选池”入口。今后你手工补充新闻，也直接往这个目录里按日期新建或追加即可，而不是直接改正式榜单 JSON。
+
+### 推荐工作流
+
+1. 采集：每天或每周把新发现的新闻先写入 `data/daily-intake/YYYY-MM-DD.json`
+2. 初筛：对每条候选事件补齐公司映射、事件类型、维度标签、来源等级、置信度与合并建议
+3. 周更：只把 `merge_recommendation = review_for_merge` 且满足时间/去重条件的事件并入正式榜单
+4. 留痕：保留未入榜项目，作为 `hold` / `skip` / `watch` 历史池，方便下次复核
+
+### 正式榜单合并口径
+
+候选池中的新闻并不会自动加分。进入 `data/ai-consulting-leaderboard.json` 前，至少应满足：
+
+- 发布时间晚于正式榜单上次快照
+- 与正式榜单现有事件不重复
+- 公司归属可以明确映射
+- 至少有可解释的事件类型与维度影响
+- 来源与置信度达到可入榜标准，或明确标注为待复核
 
 ### `daily-intake` 顶层字段
 
@@ -45,6 +66,8 @@
 - `dimension_tags`：建议影响到的维度标签。
 - `merge_recommendation`：建议值可用 `review_for_merge` / `hold` / `skip`。
 - `merge_rationale`：说明为什么建议并入或暂不并入正式榜单。
+- `leaderboard_action`：建议值可用 `new_candidate` / `duplicate_of_leaderboard` / `watch_only`，便于区分“候选新增”“重复检索”“仅观察”。
+- `matched_leaderboard_event_id`：如果判断为重复项，可记录正式榜单中对应事件 ID。
 
 ## 公司字段
 

@@ -28,6 +28,8 @@ let data = null;
 let eventTypes = [];
 let dimensions = [];
 let activeBoard = "action";
+let compactMode = true;
+let expandAllEvidence = false;
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -384,6 +386,47 @@ function renderInsights() {
   `).join("");
 }
 
+function cardAnchorId(company) {
+  return `company-${company.id}`;
+}
+
+function renderRankNavigator(rows) {
+  const topRows = rows.slice(0, 10);
+  return `
+    <section class="rank-navigator-shell" aria-label="排名快速导航">
+      <div class="rank-navigator-shell__intro">
+        <div>
+          <p class="rank-navigator-shell__eyebrow">Quick Jump</p>
+          <h3>Top 10 排名导航</h3>
+        </div>
+        <p>先快速扫榜，再进入单家公司证据。</p>
+      </div>
+      <div class="rank-navigator">
+        ${topRows.map(({ company }, index) => `
+          <a class="rank-navigator__item rank-navigator__item--${index < 3 ? "featured" : "compact"}" href="#${escapeHtml(cardAnchorId(company))}">
+            <span class="rank-navigator__rank">#${index + 1}</span>
+            <strong>${escapeHtml(company.name)}</strong>
+            <em>${escapeHtml(company.cn || company.tier || "")}</em>
+          </a>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderBoardControls() {
+  return `
+    <div class="board-controls" aria-label="榜单浏览模式">
+      <button id="compactToggle" class="board-controls__button ${compactMode ? "is-active" : ""}" type="button" aria-pressed="${compactMode}">
+        ${compactMode ? "紧凑浏览" : "展开浏览"}
+      </button>
+      <button id="evidenceToggle" class="board-controls__button" type="button" aria-pressed="${expandAllEvidence}">
+        ${expandAllEvidence ? "折叠全部证据" : "展开全部证据"}
+      </button>
+    </div>
+  `;
+}
+
 function renderCompanyCard(company, rank) {
   const score = weightedScore(company);
   const accent = company.events[0] ? typeColor(company.events[0].type) : "#1d4ed8";
@@ -451,109 +494,80 @@ function renderCompanyCard(company, rank) {
 }
 
 function recentActionScore(company) {
+  const ACTION_SCORE_NORMALIZER = 2.2;
   const now = Date.parse(`${data.meta.updated_at}T00:00:00Z`) || Date.now();
-  const rows = company.events.map((event) => {
-    const rawScore = Number(event.event_score ?? 0);
-    const ageDays = Math.max(0, (now - eventTimestamp(event.date)) / (1000 * 60 * 60 * 24));
-    const recencyFactor = ageDays <= 30 ? 1 : ageDays <= 90 ? 0.92 : ageDays <= 180 ? 0.82 : ageDays <= 365 ? 0.72 : 0.58;
-    const confidenceFactor = event.confidence === "high" ? 1 : event.confidence === "medium" ? 0.93 : 0.82;
-    const sourceFactor = event.source_level === "official" || event.source_level === "official_press_release"
-      ? 1
-      : event.source_level === "vendor_official"
-        ? 0.96
-        : event.source_level === "media"
-          ? 0.9
-          : 0.86;
-    return {
-      event,
-      weighted: rawScore * recencyFactor * confidenceFactor * sourceFactor,
-    };
-  }).sort((a, b) => b.weighted - a.weighted);
-
-  const topRows = rows.slice(0, 3);
-  const weightedRows = topRows.map((row, index) => ({
-    ...row,
-    contribution: row.weighted * (index === 0 ? 1 : index === 1 ? 0.7 : 0.5),
-  }));
+  const weightedRows = scoreActionEvents(company.events, now);
   const total = weightedRows.reduce((sum, row) => sum + row.contribution, 0);
-  const normalized = Math.min(100, total / 2.2);
+  const normalized = Math.min(100, total / ACTION_SCORE_NORMALIZER);
   return {
     score: Math.round(normalized * 10) / 10,
     events: weightedRows.map((row) => ({
       ...row.event,
-      contribution_score: Math.round((row.contribution / 2.2) * 10) / 10,
+      contribution_score: Math.round((row.contribution / ACTION_SCORE_NORMALIZER) * 10) / 10,
     })),
   };
 }
 
 function historicalActionScore(company, asOfDate, filterFn = () => true) {
+  const ACTION_SCORE_NORMALIZER = 2.2;
   const now = Date.parse(`${asOfDate}T00:00:00Z`) || Date.now();
-  const rows = company.events
-    .filter((event) => eventTimestamp(event.date) <= now && filterFn(event))
-    .map((event) => {
-      const rawScore = Number(event.event_score ?? 0);
-      const ageDays = Math.max(0, (now - eventTimestamp(event.date)) / (1000 * 60 * 60 * 24));
-      const recencyFactor = ageDays <= 30 ? 1 : ageDays <= 90 ? 0.92 : ageDays <= 180 ? 0.82 : ageDays <= 365 ? 0.72 : 0.58;
-      const confidenceFactor = event.confidence === "high" ? 1 : event.confidence === "medium" ? 0.93 : 0.82;
-      const sourceFactor = event.source_level === "official" || event.source_level === "official_press_release"
-        ? 1
-        : event.source_level === "vendor_official"
-          ? 0.96
-          : event.source_level === "media"
-            ? 0.9
-            : 0.86;
-      return {
-        event,
-        weighted: rawScore * recencyFactor * confidenceFactor * sourceFactor,
-      };
-    })
-    .sort((a, b) => b.weighted - a.weighted);
-
-  const topRows = rows.slice(0, 3);
-  const weightedRows = topRows.map((row, index) => ({
-    ...row,
-    contribution: row.weighted * (index === 0 ? 1 : index === 1 ? 0.7 : 0.5),
-  }));
+  const weightedRows = scoreActionEvents(
+    company.events.filter((event) => eventTimestamp(event.date) <= now && filterFn(event)),
+    now,
+  );
   const total = weightedRows.reduce((sum, row) => sum + row.contribution, 0);
-  return Math.round(Math.min(100, total / 2.2) * 10) / 10;
+  return Math.round(Math.min(100, total / ACTION_SCORE_NORMALIZER) * 10) / 10;
 }
 
 function historicalRecentActionDetail(company, asOfDate) {
+  const ACTION_SCORE_NORMALIZER = 2.2;
   const now = Date.parse(`${asOfDate}T00:00:00Z`) || Date.now();
-  const rows = company.events
-    .filter((event) => eventTimestamp(event.date) <= now)
-    .map((event) => {
-      const rawScore = Number(event.event_score ?? 0);
-      const ageDays = Math.max(0, (now - eventTimestamp(event.date)) / (1000 * 60 * 60 * 24));
-      const recencyFactor = ageDays <= 30 ? 1 : ageDays <= 90 ? 0.92 : ageDays <= 180 ? 0.82 : ageDays <= 365 ? 0.72 : 0.58;
-      const confidenceFactor = event.confidence === "high" ? 1 : event.confidence === "medium" ? 0.93 : 0.82;
-      const sourceFactor = event.source_level === "official" || event.source_level === "official_press_release"
-        ? 1
-        : event.source_level === "vendor_official"
-          ? 0.96
-          : event.source_level === "media"
-            ? 0.9
-            : 0.86;
-      return {
-        event,
-        weighted: rawScore * recencyFactor * confidenceFactor * sourceFactor,
-      };
-    })
-    .sort((a, b) => b.weighted - a.weighted);
-
-  const topRows = rows.slice(0, 3);
-  const weightedRows = topRows.map((row, index) => ({
-    ...row,
-    contribution: row.weighted * (index === 0 ? 1 : index === 1 ? 0.7 : 0.5),
-  }));
+  const weightedRows = scoreActionEvents(
+    company.events.filter((event) => eventTimestamp(event.date) <= now),
+    now,
+  );
   const total = weightedRows.reduce((sum, row) => sum + row.contribution, 0);
   return {
-    score: Math.round(Math.min(100, total / 2.2) * 10) / 10,
+    score: Math.round(Math.min(100, total / ACTION_SCORE_NORMALIZER) * 10) / 10,
     events: weightedRows.map((row) => ({
       ...row.event,
-      contribution_score: Math.round((row.contribution / 2.2) * 10) / 10,
+      contribution_score: Math.round((row.contribution / ACTION_SCORE_NORMALIZER) * 10) / 10,
     })),
   };
+}
+
+function rankDecay(index) {
+  return 1 / (1 + 0.45 * index);
+}
+
+function actionEventWeight(event, now) {
+  const rawScore = Number(event.event_score ?? 0);
+  const ageDays = Math.max(0, (now - eventTimestamp(event.date)) / (1000 * 60 * 60 * 24));
+  const recencyFactor = ageDays <= 30 ? 1 : ageDays <= 90 ? 0.92 : ageDays <= 180 ? 0.82 : ageDays <= 365 ? 0.72 : 0.58;
+  const confidenceFactor = event.confidence === "high" ? 1 : event.confidence === "medium" ? 0.93 : 0.82;
+  const sourceFactor = event.source_level === "official" || event.source_level === "official_press_release"
+    ? 1
+    : event.source_level === "vendor_official"
+      ? 0.96
+      : event.source_level === "media"
+        ? 0.9
+        : 0.86;
+  return rawScore * recencyFactor * confidenceFactor * sourceFactor;
+}
+
+function scoreActionEvents(events, now) {
+  return events
+    .map((event) => ({
+      event,
+      weighted: actionEventWeight(event, now),
+    }))
+    .filter((row) => row.weighted > 0)
+    .sort((a, b) => b.weighted - a.weighted)
+    .map((row, index) => ({
+      ...row,
+      decay: rankDecay(index),
+      contribution: row.weighted * rankDecay(index),
+    }));
 }
 
 function previousWeekDate() {
@@ -819,9 +833,10 @@ function renderActionCard(company, rank, previousRankMap) {
       </article>
     `)
     .join("");
+  const detailsOpen = expandAllEvidence || !compactMode;
 
   return `
-    <article class="scored-action" style="--accent:${accent}">
+    <article id="${escapeHtml(cardAnchorId(company))}" class="scored-action ${compactMode ? "scored-action--compact" : ""}" style="--accent:${accent}">
       <div class="scored-action__rank">
         <div class="rank">#${rank}</div>
         <div class="score-large">${score.toFixed(1)}</div>
@@ -851,7 +866,13 @@ function renderActionCard(company, rank, previousRankMap) {
           </div>
         </div>
 
-        <div class="events">${evidence}</div>
+        <details class="card-details" ${detailsOpen ? "open" : ""}>
+          <summary class="card-details__summary">
+            <span>查看新闻证据与事件贡献</span>
+            <strong>${action.events.length} 条核心事件</strong>
+          </summary>
+          <div class="events">${evidence}</div>
+        </details>
       </div>
     </article>
   `;
@@ -874,9 +895,10 @@ function renderCompositeCard(company, rank) {
   const traditionalBase = traditionalCapabilityScore(company);
   const latestEvent = [...company.events].sort((a, b) => eventTimestamp(b.date) - eventTimestamp(a.date))[0];
   const accent = latestEvent ? typeColor(latestEvent.type) : "#1d4ed8";
+  const detailsOpen = expandAllEvidence || !compactMode;
 
   return `
-    <article class="rank-card" style="--accent:${accent}">
+    <article id="${escapeHtml(cardAnchorId(company))}" class="rank-card ${compactMode ? "rank-card--compact" : ""}" style="--accent:${accent}">
       <div class="rank-card__top">
         <div class="rank">#${rank}</div>
         <div>
@@ -912,8 +934,14 @@ function renderCompositeCard(company, rank) {
         </li>
       </ul>
 
-      ${renderEvidenceStrip(company)}
-      ${renderReports(company)}
+      <details class="card-details" ${detailsOpen ? "open" : ""}>
+        <summary class="card-details__summary">
+          <span>查看证据厚度与公开报告</span>
+          <strong>${company.reports?.length || 0} 份报告</strong>
+        </summary>
+        ${renderEvidenceStrip(company)}
+        ${renderReports(company)}
+      </details>
     </article>
   `;
 }
@@ -961,6 +989,8 @@ function renderScoreboard() {
       <button id="viewActionInline" class="view-switch__button ${activeBoard === "action" ? "is-active" : ""}" type="button" aria-pressed="${activeBoard === "action"}">AI 行动力评分榜</button>
       <button id="viewCompositeInline" class="view-switch__button ${activeBoard === "composite" ? "is-active" : ""}" type="button" aria-pressed="${activeBoard === "composite"}">综合能力评分榜</button>
     </div>
+    ${renderBoardControls()}
+    ${renderRankNavigator(rows)}
   ` + rows
     .map(({ company }, index) => activeBoard === "action"
       ? renderActionCard(company, index + 1, previousRankMap)
@@ -973,6 +1003,15 @@ function renderScoreboard() {
   });
   document.querySelector("#viewCompositeInline")?.addEventListener("click", () => {
     activeBoard = "composite";
+    renderScoreboard();
+  });
+  document.querySelector("#compactToggle")?.addEventListener("click", () => {
+    compactMode = !compactMode;
+    if (!compactMode) expandAllEvidence = true;
+    renderScoreboard();
+  });
+  document.querySelector("#evidenceToggle")?.addEventListener("click", () => {
+    expandAllEvidence = !expandAllEvidence;
     renderScoreboard();
   });
 }
@@ -1020,15 +1059,9 @@ function resetFilters() {
 }
 
 async function init() {
-  if (window.location.protocol === "file:" && window.AIConsultingLeaderboardData) {
-    data = window.AIConsultingLeaderboardData;
-  } else if (window.location.protocol === "file:") {
-    throw new Error("本地文件模式未加载到数据文件，请确认 data/ai-consulting-leaderboard.js 与 index.html 相对路径正确。");
-  } else {
-    const response = await fetch(DATA_URL);
-    if (!response.ok) throw new Error(`数据加载失败：${response.status}`);
-    data = await response.json();
-  }
+  const response = await fetch(DATA_URL);
+  if (!response.ok) throw new Error(`数据加载失败：${response.status}`);
+  data = await response.json();
 
   eventTypes = data.event_types;
   dimensions = data.dimensions;
