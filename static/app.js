@@ -3,11 +3,44 @@ const DATA_URL = "../data/ai-consulting-leaderboard.json";
 const els = {
   updatedAt: document.querySelector("#updatedAt"),
   companyCount: document.querySelector("#companyCount"),
+  companyCountLabel: document.querySelector("#companyCountLabel"),
+  heroTitle: document.querySelector("#heroTitle"),
+  heroSubtitle: document.querySelector("#heroSubtitle"),
+  filtersTitle: document.querySelector("#filtersTitle"),
+  filtersSubtitle: document.querySelector("#filtersSubtitle"),
+  insightsTitle: document.querySelector("#insightsTitle"),
+  insightsSubtitle: document.querySelector("#insightsSubtitle"),
+  coverageTitle: document.querySelector("#coverageTitle"),
+  coverageSubtitle: document.querySelector("#coverageSubtitle"),
+  coverageCard1Title: document.querySelector("#coverageCard1Title"),
+  coverageCard1Body: document.querySelector("#coverageCard1Body"),
+  coverageCard2Title: document.querySelector("#coverageCard2Title"),
+  coverageCard2Body: document.querySelector("#coverageCard2Body"),
+  coverageCard3Title: document.querySelector("#coverageCard3Title"),
+  coverageCard3Body: document.querySelector("#coverageCard3Body"),
+  newsSummaryTitle: document.querySelector("#newsSummaryTitle"),
+  newsSummarySubtitle: document.querySelector("#newsSummarySubtitle"),
+  weeklyTitle: document.querySelector("#weeklyTitle"),
+  deltaTitle: document.querySelector("#deltaTitle"),
+  methodTitle: document.querySelector("#methodTitle"),
+  methodCard1Title: document.querySelector("#methodCard1Title"),
+  methodCard1Body: document.querySelector("#methodCard1Body"),
+  methodCard2Title: document.querySelector("#methodCard2Title"),
+  methodCard2Body: document.querySelector("#methodCard2Body"),
+  methodCard3Title: document.querySelector("#methodCard3Title"),
+  methodCard3Body: document.querySelector("#methodCard3Body"),
+  dimensionsTitle: document.querySelector("#dimensionsTitle"),
+  dimensionsSubtitle: document.querySelector("#dimensionsSubtitle"),
+  tierLabel: document.querySelector("#tierLabel"),
+  eventLabel: document.querySelector("#eventLabel"),
+  searchLabel: document.querySelector("#searchLabel"),
   methodIntro: document.querySelector("#methodIntro"),
   scoreboardTitle: document.querySelector("#scoreboardTitle"),
   scoreboardSubtitle: document.querySelector("#scoreboardSubtitle"),
   viewAction: document.querySelector("#viewAction"),
   viewComposite: document.querySelector("#viewComposite"),
+  langZh: document.querySelector("#langZh"),
+  langEn: document.querySelector("#langEn"),
   tierFilter: document.querySelector("#tierFilter"),
   eventFilter: document.querySelector("#eventFilter"),
   searchInput: document.querySelector("#searchInput"),
@@ -30,7 +63,178 @@ let dimensions = [];
 let activeBoard = "action";
 let compactMode = true;
 let expandAllEvidence = false;
+let activeLanguage = "zh";
 const ACTION_SCORE_CURVE = 70;
+
+const I18N = {
+  zh: {
+    heroTitle: "AI咨询行动榜",
+    heroSubtitle: "不先看“谁名气最大”，而看谁正在把 AI 变成真实动作：合作、平台、服务线、并购、组织、客户价值与治理。",
+    companyCountLabel: "家传统咨询 / 专业服务公司",
+    filtersTitle: "筛选",
+    filtersSubtitle: "左侧控制筛选；中间在两个榜单之间切换查看。",
+    insightsTitle: "核心观察",
+    insightsSubtitle: "基于当前数据的关键发现，帮助快速理解 AI 咨询竞争格局。",
+    coverageTitle: "Coverage",
+    coverageSubtitle: "说明榜单如何尽量接近全面，并把证据偏差公开出来。",
+    coverageCard1Title: "统一检索模板",
+    coverageCard1Body: "所有上榜公司使用同一套检索逻辑，覆盖官网、新闻稿、研究页、合作方发布和主流媒体，减少“想到谁就搜谁”的偏差。",
+    coverageCard2Title: "来源分层降权",
+    coverageCard2Body: "官方、厂商官方、媒体和待核验来源不会被同等看待。来源越弱、核验越少，进入评分时权重越低。",
+    coverageCard3Title: "证据厚度公开",
+    coverageCard3Body: "榜单卡片会显示官方证据数、待核验证据数和覆盖置信度，帮助判断排名背后的证据是不是足够厚。",
+    newsSummaryTitle: "新闻横向总结",
+    newsSummarySubtitle: "把最近值得关注的新闻事件横向铺开，突出它影响的维度与来源。",
+    weeklyTitle: "本周净新增事件",
+    deltaTitle: "本周变化归因",
+    methodTitle: "Method",
+    methodCard1Title: "新闻证据层",
+    methodCard1Body: "每条新闻记录日期、主体、事件类型、来源可信度与影响维度，用于说明公司最近做了什么，而不是直接给新闻本身打榜。",
+    methodCard2Title: "AI 行动力评分",
+    methodCard2Body: "重点看最近新闻动作，结合新鲜度、来源质量、动作强度与影响维度，评估一家公司近期把 AI 推进到真实工作流与组织动作中的力度。",
+    methodCard3Title: "综合能力评分",
+    methodCard3Body: "在 AI 行动力基础上，再叠加公司长期 AI 能力底座、公开研究思考力与传统咨询能力，避免只看短期新闻声量而忽略交付、行业与组织基本盘。",
+    dimensionsTitle: "评分维度",
+    dimensionsSubtitle: "当前 MVP 采用 9 个维度，分数为 0–5 的人工 provisional score。",
+    reset: "重置",
+    tierLabel: "公司类型",
+    eventLabel: "事件类型",
+    searchLabel: "搜索",
+    searchPlaceholder: "公司、AI 动作、合作方",
+    all: "全部",
+    actionBoard: "AI 行动力评分榜",
+    compositeBoard: "综合能力评分榜",
+    actionSubtitle: "根据最近新闻动作对公司的 AI 行动力进行评估，新闻本身不单独展示分数。",
+    compositeSubtitle: "结合 AI 动作与公司长期能力底座的综合评分。"
+  },
+  en: {
+    heroTitle: "AI Consulting Action Ranking",
+    heroSubtitle: "This index does not start with brand prestige. It tracks which firms are turning AI into concrete moves across partnerships, platforms, service lines, M&A, organization, client value, and governance.",
+    companyCountLabel: "traditional consulting / professional services firms",
+    filtersTitle: "Filters",
+    filtersSubtitle: "Use the left panel to filter. Switch between the two rankings in the main panel.",
+    insightsTitle: "Key Observations",
+    insightsSubtitle: "A fast read on the most important patterns emerging from the current dataset.",
+    coverageTitle: "Coverage",
+    coverageSubtitle: "How the ranking tries to stay comprehensive while making evidence bias explicit.",
+    coverageCard1Title: "Standardized search template",
+    coverageCard1Body: "Every firm is reviewed using the same search logic across official sites, press releases, research pages, partner announcements, and mainstream media to reduce selective attention bias.",
+    coverageCard2Title: "Source-tier weighting",
+    coverageCard2Body: "Official, vendor-official, media, and pending-verification sources are not treated equally. Weaker sources receive lower weight in scoring.",
+    coverageCard3Title: "Evidence thickness disclosed",
+    coverageCard3Body: "Each ranking card shows official evidence count, pending-verification count, and coverage confidence so readers can judge whether a rank is backed by sufficient evidence.",
+    newsSummaryTitle: "Cross-Firm News Summary",
+    newsSummarySubtitle: "A horizontal view of recent AI-related signals, with emphasis on source quality and impacted dimensions.",
+    weeklyTitle: "Net New Signals This Week",
+    deltaTitle: "Weekly Rank Drivers",
+    methodTitle: "Method",
+    methodCard1Title: "Evidence layer",
+    methodCard1Body: "Each event is logged with date, actor, event type, source credibility, and impacted dimensions to explain what a firm actually did.",
+    methodCard2Title: "AI action score",
+    methodCard2Body: "This score emphasizes recent actions, adjusting for freshness, source quality, signal strength, and impacted dimensions to estimate a firm's near-term execution intensity in AI.",
+    methodCard3Title: "Composite capability score",
+    methodCard3Body: "This score layers longer-term AI foundations, public thought leadership, and classic consulting strengths on top of recent AI actions.",
+    dimensionsTitle: "Scoring Dimensions",
+    dimensionsSubtitle: "The current MVP uses 9 dimensions with provisional analyst-assigned scores from 0 to 5.",
+    reset: "Reset",
+    tierLabel: "Firm Type",
+    eventLabel: "Event Type",
+    searchLabel: "Search",
+    searchPlaceholder: "Firm, AI move, partner",
+    all: "All",
+    actionBoard: "AI Action Ranking",
+    compositeBoard: "Composite Capability Ranking",
+    actionSubtitle: "Ranks firms by recent AI actions. News items are treated as evidence rather than scored as standalone entries.",
+    compositeSubtitle: "Combines recent AI actions with longer-term AI foundations and classic consulting strengths."
+  }
+};
+
+const EVENT_TYPE_LABELS_EN = {
+  partnership: "Partnership",
+  platform: "Platform / Tool",
+  service_line: "Service Line",
+  investment: "Investment / M&A",
+  organization: "Organization / Hiring",
+  governance: "Governance / Risk",
+  research: "Research / Index",
+  client_proof: "Client Proof",
+};
+
+const DIMENSION_LABELS_EN = {
+  strategy_signal: "Strategic Signal",
+  tech_partnership: "Depth of Tech Partnerships",
+  proprietary_assets: "Proprietary AI Assets",
+  delivery_production: "Delivery & Productionization",
+  capital_ma: "Capital / M&A Moves",
+  industry_coverage: "Industry Coverage",
+  client_value_proof: "Client Value Proof",
+  governance_risk: "Governance & Risk",
+  thought_leadership: "Thought Leadership",
+};
+
+const DIMENSION_DESC_EN = {
+  strategy_signal: "Whether AI has entered the firm's core strategic narrative and service portfolio rather than remaining a scattered marketing topic.",
+  tech_partnership: "The depth of partnerships with key platforms such as OpenAI, Microsoft, ServiceNow, AWS, Google, or Anthropic.",
+  proprietary_assets: "Whether the firm has built reusable internal platforms, tools, knowledge bases, agent frameworks, or industry models.",
+  delivery_production: "The ability to move AI from PoC to production through engineering, workflow design, operating model changes, and scaled deployment.",
+  capital_ma: "Whether the firm is using investment, acquisition, JV, or other capital moves to strengthen AI capabilities.",
+  industry_coverage: "Whether AI activity spans multiple industries such as financial services, manufacturing, healthcare, retail, energy, legal, or private equity.",
+  client_value_proof: "Whether the firm shows quantified outcomes such as productivity gains, cost savings, revenue impact, ROI, or client case evidence.",
+  governance_risk: "Whether the firm emphasizes trusted AI, governance, compliance, monitoring, security, and model risk management.",
+  thought_leadership: "Whether the firm consistently publishes high-density AI reports, surveys, and management insights that shape enterprise understanding of AI."
+};
+
+function t(key) {
+  return I18N[activeLanguage]?.[key] ?? I18N.zh[key] ?? key;
+}
+
+function applyStaticTranslations() {
+  if (els.heroTitle) els.heroTitle.textContent = t("heroTitle");
+  if (els.heroSubtitle) els.heroSubtitle.textContent = t("heroSubtitle");
+  if (els.companyCountLabel) els.companyCountLabel.textContent = t("companyCountLabel");
+  if (els.filtersTitle) els.filtersTitle.textContent = t("filtersTitle");
+  if (els.filtersSubtitle) els.filtersSubtitle.textContent = t("filtersSubtitle");
+  if (els.insightsTitle) els.insightsTitle.textContent = t("insightsTitle");
+  if (els.insightsSubtitle) els.insightsSubtitle.textContent = t("insightsSubtitle");
+  if (els.coverageTitle) els.coverageTitle.textContent = t("coverageTitle");
+  if (els.coverageSubtitle) els.coverageSubtitle.textContent = t("coverageSubtitle");
+  if (els.coverageCard1Title) els.coverageCard1Title.textContent = t("coverageCard1Title");
+  if (els.coverageCard1Body) els.coverageCard1Body.textContent = t("coverageCard1Body");
+  if (els.coverageCard2Title) els.coverageCard2Title.textContent = t("coverageCard2Title");
+  if (els.coverageCard2Body) els.coverageCard2Body.textContent = t("coverageCard2Body");
+  if (els.coverageCard3Title) els.coverageCard3Title.textContent = t("coverageCard3Title");
+  if (els.coverageCard3Body) els.coverageCard3Body.textContent = t("coverageCard3Body");
+  if (els.newsSummaryTitle) els.newsSummaryTitle.textContent = t("newsSummaryTitle");
+  if (els.newsSummarySubtitle) els.newsSummarySubtitle.textContent = t("newsSummarySubtitle");
+  if (els.weeklyTitle) els.weeklyTitle.textContent = t("weeklyTitle");
+  if (els.deltaTitle) els.deltaTitle.textContent = t("deltaTitle");
+  if (els.methodTitle) els.methodTitle.textContent = t("methodTitle");
+  if (els.methodCard1Title) els.methodCard1Title.textContent = t("methodCard1Title");
+  if (els.methodCard1Body) els.methodCard1Body.textContent = t("methodCard1Body");
+  if (els.methodCard2Title) els.methodCard2Title.textContent = t("methodCard2Title");
+  if (els.methodCard2Body) els.methodCard2Body.textContent = t("methodCard2Body");
+  if (els.methodCard3Title) els.methodCard3Title.textContent = t("methodCard3Title");
+  if (els.methodCard3Body) els.methodCard3Body.textContent = t("methodCard3Body");
+  if (els.dimensionsTitle) els.dimensionsTitle.textContent = t("dimensionsTitle");
+  if (els.dimensionsSubtitle) els.dimensionsSubtitle.textContent = t("dimensionsSubtitle");
+  if (els.resetFilters) els.resetFilters.textContent = t("reset");
+  if (els.tierLabel) els.tierLabel.textContent = t("tierLabel");
+  if (els.eventLabel) els.eventLabel.textContent = t("eventLabel");
+  if (els.searchLabel) els.searchLabel.textContent = t("searchLabel");
+  if (els.searchInput) els.searchInput.placeholder = t("searchPlaceholder");
+  if (els.viewAction) els.viewAction.textContent = t("actionBoard");
+  if (els.viewComposite) els.viewComposite.textContent = t("compositeBoard");
+  if (els.scoreboardTitle) els.scoreboardTitle.textContent = activeBoard === "action" ? t("actionBoard") : t("compositeBoard");
+  if (els.scoreboardSubtitle) els.scoreboardSubtitle.textContent = activeBoard === "action" ? t("actionSubtitle") : t("compositeSubtitle");
+  if (els.langZh) {
+    els.langZh.classList.toggle("is-active", activeLanguage === "zh");
+    els.langZh.setAttribute("aria-pressed", String(activeLanguage === "zh"));
+  }
+  if (els.langEn) {
+    els.langEn.classList.toggle("is-active", activeLanguage === "en");
+    els.langEn.setAttribute("aria-pressed", String(activeLanguage === "en"));
+  }
+}
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -49,7 +253,8 @@ function weightedScore(company) {
 }
 
 function typeLabel(typeId) {
-  return eventTypes.find((item) => item.id === typeId)?.label ?? typeId;
+  const fallback = eventTypes.find((item) => item.id === typeId)?.label ?? typeId;
+  return activeLanguage === "en" ? (EVENT_TYPE_LABELS_EN[typeId] || fallback) : fallback;
 }
 
 function typeColor(typeId) {
@@ -57,7 +262,12 @@ function typeColor(typeId) {
 }
 
 function dimensionName(dimensionId) {
-  return dimensions.find((item) => item.id === dimensionId)?.name ?? dimensionId;
+  const fallback = dimensions.find((item) => item.id === dimensionId)?.name ?? dimensionId;
+  return activeLanguage === "en" ? (DIMENSION_LABELS_EN[dimensionId] || fallback) : fallback;
+}
+
+function dimensionDescription(dimension) {
+  return activeLanguage === "en" ? (DIMENSION_DESC_EN[dimension.id] || dimension.description) : dimension.description;
 }
 
 function eventDimensionTags(event) {
@@ -81,12 +291,20 @@ function eventDimensionTags(event) {
 
 function scoreReason(event) {
   const score = event.event_score ?? 0;
-  const tags = eventDimensionTags(event).map(dimensionName).join("、");
+  const joiner = activeLanguage === "en" ? ", " : "、";
+  const tags = eventDimensionTags(event).map(dimensionName).join(joiner);
   const source = sourceLabel(event.source_level);
   const confidence = confidenceLabel(event.confidence);
 
-  if (event.confidence === "low") return `高潜力但待核验：事件分较高，但当前来源可信度为 ${confidence}，映射 ${tags}；需要官方或一手来源复核。`;
+  if (activeLanguage === "en") {
+    if (event.confidence === "low") return `High-potential but pending verification: a relatively strong event score, but current source confidence is ${confidence}; mapped to ${tags}. An official or first-hand source is still needed.`;
+    if (score >= 90) return `Strong signal: directly changes the firm's AI capability boundary, mapped to ${tags}; source ${source}, confidence ${confidence}.`;
+    if (score >= 82) return `High signal: clear partnership, platform, or delivery relevance, mapped to ${tags}; source ${source}, confidence ${confidence}.`;
+    if (score >= 74) return `Upper-mid signal: meaningfully adds to the firm's AI capability picture, mapped to ${tags}; source ${source}, confidence ${confidence}.`;
+    return `Watch signal: auxiliary evidence of the firm's AI actions, mapped to ${tags}; source ${source}, confidence ${confidence}.`;
+  }
 
+  if (event.confidence === "low") return `高潜力但待核验：事件分较高，但当前来源可信度为 ${confidence}，映射 ${tags}；需要官方或一手来源复核。`;
   if (score >= 90) return `强信号：直接改变公司 AI 能力边界，映射 ${tags}；来源 ${source}，可信度 ${confidence}。`;
   if (score >= 82) return `高信号：具备明确合作、平台或交付含义，映射 ${tags}；来源 ${source}，可信度 ${confidence}。`;
   if (score >= 74) return `中高信号：能补充公司 AI 能力拼图，映射 ${tags}；来源 ${source}，可信度 ${confidence}。`;
@@ -94,6 +312,13 @@ function scoreReason(event) {
 }
 
 function scoreBand(score) {
+  if (activeLanguage === "en") {
+    if (score == null) return "Pending";
+    if (score >= 90) return "Leading";
+    if (score >= 82) return "Strong";
+    if (score >= 74) return "Active";
+    return "Watch";
+  }
   if (score == null) return "待评估";
   if (score >= 90) return "领先";
   if (score >= 82) return "强";
@@ -102,7 +327,7 @@ function scoreBand(score) {
 }
 
 function shortDate(date) {
-  if (!date || date.length <= 4) return date || "未标注";
+  if (!date || date.length <= 4) return date || (activeLanguage === "en" ? "Undated" : "未标注");
   return date.replace(/-/g, ".");
 }
 
@@ -116,19 +341,21 @@ function eventTimestamp(date) {
 
 function sourceLabel(level) {
   const map = {
-    official: "官方",
-    official_press_release: "官方新闻稿",
-    vendor_official: "厂商官方",
-    media: "媒体",
-    third_party: "第三方",
-    pending_verification: "待核验",
+    official: activeLanguage === "en" ? "Official" : "官方",
+    official_press_release: activeLanguage === "en" ? "Official PR" : "官方新闻稿",
+    vendor_official: activeLanguage === "en" ? "Vendor official" : "厂商官方",
+    media: activeLanguage === "en" ? "Media" : "媒体",
+    third_party: activeLanguage === "en" ? "Third party" : "第三方",
+    pending_verification: activeLanguage === "en" ? "Pending verification" : "待核验",
   };
-  return map[level] || level || "未知";
+  return map[level] || level || (activeLanguage === "en" ? "Unknown" : "未知");
 }
 
 function confidenceLabel(level) {
-  const map = { high: "高", medium: "中", low: "低" };
-  return map[level] || level || "未知";
+  const map = activeLanguage === "en"
+    ? { high: "High", medium: "Medium", low: "Low" }
+    : { high: "高", medium: "中", low: "低" };
+  return map[level] || level || (activeLanguage === "en" ? "Unknown" : "未知");
 }
 
 function companyMatches(company, query) {
@@ -192,6 +419,13 @@ function populateFilters() {
   }
 }
 
+function refreshFilterOptionLabels() {
+  const tierFirst = els.tierFilter?.querySelector('option[value="all"]');
+  const eventFirst = els.eventFilter?.querySelector('option[value="all"]');
+  if (tierFirst) tierFirst.textContent = t("all");
+  if (eventFirst) eventFirst.textContent = t("all");
+}
+
 function renderLegend() {
   els.legend.innerHTML = eventTypes
     .map((type) => `<span class="legend-chip"><i class="dot" style="color:${type.color}"></i>${escapeHtml(type.label)}</span>`)
@@ -203,8 +437,8 @@ function renderDimensions() {
     .map((dimension) => `
       <article class="dimension">
         <strong>${escapeHtml(dimension.name)}</strong>
-        <p>${escapeHtml(dimension.description)}</p>
-        <em>权重 ${Math.round(dimension.weight * 100)}%</em>
+        <p>${escapeHtml(dimensionDescription(dimension))}</p>
+        <em>${activeLanguage === "en" ? "Weight" : "权重"} ${Math.round(dimension.weight * 100)}%</em>
       </article>
     `)
     .join("");
@@ -218,11 +452,11 @@ function companyTags(company) {
   const thoughtScore = Number(company.scores.thought_leadership ?? 0);
 
   return [
-    { label: "关注点", value: company.focus },
-    latestEvent ? { label: "最近动作", value: `${shortDate(latestEvent.date)} · ${typeLabel(latestEvent.type)}` } : null,
-    strongestDimension ? { label: "最强维度", value: `${strongestDimension.name} ${strongestDimension.value}/5` } : null,
-    thoughtScore ? { label: "AI 思考力", value: `${thoughtScore}/5` } : null,
-    company.brand_note ? { label: "品牌说明", value: company.brand_note } : null,
+    { label: activeLanguage === "en" ? "Focus" : "关注点", value: company.focus },
+    latestEvent ? { label: activeLanguage === "en" ? "Latest Move" : "最近动作", value: `${shortDate(latestEvent.date)} · ${typeLabel(latestEvent.type)}` } : null,
+    strongestDimension ? { label: activeLanguage === "en" ? "Strongest Dimension" : "最强维度", value: `${strongestDimension.name} ${strongestDimension.value}/5` } : null,
+    thoughtScore ? { label: activeLanguage === "en" ? "AI Thought Leadership" : "AI 思考力", value: `${thoughtScore}/5` } : null,
+    company.brand_note ? { label: activeLanguage === "en" ? "Brand Note" : "品牌说明", value: company.brand_note } : null,
   ].filter(Boolean);
 }
 
@@ -241,8 +475,10 @@ function evidenceMeta(company) {
 }
 
 function coverageLabel(level) {
-  const map = { high: "覆盖高", medium: "覆盖中", low: "覆盖低" };
-  return map[level] || "覆盖未标注";
+  const map = activeLanguage === "en"
+    ? { high: "High coverage", medium: "Medium coverage", low: "Low coverage" }
+    : { high: "覆盖高", medium: "覆盖中", low: "覆盖低" };
+  return map[level] || (activeLanguage === "en" ? "Coverage not labeled" : "覆盖未标注");
 }
 
 function traditionalCapabilityScore(company) {
@@ -312,7 +548,7 @@ function compositeRankedCompanies(companies = data.companies) {
 
 function buildInsights() {
   const rows = compositeRankedCompanies();
-  const topTwo = rows.slice(0, 2).map(({ company }) => company.name).join(" 和 ");
+  const topTwo = rows.slice(0, 2).map(({ company }) => company.name).join(activeLanguage === "en" ? " and " : " 和 ");
   const topBigFour = rows.filter(({ company }) => company.tier === "Big Four").slice(0, 4);
   const mbbLeader = rows.filter(({ company }) => company.tier === "MBB")[0];
   const techLeader = rows.filter(({ company }) => company.tier === "Tech/SI")[0];
@@ -329,38 +565,56 @@ function buildInsights() {
     {
       kicker: "Front Runner",
       accent: "#b42318",
-      title: `${topTwo} 领跑`,
-      body: `当前综合能力榜上，${topTwo} 处于第一梯队，领先原因主要来自大规模技术合作、内部 Client Zero 验证，以及把 AI 从叙事推向组织级部署。`,
+      title: activeLanguage === "en" ? `${topTwo} lead the field` : `${topTwo} 领跑`,
+      body: activeLanguage === "en"
+        ? `On the current composite ranking, ${topTwo} sit in the first tier. Their lead comes mainly from scaled technology partnerships, internal Client Zero validation, and a stronger ability to move AI from narrative into organization-level deployment.`
+        : `当前综合能力榜上，${topTwo} 处于第一梯队，领先原因主要来自大规模技术合作、内部 Client Zero 验证，以及把 AI 从叙事推向组织级部署。`,
     },
     {
       kicker: "Big Four",
       accent: "#1d4ed8",
-      title: "Big Four 整体最强",
+      title: activeLanguage === "en" ? "Big Four as the strongest group" : "Big Four 整体最强",
       body: topBigFour.length
-        ? `从当前样本看，Big Four 形成最完整的集团式推进：${topBigFour.map(({ company }) => company.name).join("、")} 都在前列，说明其平台合作、行业覆盖和治理能力一起在发力。`
-        : "当前样本里，Big Four 仍然是最系统推进 AI 的专业服务群体。",
+        ? (activeLanguage === "en"
+          ? `In the current sample, the Big Four show the most complete group-level push: ${topBigFour.map(({ company }) => company.name).join(", ")} all appear near the top, suggesting simultaneous strength in platform partnerships, industry coverage, and governance capabilities.`
+          : `从当前样本看，Big Four 形成最完整的集团式推进：${topBigFour.map(({ company }) => company.name).join("、")} 都在前列，说明其平台合作、行业覆盖和治理能力一起在发力。`)
+        : (activeLanguage === "en"
+          ? "In the current sample, the Big Four remain the most systematically organized professional-services bloc in AI."
+          : "当前样本里，Big Four 仍然是最系统推进 AI 的专业服务群体。"),
     },
     {
       kicker: "MBB vs Tech/SI",
       accent: "#0f766e",
-      title: `${mbbLeader?.company.name || "MBB 龙头"} 与 ${techLeader?.company.name || "Tech/SI 龙头"} 各自强势`,
-      body: `${mbbLeader?.company.name || "MBB 头部公司"} 更像战略与平台双轮驱动的代表，${techLeader?.company.name || "Tech/SI 头部公司"} 则体现了更强的交付生产化能力。两类公司正在从不同路径逼近同一个结果：把 AI 做成客户工作流。`,
+      title: activeLanguage === "en"
+        ? `${mbbLeader?.company.name || "MBB leader"} and ${techLeader?.company.name || "Tech/SI leader"} win differently`
+        : `${mbbLeader?.company.name || "MBB 龙头"} 与 ${techLeader?.company.name || "Tech/SI 龙头"} 各自强势`,
+      body: activeLanguage === "en"
+        ? `${mbbLeader?.company.name || "The leading MBB firm"} looks more like a strategy-and-platform archetype, while ${techLeader?.company.name || "the leading Tech/SI firm"} shows stronger production and delivery muscle. They are approaching the same destination through different paths: turning AI into client workflows.`
+        : `${mbbLeader?.company.name || "MBB 头部公司"} 更像战略与平台双轮驱动的代表，${techLeader?.company.name || "Tech/SI 头部公司"} 则体现了更强的交付生产化能力。两类公司正在从不同路径逼近同一个结果：把 AI 做成客户工作流。`,
     },
     {
       kicker: "Watchlist",
       accent: "#ff8a00",
-      title: "高分事件里仍有待核验项",
+      title: activeLanguage === "en" ? "Some high-score events still need verification" : "高分事件里仍有待核验项",
       body: lowConfidenceEvents.length
-        ? `当前有 ${lowConfidenceEvents.length} 条高分事件仍是低置信度，主要集中在 ${lowConfidenceEvents.slice(0, 3).map(({ company }) => company.name).join("、")} 等公司的投资或合作新闻。这些信号值得保留，但页面上应继续视为待官方复核。`
-        : "当前高分事件大多已有较强来源支撑，待核验项相对有限。",
+        ? (activeLanguage === "en"
+          ? `There are currently ${lowConfidenceEvents.length} high-scoring events still tagged with low confidence, mainly around investment or partnership stories involving firms such as ${lowConfidenceEvents.slice(0, 3).map(({ company }) => company.name).join(", ")}. These signals are worth keeping, but should still be treated as pending official confirmation.`
+          : `当前有 ${lowConfidenceEvents.length} 条高分事件仍是低置信度，主要集中在 ${lowConfidenceEvents.slice(0, 3).map(({ company }) => company.name).join("、")} 等公司的投资或合作新闻。这些信号值得保留，但页面上应继续视为待官方复核。`)
+        : (activeLanguage === "en"
+          ? "Most high-scoring events are now supported by relatively strong sources, with fewer unresolved items left in the watchlist."
+          : "当前高分事件大多已有较强来源支撑，待核验项相对有限。"),
     },
     {
       kicker: "Thought Leadership",
       accent: "#2457ff",
-      title: "公开报告已经纳入评分",
+      title: activeLanguage === "en" ? "Public reports are now included in scoring" : "公开报告已经纳入评分",
       body: thoughtLeaders.length
-        ? `我们已把 AI 公开报告作为“思考力”维度纳入模型。当前在这一维度最强的一组是 ${thoughtLeaders.join("、")}，它们不仅有动作，也持续在塑造企业客户对 AI 的认知框架。`
-        : "我们已把 AI 公开报告作为“思考力”维度纳入模型，用来补足只看新闻动作的局限。",
+        ? (activeLanguage === "en"
+          ? `We now include public AI reports as a thought-leadership dimension. The strongest group on this axis is currently ${thoughtLeaders.join(", ")}, suggesting that these firms are not only acting, but also shaping how enterprise buyers interpret AI.`
+          : `我们已把 AI 公开报告作为“思考力”维度纳入模型。当前在这一维度最强的一组是 ${thoughtLeaders.join("、")}，它们不仅有动作，也持续在塑造企业客户对 AI 的认知框架。`)
+        : (activeLanguage === "en"
+          ? "Public AI reports are now part of the model, helping offset the limitations of looking only at recent news actions."
+          : "我们已把 AI 公开报告作为“思考力”维度纳入模型，用来补足只看新闻动作的局限。"),
     },
   ];
 }
@@ -377,7 +631,7 @@ function renderReports(company) {
           </div>
           <strong>${escapeHtml(report.title)}</strong>
           <p>${escapeHtml(report.summary)}</p>
-          <a href="${escapeHtml(report.url)}" target="_blank" rel="noreferrer">查看报告</a>
+          <a href="${escapeHtml(report.url)}" target="_blank" rel="noreferrer">${activeLanguage === "en" ? "View report" : "查看报告"}</a>
         </article>
       `).join("")}
     </div>
@@ -388,9 +642,9 @@ function renderEvidenceStrip(company) {
   const meta = evidenceMeta(company);
   return `
     <div class="evidence-strip">
-      <span class="evidence-pill">官方证据 ${meta.officialCount}</span>
-      <span class="evidence-pill">公开报告 ${meta.reportsCount}</span>
-      <span class="evidence-pill">待核验 ${meta.pendingCount}</span>
+      <span class="evidence-pill">${activeLanguage === "en" ? "Official evidence" : "官方证据"} ${meta.officialCount}</span>
+      <span class="evidence-pill">${activeLanguage === "en" ? "Public reports" : "公开报告"} ${meta.reportsCount}</span>
+      <span class="evidence-pill">${activeLanguage === "en" ? "Pending verification" : "待核验"} ${meta.pendingCount}</span>
       <span class="evidence-pill">${coverageLabel(meta.coverageConfidence)}</span>
     </div>
   `;
@@ -414,15 +668,17 @@ function cardAnchorId(company) {
 
 function renderRankNavigator(rows) {
   const topRows = rows.slice(0, 10);
-  const scoreLabel = activeBoard === "action" ? "行动力" : "综合分";
+  const scoreLabel = activeBoard === "action"
+    ? (activeLanguage === "en" ? "Action" : "行动力")
+    : (activeLanguage === "en" ? "Composite" : "综合分");
   return `
-    <section class="rank-navigator-shell" aria-label="排名快速导航">
+    <section class="rank-navigator-shell" aria-label="${activeLanguage === "en" ? "Quick rank navigation" : "排名快速导航"}">
       <div class="rank-navigator-shell__intro">
         <div>
           <p class="rank-navigator-shell__eyebrow">Quick Jump</p>
-          <h3>Top 10 排名导航</h3>
+          <h3>${activeLanguage === "en" ? "Top 10 Rank Navigator" : "Top 10 排名导航"}</h3>
         </div>
-        <p>先快速扫榜，再进入单家公司证据。</p>
+        <p>${activeLanguage === "en" ? "Scan the board first, then jump into company-level evidence." : "先快速扫榜，再进入单家公司证据。"}</p>
       </div>
       <div class="rank-navigator">
         ${topRows.map((row, index) => `
@@ -440,12 +696,12 @@ function renderRankNavigator(rows) {
 
 function renderBoardControls() {
   return `
-    <div class="board-controls" aria-label="榜单浏览模式">
+    <div class="board-controls" aria-label="${activeLanguage === "en" ? "Board browsing mode" : "榜单浏览模式"}">
       <button id="compactToggle" class="board-controls__button ${compactMode ? "is-active" : ""}" type="button" aria-pressed="${compactMode}">
-        ${compactMode ? "紧凑浏览" : "展开浏览"}
+        ${compactMode ? (activeLanguage === "en" ? "Compact view" : "紧凑浏览") : (activeLanguage === "en" ? "Expanded view" : "展开浏览")}
       </button>
       <button id="evidenceToggle" class="board-controls__button" type="button" aria-pressed="${expandAllEvidence}">
-        ${expandAllEvidence ? "折叠全部证据" : "展开全部证据"}
+        ${expandAllEvidence ? (activeLanguage === "en" ? "Collapse all evidence" : "折叠全部证据") : (activeLanguage === "en" ? "Expand all evidence" : "展开全部证据")}
       </button>
     </div>
   `;
@@ -842,16 +1098,33 @@ function renderActionCard(row, rank, previousRankMap) {
   const latestEvent = [...company.events].sort((a, b) => eventTimestamp(b.date) - eventTimestamp(a.date))[0];
   const accent = latestEvent ? typeColor(latestEvent.type) : "#1d4ed8";
   const tags = Array.from(new Set(action.events.flatMap((event) => eventDimensionTags(event)))).slice(0, 4);
+  const titleText = activeLanguage === "en"
+    ? `${company.name} Recent AI Actions`
+    : `${company.name}的近期 AI 行动力`;
+  const focusText = activeLanguage === "en"
+    ? `${company.focus}${company.brand_note ? ` · ${company.brand_note}` : ""}`
+        .replace("AI 投资、Microsoft/OpenAI 合作、Agent OS、治理与信任", "AI investment, Microsoft/OpenAI partnerships, Agent OS, governance, and trust")
+        .replace("Strategy& 可作为 PwC 旗下战略品牌观察，暂不独立计分。", "Strategy& is tracked as PwC's strategy brand and is not scored independently for now.")
+    : `${company.focus}${company.brand_note ? ` · ${company.brand_note}` : ""}`;
   const evidence = action.events
     .map((event) => `
       <article class="event">
         <time>${escapeHtml(shortDate(event.date))}</time>
         <div>
           <span class="badge" style="--event-color:${typeColor(event.type)}">${escapeHtml(typeLabel(event.type))}</span>
-          <span class="event-contribution">贡献 ${event.contribution_score.toFixed(1)} 分</span>
-          <h4>${escapeHtml(event.title)}</h4>
-          <p>${escapeHtml(event.summary)}</p>
-          <a href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">查看来源</a>
+          <span class="event-contribution">${activeLanguage === "en" ? "Contribution" : "贡献"} ${event.contribution_score.toFixed(1)} ${activeLanguage === "en" ? "pts" : "分"}</span>
+          <h4>${escapeHtml(activeLanguage === "en"
+            ? event.title
+              .replace("成为 OpenAI Partner Network 首发全球合作伙伴", "Named a launch global partner in the OpenAI Partner Network")
+              .replace("PwC 发布 2026 AI Jobs Barometer", "PwC publishes the 2026 AI Jobs Barometer")
+              .replace("PwC AI Jobs Barometer 获新一轮媒体引用，强调 AI 岗位与薪资继续走强", "PwC AI Jobs Barometer gains renewed media attention as AI-linked roles and pay keep strengthening")
+            : event.title)}</h4>
+          <p>${escapeHtml(activeLanguage === "en"
+            ? event.summary
+              .replace("OpenAI 官方将 PwC 列为 OpenAI Partner Network 首发全球合作伙伴之一。OpenAI 页面直接引用 PwC 观点，强调将 frontier capabilities 与 transformation expertise 结合，帮助客户以 responsible 方式大规模部署 AI。", "OpenAI named PwC one of the launch global partners in the OpenAI Partner Network. The OpenAI page directly quotes PwC and emphasizes combining frontier capabilities with transformation expertise to help clients deploy AI at scale in a responsible way.")
+              .replace("PwC 基于超过 10 亿条职位数据发布 2026 AI Jobs Barometer，指出 AI 正在把入门岗位“高级化”，AI 暴露度高的初级岗位更早要求判断力、领导力和战略思维，体现其在 AI 与劳动力结构上的公开研究能力。", "Based on more than one billion job postings, PwC's 2026 AI Jobs Barometer argues that AI is making entry-level roles more advanced. Junior roles with high AI exposure now require judgment, leadership, and strategic thinking earlier, highlighting PwC's public research capability at the intersection of AI and labor-market structure.")
+            : event.summary)}</p>
+          <a href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">${activeLanguage === "en" ? "View source" : "查看来源"}</a>
         </div>
       </article>
     `)
@@ -873,17 +1146,17 @@ function renderActionCard(row, rank, previousRankMap) {
         <div class="action-card__meta action-card__meta--top">
           <span class="score-pill">${escapeHtml(company.name)} · ${escapeHtml(company.cn)}</span>
           <span class="score-pill">${escapeHtml(company.tier)}</span>
-          ${latestEvent ? `<span class="score-pill">最新动作：${escapeHtml(shortDate(latestEvent.date))} · ${escapeHtml(typeLabel(latestEvent.type))}</span>` : ""}
-          <span class="score-pill">行动力评级 ${escapeHtml(scoreBand(score))}</span>
+          ${latestEvent ? `<span class="score-pill">${activeLanguage === "en" ? "Latest move" : "最新动作"}: ${escapeHtml(shortDate(latestEvent.date))} · ${escapeHtml(typeLabel(latestEvent.type))}</span>` : ""}
+          <span class="score-pill">${activeLanguage === "en" ? "Action rating" : "行动力评级"} ${escapeHtml(scoreBand(score))}</span>
         </div>
 
-        <h3>${escapeHtml(company.name)} 的近期 AI 行动力</h3>
-        <p>${escapeHtml(company.focus)}${company.brand_note ? ` · ${escapeHtml(company.brand_note)}` : ""}</p>
+        <h3>${escapeHtml(titleText)}</h3>
+        <p>${escapeHtml(focusText)}</p>
 
         ${renderEvidenceStrip(company)}
 
         <div class="impact-line">
-          <span>影响维度</span>
+          <span>${activeLanguage === "en" ? "Impacted dimensions" : "影响维度"}</span>
           <div class="dimension-chips">
             ${tags.map((tag) => `<span class="dimension-chip">${escapeHtml(dimensionName(tag))}</span>`).join("")}
           </div>
@@ -891,8 +1164,8 @@ function renderActionCard(row, rank, previousRankMap) {
 
         <details class="card-details" ${detailsOpen ? "open" : ""}>
           <summary class="card-details__summary">
-            <span>查看新闻证据与事件贡献</span>
-            <strong>${action.events.length} 条核心事件</strong>
+            <span>${activeLanguage === "en" ? "View event evidence and contribution" : "查看新闻证据与事件贡献"}</span>
+            <strong>${action.events.length} ${activeLanguage === "en" ? "core events" : "条核心事件"}</strong>
           </summary>
           <div class="events">${evidence}</div>
         </details>
@@ -988,14 +1261,14 @@ function renderScoreboard() {
     : buildPreviousWeekRankMap(rows);
 
   if (!rows.length) {
-    els.scoreboard.innerHTML = `<div class="panel-title"><div><h2>${activeBoard === "action" ? "AI 行动力评分榜" : "综合能力评分榜"}</h2><p>${activeBoard === "action" ? "根据最近新闻动作对公司的 AI 行动力进行评估，新闻本身不单独展示分数。" : "结合 AI 动作与公司长期能力底座的综合评分。"}</p></div></div><div class="view-switch" role="tablist" aria-label="榜单切换"><button class="view-switch__button ${activeBoard === "action" ? "is-active" : ""}" type="button">AI 行动力评分榜</button><button class="view-switch__button ${activeBoard === "composite" ? "is-active" : ""}" type="button">综合能力评分榜</button></div><div class="empty">没有匹配的公司。试试重置筛选，或搜索“OpenAI / Microsoft / agentic / IQ.AI”。</div>`;
+    els.scoreboard.innerHTML = `<div class="panel-title"><div><h2>${activeBoard === "action" ? t("actionBoard") : t("compositeBoard")}</h2><p>${activeBoard === "action" ? t("actionSubtitle") : t("compositeSubtitle")}</p></div></div><div class="view-switch" role="tablist" aria-label="榜单切换"><button class="view-switch__button ${activeBoard === "action" ? "is-active" : ""}" type="button">${t("actionBoard")}</button><button class="view-switch__button ${activeBoard === "composite" ? "is-active" : ""}" type="button">${t("compositeBoard")}</button></div><div class="empty">${activeLanguage === "zh" ? "没有匹配的公司。试试重置筛选，或搜索“OpenAI / Microsoft / agentic / IQ.AI”。" : "No matching firms. Try resetting filters or searching OpenAI, Microsoft, agentic, or IQ.AI."}</div>`;
     return;
   }
 
-  els.scoreboardTitle.textContent = activeBoard === "action" ? "AI 行动力评分榜" : "综合能力评分榜";
+  els.scoreboardTitle.textContent = activeBoard === "action" ? t("actionBoard") : t("compositeBoard");
   els.scoreboardSubtitle.textContent = activeBoard === "action"
-    ? "根据最近新闻动作对公司的 AI 行动力进行评估，新闻本身不单独展示分数。"
-    : "结合 AI 动作与公司长期能力底座的综合评分。";
+    ? t("actionSubtitle")
+    : t("compositeSubtitle");
   els.viewAction.classList.toggle("is-active", activeBoard === "action");
   els.viewComposite.classList.toggle("is-active", activeBoard === "composite");
   els.viewAction.setAttribute("aria-pressed", String(activeBoard === "action"));
@@ -1009,8 +1282,8 @@ function renderScoreboard() {
       </div>
     </div>
     <div class="view-switch" role="tablist" aria-label="榜单切换">
-      <button id="viewActionInline" class="view-switch__button ${activeBoard === "action" ? "is-active" : ""}" type="button" aria-pressed="${activeBoard === "action"}">AI 行动力评分榜</button>
-      <button id="viewCompositeInline" class="view-switch__button ${activeBoard === "composite" ? "is-active" : ""}" type="button" aria-pressed="${activeBoard === "composite"}">综合能力评分榜</button>
+      <button id="viewActionInline" class="view-switch__button ${activeBoard === "action" ? "is-active" : ""}" type="button" aria-pressed="${activeBoard === "action"}">${t("actionBoard")}</button>
+      <button id="viewCompositeInline" class="view-switch__button ${activeBoard === "composite" ? "is-active" : ""}" type="button" aria-pressed="${activeBoard === "composite"}">${t("compositeBoard")}</button>
     </div>
     ${renderBoardControls()}
     ${renderRankNavigator(rows)}
@@ -1088,6 +1361,7 @@ async function init() {
 
   eventTypes = data.event_types;
   dimensions = data.dimensions;
+  applyStaticTranslations();
 
   els.updatedAt.textContent = `数据更新：${data.meta.updated_at}（对比 ${comparisonStartDate()}）`;
   els.companyCount.textContent = String(data.companies.length);
@@ -1096,6 +1370,7 @@ async function init() {
   }
 
   populateFilters();
+  refreshFilterOptionLabels();
   renderLegend();
   renderDimensions();
   renderAll();
@@ -1106,10 +1381,24 @@ async function init() {
   els.resetFilters.addEventListener("click", resetFilters);
   els.viewAction?.addEventListener("click", () => {
     activeBoard = "action";
+    applyStaticTranslations();
     renderScoreboard();
   });
   els.viewComposite?.addEventListener("click", () => {
     activeBoard = "composite";
+    applyStaticTranslations();
+    renderScoreboard();
+  });
+  els.langZh?.addEventListener("click", () => {
+    activeLanguage = "zh";
+    applyStaticTranslations();
+    refreshFilterOptionLabels();
+    renderScoreboard();
+  });
+  els.langEn?.addEventListener("click", () => {
+    activeLanguage = "en";
+    applyStaticTranslations();
+    refreshFilterOptionLabels();
     renderScoreboard();
   });
 }
