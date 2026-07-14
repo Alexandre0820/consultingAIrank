@@ -48,10 +48,43 @@ body::before {
   width: min(1320px, calc(100vw - 40px));
   margin: 0 auto;
   padding: 44px 0 26px;
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 220px;
   gap: 24px;
   align-items: end;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 248, 236, 0.72);
+  box-shadow: 0 10px 24px rgba(23, 20, 17, 0.10);
+}
+
+.lang-switch__button {
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lang-switch__button.is-active {
+  background: var(--ink);
+  color: var(--paper-2);
 }
 
 .eyebrow, .panel-title p, .method p, .timeline p, .dimension-grid p {
@@ -1347,6 +1380,7 @@ input:focus, select:focus {
 @media (max-width: 860px) {
   .hero, .layout, .news-summary, .weekly-events, .coverage, .insights, .method, .dimensions { width: min(100% - 24px, 1320px); }
   .hero, .layout { grid-template-columns: 1fr; }
+  .hero { padding-top: 62px; }
   .control-panel { position: static; }
   .bars, .summary-tags { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .method-grid, .coverage-grid { grid-template-columns: 1fr; }
@@ -1368,6 +1402,10 @@ input:focus, select:focus {
 }
 
 @media (max-width: 680px) {
+  .lang-switch {
+    top: 10px;
+    right: 0;
+  }
   .rank-card__top, .event, .timeline-item, .scored-action { grid-template-columns: 1fr; }
   .scored-action__rank { min-height: auto; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .score { text-align: left; }
