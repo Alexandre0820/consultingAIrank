@@ -188,6 +188,69 @@ function t(key) {
   return I18N[activeLanguage]?.[key] ?? I18N.zh[key] ?? key;
 }
 
+function translateCompanyCopy(text = "") {
+  if (activeLanguage !== "en" || !text) return text;
+
+  return text
+    .replace("企业级 AI 转型、agentic AI、workflow redesign、QuantumBlack", "Enterprise AI transformation, agentic AI, workflow redesign, and QuantumBlack")
+    .replace("AI @ Scale、BCG X、生成式 AI、企业级 AI 转型", "AI @ Scale, BCG X, generative AI, and enterprise AI transformation")
+    .replace("AI 部署、PE 组合公司、企业级 AI 落地、OpenAI 合作", "AI deployment, PE portfolio companies, enterprise AI implementation, and OpenAI collaboration")
+    .replace("AI 战略、知识 hub、AI agents、欧洲与工业场景", "AI strategy, knowledge hubs, AI agents, and European / industrial use cases")
+    .replace("agentic AI、流程再造、运营转型、ServiceNow 合作", "Agentic AI, process redesign, operating-model transformation, and ServiceNow collaboration")
+    .replace("Quotient – AI by Oliver Wyman、风险与增长、行业场景", "Quotient – AI by Oliver Wyman, risk and growth, and industry use cases")
+    .replace("AI Institute、Agentic Network、Zora AI、企业级 AI 转型", "AI Institute, Agentic Network, Zora AI, and enterprise AI transformation")
+    .replace("战略咨询、创新、增长、组织转型", "Strategy consulting, innovation, growth, and organizational transformation")
+    .replace("AI 投资、Microsoft/OpenAI 合作、Agent OS、治理与信任", "AI investment, Microsoft/OpenAI partnerships, Agent OS, governance, and trust")
+    .replace("战略落地、业务转型、AI 战略", "Strategy execution, business transformation, and AI strategy")
+    .replace("EY-Microsoft AI initiative、Client Zero、多代理框架、审计体验", "EY-Microsoft AI initiative, Client Zero, multi-agent frameworks, and audit experience")
+    .replace("Trusted AI、Agent 365、Copilot、治理与规模化", "Trusted AI, Agent 365, Copilot, governance, and scaling")
+    .replace("OpenAI 合作、企业 reinvention、AgentKit、全球交付", "OpenAI collaboration, enterprise reinvention, AgentKit, and global delivery")
+    .replace("OpenAI Frontier Alliance、行业 AI 解决方案、全球交付", "OpenAI Frontier Alliance, industry AI solutions, and global delivery")
+    .replace("FTI Technology、IQ.AI、法律/合规/调查场景", "FTI Technology, IQ.AI, and legal / compliance / investigations use cases")
+    .replace("applied AI、Global AI Board、operator-led delivery", "Applied AI, Global AI Board, and operator-led delivery")
+    .replace("行业洞察、AI 在医疗/消费/工业/金融等场景的应用", "Sector insights and AI applications across healthcare, consumer, industrial, and financial-services use cases")
+    .replace("Strategy& 可作为 PwC 旗下战略品牌观察，暂不独立计分。", "Strategy& is tracked as PwC's strategy brand and is not scored independently for now.")
+    .replace("Monitor Deloitte 可作为 Deloitte 旗下战略品牌观察，暂不独立计分。", "Monitor Deloitte is tracked as Deloitte's strategy brand and is not scored independently for now.")
+    .replace("PwC 旗下战略咨询品牌；MVP 中暂作为 PwC 的观察标签，不单独排名。", "PwC's strategy consulting brand; tracked as a PwC sub-label in the MVP and not ranked independently.")
+    .replace("Deloitte 旗下战略品牌；MVP 中暂作为 Deloitte 的观察标签，不单独排名。", "Deloitte's strategy brand; tracked as a Deloitte sub-label in the MVP and not ranked independently.");
+}
+
+function translateEventTitle(text = "") {
+  if (activeLanguage !== "en" || !text) return text;
+
+  return text
+    .replace("成为 OpenAI Partner Network 首发全球合作伙伴", "named a launch global partner in the OpenAI Partner Network")
+    .replace("获新一轮媒体引用，强调 AI 岗位与薪资继续走强", "gains renewed media attention as AI-linked roles and pay keep strengthening")
+    .replace("发布 2026 AI Jobs Barometer", "publishes the 2026 AI Jobs Barometer")
+    .replace("与 Anthropic 扩大合作，Claude 进入 PwC 交付体系", "expands work with Anthropic, bringing Claude into PwC delivery workflows")
+    .replace("与 OpenAI 合作重构 CFO Office 的 AI agents", "works with OpenAI to redesign AI agents for the CFO Office")
+    .replace("三年投入 10 亿美元扩展 AI 能力", "commits $1 billion over three years to expand AI capabilities")
+    .replace("更新 AI & Data Challenge Program 页面", "updates the AI & Data Challenge Program page")
+    .replace("发布 Unintended consequences: future AI cyber risk", "publishes Unintended consequences: future AI cyber risk")
+    .replace("发布 What AI Growth Leaders Need to Get Right 视频洞察", "publishes the video insight What AI Growth Leaders Need to Get Right")
+    .replace("发布 2026 Private Equity AI Radar", "publishes the 2026 Private Equity AI Radar")
+    .replace("采用 Microsoft Agent 365 管理 AI agents 生命周期", "adopts Microsoft Agent 365 to manage the AI agent lifecycle");
+}
+
+function translateEventSummary(text = "") {
+  if (activeLanguage !== "en" || !text) return text;
+
+  return text
+    .replace("OpenAI 官方将 PwC 列为 OpenAI Partner Network 首发全球合作伙伴之一。OpenAI 页面直接引用 PwC 观点，强调将 frontier capabilities 与 transformation expertise 结合，帮助客户以 responsible 方式大规模部署 AI。", "OpenAI named PwC one of the launch global partners in the OpenAI Partner Network. The OpenAI page directly quotes PwC and emphasizes combining frontier capabilities with transformation expertise to help clients deploy AI at scale in a responsible way.")
+    .replace("PwC 基于超过 10 亿条职位数据发布 2026 AI Jobs Barometer，指出 AI 正在把入门岗位“高级化”，AI 暴露度高的初级岗位更早要求判断力、领导力和战略思维，体现其在 AI 与劳动力结构上的公开研究能力。", "Based on more than one billion job postings, PwC's 2026 AI Jobs Barometer argues that AI is making entry-level roles more advanced. Junior roles with high AI exposure now require judgment, leadership, and strategic thinking earlier, highlighting PwC's public research capability at the intersection of AI and labor-market structure.")
+    .replace("Consultancy.uk 依据 PwC 的最新 AI Jobs Barometer 报道，英国 AI 相关招聘与薪资继续跑赢整体就业市场；基于超过 10 亿条招聘广告的分析，PwC 指出企业对 AI 能力的需求正在加速，并从泛化兴趣转向更明确的专业能力要求。", "Consultancy.uk, drawing on PwC's latest AI Jobs Barometer, reports that UK AI hiring and pay continue to outperform the broader labor market. Based on analysis of more than one billion job ads, PwC argues that demand for AI capabilities is accelerating and moving from broad interest toward more explicit skill requirements.")
+    .replace("PwC 与 OpenAI 围绕财务规划、预测、报告、采购、付款、财资、税务和会计结账等核心财务流程构建 AI agents；OpenAI 财务组织作为 Customer Zero，Codex 已处理5倍合同，IR-GPT 管理200+投资者互动。", "PwC and OpenAI are building AI agents across core finance workflows including planning, forecasting, reporting, procurement, payments, treasury, tax, and accounting close. OpenAI's own finance team acts as Customer Zero, with Codex already handling five times more contracts and IR-GPT managing more than 200 investor interactions.")
+    .replace("行业报道显示 PwC 与 Anthropic 扩大合作，计划培训并认证3万名美国专业人员使用 Claude，并将 Claude Code、Claude Cowork 等能力扩展到全球专业服务体系。该事件待官方复核。", "Industry reporting suggests PwC is expanding its work with Anthropic, with plans to train and certify 30,000 US professionals on Claude and extend capabilities such as Claude Code and Claude Cowork across its global professional-services system. This item still requires official verification.")
+    .replace("PwC US 宣布三年 10 亿美元 AI 投资，基于 Microsoft 与 OpenAI 技术扩展生成式 AI 服务。", "PwC US announced a $1 billion AI investment over three years to expand generative AI services built on Microsoft and OpenAI technologies.")
+    .replace("EY 的 AI & Data Challenge Program 页面显示 2026-07-07 日期，属于本周可确认的 AI 能力与人才项目公开更新。这类专题页更新不如重大合作强，但能反映公司在 AI 人才、方法和品牌资产上的持续投入。", "EY's AI & Data Challenge Program page shows a visible date of 2026-07-07, making it a verifiable public update in the current week. This kind of program-page refresh is weaker than a major partnership, but it still reflects continued investment in AI talent, methods, and brand assets.")
+    .replace("FTI 于 2026-07-08 发布 AI 网络风险主题文章，讨论 agentic AI 与新型攻击面的治理含义。这是一条本周可确认日期的 thought leadership 信号，强化了 FTI 在风险、调查和合规场景中的 AI 观察能力。", "On 2026-07-08, FTI published a thought-leadership piece on AI cyber risk, discussing the governance implications of agentic AI and new attack surfaces. It is a clearly dated signal for the week and reinforces FTI's AI perspective in risk, investigations, and compliance.")
+    .replace("OpenAI 官方将 McKinsey / QuantumBlack 列为 OpenAI Partner Network 首发全球合作伙伴之一，强调 McKinsey 的战略与技术能力、QuantumBlack 的交付能力可帮助客户加速 adoption、create real value 并 deliver impact。", "OpenAI named McKinsey / QuantumBlack one of the launch global partners in the OpenAI Partner Network, emphasizing McKinsey's strategic and technical capabilities together with QuantumBlack's delivery strengths to help clients accelerate adoption, create real value, and deliver impact.")
+    .replace("OpenAI 官方宣布推出 OpenAI Partner Network，BCG 作为首发全球合作伙伴之一被点名，OpenAI 特别强调其 transformation expertise、BCG X 技术能力与 forward deployed engineering talent，将帮助客户从 pilots 走向 applied AI at scale。", "OpenAI officially launched the OpenAI Partner Network and explicitly named BCG as one of the launch global partners. OpenAI highlighted its transformation expertise, BCG X technical capability, and forward-deployed engineering talent as assets that can help clients move from pilots to applied AI at scale.")
+    .replace("OpenAI 官方将 Bain 列为 OpenAI Partner Network 首发全球合作伙伴之一，并强调 Bain 将 OpenAI frontier AI 与战略、技术和 enterprise transformation 能力结合，帮助客户把 AI ambition 变成 enterprise-wide impact。", "OpenAI named Bain one of the launch global partners in the OpenAI Partner Network, emphasizing Bain's ability to combine OpenAI frontier AI with strategy, technology, and enterprise-transformation capabilities to turn AI ambition into enterprise-wide impact.")
+    .replace("OpenAI 官方将 Accenture 列为 OpenAI Partner Network 首发全球合作伙伴之一，并强调其 unmatched industry depth、global delivery scale 和把先进技术嵌入企业核心运营的能力。", "OpenAI named Accenture one of the launch global partners in the OpenAI Partner Network, highlighting its unmatched industry depth, global delivery scale, and ability to embed advanced technology into core enterprise operations.")
+    .replace("OpenAI 与 Accenture 加速企业 reinvention", "OpenAI and Accenture accelerate enterprise reinvention");
+}
+
 function applyStaticTranslations() {
   if (els.heroTitle) els.heroTitle.textContent = t("heroTitle");
   if (els.heroSubtitle) els.heroSubtitle.textContent = t("heroSubtitle");
@@ -452,11 +515,11 @@ function companyTags(company) {
   const thoughtScore = Number(company.scores.thought_leadership ?? 0);
 
   return [
-    { label: activeLanguage === "en" ? "Focus" : "关注点", value: company.focus },
+    { label: activeLanguage === "en" ? "Focus" : "关注点", value: translateCompanyCopy(company.focus) },
     latestEvent ? { label: activeLanguage === "en" ? "Latest Move" : "最近动作", value: `${shortDate(latestEvent.date)} · ${typeLabel(latestEvent.type)}` } : null,
     strongestDimension ? { label: activeLanguage === "en" ? "Strongest Dimension" : "最强维度", value: `${strongestDimension.name} ${strongestDimension.value}/5` } : null,
     thoughtScore ? { label: activeLanguage === "en" ? "AI Thought Leadership" : "AI 思考力", value: `${thoughtScore}/5` } : null,
-    company.brand_note ? { label: activeLanguage === "en" ? "Brand Note" : "品牌说明", value: company.brand_note } : null,
+    company.brand_note ? { label: activeLanguage === "en" ? "Brand Note" : "品牌说明", value: translateCompanyCopy(company.brand_note) } : null,
   ].filter(Boolean);
 }
 
@@ -1102,9 +1165,7 @@ function renderActionCard(row, rank, previousRankMap) {
     ? `${company.name} Recent AI Actions`
     : `${company.name}的近期 AI 行动力`;
   const focusText = activeLanguage === "en"
-    ? `${company.focus}${company.brand_note ? ` · ${company.brand_note}` : ""}`
-        .replace("AI 投资、Microsoft/OpenAI 合作、Agent OS、治理与信任", "AI investment, Microsoft/OpenAI partnerships, Agent OS, governance, and trust")
-        .replace("Strategy& 可作为 PwC 旗下战略品牌观察，暂不独立计分。", "Strategy& is tracked as PwC's strategy brand and is not scored independently for now.")
+    ? `${translateCompanyCopy(company.focus)}${company.brand_note ? ` · ${translateCompanyCopy(company.brand_note)}` : ""}`
     : `${company.focus}${company.brand_note ? ` · ${company.brand_note}` : ""}`;
   const evidence = action.events
     .map((event) => `
@@ -1113,17 +1174,8 @@ function renderActionCard(row, rank, previousRankMap) {
         <div>
           <span class="badge" style="--event-color:${typeColor(event.type)}">${escapeHtml(typeLabel(event.type))}</span>
           <span class="event-contribution">${activeLanguage === "en" ? "Contribution" : "贡献"} ${event.contribution_score.toFixed(1)} ${activeLanguage === "en" ? "pts" : "分"}</span>
-          <h4>${escapeHtml(activeLanguage === "en"
-            ? event.title
-              .replace("成为 OpenAI Partner Network 首发全球合作伙伴", "Named a launch global partner in the OpenAI Partner Network")
-              .replace("PwC 发布 2026 AI Jobs Barometer", "PwC publishes the 2026 AI Jobs Barometer")
-              .replace("PwC AI Jobs Barometer 获新一轮媒体引用，强调 AI 岗位与薪资继续走强", "PwC AI Jobs Barometer gains renewed media attention as AI-linked roles and pay keep strengthening")
-            : event.title)}</h4>
-          <p>${escapeHtml(activeLanguage === "en"
-            ? event.summary
-              .replace("OpenAI 官方将 PwC 列为 OpenAI Partner Network 首发全球合作伙伴之一。OpenAI 页面直接引用 PwC 观点，强调将 frontier capabilities 与 transformation expertise 结合，帮助客户以 responsible 方式大规模部署 AI。", "OpenAI named PwC one of the launch global partners in the OpenAI Partner Network. The OpenAI page directly quotes PwC and emphasizes combining frontier capabilities with transformation expertise to help clients deploy AI at scale in a responsible way.")
-              .replace("PwC 基于超过 10 亿条职位数据发布 2026 AI Jobs Barometer，指出 AI 正在把入门岗位“高级化”，AI 暴露度高的初级岗位更早要求判断力、领导力和战略思维，体现其在 AI 与劳动力结构上的公开研究能力。", "Based on more than one billion job postings, PwC's 2026 AI Jobs Barometer argues that AI is making entry-level roles more advanced. Junior roles with high AI exposure now require judgment, leadership, and strategic thinking earlier, highlighting PwC's public research capability at the intersection of AI and labor-market structure.")
-            : event.summary)}</p>
+          <h4>${escapeHtml(translateEventTitle(event.title))}</h4>
+          <p>${escapeHtml(translateEventSummary(event.summary))}</p>
           <a href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">${activeLanguage === "en" ? "View source" : "查看来源"}</a>
         </div>
       </article>
