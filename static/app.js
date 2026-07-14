@@ -66,6 +66,21 @@ let expandAllEvidence = false;
 let activeLanguage = "zh";
 const ACTION_SCORE_CURVE = 70;
 
+function currentUrlLanguage() {
+  const lang = new URLSearchParams(window.location.search).get("lang");
+  return lang === "en" ? "en" : "zh";
+}
+
+function syncLanguageInUrl() {
+  const url = new URL(window.location.href);
+  if (activeLanguage === "en") {
+    url.searchParams.set("lang", "en");
+  } else {
+    url.searchParams.delete("lang");
+  }
+  window.history.replaceState({}, "", url.toString());
+}
+
 const I18N = {
   zh: {
     heroTitle: "AI咨询行动榜",
@@ -1411,6 +1426,7 @@ async function init() {
   if (!response.ok) throw new Error(`数据加载失败：${response.status}`);
   data = await response.json();
 
+  activeLanguage = currentUrlLanguage();
   eventTypes = data.event_types;
   dimensions = data.dimensions;
   applyStaticTranslations();
@@ -1443,14 +1459,18 @@ async function init() {
   });
   els.langZh?.addEventListener("click", () => {
     activeLanguage = "zh";
+    syncLanguageInUrl();
     applyStaticTranslations();
     refreshFilterOptionLabels();
+    renderDimensions();
     renderScoreboard();
   });
   els.langEn?.addEventListener("click", () => {
     activeLanguage = "en";
+    syncLanguageInUrl();
     applyStaticTranslations();
     refreshFilterOptionLabels();
+    renderDimensions();
     renderScoreboard();
   });
 }
