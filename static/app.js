@@ -30,6 +30,7 @@ let dimensions = [];
 let activeBoard = "action";
 let compactMode = true;
 let expandAllEvidence = false;
+const ACTION_SCORE_CURVE = 70;
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -266,13 +267,34 @@ function compositeCapabilityScore(company) {
   return longTermBase * 0.6 + action * 0.4;
 }
 
+function displayActionScore(totalWeight, maxWeight, minWeight) {
+  if (!Number.isFinite(totalWeight) || maxWeight <= 0) return 0;
+  const maxRaw = 100 * (1 - Math.exp(-maxWeight / ACTION_SCORE_CURVE));
+  const rawScore = 100 * (1 - Math.exp(-totalWeight / ACTION_SCORE_CURVE));
+  const headFloor = 90;
+
+  if (maxRaw <= headFloor || rawScore <= headFloor) {
+    return Math.round(rawScore * 10) / 10;
+  }
+
+  const normalized = Math.max(0, Math.min(1, (rawScore - headFloor) / (maxRaw - headFloor)));
+  return Math.round((headFloor + normalized * (100 - headFloor)) * 10) / 10;
+}
+
 function actionRankedCompanies(companies = data.companies) {
-  return companies
+  const rawRows = companies
     .map((company) => ({
       company,
-      action: recentActionScore(company).score,
+      actionRaw: recentActionScore(company),
       composite: compositeCapabilityScore(company),
       latestTimestamp: latestCompanySignal(company).latestTimestamp,
+    }));
+  const maxWeight = Math.max(...rawRows.map((row) => row.actionRaw.totalWeight), 0);
+  const minWeight = Math.min(...rawRows.map((row) => row.actionRaw.totalWeight), maxWeight);
+  return rawRows
+    .map((row) => ({
+      ...row,
+      action: displayActionScore(row.actionRaw.totalWeight, maxWeight, minWeight),
     }))
     .sort((a, b) => b.action - a.action || b.latestTimestamp - a.latestTimestamp);
 }
@@ -392,6 +414,7 @@ function cardAnchorId(company) {
 
 function renderRankNavigator(rows) {
   const topRows = rows.slice(0, 10);
+  const scoreLabel = activeBoard === "action" ? "行动力" : "综合分";
   return `
     <section class="rank-navigator-shell" aria-label="排名快速导航">
       <div class="rank-navigator-shell__intro">
@@ -402,11 +425,12 @@ function renderRankNavigator(rows) {
         <p>先快速扫榜，再进入单家公司证据。</p>
       </div>
       <div class="rank-navigator">
-        ${topRows.map(({ company }, index) => `
-          <a class="rank-navigator__item rank-navigator__item--${index < 3 ? "featured" : "compact"}" href="#${escapeHtml(cardAnchorId(company))}">
+        ${topRows.map((row, index) => `
+          <a class="rank-navigator__item rank-navigator__item--${index < 3 ? "featured" : "compact"}" href="#${escapeHtml(cardAnchorId(row.company))}">
             <span class="rank-navigator__rank">#${index + 1}</span>
-            <strong>${escapeHtml(company.name)}</strong>
-            <em>${escapeHtml(company.cn || company.tier || "")}</em>
+            <strong>${escapeHtml(row.company.name)}</strong>
+            <em>${escapeHtml(row.company.cn || row.company.tier || "")}</em>
+            <b>${activeBoard === "action" ? row.action.toFixed(1) : row.composite.toFixed(1)} <small>${scoreLabel}</small></b>
           </a>
         `).join("")}
       </div>
@@ -494,33 +518,31 @@ function renderCompanyCard(company, rank) {
 }
 
 function recentActionScore(company) {
-  const ACTION_SCORE_NORMALIZER = 2.2;
   const now = Date.parse(`${data.meta.updated_at}T00:00:00Z`) || Date.now();
   const weightedRows = scoreActionEvents(company.events, now);
   const total = weightedRows.reduce((sum, row) => sum + row.contribution, 0);
-  const normalized = Math.min(100, total / ACTION_SCORE_NORMALIZER);
+  const normalized = 100 * (1 - Math.exp(-total / ACTION_SCORE_CURVE));
   return {
     score: Math.round(normalized * 10) / 10,
+    totalWeight: Math.round(total * 100) / 100,
     events: weightedRows.map((row) => ({
       ...row.event,
-      contribution_score: Math.round((row.contribution / ACTION_SCORE_NORMALIZER) * 10) / 10,
+      contribution_score: Math.round((100 * (1 - Math.exp(-row.contribution / ACTION_SCORE_CURVE))) * 10) / 10,
     })),
   };
 }
 
 function historicalActionScore(company, asOfDate, filterFn = () => true) {
-  const ACTION_SCORE_NORMALIZER = 2.2;
   const now = Date.parse(`${asOfDate}T00:00:00Z`) || Date.now();
   const weightedRows = scoreActionEvents(
     company.events.filter((event) => eventTimestamp(event.date) <= now && filterFn(event)),
     now,
   );
   const total = weightedRows.reduce((sum, row) => sum + row.contribution, 0);
-  return Math.round(Math.min(100, total / ACTION_SCORE_NORMALIZER) * 10) / 10;
+  return Math.round((100 * (1 - Math.exp(-total / ACTION_SCORE_CURVE))) * 10) / 10;
 }
 
 function historicalRecentActionDetail(company, asOfDate) {
-  const ACTION_SCORE_NORMALIZER = 2.2;
   const now = Date.parse(`${asOfDate}T00:00:00Z`) || Date.now();
   const weightedRows = scoreActionEvents(
     company.events.filter((event) => eventTimestamp(event.date) <= now),
@@ -528,10 +550,10 @@ function historicalRecentActionDetail(company, asOfDate) {
   );
   const total = weightedRows.reduce((sum, row) => sum + row.contribution, 0);
   return {
-    score: Math.round(Math.min(100, total / ACTION_SCORE_NORMALIZER) * 10) / 10,
+    score: Math.round((100 * (1 - Math.exp(-total / ACTION_SCORE_CURVE))) * 10) / 10,
     events: weightedRows.map((row) => ({
       ...row.event,
-      contribution_score: Math.round((row.contribution / ACTION_SCORE_NORMALIZER) * 10) / 10,
+      contribution_score: Math.round((100 * (1 - Math.exp(-row.contribution / ACTION_SCORE_CURVE))) * 10) / 10,
     })),
   };
 }
@@ -812,9 +834,10 @@ function movementMeta(currentRank, previousRank) {
   return { arrow: "→", label: "较上期持平", className: "flat" };
 }
 
-function renderActionCard(company, rank, previousRankMap) {
+function renderActionCard(row, rank, previousRankMap) {
+  const { company } = row;
   const action = recentActionScore(company);
-  const score = action.score;
+  const score = row.action;
   const movement = movementMeta(rank, previousRankMap.get(company.id));
   const latestEvent = [...company.events].sort((a, b) => eventTimestamp(b.date) - eventTimestamp(a.date))[0];
   const accent = latestEvent ? typeColor(latestEvent.type) : "#1d4ed8";
@@ -992,9 +1015,9 @@ function renderScoreboard() {
     ${renderBoardControls()}
     ${renderRankNavigator(rows)}
   ` + rows
-    .map(({ company }, index) => activeBoard === "action"
-      ? renderActionCard(company, index + 1, previousRankMap)
-      : renderCompositeCard(company, index + 1))
+    .map((row, index) => activeBoard === "action"
+      ? renderActionCard(row, index + 1, previousRankMap)
+      : renderCompositeCard(row.company, index + 1))
     .join("");
 
   document.querySelector("#viewActionInline")?.addEventListener("click", () => {
