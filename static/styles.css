@@ -144,6 +144,68 @@ h1 {
   letter-spacing: -0.08em;
 }
 
+.wechat-banner {
+  width: min(1320px, calc(100vw - 40px));
+  margin: 0 auto 24px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 156px;
+  gap: 24px;
+  align-items: center;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 248, 236, 0.86)),
+    radial-gradient(circle at right top, rgba(29, 78, 216, 0.12), transparent 18rem);
+}
+
+.wechat-banner__copy {
+  max-width: 860px;
+}
+
+.wechat-banner__eyebrow {
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.wechat-banner h2 {
+  margin-bottom: 10px;
+  font-size: clamp(30px, 4.4vw, 44px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.wechat-banner__body {
+  margin: 0;
+  max-width: 760px;
+  color: #3e352d;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wechat-banner__qr {
+  justify-self: end;
+  display: grid;
+  place-items: center;
+  width: 156px;
+  height: 156px;
+  padding: 12px;
+  border: 1px solid rgba(23, 20, 17, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 16px 36px rgba(23, 20, 17, 0.10);
+}
+
+.wechat-banner__qr img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
 .layout {
   width: min(1320px, calc(100vw - 40px));
   margin: 0 auto 28px;
@@ -1378,9 +1440,16 @@ input:focus, select:focus {
 }
 
 @media (max-width: 860px) {
-  .hero, .layout, .news-summary, .weekly-events, .coverage, .insights, .method, .dimensions { width: min(100% - 24px, 1320px); }
+  .hero, .layout, .news-summary, .weekly-events, .coverage, .insights, .method, .dimensions, .wechat-banner { width: min(100% - 24px, 1320px); }
   .hero, .layout { grid-template-columns: 1fr; }
   .hero { padding-top: 62px; }
+  .wechat-banner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .wechat-banner__qr {
+    justify-self: start;
+  }
   .control-panel { position: static; }
   .bars, .summary-tags { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .method-grid, .coverage-grid { grid-template-columns: 1fr; }
@@ -1405,6 +1474,20 @@ input:focus, select:focus {
   .lang-switch {
     top: 10px;
     right: 0;
+  }
+  .wechat-banner {
+    padding: 20px;
+  }
+  .wechat-banner h2 {
+    font-size: 28px;
+    line-height: 1.04;
+  }
+  .wechat-banner__body {
+    font-size: 15px;
+  }
+  .wechat-banner__qr {
+    width: 140px;
+    height: 140px;
   }
   .rank-card__top, .event, .timeline-item, .scored-action { grid-template-columns: 1fr; }
   .scored-action__rank { min-height: auto; grid-template-columns: repeat(3, minmax(0, 1fr)); }

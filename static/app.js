@@ -12,6 +12,9 @@ const els = {
   insightsSubtitle: document.querySelector("#insightsSubtitle"),
   coverageTitle: document.querySelector("#coverageTitle"),
   coverageSubtitle: document.querySelector("#coverageSubtitle"),
+  wechatEyebrow: document.querySelector("#wechatEyebrow"),
+  wechatTitle: document.querySelector("#wechatTitle"),
+  wechatBody: document.querySelector("#wechatBody"),
   coverageCard1Title: document.querySelector("#coverageCard1Title"),
   coverageCard1Body: document.querySelector("#coverageCard1Body"),
   coverageCard2Title: document.querySelector("#coverageCard2Title"),
@@ -92,6 +95,9 @@ const I18N = {
     insightsSubtitle: "基于当前数据的关键发现，帮助快速理解 AI 咨询竞争格局。",
     coverageTitle: "Coverage",
     coverageSubtitle: "说明榜单如何尽量接近全面，并把证据偏差公开出来。",
+    wechatEyebrow: "Praxis Advisory",
+    wechatTitle: "关注我们的微信公众号",
+    wechatBody: "扫描二维码，获取 AI 咨询行动榜更新、欧洲企业看中国 AI 的研究观察，以及 Praxis Advisory 的最新内容。",
     coverageCard1Title: "统一检索模板",
     coverageCard1Body: "所有上榜公司使用同一套检索逻辑，覆盖官网、新闻稿、研究页、合作方发布和主流媒体，减少“想到谁就搜谁”的偏差。",
     coverageCard2Title: "来源分层降权",
@@ -132,6 +138,9 @@ const I18N = {
     insightsSubtitle: "A fast read on the most important patterns emerging from the current dataset.",
     coverageTitle: "Coverage",
     coverageSubtitle: "How the ranking tries to stay comprehensive while making evidence bias explicit.",
+    wechatEyebrow: "Praxis Advisory",
+    wechatTitle: "Follow Our WeChat Official Account",
+    wechatBody: "Scan the QR code for leaderboard updates, research on how European companies read the China AI ecosystem, and the latest insights from Praxis Advisory.",
     coverageCard1Title: "Standardized search template",
     coverageCard1Body: "Every firm is reviewed using the same search logic across official sites, press releases, research pages, partner announcements, and mainstream media to reduce selective attention bias.",
     coverageCard2Title: "Source-tier weighting",
@@ -276,6 +285,9 @@ function applyStaticTranslations() {
   if (els.insightsSubtitle) els.insightsSubtitle.textContent = t("insightsSubtitle");
   if (els.coverageTitle) els.coverageTitle.textContent = t("coverageTitle");
   if (els.coverageSubtitle) els.coverageSubtitle.textContent = t("coverageSubtitle");
+  if (els.wechatEyebrow) els.wechatEyebrow.textContent = t("wechatEyebrow");
+  if (els.wechatTitle) els.wechatTitle.textContent = t("wechatTitle");
+  if (els.wechatBody) els.wechatBody.textContent = t("wechatBody");
   if (els.coverageCard1Title) els.coverageCard1Title.textContent = t("coverageCard1Title");
   if (els.coverageCard1Body) els.coverageCard1Body.textContent = t("coverageCard1Body");
   if (els.coverageCard2Title) els.coverageCard2Title.textContent = t("coverageCard2Title");
