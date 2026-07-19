@@ -243,6 +243,10 @@ function translateEventTitle(text = "") {
   if (activeLanguage !== "en" || !text) return text;
 
   return text
+    .replace("从 adoption 到 impact：AI 转型的三个层次", "From adoption to impact: Three horizons of AI transformation")
+    .replace("重构客户体验：agentic era 下的 CX", "Rewiring customer experience for the agentic era")
+    .replace("Rewired takes：规模化 AI 采纳的实战经验", "Rewired takes: Practical people lessons for scaling AI adoption")
+    .replace("你不能站在场边领导 AI", "You can't lead AI from the sidelines")
     .replace("BCG 发布 Mid-2026 M&A Insights：AI drives a recovery, but questions remain", "BCG publishes Mid-2026 M&A Insights: AI drives a recovery, but questions remain")
     .replace("Oliver Wyman Forum 发布 The industrial AI divide", "Oliver Wyman Forum publishes The industrial AI divide")
     .replace("PwC 与 OpenAI 推出 agentic customer engagement and service 方案", "PwC and OpenAI launch agentic customer engagement and service solutions")
@@ -264,6 +268,10 @@ function translateEventSummary(text = "") {
   if (activeLanguage !== "en" || !text) return text;
 
   return text
+    .replace("McKinsey 基于全球调研指出，组织要从个人采纳走向企业级价值捕获，关键在于重构工作流、重新设计岗位，并围绕 AI 可能创造最大价值的环节推进转型。这是很典型的 AI 思考力信号。", "McKinsey argues, based on global research, that organizations move from individual adoption to enterprise value capture by redesigning workflows, reshaping roles, and focusing transformation efforts on the parts of the business where AI can create the most value. This is a classic AI thought-leadership signal.")
+    .replace("McKinsey 指出，随着 AI agents 参与实时决策，领先企业正在把客户体验从预设旅程重构为动态的跨渠道编排。这类内容把 AI 直接连接到经营与增长模式。", "McKinsey argues that as AI agents take on moment-to-moment decisions, leading companies are redesigning customer experience from predefined journeys to dynamic, cross-channel orchestration. This kind of content directly connects AI to operating and growth models.")
+    .replace("McKinsey Senior Partner Brooke Weddle 讨论企业如何从试点走向规模化，强调 workflow redesign、operating model、领导力和文化。它更像是对企业 AI 转型的行动指南，而不只是观点摘要。", "McKinsey Senior Partner Brooke Weddle discusses how companies move from pilots to scale, emphasizing workflow redesign, operating model, leadership, and culture. It reads more like a practical guide to enterprise AI transformation than a summary of opinions.")
+    .replace("McKinsey 指出 AI 已经从实验阶段进入运营现实，领导者需要亲自使用 AI 才能重塑工作方式、建立信任并推动规模化价值。它强化了麦肯锡在领导力和组织变革上的公开思考。", "McKinsey argues that AI has moved from experimentation into operational reality, and leaders need to use it directly if they want to reshape work, build trust, and scale value. It reinforces McKinsey's public thinking on leadership and organizational change.")
     .replace("BCG 于 2026-07-15 发布最新并购洞察，明确指出 AI 正在重塑竞争格局并驱动并购回暖。虽然主题落在 M&A，但核心论点是企业正因 AI 带来的能力重构与估值分化而加速交易决策，属于本周可确认的官方 thought leadership 信号。", "On 2026-07-15, BCG published new M&A insights arguing that AI is reshaping competitive dynamics and helping drive a rebound in deal activity. While framed through M&A, the core thesis is that AI-led capability shifts and valuation divergence are accelerating transaction decisions, making this a clearly dated official thought-leadership signal for the week.")
     .replace("Oliver Wyman Forum 于 2026-07-14 发布交通、物流与国防行业 AI 竞争分化报告，强调 AI 已从 productivity tools 走向 operating-model-level advantage，并提出数据、治理、人才与董事会参与等企业级要求。这是一条时间明确、主题聚焦 AI 的官方 thought leadership 信号。", "On 2026-07-14, Oliver Wyman Forum published a report on AI-driven competitive divergence across transportation, logistics, and defense. It argues that AI has moved beyond productivity tools toward operating-model-level advantage, and highlights enterprise requirements around data, governance, talent, and board engagement. This is a clearly dated official AI thought-leadership signal.")
     .replace("PwC US 于 2026-07-15 官方宣布推出与 OpenAI 共建的 agentic contact and service solutions，把营销、销售、commerce 与 service 放进同一个 AI-enabled operating model，并设立专门的 Center of Excellence 加速客户部署。这是本周最强的官方合作与交付信号之一。", "On 2026-07-15, PwC US officially announced new agentic contact and service solutions built with OpenAI. The offer brings marketing, sales, commerce, and service into a single AI-enabled operating model, backed by a dedicated Center of Excellence to accelerate client deployment. It is one of the strongest official partnership and delivery signals of the week.")

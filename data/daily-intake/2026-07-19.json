@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "research_date": "2026-07-19",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-07-19",
+    "status": "staging",
+    "collection_method": "Tavily-first weekly refresh, with official-source screening and conservative deduplication. This file is a retrospective candidate pool for the 2026-07-19 refresh.",
+    "notes": "This file stores the candidates reviewed during the 2026-07-19 weekly refresh. The four retained items were net-new enough to merge into the formal leaderboard; the rest of the search results were either duplicates, older than the weekly window, or too weak to keep as candidate records."
+  },
+  "items": [
+    {
+      "id": "2026-07-19-mckinsey-ai-transformation-three-horizons",
+      "published_at": "2026-07-08",
+      "discovered_at": "2026-07-19",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "从 adoption 到 impact：AI 转型的三个层次",
+      "summary": "McKinsey 基于全球调研指出，组织要从个人采纳走向企业级价值捕获，关键在于重构工作流、重新设计岗位，并围绕 AI 可能创造最大价值的环节推进转型。",
+      "why_it_matters": "这是很典型的 AI 思考力信号，也能作为 McKinsey 长期转型底座的补强证据。",
+      "url": "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/from-adoption-to-impact-three-horizons-of-ai-transformation",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "delivery_production"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "Already merged into the formal leaderboard as a long-term thought-leadership baseline in this refresh."
+    },
+    {
+      "id": "2026-07-19-mckinsey-rewiring-cx-agentic-era",
+      "published_at": "2026-07-14",
+      "discovered_at": "2026-07-19",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "重构客户体验：agentic era 下的 CX",
+      "summary": "McKinsey 指出，随着 AI agents 参与实时决策，领先企业正在把客户体验从预设旅程重构为动态的跨渠道编排。",
+      "why_it_matters": "这类内容把 AI 直接连接到经营与增长模式，属于很有价值的 leadership thought。",
+      "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/rewiring-customer-experience-for-the-agentic-era",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "strategy_signal",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "Already merged into the formal leaderboard as a long-term thought-leadership baseline in this refresh."
+    },
+    {
+      "id": "2026-07-19-mckinsey-rewired-takes-scaling-ai-adoption",
+      "published_at": "2026-07-13",
+      "discovered_at": "2026-07-19",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "Rewired takes：规模化 AI 采纳的实战经验",
+      "summary": "McKinsey Senior Partner Brooke Weddle 讨论企业如何从试点走向规模化，强调 workflow redesign、operating model、领导力和文化。",
+      "why_it_matters": "它更像是对企业 AI 转型的行动指南，而不只是观点摘要。",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/rewired-takes-practical-people-lessons-for-scaling-ai-adoption",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "delivery_production",
+        "governance_risk"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "Already merged into the formal leaderboard as a long-term thought-leadership baseline in this refresh."
+    },
+    {
+      "id": "2026-07-19-mckinsey-you-cant-lead-ai-from-the-sidelines",
+      "published_at": "2026-07-07",
+      "discovered_at": "2026-07-19",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "你不能站在场边领导 AI",
+      "summary": "McKinsey 指出 AI 已经从实验阶段进入运营现实，领导者需要亲自使用 AI 才能重塑工作方式、建立信任并推动规模化价值。",
+      "why_it_matters": "它强化了麦肯锡在领导力和组织变革上的公开思考。",
+      "url": "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/you-cant-lead-ai-from-the-sidelines",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "governance_risk"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "Already merged into the formal leaderboard as a long-term thought-leadership baseline in this refresh."
+    },
+    {
+      "id": "2026-07-19-accenture-dg-intpa-ai-assistant",
+      "published_at": "2026-07-15",
+      "discovered_at": "2026-07-19",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "client_proof",
+      "title": "Accenture 帮助欧盟 DG INTPA 将 AI Assistant 扩展到全球运营",
+      "summary": "Accenture 于 2026-07-15 官方披露其为 European Commission DG INTPA 设计、构建并规模化 AI Assistant，服务已覆盖总部及全球 delegations，并形成 2,000+ regular users 与 400,000+ queries 的使用规模。",
+      "why_it_matters": "这是本周最强的 production-grade client proof 之一，说明 Accenture 已经把 AI 交付沉到真实运营环境。",
+      "url": "https://newsroom.accenture.com/news/2026/accenture-helps-european-commission-s-directorate-general-for-international-partnerships-to-scale-ai-across-global-operations",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "client_value_proof",
+        "delivery_production",
+        "industry_coverage",
+        "governance_risk"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official client proof within the weekly window; strong enough to merge into the formal leaderboard."
+    },
+    {
+      "id": "2026-07-19-pwc-openai-agentic-contact-service",
+      "published_at": "2026-07-15",
+      "discovered_at": "2026-07-19",
+      "scope": "company",
+      "company_ids": [
+        "pwc"
+      ],
+      "company_names": [
+        "PwC"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "PwC 与 OpenAI 推出 agentic customer engagement and service 方案",
+      "summary": "PwC US 于 2026-07-15 官方宣布推出与 OpenAI 共建的 agentic contact and service solutions，把营销、销售、commerce 与 service 放进同一个 AI-enabled operating model，并设立专门的 Center of Excellence 加速客户部署。",
+      "why_it_matters": "这是本周最强的官方合作与交付信号之一，兼具合作深度和客户落地意味。",
+      "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases/pwc-openai-agentic-contact-service-solutions.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "client_value_proof",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official partnership within the weekly window; strong enough to merge into the formal leaderboard."
+    },
+    {
+      "id": "2026-07-19-bcg-mna-insights-ai-recovery",
+      "published_at": "2026-07-15",
+      "discovered_at": "2026-07-19",
+      "scope": "company",
+      "company_ids": [
+        "bcg"
+      ],
+      "company_names": [
+        "BCG"
+      ],
+      "candidate_event_type": "research",
+      "title": "BCG 发布 Mid-2026 M&A Insights：AI drives a recovery, but questions remain",
+      "summary": "BCG 于 2026-07-15 发布最新并购洞察，明确指出 AI 正在重塑竞争格局并驱动并购回暖。虽然主题落在 M&A，但核心论点是企业正因 AI 带来的能力重构与估值分化而加速交易决策。",
+      "why_it_matters": "这是时间明确、主题聚焦 AI 的官方 thought leadership 信号，能强化 BCG 在管理层研究上的存在感。",
+      "url": "https://www.bcg.com/publications/2026/global-m-and-a-rebound-fueled-by-ai",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "capital_ma"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official research within the weekly window; strong enough to merge into the formal leaderboard."
+    },
+    {
+      "id": "2026-07-19-oliver-wyman-industrial-ai-divide",
+      "published_at": "2026-07-14",
+      "discovered_at": "2026-07-19",
+      "scope": "company",
+      "company_ids": [
+        "oliver_wyman"
+      ],
+      "company_names": [
+        "Oliver Wyman"
+      ],
+      "candidate_event_type": "research",
+      "title": "Oliver Wyman Forum 发布 The industrial AI divide",
+      "summary": "Oliver Wyman Forum 于 2026-07-14 发布交通、物流与国防行业 AI 竞争分化报告，强调 AI 已从 productivity tools 走向 operating-model-level advantage，并提出数据、治理、人才与董事会参与等企业级要求。",
+      "why_it_matters": "这是明确的周内 thought leadership 信号，说明 Oliver Wyman 仍在用行业研究塑造 AI 叙事。",
+      "url": "https://www.oliverwymanforum.com/mobility/ai-divide-transportation-logistics-defense.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "industry_coverage",
+        "governance_risk"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official research within the weekly window; strong enough to merge into the formal leaderboard."
+    }
+  ]
+}

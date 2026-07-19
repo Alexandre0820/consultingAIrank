@@ -142,6 +142,75 @@
       ],
       "events": [
         {
+          "date": "2026-07-15",
+          "type": "research",
+          "title": "从 adoption 到 impact：AI 转型的三个层次",
+          "summary": "McKinsey 基于全球调研指出，组织要从个人采纳走向企业级价值捕获，关键在于重构工作流、重新设计岗位，并围绕 AI 可能创造最大价值的环节推进转型。这是很典型的 AI 思考力信号。",
+          "url": "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/from-adoption-to-impact-three-horizons-of-ai-transformation",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "official_site",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "delivery_production"
+          ],
+          "event_score": 79
+        },
+        {
+          "date": "2026-07-14",
+          "type": "research",
+          "title": "重构客户体验：agentic era 下的 CX",
+          "summary": "McKinsey 指出，随着 AI agents 参与实时决策，领先企业正在把客户体验从预设旅程重构为动态的跨渠道编排。这类内容把 AI 直接连接到经营与增长模式。",
+          "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/rewiring-customer-experience-for-the-agentic-era",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "official_site",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "strategy_signal",
+            "client_value_proof"
+          ],
+          "event_score": 77
+        },
+        {
+          "date": "2026-07-13",
+          "type": "research",
+          "title": "Rewired takes：规模化 AI 采纳的实战经验",
+          "summary": "McKinsey Senior Partner Brooke Weddle 讨论企业如何从试点走向规模化，强调 workflow redesign、operating model、领导力和文化。它更像是对企业 AI 转型的行动指南，而不只是观点摘要。",
+          "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/rewired-takes-practical-people-lessons-for-scaling-ai-adoption",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "official_site",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "delivery_production",
+            "governance_risk"
+          ],
+          "event_score": 76
+        },
+        {
+          "date": "2026-07-07",
+          "type": "research",
+          "title": "你不能站在场边领导 AI",
+          "summary": "McKinsey 指出 AI 已经从实验阶段进入运营现实，领导者需要亲自使用 AI 才能重塑工作方式、建立信任并推动规模化价值。它强化了麦肯锡在领导力和组织变革上的公开思考。",
+          "url": "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/you-cant-lead-ai-from-the-sidelines",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "official_site",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "governance_risk"
+          ],
+          "event_score": 74
+        },
+        {
           "date": "2026-06-14",
           "type": "partnership",
           "title": "McKinsey / QuantumBlack 成为 OpenAI Partner Network 首发全球合作伙伴",
