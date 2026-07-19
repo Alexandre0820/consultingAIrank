@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-07-04",
-    "updated_at": "2026-07-10",
+    "previous_updated_at": "2026-07-10",
+    "updated_at": "2026-07-19",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-07-10 本次刷新按周更口径纳入 2026-07-04 至 2026-07-10 的净新增 AI 公开信号；本周采取保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作与 thought leadership 更新，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-07-19 本次刷新按周更口径纳入 2026-07-11 至 2026-07-19 的净新增 AI 公开信号；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作、客户交付与 thought leadership 更新，并优先采用官方、厂商官方与品牌自有研究页链接；媒体信号仅在时间明确、主题明确且能补足覆盖面的情况下纳入，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -229,6 +229,23 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-07-15",
+          "type": "research",
+          "title": "BCG 发布 Mid-2026 M&A Insights：AI drives a recovery, but questions remain",
+          "summary": "BCG 于 2026-07-15 发布最新并购洞察，明确指出 AI 正在重塑竞争格局并驱动并购回暖。虽然主题落在 M&A，但核心论点是企业正因 AI 带来的能力重构与估值分化而加速交易决策，属于本周可确认的官方 thought leadership 信号。",
+          "url": "https://www.bcg.com/publications/2026/global-m-and-a-rebound-fueled-by-ai",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "capital_ma"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-07-02",
           "type": "research",
@@ -591,6 +608,24 @@
       ],
       "events": [
         {
+          "date": "2026-07-14",
+          "type": "research",
+          "title": "Oliver Wyman Forum 发布 The industrial AI divide",
+          "summary": "Oliver Wyman Forum 于 2026-07-14 发布交通、物流与国防行业 AI 竞争分化报告，强调 AI 已从 productivity tools 走向 operating-model-level advantage，并提出数据、治理、人才与董事会参与等企业级要求。这是一条时间明确、主题聚焦 AI 的官方 thought leadership 信号。",
+          "url": "https://www.oliverwymanforum.com/mobility/ai-divide-transportation-logistics-defense.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage",
+            "governance_risk"
+          ],
+          "event_score": 78
+        },
+        {
           "date": "2026-05",
           "type": "client_proof",
           "title": "Oliver Wyman 与 Nippon Life 用生成式AI评估治理对话质量",
@@ -858,6 +893,24 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-07-15",
+          "type": "partnership",
+          "title": "PwC 与 OpenAI 推出 agentic customer engagement and service 方案",
+          "summary": "PwC US 于 2026-07-15 官方宣布推出与 OpenAI 共建的 agentic contact and service solutions，把营销、销售、commerce 与 service 放进同一个 AI-enabled operating model，并设立专门的 Center of Excellence 加速客户部署。这是本周最强的官方合作与交付信号之一。",
+          "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases/pwc-openai-agentic-contact-service-solutions.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "client_value_proof",
+            "strategy_signal"
+          ],
+          "event_score": 92
+        },
         {
           "date": "2026-06-23",
           "type": "research",
@@ -1234,6 +1287,24 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-07-15",
+          "type": "client_proof",
+          "title": "Accenture 帮助欧盟 DG INTPA 将 AI Assistant 扩展到全球运营",
+          "summary": "Accenture 于 2026-07-15 官方披露其为 European Commission DG INTPA 设计、构建并规模化 AI Assistant，服务已覆盖总部及全球 delegations，并形成 2,000+ regular users 与 400,000+ queries 的使用规模。这是本周非常强的 production-grade client proof。",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-helps-european-commission-s-directorate-general-for-international-partnerships-to-scale-ai-across-global-operations",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "client_value_proof",
+            "delivery_production",
+            "industry_coverage",
+            "governance_risk"
+          ],
+          "event_score": 90
+        },
         {
           "date": "2026-07-08",
           "type": "partnership",
