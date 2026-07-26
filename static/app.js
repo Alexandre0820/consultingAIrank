@@ -248,6 +248,13 @@ function translateEventTitle(text = "") {
     .replace("Rewired takes：规模化 AI 采纳的实战经验", "Rewired takes: Practical people lessons for scaling AI adoption")
     .replace("你不能站在场边领导 AI", "You can't lead AI from the sidelines")
     .replace("BCG 发布 Mid-2026 M&A Insights：AI drives a recovery, but questions remain", "BCG publishes Mid-2026 M&A Insights: AI drives a recovery, but questions remain")
+    .replace("BCG 发布 CEO AI value survey：局部见效，但规模化仍然困难", "BCG publishes CEO AI value survey: benefits are visible, but scaling remains hard")
+    .replace("BCG 发布 Is AI Computing Power Becoming a Commodity?", "BCG publishes Is AI Computing Power Becoming a Commodity?")
+    .replace("KPMG 与 OpenAI 建立战略联盟，推进 AI-native enterprise workflows", "KPMG forms a strategic alliance with OpenAI to advance AI-native enterprise workflows")
+    .replace("PwC 发布 The intelligent enterprise in action: AI and the next era of customer experience", "PwC publishes The intelligent enterprise in action: AI and the next era of customer experience")
+    .replace("Capgemini 发布 Agentic AI in Sales and Operations Planning", "Capgemini publishes Agentic AI in Sales and Operations Planning")
+    .replace("FTI 发布 The New Shelf Space: How AI Agents Are Rewiring Brand Discovery", "FTI publishes The New Shelf Space: How AI Agents Are Rewiring Brand Discovery")
+    .replace("Roland Berger AI hub 在 7 月继续保持连续更新", "Roland Berger's AI hub continues to update throughout July")
     .replace("Oliver Wyman Forum 发布 The industrial AI divide", "Oliver Wyman Forum publishes The industrial AI divide")
     .replace("PwC 与 OpenAI 推出 agentic customer engagement and service 方案", "PwC and OpenAI launch agentic customer engagement and service solutions")
     .replace("Accenture 帮助欧盟 DG INTPA 将 AI Assistant 扩展到全球运营", "Accenture helps the European Commission's DG INTPA scale its AI Assistant across global operations")
@@ -261,7 +268,8 @@ function translateEventTitle(text = "") {
     .replace("发布 Unintended consequences: future AI cyber risk", "publishes Unintended consequences: future AI cyber risk")
     .replace("发布 What AI Growth Leaders Need to Get Right 视频洞察", "publishes the video insight What AI Growth Leaders Need to Get Right")
     .replace("发布 2026 Private Equity AI Radar", "publishes the 2026 Private Equity AI Radar")
-    .replace("采用 Microsoft Agent 365 管理 AI agents 生命周期", "adopts Microsoft Agent 365 to manage the AI agent lifecycle");
+    .replace("采用 Microsoft Agent 365 管理 AI agents 生命周期", "adopts Microsoft Agent 365 to manage the AI agent lifecycle")
+    .replace("L.E.K. 发布《What B2B SaaS Leaders Can Learn From How AI Labs Price》", "L.E.K. publishes What B2B SaaS Leaders Can Learn From How AI Labs Price");
 }
 
 function translateEventSummary(text = "") {
@@ -273,6 +281,13 @@ function translateEventSummary(text = "") {
     .replace("McKinsey Senior Partner Brooke Weddle 讨论企业如何从试点走向规模化，强调 workflow redesign、operating model、领导力和文化。它更像是对企业 AI 转型的行动指南，而不只是观点摘要。", "McKinsey Senior Partner Brooke Weddle discusses how companies move from pilots to scale, emphasizing workflow redesign, operating model, leadership, and culture. It reads more like a practical guide to enterprise AI transformation than a summary of opinions.")
     .replace("McKinsey 指出 AI 已经从实验阶段进入运营现实，领导者需要亲自使用 AI 才能重塑工作方式、建立信任并推动规模化价值。它强化了麦肯锡在领导力和组织变革上的公开思考。", "McKinsey argues that AI has moved from experimentation into operational reality, and leaders need to use it directly if they want to reshape work, build trust, and scale value. It reinforces McKinsey's public thinking on leadership and organizational change.")
     .replace("BCG 于 2026-07-15 发布最新并购洞察，明确指出 AI 正在重塑竞争格局并驱动并购回暖。虽然主题落在 M&A，但核心论点是企业正因 AI 带来的能力重构与估值分化而加速交易决策，属于本周可确认的官方 thought leadership 信号。", "On 2026-07-15, BCG published new M&A insights arguing that AI is reshaping competitive dynamics and helping drive a rebound in deal activity. While framed through M&A, the core thesis is that AI-led capability shifts and valuation divergence are accelerating transaction decisions, making this a clearly dated official thought-leadership signal for the week.")
+    .replace("BCG 于 2026-07-22 发布官方研究，指出近九成 CEO 已在部分业务中看到 AI 带来的成本或收入改善，但大多数企业仍在规模化落地上挣扎。这是一条很典型的管理层 AI 执行差距研究信号，适合纳入思考力与战略判断维度。", "On 2026-07-22, BCG published official research showing that nearly nine in ten CEOs are seeing some AI-related cost or revenue benefits in targeted areas, yet most companies still struggle to scale. This is a classic management-level signal on the execution gap in AI.")
+    .replace("BCG 于 2026-07-23 发布 AI 计算资源专题文章，讨论算力市场正变得更透明、更可交易，并可能释放新的企业价值空间。它属于时间明确、主题直接指向 AI 基础设施与商业化路径的官方 thought leadership 信号。", "On 2026-07-23, BCG published a piece on AI compute markets, arguing that compute is becoming more transparent, liquid, and commercially meaningful. It is a clearly dated official thought-leadership signal focused on AI infrastructure and monetization.")
+    .replace("KPMG 于 2026-07-21 官方宣布与 OpenAI 建立战略联盟，并被列为 OpenAI Partner Network 的 Elite Partner。公告强调将 AI 直接嵌入企业流程、SaaS 工具和公共部门解决方案，同时采用 forward deployed engineer 模式推动生产级落地，这是一条应当纳入正式榜单的强合作与交付信号。", "On 2026-07-21, KPMG officially announced a strategic alliance with OpenAI and was named an Elite Partner in the OpenAI Partner Network. The release emphasizes embedding AI directly into enterprise workflows, SaaS tools, and public-sector solutions, supported by a forward-deployed-engineer model for production deployment.")
+    .replace("PwC 于 2026-07-22 发布 webcast，系统阐述如何把 AI 嵌入决策机制、客户体验与 enterprise-wide performance。内容强调 proprietary data、agents 与 humans 的协同编排，以及把零散试点转化为全企业绩效的能力，属于高质量的官方 thought leadership 信号。", "On 2026-07-22, PwC published a webcast on how to embed AI into decision-making, customer experience, and enterprise-wide performance. It emphasizes proprietary data, orchestration between agents and humans, and the ability to turn isolated pilots into enterprise performance, making it a high-quality official thought-leadership signal.")
+    .replace("Capgemini 于 2026-07-23 发布 S&OP agentic AI 观点文章，讨论消费品牌如何借助 AI-powered adaptive planning 改善服务、降低成本并提升 forecast accuracy，同时预览其 S&OP Intelligence Co-Pilot。它不只是泛 AI 叙事，而是较明确的行业场景与解决方案信号。", "On 2026-07-23, Capgemini published a point of view on agentic AI in S&OP, explaining how consumer brands can use AI-powered adaptive planning to improve service, reduce cost, and improve forecast accuracy, while previewing its S&OP Intelligence Co-Pilot. This is more than a generic AI narrative; it is a fairly clear industry-use-case and solution signal.")
+    .replace("FTI 于 2026-07-22 发布消费者与品牌研究，指出 AI-driven commerce 已成为结构性趋势，并提出 LLM shelf share、agentic replenishment 与信任治理等新议题。它横跨 consumer、go-to-market 与 private equity 价值创造，是一条很值得纳入的官方 thought leadership 信号。", "On 2026-07-22, FTI published a consumer and brand study arguing that AI-driven commerce is becoming a structural shift, and introducing themes such as LLM shelf share, agentic replenishment, and trust governance. It sits at the intersection of consumer, go-to-market, and private-equity value creation, making it a strong official thought-leadership signal.")
+    .replace("基于 Roland Berger Artificial Intelligence hub 的最新公开更新时间线，可以确认其 AI / robotics / data 相关内容在 2026 年 7 月仍保持连续发布，最近几篇日期包括 7 月 23 日、7 月 16 日、7 月 14 日、7 月 9 日和 7 月 6 日。我们将其作为中等强度的 thought leadership 连续性信号纳入。", "Based on the public update cadence visible in Roland Berger's Artificial Intelligence hub, its AI, robotics, and data-related content was still being published continuously in July 2026, with recent dates including July 23, July 16, July 14, July 9, and July 6. We include this as a medium-strength continuity signal for thought leadership.")
     .replace("Oliver Wyman Forum 于 2026-07-14 发布交通、物流与国防行业 AI 竞争分化报告，强调 AI 已从 productivity tools 走向 operating-model-level advantage，并提出数据、治理、人才与董事会参与等企业级要求。这是一条时间明确、主题聚焦 AI 的官方 thought leadership 信号。", "On 2026-07-14, Oliver Wyman Forum published a report on AI-driven competitive divergence across transportation, logistics, and defense. It argues that AI has moved beyond productivity tools toward operating-model-level advantage, and highlights enterprise requirements around data, governance, talent, and board engagement. This is a clearly dated official AI thought-leadership signal.")
     .replace("PwC US 于 2026-07-15 官方宣布推出与 OpenAI 共建的 agentic contact and service solutions，把营销、销售、commerce 与 service 放进同一个 AI-enabled operating model，并设立专门的 Center of Excellence 加速客户部署。这是本周最强的官方合作与交付信号之一。", "On 2026-07-15, PwC US officially announced new agentic contact and service solutions built with OpenAI. The offer brings marketing, sales, commerce, and service into a single AI-enabled operating model, backed by a dedicated Center of Excellence to accelerate client deployment. It is one of the strongest official partnership and delivery signals of the week.")
     .replace("Accenture 于 2026-07-15 官方披露其为 European Commission DG INTPA 设计、构建并规模化 AI Assistant，服务已覆盖总部及全球 delegations，并形成 2,000+ regular users 与 400,000+ queries 的使用规模。这是本周非常强的 production-grade client proof。", "On 2026-07-15, Accenture officially disclosed that it designed, built, and scaled an AI Assistant for the European Commission's DG INTPA. The deployment now covers headquarters and global delegations, with more than 2,000 regular users and over 400,000 queries. This is a very strong production-grade client proof for the week.")
@@ -288,7 +303,35 @@ function translateEventSummary(text = "") {
     .replace("OpenAI 官方宣布推出 OpenAI Partner Network，BCG 作为首发全球合作伙伴之一被点名，OpenAI 特别强调其 transformation expertise、BCG X 技术能力与 forward deployed engineering talent，将帮助客户从 pilots 走向 applied AI at scale。", "OpenAI officially launched the OpenAI Partner Network and explicitly named BCG as one of the launch global partners. OpenAI highlighted its transformation expertise, BCG X technical capability, and forward-deployed engineering talent as assets that can help clients move from pilots to applied AI at scale.")
     .replace("OpenAI 官方将 Bain 列为 OpenAI Partner Network 首发全球合作伙伴之一，并强调 Bain 将 OpenAI frontier AI 与战略、技术和 enterprise transformation 能力结合，帮助客户把 AI ambition 变成 enterprise-wide impact。", "OpenAI named Bain one of the launch global partners in the OpenAI Partner Network, emphasizing Bain's ability to combine OpenAI frontier AI with strategy, technology, and enterprise-transformation capabilities to turn AI ambition into enterprise-wide impact.")
     .replace("OpenAI 官方将 Accenture 列为 OpenAI Partner Network 首发全球合作伙伴之一，并强调其 unmatched industry depth、global delivery scale 和把先进技术嵌入企业核心运营的能力。", "OpenAI named Accenture one of the launch global partners in the OpenAI Partner Network, highlighting its unmatched industry depth, global delivery scale, and ability to embed advanced technology into core enterprise operations.")
-    .replace("OpenAI 与 Accenture 加速企业 reinvention", "OpenAI and Accenture accelerate enterprise reinvention");
+    .replace("OpenAI 与 Accenture 加速企业 reinvention", "OpenAI and Accenture accelerate enterprise reinvention")
+    .replace("L.E.K. 于 2026-07-24 发布技术文章，讨论 AI labs 的定价逻辑与 B2B SaaS 可借鉴的商业模式启示，属于时间明确、主题明确的公开 thought leadership 信号。", "On 2026-07-24, L.E.K. published a technology article discussing AI labs' pricing logic and the commercial-model lessons B2B SaaS leaders can draw from it. It is a clearly dated and clearly themed public thought-leadership signal.")
+    .replace("L.E.K. 官方 AI 洞察页持续发布医疗 IT、心理健康、广告、体育、生物制药等行业的 AI 应用文章。", "L.E.K.'s official AI insights page continues to publish articles on AI applications in healthcare IT, mental health, advertising, sports, biopharma, and other sectors.");
+}
+
+function translateReportTitle(text = "") {
+  if (activeLanguage !== "en" || !text) return text;
+  return text
+    .replace("Artificial Intelligence", "Artificial Intelligence")
+    .replace("Revolution or extinction? Rethinking SaaS in the age of agentic AI", "Revolution or extinction? Rethinking SaaS in the age of agentic AI")
+    .replace("What B2B SaaS Leaders Can Learn From How AI Labs Price", "What B2B SaaS Leaders Can Learn From How AI Labs Price")
+    .replace("2026 AI Jobs Barometer", "2026 AI Jobs Barometer")
+    .replace("State of AI in the Enterprise 2026", "State of AI in the Enterprise 2026")
+    .replace("Building an enterprise-scale agentic AI operating system", "Building an enterprise-scale agentic AI operating system")
+    .replace("AI Insights", "AI Insights");
+}
+
+function translateReportSummary(text = "") {
+  if (activeLanguage !== "en" || !text) return text;
+  return text
+    .replace("L.E.K. 这篇 7 月 24 日的技术文章讨论 AI 实验室的定价方式，为 B2B SaaS 提供了新的 pricing 和商业模式视角，属于较强的公开思考力信号。", "This July 24 L.E.K. article examines how AI labs price their offerings and offers a new pricing and business-model lens for B2B SaaS leaders. It is a strong public thought-leadership signal.")
+    .replace("L.E.K. 在行业专题上有一定 AI 研究积累，但更偏垂直行业文章集合，体系化程度一般。", "L.E.K. has built up some AI research depth in its sector topics, but the output remains more of a collection of vertical articles than a fully systematized program.")
+    .replace("L.E.K. 对 agentic AI 对 SaaS 模式冲击的专题研究，比一般行业文章更接近公司级 AI 转型与商业模式重构判断。", "L.E.K.'s thematic research on how agentic AI may reshape the SaaS model is closer to a company-level AI transformation and business-model reinvention thesis than a standard industry article.")
+    .replace("L.E.K. 官方 AI 洞察页持续发布医疗 IT、心理健康、广告、体育、生物制药等行业的 AI 应用文章。", "L.E.K.'s official AI insights page continues to publish articles on AI applications in healthcare IT, mental health, advertising, sports, biopharma, and other sectors.")
+    .replace("Deloitte 的 State of AI 系列具备持续性和管理框架完整性，是企业 AI 采用成熟度的重要公开参照。", "Deloitte's State of AI series has continuity and a strong management framework, making it an important public benchmark for enterprise AI maturity.")
+    .replace("EY 用 operating system 语言来定义 agentic AI 规模化部署路径，这份案例兼具平台、治理和组织转型视角，应视为其代表性 AI 转型研究/案例之一。", "EY uses operating-system language to define the path to scaled agentic AI deployment. The case combines platform, governance, and organizational-transformation perspectives, making it one of its representative AI transformation pieces.")
+    .replace("PwC 的 AI Jobs Barometer 用劳动力与岗位视角研究 AI 影响，体现其把 AI 与组织、人才和经济结构结合的思考力。", "PwC's AI Jobs Barometer examines AI through a labor-market and job-design lens, showing its ability to connect AI with organization, talent, and economic structure.")
+    .replace("Roland Berger 的 AI hub 在 2026 年 7 月仍有连续更新，最近几篇发布时间落在 7 月 23 日、7 月 16 日、7 月 14 日、7 月 9 日和 7 月 6 日。这足以支持其 AI 思考力底座应按“持续输出”而不是“单篇偶发”来判断。", "Roland Berger's AI hub was still being updated continuously in July 2026, with recent visible dates on July 23, July 16, July 14, July 9, and July 6. That is enough to judge its AI thought-leadership base as a sustained stream rather than an occasional one-off.")
+    .replace("OpenAI 财务组织作为 Customer Zero，Codex 已处理5倍合同，IR-GPT 管理200+投资者互动。", "OpenAI's finance organization acts as Customer Zero, with Codex already handling five times more contracts and IR-GPT managing more than 200 investor interactions.");
 }
 
 function applyStaticTranslations() {
@@ -735,8 +778,8 @@ function renderReports(company) {
             <span>${escapeHtml(shortDate(report.date))}</span>
             <span>${escapeHtml(report.publisher)}</span>
           </div>
-          <strong>${escapeHtml(report.title)}</strong>
-          <p>${escapeHtml(report.summary)}</p>
+          <strong>${escapeHtml(translateReportTitle(report.title))}</strong>
+          <p>${escapeHtml(translateReportSummary(report.summary))}</p>
           <a href="${escapeHtml(report.url)}" target="_blank" rel="noreferrer">${activeLanguage === "en" ? "View report" : "查看报告"}</a>
         </article>
       `).join("")}

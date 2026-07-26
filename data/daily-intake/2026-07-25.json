@@ -1,0 +1,401 @@
+{
+  "meta": {
+    "research_date": "2026-07-25",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-07-25",
+    "status": "staging",
+    "collection_method": "Tavily-first weekly refresh, with conservative official-source screening and duplicate suppression.",
+    "notes": "This file stores the candidate pool reviewed during the 2026-07-25 refresh. Only the L.E.K. item was net-new enough to merge into the formal leaderboard. The rest were either too weak, already captured, or too old for the current weekly window."
+  },
+  "items": [
+    {
+      "id": "2026-07-25-pwc-intelligent-enterprise-cx",
+      "published_at": "2026-07-22",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "pwc"
+      ],
+      "company_names": [
+        "PwC"
+      ],
+      "candidate_event_type": "research",
+      "title": "PwC 发布 The intelligent enterprise in action: AI and the next era of customer experience",
+      "summary": "PwC 于 2026-07-22 发布 webcast，系统阐述如何把 AI 嵌入决策机制、客户体验与 enterprise-wide performance。",
+      "why_it_matters": "它把 customer experience、decision orchestration 和 enterprise design 连在一起，比一般市场观点更接近咨询公司的方法论资产。",
+      "url": "https://www.pwc.com/us/en/library/webcasts/replay/ai-and-the-next-era-of-customer-experience.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "delivery_production",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official webcast within the weekly window; merged into the formal leaderboard."
+    },
+    {
+      "id": "2026-07-25-capgemini-agentic-ai-sop",
+      "published_at": "2026-07-23",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "capgemini"
+      ],
+      "company_names": [
+        "Capgemini"
+      ],
+      "candidate_event_type": "research",
+      "title": "Capgemini 发布 Agentic AI in Sales and Operations Planning",
+      "summary": "Capgemini 于 2026-07-23 发布 S&OP agentic AI 观点文章，讨论消费品牌如何借助 AI-powered adaptive planning 改善服务、降低成本并提升 forecast accuracy。",
+      "why_it_matters": "这条不是泛泛的 AI 叙事，而是比较清晰的行业场景与解决方案信号，还点出了其 S&OP Intelligence Co-Pilot。",
+      "url": "https://www.capgemini.com/insights/research-library/agentic-ai-in-sales-and-operations-planning/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "delivery_production",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official industry use-case content within the weekly window; merged into the formal leaderboard."
+    },
+    {
+      "id": "2026-07-25-fti-new-shelf-space",
+      "published_at": "2026-07-22",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "fti"
+      ],
+      "company_names": [
+        "FTI Consulting"
+      ],
+      "candidate_event_type": "research",
+      "title": "FTI 发布 The New Shelf Space: How AI Agents Are Rewiring Brand Discovery",
+      "summary": "FTI 于 2026-07-22 发布消费者与品牌研究，讨论 AI-driven commerce、LLM shelf share 与 agentic replenishment 如何改写品牌发现与购买决策链条。",
+      "why_it_matters": "这条很适合 FTI，因为它连接了 consumer、go-to-market 和 private equity 价值创造，并且给出了调查与数据支撑。",
+      "url": "https://www.fticonsulting.com/insights/reports/new-shelf-space",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "client_value_proof",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official report within the weekly window; merged into the formal leaderboard."
+    },
+    {
+      "id": "2026-07-25-roland-berger-competing-at-the-speed-of-learning",
+      "published_at": "2026-07-22",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "roland_berger"
+      ],
+      "company_names": [
+        "Roland Berger"
+      ],
+      "candidate_event_type": "research",
+      "title": "Roland Berger AI hub 本周继续更新，Competing at the speed of learning 值得跟踪",
+      "summary": "Roland Berger 的 Artificial Intelligence hub 在 2026 年 7 月持续更新，最新几篇可见日期包括 7 月 23 日、7 月 16 日、7 月 14 日、7 月 9 日和 7 月 6 日。",
+      "why_it_matters": "这说明 Roland Berger 的 AI 研究输出具有连续性，足以强化长期 thought leadership 底座；但在单篇标题和正文完全对齐前，正式周榜只按 hub 连续更新的中等强度信号入库。",
+      "url": "https://www.rolandberger.com/en/Insights/Global-Topics/Artificial-Intelligence/",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "The AI hub's July update cadence is clear enough to strengthen Roland Berger's long-term thought-leadership base and support a medium-strength weekly continuity signal."
+    },
+    {
+      "id": "2026-07-25-bcg-ceo-ai-value-survey",
+      "published_at": "2026-07-22",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "bcg"
+      ],
+      "company_names": [
+        "BCG"
+      ],
+      "candidate_event_type": "research",
+      "title": "BCG 发布 CEO AI value survey：局部见效，但规模化仍然困难",
+      "summary": "BCG 于 2026-07-22 发布官方研究，指出近九成 CEO 已在部分业务中看到 AI 带来的成本或收入改善，但大多数企业仍在规模化落地上挣扎。",
+      "why_it_matters": "这是很典型的 CEO 级 AI 执行差距研究，适合纳入 thought leadership 与战略判断维度。",
+      "url": "https://www.bcg.com/about/press/22july2026-nearly-nine-in-ten-ceos-see-some-cost-or-revenue-benefits-from-ai-in-targeted-areas-but-most-are-struggling-to-scale-it",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official research within the weekly window; merged into the formal leaderboard."
+    },
+    {
+      "id": "2026-07-25-bcg-ai-computing-power-commodity",
+      "published_at": "2026-07-23",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "bcg"
+      ],
+      "company_names": [
+        "BCG"
+      ],
+      "candidate_event_type": "research",
+      "title": "BCG 发布 Is AI Computing Power Becoming a Commodity?",
+      "summary": "BCG 于 2026-07-23 发布 AI 计算资源专题文章，讨论算力市场正变得更透明、更可交易，并可能释放新的企业价值空间。",
+      "why_it_matters": "它比 7 月 22 日那条更偏专题 thought leadership，但仍然是时间明确、主题明确的 AI 公开内容。",
+      "url": "https://www.bcg.com/publications/2026/is-ai-computing-power-becoming-a-commodity",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "tech_partnership"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official AI article within the weekly window; merged into the formal leaderboard with a lower weight than the July 22 CEO survey item."
+    },
+    {
+      "id": "2026-07-25-kpmg-openai-strategic-alliance",
+      "published_at": "2026-07-21",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "kpmg"
+      ],
+      "company_names": [
+        "KPMG"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "KPMG 与 OpenAI 建立战略联盟，推进 AI-native enterprise workflows",
+      "summary": "KPMG 于 2026-07-21 官方宣布与 OpenAI 建立战略联盟，并被列为 OpenAI Partner Network 的 Elite Partner。",
+      "why_it_matters": "这是一条高质量官方合作信号，不仅是生态背书，还明确提到 workflow、SaaS modernization 和 forward deployed engineer 落地模式。",
+      "url": "https://kpmg.com/us/en/media/news/kpmg-openai-strategic-alliance.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "proprietary_assets",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official alliance within the weekly window; merged into the formal leaderboard."
+    },
+    {
+      "id": "2026-07-25-deloitte-no-clear-net-new-ai-signal",
+      "published_at": "2026-07-25",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "deloitte"
+      ],
+      "company_names": [
+        "Deloitte"
+      ],
+      "candidate_event_type": "research",
+      "title": "Deloitte 本周未检出足够清晰的净新增 AI 动作",
+      "summary": "本轮检索未找到比 2026-06-27 更明确、更近时点、且足以单独入库的 Deloitte 新公开 AI 动作。",
+      "why_it_matters": "Deloitte 仍然是高强度 AI 参与者，但本周没有发现足够硬的新信号，因此不建议为了补数量而入榜。",
+      "url": "https://www.deloitte.com/us/en/about/press-room/state-of-ai-report-2026.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "governance_risk"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No sufficiently clear net-new weekly signal was found beyond the existing leaderboard baseline."
+    },
+    {
+      "id": "2026-07-25-ey-no-clear-net-new-ai-signal",
+      "published_at": "2026-07-25",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "ey"
+      ],
+      "company_names": [
+        "EY"
+      ],
+      "candidate_event_type": "research",
+      "title": "EY 本周未检出足够清晰的净新增 AI 动作",
+      "summary": "EY 在既有 agentic OS、Client Zero 和 Microsoft 合作底座之外，本轮没有找到足够清晰、可确认日期且可单独入库的周内新增项。",
+      "why_it_matters": "EY 仍然维持高位，但本周没有出现足以驱动新一轮排名变化的公开动作。",
+      "url": "https://www.ey.com/en_gl/insights/ai",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "strategy_signal",
+        "thought_leadership"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No sufficiently clear net-new weekly signal was found beyond the existing leaderboard baseline."
+    },
+    {
+      "id": "2026-07-25-accenture-no-clear-net-new-ai-signal",
+      "published_at": "2026-07-25",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "client_proof",
+      "title": "Accenture 本周未检出足够清晰的净新增 AI 动作",
+      "summary": "Accenture 仍有大量 AI 公开活动，但本轮没有找到比已入库的 DG INTPA 客户案例更清晰的周内新增项。",
+      "why_it_matters": "Accenture 已有很强底盘，本周未见新的硬动作不代表其弱，而是说明当前样本窗口没有带来新的排名推动。",
+      "url": "https://newsroom.accenture.com/",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "delivery_production",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No sufficiently clear net-new weekly signal was found beyond the existing leaderboard baseline."
+    },
+    {
+      "id": "2026-07-25-bain-no-clear-net-new-ai-signal",
+      "published_at": "2026-07-25",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "bain"
+      ],
+      "company_names": [
+        "Bain"
+      ],
+      "candidate_event_type": "research",
+      "title": "Bain 本周未检出足够清晰的净新增 AI 动作",
+      "summary": "本轮检索未找到 Bain 在 2026-07-19 至 2026-07-25 之间足够明确、足够新的公开 AI 新闻或研究更新。",
+      "why_it_matters": "Bain 的长期 AI 基础很强，但本周没有看到新的可确认信号，因此不做强行补录。",
+      "url": "https://www.bain.com/insights/topics/artificial-intelligence/",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No sufficiently clear net-new weekly signal was found beyond the existing leaderboard baseline."
+    },
+    {
+      "id": "2026-07-25-oliver-wyman-no-clear-net-new-ai-signal",
+      "published_at": "2026-07-25",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "oliver_wyman"
+      ],
+      "company_names": [
+        "Oliver Wyman"
+      ],
+      "candidate_event_type": "research",
+      "title": "Oliver Wyman 本周未检出足够清晰的净新增 AI 动作",
+      "summary": "本轮未发现比已入库的 industrial AI divide 更清晰的新公开 AI 材料。",
+      "why_it_matters": "Oliver Wyman 的 AI 研究连续性不错，但这一周没有抓到新的硬信号。",
+      "url": "https://www.oliverwymanforum.com/mobility/ai-divide-transportation-logistics-defense.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No sufficiently clear net-new weekly signal was found beyond the existing leaderboard baseline."
+    },
+    {
+      "id": "2026-07-25-am-no-clear-net-new-ai-signal",
+      "published_at": "2026-07-25",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "alvarez_marsal"
+      ],
+      "company_names": [
+        "Alvarez & Marsal"
+      ],
+      "candidate_event_type": "organization",
+      "title": "A&M 本周未检出足够清晰的净新增 AI 动作",
+      "summary": "A&M 在 Global AI Board 和 PE 研究之外，本轮没有找到足够清晰的周内新公开 AI 动作。",
+      "why_it_matters": "A&M 的长期组织化 AI 方向清楚，但本周没有新的可确认事件足以改动榜单。",
+      "url": "https://www.alvarezandmarsal.com/press-release/alvarez-marsal-announces-expansion-of-ai-capabilities",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "delivery_production",
+        "governance_risk"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No sufficiently clear net-new weekly signal was found beyond the existing leaderboard baseline."
+    },
+    {
+      "id": "2026-07-25-lek-what-b2b-saas-leaders-can-learn-from-how-ai-labs-price",
+      "published_at": "2026-07-24",
+      "discovered_at": "2026-07-25",
+      "scope": "company",
+      "company_ids": [
+        "lek"
+      ],
+      "company_names": [
+        "L.E.K."
+      ],
+      "candidate_event_type": "research",
+      "title": "What B2B SaaS Leaders Can Learn From How AI Labs Price",
+      "summary": "L.E.K. 于 2026-07-24 发布文章，讨论 AI labs 的定价逻辑，并给 B2B SaaS 提供新的 pricing 和商业模式视角。",
+      "why_it_matters": "这是时间明确、主题明确、可直接进入正式榜单的公开思考力信号。",
+      "url": "https://www.lek.com/insights/technology/what-b2b-saas-leaders-can-learn-how-ai-labs-price",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Net-new official thought leadership item within the weekly window; merged into the formal leaderboard."
+    }
+  ]
+}

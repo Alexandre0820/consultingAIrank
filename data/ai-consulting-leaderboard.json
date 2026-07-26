@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-07-10",
-    "updated_at": "2026-07-19",
+    "previous_updated_at": "2026-07-19",
+    "updated_at": "2026-07-25",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-07-19 本次刷新按周更口径纳入 2026-07-11 至 2026-07-19 的净新增 AI 公开信号；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作、客户交付与 thought leadership 更新，并优先采用官方、厂商官方与品牌自有研究页链接；媒体信号仅在时间明确、主题明确且能补足覆盖面的情况下纳入，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-07-25 本次刷新按周更口径纳入 2026-07-19 至 2026-07-25 的净新增 AI 公开信号；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作、客户交付与 thought leadership 更新，并优先采用官方、厂商官方与品牌自有研究页链接；媒体信号仅在时间明确、主题明确且能补足覆盖面的情况下纳入，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -299,6 +299,40 @@
       ],
       "events": [
         {
+          "date": "2026-07-23",
+          "type": "research",
+          "title": "BCG 发布 Is AI Computing Power Becoming a Commodity?",
+          "summary": "BCG 于 2026-07-23 发布 AI 计算资源专题文章，讨论算力市场正变得更透明、更可交易，并可能释放新的企业价值空间。它属于时间明确、主题直接指向 AI 基础设施与商业化路径的官方 thought leadership 信号。",
+          "url": "https://www.bcg.com/publications/2026/is-ai-computing-power-becoming-a-commodity",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "tech_partnership"
+          ],
+          "event_score": 74
+        },
+        {
+          "date": "2026-07-22",
+          "type": "research",
+          "title": "BCG 发布 CEO AI value survey：局部见效，但规模化仍然困难",
+          "summary": "BCG 于 2026-07-22 发布官方研究，指出近九成 CEO 已在部分业务中看到 AI 带来的成本或收入改善，但大多数企业仍在规模化落地上挣扎。这是一条很典型的管理层 AI 执行差距研究信号，适合纳入思考力与战略判断维度。",
+          "url": "https://www.bcg.com/about/press/22july2026-nearly-nine-in-ten-ceos-see-some-cost-or-revenue-benefits-from-ai-in-targeted-areas-but-most-are-struggling-to-scale-it",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "client_value_proof"
+          ],
+          "event_score": 80
+        },
+        {
           "date": "2026-07-15",
           "type": "research",
           "title": "BCG 发布 Mid-2026 M&A Insights：AI drives a recovery, but questions remain",
@@ -525,9 +559,9 @@
         "industry_coverage": 4,
         "client_value_proof": 3,
         "governance_risk": 4,
-        "thought_leadership": 4
+        "thought_leadership": 5
       },
-      "notes": "Roland Berger 的 AI 动作相对低调，但 Microsoft customer story 显示其正在把内部知识 hub 和 AI agents 用于咨询交付。",
+      "notes": "Roland Berger 的 AI 动作相对低调，但其 Artificial Intelligence hub 在 2026 年 7 月仍保持连续更新，说明其 AI thought leadership 不是一次性输出；Microsoft customer story 也显示其正在把内部知识 hub 和 AI agents 用于咨询交付。",
       "reports": [
         {
           "title": "Artificial Intelligence",
@@ -536,6 +570,14 @@
           "url": "https://www.rolandberger.com/en/Insights/Global-Topics/Artificial-Intelligence/",
           "source_level": "official",
           "summary": "Roland Berger 持续围绕欧洲工业、转型和 AI agents 发布专题洞察，研究密度高于一般营销内容。"
+        },
+        {
+          "title": "Artificial Intelligence hub latest July updates",
+          "date": "2026-07",
+          "publisher": "Roland Berger Insights",
+          "url": "https://www.rolandberger.com/en/Insights/Global-Topics/Artificial-Intelligence/",
+          "source_level": "official",
+          "summary": "Roland Berger 的 AI hub 在 2026 年 7 月仍有连续更新，最近几篇发布时间落在 7 月 23 日、7 月 16 日、7 月 14 日、7 月 9 日和 7 月 6 日。这足以支持其 AI 思考力底座应按“持续输出”而不是“单篇偶发”来判断。"
         },
         {
           "title": "Our recent publications",
@@ -547,6 +589,23 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-07-23",
+          "type": "research",
+          "title": "Roland Berger AI hub 在 7 月继续保持连续更新",
+          "summary": "基于 Roland Berger Artificial Intelligence hub 的最新公开更新时间线，可以确认其 AI / robotics / data 相关内容在 2026 年 7 月仍保持连续发布，最近几篇日期包括 7 月 23 日、7 月 16 日、7 月 14 日、7 月 9 日和 7 月 6 日。我们将其作为中等强度的 thought leadership 连续性信号纳入。",
+          "url": "https://www.rolandberger.com/en/Insights/Global-Topics/Artificial-Intelligence/",
+          "source_level": "official",
+          "confidence": "medium",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage"
+          ],
+          "event_score": 73
+        },
         {
           "date": "2026",
           "type": "platform",
@@ -963,6 +1022,24 @@
       ],
       "events": [
         {
+          "date": "2026-07-22",
+          "type": "research",
+          "title": "PwC 发布 The intelligent enterprise in action: AI and the next era of customer experience",
+          "summary": "PwC 于 2026-07-22 发布 webcast，系统阐述如何把 AI 嵌入决策机制、客户体验与 enterprise-wide performance。内容强调 proprietary data、agents 与 humans 的协同编排，以及把零散试点转化为全企业绩效的能力，属于高质量的官方 thought leadership 信号。",
+          "url": "https://www.pwc.com/us/en/library/webcasts/replay/ai-and-the-next-era-of-customer-experience.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "delivery_production",
+            "client_value_proof"
+          ],
+          "event_score": 81
+        },
+        {
           "date": "2026-07-15",
           "type": "partnership",
           "title": "PwC 与 OpenAI 推出 agentic customer engagement and service 方案",
@@ -1272,6 +1349,24 @@
       ],
       "events": [
         {
+          "date": "2026-07-21",
+          "type": "partnership",
+          "title": "KPMG 与 OpenAI 建立战略联盟，推进 AI-native enterprise workflows",
+          "summary": "KPMG 于 2026-07-21 官方宣布与 OpenAI 建立战略联盟，并被列为 OpenAI Partner Network 的 Elite Partner。公告强调将 AI 直接嵌入企业流程、SaaS 工具和公共部门解决方案，同时采用 forward deployed engineer 模式推动生产级落地，这是一条应当纳入正式榜单的强合作与交付信号。",
+          "url": "https://kpmg.com/us/en/media/news/kpmg-openai-strategic-alliance.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "proprietary_assets",
+            "strategy_signal"
+          ],
+          "event_score": 91
+        },
+        {
           "date": "2026-06-09",
           "type": "governance",
           "title": "KPMG 采用 Microsoft Agent 365 管理 AI agents 生命周期",
@@ -1529,6 +1624,24 @@
       ],
       "events": [
         {
+          "date": "2026-07-23",
+          "type": "research",
+          "title": "Capgemini 发布 Agentic AI in Sales and Operations Planning",
+          "summary": "Capgemini 于 2026-07-23 发布 S&OP agentic AI 观点文章，讨论消费品牌如何借助 AI-powered adaptive planning 改善服务、降低成本并提升 forecast accuracy，同时预览其 S&OP Intelligence Co-Pilot。它不只是泛 AI 叙事，而是较明确的行业场景与解决方案信号。",
+          "url": "https://www.capgemini.com/insights/research-library/agentic-ai-in-sales-and-operations-planning/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "delivery_production",
+            "client_value_proof"
+          ],
+          "event_score": 79
+        },
+        {
           "date": "2026-05-11",
           "type": "investment",
           "title": "OpenAI DeployCo 获多家咨询与资本机构投资，Capgemini 被报道参与",
@@ -1589,6 +1702,24 @@
         }
       ],
       "events": [
+        {
+          "date": "2026-07-22",
+          "type": "research",
+          "title": "FTI 发布 The New Shelf Space: How AI Agents Are Rewiring Brand Discovery",
+          "summary": "FTI 于 2026-07-22 发布消费者与品牌研究，指出 AI-driven commerce 已成为结构性趋势，并提出 LLM shelf share、agentic replenishment 与信任治理等新议题。它横跨 consumer、go-to-market 与 private equity 价值创造，是一条很值得纳入的官方 thought leadership 信号。",
+          "url": "https://www.fticonsulting.com/insights/reports/new-shelf-space",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "client_value_proof",
+            "strategy_signal"
+          ],
+          "event_score": 82
+        },
         {
           "date": "2026-05-19",
           "type": "research",
@@ -1755,6 +1886,14 @@
           "url": "https://www.lek.com/insights/technology/revolution-or-extinction-rethinking-saas-age-agentic-ai",
           "source_level": "official",
           "summary": "L.E.K. 对 agentic AI 对 SaaS 模式冲击的专题研究，比一般行业文章更接近公司级 AI 转型与商业模式重构判断。"
+        },
+        {
+          "title": "What B2B SaaS Leaders Can Learn From How AI Labs Price",
+          "date": "2026-07-24",
+          "publisher": "L.E.K. Consulting",
+          "url": "https://www.lek.com/insights/technology/what-b2b-saas-leaders-can-learn-how-ai-labs-price",
+          "source_level": "official",
+          "summary": "L.E.K. 这篇 7 月 24 日的技术文章讨论 AI 实验室的定价方式，为 B2B SaaS 提供了新的 pricing 和商业模式视角，属于较强的公开思考力信号。"
         }
       ],
       "events": [
@@ -1767,6 +1906,23 @@
           "source_level": "official",
           "confidence": "medium",
           "event_score": 72
+        },
+        {
+          "date": "2026-07-24",
+          "type": "research",
+          "title": "L.E.K. 发布《What B2B SaaS Leaders Can Learn From How AI Labs Price》",
+          "summary": "L.E.K. 于 2026-07-24 发布技术文章，讨论 AI labs 的定价逻辑与 B2B SaaS 可借鉴的商业模式启示，属于时间明确、主题明确的公开 thought leadership 信号。",
+          "url": "https://www.lek.com/insights/technology/what-b2b-saas-leaders-can-learn-how-ai-labs-price",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage"
+          ],
+          "event_score": 76
         }
       ],
       "traditional_capabilities": {
