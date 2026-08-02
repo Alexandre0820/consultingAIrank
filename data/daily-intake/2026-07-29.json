@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "research_date": "2026-07-29",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-07-25",
+    "status": "staging",
+    "collection_method": "Tavily simple search only (basic/fast search), official-first where possible, with light manual screening for date relevance and duplicate risk.",
+    "notes": "This daily intake captures AI-related public signals found on 2026-07-29 for the window 2026-07-22 to 2026-07-29. We intentionally used lightweight Tavily search rather than deep research. Only items with a clear enough date and AI relevance are marked for merge review; companies with no sufficiently clear net-new signal are kept as hold/watch observations so weekly refresh stays conservative."
+  },
+  "items": [
+    {
+      "id": "2026-07-29-mckinsey-human-advantage-ai-economy",
+      "published_at": "2026-07-23",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "McKinsey 发布《The human advantage in an AI economy》",
+      "summary": "McKinsey 在 2026-07-23 首页与播客位发布 AI 主题内容，强调技术投入本身不足以形成优势，组织还需要同步提升 brain health、skills 和人与 AI 协同能力。",
+      "why_it_matters": "这类内容很符合麦肯锡一贯的 CEO-level thought leadership 风格，强化其在 AI 时代组织与领导力议题上的持续发声。",
+      "url": "https://www.mckinsey.com",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "governance_risk"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Within the weekly window and clearly AI-related, though the surfaced URL is the homepage/podcast entry rather than a deeper article page.",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-kpmg-singapore-ai-roi-realities",
+      "published_at": "2026-07-28",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "kpmg"
+      ],
+      "company_names": [
+        "KPMG"
+      ],
+      "candidate_event_type": "research",
+      "title": "KPMG Singapore 发布 AI ROI 观察：企业在 AI 雄心与回报现实之间平衡",
+      "summary": "KPMG Singapore 于 2026-07-28 在其公开渠道讨论 AI ROI、AI agents rollout 成本与 human-in-the-loop 的重要性，反映企业从扩张走向价值和治理并重。",
+      "why_it_matters": "这条不是大型官宣合作，但它体现了 KPMG 在 AI 价值实现、治理与组织重构上的持续观点输出。",
+      "url": "https://www.linkedin.com/pulse/july-2026-whats-top-mind-companies-when-comes-roi-ai-kpmg-singapore-2hbac",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "client_value_proof",
+        "governance_risk"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "Clear publication date within the weekly window and directly relevant to AI operating economics and governance.",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-deloitte-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "deloitte"
+      ],
+      "company_names": [
+        "Deloitte"
+      ],
+      "candidate_event_type": "research",
+      "title": "Deloitte 本轮未检出足够清晰的本周净新增 AI 信号",
+      "summary": "轻量 Tavily 检索主要返回 Deloitte 已发布的《State of AI in the Enterprise 2026》以及相关二次传播，没有拿到 2026-07-22 至 2026-07-29 之间足够明确的新官方 AI 动作。",
+      "why_it_matters": "保留这条观察可以提醒我们，本周并不是没有搜 Deloitte，而是简单检索下暂未发现足够硬的新信号。",
+      "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "governance_risk"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "Observed and screened, but no sufficiently clear net-new item was found inside this week's window.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-ey-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "ey"
+      ],
+      "company_names": [
+        "EY"
+      ],
+      "candidate_event_type": "research",
+      "title": "EY 本轮未检出足够清晰的本周净新增 AI 信号",
+      "summary": "本轮轻量检索主要看到 EY at Ai4 2026 等未来活动预告，以及更长期的 AI 与数据项目页面，没有拿到 2026-07-22 至 2026-07-29 之间足够明确的新公开 AI 动作。",
+      "why_it_matters": "这有助于说明候选池缺口来自可见公开信号不足，而不是完全没有覆盖到 EY。",
+      "url": "https://www.ey.com/en_us/consulting/ey-at-ai4",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "strategy_signal",
+        "thought_leadership"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No clear net-new in the target week; surfaced item is an upcoming event page rather than a current weekly action signal.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-accenture-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "client_proof",
+      "title": "Accenture 本轮未检出本周净新增 AI 官宣",
+      "summary": "Accenture Newsroom 本轮主要可见的强 AI 相关公开动作仍集中在 2026-07-15 和更早日期，本周窗口内未从轻量检索中看到更近的新一条。",
+      "why_it_matters": "Accenture 本身公开动作密度高，但本周简单检索并未提供更近日期的新证据，因此先保守处理。",
+      "url": "https://newsroom.accenture.com/news",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "delivery_production",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "Recent official AI items surfaced, but not inside the 2026-07-22 to 2026-07-29 weekly window.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-capgemini-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "capgemini"
+      ],
+      "company_names": [
+        "Capgemini"
+      ],
+      "candidate_event_type": "research",
+      "title": "Capgemini 本轮未检出足够清晰的本周净新增 AI 信号",
+      "summary": "Capgemini 首页与 insights 区仍有较强 AI 露出，但简单检索没有直接返回 2026-07-22 至 2026-07-29 之间日期明确、可单独入库的新增 AI 内容。",
+      "why_it_matters": "Capgemini 不等于没有 AI 动作，而是当前轻量检索口径下没有拿到足够硬的本周新证据。",
+      "url": "https://www.capgemini.com/us-en",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "delivery_production"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No clearly dated net-new weekly AI item surfaced from lightweight search.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-pwc-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "pwc"
+      ],
+      "company_names": [
+        "PwC"
+      ],
+      "candidate_event_type": "research",
+      "title": "PwC 本轮主要检出既有 AI Jobs Barometer 等研究页",
+      "summary": "本轮轻量检索能看到 PwC AI Jobs Barometer 和 operations survey 等较强公开研究资产，但没有直接拿到 2026-07-22 至 2026-07-29 之间日期明确的新一条 AI 官宣或专题内容。",
+      "why_it_matters": "这说明 PwC 的 thought leadership 底座仍然强，但本周是否有净新增仍需下次更细的补抓来确认。",
+      "url": "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "Strong AI content surfaced, but not a clearly net-new weekly item under the current lightweight search method.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-roland-berger-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "roland_berger"
+      ],
+      "company_names": [
+        "Roland Berger"
+      ],
+      "candidate_event_type": "research",
+      "title": "Roland Berger 本轮未检出本周内新的明确 AI 发布",
+      "summary": "本轮简单检索能看到 Roland Berger 7 月内已有的 AI 研究与制造业 AI adoption 相关文章，但日期更集中在 7 月 9 日、7 月 14 日等，未拿到 7 月 22 日之后的新官方 AI 条目。",
+      "why_it_matters": "这保留了我们对 Roland Berger AI thought leadership 连续性的观察，同时避免把旧内容误算成周内净新增。",
+      "url": "https://www.rolandberger.com/en/Media/Manufacturers-enter-a-critical-phase-of-AI-adoption-as-focus-shifts-from-pilots.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "Recent AI material exists, but no clearly dated net-new item inside this week's window surfaced in lightweight search.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-oliver-wyman-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "oliver_wyman"
+      ],
+      "company_names": [
+        "Oliver Wyman"
+      ],
+      "candidate_event_type": "platform",
+      "title": "Oliver Wyman 本轮未检出本周内新的明确 AI 发布",
+      "summary": "简单检索主要返回 Oliver Wyman 既有的 Quotient AI offering、较早的 agentic AI event 页面，以及非官网二次报道，本周窗口内没有足够清晰的新官方 AI 动作。",
+      "why_it_matters": "Oliver Wyman 的 AI 底座和 Quotient 资产仍然存在，但这一周是否有净新增，需要后续更细抓取。",
+      "url": "https://www.oliverwyman.com/our-expertise/capabilities/digital/ai-consulting-quotient.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "proprietary_assets",
+        "delivery_production",
+        "thought_leadership"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "No sufficiently clear net-new weekly AI item surfaced; keep as watch-only coverage note.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-alvarez-marsal-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "alvarez_marsal"
+      ],
+      "company_names": [
+        "Alvarez & Marsal"
+      ],
+      "candidate_event_type": "organization",
+      "title": "Alvarez & Marsal 本轮未检出本周内新的明确 AI 发布",
+      "summary": "本轮简单检索返回 A&M 5 月关于扩展 AI capabilities 和 Global AI Board 的内容，但没有直接返回本周窗口内更新的 AI 新闻或研究。",
+      "why_it_matters": "A&M 之前的 AI 组织化动作很强，但当前周窗口内没有看到新一条，可作为 watch note 留存。",
+      "url": "https://www.alvarezandmarsal.com/press-release/alvarez-marsal-announces-expansion-of-ai-capabilities",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "organization",
+        "governance_risk",
+        "delivery_production"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "Useful background signal, but not a weekly net-new item.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-07-29-lek-no-clear-net-new-signal",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-07-29",
+      "scope": "company",
+      "company_ids": [
+        "lek"
+      ],
+      "company_names": [
+        "L.E.K. Consulting"
+      ],
+      "candidate_event_type": "research",
+      "title": "L.E.K. 本轮未检出本周内新的明确 AI 发布",
+      "summary": "L.E.K. 的 AI hub 仍显示其在 consumer、biotech 等方向持续写 AI 内容，但本轮简单检索未拿到 2026-07-22 至 2026-07-29 之间日期明确的新公开条目。",
+      "why_it_matters": "这帮助我们区分“公司没有 AI 内容”与“本周简单检索没拿到可入库的新内容”这两件事。",
+      "url": "https://www.lek.com/insights/artificial-intelligence",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "Strong AI content hub, but no clearly dated weekly net-new item surfaced in this run.",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    }
+  ]
+}

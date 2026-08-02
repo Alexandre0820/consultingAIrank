@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "research_date": "2026-08-02",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-08-02",
+    "status": "staging",
+    "collection_method": "Tavily basic search + in-app browser newsroom check (EY / Capgemini / Deloitte UK / Accenture / McKinsey), official-first with duplicate suppression against current leaderboard.",
+    "notes": "2026-08-02 补充研究：在 8/2 正式周更（仅并入 KPMG Singapore AI ROI）之外，用 Tavily 基础搜索和浏览器新闻室复查了本周（7/26-8/2）其他公司的净新增 AI 信号。KPMG x OpenAI 战略联盟（7/21）已确认在榜内（事件分 91，7/25 周更并入）。新候选以 EY 与 Capgemini 最强：EY x SymphonyAI 制造联盟（7/30）、EY AI Pulse Survey 第五波（7/28）、Capgemini 上调 2026 指引（7/30）。L.E.K. 7/30 网络研讨会、Bain AI-native 银行洞察（7/27）、EY Leckstein 任命（7/29）为中等信号。Deloitte UK CFO Survey（7/20）为上一轮漏检回填候选；PwC AI 幻觉引用（7/29）为负面治理观察项，不建议并入。McKinsey《The human advantage in an AI economy》（7/23）已在 2026-07-29.json 标记 review_for_merge，仍在等待深挖官方文章页。 【8/2 已合并】本池 7 条 review_for_merge 候选（EY×2 合作与调查+Leckstein、Capgemini×2、L.E.K.、Bain）已并入 data/events/2026-08-02.json 并重建榜单；深挖时另发现并合并 McKinsey 7/27 agent manager Rewired Takes 一条。 【8/2 回填】经用户确认，将上一轮漏检的 McKinsey The human advantage（7/23）与 Deloitte UK CFO Survey Q2（7/20）追溯并入榜单。"
+  },
+  "items": [
+    {
+      "id": "2026-08-02-ey-symphonyai-manufacturing-alliance",
+      "published_at": "2026-07-30",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "ey"
+      ],
+      "company_names": [
+        "EY"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "EY US 与 SymphonyAI 扩展战略联盟，把工业 AI 带入制造业与供应链",
+      "summary": "EY US 于 2026-07-30 宣布扩大与 SymphonyAI 的战略联盟，将合作从零售与金融服务延伸到制造业与供应链智能。SymphonyAI 的 IRIS Foundry 工业平台被嵌入 EY.ai Order-to-Cash Value Blueprint 和 EY 制造业转型方案，官方称这是 EY 构建 AI-native 合作伙伴生态的一部分。",
+      "why_it_matters": "属于官方发布的技术合作 + 交付生产化信号：把经过验证的工业 AI 平台直接嵌入 EY 的转型交付体系，体现 AI-native 生态策略从口号走向落地，可进 tech_partnership 与 delivery_production 维度。",
+      "url": "https://www.ey.com/en_us/newsroom/2026/07/ey-us-expands-its-strategic-alliance-with-symphonyai-to-bring-manufacturing-intelligence-to-enterprise-operations",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "in_app_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "industry_coverage",
+        "proprietary_assets"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "日期在 8/2 周更窗口内（7/26-8/2），官方新闻室一手来源、内容明确、非重复，建议并入。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-ey-ai-pulse-survey-token-costs",
+      "published_at": "2026-07-28",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "ey"
+      ],
+      "company_names": [
+        "EY"
+      ],
+      "candidate_event_type": "research",
+      "title": "EY US AI Pulse Survey 第五波：高管从 AI 采用转向价值兑现，token 成本引发财务审视",
+      "summary": "EY 于 2026-07-28 发布第五波美国 AI Pulse Survey。结果显示多数高管因 token 成本上升而重新评估 AI 投入，正从追求采用转向平衡成本与价值，并更多自建内部软件。",
+      "why_it_matters": "时间明确的官方研究信号，直接回应 AI 经济性、治理与 ROI 议题，是 EY 在 AI 价值实现讨论中的持续发声，适合 thought_leadership / strategy_signal / governance_risk 维度。",
+      "url": "https://www.ey.com/en_us/newsroom/2026/07/ey-survey-c-suites-pivot-from-ai-adoption-to-unlocking-value-as-escalating-token-costs-trigger-fiscal-scrutiny",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search_plus_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "governance_risk",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "7/28 官方新闻稿，窗口内净新增，与榜内 EY 现有事件不重复，建议并入。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-capgemini-h1-2026-outlook-upgrade",
+      "published_at": "2026-07-30",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "capgemini"
+      ],
+      "company_names": [
+        "Capgemini"
+      ],
+      "candidate_event_type": "client_proof",
+      "title": "Capgemini 上调 2026 增长指引：大型 AI 转型项目需求拉动订单，客户从实验走向 agentic AI 生产部署",
+      "summary": "Capgemini 于 2026-07-30 发布 H1 2026 业绩并上调全年营收增速指引至 8.5%-9%（原 6.5%-8.5%），理由是大型 AI 转型项目需求提振订单；管理层称客户正从 AI 实验转向在核心业务流程部署 agentic AI，WNS 整合也扩大了 AI 运营项目管道。",
+      "why_it_matters": "来自业绩公告的可验证信号：AI 需求直接体现为营收指引上调，属于 client_value_proof / delivery_production 的强证据，且为官方新闻室 + Reuters 双源。",
+      "url": "https://www.capgemini.com/news/press-releases/capgemini-upgrades-its-2026-outlook/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search_plus_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "client_value_proof",
+        "delivery_production",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "7/30 官方业绩公告 + Reuters 交叉验证，窗口内净新增，与榜内 Capgemini 现有事件不重复，建议并入。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-capgemini-agentic-ai-chip-design",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "capgemini"
+      ],
+      "company_names": [
+        "Capgemini"
+      ],
+      "candidate_event_type": "research",
+      "title": "Capgemini 发布《The next leap in agentic AI chip design》",
+      "summary": "Capgemini 于 2026-07-29 在 research library 发布 agentic AI 芯片设计主题洞察，延续其在半导体与 AI 基础设施议题上的研究输出。",
+      "why_it_matters": "官方研究页、日期明确，属于 thought leadership 连续性信号；强度中等，可作为 Capgemini 本周第二条信号的补充。",
+      "url": "https://www.capgemini.com/insights/research-library/the-next-leap-in-agentic-ai-chip-design/",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "in_app_browser_newsroom",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "7/29 官方洞察，窗口内；证据强度弱于同日业绩信号，可作为中等信号合并或暂缓。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-lek-ai-agents-autonomous-organisations-webinar",
+      "published_at": "2026-07-30",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "lek"
+      ],
+      "company_names": [
+        "L.E.K."
+      ],
+      "candidate_event_type": "research",
+      "title": "L.E.K. 发布网络研讨会：From AI Agents to Autonomous Organisations",
+      "summary": "L.E.K. 于 2026-07-30 发布《What Happens When AI Understands, Learns and Acts on Its Own?》网络研讨会，讨论从 agentic AI 到自主组织的下一波演进及其对商业模式和竞争格局的影响。",
+      "why_it_matters": "官方研究输出、日期明确，延续 L.E.K. 在 agentic AI 议题上的发声；中等强度 thought leadership 信号。",
+      "url": "https://www.lek.com/insights/unlock-power-ai/2026-07-what-happens-when-ai-understands-learns-and-acts-its-own",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "7/30 官方页面、窗口内；与 7/24 已入库的定价洞察相隔不到一周，可作为连续研究信号合并或作为观察项。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-bain-ai-native-modern-bank",
+      "published_at": "2026-07-27",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "bain"
+      ],
+      "company_names": [
+        "Bain"
+      ],
+      "candidate_event_type": "research",
+      "title": "Bain 发布《What It Takes to Build the AI-Native Modern Bank》",
+      "summary": "Bain 于 2026 年 7 月下旬发布 AI-native 现代银行分析，基于对 30+ 全球银行高管的访谈，论证 AI-native 银行将跑赢 AI-enabled 机构，并引用 Chime 等案例的量化结果（70% 客服交互 AI-first、75% 聊天机器人解决率）。",
+      "why_it_matters": "官方研究 + 客户量化案例，横跨 financial services 行业覆盖与客户价值证明，是 Bain 本周窗口内较硬的 thought leadership 信号。",
+      "url": "https://www.bain.com/insights/what-it-takes-to-build-the-ai-native-modern-bank",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "consulting.us 于 7/27 报道，官方页面存在；Bain 页面自身未标注明确发布日期，属 partially verified，建议合并前确认页面日期。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-ey-leckstein-americas-ai-product-officer",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "ey"
+      ],
+      "company_names": [
+        "EY"
+      ],
+      "candidate_event_type": "organization",
+      "title": "David Leckstein 加入 EY，任美洲首席 AI 与产品官兼咨询战略负责人",
+      "summary": "2026-07-29 报道：David Leckstein 从 Accenture（28 年、前美洲科技业务与 SAP 业务负责人）加入 EY，出任美洲首席 AI & 产品官和咨询战略负责人，负责智能体、自主工作流与现代数字架构。",
+      "why_it_matters": "组织/人才信号：从 Accenture 挖来重量级 AI 产品与技术负责人，说明 EY 在 AI 产品化与交付上加大投入，适合 organization 维度。来源为媒体（consulting.us），置信度中等。",
+      "url": "https://www.consulting.us/news/13791/david-leckstein-joins-ey-as-americas-chief-ai-product-officer-and-consulting-strategy-leader",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "organization",
+        "delivery_production",
+        "proprietary_assets"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "7/29 媒体来源、窗口内；无 EY 官方稿佐证，建议按组织信号以中等置信度并入或暂作观察。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-deloitte-uk-cfo-survey-q2-2026",
+      "published_at": "2026-07-20",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "deloitte"
+      ],
+      "company_names": [
+        "Deloitte"
+      ],
+      "candidate_event_type": "research",
+      "title": "Deloitte UK CFO Survey Q2 2026：财务负责人对 AI 的乐观度持续上升",
+      "summary": "Deloitte UK 于 2026-07-20 发布第 76 期 CFO Survey（调研窗口 7/1-7/13），73% 的 CFO 表示过去 12 个月对 AI 改善业务表现的信心上升（Q4 2025 为 59%），78% 预期未来五年生产力提升。",
+      "why_it_matters": "官方研究信号，但发布日期为 7/20，落在 7/19-7/25 上一周窗口内，8/2 周更严格口径（晚于 7/25）不含它；属于上一轮漏检的回填候选，可决定是否回溯并入。",
+      "url": "https://www.deloitte.com/uk/en/about/press-room/deloitte-cfo-survey-quater-two-2026-growing-ai-optimism.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "tavily_search_plus_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "发布于 7/20，不在 8/2 窗口（7/26-8/2）；如需回溯上一轮漏检可并入，否则按 watch_only 处理。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-kearney-foresight-mea-unit",
+      "published_at": "2026-07-24",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "kearney"
+      ],
+      "company_names": [
+        "Kearney"
+      ],
+      "candidate_event_type": "organization",
+      "title": "Kearney 为 Foresight 设立中东与非洲区域单元",
+      "summary": "Kearney 为其战略前瞻/数据洞察单元 Kearney Foresight 设立 MEA 区域单元，配套首份报告《Beyond the Storm》，面向公共与私营客户提供情景建模与战略洞察。（注：媒体列表日期有 6/3 与 7/24 两种说法，未完全核实。）",
+      "why_it_matters": "组织/能力信号，但 AI 属性较弱（偏战略前瞻与经济分析），且日期在窗口边缘或窗口外，优先级低。",
+      "url": "https://www.consultancy-me.com/news/13560/kearney-launches-dedicated-middle-east-and-africa-unit-of-kearney-foresight",
+      "source_level": "media",
+      "confidence": "low",
+      "discovery_channel": "tavily_search",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "organization",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "日期未核实且 AI 属性弱，不建议本周并入；仅观察。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "2026-08-02-pwc-ai-hallucinated-citations",
+      "published_at": "2026-07-29",
+      "discovered_at": "2026-08-02",
+      "scope": "company",
+      "company_ids": [
+        "pwc"
+      ],
+      "company_names": [
+        "PwC"
+      ],
+      "candidate_event_type": "governance",
+      "title": "FT 报道：GPTZero 研究发现 PwC 中东四份思想领导力报告含 AI 幻觉引用",
+      "summary": "2026-07-29 报道：GPTZero 研究（FT 核实）发现 PwC 中东四份思想领导力报告包含幻觉脚注与不可核实来源，其中一份报告被评估为 84-100% 由 AI 生成。",
+      "why_it_matters": "负面治理/风险信号：若纳入可作 governance_risk 的反向证据，但行动榜口径偏向收录正向 AI 动作，建议仅观察，不并入榜单。",
+      "url": "https://www.resultsense.com/news/2026-07-29-pwc-thought-leadership-ai-hallucinations",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "tavily_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "governance_risk"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "负面媒体信号，不符合行动榜正向动作口径，仅作治理风险观察。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    }
+  ]
+}

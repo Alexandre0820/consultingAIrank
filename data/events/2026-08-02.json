@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "refresh_date": "2026-08-02",
+    "comparison_start": "2026-07-25",
+    "description": "Net-new events merged during this weekly refresh. 2026-08-02: initial KPMG Singapore AI ROI + supplemental review merged EY (SymphonyAI alliance, AI Pulse Survey, Americas chief AI & product officer), Capgemini (2026 outlook upgrade, agentic AI chip design), L.E.K. (autonomous organisations webinar), Bain (AI-native modern bank), and McKinsey (agent manager Rewired Takes). Backfills from the July 19-25 window missed in the 7/25 refresh: McKinsey Health Institute human advantage (7/23) and Deloitte UK CFO Survey Q2 2026 (7/20)."
+  },
+  "events": [
+    {
+      "company_id": "kpmg",
+      "date": "2026-07-28",
+      "type": "research",
+      "title": "KPMG Singapore 发布 AI ROI 观察：企业在 AI 雄心与回报现实之间平衡",
+      "title_en": "KPMG Singapore publishes an AI ROI perspective: balancing AI ambition with return realities",
+      "summary": "KPMG Singapore 于 2026-07-28 发布 AI ROI 观点，讨论企业在扩大 AI agents 应用时面临的成本、回报与 human-in-the-loop 取舍。它将 AI 从部署数量转向可衡量价值、运营经济性与治理的讨论，属于时间明确的官方 thought leadership 信号。",
+      "summary_en": "On July 28, 2026, KPMG Singapore published an AI ROI perspective on the cost, return, and human-in-the-loop trade-offs involved in scaling AI agents. The piece shifts the discussion from deployment volume to measurable value, operating economics, and governance, making it a clearly dated official thought-leadership signal.",
+      "url": "https://www.linkedin.com/pulse/july-2026-whats-top-mind-companies-when-comes-roi-ai-kpmg-singapore-2hbac",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "daily_intake_tavily_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "client_value_proof",
+        "governance_risk"
+      ],
+      "event_score": 72
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-07-30",
+      "type": "partnership",
+      "title": "EY US 与 SymphonyAI 扩展战略联盟，把工业 AI 带入制造业与供应链",
+      "title_en": "EY US expands its strategic alliance with SymphonyAI to bring manufacturing intelligence to enterprise operations",
+      "summary": "EY US 于 2026-07-30 宣布扩大与 SymphonyAI 的战略联盟，将合作从零售与金融服务延伸到制造业与供应链智能。SymphonyAI 的 IRIS Foundry 工业平台被嵌入 EY.ai Order-to-Cash Value Blueprint 和 EY 制造业转型方案，官方称这是 EY 构建 AI-native 合作伙伴生态的一部分，帮助客户从 PoC 走向规模化生产部署。",
+      "summary_en": "On July 30, 2026, EY US announced an expanded strategic alliance with SymphonyAI, extending the collaboration into manufacturing and supply chain intelligence. SymphonyAI's IRIS Foundry industrial platform is embedded in the EY.ai Order-to-Cash Value Blueprint and EY's manufacturing transformation offering, part of EY's strategy to build an AI-native partner ecosystem and move clients from pilots to production at scale.",
+      "url": "https://www.ey.com/en_us/newsroom/2026/07/ey-us-expands-its-strategic-alliance-with-symphonyai-to-bring-manufacturing-intelligence-to-enterprise-operations",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "industry_coverage",
+        "proprietary_assets"
+      ],
+      "event_score": 82
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-07-28",
+      "type": "research",
+      "title": "EY US AI Pulse Survey 第五波：高管从 AI 采用转向价值兑现，token 成本引发财务审视",
+      "title_en": "EY Survey: C-Suites Pivot from AI Adoption to Unlocking Value as Escalating Token Costs Trigger Fiscal Scrutiny",
+      "summary": "EY 于 2026-07-28 发布第五波美国 AI Pulse Survey。多数高管因 token 成本上升而重新评估 AI 投入，正从追求采用转向平衡成本与价值，并更多自建内部软件；官方认为关于 AI 成本与价值的清算已经开始。",
+      "summary_en": "On July 28, 2026, EY released the fifth wave of its US AI Pulse Survey, finding that most senior leaders are reconsidering their AI approach due to token costs, pivoting from adoption to balancing cost against value, and building more custom in-house software.",
+      "url": "https://www.ey.com/en_us/newsroom/2026/07/ey-survey-c-suites-pivot-from-ai-adoption-to-unlocking-value-as-escalating-token-costs-trigger-fiscal-scrutiny",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_tavily_search_plus_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "governance_risk",
+        "client_value_proof"
+      ],
+      "event_score": 78
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-07-29",
+      "type": "organization",
+      "title": "David Leckstein 加入 EY，任美洲首席 AI 与产品官兼咨询战略负责人",
+      "title_en": "David Leckstein joins EY as Americas chief AI & product officer and consulting strategy leader",
+      "summary": "2026-07-29 报道：David Leckstein 从 Accenture 加入 EY，出任美洲首席 AI & 产品官和咨询战略负责人，负责智能体、自主工作流与现代数字架构在 EY 内部和客户端的应用。",
+      "summary_en": "On July 29, 2026, David Leckstein joined EY from Accenture as Americas chief AI & product officer and Americas consulting strategy leader, overseeing AI agents, autonomous workflows, and modern digital architecture.",
+      "url": "https://www.consulting.us/news/13791/david-leckstein-joins-ey-as-americas-chief-ai-product-officer-and-consulting-strategy-leader",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "daily_intake_tavily_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "organization",
+        "delivery_production",
+        "proprietary_assets"
+      ],
+      "event_score": 78
+    },
+    {
+      "company_id": "capgemini",
+      "date": "2026-07-30",
+      "type": "client_proof",
+      "title": "Capgemini 上调 2026 增长指引：大型 AI 转型项目需求拉动订单，客户从实验走向 agentic AI 生产部署",
+      "title_en": "Capgemini upgrades its 2026 outlook as demand for large AI transformation projects lifts bookings",
+      "summary": "Capgemini 于 2026-07-30 发布 H1 2026 业绩并上调全年营收增速指引至 8.5%-9%（原 6.5%-8.5%），理由是大型 AI 转型项目需求提振订单；管理层称客户正从 AI 实验转向在核心业务流程部署 agentic AI，WNS 整合也扩大了 AI 运营项目管道。",
+      "summary_en": "On July 30, 2026, Capgemini reported H1 2026 results and raised its full-year revenue growth target to 8.5%-9% (from 6.5%-8.5%), citing demand for large AI transformation projects. Management said clients are moving from AI experiments to deploying agentic AI in core business processes, with the WNS integration expanding its pipeline of AI-powered operations work.",
+      "url": "https://www.capgemini.com/news/press-releases/capgemini-upgrades-its-2026-outlook/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_tavily_search_plus_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "client_value_proof",
+        "delivery_production",
+        "strategy_signal"
+      ],
+      "event_score": 84
+    },
+    {
+      "company_id": "capgemini",
+      "date": "2026-07-29",
+      "type": "research",
+      "title": "Capgemini 发布《The next leap in agentic AI chip design》",
+      "title_en": "Capgemini publishes The next leap in agentic AI chip design",
+      "summary": "Capgemini 于 2026-07-29 在 research library 发布 agentic AI 芯片设计主题洞察，延续其在半导体与 AI 基础设施议题上的研究输出。",
+      "summary_en": "On July 29, 2026, Capgemini published an insight on agentic AI chip design in its research library, continuing its research output on semiconductors and AI infrastructure.",
+      "url": "https://www.capgemini.com/insights/research-library/the-next-leap-in-agentic-ai-chip-design/",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "observed",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "event_score": 72
+    },
+    {
+      "company_id": "lek",
+      "date": "2026-07-30",
+      "type": "research",
+      "title": "L.E.K. 发布网络研讨会：From AI Agents to Autonomous Organisations",
+      "title_en": "L.E.K. publishes From AI Agents to Autonomous Organisations webinar",
+      "summary": "L.E.K. 于 2026-07-30 发布《What Happens When AI Understands, Learns and Acts on Its Own?》网络研讨会，讨论从 agentic AI 到自主组织的下一波演进及其对商业模式和竞争格局的影响。",
+      "summary_en": "On July 30, 2026, L.E.K. published a webinar, What Happens When AI Understands, Learns and Acts on Its Own?, exploring the next wave from agentic AI to autonomous organisations and its implications for business models and competitive advantage.",
+      "url": "https://www.lek.com/insights/unlock-power-ai/2026-07-what-happens-when-ai-understands-learns-and-acts-its-own",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_tavily_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
+      "event_score": 72
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-07-27",
+      "type": "research",
+      "title": "Bain 发布《What It Takes to Build the AI-Native Modern Bank》",
+      "title_en": "Bain publishes What It Takes to Build the AI-Native Modern Bank",
+      "summary": "Bain 于 2026 年 7 月下旬发布 AI-native 现代银行分析，基于对 30+ 全球银行高管的访谈，论证 AI-native 银行将跑赢 AI-enabled 机构，并引用 Chime 等案例的量化结果（70% 客服交互 AI-first、75% 聊天机器人解决率）。",
+      "summary_en": "In late July 2026, Bain published an analysis of AI-native modern banking based on discussions with more than 30 senior executives at tech-savvy global banks, arguing that AI-native banks will outperform AI-enabled ones and citing quantified examples such as Chime's AI-first customer service.",
+      "url": "https://www.bain.com/insights/what-it-takes-to-build-the-ai-native-modern-bank",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "daily_intake_tavily_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "client_value_proof"
+      ],
+      "event_score": 76
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-07-27",
+      "type": "research",
+      "title": "McKinsey Rewired Takes：AI 解锁创造力，agent manager 角色崛起",
+      "title_en": "McKinsey: How AI is unlocking creativity and heralding the rise of the agent manager",
+      "summary": "McKinsey 于 2026-07-27 在 Tech & AI Insights 发布 Rewired Takes 文章，讨论企业如何重新设计工作流与团队结构、建立 AI agent manager 能力并规模化 AI 采纳；AI 正在解锁创造力并催生 agent manager 新角色。",
+      "summary_en": "On July 27, 2026, McKinsey published a Rewired Takes article in its Tech & AI Insights, examining how companies are redesigning workflows and team structures, building agent-manager capabilities, and scaling AI adoption as AI unlocks creativity.",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/rewired-takes-how-ai-is-unlocking-creativity-and-heralding-the-rise-of-the-agent-manager",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_deep_check_tavily",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "delivery_production"
+      ],
+      "event_score": 76
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-07-23",
+      "type": "research",
+      "title": "McKinsey Health Institute《The human advantage in an AI economy》：AI 时代脑资本成为新竞争优势",
+      "title_en": "The human advantage in an AI economy",
+      "summary": "McKinsey Health Institute 于 2026-07-23 发布播客与专题文章，讨论 AI 转型中保护 brain health、提升脑技能如何成为组织竞争优势。该内容在 7/29 日采集中标记为待复核，8/2 深挖后找到官方专题页并追溯回填入库。",
+      "summary_en": "On July 23, 2026, the McKinsey Health Institute published a podcast and article, The human advantage in an AI economy, arguing that brain capital—brain health and skills—becomes a key competitive advantage in the age of AI. Backfilled on Aug 2 after the official page was verified.",
+      "url": "https://www.mckinsey.com/mhi/our-insights/the-human-advantage-in-an-ai-economy",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_backfill",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "governance_risk"
+      ],
+      "event_score": 76
+    },
+    {
+      "company_id": "deloitte",
+      "date": "2026-07-20",
+      "type": "research",
+      "title": "Deloitte UK CFO Survey Q2 2026：财务负责人对 AI 的乐观度持续上升",
+      "title_en": "Deloitte UK CFO Survey Q2 2026: Growing AI optimism",
+      "summary": "Deloitte UK 于 2026-07-20 发布第 76 期 CFO Survey（调研窗口 7/1-7/13），73% 的 CFO 表示过去 12 个月对 AI 改善业务表现的信心上升（Q4 2025 为 59%），78% 预期未来五年生产力提升。该条发布于 7/25 上一轮窗口内，属上一轮漏检，8/2 复核后追溯回填。",
+      "summary_en": "On July 20, 2026, Deloitte UK published its 76th quarterly CFO Survey (fielded July 1-13), showing 73% of CFOs report rising confidence in AI improving business performance over the past 12 months (vs 59% in Q4 2025), and 78% expect productivity gains over the next five years. Backfilled after being missed in the July 25 refresh.",
+      "url": "https://www.deloitte.com/uk/en/about/press-room/deloitte-cfo-survey-quater-two-2026-growing-ai-optimism.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_backfill",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
+      "event_score": 76
+    }
+  ]
+}

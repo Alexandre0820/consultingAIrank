@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-07-19",
-    "updated_at": "2026-07-25",
+    "previous_updated_at": "2026-07-25",
+    "updated_at": "2026-08-02",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-07-25 本次刷新按周更口径纳入 2026-07-19 至 2026-07-25 的净新增 AI 公开信号；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作、客户交付与 thought leadership 更新，并优先采用官方、厂商官方与品牌自有研究页链接；媒体信号仅在时间明确、主题明确且能补足覆盖面的情况下纳入，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-08-02 本次刷新按周更口径检索并纳入 2026-07-26 至 2026-08-02 的净新增 AI 公开信号，同时合并上一轮候选池中发布时间晚于 2026-07-25、经复核可入库的项目；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作、客户交付与 thought leadership 更新，并优先采用官方、厂商官方与品牌自有研究页链接；页面发布日期不明的近期抓取结果不计入，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。 本次复核对上一轮（7/25 周更）漏检的两条官方信号（McKinsey Health Institute 7/23、Deloitte UK CFO Survey 7/20）做了追溯回填。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -108,6 +108,55 @@
       "color": "#16a34a"
     }
   ],
+  "event_score_model": {
+    "name": "事件信号分 Event Signal Score",
+    "version": "v0.1",
+    "scale": "0-100",
+    "dimensions": [
+      {
+        "name": "战略重要性",
+        "weight": 20,
+        "description": "是否改变公司AI战略、商业模式或交付边界"
+      },
+      {
+        "name": "生产化程度",
+        "weight": 20,
+        "description": "是概念、试点、内部部署，还是客户生产环境部署"
+      },
+      {
+        "name": "可验证性",
+        "weight": 15,
+        "description": "是否有官方来源、客户案例、量化指标或第三方验证"
+      },
+      {
+        "name": "客户价值证明",
+        "weight": 15,
+        "description": "是否证明效率、收入、成本、风险或决策质量改善"
+      },
+      {
+        "name": "合作/生态强度",
+        "weight": 10,
+        "description": "是否绑定模型厂商、平台厂商、数据公司、行业伙伴或资本方"
+      },
+      {
+        "name": "时间新鲜度",
+        "weight": 10,
+        "description": "事件是否足够新，或是否仍在持续产生新证据"
+      },
+      {
+        "name": "稀缺性",
+        "weight": 10,
+        "description": "是否是行业少数公司率先做出的动作"
+      }
+    ],
+    "interpretation": {
+      "90+": "强信号：官方发布、客户生产部署、明确量化结果、战略边界变化",
+      "80-89": "高信号：明确合作、平台、组织或客户案例，但部分证据仍需补充",
+      "70-79": "中信号：能说明趋势，但还需要更多客户价值或生产化证据",
+      "60-69": "弱信号：更多是新闻、观点或早期动作",
+      "<60": "观察项：暂不作为正式评分依据"
+    }
+  },
   "companies": [
     {
       "id": "mckinsey",
@@ -140,7 +189,51 @@
           "summary": "McKinsey 连续发布 State of AI 调研，是企业 AI 采用、组织与价值实现的重要基准研究。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 5,
+        "industry_depth": 5,
+        "delivery_scale": 5,
+        "brand_strength": 5
+      },
       "events": [
+        {
+          "date": "2026-07-27",
+          "type": "research",
+          "title": "McKinsey Rewired Takes：AI 解锁创造力，agent manager 角色崛起",
+          "title_en": "McKinsey: How AI is unlocking creativity and heralding the rise of the agent manager",
+          "summary": "McKinsey 于 2026-07-27 在 Tech & AI Insights 发布 Rewired Takes 文章，讨论企业如何重新设计工作流与团队结构、建立 AI agent manager 能力并规模化 AI 采纳；AI 正在解锁创造力并催生 agent manager 新角色。",
+          "summary_en": "On July 27, 2026, McKinsey published a Rewired Takes article in its Tech & AI Insights, examining how companies are redesigning workflows and team structures, building agent-manager capabilities, and scaling AI adoption as AI unlocks creativity.",
+          "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/rewired-takes-how-ai-is-unlocking-creativity-and-heralding-the-rise-of-the-agent-manager",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_deep_check_tavily",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "delivery_production"
+          ],
+          "event_score": 76
+        },
+        {
+          "date": "2026-07-23",
+          "type": "research",
+          "title": "McKinsey Health Institute《The human advantage in an AI economy》：AI 时代脑资本成为新竞争优势",
+          "title_en": "The human advantage in an AI economy",
+          "summary": "McKinsey Health Institute 于 2026-07-23 发布播客与专题文章，讨论 AI 转型中保护 brain health、提升脑技能如何成为组织竞争优势。该内容在 7/29 日采集中标记为待复核，8/2 深挖后找到官方专题页并追溯回填入库。",
+          "summary_en": "On July 23, 2026, the McKinsey Health Institute published a podcast and article, The human advantage in an AI economy, arguing that brain capital—brain health and skills—becomes a key competitive advantage in the age of AI. Backfilled on Aug 2 after the official page was verified.",
+          "url": "https://www.mckinsey.com/mhi/our-insights/the-human-advantage-in-an-ai-economy",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "governance_risk"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-07-15",
           "type": "research",
@@ -258,13 +351,7 @@
           "confidence": "medium",
           "event_score": 76
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 5,
-        "industry_depth": 5,
-        "delivery_scale": 5,
-        "brand_strength": 5
-      }
+      ]
     },
     {
       "id": "bcg",
@@ -297,12 +384,20 @@
           "summary": "BCG 用企业样本强调 AI 领导者在收入增长与成本节约上的差异，体现其价值实现导向的研究框架。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 5,
+        "industry_depth": 5,
+        "delivery_scale": 5,
+        "brand_strength": 5
+      },
       "events": [
         {
           "date": "2026-07-23",
           "type": "research",
           "title": "BCG 发布 Is AI Computing Power Becoming a Commodity?",
+          "title_en": "BCG publishes Is AI Computing Power Becoming a Commodity?",
           "summary": "BCG 于 2026-07-23 发布 AI 计算资源专题文章，讨论算力市场正变得更透明、更可交易，并可能释放新的企业价值空间。它属于时间明确、主题直接指向 AI 基础设施与商业化路径的官方 thought leadership 信号。",
+          "summary_en": "On 2026-07-23, BCG published a piece on AI compute markets, arguing that compute is becoming more transparent, liquid, and commercially meaningful. It is a clearly dated official thought-leadership signal focused on AI infrastructure and monetization.",
           "url": "https://www.bcg.com/publications/2026/is-ai-computing-power-becoming-a-commodity",
           "source_level": "official",
           "confidence": "high",
@@ -319,7 +414,9 @@
           "date": "2026-07-22",
           "type": "research",
           "title": "BCG 发布 CEO AI value survey：局部见效，但规模化仍然困难",
+          "title_en": "BCG publishes CEO AI value survey: benefits are visible, but scaling remains hard",
           "summary": "BCG 于 2026-07-22 发布官方研究，指出近九成 CEO 已在部分业务中看到 AI 带来的成本或收入改善，但大多数企业仍在规模化落地上挣扎。这是一条很典型的管理层 AI 执行差距研究信号，适合纳入思考力与战略判断维度。",
+          "summary_en": "On 2026-07-22, BCG published official research showing that nearly nine in ten CEOs are seeing some AI-related cost or revenue benefits in targeted areas, yet most companies still struggle to scale. This is a classic management-level signal on the execution gap in AI.",
           "url": "https://www.bcg.com/about/press/22july2026-nearly-nine-in-ten-ceos-see-some-cost-or-revenue-benefits-from-ai-in-targeted-areas-but-most-are-struggling-to-scale-it",
           "source_level": "official",
           "confidence": "high",
@@ -432,13 +529,7 @@
           "confidence": "high",
           "event_score": 72
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 5,
-        "industry_depth": 5,
-        "delivery_scale": 5,
-        "brand_strength": 5
-      }
+      ]
     },
     {
       "id": "bain",
@@ -479,7 +570,32 @@
           "summary": "Bain 与 OpenAI Deployment Company 的合作说明其 AI 叙事已从 advisory 转向 enterprise-scale deployment，本身也是极强的转型信号。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 5,
+        "industry_depth": 5,
+        "delivery_scale": 4,
+        "brand_strength": 5
+      },
       "events": [
+        {
+          "date": "2026-07-27",
+          "type": "research",
+          "title": "Bain 发布《What It Takes to Build the AI-Native Modern Bank》",
+          "title_en": "Bain publishes What It Takes to Build the AI-Native Modern Bank",
+          "summary": "Bain 于 2026 年 7 月下旬发布 AI-native 现代银行分析，基于对 30+ 全球银行高管的访谈，论证 AI-native 银行将跑赢 AI-enabled 机构，并引用 Chime 等案例的量化结果（70% 客服交互 AI-first、75% 聊天机器人解决率）。",
+          "summary_en": "In late July 2026, Bain published an analysis of AI-native modern banking based on discussions with more than 30 senior executives at tech-savvy global banks, arguing that AI-native banks will outperform AI-enabled ones and citing quantified examples such as Chime's AI-first customer service.",
+          "url": "https://www.bain.com/insights/what-it-takes-to-build-the-ai-native-modern-bank",
+          "source_level": "official",
+          "confidence": "medium",
+          "discovery_channel": "daily_intake_tavily_search",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "client_value_proof"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-07-03",
           "type": "research",
@@ -533,13 +649,7 @@
           "confidence": "high",
           "event_score": 72
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 5,
-        "industry_depth": 5,
-        "delivery_scale": 4,
-        "brand_strength": 5
-      }
+      ]
     },
     {
       "id": "roland_berger",
@@ -588,12 +698,20 @@
           "summary": "Roland Berger 的 Insights 总入口持续沉淀 AI、工业转型与 agentic 相关专题，适合后续持续补抓其更具体的 AI 研究文章。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 4,
+        "brand_strength": 4
+      },
       "events": [
         {
           "date": "2026-07-23",
           "type": "research",
           "title": "Roland Berger AI hub 在 7 月继续保持连续更新",
+          "title_en": "Roland Berger's AI hub continues to update throughout July",
           "summary": "基于 Roland Berger Artificial Intelligence hub 的最新公开更新时间线，可以确认其 AI / robotics / data 相关内容在 2026 年 7 月仍保持连续发布，最近几篇日期包括 7 月 23 日、7 月 16 日、7 月 14 日、7 月 9 日和 7 月 6 日。我们将其作为中等强度的 thought leadership 连续性信号纳入。",
+          "summary_en": "Based on the public update cadence visible in Roland Berger's Artificial Intelligence hub, its AI, robotics, and data-related content was still being published continuously in July 2026, with recent dates including July 23, July 16, July 14, July 9, and July 6. We include this as a medium-strength continuity signal for thought leadership.",
           "url": "https://www.rolandberger.com/en/Insights/Global-Topics/Artificial-Intelligence/",
           "source_level": "official",
           "confidence": "medium",
@@ -626,13 +744,7 @@
           "confidence": "high",
           "event_score": 68
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 4,
-        "brand_strength": 4
-      }
+      ]
     },
     {
       "id": "kearney",
@@ -673,6 +785,12 @@
           "summary": "Kearney 已有更明确的年度 AI 趋势型输出，可作为其从单点场景洞察走向更系统 AI 观点表达的代表。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 4,
+        "brand_strength": 4
+      },
       "events": [
         {
           "date": "2026-06-03",
@@ -695,13 +813,7 @@
           "confidence": "high",
           "event_score": 80
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 4,
-        "brand_strength": 4
-      }
+      ]
     },
     {
       "id": "oliver_wyman",
@@ -734,6 +846,12 @@
           "summary": "Oliver Wyman 在金融、治理和行业应用上持续发布 AI 洞察，体现其风险与经营结合的研究视角。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 4,
+        "brand_strength": 4
+      },
       "events": [
         {
           "date": "2026-07-14",
@@ -774,13 +892,7 @@
           "confidence": "high",
           "event_score": 74
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 4,
-        "brand_strength": 4
-      }
+      ]
     },
     {
       "id": "deloitte",
@@ -821,7 +933,31 @@
           "summary": "Deloitte Digital 从管理层转型与组织领导力视角讨论 AI transformation，补强 Deloitte 在 AI 组织变革与业务重构方面的公开方法论信号。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 5,
+        "industry_depth": 5,
+        "delivery_scale": 5,
+        "brand_strength": 5
+      },
       "events": [
+        {
+          "date": "2026-07-20",
+          "type": "research",
+          "title": "Deloitte UK CFO Survey Q2 2026：财务负责人对 AI 的乐观度持续上升",
+          "title_en": "Deloitte UK CFO Survey Q2 2026: Growing AI optimism",
+          "summary": "Deloitte UK 于 2026-07-20 发布第 76 期 CFO Survey（调研窗口 7/1-7/13），73% 的 CFO 表示过去 12 个月对 AI 改善业务表现的信心上升（Q4 2025 为 59%），78% 预期未来五年生产力提升。该条发布于 7/25 上一轮窗口内，属上一轮漏检，8/2 复核后追溯回填。",
+          "summary_en": "On July 20, 2026, Deloitte UK published its 76th quarterly CFO Survey (fielded July 1-13), showing 73% of CFOs report rising confidence in AI improving business performance over the past 12 months (vs 59% in Q4 2025), and 78% expect productivity gains over the next five years. Backfilled after being missed in the July 25 refresh.",
+          "url": "https://www.deloitte.com/uk/en/about/press-room/deloitte-cfo-survey-quater-two-2026-growing-ai-optimism.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-07-02",
           "type": "research",
@@ -857,24 +993,6 @@
           "event_score": 79
         },
         {
-          "date": "2026-06-17",
-          "type": "client_proof",
-          "title": "Deloitte 在 Databricks Summit 展示多项 agentic AI 客户交付案例",
-          "summary": "Deloitte 官方活动页集中展示多项 Databricks Data + AI Summit 2026 客户案例，包括 M&T Bank 的 governed data science workbench、Southern Glazer 的 AI-powered semantic engineering，以及 First Horizon Bank 的 governed data marketplace 和 agentic use cases。",
-          "url": "https://www.deloitte.com/us/en/alliances/events/databricks-data-ai-summit.html",
-          "source_level": "official",
-          "confidence": "high",
-          "discovery_channel": "company_official",
-          "verification_status": "verified",
-          "dimension_tags": [
-            "delivery_production",
-            "client_value_proof",
-            "governance_risk",
-            "industry_coverage"
-          ],
-          "event_score": 85
-        },
-        {
           "date": "2026-06-18",
           "type": "client_proof",
           "title": "Deloitte 为 USGA/GHIN 提供 Rules AI 规则助手试点",
@@ -891,6 +1009,24 @@
           ],
           "event_score": 72,
           "notes": "由 L.E.K. 条目下误挂修正回 Deloitte；待补 Deloitte 或 USGA 官方产品说明。"
+        },
+        {
+          "date": "2026-06-17",
+          "type": "client_proof",
+          "title": "Deloitte 在 Databricks Summit 展示多项 agentic AI 客户交付案例",
+          "summary": "Deloitte 官方活动页集中展示多项 Databricks Data + AI Summit 2026 客户案例，包括 M&T Bank 的 governed data science workbench、Southern Glazer 的 AI-powered semantic engineering，以及 First Horizon Bank 的 governed data marketplace 和 agentic use cases。",
+          "url": "https://www.deloitte.com/us/en/alliances/events/databricks-data-ai-summit.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "delivery_production",
+            "client_value_proof",
+            "governance_risk",
+            "industry_coverage"
+          ],
+          "event_score": 85
         },
         {
           "date": "2026-06",
@@ -923,13 +1059,7 @@
           "confidence": "high",
           "event_score": 82
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 5,
-        "industry_depth": 5,
-        "delivery_scale": 5,
-        "brand_strength": 5
-      }
+      ]
     },
     {
       "id": "monitor_deloitte",
@@ -962,6 +1092,12 @@
           "summary": "Monitor Deloitte 作为 Deloitte 体系内的战略品牌，其 AI 思考力当前主要并入 Deloitte 整体研究输出。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 4,
+        "brand_strength": 4
+      },
       "events": [
         {
           "date": "2026",
@@ -973,13 +1109,7 @@
           "confidence": "medium",
           "event_score": 62
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 4,
-        "brand_strength": 4
-      }
+      ]
     },
     {
       "id": "pwc",
@@ -1020,12 +1150,20 @@
           "summary": "这不是传统白皮书，但它系统展示了 PwC 如何将 AI agents 嵌入 CFO Office 流程，兼具 client zero、流程重构与企业转型方法论价值。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 5,
+        "industry_depth": 5,
+        "delivery_scale": 5,
+        "brand_strength": 5
+      },
       "events": [
         {
           "date": "2026-07-22",
           "type": "research",
           "title": "PwC 发布 The intelligent enterprise in action: AI and the next era of customer experience",
+          "title_en": "PwC publishes The intelligent enterprise in action: AI and the next era of customer experience",
           "summary": "PwC 于 2026-07-22 发布 webcast，系统阐述如何把 AI 嵌入决策机制、客户体验与 enterprise-wide performance。内容强调 proprietary data、agents 与 humans 的协同编排，以及把零散试点转化为全企业绩效的能力，属于高质量的官方 thought leadership 信号。",
+          "summary_en": "On 2026-07-22, PwC published a webcast on how to embed AI into decision-making, customer experience, and enterprise-wide performance. It emphasizes proprietary data, orchestration between agents and humans, and the ability to turn isolated pilots into enterprise performance, making it a high-quality official thought-leadership signal.",
           "url": "https://www.pwc.com/us/en/library/webcasts/replay/ai-and-the-next-era-of-customer-experience.html",
           "source_level": "official",
           "confidence": "high",
@@ -1143,13 +1281,7 @@
           "confidence": "high",
           "event_score": 82
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 5,
-        "industry_depth": 5,
-        "delivery_scale": 5,
-        "brand_strength": 5
-      }
+      ]
     },
     {
       "id": "strategy_and",
@@ -1182,6 +1314,12 @@
           "summary": "Strategy& 当前的公开 AI 研究信号主要沿用 PwC 体系的 AI 报告与管理洞察。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 4,
+        "brand_strength": 4
+      },
       "events": [
         {
           "date": "2026",
@@ -1193,13 +1331,7 @@
           "confidence": "medium",
           "event_score": 62
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 4,
-        "brand_strength": 4
-      }
+      ]
     },
     {
       "id": "ey",
@@ -1240,7 +1372,89 @@
           "summary": "EY 用 operating system 语言来定义 agentic AI 规模化部署路径，这份案例兼具平台、治理和组织转型视角，应视为其代表性 AI 转型研究/案例之一。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 5,
+        "industry_depth": 5,
+        "delivery_scale": 5,
+        "brand_strength": 5
+      },
       "events": [
+        {
+          "date": "2026-07-30",
+          "type": "partnership",
+          "title": "EY US 与 SymphonyAI 扩展战略联盟，把工业 AI 带入制造业与供应链",
+          "title_en": "EY US expands its strategic alliance with SymphonyAI to bring manufacturing intelligence to enterprise operations",
+          "summary": "EY US 于 2026-07-30 宣布扩大与 SymphonyAI 的战略联盟，将合作从零售与金融服务延伸到制造业与供应链智能。SymphonyAI 的 IRIS Foundry 工业平台被嵌入 EY.ai Order-to-Cash Value Blueprint 和 EY 制造业转型方案，官方称这是 EY 构建 AI-native 合作伙伴生态的一部分，帮助客户从 PoC 走向规模化生产部署。",
+          "summary_en": "On July 30, 2026, EY US announced an expanded strategic alliance with SymphonyAI, extending the collaboration into manufacturing and supply chain intelligence. SymphonyAI's IRIS Foundry industrial platform is embedded in the EY.ai Order-to-Cash Value Blueprint and EY's manufacturing transformation offering, part of EY's strategy to build an AI-native partner ecosystem and move clients from pilots to production at scale.",
+          "url": "https://www.ey.com/en_us/newsroom/2026/07/ey-us-expands-its-strategic-alliance-with-symphonyai-to-bring-manufacturing-intelligence-to-enterprise-operations",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "industry_coverage",
+            "proprietary_assets"
+          ],
+          "event_score": 82
+        },
+        {
+          "date": "2026-07-29",
+          "type": "organization",
+          "title": "David Leckstein 加入 EY，任美洲首席 AI 与产品官兼咨询战略负责人",
+          "title_en": "David Leckstein joins EY as Americas chief AI & product officer and consulting strategy leader",
+          "summary": "2026-07-29 报道：David Leckstein 从 Accenture 加入 EY，出任美洲首席 AI & 产品官和咨询战略负责人，负责智能体、自主工作流与现代数字架构在 EY 内部和客户端的应用。",
+          "summary_en": "On July 29, 2026, David Leckstein joined EY from Accenture as Americas chief AI & product officer and Americas consulting strategy leader, overseeing AI agents, autonomous workflows, and modern digital architecture.",
+          "url": "https://www.consulting.us/news/13791/david-leckstein-joins-ey-as-americas-chief-ai-product-officer-and-consulting-strategy-leader",
+          "source_level": "media",
+          "confidence": "medium",
+          "discovery_channel": "daily_intake_tavily_search",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "organization",
+            "delivery_production",
+            "proprietary_assets"
+          ],
+          "event_score": 78
+        },
+        {
+          "date": "2026-07-28",
+          "type": "research",
+          "title": "EY US AI Pulse Survey 第五波：高管从 AI 采用转向价值兑现，token 成本引发财务审视",
+          "title_en": "EY Survey: C-Suites Pivot from AI Adoption to Unlocking Value as Escalating Token Costs Trigger Fiscal Scrutiny",
+          "summary": "EY 于 2026-07-28 发布第五波美国 AI Pulse Survey。多数高管因 token 成本上升而重新评估 AI 投入，正从追求采用转向平衡成本与价值，并更多自建内部软件；官方认为关于 AI 成本与价值的清算已经开始。",
+          "summary_en": "On July 28, 2026, EY released the fifth wave of its US AI Pulse Survey, finding that most senior leaders are reconsidering their AI approach due to token costs, pivoting from adoption to balancing cost against value, and building more custom in-house software.",
+          "url": "https://www.ey.com/en_us/newsroom/2026/07/ey-survey-c-suites-pivot-from-ai-adoption-to-unlocking-value-as-escalating-token-costs-trigger-fiscal-scrutiny",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_tavily_search_plus_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "governance_risk",
+            "client_value_proof"
+          ],
+          "event_score": 78
+        },
+        {
+          "date": "2026-07-07",
+          "type": "service_line",
+          "title": "EY 更新 AI & Data Challenge Program 页面",
+          "summary": "EY 的 AI & Data Challenge Program 页面显示 2026-07-07 日期，属于本周可确认的 AI 能力与人才项目公开更新。这类专题页更新不如重大合作强，但能反映公司在 AI 人才、方法和品牌资产上的持续投入。",
+          "url": "https://ey.com/en_gl/careers/data-science-challenge",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "proprietary_assets",
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-06-27",
           "type": "platform",
@@ -1290,31 +1504,8 @@
           "source_level": "vendor_official",
           "confidence": "high",
           "event_score": 82
-        },
-        {
-          "date": "2026-07-07",
-          "type": "service_line",
-          "title": "EY 更新 AI & Data Challenge Program 页面",
-          "summary": "EY 的 AI & Data Challenge Program 页面显示 2026-07-07 日期，属于本周可确认的 AI 能力与人才项目公开更新。这类专题页更新不如重大合作强，但能反映公司在 AI 人才、方法和品牌资产上的持续投入。",
-          "url": "https://ey.com/en_gl/careers/data-science-challenge",
-          "source_level": "official",
-          "confidence": "high",
-          "discovery_channel": "company_official",
-          "verification_status": "verified",
-          "dimension_tags": [
-            "proprietary_assets",
-            "thought_leadership",
-            "strategy_signal"
-          ],
-          "event_score": 72
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 5,
-        "industry_depth": 5,
-        "delivery_scale": 5,
-        "brand_strength": 5
-      }
+      ]
     },
     {
       "id": "kpmg",
@@ -1347,12 +1538,39 @@
           "summary": "KPMG 持续用季度脉搏调研观察企业 AI 采用进展，适合作为其治理与管理层判断力的证据。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 5,
+        "industry_depth": 5,
+        "delivery_scale": 5,
+        "brand_strength": 5
+      },
       "events": [
+        {
+          "date": "2026-07-28",
+          "type": "research",
+          "title": "KPMG Singapore 发布 AI ROI 观察：企业在 AI 雄心与回报现实之间平衡",
+          "title_en": "KPMG Singapore publishes an AI ROI perspective: balancing AI ambition with return realities",
+          "summary": "KPMG Singapore 于 2026-07-28 发布 AI ROI 观点，讨论企业在扩大 AI agents 应用时面临的成本、回报与 human-in-the-loop 取舍。它将 AI 从部署数量转向可衡量价值、运营经济性与治理的讨论，属于时间明确的官方 thought leadership 信号。",
+          "summary_en": "On July 28, 2026, KPMG Singapore published an AI ROI perspective on the cost, return, and human-in-the-loop trade-offs involved in scaling AI agents. The piece shifts the discussion from deployment volume to measurable value, operating economics, and governance, making it a clearly dated official thought-leadership signal.",
+          "url": "https://www.linkedin.com/pulse/july-2026-whats-top-mind-companies-when-comes-roi-ai-kpmg-singapore-2hbac",
+          "source_level": "official",
+          "confidence": "medium",
+          "discovery_channel": "daily_intake_tavily_search",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "client_value_proof",
+            "governance_risk"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-07-21",
           "type": "partnership",
           "title": "KPMG 与 OpenAI 建立战略联盟，推进 AI-native enterprise workflows",
+          "title_en": "KPMG forms a strategic alliance with OpenAI to advance AI-native enterprise workflows",
           "summary": "KPMG 于 2026-07-21 官方宣布与 OpenAI 建立战略联盟，并被列为 OpenAI Partner Network 的 Elite Partner。公告强调将 AI 直接嵌入企业流程、SaaS 工具和公共部门解决方案，同时采用 forward deployed engineer 模式推动生产级落地，这是一条应当纳入正式榜单的强合作与交付信号。",
+          "summary_en": "On 2026-07-21, KPMG officially announced a strategic alliance with OpenAI and was named an Elite Partner in the OpenAI Partner Network. The release emphasizes embedding AI directly into enterprise workflows, SaaS tools, and public-sector solutions, supported by a forward-deployed-engineer model for production deployment.",
           "url": "https://kpmg.com/us/en/media/news/kpmg-openai-strategic-alliance.html",
           "source_level": "official",
           "confidence": "high",
@@ -1403,13 +1621,7 @@
           ],
           "event_score": 79
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 5,
-        "industry_depth": 5,
-        "delivery_scale": 5,
-        "brand_strength": 5
-      }
+      ]
     },
     {
       "id": "accenture",
@@ -1450,6 +1662,12 @@
           "summary": "Accenture 把 AI 从 experimentation 走向 predictable outcomes 的成熟度模型公开化，这比泛泛趋势报告更接近企业 AI 转型方法论资产。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 5,
+        "industry_depth": 5,
+        "delivery_scale": 5,
+        "brand_strength": 5
+      },
       "events": [
         {
           "date": "2026-07-15",
@@ -1575,13 +1793,7 @@
           "confidence": "high",
           "event_score": 88
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 5,
-        "industry_depth": 5,
-        "delivery_scale": 5,
-        "brand_strength": 5
-      }
+      ]
     },
     {
       "id": "capgemini",
@@ -1622,12 +1834,57 @@
           "summary": "Capgemini 对 agentic AI 的规模化采用、信任与 human-in-the-loop 的研究很成体系，应作为其 AI 转型公开思考力的代表性样本之一。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 5,
+        "brand_strength": 4
+      },
       "events": [
+        {
+          "date": "2026-07-30",
+          "type": "client_proof",
+          "title": "Capgemini 上调 2026 增长指引：大型 AI 转型项目需求拉动订单，客户从实验走向 agentic AI 生产部署",
+          "title_en": "Capgemini upgrades its 2026 outlook as demand for large AI transformation projects lifts bookings",
+          "summary": "Capgemini 于 2026-07-30 发布 H1 2026 业绩并上调全年营收增速指引至 8.5%-9%（原 6.5%-8.5%），理由是大型 AI 转型项目需求提振订单；管理层称客户正从 AI 实验转向在核心业务流程部署 agentic AI，WNS 整合也扩大了 AI 运营项目管道。",
+          "summary_en": "On July 30, 2026, Capgemini reported H1 2026 results and raised its full-year revenue growth target to 8.5%-9% (from 6.5%-8.5%), citing demand for large AI transformation projects. Management said clients are moving from AI experiments to deploying agentic AI in core business processes, with the WNS integration expanding its pipeline of AI-powered operations work.",
+          "url": "https://www.capgemini.com/news/press-releases/capgemini-upgrades-its-2026-outlook/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_tavily_search_plus_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "client_value_proof",
+            "delivery_production",
+            "strategy_signal"
+          ],
+          "event_score": 84
+        },
+        {
+          "date": "2026-07-29",
+          "type": "research",
+          "title": "Capgemini 发布《The next leap in agentic AI chip design》",
+          "title_en": "Capgemini publishes The next leap in agentic AI chip design",
+          "summary": "Capgemini 于 2026-07-29 在 research library 发布 agentic AI 芯片设计主题洞察，延续其在半导体与 AI 基础设施议题上的研究输出。",
+          "summary_en": "On July 29, 2026, Capgemini published an insight on agentic AI chip design in its research library, continuing its research output on semiconductors and AI infrastructure.",
+          "url": "https://www.capgemini.com/insights/research-library/the-next-leap-in-agentic-ai-chip-design/",
+          "source_level": "official",
+          "confidence": "medium",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "observed",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-07-23",
           "type": "research",
           "title": "Capgemini 发布 Agentic AI in Sales and Operations Planning",
+          "title_en": "Capgemini publishes Agentic AI in Sales and Operations Planning",
           "summary": "Capgemini 于 2026-07-23 发布 S&OP agentic AI 观点文章，讨论消费品牌如何借助 AI-powered adaptive planning 改善服务、降低成本并提升 forecast accuracy，同时预览其 S&OP Intelligence Co-Pilot。它不只是泛 AI 叙事，而是较明确的行业场景与解决方案信号。",
+          "summary_en": "On 2026-07-23, Capgemini published a point of view on agentic AI in S&OP, explaining how consumer brands can use AI-powered adaptive planning to improve service, reduce cost, and improve forecast accuracy, while previewing its S&OP Intelligence Co-Pilot. This is more than a generic AI narrative; it is a fairly clear industry-use-case and solution signal.",
           "url": "https://www.capgemini.com/insights/research-library/agentic-ai-in-sales-and-operations-planning/",
           "source_level": "official",
           "confidence": "high",
@@ -1662,13 +1919,7 @@
           "confidence": "high",
           "event_score": 82
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 5,
-        "brand_strength": 4
-      }
+      ]
     },
     {
       "id": "fti",
@@ -1701,12 +1952,20 @@
           "summary": "FTI 在私募和法务等垂直高价值场景里有较强 AI 研究输出，思考力集中但不如综合咨询公司广。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 4,
+        "brand_strength": 4
+      },
       "events": [
         {
           "date": "2026-07-22",
           "type": "research",
           "title": "FTI 发布 The New Shelf Space: How AI Agents Are Rewiring Brand Discovery",
+          "title_en": "FTI publishes The New Shelf Space: How AI Agents Are Rewiring Brand Discovery",
           "summary": "FTI 于 2026-07-22 发布消费者与品牌研究，指出 AI-driven commerce 已成为结构性趋势，并提出 LLM shelf share、agentic replenishment 与信任治理等新议题。它横跨 consumer、go-to-market 与 private equity 价值创造，是一条很值得纳入的官方 thought leadership 信号。",
+          "summary_en": "On 2026-07-22, FTI published a consumer and brand study arguing that AI-driven commerce is becoming a structural shift, and introducing themes such as LLM shelf share, agentic replenishment, and trust governance. It sits at the intersection of consumer, go-to-market, and private-equity value creation, making it a strong official thought-leadership signal.",
           "url": "https://www.fticonsulting.com/insights/reports/new-shelf-space",
           "source_level": "official",
           "confidence": "high",
@@ -1719,6 +1978,23 @@
             "strategy_signal"
           ],
           "event_score": 82
+        },
+        {
+          "date": "2026-07-08",
+          "type": "research",
+          "title": "FTI 发布 Unintended consequences: future AI cyber risk",
+          "summary": "FTI 于 2026-07-08 发布 AI 网络风险主题文章，讨论 agentic AI 与新型攻击面的治理含义。这是一条本周可确认日期的 thought leadership 信号，强化了 FTI 在风险、调查和合规场景中的 AI 观察能力。",
+          "url": "https://fticonsulting.com/insights/articles/unintended-consequences-future-ai-cyber-risk",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "company_official",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "governance_risk",
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 76
         },
         {
           "date": "2026-05-19",
@@ -1751,31 +2027,8 @@
           "source_level": "official",
           "confidence": "high",
           "event_score": 82
-        },
-        {
-          "date": "2026-07-08",
-          "type": "research",
-          "title": "FTI 发布 Unintended consequences: future AI cyber risk",
-          "summary": "FTI 于 2026-07-08 发布 AI 网络风险主题文章，讨论 agentic AI 与新型攻击面的治理含义。这是一条本周可确认日期的 thought leadership 信号，强化了 FTI 在风险、调查和合规场景中的 AI 观察能力。",
-          "url": "https://fticonsulting.com/insights/articles/unintended-consequences-future-ai-cyber-risk",
-          "source_level": "official",
-          "confidence": "high",
-          "discovery_channel": "company_official",
-          "verification_status": "verified",
-          "dimension_tags": [
-            "governance_risk",
-            "thought_leadership",
-            "strategy_signal"
-          ],
-          "event_score": 76
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 4,
-        "brand_strength": 4
-      }
+      ]
     },
     {
       "id": "alvarez_marsal",
@@ -1808,6 +2061,12 @@
           "summary": "A&M 已开始把 AI 纳入 PE 价值创造研究，但整体研究体系还在形成中。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 4,
+        "brand_strength": 4
+      },
       "events": [
         {
           "date": "2026-05-19",
@@ -1841,13 +2100,7 @@
           "confidence": "high",
           "event_score": 78
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 4,
-        "brand_strength": 4
-      }
+      ]
     },
     {
       "id": "lek",
@@ -1896,22 +2149,38 @@
           "summary": "L.E.K. 这篇 7 月 24 日的技术文章讨论 AI 实验室的定价方式，为 B2B SaaS 提供了新的 pricing 和商业模式视角，属于较强的公开思考力信号。"
         }
       ],
+      "traditional_capabilities": {
+        "client_trust": 4,
+        "industry_depth": 4,
+        "delivery_scale": 3,
+        "brand_strength": 4
+      },
       "events": [
         {
-          "date": "2026",
+          "date": "2026-07-30",
           "type": "research",
-          "title": "L.E.K. Artificial Intelligence 洞察专题",
-          "summary": "L.E.K. 官方 AI 洞察页持续发布医疗 IT、心理健康、广告、体育、生物制药等行业的 AI 应用文章。",
-          "url": "https://www.lek.com/insights/artificial-intelligence",
+          "title": "L.E.K. 发布网络研讨会：From AI Agents to Autonomous Organisations",
+          "title_en": "L.E.K. publishes From AI Agents to Autonomous Organisations webinar",
+          "summary": "L.E.K. 于 2026-07-30 发布《What Happens When AI Understands, Learns and Acts on Its Own?》网络研讨会，讨论从 agentic AI 到自主组织的下一波演进及其对商业模式和竞争格局的影响。",
+          "summary_en": "On July 30, 2026, L.E.K. published a webinar, What Happens When AI Understands, Learns and Acts on Its Own?, exploring the next wave from agentic AI to autonomous organisations and its implications for business models and competitive advantage.",
+          "url": "https://www.lek.com/insights/unlock-power-ai/2026-07-what-happens-when-ai-understands-learns-and-acts-its-own",
           "source_level": "official",
-          "confidence": "medium",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_tavily_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ],
           "event_score": 72
         },
         {
           "date": "2026-07-24",
           "type": "research",
           "title": "L.E.K. 发布《What B2B SaaS Leaders Can Learn From How AI Labs Price》",
+          "title_en": "L.E.K. publishes What B2B SaaS Leaders Can Learn From How AI Labs Price",
           "summary": "L.E.K. 于 2026-07-24 发布技术文章，讨论 AI labs 的定价逻辑与 B2B SaaS 可借鉴的商业模式启示，属于时间明确、主题明确的公开 thought leadership 信号。",
+          "summary_en": "On 2026-07-24, L.E.K. published a technology article discussing AI labs' pricing logic and the commercial-model lessons B2B SaaS leaders can draw from it. It is a clearly dated and clearly themed public thought-leadership signal.",
           "url": "https://www.lek.com/insights/technology/what-b2b-saas-leaders-can-learn-how-ai-labs-price",
           "source_level": "official",
           "confidence": "high",
@@ -1923,63 +2192,18 @@
             "industry_coverage"
           ],
           "event_score": 76
+        },
+        {
+          "date": "2026",
+          "type": "research",
+          "title": "L.E.K. Artificial Intelligence 洞察专题",
+          "summary": "L.E.K. 官方 AI 洞察页持续发布医疗 IT、心理健康、广告、体育、生物制药等行业的 AI 应用文章。",
+          "url": "https://www.lek.com/insights/artificial-intelligence",
+          "source_level": "official",
+          "confidence": "medium",
+          "event_score": 72
         }
-      ],
-      "traditional_capabilities": {
-        "client_trust": 4,
-        "industry_depth": 4,
-        "delivery_scale": 3,
-        "brand_strength": 4
-      }
+      ]
     }
-  ],
-  "event_score_model": {
-    "name": "事件信号分 Event Signal Score",
-    "version": "v0.1",
-    "scale": "0-100",
-    "dimensions": [
-      {
-        "name": "战略重要性",
-        "weight": 20,
-        "description": "是否改变公司AI战略、商业模式或交付边界"
-      },
-      {
-        "name": "生产化程度",
-        "weight": 20,
-        "description": "是概念、试点、内部部署，还是客户生产环境部署"
-      },
-      {
-        "name": "可验证性",
-        "weight": 15,
-        "description": "是否有官方来源、客户案例、量化指标或第三方验证"
-      },
-      {
-        "name": "客户价值证明",
-        "weight": 15,
-        "description": "是否证明效率、收入、成本、风险或决策质量改善"
-      },
-      {
-        "name": "合作/生态强度",
-        "weight": 10,
-        "description": "是否绑定模型厂商、平台厂商、数据公司、行业伙伴或资本方"
-      },
-      {
-        "name": "时间新鲜度",
-        "weight": 10,
-        "description": "事件是否足够新，或是否仍在持续产生新证据"
-      },
-      {
-        "name": "稀缺性",
-        "weight": 10,
-        "description": "是否是行业少数公司率先做出的动作"
-      }
-    ],
-    "interpretation": {
-      "90+": "强信号：官方发布、客户生产部署、明确量化结果、战略边界变化",
-      "80-89": "高信号：明确合作、平台、组织或客户案例，但部分证据仍需补充",
-      "70-79": "中信号：能说明趋势，但还需要更多客户价值或生产化证据",
-      "60-69": "弱信号：更多是新闻、观点或早期动作",
-      "<60": "观察项：暂不作为正式评分依据"
-    }
-  }
+  ]
 }
