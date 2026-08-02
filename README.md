@@ -16,9 +16,17 @@ AI咨询行动榜/
   app.py
   data/
     ai-consulting-leaderboard.json
+    companies.json
+    config.json
+    events/
+      archive.json
+      YYYY-MM-DD.json
     daily-intake/
       _template.json
       YYYY-MM-DD.json
+  scripts/
+    build-data.js
+    rank.js
   static/
     index.html
     styles.css
@@ -57,7 +65,11 @@ AI咨询行动榜/
 
 ## 数据文件怎么分工
 
-- `data/ai-consulting-leaderboard.json`：正式榜单唯一数据源，前端和 HTTP 服务都只读这一份
+- `data/ai-consulting-leaderboard.json`：前端读取的构建产物，不建议手工维护
+- `data/config.json`：榜单 meta、评分维度和事件类型
+- `data/companies.json`：公司基础资料、长期能力、报告和人工维度分
+- `data/events/archive.json`：历史累计事件，过去的事件沉淀在这里，平时不需要反复查看
+- `data/events/YYYY-MM-DD.json`：某次周更正式并入的新增事件
 - `data/daily-intake/YYYY-MM-DD.json`：外部新闻候选池，先收集、后筛选、周更时再并入正式榜单
 - `research/`：研究备忘或人工资料，不直接参与页面渲染和评分计算
 
@@ -68,6 +80,20 @@ AI咨询行动榜/
 推荐从这个模板复制一份开始填：
 
 `/Users/shengyun/lobsterai/project/AI咨询行动榜/data/daily-intake/_template.json`
+
+## 周更维护流程
+
+1. 把当天或本周候选新闻写入 `data/daily-intake/YYYY-MM-DD.json`。
+2. 复核后，把正式纳入的事件追加到 `data/events/YYYY-MM-DD.json`。
+3. 如果公司长期底座变化，例如 thought leadership 维度、报告列表、公司 notes，更新 `data/companies.json`。
+4. 运行构建脚本生成前端读取的数据：
+
+```bash
+node scripts/build-data.js
+node scripts/rank.js
+```
+
+`scripts/rank.js` 会用与前端一致的行动榜口径输出最新排名，方便推送前检查。
 
 ## 本地启动
 

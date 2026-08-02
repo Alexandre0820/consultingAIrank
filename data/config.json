@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "title": "AI咨询行动榜 / AI Consulting Signal Index",
+    "version": "standalone-mvp-0.2",
+    "previous_updated_at": "2026-07-25",
+    "updated_at": "2026-08-02",
+    "timezone": "Asia/Shanghai",
+    "status": "MVP 数据集，不代表最终排名",
+    "method_note": "MVP 数据集，不代表最终排名。2026-08-02 本次刷新按周更口径检索并纳入 2026-07-26 至 2026-08-02 的净新增 AI 公开信号，同时合并上一轮候选池中发布时间晚于 2026-07-25、经复核可入库的项目；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作、客户交付与 thought leadership 更新，并优先采用官方、厂商官方与品牌自有研究页链接；页面发布日期不明的近期抓取结果不计入，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。 本次复核对上一轮（7/25 周更）漏检的两条官方信号（McKinsey Health Institute 7/23、Deloitte UK CFO Survey 7/20）做了追溯回填。",
+    "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
+    "scoring_model_file": "SCORING_MODEL.md"
+  },
+  "dimensions": [
+    {
+      "id": "strategy_signal",
+      "name": "战略信号",
+      "weight": 0.14,
+      "description": "AI 是否进入公司级战略、CEO 叙事、服务组合核心，而不只是零散报告或营销活动。"
+    },
+    {
+      "id": "tech_partnership",
+      "name": "科技合作深度",
+      "weight": 0.13,
+      "description": "是否与 OpenAI、Microsoft、ServiceNow、AWS、Google、Anthropic 等关键技术平台形成深度合作。"
+    },
+    {
+      "id": "proprietary_assets",
+      "name": "自有 AI 平台与技术资产",
+      "weight": 0.14,
+      "description": "是否拥有自有平台、内部工具、知识库、Agent 框架、行业模型或可复用技术资产。"
+    },
+    {
+      "id": "delivery_production",
+      "name": "AI 交付与生产化能力",
+      "weight": 0.15,
+      "description": "能否把 AI 从 PoC 推向生产环境，包括交付团队、工程能力、行业工作流和规模化部署。"
+    },
+    {
+      "id": "capital_ma",
+      "name": "并购与资本动作",
+      "weight": 0.08,
+      "description": "是否通过投资、并购、战略合资或资本合作补齐 AI 能力。"
+    },
+    {
+      "id": "industry_coverage",
+      "name": "行业场景覆盖",
+      "weight": 0.1,
+      "description": "AI 动作是否覆盖金融、制造、医疗、零售、能源、法律、PE 等多个行业场景。"
+    },
+    {
+      "id": "client_value_proof",
+      "name": "客户价值证明",
+      "weight": 0.12,
+      "description": "是否有客户案例、效率提升、成本节约、收入增长、ROI 或可量化结果。"
+    },
+    {
+      "id": "governance_risk",
+      "name": "AI 治理与风险能力",
+      "weight": 0.14,
+      "description": "是否强调可信 AI、治理、合规、监控、安全、模型风险管理、负责任 AI。"
+    },
+    {
+      "id": "thought_leadership",
+      "name": "AI 思考力 / 公开研究信号",
+      "weight": 0.1,
+      "description": "是否持续发布有方法论密度的 AI 报告、调研、指数和管理洞察，体现其对企业 AI 的判断与引导能力。"
+    }
+  ],
+  "event_types": [
+    {
+      "id": "partnership",
+      "label": "科技合作",
+      "color": "#2457ff"
+    },
+    {
+      "id": "platform",
+      "label": "平台/工具",
+      "color": "#00a88f"
+    },
+    {
+      "id": "service_line",
+      "label": "AI 服务线",
+      "color": "#8a5cf6"
+    },
+    {
+      "id": "investment",
+      "label": "投资/并购",
+      "color": "#ff8a00"
+    },
+    {
+      "id": "organization",
+      "label": "组织/岗位",
+      "color": "#e11d48"
+    },
+    {
+      "id": "governance",
+      "label": "治理/风控",
+      "color": "#0f766e"
+    },
+    {
+      "id": "research",
+      "label": "研究/指数",
+      "color": "#64748b"
+    },
+    {
+      "id": "client_proof",
+      "label": "客户证明",
+      "color": "#16a34a"
+    }
+  ],
+  "event_score_model": {
+    "name": "事件信号分 Event Signal Score",
+    "version": "v0.1",
+    "scale": "0-100",
+    "dimensions": [
+      {
+        "name": "战略重要性",
+        "weight": 20,
+        "description": "是否改变公司AI战略、商业模式或交付边界"
+      },
+      {
+        "name": "生产化程度",
+        "weight": 20,
+        "description": "是概念、试点、内部部署，还是客户生产环境部署"
+      },
+      {
+        "name": "可验证性",
+        "weight": 15,
+        "description": "是否有官方来源、客户案例、量化指标或第三方验证"
+      },
+      {
+        "name": "客户价值证明",
+        "weight": 15,
+        "description": "是否证明效率、收入、成本、风险或决策质量改善"
+      },
+      {
+        "name": "合作/生态强度",
+        "weight": 10,
+        "description": "是否绑定模型厂商、平台厂商、数据公司、行业伙伴或资本方"
+      },
+      {
+        "name": "时间新鲜度",
+        "weight": 10,
+        "description": "事件是否足够新，或是否仍在持续产生新证据"
+      },
+      {
+        "name": "稀缺性",
+        "weight": 10,
+        "description": "是否是行业少数公司率先做出的动作"
+      }
+    ],
+    "interpretation": {
+      "90+": "强信号：官方发布、客户生产部署、明确量化结果、战略边界变化",
+      "80-89": "高信号：明确合作、平台、组织或客户案例，但部分证据仍需补充",
+      "70-79": "中信号：能说明趋势，但还需要更多客户价值或生产化证据",
+      "60-69": "弱信号：更多是新闻、观点或早期动作",
+      "<60": "观察项：暂不作为正式评分依据"
+    }
+  }
+}

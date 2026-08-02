@@ -7,6 +7,23 @@
 - `event_types`：AI 动作类型标签。
 - `companies`：公司清单。
 
+## 源数据与构建产物
+
+为了降低周更维护成本，正式数据分为“源数据”和“构建产物”两层：
+
+- `data/config.json`：榜单 meta、评分维度、事件类型和事件评分模型。
+- `data/companies.json`：公司基础资料、长期能力、报告、覆盖说明和人工维度分，不包含事件列表。
+- `data/events/archive.json`：历史累计事件。过去的事件已经沉淀，日常周更一般不需要打开这个文件。
+- `data/events/YYYY-MM-DD.json`：某次周更正式并入的新增事件。
+- `data/ai-consulting-leaderboard.json`：由 `scripts/build-data.js` 生成的前端读取文件，不建议手工维护。
+
+周更时优先修改 `data/events/YYYY-MM-DD.json` 和必要的 `data/companies.json`，再运行：
+
+```bash
+node scripts/build-data.js
+node scripts/rank.js
+```
+
 ## 日采集暂存层
 
 建议在 `data/daily-intake/` 下按日期存放每日研究结果，例如：
@@ -83,14 +100,17 @@
 - `notes`：人工观察摘要。
 - `reports`：公开 AI 报告 / 洞察列表，用于体现公司在 AI 议题上的持续研究与公开表达。
 - `coverage`：当前公司样本的覆盖质量信息，用于说明证据是否足够厚、是否存在公开披露偏差。
-- `events`：AI 动作事件列表。
+- `events`：仅出现在构建产物 `data/ai-consulting-leaderboard.json` 中；源数据里事件存放在 `data/events/`。
 
 ## 事件字段
 
 - `date`：事件日期，格式建议 `YYYY-MM-DD`；不完整可用年份。
+- `company_id`：事件所属公司 ID，仅在 `data/events/` 源文件中需要；构建产物会把事件挂回对应公司并去掉该字段。
 - `type`：事件类型，对应 `event_types.id`。
 - `title`：事件标题。
+- `title_en`：可选，英文标题。新增事件建议直接写入，避免每周维护前端翻译映射。
 - `summary`：事件摘要。
+- `summary_en`：可选，英文摘要。新增事件建议直接写入，避免每周维护前端翻译映射。
 - `url`：来源链接。
 - `source_level`：来源可信度，例如 `official` / `official_press_release` / `vendor_official` / `media`。
 - `confidence`：事件置信度：`high` / `medium` / `low`。

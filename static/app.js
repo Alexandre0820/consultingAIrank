@@ -334,6 +334,26 @@ function translateReportSummary(text = "") {
     .replace("OpenAI 财务组织作为 Customer Zero，Codex 已处理5倍合同，IR-GPT 管理200+投资者互动。", "OpenAI's finance organization acts as Customer Zero, with Codex already handling five times more contracts and IR-GPT managing more than 200 investor interactions.");
 }
 
+function localizedEventTitle(event) {
+  if (activeLanguage === "en" && event.title_en) return event.title_en;
+  return translateEventTitle(event.title);
+}
+
+function localizedEventSummary(event) {
+  if (activeLanguage === "en" && event.summary_en) return event.summary_en;
+  return translateEventSummary(event.summary);
+}
+
+function localizedReportTitle(report) {
+  if (activeLanguage === "en" && report.title_en) return report.title_en;
+  return translateReportTitle(report.title);
+}
+
+function localizedReportSummary(report) {
+  if (activeLanguage === "en" && report.summary_en) return report.summary_en;
+  return translateReportSummary(report.summary);
+}
+
 function applyStaticTranslations() {
   if (els.heroTitle) els.heroTitle.textContent = t("heroTitle");
   if (els.heroSubtitle) els.heroSubtitle.textContent = t("heroSubtitle");
@@ -778,8 +798,8 @@ function renderReports(company) {
             <span>${escapeHtml(shortDate(report.date))}</span>
             <span>${escapeHtml(report.publisher)}</span>
           </div>
-          <strong>${escapeHtml(translateReportTitle(report.title))}</strong>
-          <p>${escapeHtml(translateReportSummary(report.summary))}</p>
+          <strong>${escapeHtml(localizedReportTitle(report))}</strong>
+          <p>${escapeHtml(localizedReportSummary(report))}</p>
           <a href="${escapeHtml(report.url)}" target="_blank" rel="noreferrer">${activeLanguage === "en" ? "View report" : "查看报告"}</a>
         </article>
       `).join("")}
@@ -1260,8 +1280,8 @@ function renderActionCard(row, rank, previousRankMap) {
         <div>
           <span class="badge" style="--event-color:${typeColor(event.type)}">${escapeHtml(typeLabel(event.type))}</span>
           <span class="event-contribution">${activeLanguage === "en" ? "Contribution" : "贡献"} ${event.contribution_score.toFixed(1)} ${activeLanguage === "en" ? "pts" : "分"}</span>
-          <h4>${escapeHtml(translateEventTitle(event.title))}</h4>
-          <p>${escapeHtml(translateEventSummary(event.summary))}</p>
+          <h4>${escapeHtml(localizedEventTitle(event))}</h4>
+          <p>${escapeHtml(localizedEventSummary(event))}</p>
           <a href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">${activeLanguage === "en" ? "View source" : "查看来源"}</a>
         </div>
       </article>
