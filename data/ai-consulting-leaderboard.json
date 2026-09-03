@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-07-25",
-    "updated_at": "2026-08-02",
+    "previous_updated_at": "2026-08-02",
+    "updated_at": "2026-09-03",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-08-02 本次刷新按周更口径检索并纳入 2026-07-26 至 2026-08-02 的净新增 AI 公开信号，同时合并上一轮候选池中发布时间晚于 2026-07-25、经复核可入库的项目；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作、客户交付与 thought leadership 更新，并优先采用官方、厂商官方与品牌自有研究页链接；页面发布日期不明的近期抓取结果不计入，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。 本次复核对上一轮（7/25 周更）漏检的两条官方信号（McKinsey Health Institute 7/23、Deloitte UK CFO Survey 7/20）做了追溯回填。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-09-03 本次刷新距上一版快照（2026-08-02）约一个月，检索窗口覆盖 2026-08-03 至 2026-09-03 的净新增 AI 公开信号，并重点复核了最近一周（08-27 至 09-03）；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的官方或可溯源信号，优先采用官方与厂商官方链接，事件信号分、来源可信度与双层评分结构保持不变。本次合并 8 条净新增：Deloitte 新增两条强信号（Open Model Engineering practice 09-02、收购 Wavicle 08-31），BCG（AI 价值研究 08-31）、Kearney（Transformation Study 08-19，经媒体转载核实、来源降一档）、McKinsey（agentic AI GBS 播客 08-11，窗口内回补）、L.E.K.（三条 AI 研究 08-19/08-21/09-01）各有研究类净新增；EY、KPMG、Accenture、Oliver Wyman、FTI Consulting、Strategy&、Monitor Deloitte 在窗口内未发现可确认的净新增公开信号，其行动力分随窗口推移自然衰减。厂商官方生态（OpenAI/Anthropic 等）9 月初无点名上榜公司的新公告。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -196,6 +196,25 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-08-11",
+          "type": "research",
+          "title": "McKinsey 发布播客《Agentic AI and the future of global business services》",
+          "title_en": "McKinsey publishes Agentic AI and the future of global business services podcast",
+          "summary": "McKinsey 于 2026-08-11 发布运营实践播客，讨论 agentic AI 如何重塑全球业务服务（GBS）的定位、人才与运营模式，指出 agent 编排能力将决定 GBS 从成本中心转向价值引擎的速度。该条属于上一快照（08-02）之后窗口内的回补净新增。",
+          "summary_en": "On August 11, 2026, McKinsey released an Operations practice podcast examining how agentic AI is reshaping global business services, arguing that agent-orchestration capability will determine how fast GBS shifts from cost center to value engine. Backfilled as a net-new item from the gap since the previous snapshot.",
+          "url": "https://www.mckinsey.com/capabilities/operations/our-insights/agentic-ai-and-the-future-of-global-business-services",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "delivery_production"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-07-27",
           "type": "research",
@@ -391,6 +410,25 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-08-31",
+          "type": "research",
+          "title": "BCG 发布《Look Past Productivity to Get Real Value from AI》：AI 价值衡量要跳出生产力叙事",
+          "title_en": "BCG publishes Look Past Productivity to Get Real Value from AI",
+          "summary": "BCG 于 2026-08-31 发布 AI 价值研究，主张企业不应只用生产力指标衡量 AI 回报，而要重新定义价值衡量方式，才能走出 pilot 停滞、兑现真实业务价值；延续其 2026 年关于 AI 价值兑现差距的系列研究线。",
+          "summary_en": "On August 31, 2026, BCG published research arguing that companies should look past productivity metrics to measure AI's real value, redefining how AI returns are assessed in order to escape stalled pilots and realize business impact, continuing its 2026 research line on the AI value gap.",
+          "url": "https://www.bcg.com/publications/2026/why-ai-pilots-rarely-deliver-value",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "client_value_proof",
+            "strategy_signal"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-07-23",
           "type": "research",
@@ -793,6 +831,24 @@
       },
       "events": [
         {
+          "date": "2026-08-19",
+          "type": "research",
+          "title": "Kearney 发布 Transformation Study 2026《The adoption gap》：转型失败卡在采纳而非技术",
+          "title_en": "Kearney releases Transformation Study 2026: The adoption gap",
+          "summary": "Kearney 于 2026-08-19 发布年度转型研究，指出转型成功率长期停留在约 30%，瓶颈不在技术而在战略批准后的'采纳缺口'，管理层需要清除组织与采纳摩擦；研究将 AI 采用纳入其核心论据。官方新闻稿经 Yahoo Finance 转载核实，Kearney 官网因访问限制未直接复核。",
+          "summary_en": "On August 19, 2026, Kearney released its Transformation Study 2026, The adoption gap: why most transformations fail after the strategy is approved, finding success stuck at roughly 30% and attributing failure to adoption friction rather than technology, with AI adoption central to the argument. Verified via the official press release carried by Yahoo Finance; kearney.com itself could not be fetched directly.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/kearney-report-transformation-success-remains-120900229.html",
+          "source_level": "media",
+          "confidence": "medium",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 74
+        },
+        {
           "date": "2026-06-03",
           "type": "platform",
           "title": "Kearney 与 Beroe 推出 Beroe MAX powered by Kearney",
@@ -940,6 +996,46 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-09-02",
+          "type": "service_line",
+          "title": "Deloitte 新设 Open Model Engineering 全球 practice：用开源+专有混合模型路径规模化 agentic AI",
+          "title_en": "Deloitte launches global Open Model Engineering practice to scale agentic AI with open and proprietary models",
+          "summary": "Deloitte 于 2026-09-02 宣布设立 Open Model Engineering 全球 practice，帮助北美、欧洲与亚太客户结合开源模型（首发 NVIDIA Nemotron 家族与 NIM 微服务）与专有模型、云及本地化基础设施来构建和规模化企业级 agentic AI；同时计划持续招聘并认证 forward deployed engineers 至 2027 财年，并接入自有 Zora AI 数字员工平台。该动作把模型选择权与成本、IP、运维控制权打包成一条可交付路径，是 Deloitte 在 agentic AI 交付侧的实质性扩张。",
+          "summary_en": "On September 2, 2026, Deloitte launched a global Open Model Engineering practice helping clients in North America, Europe, and Asia Pacific build and scale enterprise and agentic AI by combining open models (starting with NVIDIA's Nemotron family and NIM microservices) with proprietary models, cloud, and on-premises infrastructure, while hiring and certifying forward deployed engineers through FY2027 and leveraging its Zora AI digital workforce platform.",
+          "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-open-model-engineering-practice.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "delivery_production",
+            "proprietary_assets",
+            "tech_partnership",
+            "strategy_signal"
+          ],
+          "event_score": 86
+        },
+        {
+          "date": "2026-08-31",
+          "type": "investment",
+          "title": "Deloitte 收购 Wavicle Data Solutions，扩张数据与 AI 工程能力并强化 Databricks 联盟",
+          "title_en": "Deloitte acquires the business of Wavicle to accelerate data and AI engineering capabilities",
+          "summary": "Deloitte 于 2026-08-31 宣布收购芝加哥数据与 AI 工程咨询公司 Wavicle Data Solutions 的绝大部分资产，重点扩张其 AI 与数据 practice 在 Databricks 联盟下的数据平台与 AI 工程交付资源。这是 Deloitte 在 AI 与数据工程供给侧的资本动作，直接增厚其 agentic AI 规模化落地所需的工程底盘。",
+          "summary_en": "On August 31, 2026, Deloitte announced the acquisition of substantially all assets of Wavicle Data Solutions, a Chicago-based data and AI engineering consultancy founded in 2013, expanding its Artificial Intelligence and Data practice with emphasis on the Databricks alliance and strengthening the engineering base behind its agentic AI delivery.",
+          "url": "https://www.prnewswire.com/news-releases/deloitte-acquires-the-business-of-wavicle-accelerating-data-and-ai-engineering-capabilities-302864318.html",
+          "source_level": "official_press_release",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "capital_ma",
+            "delivery_production",
+            "tech_partnership",
+            "proprietary_assets"
+          ],
+          "event_score": 84
+        },
         {
           "date": "2026-07-20",
           "type": "research",
@@ -2156,6 +2252,61 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-09-01",
+          "type": "research",
+          "title": "L.E.K. 发布《How AI Is Redrawing the Content Production Value Chain》",
+          "title_en": "L.E.K. publishes How AI Is Redrawing the Content Production Value Chain",
+          "summary": "L.E.K. 于 2026-09-01 发布媒体娱乐行业研究，拆解 AI 如何重构内容生产价值链的成本结构、分工与能力要求，延续其在媒体与科技交叉领域的 AI 议题覆盖。",
+          "summary_en": "On September 1, 2026, L.E.K. published research on how AI is redrawing the content production value chain, examining shifts in cost structures, roles, and required capabilities across media and entertainment.",
+          "url": "https://www.lek.com/insights/media-entertainment/how-ai-redrawing-content-production-value-chain",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 74
+        },
+        {
+          "date": "2026-08-21",
+          "type": "research",
+          "title": "L.E.K. 发布《Turning AI-Powered Pricing Into Realized Margin in B2B Technology》",
+          "title_en": "L.E.K. publishes Turning AI-Powered Pricing Into Realized Margin in B2B Technology",
+          "summary": "L.E.K. 于 2026-08-21 发布 B2B 科技行业研究，讨论如何把 AI 驱动定价转化为已实现利润率，聚焦 AI 在定价场景中的可衡量价值兑现。",
+          "summary_en": "On August 21, 2026, L.E.K. published research on turning AI-powered pricing into realized margin in B2B technology, focusing on measurable value capture from AI in pricing use cases.",
+          "url": "https://www.lek.com/insights/technology/turning-ai-powered-pricing-realized-margin-b2b-technology",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "client_value_proof"
+          ],
+          "event_score": 72
+        },
+        {
+          "date": "2026-08-19",
+          "type": "research",
+          "title": "L.E.K. 发布《Why Banks Are Underwriting AI Wrong》：银行 AI 投入应从用例清单转向资本配置",
+          "title_en": "L.E.K. publishes Why Banks Are Underwriting AI Wrong",
+          "summary": "L.E.K. 于 2026-08-19 发布银行业 AI 研究，批评银行按用例清单为 AI 立项的惯性做法，主张把 AI 当作资本配置问题、按投资组合逻辑重新定价 AI 投入，体现其在金融服务 AI 议题上持续的方法论输出。",
+          "summary_en": "On August 19, 2026, L.E.K. published Why Banks Are Underwriting AI Wrong, arguing that banks should move from use-case catalogs to portfolio-style capital allocation when funding AI initiatives, continuing its methodology-driven output on AI in financial services.",
+          "url": "https://www.lek.com/insights/banking/why-banks-are-underwriting-ai-wrong-use-case-catalogs-capital-allocation",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-07-30",
           "type": "research",

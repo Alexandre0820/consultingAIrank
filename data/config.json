@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-07-25",
-    "updated_at": "2026-08-02",
+    "previous_updated_at": "2026-08-02",
+    "updated_at": "2026-09-03",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-08-02 本次刷新按周更口径检索并纳入 2026-07-26 至 2026-08-02 的净新增 AI 公开信号，同时合并上一轮候选池中发布时间晚于 2026-07-25、经复核可入库的项目；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的新闻、合作、客户交付与 thought leadership 更新，并优先采用官方、厂商官方与品牌自有研究页链接；页面发布日期不明的近期抓取结果不计入，避免在证据不足时制造虚假排名波动；继续采用事件信号分、来源可信度和双层结构：新闻/事件信号分 + 公司九维综合分。 本次复核对上一轮（7/25 周更）漏检的两条官方信号（McKinsey Health Institute 7/23、Deloitte UK CFO Survey 7/20）做了追溯回填。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-09-03 本次刷新距上一版快照（2026-08-02）约一个月，检索窗口覆盖 2026-08-03 至 2026-09-03 的净新增 AI 公开信号，并重点复核了最近一周（08-27 至 09-03）；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的官方或可溯源信号，优先采用官方与厂商官方链接，事件信号分、来源可信度与双层评分结构保持不变。本次合并 8 条净新增：Deloitte 新增两条强信号（Open Model Engineering practice 09-02、收购 Wavicle 08-31），BCG（AI 价值研究 08-31）、Kearney（Transformation Study 08-19，经媒体转载核实、来源降一档）、McKinsey（agentic AI GBS 播客 08-11，窗口内回补）、L.E.K.（三条 AI 研究 08-19/08-21/09-01）各有研究类净新增；EY、KPMG、Accenture、Oliver Wyman、FTI Consulting、Strategy&、Monitor Deloitte 在窗口内未发现可确认的净新增公开信号，其行动力分随窗口推移自然衰减。厂商官方生态（OpenAI/Anthropic 等）9 月初无点名上榜公司的新公告。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
