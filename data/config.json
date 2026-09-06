@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-08-02",
-    "updated_at": "2026-09-03",
+    "previous_updated_at": "2026-09-03",
+    "updated_at": "2026-09-06",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-09-03 本次刷新距上一版快照（2026-08-02）约一个月，检索窗口覆盖 2026-08-03 至 2026-09-03 的净新增 AI 公开信号，并重点复核了最近一周（08-27 至 09-03）；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的官方或可溯源信号，优先采用官方与厂商官方链接，事件信号分、来源可信度与双层评分结构保持不变。本次合并 8 条净新增：Deloitte 新增两条强信号（Open Model Engineering practice 09-02、收购 Wavicle 08-31），BCG（AI 价值研究 08-31）、Kearney（Transformation Study 08-19，经媒体转载核实、来源降一档）、McKinsey（agentic AI GBS 播客 08-11，窗口内回补）、L.E.K.（三条 AI 研究 08-19/08-21/09-01）各有研究类净新增；EY、KPMG、Accenture、Oliver Wyman、FTI Consulting、Strategy&、Monitor Deloitte 在窗口内未发现可确认的净新增公开信号，其行动力分随窗口推移自然衰减。厂商官方生态（OpenAI/Anthropic 等）9 月初无点名上榜公司的新公告。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-09-06 本次刷新窗口为 2026-09-04 至 09-06（周五加周末，净新增预期偏少）：并入 BCG 两条 09-04 官方研究（医疗 agentic AI 价值、化工企业 AI 基础设施热潮）。同时对上一轮（09-03）复核确认漏检的 3 条官方信号做了有记录的追溯回填：Bain 与 Anthropic 全球合作（Claude Partner Network Global Premier，08-25）、Deloitte 端到端 AI Controls and Assurance 扩展（08-12）、Bain《FinOps for AI》简报（09-03，发布于上轮刷新当日）。Roland Berger 上一轮两条 hold 项经官网复核仍无法核实，本轮关闭。KPMG、PwC、EY、Accenture、Kearney、Oliver Wyman、FTI、A&M、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；McKinsey《State of AI》2026 年度调查因页面抓取超时未确认发布日期，留待下轮优先复核。评分口径不变：事件信号分 + 来源可信度 + 双层评分结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },

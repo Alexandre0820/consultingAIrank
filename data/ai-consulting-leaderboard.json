@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-08-02",
-    "updated_at": "2026-09-03",
+    "previous_updated_at": "2026-09-03",
+    "updated_at": "2026-09-06",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-09-03 本次刷新距上一版快照（2026-08-02）约一个月，检索窗口覆盖 2026-08-03 至 2026-09-03 的净新增 AI 公开信号，并重点复核了最近一周（08-27 至 09-03）；继续采用保守纳入口径，只收录能够确认发布日期且库内此前不存在的官方或可溯源信号，优先采用官方与厂商官方链接，事件信号分、来源可信度与双层评分结构保持不变。本次合并 8 条净新增：Deloitte 新增两条强信号（Open Model Engineering practice 09-02、收购 Wavicle 08-31），BCG（AI 价值研究 08-31）、Kearney（Transformation Study 08-19，经媒体转载核实、来源降一档）、McKinsey（agentic AI GBS 播客 08-11，窗口内回补）、L.E.K.（三条 AI 研究 08-19/08-21/09-01）各有研究类净新增；EY、KPMG、Accenture、Oliver Wyman、FTI Consulting、Strategy&、Monitor Deloitte 在窗口内未发现可确认的净新增公开信号，其行动力分随窗口推移自然衰减。厂商官方生态（OpenAI/Anthropic 等）9 月初无点名上榜公司的新公告。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-09-06 本次刷新窗口为 2026-09-04 至 09-06（周五加周末，净新增预期偏少）：并入 BCG 两条 09-04 官方研究（医疗 agentic AI 价值、化工企业 AI 基础设施热潮）。同时对上一轮（09-03）复核确认漏检的 3 条官方信号做了有记录的追溯回填：Bain 与 Anthropic 全球合作（Claude Partner Network Global Premier，08-25）、Deloitte 端到端 AI Controls and Assurance 扩展（08-12）、Bain《FinOps for AI》简报（09-03，发布于上轮刷新当日）。Roland Berger 上一轮两条 hold 项经官网复核仍无法核实，本轮关闭。KPMG、PwC、EY、Accenture、Kearney、Oliver Wyman、FTI、A&M、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；McKinsey《State of AI》2026 年度调查因页面抓取超时未确认发布日期，留待下轮优先复核。评分口径不变：事件信号分 + 来源可信度 + 双层评分结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -411,6 +411,43 @@
       },
       "events": [
         {
+          "date": "2026-09-04",
+          "type": "research",
+          "title": "BCG 发布《Agentic AI's Advantage for Health Insurers》：更快决策、更低成本、更好服务",
+          "title_en": "BCG publishes Agentic AI's Advantage for Health Insurers: Faster Decisions, Lower Costs, Better Care",
+          "summary": "BCG 于 2026-09-04 发布医疗保险公司 agentic AI 应用研究，论证 AI agent 通过自动化理赔决策、客服与后台流程带来更快决策、更低成本与更好会员体验，把 agentic AI 从概念讨论推进到行业级价值测算，延续其在垂直行业 agentic AI 价值兑现上的研究线。",
+          "summary_en": "On September 4, 2026, BCG published research on agentic AI for health insurers, arguing that AI agents automate claims decisions, service, and back-office workflows to deliver faster decisions, lower costs, and better member experience, moving agentic AI from concept to industry-level value measurement.",
+          "url": "https://www.bcg.com/publications/2026/how-ai-agents-cut-costs-for-health-insurers",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "client_value_proof"
+          ],
+          "event_score": 76
+        },
+        {
+          "date": "2026-09-04",
+          "type": "research",
+          "title": "BCG 发布化工企业 AI 基础设施热潮机会研究",
+          "title_en": "BCG publishes Opportunities for Chemical Companies in the AI Infrastructure Boom",
+          "summary": "BCG 于 2026-09-04 发布研究，分析 AI 基础设施建设热潮（数据中心、电力与特种材料需求）为化工企业带来的新增长机会，把 AI 议题延伸到上游材料与工业供应链。",
+          "summary_en": "On September 4, 2026, BCG published research analyzing how the AI infrastructure boom creates new growth opportunities for chemical companies via data center, power, and specialty materials demand, extending the AI agenda upstream into materials and industrial supply chains.",
+          "url": "https://www.bcg.com/publications/2026/how-chemical-companies-find-new-growth",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 72
+        },
+        {
           "date": "2026-08-31",
           "type": "research",
           "title": "BCG 发布《Look Past Productivity to Get Real Value from AI》：AI 价值衡量要跳出生产力叙事",
@@ -615,6 +652,44 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-09-03",
+          "type": "research",
+          "title": "Bain 发布《FinOps for AI: From Managing Costs to Maximizing Value》",
+          "title_en": "Bain publishes FinOps for AI: From Managing Costs to Maximizing Value",
+          "summary": "Bain 于 2026-09-03（上一轮刷新当日，漏检回填）发布 FinOps for AI 简报，主张 AI 支出管理应从单纯控制成本转向价值最大化，把成本、用量与业务结果放在同一视图里实时跟踪和决策，回应企业 AI 投入回报核算的普遍痛点。",
+          "summary_en": "On September 3, 2026, Bain published a FinOps for AI brief arguing that AI spend management should shift from cost control to value maximization by tracking costs, usage, and business outcomes in one real-time view. Published the same day as the previous refresh and backfilled after being missed.",
+          "url": "https://www.bain.com/insights/finops-for-ai-from-managing-costs-to-maximizing-value/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "governance_risk",
+            "client_value_proof"
+          ],
+          "event_score": 72
+        },
+        {
+          "date": "2026-08-25",
+          "type": "partnership",
+          "title": "Bain 与 Anthropic 达成全球合作，以 Global Premier 级别加入 Claude Partner Network",
+          "title_en": "Bain & Company announces global partnership with Anthropic, joining the Claude Partner Network at Global Premier tier",
+          "summary": "Bain 于 2026-08-25 宣布与 Anthropic 达成全球合作，以 Global Premier 级别加入 Claude Partner Network，把 Claude 模型与 Bain 的行业与转型方法论结合，加速客户企业级 AI 落地。该条发布于上一轮刷新窗口内（08-25），属上一轮漏检，本轮追溯回填。",
+          "summary_en": "On August 25, 2026, Bain announced a global partnership with Anthropic, joining the Claude Partner Network at the Global Premier tier, combining Claude models with Bain's industry and transformation expertise to accelerate enterprise AI deployment. Backfilled after being missed in the 09-03 refresh.",
+          "url": "https://www.bain.com/about/media-center/press-releases/2026/bain-company-announces-partnership-with-anthropic-to-accelerate-clients-enterprise-ai-transformations/",
+          "source_level": "official_press_release",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "strategy_signal"
+          ],
+          "event_score": 84
+        },
         {
           "date": "2026-07-27",
           "type": "research",
@@ -1035,6 +1110,25 @@
             "proprietary_assets"
           ],
           "event_score": 84
+        },
+        {
+          "date": "2026-08-12",
+          "type": "governance",
+          "title": "Deloitte 扩展端到端 AI Controls and Assurance 能力，帮助组织负责任地规模化 AI",
+          "title_en": "Deloitte expands end-to-end AI Controls and Assurance capabilities",
+          "summary": "Deloitte 于 2026-08-12 宣布扩展端到端 AI Controls and Assurance 服务，采用 human-led、AI-powered 方法帮助组织在有信心的前提下采纳、规模化并治理 AI。该条属上一轮（09-03）漏检的官方信号，本轮追溯回填；它与 09-02 的 Open Model Engineering practice 共同构成 Deloitte 在 AI 交付与 AI 治理两端的扩张。",
+          "summary_en": "On August 12, 2026, Deloitte announced expanded end-to-end AI Controls and Assurance capabilities using a human-led, AI-powered approach to help organizations adopt, scale, and govern AI responsibly. Backfilled after being missed in the 09-03 refresh; together with the 09-02 Open Model Engineering practice it marks Deloitte's expansion on both the delivery and governance sides of AI.",
+          "url": "https://www.prnewswire.com/news-releases/deloitte-expands-end-to-end-ai-controls-and-assurance-capabilities-to-enable-organizations-to-scale-ai-with-confidence-302848720.html",
+          "source_level": "official_press_release",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "governance_risk",
+            "delivery_production",
+            "client_value_proof"
+          ],
+          "event_score": 76
         },
         {
           "date": "2026-07-20",
