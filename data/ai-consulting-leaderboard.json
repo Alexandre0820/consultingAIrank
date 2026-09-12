@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-09-03",
-    "updated_at": "2026-09-06",
+    "previous_updated_at": "2026-09-06",
+    "updated_at": "2026-09-12",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-09-06 本次刷新窗口为 2026-09-04 至 09-06（周五加周末，净新增预期偏少）：并入 BCG 两条 09-04 官方研究（医疗 agentic AI 价值、化工企业 AI 基础设施热潮）。同时对上一轮（09-03）复核确认漏检的 3 条官方信号做了有记录的追溯回填：Bain 与 Anthropic 全球合作（Claude Partner Network Global Premier，08-25）、Deloitte 端到端 AI Controls and Assurance 扩展（08-12）、Bain《FinOps for AI》简报（09-03，发布于上轮刷新当日）。Roland Berger 上一轮两条 hold 项经官网复核仍无法核实，本轮关闭。KPMG、PwC、EY、Accenture、Kearney、Oliver Wyman、FTI、A&M、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；McKinsey《State of AI》2026 年度调查因页面抓取超时未确认发布日期，留待下轮优先复核。评分口径不变：事件信号分 + 来源可信度 + 双层评分结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-09-12 本次刷新窗口为 2026-09-07 至 09-12，净新增 10 条：Accenture 与 Google Cloud 成立 Gemini Enterprise Business Group（09-08，千人级 FDE）、Bain 发布 AI 左右 4.7 万亿美元利润的旗舰研究（09-10）、BCG 同日集中发布三篇 AI 研究（治理解锁、AGI CEO 指南、CEO 决策观察）、Deloitte 与 MI 制造业 AI 技能研究（09-10）、EY US 投入 1 亿美元奖励 AI 难以替代的人类技能（约 09-10，media 核实）、Capgemini 获 Ambarella Edge/Physical AI 客户合作（09-07，官方列表页核实）、L.E.K. 两篇医疗 AI 研究（09-10）。同时对上轮漏检回填 2 条：McKinsey《State of AI》2026 年度调查（08-26，上轮遗留项已核实）、PwC 全球 AI 基础设施投资 31.6 万亿美元预测（09-02）。KPMG、Kearney、Oliver Wyman、FTI、A&M、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号。评分口径不变：事件信号分 + 来源可信度 + 双层评分结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -196,6 +196,25 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-08-26",
+          "type": "research",
+          "title": "McKinsey 发布《The State of AI》2026 年度全球调查：采纳广泛但 ROI 兑现仍滞后",
+          "title_en": "McKinsey publishes The State of AI: Global Survey 2026",
+          "summary": "McKinsey 于 2026-08-26 发布年度旗舰调查 State of AI 2026，基于 QuantumBlack 对 97 个国家约 1,719 名受访者的调研（5 月 4 日至 6 月 8 日执行），显示企业 AI 采纳继续扩散但仅约 37% 的受访者报告 AI 带来 EBIT 影响、约 6% 称得上 AI 高绩效组织。该条发布于上一轮刷新窗口内，属上轮漏检，本轮追溯回填；发布日期来自第三方转载核实，官网页面多次抓取超时。",
+          "summary_en": "On August 26, 2026, McKinsey published the State of AI: Global Survey 2026, its flagship annual survey based on about 1,719 respondents across 97 countries (fielded May 4 to June 8), showing broad AI adoption but only around 37% attributing any EBIT impact to AI and roughly 6% qualifying as AI high performers. Backfilled after being missed in the 09-06 round; publication date verified via third-party coverage.",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "client_value_proof"
+          ],
+          "event_score": 86
+        },
         {
           "date": "2026-08-11",
           "type": "research",
@@ -410,6 +429,61 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-09-10",
+          "type": "research",
+          "title": "BCG 发布《AI Governance Is a Business Unlock, Not a Bottleneck》：治理是加速器而非刹车",
+          "title_en": "BCG publishes AI Governance Is a Business Unlock, Not a Bottleneck",
+          "summary": "BCG 于 2026-09-10 发布 AI 治理研究，主张治理不应被视为 AI 规模化的瓶颈，而是解锁业务速度的机制，并给出加快 AI 风险管理落地的路径。该文与同日的 AGI CEO 指南、CEO AI 决策观察构成 BCG 在 9 月 10 日的一次集中 AI 思想输出。",
+          "summary_en": "On September 10, 2026, BCG published research arguing that AI governance is a business unlock rather than a bottleneck, laying out how to speed up AI risk management so governance accelerates rather than blocks scaling.",
+          "url": "https://www.bcg.com/publications/2026/how-to-speed-up-ai-risk-management",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "governance_risk",
+            "thought_leadership",
+            "client_value_proof"
+          ],
+          "event_score": 76
+        },
+        {
+          "date": "2026-09-10",
+          "type": "research",
+          "title": "BCG 发布《What CEOs Need to Know About Artificial General Intelligence》",
+          "title_en": "BCG publishes What CEOs Need to Know About Artificial General Intelligence",
+          "summary": "BCG 于 2026-09-10 发布面向 CEO 的 AGI 指南，讨论 AGI 可能的演进时间线及其对战略、组织与投资决策的含义，把前沿模型议题带入董事会层面的决策框架。",
+          "summary_en": "On September 10, 2026, BCG published a CEO-focused guide on artificial general intelligence, covering plausible AGI timelines and implications for strategy, organization, and investment decisions.",
+          "url": "https://www.bcg.com/publications/2026/agi-timeline-what-ceos-need-to-know",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 74
+        },
+        {
+          "date": "2026-09-10",
+          "type": "research",
+          "title": "BCG 发布《In the Room》：CEO 如何在 AI 紧迫性与风险之间做取舍",
+          "title_en": "BCG publishes In the Room: how CEOs balance AI urgency and risk",
+          "summary": "BCG 于 2026-09-10 发布《In the Room》文章，记录 CEO 在 AI 投入紧迫性与风险控制之间的真实决策情境，属叙事型观察内容，为其 9 月 10 日的 AI 集中输出补充一线视角。",
+          "summary_en": "On September 10, 2026, BCG published In the Room, a narrative piece capturing how CEOs weigh AI urgency against risk in real decision settings.",
+          "url": "https://www.bcg.com/publications/2026/how-ceos-balance-ai-urgency-and-risk",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-09-04",
           "type": "research",
@@ -652,6 +726,25 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-09-10",
+          "type": "research",
+          "title": "Bain 发布重磅研究：AI 将左右 4.7 万亿美元利润分配，重塑行业竞争格局",
+          "title_en": "Bain publishes flagship report: AI puts $4.7 trillion of profits at stake across industries",
+          "summary": "Bain 于 2026-09-10 发布旗舰研究，测算 2025-2035 年 AI 将左右 4.7 万亿美元的企业利润归属，影响强度约为互联网革命的三倍、时间却缩短一半，近四分之三的行业将经历深度转型；同时指出回报不均，近 40% 的公司实际成本节约低于 10%。这是 Bain 本年度 AI 议题的定调之作，把 AI 从效率工具叙事升级为利润池迁移叙事。",
+          "summary_en": "On September 10, 2026, Bain released its flagship research estimating that AI will put $4.7 trillion of corporate profits at stake between 2025 and 2035, with roughly triple the internet revolution's impact in half the time and deep transformation across about three-quarters of business sectors, while returns remain uneven with nearly 40% of companies seeing sub-10% savings.",
+          "url": "https://www.bain.com/about/media-center/press-releases/2026/ai-puts-$4.7-trillion-of-profits-at-stake-creating-a-competitive-battleground-across-industries",
+          "source_level": "official_press_release",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "client_value_proof"
+          ],
+          "event_score": 86
+        },
         {
           "date": "2026-09-03",
           "type": "research",
@@ -1072,6 +1165,25 @@
       },
       "events": [
         {
+          "date": "2026-09-10",
+          "type": "research",
+          "title": "Deloitte 与 The Manufacturing Institute 发布研究：AI 可加速制造业技能培训",
+          "title_en": "Deloitte and The Manufacturing Institute study shows potential for AI to accelerate manufacturing skills training",
+          "summary": "Deloitte 于 2026-09-10 联合 The Manufacturing Institute 发布研究，探讨把 AI 嵌入制造业技术工人培训工作流的潜力，估计相关岗位就业将继续扩张（行业缺口最高达 380 万人），把 AI 议题延伸到制造业劳动力与技能场景。",
+          "summary_en": "On September 10, 2026, Deloitte and The Manufacturing Institute published a study on embedding AI into manufacturing technician training workflows, estimating continued growth in technician employment (with the industry needing up to 3.8 million workers) and extending AI into workforce and skills scenarios.",
+          "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-and-mi-study-shows-potential-for-ai-to-accelerate-manufacturing-skills-training.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "delivery_production"
+          ],
+          "event_score": 74
+        },
+        {
           "date": "2026-09-02",
           "type": "service_line",
           "title": "Deloitte 新设 Open Model Engineering 全球 practice：用开源+专有混合模型路径规模化 agentic AI",
@@ -1348,6 +1460,24 @@
       },
       "events": [
         {
+          "date": "2026-09-02",
+          "type": "research",
+          "title": "PwC 发布全球 AI 基础设施投资预测：2050 年前累计将达 31.6 万亿美元",
+          "title_en": "PwC projects global AI infrastructure investment to hit US$31.6 trillion through 2050",
+          "summary": "PwC 于 2026-09-02 发布官方预测，到 2050 年全球 AI 基础设施投资将创纪录地达到 31.6 万亿美元，涵盖数据中心、电力与网络等资产。该条发布于上一轮刷新窗口内，属上轮漏检，本轮追溯回填；它把 AI 议题延伸到资本开支与宏观基础设施层面。",
+          "summary_en": "On September 2, 2026, PwC published an official projection that global AI infrastructure investment will hit a record US$31.6 trillion through 2050, spanning data centers, power, and network assets. Backfilled after being missed in the 09-06 round.",
+          "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/global-investment-in-ai-infrastructure.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 74
+        },
+        {
           "date": "2026-07-22",
           "type": "research",
           "title": "PwC 发布 The intelligent enterprise in action: AI and the next era of customer experience",
@@ -1569,6 +1699,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-09-10",
+          "type": "organization",
+          "title": "EY US 投入 1 亿美元奖励 AI 时代难以替代的人类技能",
+          "title_en": "EY US commits $100 million to reward human skills AI cannot easily replace",
+          "summary": "EY US 于 2026 年 9 月上旬宣布本财年投入 1 亿美元，奖励展现领导力、协作与判断力等 AI 难以替代的人类技能的专业人员。这是四大中首个把'AI 时代人类技能'直接货币化的组织动作，与行业内 AI 岗位收缩叙事形成对照。确切发布日约为 9 月 10-11 日，来源为媒体多篇报道加 EY 官网提及。",
+          "summary_en": "In early September 2026, EY US announced a $100 million investment this fiscal year to reward professionals demonstrating human skills AI cannot easily replicate, such as leadership, collaboration, and judgment. The exact announcement date is around September 10-11; verified via multiple media reports and a reference on EY's US site.",
+          "url": "https://www.storyboard18.com/how-it-works/ey-sets-aside-100-million-to-reward-employees-for-skills-ai-cannot-easily-replicate-109527.htm",
+          "source_level": "media",
+          "confidence": "medium",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "strategy_signal",
+            "delivery_production"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-07-30",
           "type": "partnership",
@@ -1860,6 +2008,26 @@
       },
       "events": [
         {
+          "date": "2026-09-08",
+          "type": "partnership",
+          "title": "Accenture 与 Google Cloud 成立 Gemini Enterprise Business Group，配置千人级 forward deployed engineers",
+          "title_en": "Accenture and Google Cloud form the Accenture Gemini Enterprise Business Group with a 1,000-strong forward deployed engineer workforce",
+          "summary": "Accenture 于 2026-09-08 与 Google Cloud 宣布成立 Gemini Enterprise Business Group，联合开发 AI 解决方案、帮助客户在企业范围规模化部署 Gemini Enterprise 与 agentic AI，并计划组建约 1,000 人的 forward deployed engineering 团队嵌入客户现场。这是继 Accenture Edge 之后双方在 agentic AI 交付侧的又一次深度绑定，把联盟从方案层推进到专用业务组织。",
+          "summary_en": "On September 8, 2026, Accenture and Google Cloud launched the Accenture Gemini Enterprise Business Group to co-develop AI solutions and scale Gemini Enterprise and agentic AI across client enterprises, backed by a roughly 1,000-person forward deployed engineering workforce embedded with customers.",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-and-google-cloud-deepen-partnership-with-formation-of-new-accenture-gemini-enterprise-business-group",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "proprietary_assets",
+            "strategy_signal"
+          ],
+          "event_score": 86
+        },
+        {
           "date": "2026-07-15",
           "type": "client_proof",
           "title": "Accenture 帮助欧盟 DG INTPA 将 AI Assistant 扩展到全球运营",
@@ -2031,6 +2199,25 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-09-07",
+          "type": "client_proof",
+          "title": "Ambarella 选择 Capgemini 加速企业采用 Edge 与 Physical AI",
+          "title_en": "Ambarella engages Capgemini to accelerate enterprise adoption of Edge and Physical AI",
+          "summary": "Capgemini 于 2026-09-07 发布企业新闻：边缘 AI 芯片公司 Ambarella 聘请 Capgemini 帮助加速企业客户对 Edge AI 与 Physical AI 的采用。这是 Capgemini 在 Physical AI 服务方向上获得的标志性客户合作，与其 Gartner Physical AI Services Market Shaper 定位相互印证。直链未抓取到，日期与标题来自 Capgemini 官方新闻列表页。",
+          "summary_en": "On September 7, 2026, Capgemini announced that edge-AI chip company Ambarella has engaged Capgemini to accelerate enterprise adoption of Edge and Physical AI, a marquee client engagement supporting its Physical AI services positioning. Verified via Capgemini's official press-release listing.",
+          "url": "https://www.capgemini.com/us-en/news/press-releases/",
+          "source_level": "official",
+          "confidence": "medium",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "client_value_proof",
+            "tech_partnership",
+            "industry_coverage"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-07-30",
           "type": "client_proof",
@@ -2346,6 +2533,43 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-09-10",
+          "type": "research",
+          "title": "L.E.K. 发布《AI in Radiology》：放射科 AI 从技术验证走向规模化采纳",
+          "title_en": "L.E.K. publishes AI in Radiology",
+          "summary": "L.E.K. 于 2026-09-10 发布医疗 AI 研究，讨论放射科 AI 从技术验证走向临床规模化采纳的路径、瓶颈与商业模式含义，延续其在医疗健康 AI 场景的方法论输出。",
+          "summary_en": "On September 10, 2026, L.E.K. published AI in Radiology, examining how radiology AI moves from validated technology to scaled clinical adoption, continuing its healthcare AI methodology output.",
+          "url": "https://www.lek.com/insights/healthcare-services/ai-radiology-0",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 72
+        },
+        {
+          "date": "2026-09-10",
+          "type": "research",
+          "title": "L.E.K. 发布《AI Screening for Diabetic Retinopathy》：医疗 AI 从验证技术到实际采纳",
+          "title_en": "L.E.K. publishes AI Screening for Diabetic Retinopathy: From Validated Technology to Practical Adoption",
+          "summary": "L.E.K. 于 2026-09-10 发布医疗设备行业研究，拆解糖尿病视网膜病变 AI 筛查从技术验证到临床实际采纳之间的差距与驱动因素，与其放射科 AI 研究共同构成医疗 AI 采纳主题的连续输出。",
+          "summary_en": "On September 10, 2026, L.E.K. published research on AI screening for diabetic retinopathy, examining the gap between validated technology and practical clinical adoption and its drivers, pairing with its radiology AI piece.",
+          "url": "https://www.lek.com/insights/medical-equipment/ai-screening-diabetic-retinopathy-validated-technology-practical",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "client_value_proof"
+          ],
+          "event_score": 70
+        },
         {
           "date": "2026-09-01",
           "type": "research",
