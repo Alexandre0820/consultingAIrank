@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "refresh_date": "2026-09-19",
+    "comparison_start": "2026-09-12",
+    "description": "Net-new events merged during this refresh. Window: 2026-09-13 to 09-19. Headline: Anthropic named Accenture its first embedded evaluator of frontier models with a combined $2B commitment (09-18, vendor official). McKinsey published its annual Technology Trends Outlook 2026 (09-15) plus two AI pieces (agentic transformation office 09-16, Europe AI application layer 09-17). BCG published an IT spending pulse with AI as top priority and an APAC CEO AI lessons piece (both 09-17). Bain's refiner AI playbook (09-15, media-verified). Deloitte, PwC, EY, KPMG, Capgemini, Oliver Wyman, Kearney, FTI Consulting, Alvarez & Marsal, Strategy&, and Monitor Deloitte had no verifiable net-new public AI signals in the window. The OW-SDAIA hold item from 09-06 was resolved as a 2024 item (false lead). Capgemini coverage was limited this round by repeated search timeouts."
+  },
+  "events": [
+    {
+      "company_id": "accenture",
+      "date": "2026-09-18",
+      "type": "partnership",
+      "title": "Anthropic 任命 Accenture 为首个前沿模型「嵌入式评估方」，双方合计投入 20 亿美元",
+      "title_en": "Anthropic names Accenture its first embedded evaluator of frontier models, with $2B combined commitment",
+      "summary": "Anthropic 于 2026-09-18 官宣与 Accenture 合作开展前沿模型独立评估：Accenture 作为首家「嵌入式评估方」派员入驻 Anthropic 内部（享有近似员工的访问权限），在模型部署前后进行压力测试、红队演练与安全审计；双方合计投入 20 亿美元（各 10 亿、五年期）。这是咨询公司首次进入前沿实验室的模型评估与保障链路，把 AI 治理与安全能力从咨询叙事推进到模型层的商业化角色。",
+      "summary_en": "On September 18, 2026, Anthropic announced a partnership with Accenture for independent evaluation of its frontier AI models: Accenture becomes the first embedded evaluator, placing staff inside Anthropic with employee-like access to pressure-test and safety-audit models before and after deployment, backed by a combined $2 billion commitment ($1B each over five years). It is the first time a consulting firm takes a commercial role inside a frontier lab's model evaluation and assurance chain.",
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_official_page_fetch",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "governance_risk",
+        "delivery_production",
+        "strategy_signal"
+      ],
+      "event_score": 90
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-09-15",
+      "type": "research",
+      "title": "McKinsey 发布《Technology Trends Outlook 2026》年度技术趋势报告",
+      "title_en": "McKinsey publishes Technology Trends Outlook 2026",
+      "summary": "McKinsey（QuantumBlack）于 2026-09-15 发布年度旗舰报告 Technology Trends Outlook 2026，评估当年最值得企业关注的前沿技术及其成熟度、投资与人才信号。该报告是 McKinsey 在 agentic AI 年度的定调之作。官网直链多次抓取超时，标题与日期经 QuantumBlack 官方洞察列表页核实。",
+      "summary_en": "On September 15, 2026, McKinsey (QuantumBlack) published its annual flagship Technology Trends Outlook 2026 assessing the frontier technologies that matter most for companies this year. Verified via the official QuantumBlack insights listing; the direct article URL could not be fetched due to timeouts.",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
+      "event_score": 86
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-09-17",
+      "type": "research",
+      "title": "BCG 发布 IT Spending Pulse：AI 成为 IT 预算最优先事项",
+      "title_en": "BCG publishes IT Spending Pulse: AI Takes Priority as Confidence Returns",
+      "summary": "BCG 于 2026-09-17 发布 IT 支出脉搏调查，显示企业信心回稳背景下 AI 已成为 IT 预算的最高优先级，把 AI 需求从咨询叙事落到企业钱包的实际分配变化。",
+      "summary_en": "On September 17, 2026, BCG published its IT Spending Pulse survey showing AI has become the top IT budget priority as corporate confidence returns, grounding AI demand in actual enterprise budget shifts.",
+      "url": "https://www.bcg.com/publications/2026/it-budgets-ai-spending-priority",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_official_page_fetch",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "client_value_proof",
+        "strategy_signal"
+      ],
+      "event_score": 76
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-09-16",
+      "type": "research",
+      "title": "McKinsey 发布《The agentic transformation office》：用 agentic AI 重定义转型经济学",
+      "title_en": "McKinsey publishes The agentic transformation office: Redefining the economics of change",
+      "summary": "McKinsey 于 2026-09-16 发布转型实践研究，主张成功的转型不再需要人海战术，agentic AI 可接管转型办公室的治理、进度更新、问题识别、技能培训与情绪跟踪等职能，直接改写大型转型的成本结构与人效模型。",
+      "summary_en": "On September 16, 2026, McKinsey's Transformation practice published research arguing that successful transformations no longer require an army of people, with agentic AI taking over governance, updates, issue detection, upskilling, and sentiment tracking in transformation offices.",
+      "url": "https://www.mckinsey.com/capabilities/transformation/our-insights/the-agentic-transformation-office-redefining-the-economics-of-change",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "delivery_production",
+        "strategy_signal"
+      ],
+      "event_score": 76
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-09-15",
+      "type": "research",
+      "title": "Bain 发布炼油行业 Resilience Playbook：量化 AI 每桶 2-3 美元的利润增益",
+      "title_en": "Bain releases refiner resilience playbook quantifying AI gains of $2-3 per barrel",
+      "summary": "Bain 于 2026-09-15（波士顿）发布面向下游炼油企业的韧性手册，量化 AI 带来的每桶 2-3 美元利润增益（按 15 万桶/日规模约合每年 1.1-1.65 亿美元），并给出四条落地策略；第三方分析称其为 AI 咨询从顾问服务转向运营托管的信号。官方新闻稿未能直接抓取，日期与要点经第三方分析（Futurum，09-16）核实。",
+      "summary_en": "On September 15, 2026, Bain released a resilience playbook for downstream refiners quantifying AI-driven margin gains of $2-3 per barrel (about $110-165M annually at a 150,000 bpd site) with four strategies. Verified via third-party analysis (Futurum, Sept 16); Bain's own release could not be fetched directly.",
+      "url": "https://futurumgroup.com/insights/bains-refiner-ai-playbook-is-a-channel-wake-up-call/",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "client_value_proof"
+      ],
+      "event_score": 74
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-09-17",
+      "type": "research",
+      "title": "McKinsey 发布《Europe's new AI edge》：欧洲 AI 应用层机会",
+      "title_en": "McKinsey publishes Europe's new AI edge: the emerging application layer opportunity",
+      "summary": "McKinsey 于 2026-09-17 发布 TMT 研究，讨论欧洲 AI 机会正从模型实验转向用 AI 重设计企业工作流，应用层（application layer）是欧洲的差异化机会窗口。",
+      "summary_en": "On September 17, 2026, McKinsey published TMT research arguing Europe's AI opportunity is shifting from model experimentation to redesigning enterprise workflows around AI, with the application layer as its differentiated window.",
+      "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/europes-new-ai-edge-the-emerging-application-layer-opportunity",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "event_score": 74
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-09-17",
+      "type": "research",
+      "title": "BCG 发布《Five Things CEOs Can Learn About AI from Asia-Pacific》",
+      "title_en": "BCG publishes Five Things CEOs Can Learn About AI from Asia-Pacific",
+      "summary": "BCG 于 2026-09-17 发布面向全球 CEO 的亚太 AI 策略经验总结，提炼亚太企业在 AI 规模化上的五点可迁移做法。",
+      "summary_en": "On September 17, 2026, BCG published a CEO guide distilling five transferable lessons from Asia-Pacific companies on scaling AI.",
+      "url": "https://www.bcg.com/publications/2026/ai-strategy-lessons-ceos-asia-pacific",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_official_page_fetch",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "event_score": 72
+    }
+  ]
+}

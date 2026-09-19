@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-09-06",
-    "updated_at": "2026-09-12",
+    "previous_updated_at": "2026-09-12",
+    "updated_at": "2026-09-19",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-09-12 本次刷新窗口为 2026-09-07 至 09-12，净新增 10 条：Accenture 与 Google Cloud 成立 Gemini Enterprise Business Group（09-08，千人级 FDE）、Bain 发布 AI 左右 4.7 万亿美元利润的旗舰研究（09-10）、BCG 同日集中发布三篇 AI 研究（治理解锁、AGI CEO 指南、CEO 决策观察）、Deloitte 与 MI 制造业 AI 技能研究（09-10）、EY US 投入 1 亿美元奖励 AI 难以替代的人类技能（约 09-10，media 核实）、Capgemini 获 Ambarella Edge/Physical AI 客户合作（09-07，官方列表页核实）、L.E.K. 两篇医疗 AI 研究（09-10）。同时对上轮漏检回填 2 条：McKinsey《State of AI》2026 年度调查（08-26，上轮遗留项已核实）、PwC 全球 AI 基础设施投资 31.6 万亿美元预测（09-02）。KPMG、Kearney、Oliver Wyman、FTI、A&M、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号。评分口径不变：事件信号分 + 来源可信度 + 双层评分结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-09-19 本次刷新窗口为 2026-09-13 至 09-19，净新增 7 条：Anthropic 任命 Accenture 为首个前沿模型「嵌入式评估方」（09-18，双方各投 10 亿美元，本周头条）、McKinsey 年度旗舰《Technology Trends Outlook 2026》（09-15）与两篇 AI 研究（agentic transformation office 09-16、欧洲 AI 应用层 09-17）、BCG 的 IT 支出脉搏调查与亚太 CEO AI 经验（均 09-17）、Bain 炼油业 AI 韧性手册（09-15，media 核实）。遗留项复核：OW-SDAIA《Innovation Oasis》确认为 2024 年事件（此前误标 2026-09-04），该 hold 项关闭。Deloitte、PwC、EY、KPMG、Oliver Wyman、Kearney、FTI、A&M、Strategy&、Monitor Deloitte 窗口内无可确认的净新增动作；Capgemini 因检索通道连续超时覆盖不足，下轮优先补扫。评分口径不变：事件信号分 + 来源可信度 + 双层评分结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
