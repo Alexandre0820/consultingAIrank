@@ -88,6 +88,8 @@ node scripts/rank.js
 
 ## 公司字段
 
+> 2026-09-19 起，页面只展示 AI 行动力评分榜，不再渲染综合能力评分。`scores`（九维）与 `traditional_capabilities`（四因子）仍保留在数据层供研究使用；九维权重已归一化为合计 1.0。
+
 - `id`：公司内部 ID。
 - `name`：英文名。
 - `cn`：中文名。

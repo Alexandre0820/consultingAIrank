@@ -35,7 +35,7 @@ http://127.0.0.1:8766/api/health
   "ok": true,
   "project": "AI咨询行动榜",
   "companies": 17,
-  "dimensions": 8,
+  "dimensions": 9,
   "event_types": 8
 }
 ```

@@ -48,10 +48,15 @@ The site is static HTML. The browser reads `data/ai-consulting-leaderboard.json`
 9. Rebuild and recompute:
    - `node scripts/build-data.js`
    - `node scripts/rank.js`
-10. Summarize:
+10. Verify the simplified page pipeline:
+   - `node research/validate_event_company_mapping.js`
+   - `node research/inspect-insights.js` — the "核心观察" cards are generated automatically from this week's net-new events (week-in-review / biggest signal / movers / quiet firms). Confirm the card titles reference the current window; if they do not, an event date is probably outside `[previous_updated_at, updated_at]`.
+11. Summarize:
    - new additions by company
    - top movers in action ranking
    - any firms with no credible new public AI signal this week
+
+The site shows a single public board (AI action ranking) since 2026-09-19. There is no composite board and no manual summary copy to maintain; insights derive from the events you add in step 6.
 
 ## Research Rules
 
