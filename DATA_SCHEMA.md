@@ -143,15 +143,17 @@ node scripts/rank.js
 
 | ID | 名称 | 权重 |
 |---|---:|---:|
-| strategy_signal | 战略信号 | 0.14 |
-| tech_partnership | 科技合作深度 | 0.13 |
-| proprietary_assets | 自有 AI 平台与技术资产 | 0.14 |
-| delivery_production | AI 交付与生产化能力 | 0.15 |
-| capital_ma | 并购与资本动作 | 0.08 |
-| industry_coverage | 行业场景覆盖 | 0.10 |
-| client_value_proof | 客户价值证明 | 0.12 |
-| governance_risk | AI 治理与风险能力 | 0.14 |
-| thought_leadership | AI 思考力 / 公开研究信号 | 0.10 |
+| strategy_signal | 战略信号 | 0.1273 |
+| tech_partnership | 科技合作深度 | 0.1182 |
+| proprietary_assets | 自有 AI 平台与技术资产 | 0.1273 |
+| delivery_production | AI 交付与生产化能力 | 0.1364 |
+| capital_ma | 并购与资本动作 | 0.0726 |
+| industry_coverage | 行业场景覆盖 | 0.0909 |
+| client_value_proof | 客户价值证明 | 0.1091 |
+| governance_risk | AI 治理与风险能力 | 0.1273 |
+| thought_leadership | AI 思考力 / 公开研究信号 | 0.0909 |
+
+> 2026-09-19 修正：新增 thought_leadership 维度时未归一化，九项权重合计曾为 1.10；现已按原比例等比缩放（每项 ÷1.1），合计精确 1.0000，相对重要性不变。
 
 ## 当前事件类型
 
