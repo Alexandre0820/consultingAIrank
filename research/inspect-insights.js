@@ -76,7 +76,7 @@ global.fetch = async () => ({
 
 const fn = new Function(
   "document", "window", "navigator", "localStorage", "location", "fetch", "requestAnimationFrame", "URL", "URLSearchParams", "setTimeout", "clearTimeout",
-  code + "\n;return { buildInsights, compositeRankedCompanies, actionRankedCompanies, getData: () => data, getLang: () => activeLanguage };"
+  code + "\n;return { buildInsights, actionRankedCompanies, getData: () => data, getLang: () => activeLanguage };"
 );
 const api = fn(documentStub, windowStub, windowStub.navigator, windowStub.localStorage, windowStub.location, global.fetch, global.requestAnimationFrame, URL, URLSearchParams, setTimeout, clearTimeout);
 
@@ -86,11 +86,9 @@ setTimeout(() => {
     console.log("loaded data.updated_at =", d.meta && d.meta.updated_at, "| lang =", api.getLang());
     const cards = api.buildInsights();
     cards.forEach((c, i) => console.log("要点卡" + (i + 1) + " [" + c.kicker + "]: " + c.title));
-    console.log("\n综合榜前4（页面实时计算）:");
-    api.compositeRankedCompanies().slice(0, 4).forEach((r, i) => console.log(" " + (i + 1) + ". " + r.company.name + " composite=" + r.composite.toFixed(2)));
-    console.log("行动榜前3（页面实时计算）:");
+    console.log("\n行动榜前3（页面实时计算）:");
     api.actionRankedCompanies().slice(0, 3).forEach((r, i) => console.log(" " + (i + 1) + ". " + r.company.name + " action=" + r.action));
   } catch (e) {
-    console.log("HARNESS ERROR:", e.message);
+    console.log("HARNESS ERROR:", e.stack);
   }
 }, 100);

@@ -10,19 +10,9 @@ const els = {
   filtersSubtitle: document.querySelector("#filtersSubtitle"),
   insightsTitle: document.querySelector("#insightsTitle"),
   insightsSubtitle: document.querySelector("#insightsSubtitle"),
-  coverageTitle: document.querySelector("#coverageTitle"),
-  coverageSubtitle: document.querySelector("#coverageSubtitle"),
   wechatEyebrow: document.querySelector("#wechatEyebrow"),
   wechatTitle: document.querySelector("#wechatTitle"),
   wechatBody: document.querySelector("#wechatBody"),
-  coverageCard1Title: document.querySelector("#coverageCard1Title"),
-  coverageCard1Body: document.querySelector("#coverageCard1Body"),
-  coverageCard2Title: document.querySelector("#coverageCard2Title"),
-  coverageCard2Body: document.querySelector("#coverageCard2Body"),
-  coverageCard3Title: document.querySelector("#coverageCard3Title"),
-  coverageCard3Body: document.querySelector("#coverageCard3Body"),
-  newsSummaryTitle: document.querySelector("#newsSummaryTitle"),
-  newsSummarySubtitle: document.querySelector("#newsSummarySubtitle"),
   weeklyTitle: document.querySelector("#weeklyTitle"),
   deltaTitle: document.querySelector("#deltaTitle"),
   methodTitle: document.querySelector("#methodTitle"),
@@ -30,18 +20,12 @@ const els = {
   methodCard1Body: document.querySelector("#methodCard1Body"),
   methodCard2Title: document.querySelector("#methodCard2Title"),
   methodCard2Body: document.querySelector("#methodCard2Body"),
-  methodCard3Title: document.querySelector("#methodCard3Title"),
-  methodCard3Body: document.querySelector("#methodCard3Body"),
-  dimensionsTitle: document.querySelector("#dimensionsTitle"),
-  dimensionsSubtitle: document.querySelector("#dimensionsSubtitle"),
   tierLabel: document.querySelector("#tierLabel"),
   eventLabel: document.querySelector("#eventLabel"),
   searchLabel: document.querySelector("#searchLabel"),
   methodIntro: document.querySelector("#methodIntro"),
   scoreboardTitle: document.querySelector("#scoreboardTitle"),
   scoreboardSubtitle: document.querySelector("#scoreboardSubtitle"),
-  viewAction: document.querySelector("#viewAction"),
-  viewComposite: document.querySelector("#viewComposite"),
   langZh: document.querySelector("#langZh"),
   langEn: document.querySelector("#langEn"),
   tierFilter: document.querySelector("#tierFilter"),
@@ -49,10 +33,8 @@ const els = {
   searchInput: document.querySelector("#searchInput"),
   resetFilters: document.querySelector("#resetFilters"),
   legend: document.querySelector("#legend"),
-  dimensionGrid: document.querySelector("#dimensionGrid"),
   scoreboard: document.querySelector("#scoreboard"),
   insightsGrid: document.querySelector("#insightsGrid"),
-  newsSummary: document.querySelector("#newsSummary"),
   weeklyWindow: document.querySelector("#weeklyWindow"),
   weeklyStats: document.querySelector("#weeklyStats"),
   weeklyEvents: document.querySelector("#weeklyEvents"),
@@ -63,7 +45,6 @@ const els = {
 let data = null;
 let eventTypes = [];
 let dimensions = [];
-let activeBoard = "action";
 let compactMode = true;
 let expandAllEvidence = false;
 let activeLanguage = "zh";
@@ -90,22 +71,12 @@ const I18N = {
     heroSubtitle: "不先看“谁名气最大”，而看谁正在把 AI 变成真实动作：合作、平台、服务线、并购、组织、客户价值与治理。",
     companyCountLabel: "家传统咨询 / 专业服务公司",
     filtersTitle: "筛选",
-    filtersSubtitle: "左侧控制筛选；中间在两个榜单之间切换查看。",
+    filtersSubtitle: "左侧控制筛选；榜单按公司最近 AI 动作排序。",
     insightsTitle: "核心观察",
-    insightsSubtitle: "基于当前数据的关键发现，帮助快速理解 AI 咨询竞争格局。",
-    coverageTitle: "Coverage",
-    coverageSubtitle: "说明榜单如何尽量接近全面，并把证据偏差公开出来。",
+    insightsSubtitle: "从本周净新增的公开信号里，提炼对 AI 咨询行业的核心观察。",
     wechatEyebrow: "Praxis Advisory",
     wechatTitle: "关注我们的微信公众号",
     wechatBody: "扫描二维码，获取 AI 咨询行动榜更新、欧洲企业看中国 AI 的研究观察，以及 Praxis Advisory 的最新内容。",
-    coverageCard1Title: "统一检索模板",
-    coverageCard1Body: "所有上榜公司使用同一套检索逻辑，覆盖官网、新闻稿、研究页、合作方发布和主流媒体，减少“想到谁就搜谁”的偏差。",
-    coverageCard2Title: "来源分层降权",
-    coverageCard2Body: "官方、厂商官方、媒体和待核验来源不会被同等看待。来源越弱、核验越少，进入评分时权重越低。",
-    coverageCard3Title: "证据厚度公开",
-    coverageCard3Body: "榜单卡片会显示官方证据数、待核验证据数和覆盖置信度，帮助判断排名背后的证据是不是足够厚。",
-    newsSummaryTitle: "新闻横向总结",
-    newsSummarySubtitle: "把最近值得关注的新闻事件横向铺开，突出它影响的维度与来源。",
     weeklyTitle: "本周净新增事件",
     deltaTitle: "本周变化归因",
     methodTitle: "Method",
@@ -113,10 +84,6 @@ const I18N = {
     methodCard1Body: "每条新闻记录日期、主体、事件类型、来源可信度与影响维度，用于说明公司最近做了什么，而不是直接给新闻本身打榜。",
     methodCard2Title: "AI 行动力评分",
     methodCard2Body: "重点看最近新闻动作，结合新鲜度、来源质量、动作强度与影响维度，评估一家公司近期把 AI 推进到真实工作流与组织动作中的力度。",
-    methodCard3Title: "综合能力评分",
-    methodCard3Body: "在 AI 行动力基础上，再叠加公司长期 AI 能力底座、公开研究思考力与传统咨询能力，避免只看短期新闻声量而忽略交付、行业与组织基本盘。",
-    dimensionsTitle: "评分维度",
-    dimensionsSubtitle: "当前 MVP 采用 9 个维度，分数为 0–5 的人工 provisional score。",
     reset: "重置",
     tierLabel: "公司类型",
     eventLabel: "事件类型",
@@ -124,31 +91,19 @@ const I18N = {
     searchPlaceholder: "公司、AI 动作、合作方",
     all: "全部",
     actionBoard: "AI 行动力评分榜",
-    compositeBoard: "综合能力评分榜",
-    actionSubtitle: "根据最近新闻动作对公司的 AI 行动力进行评估，新闻本身不单独展示分数。",
-    compositeSubtitle: "结合 AI 动作与公司长期能力底座的综合评分。"
+    actionSubtitle: "根据最近新闻动作对公司的 AI 行动力进行评估，新闻本身不单独展示分数。"
   },
   en: {
     heroTitle: "AI Consulting Action Ranking",
     heroSubtitle: "This index does not start with brand prestige. It tracks which firms are turning AI into concrete moves across partnerships, platforms, service lines, M&A, organization, client value, and governance.",
     companyCountLabel: "traditional consulting / professional services firms",
     filtersTitle: "Filters",
-    filtersSubtitle: "Use the left panel to filter. Switch between the two rankings in the main panel.",
+    filtersSubtitle: "Use the left panel to filter. The board ranks firms by their most recent AI actions.",
     insightsTitle: "Key Observations",
-    insightsSubtitle: "A fast read on the most important patterns emerging from the current dataset.",
-    coverageTitle: "Coverage",
-    coverageSubtitle: "How the ranking tries to stay comprehensive while making evidence bias explicit.",
+    insightsSubtitle: "Core observations on the AI consulting industry, drawn from this week's net-new public signals.",
     wechatEyebrow: "Praxis Advisory",
     wechatTitle: "Follow Our WeChat Official Account",
     wechatBody: "Scan the QR code for leaderboard updates, research on how European companies read the China AI ecosystem, and the latest insights from Praxis Advisory.",
-    coverageCard1Title: "Standardized search template",
-    coverageCard1Body: "Every firm is reviewed using the same search logic across official sites, press releases, research pages, partner announcements, and mainstream media to reduce selective attention bias.",
-    coverageCard2Title: "Source-tier weighting",
-    coverageCard2Body: "Official, vendor-official, media, and pending-verification sources are not treated equally. Weaker sources receive lower weight in scoring.",
-    coverageCard3Title: "Evidence thickness disclosed",
-    coverageCard3Body: "Each ranking card shows official evidence count, pending-verification count, and coverage confidence so readers can judge whether a rank is backed by sufficient evidence.",
-    newsSummaryTitle: "Cross-Firm News Summary",
-    newsSummarySubtitle: "A horizontal view of recent AI-related signals, with emphasis on source quality and impacted dimensions.",
     weeklyTitle: "Net New Signals This Week",
     deltaTitle: "Weekly Rank Drivers",
     methodTitle: "Method",
@@ -156,10 +111,6 @@ const I18N = {
     methodCard1Body: "Each event is logged with date, actor, event type, source credibility, and impacted dimensions to explain what a firm actually did.",
     methodCard2Title: "AI action score",
     methodCard2Body: "This score emphasizes recent actions, adjusting for freshness, source quality, signal strength, and impacted dimensions to estimate a firm's near-term execution intensity in AI.",
-    methodCard3Title: "Composite capability score",
-    methodCard3Body: "This score layers longer-term AI foundations, public thought leadership, and classic consulting strengths on top of recent AI actions.",
-    dimensionsTitle: "Scoring Dimensions",
-    dimensionsSubtitle: "The current MVP uses 9 dimensions with provisional analyst-assigned scores from 0 to 5.",
     reset: "Reset",
     tierLabel: "Firm Type",
     eventLabel: "Event Type",
@@ -167,9 +118,7 @@ const I18N = {
     searchPlaceholder: "Firm, AI move, partner",
     all: "All",
     actionBoard: "AI Action Ranking",
-    compositeBoard: "Composite Capability Ranking",
-    actionSubtitle: "Ranks firms by recent AI actions. News items are treated as evidence rather than scored as standalone entries.",
-    compositeSubtitle: "Combines recent AI actions with longer-term AI foundations and classic consulting strengths."
+    actionSubtitle: "Ranks firms by recent AI actions. News items are treated as evidence rather than scored as standalone entries."
   }
 };
 
@@ -308,32 +257,6 @@ function translateEventSummary(text = "") {
     .replace("L.E.K. 官方 AI 洞察页持续发布医疗 IT、心理健康、广告、体育、生物制药等行业的 AI 应用文章。", "L.E.K.'s official AI insights page continues to publish articles on AI applications in healthcare IT, mental health, advertising, sports, biopharma, and other sectors.");
 }
 
-function translateReportTitle(text = "") {
-  if (activeLanguage !== "en" || !text) return text;
-  return text
-    .replace("Artificial Intelligence", "Artificial Intelligence")
-    .replace("Revolution or extinction? Rethinking SaaS in the age of agentic AI", "Revolution or extinction? Rethinking SaaS in the age of agentic AI")
-    .replace("What B2B SaaS Leaders Can Learn From How AI Labs Price", "What B2B SaaS Leaders Can Learn From How AI Labs Price")
-    .replace("2026 AI Jobs Barometer", "2026 AI Jobs Barometer")
-    .replace("State of AI in the Enterprise 2026", "State of AI in the Enterprise 2026")
-    .replace("Building an enterprise-scale agentic AI operating system", "Building an enterprise-scale agentic AI operating system")
-    .replace("AI Insights", "AI Insights");
-}
-
-function translateReportSummary(text = "") {
-  if (activeLanguage !== "en" || !text) return text;
-  return text
-    .replace("L.E.K. 这篇 7 月 24 日的技术文章讨论 AI 实验室的定价方式，为 B2B SaaS 提供了新的 pricing 和商业模式视角，属于较强的公开思考力信号。", "This July 24 L.E.K. article examines how AI labs price their offerings and offers a new pricing and business-model lens for B2B SaaS leaders. It is a strong public thought-leadership signal.")
-    .replace("L.E.K. 在行业专题上有一定 AI 研究积累，但更偏垂直行业文章集合，体系化程度一般。", "L.E.K. has built up some AI research depth in its sector topics, but the output remains more of a collection of vertical articles than a fully systematized program.")
-    .replace("L.E.K. 对 agentic AI 对 SaaS 模式冲击的专题研究，比一般行业文章更接近公司级 AI 转型与商业模式重构判断。", "L.E.K.'s thematic research on how agentic AI may reshape the SaaS model is closer to a company-level AI transformation and business-model reinvention thesis than a standard industry article.")
-    .replace("L.E.K. 官方 AI 洞察页持续发布医疗 IT、心理健康、广告、体育、生物制药等行业的 AI 应用文章。", "L.E.K.'s official AI insights page continues to publish articles on AI applications in healthcare IT, mental health, advertising, sports, biopharma, and other sectors.")
-    .replace("Deloitte 的 State of AI 系列具备持续性和管理框架完整性，是企业 AI 采用成熟度的重要公开参照。", "Deloitte's State of AI series has continuity and a strong management framework, making it an important public benchmark for enterprise AI maturity.")
-    .replace("EY 用 operating system 语言来定义 agentic AI 规模化部署路径，这份案例兼具平台、治理和组织转型视角，应视为其代表性 AI 转型研究/案例之一。", "EY uses operating-system language to define the path to scaled agentic AI deployment. The case combines platform, governance, and organizational-transformation perspectives, making it one of its representative AI transformation pieces.")
-    .replace("PwC 的 AI Jobs Barometer 用劳动力与岗位视角研究 AI 影响，体现其把 AI 与组织、人才和经济结构结合的思考力。", "PwC's AI Jobs Barometer examines AI through a labor-market and job-design lens, showing its ability to connect AI with organization, talent, and economic structure.")
-    .replace("Roland Berger 的 AI hub 在 2026 年 7 月仍有连续更新，最近几篇发布时间落在 7 月 23 日、7 月 16 日、7 月 14 日、7 月 9 日和 7 月 6 日。这足以支持其 AI 思考力底座应按“持续输出”而不是“单篇偶发”来判断。", "Roland Berger's AI hub was still being updated continuously in July 2026, with recent visible dates on July 23, July 16, July 14, July 9, and July 6. That is enough to judge its AI thought-leadership base as a sustained stream rather than an occasional one-off.")
-    .replace("OpenAI 财务组织作为 Customer Zero，Codex 已处理5倍合同，IR-GPT 管理200+投资者互动。", "OpenAI's finance organization acts as Customer Zero, with Codex already handling five times more contracts and IR-GPT managing more than 200 investor interactions.");
-}
-
 function localizedEventTitle(event) {
   if (activeLanguage === "en" && event.title_en) return event.title_en;
   return translateEventTitle(event.title);
@@ -344,16 +267,6 @@ function localizedEventSummary(event) {
   return translateEventSummary(event.summary);
 }
 
-function localizedReportTitle(report) {
-  if (activeLanguage === "en" && report.title_en) return report.title_en;
-  return translateReportTitle(report.title);
-}
-
-function localizedReportSummary(report) {
-  if (activeLanguage === "en" && report.summary_en) return report.summary_en;
-  return translateReportSummary(report.summary);
-}
-
 function applyStaticTranslations() {
   if (els.heroTitle) els.heroTitle.textContent = t("heroTitle");
   if (els.heroSubtitle) els.heroSubtitle.textContent = t("heroSubtitle");
@@ -362,19 +275,9 @@ function applyStaticTranslations() {
   if (els.filtersSubtitle) els.filtersSubtitle.textContent = t("filtersSubtitle");
   if (els.insightsTitle) els.insightsTitle.textContent = t("insightsTitle");
   if (els.insightsSubtitle) els.insightsSubtitle.textContent = t("insightsSubtitle");
-  if (els.coverageTitle) els.coverageTitle.textContent = t("coverageTitle");
-  if (els.coverageSubtitle) els.coverageSubtitle.textContent = t("coverageSubtitle");
   if (els.wechatEyebrow) els.wechatEyebrow.textContent = t("wechatEyebrow");
   if (els.wechatTitle) els.wechatTitle.textContent = t("wechatTitle");
   if (els.wechatBody) els.wechatBody.textContent = t("wechatBody");
-  if (els.coverageCard1Title) els.coverageCard1Title.textContent = t("coverageCard1Title");
-  if (els.coverageCard1Body) els.coverageCard1Body.textContent = t("coverageCard1Body");
-  if (els.coverageCard2Title) els.coverageCard2Title.textContent = t("coverageCard2Title");
-  if (els.coverageCard2Body) els.coverageCard2Body.textContent = t("coverageCard2Body");
-  if (els.coverageCard3Title) els.coverageCard3Title.textContent = t("coverageCard3Title");
-  if (els.coverageCard3Body) els.coverageCard3Body.textContent = t("coverageCard3Body");
-  if (els.newsSummaryTitle) els.newsSummaryTitle.textContent = t("newsSummaryTitle");
-  if (els.newsSummarySubtitle) els.newsSummarySubtitle.textContent = t("newsSummarySubtitle");
   if (els.weeklyTitle) els.weeklyTitle.textContent = t("weeklyTitle");
   if (els.deltaTitle) els.deltaTitle.textContent = t("deltaTitle");
   if (els.methodTitle) els.methodTitle.textContent = t("methodTitle");
@@ -382,19 +285,13 @@ function applyStaticTranslations() {
   if (els.methodCard1Body) els.methodCard1Body.textContent = t("methodCard1Body");
   if (els.methodCard2Title) els.methodCard2Title.textContent = t("methodCard2Title");
   if (els.methodCard2Body) els.methodCard2Body.textContent = t("methodCard2Body");
-  if (els.methodCard3Title) els.methodCard3Title.textContent = t("methodCard3Title");
-  if (els.methodCard3Body) els.methodCard3Body.textContent = t("methodCard3Body");
-  if (els.dimensionsTitle) els.dimensionsTitle.textContent = t("dimensionsTitle");
-  if (els.dimensionsSubtitle) els.dimensionsSubtitle.textContent = t("dimensionsSubtitle");
   if (els.resetFilters) els.resetFilters.textContent = t("reset");
   if (els.tierLabel) els.tierLabel.textContent = t("tierLabel");
   if (els.eventLabel) els.eventLabel.textContent = t("eventLabel");
   if (els.searchLabel) els.searchLabel.textContent = t("searchLabel");
   if (els.searchInput) els.searchInput.placeholder = t("searchPlaceholder");
-  if (els.viewAction) els.viewAction.textContent = t("actionBoard");
-  if (els.viewComposite) els.viewComposite.textContent = t("compositeBoard");
-  if (els.scoreboardTitle) els.scoreboardTitle.textContent = activeBoard === "action" ? t("actionBoard") : t("compositeBoard");
-  if (els.scoreboardSubtitle) els.scoreboardSubtitle.textContent = activeBoard === "action" ? t("actionSubtitle") : t("compositeSubtitle");
+  if (els.scoreboardTitle) els.scoreboardTitle.textContent = t("actionBoard");
+  if (els.scoreboardSubtitle) els.scoreboardSubtitle.textContent = t("actionSubtitle");
   if (els.langZh) {
     els.langZh.classList.toggle("is-active", activeLanguage === "zh");
     els.langZh.setAttribute("aria-pressed", String(activeLanguage === "zh"));
@@ -414,13 +311,6 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-function weightedScore(company) {
-  return dimensions.reduce((sum, dimension) => {
-    const value = Number(company.scores[dimension.id] ?? 0);
-    return sum + (value / 5) * dimension.weight;
-  }, 0) * 100;
-}
-
 function typeLabel(typeId) {
   const fallback = eventTypes.find((item) => item.id === typeId)?.label ?? typeId;
   return activeLanguage === "en" ? (EVENT_TYPE_LABELS_EN[typeId] || fallback) : fallback;
@@ -435,9 +325,6 @@ function dimensionName(dimensionId) {
   return activeLanguage === "en" ? (DIMENSION_LABELS_EN[dimensionId] || fallback) : fallback;
 }
 
-function dimensionDescription(dimension) {
-  return activeLanguage === "en" ? (DIMENSION_DESC_EN[dimension.id] || dimension.description) : dimension.description;
-}
 
 function eventDimensionTags(event) {
   if (Array.isArray(event.dimension_tags) && event.dimension_tags.length) {
@@ -458,27 +345,6 @@ function eventDimensionTags(event) {
   return map[event.type] ?? ["strategy_signal"];
 }
 
-function scoreReason(event) {
-  const score = event.event_score ?? 0;
-  const joiner = activeLanguage === "en" ? ", " : "、";
-  const tags = eventDimensionTags(event).map(dimensionName).join(joiner);
-  const source = sourceLabel(event.source_level);
-  const confidence = confidenceLabel(event.confidence);
-
-  if (activeLanguage === "en") {
-    if (event.confidence === "low") return `High-potential but pending verification: a relatively strong event score, but current source confidence is ${confidence}; mapped to ${tags}. An official or first-hand source is still needed.`;
-    if (score >= 90) return `Strong signal: directly changes the firm's AI capability boundary, mapped to ${tags}; source ${source}, confidence ${confidence}.`;
-    if (score >= 82) return `High signal: clear partnership, platform, or delivery relevance, mapped to ${tags}; source ${source}, confidence ${confidence}.`;
-    if (score >= 74) return `Upper-mid signal: meaningfully adds to the firm's AI capability picture, mapped to ${tags}; source ${source}, confidence ${confidence}.`;
-    return `Watch signal: auxiliary evidence of the firm's AI actions, mapped to ${tags}; source ${source}, confidence ${confidence}.`;
-  }
-
-  if (event.confidence === "low") return `高潜力但待核验：事件分较高，但当前来源可信度为 ${confidence}，映射 ${tags}；需要官方或一手来源复核。`;
-  if (score >= 90) return `强信号：直接改变公司 AI 能力边界，映射 ${tags}；来源 ${source}，可信度 ${confidence}。`;
-  if (score >= 82) return `高信号：具备明确合作、平台或交付含义，映射 ${tags}；来源 ${source}，可信度 ${confidence}。`;
-  if (score >= 74) return `中高信号：能补充公司 AI 能力拼图，映射 ${tags}；来源 ${source}，可信度 ${confidence}。`;
-  return `观察信号：作为公司 AI 动作的辅助证据，映射 ${tags}；来源 ${source}，可信度 ${confidence}。`;
-}
 
 function scoreBand(score) {
   if (activeLanguage === "en") {
@@ -520,12 +386,6 @@ function sourceLabel(level) {
   return map[level] || level || (activeLanguage === "en" ? "Unknown" : "未知");
 }
 
-function confidenceLabel(level) {
-  const map = activeLanguage === "en"
-    ? { high: "High", medium: "Medium", low: "Low" }
-    : { high: "高", medium: "中", low: "低" };
-  return map[level] || level || (activeLanguage === "en" ? "Unknown" : "未知");
-}
 
 function companyMatches(company, query) {
   if (!query) return true;
@@ -542,31 +402,6 @@ function companyMatches(company, query) {
   return text.includes(query.toLowerCase());
 }
 
-function getFilteredEvents() {
-  const query = els.searchInput.value.trim();
-  const tier = els.tierFilter.value;
-  const eventType = els.eventFilter.value;
-
-  return data.companies
-    .filter((company) => tier === "all" || company.tier === tier)
-    .flatMap((company) => company.events.map((event) => ({ company, event })))
-    .filter(({ event }) => eventType === "all" || event.type === eventType)
-    .filter(({ company, event }) => {
-      if (!query) return true;
-      return (
-        companyMatches(company, query) ||
-        event.title.toLowerCase().includes(query.toLowerCase()) ||
-        event.summary.toLowerCase().includes(query.toLowerCase())
-      );
-    })
-    .sort((a, b) => {
-      const scoreDiff = Number(b.event.event_score ?? 0) - Number(a.event.event_score ?? 0);
-      if (scoreDiff !== 0) return scoreDiff;
-      const dateDiff = eventTimestamp(b.event.date) - eventTimestamp(a.event.date);
-      if (dateDiff !== 0) return dateDiff;
-      return a.company.name.localeCompare(b.company.name);
-    });
-}
 
 function getTiers(companies) {
   return Array.from(new Set(companies.map((company) => company.tier).filter(Boolean))).sort();
@@ -601,34 +436,6 @@ function renderLegend() {
     .join("");
 }
 
-function renderDimensions() {
-  els.dimensionGrid.innerHTML = dimensions
-    .map((dimension) => `
-      <article class="dimension">
-        <strong>${escapeHtml(dimension.name)}</strong>
-        <p>${escapeHtml(dimensionDescription(dimension))}</p>
-        <em>${activeLanguage === "en" ? "Weight" : "权重"} ${Math.round(dimension.weight * 100)}%</em>
-      </article>
-    `)
-    .join("");
-}
-
-function companyTags(company) {
-  const latestEvent = [...company.events].sort((a, b) => eventTimestamp(b.date) - eventTimestamp(a.date))[0];
-  const strongestDimension = dimensions
-    .map((dimension) => ({ ...dimension, value: Number(company.scores[dimension.id] ?? 0) }))
-    .sort((a, b) => b.value - a.value)[0];
-  const thoughtScore = Number(company.scores.thought_leadership ?? 0);
-
-  return [
-    { label: activeLanguage === "en" ? "Focus" : "关注点", value: translateCompanyCopy(company.focus) },
-    latestEvent ? { label: activeLanguage === "en" ? "Latest Move" : "最近动作", value: `${shortDate(latestEvent.date)} · ${typeLabel(latestEvent.type)}` } : null,
-    strongestDimension ? { label: activeLanguage === "en" ? "Strongest Dimension" : "最强维度", value: `${strongestDimension.name} ${strongestDimension.value}/5` } : null,
-    thoughtScore ? { label: activeLanguage === "en" ? "AI Thought Leadership" : "AI 思考力", value: `${thoughtScore}/5` } : null,
-    company.brand_note ? { label: activeLanguage === "en" ? "Brand Note" : "品牌说明", value: translateCompanyCopy(company.brand_note) } : null,
-  ].filter(Boolean);
-}
-
 function evidenceMeta(company) {
   const events = Array.isArray(company.events) ? company.events : [];
   const officialCount = events.filter((event) => ["official", "official_press_release", "vendor_official"].includes(event.source_level)).length;
@@ -650,28 +457,6 @@ function coverageLabel(level) {
   return map[level] || (activeLanguage === "en" ? "Coverage not labeled" : "覆盖未标注");
 }
 
-function traditionalCapabilityScore(company) {
-  const values = company.traditional_capabilities || {};
-  const weights = {
-    client_trust: 0.28,
-    industry_depth: 0.24,
-    delivery_scale: 0.28,
-    brand_strength: 0.20,
-  };
-
-  return Object.entries(weights).reduce((sum, [key, weight]) => {
-    return sum + (Number(values[key] ?? 0) / 5) * weight;
-  }, 0) * 100;
-}
-
-function compositeCapabilityScore(company) {
-  const aiBase = weightedScore(company);
-  const traditionalBase = traditionalCapabilityScore(company);
-  const action = recentActionScore(company).score;
-  const longTermBase = aiBase * 0.6 + traditionalBase * 0.4;
-  return longTermBase * 0.6 + action * 0.4;
-}
-
 function displayActionScore(totalWeight, maxWeight, minWeight) {
   if (!Number.isFinite(totalWeight) || maxWeight <= 0) return 0;
   const maxRaw = 100 * (1 - Math.exp(-maxWeight / ACTION_SCORE_CURVE));
@@ -691,7 +476,6 @@ function actionRankedCompanies(companies = data.companies) {
     .map((company) => ({
       company,
       actionRaw: recentActionScore(company),
-      composite: compositeCapabilityScore(company),
       latestTimestamp: latestCompanySignal(company).latestTimestamp,
     }));
   const maxWeight = Math.max(...rawRows.map((row) => row.actionRaw.totalWeight), 0);
@@ -704,107 +488,99 @@ function actionRankedCompanies(companies = data.companies) {
     .sort((a, b) => b.action - a.action || b.latestTimestamp - a.latestTimestamp);
 }
 
-function compositeRankedCompanies(companies = data.companies) {
-  return companies
-    .map((company) => ({
-      company,
-      action: recentActionScore(company).score,
-      composite: compositeCapabilityScore(company),
-      latestTimestamp: latestCompanySignal(company).latestTimestamp,
-    }))
-    .sort((a, b) => b.composite - a.composite || b.action - a.action || b.latestTimestamp - a.latestTimestamp);
-}
-
 function buildInsights() {
-  const rows = compositeRankedCompanies();
-  const topTwo = rows.slice(0, 2).map(({ company }) => company.name).join(activeLanguage === "en" ? " and " : " 和 ");
-  const topBigFour = rows.filter(({ company }) => company.tier === "Big Four").slice(0, 4);
-  const mbbLeader = rows.filter(({ company }) => company.tier === "MBB")[0];
-  const techLeader = rows.filter(({ company }) => company.tier === "Tech/SI")[0];
-  const lowConfidenceEvents = data.companies
-    .flatMap((company) => company.events.map((event) => ({ company, event })))
-    .filter(({ event }) => event.confidence === "low" && Number(event.event_score ?? 0) >= 85)
-    .sort((a, b) => Number(b.event.event_score ?? 0) - Number(a.event.event_score ?? 0));
-  const thoughtLeaders = rows
-    .filter(({ company }) => Number(company.scores.thought_leadership ?? 0) >= 5)
-    .slice(0, 4)
-    .map(({ company }) => company.name);
+  const weekly = collectWeeklyNetNewEvents();
+  const en = activeLanguage === "en";
 
-  return [
+  if (!weekly.length) {
+    return [
+      {
+        kicker: "Week in Review",
+        accent: "#64748b",
+        title: en ? "No new public AI signals this window" : "本窗口暂无净新增公开信号",
+        body: en
+          ? `No net-new public AI signals were added between ${comparisonStartDate()} and ${data.meta.updated_at}. Rankings still drift as older evidence ages, so a flat board usually means a quiet market rather than a broken pipeline.`
+          : `${comparisonStartDate()} 至 ${data.meta.updated_at} 没有新纳入的公开 AI 信号。排名仍会随旧证据老化小幅变化，榜单持平通常说明市场安静，而不是采集失灵。`,
+      },
+    ];
+  }
+
+  const rows = actionRankedCompanies();
+  const rankMap = buildEventDrivenRankMap(rows);
+  const movers = rows
+    .map((row, index) => {
+      const currentRank = index + 1;
+      const previousRank = rankMap.get(row.company.id) || currentRank;
+      return { ...row, currentRank, previousRank, rankDelta: previousRank - currentRank };
+    })
+    .filter((item) => item.rankDelta !== 0)
+    .sort((a, b) => Math.abs(b.rankDelta) - Math.abs(a.rankDelta));
+  const risers = movers.filter((item) => item.rankDelta > 0);
+  const fallers = movers.filter((item) => item.rankDelta < 0);
+
+  const typeCounts = weekly.reduce((acc, { event }) => {
+    const label = typeLabel(event.type);
+    acc[label] = (acc[label] || 0) + 1;
+    return acc;
+  }, {});
+  const [dominantType, dominantCount] = Object.entries(typeCounts).sort((a, b) => b[1] - a[1])[0];
+  const topEventPair = [...weekly].sort((a, b) => (b.event.event_score ?? 0) - (a.event.event_score ?? 0))[0];
+  const involvedFirms = [...new Set(weekly.map(({ company }) => company.name))];
+  const quietFirms = data.companies
+    .filter((company) => !weekly.some(({ company: weeklyCompany }) => weeklyCompany.id === company.id))
+    .map((company) => company.name);
+
+  const cards = [
     {
-      kicker: "Front Runner",
-      accent: "#b42318",
-      title: activeLanguage === "en" ? `${topTwo} lead the field` : `${topTwo} 领跑`,
-      body: activeLanguage === "en"
-        ? `On the current composite ranking, ${topTwo} sit in the first tier. Their lead comes mainly from scaled technology partnerships, internal Client Zero validation, and a stronger ability to move AI from narrative into organization-level deployment.`
-        : `当前综合能力榜上，${topTwo} 处于第一梯队，领先原因主要来自大规模技术合作、内部 Client Zero 验证，以及把 AI 从叙事推向组织级部署。`,
-    },
-    {
-      kicker: "Big Four",
-      accent: "#1d4ed8",
-      title: activeLanguage === "en" ? "Big Four as the strongest group" : "Big Four 整体最强",
-      body: topBigFour.length
-        ? (activeLanguage === "en"
-          ? `In the current sample, the Big Four show the most complete group-level push: ${topBigFour.map(({ company }) => company.name).join(", ")} all appear near the top, suggesting simultaneous strength in platform partnerships, industry coverage, and governance capabilities.`
-          : `从当前样本看，Big Four 形成最完整的集团式推进：${topBigFour.map(({ company }) => company.name).join("、")} 都在前列，说明其平台合作、行业覆盖和治理能力一起在发力。`)
-        : (activeLanguage === "en"
-          ? "In the current sample, the Big Four remain the most systematically organized professional-services bloc in AI."
-          : "当前样本里，Big Four 仍然是最系统推进 AI 的专业服务群体。"),
-    },
-    {
-      kicker: "MBB vs Tech/SI",
-      accent: "#0f766e",
-      title: activeLanguage === "en"
-        ? `${mbbLeader?.company.name || "MBB leader"} and ${techLeader?.company.name || "Tech/SI leader"} win differently`
-        : `${mbbLeader?.company.name || "MBB 龙头"} 与 ${techLeader?.company.name || "Tech/SI 龙头"} 各自强势`,
-      body: activeLanguage === "en"
-        ? `${mbbLeader?.company.name || "The leading MBB firm"} looks more like a strategy-and-platform archetype, while ${techLeader?.company.name || "the leading Tech/SI firm"} shows stronger production and delivery muscle. They are approaching the same destination through different paths: turning AI into client workflows.`
-        : `${mbbLeader?.company.name || "MBB 头部公司"} 更像战略与平台双轮驱动的代表，${techLeader?.company.name || "Tech/SI 头部公司"} 则体现了更强的交付生产化能力。两类公司正在从不同路径逼近同一个结果：把 AI 做成客户工作流。`,
-    },
-    {
-      kicker: "Watchlist",
-      accent: "#ff8a00",
-      title: activeLanguage === "en" ? "Some high-score events still need verification" : "高分事件里仍有待核验项",
-      body: lowConfidenceEvents.length
-        ? (activeLanguage === "en"
-          ? `There are currently ${lowConfidenceEvents.length} high-scoring events still tagged with low confidence, mainly around investment or partnership stories involving firms such as ${lowConfidenceEvents.slice(0, 3).map(({ company }) => company.name).join(", ")}. These signals are worth keeping, but should still be treated as pending official confirmation.`
-          : `当前有 ${lowConfidenceEvents.length} 条高分事件仍是低置信度，主要集中在 ${lowConfidenceEvents.slice(0, 3).map(({ company }) => company.name).join("、")} 等公司的投资或合作新闻。这些信号值得保留，但页面上应继续视为待官方复核。`)
-        : (activeLanguage === "en"
-          ? "Most high-scoring events are now supported by relatively strong sources, with fewer unresolved items left in the watchlist."
-          : "当前高分事件大多已有较强来源支撑，待核验项相对有限。"),
-    },
-    {
-      kicker: "Thought Leadership",
+      kicker: "Week in Review",
       accent: "#2457ff",
-      title: activeLanguage === "en" ? "Public reports are now included in scoring" : "公开报告已经纳入评分",
-      body: thoughtLeaders.length
-        ? (activeLanguage === "en"
-          ? `We now include public AI reports as a thought-leadership dimension. The strongest group on this axis is currently ${thoughtLeaders.join(", ")}, suggesting that these firms are not only acting, but also shaping how enterprise buyers interpret AI.`
-          : `我们已把 AI 公开报告作为“思考力”维度纳入模型。当前在这一维度最强的一组是 ${thoughtLeaders.join("、")}，它们不仅有动作，也持续在塑造企业客户对 AI 的认知框架。`)
-        : (activeLanguage === "en"
-          ? "Public AI reports are now part of the model, helping offset the limitations of looking only at recent news actions."
-          : "我们已把 AI 公开报告作为“思考力”维度纳入模型，用来补足只看新闻动作的局限。"),
+      title: en
+        ? `${weekly.length} new signals this window, led by ${dominantType}`
+        : `本周 ${weekly.length} 条净新增信号，${dominantType}占主导`,
+      body: en
+        ? `Between ${comparisonStartDate()} and ${data.meta.updated_at}, ${involvedFirms.slice(0, 4).join(", ")} added ${weekly.length} verifiable public signals, ${dominantCount} of them ${dominantType} moves. That is where this week's narrative concentrates.`
+        : `${comparisonStartDate()} 至 ${data.meta.updated_at}，${involvedFirms.slice(0, 4).join("、")} 等公司共新增 ${weekly.length} 条可溯源公开信号，其中 ${dominantCount} 条是${dominantType}类动作，构成本周叙事的重心。`,
+    },
+    {
+      kicker: "Biggest Signal",
+      accent: "#b42318",
+      title: en
+        ? `${topEventPair.company.name}: ${localizedEventTitle(topEventPair.event)}`
+        : `${topEventPair.company.name}：${topEventPair.event.title}`,
+      body: en
+        ? `The strongest single signal of the window (event score ${topEventPair.event.event_score ?? "n/a"}). ${localizedEventSummary(topEventPair.event)}`
+        : `本窗口单条最强信号（事件分 ${topEventPair.event.event_score ?? "n/a"}）。${topEventPair.event.summary}`,
     },
   ];
-}
 
-function renderReports(company) {
-  if (!Array.isArray(company.reports) || !company.reports.length) return "";
-  return `
-    <div class="report-list">
-      ${company.reports.slice(0, 2).map((report) => `
-        <article class="report-item">
-          <div class="report-item__meta">
-            <span>${escapeHtml(shortDate(report.date))}</span>
-            <span>${escapeHtml(report.publisher)}</span>
-          </div>
-          <strong>${escapeHtml(localizedReportTitle(report))}</strong>
-          <p>${escapeHtml(localizedReportSummary(report))}</p>
-          <a href="${escapeHtml(report.url)}" target="_blank" rel="noreferrer">${activeLanguage === "en" ? "View report" : "查看报告"}</a>
-        </article>
-      `).join("")}
-    </div>
-  `;
+  if (risers.length) {
+    const top = risers[0];
+    cards.push({
+      kicker: "Movers",
+      accent: "#16a34a",
+      title: en
+        ? `${top.company.name} climbs ${top.rankDelta} ${top.rankDelta > 1 ? "spots" : "spot"} to #${top.currentRank}`
+        : `${top.company.name} 上升 ${top.rankDelta} 位至第 ${top.currentRank} 名`,
+      body: en
+        ? `${risers.map((item) => `${item.company.name} (+${item.rankDelta})`).join(", ")} moved up on fresh evidence${fallers.length ? `, while ${fallers.map((item) => `${item.company.name} (-${Math.abs(item.rankDelta)})`).join(", ")} slipped as rivals added signals` : ""}. On this board, standing still means losing ground.`
+        : `${risers.map((item) => `${item.company.name}（+${item.rankDelta}）`).join("、")} 凭新增证据上行${fallers.length ? `，${fallers.map((item) => `${item.company.name}（-${Math.abs(item.rankDelta)}）`).join("、")} 则因对手补证而回落` : ""}。在这张榜上，原地踏步就等于退步。`,
+    });
+  }
+
+  if (quietFirms.length) {
+    cards.push({
+      kicker: "Quiet Firms",
+      accent: "#ff8a00",
+      title: en
+        ? `${quietFirms.length} firms published no verifiable AI signal this window`
+        : `${quietFirms.length} 家公司本周无新增公开信号`,
+      body: en
+        ? `${quietFirms.slice(0, 6).join(", ")}${quietFirms.length > 6 ? ", and others" : ""} added nothing verifiable in this window. Scores decay as evidence ages, so repeated quiet weeks cost rank even without negative news.`
+        : `${quietFirms.slice(0, 6).join("、")}${quietFirms.length > 6 ? " 等" : ""}在本窗口没有可确认的公开动作。分数会随证据老化衰减，连续沉默会直接反映到排名上。`,
+    });
+  }
+
+  return cards;
 }
 
 function renderEvidenceStrip(company) {
@@ -837,9 +613,7 @@ function cardAnchorId(company) {
 
 function renderRankNavigator(rows) {
   const topRows = rows.slice(0, 10);
-  const scoreLabel = activeBoard === "action"
-    ? (activeLanguage === "en" ? "Action" : "行动力")
-    : (activeLanguage === "en" ? "Composite" : "综合分");
+  const scoreLabel = activeLanguage === "en" ? "Action" : "行动力";
   return `
     <section class="rank-navigator-shell" aria-label="${activeLanguage === "en" ? "Quick rank navigation" : "排名快速导航"}">
       <div class="rank-navigator-shell__intro">
@@ -855,7 +629,7 @@ function renderRankNavigator(rows) {
             <span class="rank-navigator__rank">#${index + 1}</span>
             <strong>${escapeHtml(row.company.name)}</strong>
             <em>${escapeHtml(row.company.cn || row.company.tier || "")}</em>
-            <b>${activeBoard === "action" ? row.action.toFixed(1) : row.composite.toFixed(1)} <small>${scoreLabel}</small></b>
+            <b>${row.action.toFixed(1)} <small>${scoreLabel}</small></b>
           </a>
         `).join("")}
       </div>
@@ -873,72 +647,6 @@ function renderBoardControls() {
         ${expandAllEvidence ? (activeLanguage === "en" ? "Collapse all evidence" : "折叠全部证据") : (activeLanguage === "en" ? "Expand all evidence" : "展开全部证据")}
       </button>
     </div>
-  `;
-}
-
-function renderCompanyCard(company, rank) {
-  const score = weightedScore(company);
-  const accent = company.events[0] ? typeColor(company.events[0].type) : "#1d4ed8";
-  const topDimensions = dimensions
-    .map((dimension) => ({ ...dimension, value: Number(company.scores[dimension.id] ?? 0) }))
-    .sort((a, b) => b.value - a.value)
-    .slice(0, 4);
-
-  const events = company.events
-    .sort((a, b) => eventTimestamp(b.date) - eventTimestamp(a.date))
-    .slice(0, 3)
-    .map((event) => `
-      <article class="event">
-        <time>${escapeHtml(shortDate(event.date))}</time>
-        <div>
-          <span class="badge" style="--event-color:${typeColor(event.type)}">${escapeHtml(typeLabel(event.type))}</span>
-          <h4>${escapeHtml(event.title)}</h4>
-          <p>${escapeHtml(event.summary)}</p>
-          <a href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">查看来源</a>
-        </div>
-      </article>
-    `)
-    .join("");
-
-  const tags = companyTags(company)
-    .map((item) => `
-      <li class="summary-tag">
-        <span>${escapeHtml(item.label)}</span>
-        <strong>${escapeHtml(item.value)}</strong>
-      </li>
-    `)
-    .join("");
-
-  return `
-    <article class="rank-card" style="--accent:${accent}">
-      <div class="rank-card__top">
-        <div class="rank">#${rank}</div>
-        <div>
-          <h3>${escapeHtml(company.name)}</h3>
-          <p class="cn">${escapeHtml([company.cn, company.tier, company.parent ? `隶属 ${company.parent}` : ""].filter(Boolean).join(" · "))}</p>
-        </div>
-        <div class="score">
-          <strong>${score.toFixed(1)}</strong>
-          <span>Signal Score</span>
-        </div>
-      </div>
-
-      <ul class="summary-tags">${tags}</ul>
-
-      ${renderEvidenceStrip(company)}
-      ${renderReports(company)}
-
-      <div class="bars">
-        ${topDimensions.map((dimension) => `
-          <div class="bar">
-            <span>${escapeHtml(dimension.name)} · ${dimension.value}/5</span>
-            <i style="width:${(dimension.value / 5) * 100}%"></i>
-          </div>
-        `).join("")}
-      </div>
-
-      <div class="events">${events}</div>
-    </article>
   `;
 }
 
@@ -967,21 +675,6 @@ function historicalActionScore(company, asOfDate, filterFn = () => true) {
   return Math.round((100 * (1 - Math.exp(-total / ACTION_SCORE_CURVE))) * 10) / 10;
 }
 
-function historicalRecentActionDetail(company, asOfDate) {
-  const now = Date.parse(`${asOfDate}T00:00:00Z`) || Date.now();
-  const weightedRows = scoreActionEvents(
-    company.events.filter((event) => eventTimestamp(event.date) <= now),
-    now,
-  );
-  const total = weightedRows.reduce((sum, row) => sum + row.contribution, 0);
-  return {
-    score: Math.round((100 * (1 - Math.exp(-total / ACTION_SCORE_CURVE))) * 10) / 10,
-    events: weightedRows.map((row) => ({
-      ...row.event,
-      contribution_score: Math.round((100 * (1 - Math.exp(-row.contribution / ACTION_SCORE_CURVE))) * 10) / 10,
-    })),
-  };
-}
 
 function rankDecay(index) {
   return 1 / (1 + 0.45 * index);
@@ -1044,19 +737,6 @@ function collectWeeklyNetNewEvents() {
     .sort((a, b) => eventTimestamp(b.event.date) - eventTimestamp(a.event.date) || (b.event.event_score ?? 0) - (a.event.event_score ?? 0));
 }
 
-function buildPreviousWeekRankMap(rows) {
-  const priorDate = comparisonStartDate();
-  const previousRows = rows
-    .map(({ company }) => ({
-      company,
-      score: historicalActionScore(company, priorDate),
-      latestTimestamp: latestCompanySignal(company).latestTimestamp,
-    }))
-    .sort((a, b) => b.score - a.score || b.latestTimestamp - a.latestTimestamp);
-
-  return new Map(previousRows.map((row, index) => [row.company.id, index + 1]));
-}
-
 function buildEventDrivenRankMap(rows) {
   const baselineRows = rows
     .map(({ company }) => ({
@@ -1067,12 +747,6 @@ function buildEventDrivenRankMap(rows) {
     .sort((a, b) => b.score - a.score || b.latestTimestamp - a.latestTimestamp);
 
   return new Map(baselineRows.map((row, index) => [row.company.id, index + 1]));
-}
-
-function scoreDeltaMeta(delta) {
-  if (delta > 0.3) return { arrow: "↑", className: "up", label: `较上期 +${delta.toFixed(1)}` };
-  if (delta < -0.3) return { arrow: "↓", className: "down", label: `较上期 ${delta.toFixed(1)}` };
-  return { arrow: "→", className: "flat", label: "较上期基本持平" };
 }
 
 function buildScoreDeltaRows() {
@@ -1336,68 +1010,9 @@ function latestCompanySignal(company) {
   const latestEvent = [...company.events].sort((a, b) => eventTimestamp(b.date) - eventTimestamp(a.date))[0];
   return {
     company,
-    score: weightedScore(company),
     latestEvent,
     latestTimestamp: latestEvent ? eventTimestamp(latestEvent.date) : 0,
   };
-}
-
-function renderCompositeCard(company, rank) {
-  const score = compositeCapabilityScore(company);
-  const action = recentActionScore(company).score;
-  const aiBase = weightedScore(company);
-  const traditionalBase = traditionalCapabilityScore(company);
-  const latestEvent = [...company.events].sort((a, b) => eventTimestamp(b.date) - eventTimestamp(a.date))[0];
-  const accent = latestEvent ? typeColor(latestEvent.type) : "#1d4ed8";
-  const detailsOpen = expandAllEvidence || !compactMode;
-
-  return `
-    <article id="${escapeHtml(cardAnchorId(company))}" class="rank-card ${compactMode ? "rank-card--compact" : ""}" style="--accent:${accent}">
-      <div class="rank-card__top">
-        <div class="rank">#${rank}</div>
-        <div>
-          <h3>${escapeHtml(company.name)}</h3>
-          <p class="cn">${escapeHtml([company.cn, company.tier, latestEvent ? `${shortDate(latestEvent.date)} · ${typeLabel(latestEvent.type)}` : ""].filter(Boolean).join(" · "))}</p>
-        </div>
-        <div class="score">
-          <strong>${score.toFixed(1)}</strong>
-          <span>Composite Score</span>
-        </div>
-      </div>
-
-      <ul class="summary-tags">
-        <li class="summary-tag">
-          <span>AI 行动力</span>
-          <strong>${action.toFixed(1)}</strong>
-        </li>
-        <li class="summary-tag">
-          <span>AI 长期底座</span>
-          <strong>${aiBase.toFixed(1)}</strong>
-        </li>
-        <li class="summary-tag">
-          <span>传统咨询能力</span>
-          <strong>${traditionalBase.toFixed(1)}</strong>
-        </li>
-        <li class="summary-tag">
-          <span>AI 思考力</span>
-          <strong>${Number(company.scores.thought_leadership ?? 0)}/5</strong>
-        </li>
-        <li class="summary-tag">
-          <span>综合方法</span>
-          <strong>40% 行动力 + 36% AI 底座 + 24% 传统能力</strong>
-        </li>
-      </ul>
-
-      <details class="card-details" ${detailsOpen ? "open" : ""}>
-        <summary class="card-details__summary">
-          <span>查看证据厚度与公开报告</span>
-          <strong>${company.reports?.length || 0} 份报告</strong>
-        </summary>
-        ${renderEvidenceStrip(company)}
-        ${renderReports(company)}
-      </details>
-    </article>
-  `;
 }
 
 function renderScoreboard() {
@@ -1411,26 +1026,16 @@ function renderScoreboard() {
       return company.events.some((event) => event.type === eventType);
     })
     .filter((company) => companyMatches(company, query));
-  const rows = activeBoard === "action"
-    ? actionRankedCompanies(companies)
-    : compositeRankedCompanies(companies);
-  const previousRankMap = activeBoard === "action"
-    ? buildEventDrivenRankMap(rows)
-    : buildPreviousWeekRankMap(rows);
+  const rows = actionRankedCompanies(companies);
+  const previousRankMap = buildEventDrivenRankMap(rows);
 
   if (!rows.length) {
-    els.scoreboard.innerHTML = `<div class="panel-title"><div><h2>${activeBoard === "action" ? t("actionBoard") : t("compositeBoard")}</h2><p>${activeBoard === "action" ? t("actionSubtitle") : t("compositeSubtitle")}</p></div></div><div class="view-switch" role="tablist" aria-label="榜单切换"><button class="view-switch__button ${activeBoard === "action" ? "is-active" : ""}" type="button">${t("actionBoard")}</button><button class="view-switch__button ${activeBoard === "composite" ? "is-active" : ""}" type="button">${t("compositeBoard")}</button></div><div class="empty">${activeLanguage === "zh" ? "没有匹配的公司。试试重置筛选，或搜索“OpenAI / Microsoft / agentic / IQ.AI”。" : "No matching firms. Try resetting filters or searching OpenAI, Microsoft, agentic, or IQ.AI."}</div>`;
+    els.scoreboard.innerHTML = `<div class="panel-title"><div><h2>${t("actionBoard")}</h2><p>${t("actionSubtitle")}</p></div></div><div class="empty">${activeLanguage === "zh" ? "没有匹配的公司。试试重置筛选，或搜索“OpenAI / Microsoft / agentic / IQ.AI”。" : "No matching firms. Try resetting filters or searching OpenAI, Microsoft, agentic, or IQ.AI."}</div>`;
     return;
   }
 
-  els.scoreboardTitle.textContent = activeBoard === "action" ? t("actionBoard") : t("compositeBoard");
-  els.scoreboardSubtitle.textContent = activeBoard === "action"
-    ? t("actionSubtitle")
-    : t("compositeSubtitle");
-  els.viewAction.classList.toggle("is-active", activeBoard === "action");
-  els.viewComposite.classList.toggle("is-active", activeBoard === "composite");
-  els.viewAction.setAttribute("aria-pressed", String(activeBoard === "action"));
-  els.viewComposite.setAttribute("aria-pressed", String(activeBoard === "composite"));
+  els.scoreboardTitle.textContent = t("actionBoard");
+  els.scoreboardSubtitle.textContent = t("actionSubtitle");
 
   els.scoreboard.innerHTML = `
     <div class="panel-title">
@@ -1439,26 +1044,12 @@ function renderScoreboard() {
         <p>${escapeHtml(els.scoreboardSubtitle.textContent)}</p>
       </div>
     </div>
-    <div class="view-switch" role="tablist" aria-label="榜单切换">
-      <button id="viewActionInline" class="view-switch__button ${activeBoard === "action" ? "is-active" : ""}" type="button" aria-pressed="${activeBoard === "action"}">${t("actionBoard")}</button>
-      <button id="viewCompositeInline" class="view-switch__button ${activeBoard === "composite" ? "is-active" : ""}" type="button" aria-pressed="${activeBoard === "composite"}">${t("compositeBoard")}</button>
-    </div>
     ${renderBoardControls()}
     ${renderRankNavigator(rows)}
   ` + rows
-    .map((row, index) => activeBoard === "action"
-      ? renderActionCard(row, index + 1, previousRankMap)
-      : renderCompositeCard(row.company, index + 1))
+    .map((row, index) => renderActionCard(row, index + 1, previousRankMap))
     .join("");
 
-  document.querySelector("#viewActionInline")?.addEventListener("click", () => {
-    activeBoard = "action";
-    renderScoreboard();
-  });
-  document.querySelector("#viewCompositeInline")?.addEventListener("click", () => {
-    activeBoard = "composite";
-    renderScoreboard();
-  });
   document.querySelector("#compactToggle")?.addEventListener("click", () => {
     compactMode = !compactMode;
     if (!compactMode) expandAllEvidence = true;
@@ -1470,36 +1061,9 @@ function renderScoreboard() {
   });
 }
 
-function renderNewsSummary() {
-  const events = getFilteredEvents().slice(0, 8);
-  if (!events.length) {
-    els.newsSummary.innerHTML = `<div class="empty">暂无匹配新闻总结。</div>`;
-    return;
-  }
-
-  els.newsSummary.innerHTML = events
-    .map(({ company, event }) => {
-      const score = event.event_score ?? null;
-      return `
-        <article class="news-card">
-          <time>${escapeHtml(shortDate(event.date))}</time>
-          <span class="badge" style="--event-color:${typeColor(event.type)}">${escapeHtml(typeLabel(event.type))}</span>
-          <strong>${escapeHtml(company.name)}</strong>
-          <p>${escapeHtml(event.title)}</p>
-          <div class="dimension-chips">
-            ${eventDimensionTags(event).slice(0, 3).map((tag) => `<span class="dimension-chip">${escapeHtml(dimensionName(tag))}</span>`).join("")}
-          </div>
-          <a href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">来源</a>
-        </article>
-      `;
-    })
-    .join("");
-}
-
 function renderAll() {
   renderScoreboard();
   renderInsights();
-  renderNewsSummary();
   renderWeeklyEvents();
   renderScoreDelta();
 }
@@ -1508,7 +1072,6 @@ function resetFilters() {
   els.tierFilter.value = "all";
   els.eventFilter.value = "all";
   els.searchInput.value = "";
-  activeBoard = "action";
   renderAll();
 }
 
@@ -1525,35 +1088,23 @@ async function init() {
   els.updatedAt.textContent = `数据更新：${data.meta.updated_at}（对比 ${comparisonStartDate()}）`;
   els.companyCount.textContent = String(data.companies.length);
   if (els.methodIntro) {
-    els.methodIntro.textContent = `我们不对单条新闻做公开排名，而是把新闻、公开报告与长期能力一起映射到公司的两套评分，并公开展示证据厚度、待核验状态与覆盖置信度。当前方法参照 ${data.meta.scoring_model_file || "SCORING_MODEL.md"}。`;
+    els.methodIntro.textContent = `我们不对单条新闻做公开排名，而是把新闻与公开报告作为证据，映射到公司的 AI 行动力评分，并公开展示证据厚度、待核验状态与覆盖置信度。当前方法参照 ${data.meta.scoring_model_file || "SCORING_MODEL.md"}。`;
   }
 
   populateFilters();
   refreshFilterOptionLabels();
   renderLegend();
-  renderDimensions();
   renderAll();
 
   els.tierFilter.addEventListener("change", renderAll);
   els.eventFilter.addEventListener("change", renderAll);
   els.searchInput.addEventListener("input", renderAll);
   els.resetFilters.addEventListener("click", resetFilters);
-  els.viewAction?.addEventListener("click", () => {
-    activeBoard = "action";
-    applyStaticTranslations();
-    renderScoreboard();
-  });
-  els.viewComposite?.addEventListener("click", () => {
-    activeBoard = "composite";
-    applyStaticTranslations();
-    renderScoreboard();
-  });
   els.langZh?.addEventListener("click", () => {
     activeLanguage = "zh";
     syncLanguageInUrl();
     applyStaticTranslations();
     refreshFilterOptionLabels();
-    renderDimensions();
     renderScoreboard();
   });
   els.langEn?.addEventListener("click", () => {
@@ -1561,7 +1112,6 @@ async function init() {
     syncLanguageInUrl();
     applyStaticTranslations();
     refreshFilterOptionLabels();
-    renderDimensions();
     renderScoreboard();
   });
 }

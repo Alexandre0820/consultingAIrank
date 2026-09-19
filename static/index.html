@@ -44,7 +44,7 @@
         <div class="panel-title">
           <div>
             <h2 id="filtersTitle">筛选</h2>
-            <p id="filtersSubtitle">左侧控制筛选；中间在两个榜单之间切换查看。</p>
+            <p id="filtersSubtitle">左侧控制筛选；榜单按公司最近 AI 动作排序。</p>
           </div>
           <button id="resetFilters" type="button">重置</button>
         </div>
@@ -76,10 +76,6 @@
             <p id="scoreboardSubtitle">根据最近新闻动作对公司的 AI 行动力进行评估，新闻本身不单独展示分数。</p>
           </div>
         </div>
-        <div class="view-switch" role="tablist" aria-label="榜单切换">
-          <button id="viewAction" class="view-switch__button is-active" type="button" aria-pressed="true">AI 行动力评分榜</button>
-          <button id="viewComposite" class="view-switch__button" type="button" aria-pressed="false">综合能力评分榜</button>
-        </div>
       </section>
     </main>
 
@@ -87,43 +83,10 @@
       <div class="panel-title">
         <div>
           <h2 id="insightsTitle">核心观察</h2>
-          <p id="insightsSubtitle">基于当前数据的关键发现，帮助快速理解 AI 咨询竞争格局。</p>
+          <p id="insightsSubtitle">从本周净新增的公开信号里，提炼对 AI 咨询行业的核心观察。</p>
         </div>
       </div>
       <div class="insights-grid" id="insightsGrid"></div>
-    </section>
-
-    <section class="coverage panel" aria-label="覆盖与公正性说明">
-      <div class="panel-title">
-        <div>
-          <h2 id="coverageTitle">Coverage</h2>
-          <p id="coverageSubtitle">说明榜单如何尽量接近全面，并把证据偏差公开出来。</p>
-        </div>
-      </div>
-      <div class="coverage-grid">
-        <article class="method-card">
-          <strong id="coverageCard1Title">统一检索模板</strong>
-          <p id="coverageCard1Body">所有上榜公司使用同一套检索逻辑，覆盖官网、新闻稿、研究页、合作方发布和主流媒体，减少“想到谁就搜谁”的偏差。</p>
-        </article>
-        <article class="method-card">
-          <strong id="coverageCard2Title">来源分层降权</strong>
-          <p id="coverageCard2Body">官方、厂商官方、媒体和待核验来源不会被同等看待。来源越弱、核验越少，进入评分时权重越低。</p>
-        </article>
-        <article class="method-card">
-          <strong id="coverageCard3Title">证据厚度公开</strong>
-          <p id="coverageCard3Body">榜单卡片会显示官方证据数、待核验证据数和覆盖置信度，帮助判断排名背后的证据是不是足够厚。</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="news-summary panel" aria-label="新闻横向总结">
-      <div class="panel-title">
-        <div>
-          <h2 id="newsSummaryTitle">新闻横向总结</h2>
-          <p id="newsSummarySubtitle">把最近值得关注的新闻事件横向铺开，突出它影响的维度与来源。</p>
-        </div>
-      </div>
-      <div class="news-summary-grid" id="newsSummary"></div>
     </section>
 
     <section class="weekly-events panel" aria-label="本周净新增事件">
@@ -163,19 +126,7 @@
           <strong id="methodCard2Title">AI 行动力评分</strong>
           <p id="methodCard2Body">重点看最近新闻动作，结合新鲜度、来源质量、动作强度与影响维度，评估一家公司近期把 AI 推进到真实工作流与组织动作中的力度。</p>
         </article>
-        <article class="method-card">
-          <strong id="methodCard3Title">综合能力评分</strong>
-          <p id="methodCard3Body">在 AI 行动力基础上，再叠加公司长期 AI 能力底座、公开研究思考力与传统咨询能力，避免只看短期新闻声量而忽略交付、行业与组织基本盘。</p>
-        </article>
       </div>
-    </section>
-
-    <section class="dimensions panel">
-      <div class="panel-title">
-        <h2 id="dimensionsTitle">评分维度</h2>
-        <p id="dimensionsSubtitle">当前 MVP 采用 9 个维度，分数为 0–5 的人工 provisional score。</p>
-      </div>
-      <div class="dimension-grid" id="dimensionGrid"></div>
     </section>
 
     <script src="./app.js"></script>
