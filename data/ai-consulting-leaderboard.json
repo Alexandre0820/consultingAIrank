@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-09-12",
-    "updated_at": "2026-09-19",
+    "previous_updated_at": "2026-09-19",
+    "updated_at": "2026-09-25",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-09-19 本次刷新窗口为 2026-09-13 至 09-19，净新增 7 条：Anthropic 任命 Accenture 为首个前沿模型「嵌入式评估方」（09-18，双方各投 10 亿美元，本周头条）、McKinsey 年度旗舰《Technology Trends Outlook 2026》（09-15）与两篇 AI 研究（agentic transformation office 09-16、欧洲 AI 应用层 09-17）、BCG 的 IT 支出脉搏调查与亚太 CEO AI 经验（均 09-17）、Bain 炼油业 AI 韧性手册（09-15，media 核实）。遗留项复核：OW-SDAIA《Innovation Oasis》确认为 2024 年事件（此前误标 2026-09-04），该 hold 项关闭。Deloitte、PwC、EY、KPMG、Oliver Wyman、Kearney、FTI、A&M、Strategy&、Monitor Deloitte 窗口内无可确认的净新增动作；Capgemini 因检索通道连续超时覆盖不足，下轮优先补扫。评分口径不变：事件信号分 + 来源可信度 + 双层评分结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-09-25 本次刷新窗口为 2026-09-20 至 09-25，净新增 7 条：Deloitte 发布 AI 与 agentic AI 驱动的 M&A Platform（09-22）、Volvo Cars 出任 Accenture 与 Google Cloud 开源平台 Horizon 首席行业伙伴（09-22，测试提速 9 倍/成本降 40%）、KPMG 新设 Client Technology & Innovation Group 打造 AI-native 业务（09-22）、Accenture 战略投资 Within 的 work-to-agent 平台（09-23）、BCG 三条（AI 领先者工作方式研究 09-24、BCG X Frontline Ops AI 产品化资产 09-24、AI 销售新商业化模型 09-25）；BCG 本周实际产出六篇 AI 内容，按同周不堆量原则保留三条、其余留痕候选池。Accenture Edge×AWS 因直链未取得暂列 hold。McKinsey、Bain、PwC、EY、L.E.K.、Capgemini（连续第三轮）、Oliver Wyman、Kearney、FTI、A&M、Roland Berger、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；OW 'AI 负责人'遗留项两轮未核实正式关闭，KPMG-Anthropic 联盟（5 月）确认为历史补漏核对项。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -484,6 +484,63 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-09-25",
+          "type": "research",
+          "title": "BCG 发布《Why AI Sales Can't Stop at the Close》：AI 产品需要新的商业化模型",
+          "title_en": "BCG publishes Why AI Sales Can't Stop at the Close",
+          "summary": "BCG 于 2026-09-25 发布研究，主张 AI 产品的商业化不能止步于签单，需要新的 commercial model 来承接交付与价值兑现。",
+          "summary_en": "On September 25, 2026, BCG published research arguing that AI sales cannot stop at the close and that AI products need a new commercial model to carry delivery and value realization.",
+          "url": "https://www.bcg.com/publications/2026/ai-products-need-a-new-commercial-model",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "client_value_proof",
+            "strategy_signal"
+          ],
+          "event_score": 74
+        },
+        {
+          "date": "2026-09-24",
+          "type": "research",
+          "title": "BCG 发布《Five Ways That AI Front-Runners Change How Work Gets Done》：领先者重设计工作方式",
+          "title_en": "BCG publishes Five Ways That AI Front-Runners Change How Work Gets Done",
+          "summary": "BCG 于 2026-09-24 发布研究，总结 AI 领先企业在工作方式上的五种重构做法，延续其'从工具采纳到工作流重设计'的研究主线。",
+          "summary_en": "On September 24, 2026, BCG published research distilling five ways AI front-runner firms redesign how work gets done, continuing its adoption-to-workflow-redesign research line.",
+          "url": "https://www.bcg.com/publications/2026/companies-use-ai-to-redesign-work",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "delivery_production",
+            "strategy_signal"
+          ],
+          "event_score": 76
+        },
+        {
+          "date": "2026-09-24",
+          "type": "platform",
+          "title": "BCG X 发布 Frontline Ops AI 资产：把 AI 推向一线运营的代表性产品化输出",
+          "title_en": "BCG X releases Frontline Ops AI, a productized asset for frontline operations",
+          "summary": "BCG 于 2026-09-24 在 BCG X 产品库发布 Frontline Ops AI（从预测到排班的技术方案展示），把 AI 落到一线运营的技术资产层面，是 BCG X 少见的对外产品化输出信号。",
+          "summary_en": "On September 24, 2026, BCG X published Frontline Ops AI in its product library, showcasing the technology behind forecast-to-shift frontline operations and marking a rare productized asset signal from BCG X.",
+          "url": "https://www.bcg.com/x/product-library/frontline-ops-ai",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "proprietary_assets",
+            "delivery_production",
+            "industry_coverage"
+          ],
+          "event_score": 74
+        },
         {
           "date": "2026-09-17",
           "type": "research",
@@ -1276,6 +1333,26 @@
       },
       "events": [
         {
+          "date": "2026-09-22",
+          "type": "platform",
+          "title": "Deloitte 发布 AI 与 agentic AI 驱动的 M&A Platform，覆盖交易执行全流程",
+          "title_en": "Deloitte expands AI and agentic AI capabilities with an M&A platform for smarter deal execution",
+          "summary": "Deloitte 于 2026-09-22（纽约）发布 M&A Platform，把 AI 与 agentic AI 嵌入并购交易的目标筛选、尽调与执行流程，帮助客户更智能、更流畅地完成交易。这是 Deloitte 首次把 agentic AI 产品化到 M&A 这一高价值交易场景，属于自有平台资产扩张。",
+          "summary_en": "On September 22, 2026, Deloitte launched its M&A Platform, embedding AI and agentic AI into target screening, diligence, and deal execution to enable smarter, more streamlined transactions, productizing agentic AI for the high-value M&A scenario as a proprietary platform asset.",
+          "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-announces-ma-platform.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "proprietary_assets",
+            "delivery_production",
+            "industry_coverage",
+            "strategy_signal"
+          ],
+          "event_score": 82
+        },
+        {
           "date": "2026-09-10",
           "type": "research",
           "title": "Deloitte 与 The Manufacturing Institute 发布研究：AI 可加速制造业技能培训",
@@ -1995,6 +2072,25 @@
       },
       "events": [
         {
+          "date": "2026-09-22",
+          "type": "organization",
+          "title": "KPMG 新设 Client Technology & Innovation Group：整合创新、AI 与生态，目标是打造 AI-native 业务",
+          "title_en": "KPMG announces Client Technology & Innovation Group to build AI-native businesses",
+          "summary": "KPMG 于 2026-09-22 宣布设立 Client Technology & Innovation Group（10 月 1 日生效），由 15 年老将 Todd Lohr 出任副主席并直接向 CEO 汇报，把创新、AI 与生态系统整合到一个组织内，建设 AI-native 业务并加速新业务孵化，被视为 KPMG AI 部门的重组升级。",
+          "summary_en": "On September 22, 2026, KPMG announced its Client Technology & Innovation Group (effective October 1), led by 15-year veteran Todd Lohr as Vice Chair reporting directly to the CEO, consolidating innovation, AI, and ecosystems under one umbrella to build AI-native businesses and accelerate new ventures.",
+          "url": "https://kpmg.com/us/en/media/news/kpmg-announces-client-technology-innovation-group.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "strategy_signal",
+            "organization",
+            "proprietary_assets"
+          ],
+          "event_score": 78
+        },
+        {
           "date": "2026-07-28",
           "type": "research",
           "title": "KPMG Singapore 发布 AI ROI 观察：企业在 AI 雄心与回报现实之间平衡",
@@ -2118,6 +2214,45 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-09-23",
+          "type": "investment",
+          "title": "Accenture 战略投资 Within，结合其 work-to-agent 平台加速企业级 AI 采纳",
+          "title_en": "Accenture invests in Within to map work for AI and accelerate enterprise adoption",
+          "summary": "Accenture 于 2026-09-23 宣布战略投资 Within，并把自家 AI 交付规模与 Within 的 work-to-agent 平台结合，解决企业流程可见性与自动化的问题，帮助客户在企业范围加速 AI 采纳。这是 Accenture 在 agentic AI 供给侧的又一资本布局。",
+          "summary_en": "On September 23, 2026, Accenture announced a strategic investment in Within, combining its AI delivery scale with Within's work-to-agent platform to tackle process visibility and automation and help clients accelerate AI adoption across the enterprise.",
+          "url": "https://www.stocktitan.net/news/ACN/accenture-and-within-help-clients-accelerate-ai-across-the-pttumzvthrc1.html",
+          "source_level": "official_press_release",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "capital_ma",
+            "tech_partnership",
+            "delivery_production"
+          ],
+          "event_score": 78
+        },
+        {
+          "date": "2026-09-22",
+          "type": "client_proof",
+          "title": "Volvo Cars 成为 Accenture 与 Google Cloud 开源平台 Horizon 的首席行业伙伴：测试提速 9 倍、开发成本降 40%",
+          "title_en": "Volvo Cars becomes lead industry partner for Horizon, the open-source gen-AI software platform by Accenture and Google Cloud",
+          "summary": "Accenture 与 Google Cloud 于 2026-09-22 宣布 Volvo Cars 出任 Horizon 平台首席行业伙伴。Horizon 是构建在 Google Cloud 上的开源软件开发平台，面向软件定义汽车的 gen-AI 开发（尤其 Android Automotive 信息娱乐系统），官方量化了测试提速最高 9 倍、信息娱乐开发成本降低最高 40%。这是 Accenture 平台资产获得头部车企背书的客户证明。",
+          "summary_en": "On September 22, 2026, Accenture and Google Cloud announced Volvo Cars as lead industry partner for Horizon, an open-source software development platform on Google Cloud for gen-AI-driven software-defined vehicle development, with quantified results of up to 9x faster testing and up to 40% lower infotainment development costs.",
+          "url": "https://www.stocktitan.net/news/ACN/accenture-and-google-cloud-transform-software-development-with-volvo-1efz48amr6oj.html",
+          "source_level": "official_press_release",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "partially_verified",
+          "dimension_tags": [
+            "client_value_proof",
+            "proprietary_assets",
+            "tech_partnership",
+            "industry_coverage"
+          ],
+          "event_score": 80
+        },
         {
           "date": "2026-09-18",
           "type": "partnership",

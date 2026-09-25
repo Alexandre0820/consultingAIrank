@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-09-12",
-    "updated_at": "2026-09-19",
+    "previous_updated_at": "2026-09-19",
+    "updated_at": "2026-09-25",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-09-19 本次刷新窗口为 2026-09-13 至 09-19，净新增 7 条：Anthropic 任命 Accenture 为首个前沿模型「嵌入式评估方」（09-18，双方各投 10 亿美元，本周头条）、McKinsey 年度旗舰《Technology Trends Outlook 2026》（09-15）与两篇 AI 研究（agentic transformation office 09-16、欧洲 AI 应用层 09-17）、BCG 的 IT 支出脉搏调查与亚太 CEO AI 经验（均 09-17）、Bain 炼油业 AI 韧性手册（09-15，media 核实）。遗留项复核：OW-SDAIA《Innovation Oasis》确认为 2024 年事件（此前误标 2026-09-04），该 hold 项关闭。Deloitte、PwC、EY、KPMG、Oliver Wyman、Kearney、FTI、A&M、Strategy&、Monitor Deloitte 窗口内无可确认的净新增动作；Capgemini 因检索通道连续超时覆盖不足，下轮优先补扫。评分口径不变：事件信号分 + 来源可信度 + 双层评分结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-09-25 本次刷新窗口为 2026-09-20 至 09-25，净新增 7 条：Deloitte 发布 AI 与 agentic AI 驱动的 M&A Platform（09-22）、Volvo Cars 出任 Accenture 与 Google Cloud 开源平台 Horizon 首席行业伙伴（09-22，测试提速 9 倍/成本降 40%）、KPMG 新设 Client Technology & Innovation Group 打造 AI-native 业务（09-22）、Accenture 战略投资 Within 的 work-to-agent 平台（09-23）、BCG 三条（AI 领先者工作方式研究 09-24、BCG X Frontline Ops AI 产品化资产 09-24、AI 销售新商业化模型 09-25）；BCG 本周实际产出六篇 AI 内容，按同周不堆量原则保留三条、其余留痕候选池。Accenture Edge×AWS 因直链未取得暂列 hold。McKinsey、Bain、PwC、EY、L.E.K.、Capgemini（连续第三轮）、Oliver Wyman、Kearney、FTI、A&M、Roland Berger、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；OW 'AI 负责人'遗留项两轮未核实正式关闭，KPMG-Anthropic 联盟（5 月）确认为历史补漏核对项。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
