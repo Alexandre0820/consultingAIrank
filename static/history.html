@@ -34,9 +34,11 @@
         <div class="panel-title">
           <div>
             <h2 id="chartTitle">排名折线</h2>
-            <p id="chartSubtitle">第 1 名在顶部；悬停圆点查看公司、期次与名次。</p>
+            <p id="chartSubtitle">第 1 名在顶部；点击折线、圆点或右侧公司名可锁定高亮，再次点击取消。</p>
           </div>
+          <span class="rk-window-label" id="windowLabel"></span>
         </div>
+        <div class="rk-slider-row" id="sliderWrap"></div>
         <div class="rank-chart-wrap" id="chartWrap">
           <div class="empty" id="chartLoading">历史数据加载中…</div>
         </div>
@@ -46,10 +48,20 @@
         <div class="panel-title">
           <div>
             <h2 id="tableTitle">各期排名明细</h2>
-            <p id="tableSubtitle">单元格内小字为当期行动力分，▲▼ 为相对上一期变化；悬停表格行可在折线图中高亮该公司。</p>
+            <p id="tableSubtitle">单元格内小字为当期行动力分，▲▼ 为相对上一期变化；点击表格行可锁定高亮对应公司。</p>
           </div>
         </div>
         <div class="rank-table-wrap" id="tableWrap"></div>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="panel-title">
+          <div>
+            <h2 id="insightsTitle">排名变化洞察</h2>
+            <p id="insightsSubtitle">由各期名次自动汇总：谁在上升、谁在回落，以及这背后说明什么。</p>
+          </div>
+        </div>
+        <div class="insights-grid" id="insightsGrid"></div>
       </section>
     </main>
 

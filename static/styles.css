@@ -1605,3 +1605,52 @@ input:focus, select:focus {
 
 .history-foot { width: min(1320px, calc(100vw - 40px)); margin: 0 auto 40px; }
 .history-foot p { color: var(--muted); font-size: 13px; line-height: 1.7; }
+
+/* ===== 历史页 v2：滑动条、选中高亮、洞察区（2026-09-25） ===== */
+.rk-slider-row {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  margin: 4px 0 14px;
+}
+
+.rk-slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.rk-slider input[type="range"] {
+  width: 220px;
+  accent-color: var(--ink);
+  cursor: pointer;
+}
+
+.rk-window-label {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+
+.rank-chart-wrap .rk-hit { cursor: pointer; }
+.rank-chart-wrap .rk-line { cursor: pointer; }
+.rank-chart-wrap .rk-dot { cursor: pointer; }
+.rank-chart-wrap .rk-end { cursor: pointer; }
+
+.rank-chart-wrap svg.has-pick .rk-line { opacity: 0.08; }
+.rank-chart-wrap svg.has-pick .rk-dot { opacity: 0.08; }
+.rank-chart-wrap svg.has-pick .rk-end { opacity: 0.18; }
+.rank-chart-wrap svg.has-pick .rk-line.picked { opacity: 1; stroke-width: 3.6; }
+.rank-chart-wrap svg.has-pick .rk-dot.picked { opacity: 1; r: 4.4; }
+.rank-chart-wrap svg.has-pick .rk-end.picked { opacity: 1; font-size: 14px; font-weight: 700; }
+
+.rank-table tbody tr { cursor: pointer; }
+.rank-table tbody tr.row-picked { background: rgba(29, 78, 216, 0.10); outline: 1px solid rgba(29, 78, 216, 0.35); }
