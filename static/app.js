@@ -72,6 +72,8 @@ const I18N = {
     companyCountLabel: "家传统咨询 / 专业服务公司",
     filtersTitle: "筛选",
     filtersSubtitle: "左侧控制筛选；榜单按公司最近 AI 动作排序。",
+    navBoard: "行动力榜单",
+    navHistory: "历史排名",
     insightsTitle: "核心观察",
     insightsSubtitle: "从本周净新增的公开信号里，提炼对 AI 咨询行业的核心观察。",
     wechatEyebrow: "Praxis Advisory",
@@ -99,6 +101,8 @@ const I18N = {
     companyCountLabel: "traditional consulting / professional services firms",
     filtersTitle: "Filters",
     filtersSubtitle: "Use the left panel to filter. The board ranks firms by their most recent AI actions.",
+    navBoard: "Action Ranking",
+    navHistory: "Rank History",
     insightsTitle: "Key Observations",
     insightsSubtitle: "Core observations on the AI consulting industry, drawn from this week's net-new public signals.",
     wechatEyebrow: "Praxis Advisory",
@@ -275,6 +279,8 @@ function applyStaticTranslations() {
   if (els.filtersSubtitle) els.filtersSubtitle.textContent = t("filtersSubtitle");
   if (els.insightsTitle) els.insightsTitle.textContent = t("insightsTitle");
   if (els.insightsSubtitle) els.insightsSubtitle.textContent = t("insightsSubtitle");
+  document.querySelectorAll("[data-nav='board']").forEach((el) => (el.textContent = t("navBoard")));
+  document.querySelectorAll("[data-nav='history']").forEach((el) => (el.textContent = t("navHistory")));
   if (els.wechatEyebrow) els.wechatEyebrow.textContent = t("wechatEyebrow");
   if (els.wechatTitle) els.wechatTitle.textContent = t("wechatTitle");
   if (els.wechatBody) els.wechatBody.textContent = t("wechatBody");

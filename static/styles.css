@@ -1497,3 +1497,111 @@ input:focus, select:focus {
   .card-details__summary { align-items: flex-start; flex-direction: column; }
   .rank-navigator { grid-template-columns: 1fr; }
 }
+
+/* ===== 站点导航栏（2026-09-25） ===== */
+.site-nav {
+  width: min(1320px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: 16px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  position: relative;
+  z-index: 5;
+}
+
+.site-nav__brand {
+  font-family: "Cormorant Garamond", "Noto Serif SC", "Songti SC", serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.site-nav__link {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.site-nav__link:hover { color: var(--ink); }
+
+.site-nav__link.is-active {
+  background: var(--ink);
+  color: var(--paper-2);
+}
+
+.site-nav__lang {
+  display: flex;
+  gap: 2px;
+  position: static;
+  box-shadow: none;
+}
+
+/* ===== 历史排名页（2026-09-25） ===== */
+.history-hero {
+  width: min(1320px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: 30px 0 22px;
+}
+
+.history-hero h1 { font-size: 40px; margin: 6px 0 8px; }
+
+.history-layout {
+  width: min(1320px, calc(100vw - 40px));
+  margin: 0 auto 34px;
+  display: grid;
+  gap: 22px;
+}
+
+.history-panel { padding: 22px 24px; }
+
+.rank-chart-wrap { overflow-x: auto; }
+.rank-chart-wrap svg { min-width: 980px; display: block; }
+
+.rank-chart-wrap .rk-line { transition: stroke-width 0.12s, opacity 0.12s; }
+.rank-chart-wrap svg.dim .rk-line { opacity: 0.12; }
+.rank-chart-wrap svg.dim .rk-dot { opacity: 0.1; }
+.rank-chart-wrap svg.dim .rk-line.on { opacity: 1; stroke-width: 3.2; }
+.rank-chart-wrap svg.dim .rk-dot.on { opacity: 1; }
+
+.rank-table-wrap { overflow-x: auto; }
+
+.rank-table { border-collapse: collapse; width: 100%; font-size: 13px; min-width: 900px; }
+.rank-table th, .rank-table td { border-bottom: 1px solid var(--line); padding: 7px 9px; text-align: center; }
+.rank-table thead th { color: var(--muted); font-size: 12px; border-bottom: 2px solid rgba(180, 35, 24, 0.35); font-family: ui-sans-serif, system-ui, sans-serif; }
+.rank-table tbody th.lt { text-align: left; font-size: 13.5px; white-space: nowrap; }
+.rank-table tbody tr:hover { background: rgba(23, 20, 17, 0.05); }
+.rank-table td b { font-size: 13.5px; }
+.rank-table td small { display: block; color: var(--muted); font-size: 10.5px; }
+.rank-table .rk-up { color: #15803d; font-size: 11px; }
+.rank-table .rk-down { color: var(--red); font-size: 11px; }
+.rank-table .rk-flat { color: var(--muted); font-size: 11px; }
+.rank-table .heat-top { background: rgba(21, 128, 61, 0.09); }
+.rank-table .heat-mid { background: transparent; }
+.rank-table .heat-low { background: rgba(23, 20, 17, 0.04); }
+
+.history-foot { width: min(1320px, calc(100vw - 40px)); margin: 0 auto 40px; }
+.history-foot p { color: var(--muted); font-size: 13px; line-height: 1.7; }

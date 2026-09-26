@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>历史排名 · AI咨询行动榜</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="./index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="./index.html" data-nav="board">行动力榜单</a>
+          <a class="site-nav__link is-active" href="./history.html" data-nav="history">历史排名</a>
+        </div>
+        <div class="site-nav__lang lang-switch">
+          <button id="langZh" class="lang-switch__button is-active" type="button" aria-pressed="true">中文</button>
+          <button id="langEn" class="lang-switch__button" type="button" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="history-hero">
+      <p class="eyebrow" id="historyEyebrow">Rank History · 2026-06 → Now</p>
+      <h1 id="historyTitle">历史排名轨迹</h1>
+      <p class="subtitle" id="historySubtitle">从首期到最新一期的完整排名变化：各期数据取自当期发布快照，按现行行动力算法统一重算，分数跨期可比。</p>
+    </header>
+
+    <main class="history-layout">
+      <section class="panel history-panel">
+        <div class="panel-title">
+          <div>
+            <h2 id="chartTitle">排名折线</h2>
+            <p id="chartSubtitle">第 1 名在顶部；悬停圆点查看公司、期次与名次。</p>
+          </div>
+        </div>
+        <div class="rank-chart-wrap" id="chartWrap">
+          <div class="empty" id="chartLoading">历史数据加载中…</div>
+        </div>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="panel-title">
+          <div>
+            <h2 id="tableTitle">各期排名明细</h2>
+            <p id="tableSubtitle">单元格内小字为当期行动力分，▲▼ 为相对上一期变化；悬停表格行可在折线图中高亮该公司。</p>
+          </div>
+        </div>
+        <div class="rank-table-wrap" id="tableWrap"></div>
+      </section>
+    </main>
+
+    <footer class="history-foot">
+      <p id="historyNote">排名与分数为研究预览口径，不代表权威排名；早期页面的展示公式与现行版本略有差异，本页按现行算法统一重算以保证跨期可比。</p>
+    </footer>
+
+    <script src="./history.js"></script>
+  </body>
+</html>
