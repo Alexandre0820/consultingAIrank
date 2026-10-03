@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "refresh_date": "2026-10-03",
+    "comparison_start": "2026-09-25",
+    "description": "Net-new events merged during this refresh. Window: 2026-09-26 to 10-03. A thin week: Bain released its 7th annual Global Technology Report (09-29, headline: AI needs ~$6T annual revenue by 2031 to fund the buildout, with four sibling reports), and L.E.K. published two healthcare-IT AI pieces (09-29, 09-30). BCG had a zero-publication week for the first time since tracking began (its Oct 2 batch contained no AI pieces); McKinsey, Deloitte, Accenture, KPMG, PwC, EY, Capgemini (fourth consecutive quiet round), Oliver Wyman, Kearney, FTI Consulting, Alvarez & Marsal, Roland Berger, Strategy&, and Monitor Deloitte had no verifiable net-new public AI signals in the window. An Oliver Wyman Forum-NYSE CEO survey (profitable AI + risk control) surfaced in media coverage but lacks a confirmed first-party date; held for next round."
+  },
+  "events": [
+    {
+      "company_id": "bain",
+      "date": "2026-09-29",
+      "type": "research",
+      "title": "Bain 发布第 7 届全球技术报告：AI 需在 2031 年前创造约 6 万亿美元年收入才能支撑基建投入",
+      "title_en": "Bain releases its 7th Global Technology Report: AI needs ~$6 trillion annual revenue by 2031 to fund the buildout",
+      "summary": "Bain 于 2026-09-29（波士顿）发布年度旗舰 Global Technology Report 2026：AI 必须在 2031 年前产生约 6 万亿美元年收入（其中 4.2 万亿为超出当前预期的新增收入）才能匹配基建投入，届时年度 AI 基础设施支出预计达约 1.5 万亿美元。报告同期发布数据中心、硬件、软件投资与数据变现四篇系列。这是继 4.7 万亿美元利润研究后 Bain 对 AI 经济账的又一次定调之作。",
+      "summary_en": "On September 29, 2026, Bain released its flagship Global Technology Report 2026: AI must generate roughly $6 trillion in annual revenue by 2031 (including $4.2 trillion beyond current projections) to match the infrastructure buildout, with annual AI infrastructure spending reaching about $1.5 trillion, accompanied by sibling reports on data centers, hardware, software investing, and data monetization.",
+      "url": "https://www.bain.com/insights/new-innovation-is-required-to-fund-ais-6-trillion-buildout-technology-report-2026/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "client_value_proof"
+      ],
+      "event_score": 86
+    },
+    {
+      "company_id": "lek",
+      "date": "2026-09-29",
+      "type": "research",
+      "title": "L.E.K. 发布《How AI Is Reshaping the HCIT Landscape》：AI 重塑医疗 IT 格局",
+      "title_en": "L.E.K. publishes How AI Is Reshaping the HCIT Landscape",
+      "summary": "L.E.K. 于 2026-09-29 发布医疗健康 IT（HCIT）研究，拆解 AI 如何改变 HCIT 厂商的竞争格局、产品边界与买方预期，延续其在医疗 AI 场景的连续方法论输出。",
+      "summary_en": "On September 29, 2026, L.E.K. published research on how AI is reshaping the healthcare IT landscape, examining shifts in vendor competition, product boundaries, and buyer expectations, continuing its healthcare AI methodology output.",
+      "url": "https://www.lek.com/insights/tech-enabled-services-and-healthcare-it/how-ai-reshaping-hcit-landscape",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_official_page_fetch",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "event_score": 72
+    },
+    {
+      "company_id": "lek",
+      "date": "2026-09-30",
+      "type": "research",
+      "title": "L.E.K. 发布《The Next Wave of HCIT Investment》：下一波医疗 IT 投资浪潮",
+      "title_en": "L.E.K. publishes The Next Wave of HCIT Investment",
+      "summary": "L.E.K. 于 2026-09-30 发布 HCIT 投资研究，讨论 AI 驱动下医疗 IT 赛道的下一波投资机会与配置逻辑，与 9 月 29 日的 HCIT 格局研究构成连续输出。",
+      "summary_en": "On September 30, 2026, L.E.K. published research on the next wave of healthcare IT investment, covering where AI-driven opportunities and capital allocation are heading, pairing with its September 29 HCIT landscape piece.",
+      "url": "https://www.lek.com/insights/tech-enabled-services-and-healthcare-it/next-wave-hcit-investment",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_official_page_fetch",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "client_value_proof"
+      ],
+      "event_score": 70
+    }
+  ]
+}

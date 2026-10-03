@@ -732,7 +732,8 @@ function comparisonRangeLabel() {
 
 function isNetNewEvent(event) {
   const eventDate = eventTimestamp(event.date);
-  return eventDate >= eventTimestamp(comparisonStartDate()) && eventDate <= eventTimestamp(data.meta.updated_at);
+  // 上一快照日当天的事件属于上一期，窗口为（上一快照日，本期快照日]
+  return eventDate > eventTimestamp(comparisonStartDate()) && eventDate <= eventTimestamp(data.meta.updated_at);
 }
 
 function collectWeeklyNetNewEvents() {

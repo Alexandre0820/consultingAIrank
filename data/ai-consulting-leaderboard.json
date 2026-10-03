@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-09-19",
-    "updated_at": "2026-09-25",
+    "previous_updated_at": "2026-09-25",
+    "updated_at": "2026-10-03",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-09-25 本次刷新窗口为 2026-09-20 至 09-25，净新增 7 条：Deloitte 发布 AI 与 agentic AI 驱动的 M&A Platform（09-22）、Volvo Cars 出任 Accenture 与 Google Cloud 开源平台 Horizon 首席行业伙伴（09-22，测试提速 9 倍/成本降 40%）、KPMG 新设 Client Technology & Innovation Group 打造 AI-native 业务（09-22）、Accenture 战略投资 Within 的 work-to-agent 平台（09-23）、BCG 三条（AI 领先者工作方式研究 09-24、BCG X Frontline Ops AI 产品化资产 09-24、AI 销售新商业化模型 09-25）；BCG 本周实际产出六篇 AI 内容，按同周不堆量原则保留三条、其余留痕候选池。Accenture Edge×AWS 因直链未取得暂列 hold。McKinsey、Bain、PwC、EY、L.E.K.、Capgemini（连续第三轮）、Oliver Wyman、Kearney、FTI、A&M、Roland Berger、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；OW 'AI 负责人'遗留项两轮未核实正式关闭，KPMG-Anthropic 联盟（5 月）确认为历史补漏核对项。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-03 本次刷新窗口为 2026-09-26 至 10-03，是统计以来最清淡的一周，净新增 3 条：Bain 第 7 届全球技术报告（09-29，核心测算 AI 需在 2031 年前创造约 6 万亿美元年收入才能支撑基建，含数据中心/硬件/软件/数据变现四篇系列）、L.E.K. 两篇医疗 IT AI 研究（09-29 格局重塑、09-30 投资浪潮）。BCG 出现跟踪以来首个零发布周（10-02 恢复更新但无 AI 主题）；McKinsey、Deloitte、Accenture、KPMG、PwC、EY、Capgemini（连续第四轮）、Oliver Wyman、Kearney、FTI、A&M、Roland Berger、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；OW Forum × NYSE 的 CEO 调查报道缺一手日期，留痕待下轮核实。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -875,6 +875,25 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-09-29",
+          "type": "research",
+          "title": "Bain 发布第 7 届全球技术报告：AI 需在 2031 年前创造约 6 万亿美元年收入才能支撑基建投入",
+          "title_en": "Bain releases its 7th Global Technology Report: AI needs ~$6 trillion annual revenue by 2031 to fund the buildout",
+          "summary": "Bain 于 2026-09-29（波士顿）发布年度旗舰 Global Technology Report 2026：AI 必须在 2031 年前产生约 6 万亿美元年收入（其中 4.2 万亿为超出当前预期的新增收入）才能匹配基建投入，届时年度 AI 基础设施支出预计达约 1.5 万亿美元。报告同期发布数据中心、硬件、软件投资与数据变现四篇系列。这是继 4.7 万亿美元利润研究后 Bain 对 AI 经济账的又一次定调之作。",
+          "summary_en": "On September 29, 2026, Bain released its flagship Global Technology Report 2026: AI must generate roughly $6 trillion in annual revenue by 2031 (including $4.2 trillion beyond current projections) to match the infrastructure buildout, with annual AI infrastructure spending reaching about $1.5 trillion, accompanied by sibling reports on data centers, hardware, software investing, and data monetization.",
+          "url": "https://www.bain.com/insights/new-innovation-is-required-to-fund-ais-6-trillion-buildout-technology-report-2026/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_web_search",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "client_value_proof"
+          ],
+          "event_score": 86
+        },
         {
           "date": "2026-09-15",
           "type": "research",
@@ -2799,6 +2818,43 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-09-30",
+          "type": "research",
+          "title": "L.E.K. 发布《The Next Wave of HCIT Investment》：下一波医疗 IT 投资浪潮",
+          "title_en": "L.E.K. publishes The Next Wave of HCIT Investment",
+          "summary": "L.E.K. 于 2026-09-30 发布 HCIT 投资研究，讨论 AI 驱动下医疗 IT 赛道的下一波投资机会与配置逻辑，与 9 月 29 日的 HCIT 格局研究构成连续输出。",
+          "summary_en": "On September 30, 2026, L.E.K. published research on the next wave of healthcare IT investment, covering where AI-driven opportunities and capital allocation are heading, pairing with its September 29 HCIT landscape piece.",
+          "url": "https://www.lek.com/insights/tech-enabled-services-and-healthcare-it/next-wave-hcit-investment",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "client_value_proof"
+          ],
+          "event_score": 70
+        },
+        {
+          "date": "2026-09-29",
+          "type": "research",
+          "title": "L.E.K. 发布《How AI Is Reshaping the HCIT Landscape》：AI 重塑医疗 IT 格局",
+          "title_en": "L.E.K. publishes How AI Is Reshaping the HCIT Landscape",
+          "summary": "L.E.K. 于 2026-09-29 发布医疗健康 IT（HCIT）研究，拆解 AI 如何改变 HCIT 厂商的竞争格局、产品边界与买方预期，延续其在医疗 AI 场景的连续方法论输出。",
+          "summary_en": "On September 29, 2026, L.E.K. published research on how AI is reshaping the healthcare IT landscape, examining shifts in vendor competition, product boundaries, and buyer expectations, continuing its healthcare AI methodology output.",
+          "url": "https://www.lek.com/insights/tech-enabled-services-and-healthcare-it/how-ai-reshaping-hcit-landscape",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-09-10",
           "type": "research",
