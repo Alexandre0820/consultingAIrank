@@ -5,7 +5,7 @@
     "leaderboard_snapshot_date": "2026-10-03",
     "status": "staging",
     "collection_method": "official_page_fetch_primary_web_search_partial_outage",
-    "notes": "本次采集窗口为 2026-10-04 至 10-11。净新增 3 条：L.E.K. 两条（S&P 500 AI 价值差距 10-09、医疗 AI 自建vs采购 10-08）、BCG 一条（私人市场可持续报告中的 AI 风险与机会 10-06）。重要说明：本轮 web_search 提供方大部分时间不可用（重试多次均失败），Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 只能通过官方页面部分覆盖（Deloitte/Bain/Capgemini/Accenture 页面为 JS 渲染无法抓取），这些公司'本周无信号'的状态未经充分核实，下轮必须优先补扫。BCG 另有两条 AI 相关视频（10-05 电网效率、10-07 journeys to atomic action）无独立 URL，未入库。OW Forum × NYSE CEO 调查、Accenture Edge×AWS 直链两项 hold 继续挂账。"
+    "notes": "本次采集窗口为 2026-10-04 至 10-11。净新增 3 条：L.E.K. 两条（S&P 500 AI 价值差距 10-09、医疗 AI 自建vs采购 10-08）、BCG 一条（私人市场可持续报告中的 AI 风险与机会 10-06）。重要说明：本轮 web_search 提供方大部分时间不可用（重试多次均失败），Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 只能通过官方页面部分覆盖（Deloitte/Bain/Capgemini/Accenture 页面为 JS 渲染无法抓取），这些公司'本周无信号'的状态未经充分核实，下轮必须优先补扫。BCG 另有两条 AI 相关视频（10-05 电网效率、10-07 journeys to atomic action）无独立 URL，未入库。OW Forum × NYSE CEO 调查、Accenture Edge×AWS 直链两项 hold 继续挂账。 浏览器补扫（搜索故障恢复后）新增：Accenture-Dell Business Group（10-08）、KPMG × Workday/Google Cloud AI 体验层（10-08）两条净新增，及 Deloitte 基建 AI 调查（10-01）一条上轮回填；另发现 KPMG 多条历史漏检（Q3 AI Pulse 09-24、Reality Defender 投资 09-10、AIUC-1 认证 08-27），超出回填窗口，留作历史补漏清单。"
   },
   "items": [
     {
@@ -13,8 +13,12 @@
       "published_at": "2026-10-09",
       "discovered_at": "2026-10-11",
       "scope": "company",
-      "company_ids": ["lek"],
-      "company_names": ["L.E.K. Consulting"],
+      "company_ids": [
+        "lek"
+      ],
+      "company_names": [
+        "L.E.K. Consulting"
+      ],
       "candidate_event_type": "research",
       "title": "L.E.K. 发布 S&P 500 AI 价值差距分析",
       "summary": "成分股级 AI 价值差距分析，识别各行业 AI 领先者。",
@@ -24,7 +28,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_official_page_fetch",
       "verification_status": "verified",
-      "dimension_tags": ["thought_leadership", "strategy_signal", "industry_coverage"],
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "industry_coverage"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照（10-03）、官网列表确认、库内无重复；已并入 2026-10-11 周更，事件分 80。",
       "leaderboard_action": "new_candidate",
@@ -35,8 +43,12 @@
       "published_at": "2026-10-08",
       "discovered_at": "2026-10-11",
       "scope": "company",
-      "company_ids": ["lek"],
-      "company_names": ["L.E.K. Consulting"],
+      "company_ids": [
+        "lek"
+      ],
+      "company_names": [
+        "L.E.K. Consulting"
+      ],
       "candidate_event_type": "research",
       "title": "L.E.K. 发布《AI in Healthcare》",
       "summary": "医疗 AI 机会、威胁与自建vs采购新等式。",
@@ -46,7 +58,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_official_page_fetch",
       "verification_status": "verified",
-      "dimension_tags": ["thought_leadership", "industry_coverage", "client_value_proof"],
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "client_value_proof"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官网列表确认、库内无重复；已并入 2026-10-11 周更，事件分 74。",
       "leaderboard_action": "new_candidate",
@@ -57,8 +73,12 @@
       "published_at": "2026-10-06",
       "discovered_at": "2026-10-11",
       "scope": "company",
-      "company_ids": ["bcg"],
-      "company_names": ["BCG"],
+      "company_ids": [
+        "bcg"
+      ],
+      "company_names": [
+        "BCG"
+      ],
       "candidate_event_type": "research",
       "title": "BCG 私人市场可持续报告（AI 风险与机会）",
       "summary": "年度私人市场可持续报告把 AI 列为新风险/机会变量。",
@@ -68,7 +88,10 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_official_page_fetch",
       "verification_status": "verified",
-      "dimension_tags": ["thought_leadership", "industry_coverage"],
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方页面、库内无重复；已并入 2026-10-11 周更，事件分 70。",
       "leaderboard_action": "new_candidate",
@@ -79,8 +102,12 @@
       "published_at": "2026-10-05",
       "discovered_at": "2026-10-11",
       "scope": "company",
-      "company_ids": ["bcg"],
-      "company_names": ["BCG"],
+      "company_ids": [
+        "bcg"
+      ],
+      "company_names": [
+        "BCG"
+      ],
       "candidate_event_type": "research",
       "title": "BCG 视频：Powering Better Grid Efficiency with Industrial AI（无直链）",
       "summary": "工业 AI 提升电网效率主题视频，发布页未提供独立 URL。",
@@ -90,7 +117,9 @@
       "confidence": "low",
       "discovery_channel": "daily_intake_official_page_fetch",
       "verification_status": "pending",
-      "dimension_tags": ["thought_leadership"],
+      "dimension_tags": [
+        "thought_leadership"
+      ],
       "merge_recommendation": "skip",
       "merge_rationale": "无独立 URL、内容无法核验；如后续出现文章版可再评估。",
       "leaderboard_action": "watch_only",
@@ -101,8 +130,12 @@
       "published_at": null,
       "discovered_at": "2026-10-03",
       "scope": "company",
-      "company_ids": ["oliver_wyman"],
-      "company_names": ["Oliver Wyman"],
+      "company_ids": [
+        "oliver_wyman"
+      ],
+      "company_names": [
+        "Oliver Wyman"
+      ],
       "candidate_event_type": "research",
       "title": "Oliver Wyman Forum × NYSE CEO 调查（仍待核实一手日期）",
       "summary": "媒体报道显示 OW Forum 与 NYSE 联合发布 CEO 调查（可盈利 AI + 风险控制）；本轮搜索故障未能核实官方日期与链接。",
@@ -112,7 +145,10 @@
       "confidence": "low",
       "discovery_channel": "daily_intake_web_search",
       "verification_status": "pending",
-      "dimension_tags": ["thought_leadership", "strategy_signal"],
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
       "merge_recommendation": "hold",
       "merge_rationale": "连续两轮未能核实一手日期与官方链接；搜索服务恢复后下轮优先处理。",
       "leaderboard_action": "watch_only",
@@ -123,8 +159,12 @@
       "published_at": "2026-09-22",
       "discovered_at": "2026-09-25",
       "scope": "company",
-      "company_ids": ["accenture"],
-      "company_names": ["Accenture"],
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
       "candidate_event_type": "partnership",
       "title": "Accenture Edge × AWS 中游市场 AI 合作（直链仍缺，第三轮 hold）",
       "summary": "日期与标题已确认，newsroom/wire 直链仍未取得。",
@@ -134,9 +174,128 @@
       "confidence": "medium",
       "discovery_channel": "daily_intake_web_search",
       "verification_status": "partially_verified",
-      "dimension_tags": ["tech_partnership", "delivery_production"],
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production"
+      ],
       "merge_recommendation": "hold",
       "merge_rationale": "持续留痕，找到 newsroom 链接后按回填处理。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "backlog-20261011-001",
+      "published_at": "2026-09-24",
+      "discovered_at": "2026-10-11",
+      "scope": "company",
+      "company_ids": [
+        "kpmg"
+      ],
+      "company_names": [
+        "KPMG"
+      ],
+      "candidate_event_type": "research",
+      "title": "KPMG Q3 AI Pulse Survey（历史漏检清单）",
+      "summary": "近六成领导者报告 AI 举措产生可衡量业务价值；治理、问责与员工采纳信心增强。",
+      "why_it_matters": "官方季度 AI 调查，落在 09-25 轮窗口内但当时漏检；超出单轮回填纪律，留待历史补漏专项。",
+      "url": "https://kpmg.com/us/en/media/news/q3-ai-pulse-2026.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "发布日期 09-24 早于上一快照（10-03）多个周期；作为历史补漏清单项，若未来做专项补漏再统一处理。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "backlog-20261011-002",
+      "published_at": "2026-09-10",
+      "discovered_at": "2026-10-11",
+      "scope": "company",
+      "company_ids": [
+        "kpmg"
+      ],
+      "company_names": [
+        "KPMG"
+      ],
+      "candidate_event_type": "investment",
+      "title": "KPMG 少数股权投资深伪检测平台 Reality Defender（历史漏检清单）",
+      "summary": "KPMG 对深伪检测领导者 Reality Defender 进行少数股权投资。",
+      "why_it_matters": "AI 安全方向的资本动作，落在 09-12 轮窗口内但当时漏检。",
+      "url": "https://kpmg.com/us/en/media/news/kpmg-llp-takes-minority-stake-in-deepfake-detection-leader-reality-defender.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "capital_ma",
+        "governance_risk"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "发布日期 09-10 超出单轮回填窗口；历史补漏清单项。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "backlog-20261011-003",
+      "published_at": "2026-08-27",
+      "discovered_at": "2026-10-11",
+      "scope": "company",
+      "company_ids": [
+        "kpmg"
+      ],
+      "company_names": [
+        "KPMG"
+      ],
+      "candidate_event_type": "governance",
+      "title": "KPMG 成为首家获 AIUC-1 认证的四大（历史漏检清单）",
+      "summary": "KPMG 与 AIUC 联合宣布其成为四大中首家取得 AIUC-1 认证的 AI 能力。",
+      "why_it_matters": "AI 治理认证信号，落在 09-03 轮窗口内但当时漏检。",
+      "url": "https://kpmg.com/us/en/media/news/kpmg-llp-becomes-first-big-four-firm-with-aiuc-1-certified-ai-capability.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "governance_risk",
+        "delivery_production"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "发布日期 08-27 距本轮过远；历史补漏清单项。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "backlog-20261011-004",
+      "published_at": "2026-09-24",
+      "discovered_at": "2026-10-11",
+      "scope": "company",
+      "company_ids": [
+        "pwc"
+      ],
+      "company_names": [
+        "PwC"
+      ],
+      "candidate_event_type": "research",
+      "title": "PwC 首届全球汽车业展望：AI 采用率 2030 年升至 72%（历史漏检清单）",
+      "summary": "汽车价值链 AI 采用未来五年将从 47% 升至 72%（PwC 首届 Global Automotive Outlook）。",
+      "why_it_matters": "官方行业研究，落在 09-25 轮窗口内但当时漏检。",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/automotive-ai-adoption-surge.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "发布日期 09-24 早于上一快照多个周期；历史补漏清单项。",
       "leaderboard_action": "watch_only",
       "matched_leaderboard_event_id": null
     }

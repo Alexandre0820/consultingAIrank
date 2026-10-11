@@ -6,7 +6,7 @@
     "updated_at": "2026-10-11",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-11 本次刷新窗口为 2026-10-04 至 10-11，净新增 3 条：L.E.K. S&P 500 AI 价值差距分析（10-09，旗舰级，其连续第七周产出 AI 信号）与医疗 AI 自建vs采购研究（10-08）、BCG 私人市场可持续报告中的 AI 风险与机会（10-06，零发布周后首篇）。覆盖说明：本轮 web_search 提供方大部分时间不可用，Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 仅经官方页面部分覆盖（多家页面为 JS 渲染无法抓取），'本周无信号'状态未经充分核实，下轮优先补扫；OW Forum × NYSE CEO 调查与 Accenture Edge×AWS 直链两项 hold 继续挂账。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-11 本次刷新窗口为 2026-10-04 至 10-11，净新增 3 条：L.E.K. S&P 500 AI 价值差距分析（10-09，旗舰级，其连续第七周产出 AI 信号）与医疗 AI 自建vs采购研究（10-08）、BCG 私人市场可持续报告中的 AI 风险与机会（10-06，零发布周后首篇）。覆盖说明：本轮 web_search 提供方大部分时间不可用，Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 仅经官方页面部分覆盖（多家页面为 JS 渲染无法抓取），'本周无信号'状态未经充分核实，下轮优先补扫；OW Forum × NYSE CEO 调查与 Accenture Edge×AWS 直链两项 hold 继续挂账。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。 搜索服务恢复后经浏览器补扫各公司新闻室（Deloitte/Accenture/KPMG/Capgemini/OW Forum 等），本轮追加净新增 3 条（Accenture-Dell Business Group 10-08、KPMG × Workday/Google Cloud AI 体验层 10-08、PwC-Cohere 全球联盟 10-05）与回填 3 条（Deloitte 未来基础设施调查 10-01、PwC 数字信任洞察 10-01、PwC AI 技能鸿沟 09-29，均为上轮漏检）；另发现 KPMG 三条历史漏检（Q3 AI Pulse 09-24、Reality Defender 09-10、AIUC-1 08-27）留作补漏清单。Bain 官网 Cloudflare 拦截、McKinsey 官网拒绝访问、OW Forum 文章无日期，三家本轮覆盖仍不完整。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },

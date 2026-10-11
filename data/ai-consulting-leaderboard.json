@@ -6,7 +6,7 @@
     "updated_at": "2026-10-11",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-11 本次刷新窗口为 2026-10-04 至 10-11，净新增 3 条：L.E.K. S&P 500 AI 价值差距分析（10-09，旗舰级，其连续第七周产出 AI 信号）与医疗 AI 自建vs采购研究（10-08）、BCG 私人市场可持续报告中的 AI 风险与机会（10-06，零发布周后首篇）。覆盖说明：本轮 web_search 提供方大部分时间不可用，Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 仅经官方页面部分覆盖（多家页面为 JS 渲染无法抓取），'本周无信号'状态未经充分核实，下轮优先补扫；OW Forum × NYSE CEO 调查与 Accenture Edge×AWS 直链两项 hold 继续挂账。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-11 本次刷新窗口为 2026-10-04 至 10-11，净新增 3 条：L.E.K. S&P 500 AI 价值差距分析（10-09，旗舰级，其连续第七周产出 AI 信号）与医疗 AI 自建vs采购研究（10-08）、BCG 私人市场可持续报告中的 AI 风险与机会（10-06，零发布周后首篇）。覆盖说明：本轮 web_search 提供方大部分时间不可用，Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 仅经官方页面部分覆盖（多家页面为 JS 渲染无法抓取），'本周无信号'状态未经充分核实，下轮优先补扫；OW Forum × NYSE CEO 调查与 Accenture Edge×AWS 直链两项 hold 继续挂账。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。 搜索服务恢复后经浏览器补扫各公司新闻室（Deloitte/Accenture/KPMG/Capgemini/OW Forum 等），本轮追加净新增 3 条（Accenture-Dell Business Group 10-08、KPMG × Workday/Google Cloud AI 体验层 10-08、PwC-Cohere 全球联盟 10-05）与回填 3 条（Deloitte 未来基础设施调查 10-01、PwC 数字信任洞察 10-01、PwC AI 技能鸿沟 09-29，均为上轮漏检）；另发现 KPMG 三条历史漏检（Q3 AI Pulse 09-24、Reality Defender 09-10、AIUC-1 08-27）留作补漏清单。Bain 官网 Cloudflare 拦截、McKinsey 官网拒绝访问、OW Forum 文章无日期，三家本轮覆盖仍不完整。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -1370,6 +1370,25 @@
       },
       "events": [
         {
+          "date": "2026-10-01",
+          "type": "research",
+          "title": "Deloitte 2026 未来基础设施调查：AI 与复杂性重塑全球基建格局（上轮漏检回填）",
+          "title_en": "Deloitte 2026 Future of Infrastructure Survey: integration, AI and complexity redefine the global landscape",
+          "summary": "Deloitte 于 2026-10-01 发布 Future of Infrastructure 2026 调查，指出随着数字与物理世界融合，政府与产业界面临一体化基础设施需求与遗留运营模式之间的结构性错位，AI 与复杂性成为重塑全球格局的核心变量。该条发布于 10-03 轮窗口内，因搜索服务故障漏检，经浏览器补扫 Deloitte 新闻室后回填。",
+          "summary_en": "On October 1, 2026, Deloitte released its Future of Infrastructure 2026 survey, finding that as digital and physical worlds merge, governments and industry face a fundamental misalignment between integrated infrastructure demands and legacy operating models, with AI and complexity redefining the landscape. Missed during the 10-03 round's search outage; backfilled via a browser sweep of Deloitte's press room.",
+          "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-launches-2026-future-of-infrastructure-survey.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "strategy_signal"
+          ],
+          "event_score": 76
+        },
+        {
           "date": "2026-09-22",
           "type": "platform",
           "title": "Deloitte 发布 AI 与 agentic AI 驱动的 M&A Platform，覆盖交易执行全流程",
@@ -1684,6 +1703,61 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-05",
+          "type": "partnership",
+          "title": "PwC 与 Cohere 宣布全球联盟，加速安全可信的企业级 AI 采用",
+          "title_en": "PwC and Cohere announce a global alliance to accelerate secure and trusted enterprise AI adoption",
+          "summary": "PwC 于 2026-10-05 宣布与 Cohere 建立全球战略联盟，把 Cohere 的安全企业级 AI 平台与 PwC 的转型专长结合，率先在加拿大落地，面向安全与可信场景推进企业 AI 采用。这是 PwC 在 OpenAI、Anthropic、Microsoft 之外绑定的又一家前沿模型厂商。",
+          "summary_en": "On October 5, 2026, PwC and Cohere announced a global alliance pairing Cohere's secure enterprise-grade AI platform with PwC's transformation expertise, launching first in Canada to accelerate secure and trusted enterprise AI adoption.",
+          "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/accelerate-secure-enterprise-ai-adoption.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "governance_risk"
+          ],
+          "event_score": 84
+        },
+        {
+          "date": "2026-10-01",
+          "type": "research",
+          "title": "PwC 2027 全球数字信任洞察：84% 高管预计前沿 AI 铺开后网络预算上升（上轮漏检回填）",
+          "title_en": "PwC 2027 Global Digital Trust Insights: 84% of senior leaders expect cyber budgets to rise as frontier AI rolls out",
+          "summary": "PwC 于 2026-10-01 发布 2027 Global Digital Trust Insights Survey：84% 的安全与财务负责人预期网络预算增加（去年为 78%），组织在 AI 快速演进的同时加倍投入网络安全。该条发布于 10-03 轮窗口内，因搜索服务故障漏检，经浏览器补扫 PwC 新闻室后回填。",
+          "summary_en": "On October 1, 2026, PwC released its 2027 Global Digital Trust Insights Survey finding 84% of security and finance leaders expect cyber budgets to increase (up from 78% last year) as frontier AI models roll out. Missed during the 10-03 round's search outage; backfilled via a browser sweep of PwC's newsroom.",
+          "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/senior-leaders-cyber-budget-rise.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "governance_risk"
+          ],
+          "event_score": 74
+        },
+        {
+          "date": "2026-09-29",
+          "type": "research",
+          "title": "PwC：AI 技能鸿沟扩大，最懂 AI 的员工正在流失（上轮漏检回填）",
+          "title_en": "PwC: companies risk losing their most AI-savvy employees while leaving the majority behind",
+          "summary": "PwC 于 2026-09-29 发布劳动力研究：不断扩大的 AI 技能鸿沟正在造成员工队伍分化，多数员工面临被落下的风险，而企业最 AI-savvy 的人才存在流失风险。该条发布于 10-03 轮窗口内，因搜索服务故障漏检，经浏览器补扫后回填。",
+          "summary_en": "On September 29, 2026, PwC published workforce research finding that a growing AI skills divide is creating a diverging workforce, with most workers at risk of being left behind while companies risk losing their most AI-savvy employees. Missed during the 10-03 round's search outage; backfilled via browser sweep.",
+          "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/companies-risk-losing-ai-savvy-employees.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_backfill",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-09-02",
           "type": "research",
@@ -2109,6 +2183,25 @@
       },
       "events": [
         {
+          "date": "2026-10-08",
+          "type": "partnership",
+          "title": "KPMG 携手 Workday 与 Google Cloud 推出 AI 员工体验层",
+          "title_en": "KPMG advances AI-powered workforce experiences with Workday and Google Cloud",
+          "summary": "KPMG 于 2026-10-08 宣布与 Workday（Sana）及 Google Cloud 合作打造新的员工体验：把 Gemini Enterprise 的 AI 能力与 Workday HCM 数据结合，改善 HR 流程中的员工体验，并作为企业 AI 体验层的参考实现。这是 KPMG 在 CT&I 集团之后把 AI 落到内部员工场景的最新动作。",
+          "summary_en": "On October 8, 2026, KPMG announced a new employee experience built with Sana from Workday, combining Google Cloud Gemini Enterprise AI capabilities with Workday HCM data to improve HR processes, positioned as a reference implementation of the enterprise AI experience layer.",
+          "url": "https://kpmg.com/us/en/media/news/kpmg-advances-ai-powered-workforce-experiences-with-workday-and-google-cloud.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "proprietary_assets"
+          ],
+          "event_score": 78
+        },
+        {
           "date": "2026-09-22",
           "type": "organization",
           "title": "KPMG 新设 Client Technology & Innovation Group：整合创新、AI 与生态，目标是打造 AI-native 业务",
@@ -2251,6 +2344,26 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-08",
+          "type": "partnership",
+          "title": "Accenture 与 Dell 成立 Accenture Dell Business Group：帮企业在自有环境规模化私有 AI 与 agentic AI 负载",
+          "title_en": "Accenture and Dell form the Accenture Dell Business Group to scale private AI and modernize infrastructure",
+          "summary": "Accenture 于 2026-10-08（纽约）宣布与 Dell Technologies 成立 Accenture Dell Business Group，把双方 20 多年的合作升级为专门业务组织，帮助企业在自有环境内规模化 AI、现代化基础设施并运行企业级 agentic AI 工作负载，强调数据控制与更可预测的经济性。这是继 Google Cloud 业务集团之后 Accenture 本月的第二个专属 AI 业务组织。",
+          "summary_en": "On October 8, 2026, Accenture and Dell Technologies announced the Accenture Dell Business Group, upgrading their 20+ year collaboration into a dedicated organization that helps enterprises scale AI in their own environments, modernize infrastructure, and run enterprise-grade agentic AI workloads with greater data control and predictable economics.",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-and-dell-technologies-expand-collaboration-to-help-enterprises-scale-private-ai-and-modernize-infrastructure",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "proprietary_assets",
+            "strategy_signal"
+          ],
+          "event_score": 86
+        },
         {
           "date": "2026-09-23",
           "type": "investment",
