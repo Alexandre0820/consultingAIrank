@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-09-25",
-    "updated_at": "2026-10-03",
+    "previous_updated_at": "2026-10-03",
+    "updated_at": "2026-10-11",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-03 本次刷新窗口为 2026-09-26 至 10-03，是统计以来最清淡的一周，净新增 3 条：Bain 第 7 届全球技术报告（09-29，核心测算 AI 需在 2031 年前创造约 6 万亿美元年收入才能支撑基建，含数据中心/硬件/软件/数据变现四篇系列）、L.E.K. 两篇医疗 IT AI 研究（09-29 格局重塑、09-30 投资浪潮）。BCG 出现跟踪以来首个零发布周（10-02 恢复更新但无 AI 主题）；McKinsey、Deloitte、Accenture、KPMG、PwC、EY、Capgemini（连续第四轮）、Oliver Wyman、Kearney、FTI、A&M、Roland Berger、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；OW Forum × NYSE 的 CEO 调查报道缺一手日期，留痕待下轮核实。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-11 本次刷新窗口为 2026-10-04 至 10-11，净新增 3 条：L.E.K. S&P 500 AI 价值差距分析（10-09，旗舰级，其连续第七周产出 AI 信号）与医疗 AI 自建vs采购研究（10-08）、BCG 私人市场可持续报告中的 AI 风险与机会（10-06，零发布周后首篇）。覆盖说明：本轮 web_search 提供方大部分时间不可用，Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 仅经官方页面部分覆盖（多家页面为 JS 渲染无法抓取），'本周无信号'状态未经充分核实，下轮优先补扫；OW Forum × NYSE CEO 调查与 Accenture Edge×AWS 直链两项 hold 继续挂账。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -484,6 +484,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-06",
+          "type": "research",
+          "title": "BCG 发布私人市场可持续报告：AI 同时带来新风险与新机会",
+          "title_en": "BCG publishes Sustainability in Private Markets 2026: AI poses new risks and opportunities",
+          "summary": "BCG 于 2026-10-06 发布私人市场可持续性年度报告，在进展综述之外把 AI 列为同时带来风险与机会的新变量，是 BCG 结束零发布周后的第一篇带 AI 主题的公开研究。",
+          "summary_en": "On October 6, 2026, BCG published its private-markets sustainability annual report, which alongside its progress review treats AI as a new variable bringing both risks and opportunities — BCG's first AI-themed public research after its zero-publication week.",
+          "url": "https://www.bcg.com/publications/2026/private-markets-sustainability-ai-risk",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 70
+        },
         {
           "date": "2026-09-25",
           "type": "research",
@@ -2818,6 +2836,44 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-10-09",
+          "type": "research",
+          "title": "L.E.K. 发布 S&P 500 AI 价值差距分析：各行业的 AI 领先者是谁",
+          "title_en": "L.E.K. publishes The AI Value Gap: what its analysis of the S&P 500 reveals about AI leaders in every sector",
+          "summary": "L.E.K. 于 2026-10-09 发布基于 S&P 500 的成分股级 AI 价值差距分析，识别每个行业的 AI 领先者及其与落后者的差距所在。这是 L.E.K. 首次把 AI 研究做到全市场指数样本层面，研究规格明显升级，也是其连续第六周产出 AI 相关公开信号。",
+          "summary_en": "On October 9, 2026, L.E.K. published a constituent-level AI value gap analysis of the S&P 500, identifying AI leaders in every sector and where the gaps lie. It is the first time L.E.K. has scaled its AI research to a whole-index sample, marking a clear upgrade in research scope and its sixth consecutive week of AI output.",
+          "url": "https://www.lek.com/insights/artificial-intelligence/ai-value-gap-what-our-analysis-sp-500-reveals-about-ai-leaders",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage"
+          ],
+          "event_score": 80
+        },
+        {
+          "date": "2026-10-08",
+          "type": "research",
+          "title": "L.E.K. 发布《AI in Healthcare》：医疗 AI 的自建与采购新等式",
+          "title_en": "L.E.K. publishes AI in Healthcare: opportunities, threats, and the new build-versus-buy equation",
+          "summary": "L.E.K. 于 2026-10-08 发布医疗 AI 研究，讨论医疗健康领域 AI 应用的机会与威胁，以及自建与采购之间的新决策框架，延续其医疗 AI 连续输出（本周第二篇）。",
+          "summary_en": "On October 8, 2026, L.E.K. published research on AI in healthcare, covering opportunities and threats and the new build-versus-buy equation, extending its healthcare AI output streak with a second piece this week.",
+          "url": "https://www.lek.com/insights/tech-enabled-services-and-healthcare-it/ai-healthcare-opportunities-threats-and-new-build",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "client_value_proof"
+          ],
+          "event_score": 74
+        },
         {
           "date": "2026-09-30",
           "type": "research",

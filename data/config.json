@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-09-25",
-    "updated_at": "2026-10-03",
+    "previous_updated_at": "2026-10-03",
+    "updated_at": "2026-10-11",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-03 本次刷新窗口为 2026-09-26 至 10-03，是统计以来最清淡的一周，净新增 3 条：Bain 第 7 届全球技术报告（09-29，核心测算 AI 需在 2031 年前创造约 6 万亿美元年收入才能支撑基建，含数据中心/硬件/软件/数据变现四篇系列）、L.E.K. 两篇医疗 IT AI 研究（09-29 格局重塑、09-30 投资浪潮）。BCG 出现跟踪以来首个零发布周（10-02 恢复更新但无 AI 主题）；McKinsey、Deloitte、Accenture、KPMG、PwC、EY、Capgemini（连续第四轮）、Oliver Wyman、Kearney、FTI、A&M、Roland Berger、Strategy&、Monitor Deloitte 窗口内无可确认的净新增信号；OW Forum × NYSE 的 CEO 调查报道缺一手日期，留痕待下轮核实。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-11 本次刷新窗口为 2026-10-04 至 10-11，净新增 3 条：L.E.K. S&P 500 AI 价值差距分析（10-09，旗舰级，其连续第七周产出 AI 信号）与医疗 AI 自建vs采购研究（10-08）、BCG 私人市场可持续报告中的 AI 风险与机会（10-06，零发布周后首篇）。覆盖说明：本轮 web_search 提供方大部分时间不可用，Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 仅经官方页面部分覆盖（多家页面为 JS 渲染无法抓取），'本周无信号'状态未经充分核实，下轮优先补扫；OW Forum × NYSE CEO 调查与 Accenture Edge×AWS 直链两项 hold 继续挂账。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },

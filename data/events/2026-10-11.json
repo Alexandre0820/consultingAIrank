@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "refresh_date": "2026-10-11",
+    "comparison_start": "2026-10-03",
+    "description": "Net-new events merged during this refresh. Window: 2026-10-04 to 10-11. L.E.K. led the week with a flagship-scale S&P 500 AI value gap analysis (10-09) and a healthcare AI build-versus-buy piece (10-08); BCG published a private-markets sustainability report examining AI risks and opportunities (10-06). Coverage caveat: the web-search provider was down for most of this refresh window, so Deloitte, Bain, Accenture, McKinsey, KPMG, PwC, EY, Capgemini, and Oliver Wyman could only be partially swept via official pages; their 'no signal' status is unverified this round and a re-sweep is scheduled for the next round. The OW Forum-NYSE CEO survey hold item remains unverified."
+  },
+  "events": [
+    {
+      "company_id": "lek",
+      "date": "2026-10-09",
+      "type": "research",
+      "title": "L.E.K. 发布 S&P 500 AI 价值差距分析：各行业的 AI 领先者是谁",
+      "title_en": "L.E.K. publishes The AI Value Gap: what its analysis of the S&P 500 reveals about AI leaders in every sector",
+      "summary": "L.E.K. 于 2026-10-09 发布基于 S&P 500 的成分股级 AI 价值差距分析，识别每个行业的 AI 领先者及其与落后者的差距所在。这是 L.E.K. 首次把 AI 研究做到全市场指数样本层面，研究规格明显升级，也是其连续第六周产出 AI 相关公开信号。",
+      "summary_en": "On October 9, 2026, L.E.K. published a constituent-level AI value gap analysis of the S&P 500, identifying AI leaders in every sector and where the gaps lie. It is the first time L.E.K. has scaled its AI research to a whole-index sample, marking a clear upgrade in research scope and its sixth consecutive week of AI output.",
+      "url": "https://www.lek.com/insights/artificial-intelligence/ai-value-gap-what-our-analysis-sp-500-reveals-about-ai-leaders",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_official_page_fetch",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "industry_coverage"
+      ],
+      "event_score": 80
+    },
+    {
+      "company_id": "lek",
+      "date": "2026-10-08",
+      "type": "research",
+      "title": "L.E.K. 发布《AI in Healthcare》：医疗 AI 的自建与采购新等式",
+      "title_en": "L.E.K. publishes AI in Healthcare: opportunities, threats, and the new build-versus-buy equation",
+      "summary": "L.E.K. 于 2026-10-08 发布医疗 AI 研究，讨论医疗健康领域 AI 应用的机会与威胁，以及自建与采购之间的新决策框架，延续其医疗 AI 连续输出（本周第二篇）。",
+      "summary_en": "On October 8, 2026, L.E.K. published research on AI in healthcare, covering opportunities and threats and the new build-versus-buy equation, extending its healthcare AI output streak with a second piece this week.",
+      "url": "https://www.lek.com/insights/tech-enabled-services-and-healthcare-it/ai-healthcare-opportunities-threats-and-new-build",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_official_page_fetch",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "client_value_proof"
+      ],
+      "event_score": 74
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-10-06",
+      "type": "research",
+      "title": "BCG 发布私人市场可持续报告：AI 同时带来新风险与新机会",
+      "title_en": "BCG publishes Sustainability in Private Markets 2026: AI poses new risks and opportunities",
+      "summary": "BCG 于 2026-10-06 发布私人市场可持续性年度报告，在进展综述之外把 AI 列为同时带来风险与机会的新变量，是 BCG 结束零发布周后的第一篇带 AI 主题的公开研究。",
+      "summary_en": "On October 6, 2026, BCG published its private-markets sustainability annual report, which alongside its progress review treats AI as a new variable bringing both risks and opportunities — BCG's first AI-themed public research after its zero-publication week.",
+      "url": "https://www.bcg.com/publications/2026/private-markets-sustainability-ai-risk",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_official_page_fetch",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "event_score": 70
+    }
+  ]
+}
