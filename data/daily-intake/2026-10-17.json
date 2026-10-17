@@ -13,8 +13,12 @@
       "published_at": "2026-10-14",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["deloitte"],
-      "company_names": ["Deloitte"],
+      "company_ids": [
+        "deloitte"
+      ],
+      "company_names": [
+        "Deloitte"
+      ],
       "candidate_event_type": "platform",
       "title": "Deloitte 发布 Risk Clarity（AI-native 风险管理，经 Ascend 交付）",
       "summary": "AI-native 风险管理解决方案，agentic 能力 + Ascend 交付平台。",
@@ -24,7 +28,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_browser_newsroom",
       "verification_status": "verified",
-      "dimension_tags": ["proprietary_assets", "delivery_production", "governance_risk"],
+      "dimension_tags": [
+        "proprietary_assets",
+        "delivery_production",
+        "governance_risk"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照（10-11）、官方新闻稿、库内无重复；已并入 2026-10-17 周更，事件分 82（本周最强单条）。",
       "leaderboard_action": "new_candidate",
@@ -35,8 +43,12 @@
       "published_at": "2026-10-13",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["accenture"],
-      "company_names": ["Accenture"],
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
       "candidate_event_type": "partnership",
       "title": "Accenture 与 Workday 启动 FDE 计划（agentic AI 时代的工作重塑）",
       "summary": "联合 forward deployed engineering 计划，把 FDE 模式延伸到 HR/财务/IT。",
@@ -46,7 +58,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_browser_newsroom",
       "verification_status": "verified",
-      "dimension_tags": ["tech_partnership", "delivery_production", "strategy_signal"],
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "strategy_signal"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方新闻稿、库内无重复；已并入 2026-10-17 周更，事件分 80。",
       "leaderboard_action": "new_candidate",
@@ -57,8 +73,12 @@
       "published_at": "2026-10-15",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["deloitte"],
-      "company_names": ["Deloitte"],
+      "company_ids": [
+        "deloitte"
+      ],
+      "company_names": [
+        "Deloitte"
+      ],
       "candidate_event_type": "partnership",
       "title": "Deloitte 与 Sirion 战略联盟（AI 驱动 CLM）",
       "summary": "合同生命周期管理联盟，提升可见性、合规与企业价值。",
@@ -68,7 +88,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_browser_newsroom",
       "verification_status": "verified",
-      "dimension_tags": ["tech_partnership", "delivery_production", "industry_coverage"],
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "industry_coverage"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方新闻稿、库内无重复；已并入 2026-10-17 周更，事件分 78。",
       "leaderboard_action": "new_candidate",
@@ -79,8 +103,12 @@
       "published_at": "2026-10-15",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["accenture"],
-      "company_names": ["Accenture"],
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
       "candidate_event_type": "client_proof",
       "title": "UMass Memorial Health × Accenture × Microsoft AI 医疗合作",
       "summary": "多年期统一数据平台 + AI 驱动医疗创新。",
@@ -90,7 +118,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_browser_newsroom",
       "verification_status": "verified",
-      "dimension_tags": ["client_value_proof", "tech_partnership", "industry_coverage"],
+      "dimension_tags": [
+        "client_value_proof",
+        "tech_partnership",
+        "industry_coverage"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方新闻稿、库内无重复；已并入 2026-10-17 周更，事件分 78。",
       "leaderboard_action": "new_candidate",
@@ -101,8 +133,12 @@
       "published_at": "2026-10-13",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["bcg"],
-      "company_names": ["BCG"],
+      "company_ids": [
+        "bcg"
+      ],
+      "company_names": [
+        "BCG"
+      ],
       "candidate_event_type": "research",
       "title": "BCG《The AI-First Tech Function》",
       "summary": "CEO 向研究：CTO/CIO 如何为 agentic AI 做准备。",
@@ -112,7 +148,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_official_page_fetch",
       "verification_status": "verified",
-      "dimension_tags": ["thought_leadership", "strategy_signal", "delivery_production"],
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "delivery_production"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方页面、库内无重复；已并入 2026-10-17 周更，事件分 76。",
       "leaderboard_action": "new_candidate",
@@ -123,8 +163,12 @@
       "published_at": "2026-10-12",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["capgemini"],
-      "company_names": ["Capgemini"],
+      "company_ids": [
+        "capgemini"
+      ],
+      "company_names": [
+        "Capgemini"
+      ],
       "candidate_event_type": "research",
       "title": "Capgemini 汽车业 agentic AI 治理报告（68% 试用 vs 5% 治理成熟）",
       "summary": "agentic AI 在产品开发的采用与治理成熟度差距。",
@@ -134,7 +178,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_browser_newsroom",
       "verification_status": "verified",
-      "dimension_tags": ["thought_leadership", "governance_risk", "industry_coverage"],
+      "dimension_tags": [
+        "thought_leadership",
+        "governance_risk",
+        "industry_coverage"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方新闻稿、库内无重复；已并入 2026-10-17 周更，事件分 76。",
       "leaderboard_action": "new_candidate",
@@ -145,8 +193,12 @@
       "published_at": "2026-10-13",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["accenture"],
-      "company_names": ["Accenture"],
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
       "candidate_event_type": "investment",
       "title": "Accenture 收购 Sagacity Solutions",
       "summary": "英国数据与客户智能公司，增强 Accenture Song 的 AI 客户重塑交付。",
@@ -156,7 +208,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_browser_newsroom",
       "verification_status": "verified",
-      "dimension_tags": ["capital_ma", "delivery_production", "client_value_proof"],
+      "dimension_tags": [
+        "capital_ma",
+        "delivery_production",
+        "client_value_proof"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方新闻稿、库内无重复；已并入 2026-10-17 周更，事件分 76。",
       "leaderboard_action": "new_candidate",
@@ -167,8 +223,12 @@
       "published_at": "2026-10-15",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["kpmg"],
-      "company_names": ["KPMG"],
+      "company_ids": [
+        "kpmg"
+      ],
+      "company_names": [
+        "KPMG"
+      ],
       "candidate_event_type": "research",
       "title": "KPMG 2026 美国 CEO 展望",
       "summary": "CEO 对 AI 进展有信心，但网络与地缘风险加剧。",
@@ -178,7 +238,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_browser_newsroom",
       "verification_status": "verified",
-      "dimension_tags": ["thought_leadership", "strategy_signal", "governance_risk"],
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "governance_risk"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方新闻页、库内无重复；已并入 2026-10-17 周更，事件分 74。",
       "leaderboard_action": "new_candidate",
@@ -189,8 +253,12 @@
       "published_at": "2026-10-14",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["bcg"],
-      "company_names": ["BCG"],
+      "company_ids": [
+        "bcg"
+      ],
+      "company_names": [
+        "BCG"
+      ],
       "candidate_event_type": "platform",
       "title": "BCG X 发布 Fabriq Personalization AI",
       "summary": "实时客户时刻的营销个性化平台资产。",
@@ -200,7 +268,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_official_page_fetch",
       "verification_status": "verified",
-      "dimension_tags": ["proprietary_assets", "delivery_production", "industry_coverage"],
+      "dimension_tags": [
+        "proprietary_assets",
+        "delivery_production",
+        "industry_coverage"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官方产品库、库内无重复；已并入 2026-10-17 周更，事件分 74。",
       "leaderboard_action": "new_candidate",
@@ -211,8 +283,12 @@
       "published_at": "2026-10-14",
       "discovered_at": "2026-10-17",
       "scope": "company",
-      "company_ids": ["lek"],
-      "company_names": ["L.E.K. Consulting"],
+      "company_ids": [
+        "lek"
+      ],
+      "company_names": [
+        "L.E.K. Consulting"
+      ],
       "candidate_event_type": "research",
       "title": "L.E.K. 人形机器人 / 物理 AI 价值分布研究",
       "summary": "评估物理 AI 价值链上价值可能积累的环节。",
@@ -222,7 +298,11 @@
       "confidence": "high",
       "discovery_channel": "daily_intake_official_page_fetch",
       "verification_status": "verified",
-      "dimension_tags": ["thought_leadership", "industry_coverage", "strategy_signal"],
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "strategy_signal"
+      ],
       "merge_recommendation": "review_for_merge",
       "merge_rationale": "晚于上一快照、官网列表确认、库内无重复；已并入 2026-10-17 周更，事件分 72。",
       "leaderboard_action": "new_candidate",
@@ -233,8 +313,12 @@
       "published_at": null,
       "discovered_at": "2026-10-03",
       "scope": "company",
-      "company_ids": ["oliver_wyman"],
-      "company_names": ["Oliver Wyman"],
+      "company_ids": [
+        "oliver_wyman"
+      ],
+      "company_names": [
+        "Oliver Wyman"
+      ],
       "candidate_event_type": "research",
       "title": "Oliver Wyman Forum × NYSE CEO 调查（第三轮挂账）",
       "summary": "媒体报道的 CEO 调查（可盈利 AI + 风险控制）始终无法取得一手日期与官方链接；Forum 官网文章无发布日期。",
@@ -244,7 +328,10 @@
       "confidence": "low",
       "discovery_channel": "daily_intake_browser_newsroom",
       "verification_status": "pending",
-      "dimension_tags": ["thought_leadership", "strategy_signal"],
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ],
       "merge_recommendation": "hold",
       "merge_rationale": "连续三轮未能核实一手日期；若用户能提供 OW Forum 原文链接可立即评估。",
       "leaderboard_action": "watch_only",
@@ -255,8 +342,14 @@
       "published_at": null,
       "discovered_at": "2026-10-17",
       "scope": "sector",
-      "company_ids": ["bain", "mckinsey"],
-      "company_names": ["Bain & Company", "McKinsey"],
+      "company_ids": [
+        "bain",
+        "mckinsey"
+      ],
+      "company_names": [
+        "Bain & Company",
+        "McKinsey"
+      ],
       "candidate_event_type": "research",
       "title": "覆盖缺口记录：Bain 与 McKinsey 连续两周无法抓取",
       "summary": "Bain 官网 Cloudflare 人机验证、McKinsey 官网 Akamai 拒绝访问，浏览器与 WebFetch 均无法取数；web_search 服务商持续故障。",
@@ -269,6 +362,246 @@
       "dimension_tags": [],
       "merge_recommendation": "skip",
       "merge_rationale": "覆盖缺口记录，非候选事件；搜索恢复后补扫。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261017-013",
+      "published_at": "2026-10-13",
+      "discovered_at": "2026-10-17",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "The AI operating system: A new way for CEOs to run the enterprise",
+      "summary": "12 页长文提出 AI OS 概念，引用 State of AI 2026（40% 规模化 agent、仅 6% 达 5% EBIT）与早期部署量化结果。",
+      "why_it_matters": "McKinsey 在 CEO 层面对 agentic AI 组织化、管理方式重构的系统性输出，是其思想领导力与战略信号的最强单条。",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-operating-system-a-new-way-for-ceos-to-run-the-enterprise",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "proprietary_assets"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照（10-11）、官方长文、库内无重复；已并入 2026-10-17 周更，事件分 82（本周 McKinsey 最强单条）。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261017-014",
+      "published_at": "2026-10-14",
+      "discovered_at": "2026-10-17",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "The AI value curve: The economics of applying AI to existing work",
+      "summary": "22 页研究提出 AI value curve 框架，测算约 2.5 万亿美元全球年机会。",
+      "why_it_matters": "把 AI 价值讨论从采用率拉到单位经济学，是 McKinsey 方法论密度最高的 AI 输出之一。",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照、官方长文、库内无重复；已并入 2026-10-17 周更，事件分 80。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261017-015",
+      "published_at": "2026-10-13",
+      "discovered_at": "2026-10-17",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "Why the future of capital projects belongs to digital and AI-enabled teams",
+      "summary": "资本项目研究：建筑支出 2023 年 13 万亿到 2040 年 22 万亿美元，生产率 25 年仅提升 10%。",
+      "why_it_matters": "把 AI 交付叙事扩展到重工业/资本密集场景，补 McKinsey 行业覆盖。",
+      "url": "https://www.mckinsey.com/capabilities/operations/our-insights/why-the-future-of-capital-projects-belongs-to-digital-and-ai-enabled-teams",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "delivery_production"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照、官方长文、库内无重复；已并入 2026-10-17 周更，事件分 74。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261017-016",
+      "published_at": "2026-10-13",
+      "discovered_at": "2026-10-17",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "research",
+      "title": "Antonio Castro on putting enterprise data to work in the age of AI",
+      "summary": "官方博客，McKinsey 合伙人谈 AI 时代企业数据与制度性知识是新竞争优势。",
+      "why_it_matters": "《Rewired》第二版能力系列的组成部分，反映 McKinsey 数据底座叙事。",
+      "url": "https://www.mckinsey.com/about-us/new-at-mckinsey-blog/antonio-castro-on-putting-enterprise-data-to-work-in-the-age-of-ai",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "proprietary_assets"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照、官方博客、库内无重复；已并入 2026-10-17 周更，事件分 70（博客/访谈类，按保守口径给分）。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261017-017",
+      "published_at": "2026-10-14",
+      "discovered_at": "2026-10-17",
+      "scope": "company",
+      "company_ids": [
+        "bain"
+      ],
+      "company_names": [
+        "Bain"
+      ],
+      "candidate_event_type": "research",
+      "title": "AI Is Turning Procurement Into an Earnings Engine",
+      "summary": "采购 AI 研究：最高 5 倍回报、10%–15% 增量费用节约、60%+ 生产率提升。",
+      "why_it_matters": "本周 Bain 最强单条，把 AI 叙事从效率工具推到 EBIT 贡献与运营模型重构。",
+      "url": "https://www.bain.com/insights/ai-is-turning-procurement-into-an-earnings-engine/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "delivery_production",
+        "client_value_proof"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照、官方长文、库内无重复；已并入 2026-10-17 周更，事件分 80。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261017-018",
+      "published_at": "2026-10-14",
+      "discovered_at": "2026-10-17",
+      "scope": "company",
+      "company_ids": [
+        "bain"
+      ],
+      "company_names": [
+        "Bain"
+      ],
+      "candidate_event_type": "research",
+      "title": "Workers Are Less Worried About AI If It's Done by Them, Not to Them",
+      "summary": "生成式 AI 调研：美国个人使用率 73%（一年前 53%），但信任度在下降。",
+      "why_it_matters": "采用率与信任度的背离是 Bain 劳动力/AI 叙事线的新数据点。",
+      "url": "https://www.bain.com/insights/workers-are-less-worried-about-ai-if-its-done-by-them-not-to-them/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照、官方调研、库内无重复；已并入 2026-10-17 周更，事件分 72。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261017-019",
+      "published_at": "2026-10-14",
+      "discovered_at": "2026-10-17",
+      "scope": "company",
+      "company_ids": [
+        "bain"
+      ],
+      "company_names": [
+        "Bain"
+      ],
+      "candidate_event_type": "client_proof",
+      "title": "Scaling AI in Specialty Insurance: A Conversation with Markel's Simon Wilson",
+      "summary": "Bain Executive Conversations 访谈 Markel CEO，谈 AI 重塑承保经济学。",
+      "why_it_matters": "保险/金融服务 AI 场景的行业对话资产，反映 Bain 客户侧 AI 叙事强度。",
+      "url": "https://www.bain.com/insights/scaling-ai-in-specialty-insurance-a-conversation-with-markels-simon-wilson/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "client_value_proof",
+        "industry_coverage",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照、官方访谈、库内无重复；已并入 2026-10-17 周更，事件分 72。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "gap-20261017-013",
+      "published_at": "2026-10-16",
+      "discovered_at": "2026-10-17",
+      "scope": "company",
+      "company_ids": [
+        "bain"
+      ],
+      "company_names": [
+        "Bain"
+      ],
+      "candidate_event_type": "research",
+      "title": "AI could unlock more than $1tn in MENA value by 2030, shows new WEF and Bain report",
+      "summary": "WEF 与 Bain 联合报告：AI 到 2030 年可为中东和北非释放超 1 万亿美元价值。",
+      "why_it_matters": "若核实，是 Bain 在区域 AI 经济影响上与 WEF 联合署名的研究产出，可补其行业/区域覆盖。",
+      "url": "https://www.bain.com/about/media-center/press-releases/",
+      "source_level": "media",
+      "confidence": "low",
+      "discovery_channel": "daily_intake_google_news_rss",
+      "verification_status": "unverified",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "仅在 Google News RSS 见到标题（Gulf Business 10-16、Arabian Business 10-16、Khaleej Times 10-14），WEF 官网与三家媒体均被 Cloudflare/超时拦截，Bain 站内搜索未找到对应页面，无法确认发布日期与原始出处，本轮不并入。",
       "leaderboard_action": "watch_only",
       "matched_leaderboard_event_id": null
     }

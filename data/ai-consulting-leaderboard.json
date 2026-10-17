@@ -6,7 +6,7 @@
     "updated_at": "2026-10-17",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-17 本次刷新窗口为 2026-10-12 至 10-17，是大周，净新增 10 条覆盖 6 家公司：Deloitte 发布 Risk Clarity（AI-native 风险管理平台，经 Ascend 交付，10-14，本周最强单条）并与 Sirion 结盟（AI 合同管理，10-15）；Accenture 三连发（Workday FDE 计划 10-13、收购 Sagacity 10-13、UMass 医疗 AI 合作 10-15）；BCG 两篇（AI-first 技术职能研究 10-13、Fabriq 个性化 AI 产品资产 10-14）；KPMG 美国 CEO 展望 2026（10-15）；Capgemini 汽车 agentic AI 治理报告（10-12，结束四轮沉寂）；L.E.K. 人形机器人/物理 AI 研究（10-14）。覆盖说明：web_search 服务商本周持续故障，全部覆盖经浏览器直取官方新闻室完成；Bain（Cloudflare 拦截）与 McKinsey（Akamai 拒绝访问）连续第二周无法覆盖，OW Forum 文章无日期无法确认，FTI/A&M/Kearney/Roland Berger 本周未单独补扫。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-17 本次刷新窗口为 2026-10-12 至 10-17，是大周，净新增 17 条覆盖 8 家公司：Deloitte 发布 Risk Clarity（AI-native 风险管理平台，经 Ascend 交付，10-14，本周最强单条）并与 Sirion 结盟（AI 合同管理，10-15）；Accenture 三连发（Workday FDE 计划 10-13、收购 Sagacity 10-13、UMass 医疗 AI 合作 10-15）；McKinsey 四连发（AI operating system 10-13、AI value curve 10-14、资本项目 AI 团队 10-13、Antonio Castro 数据博客 10-13，此前两轮因 Akamai 拦截未覆盖）；Bain 三连发（采购 AI 盈利引擎 10-14、AI 信任度调研 10-14、Markel 特种保险 AI 访谈 10-14，此前两轮因 Cloudflare 拦截未覆盖）；BCG 两篇（AI-first 技术职能研究 10-13、Fabriq 个性化 AI 产品资产 10-14）；KPMG 美国 CEO 展望 2026（10-15）；Capgemini 汽车 agentic AI 治理报告（10-12，结束四轮沉寂）；L.E.K. 人形机器人/物理 AI 研究（10-14）。覆盖说明：web_search 服务商本周持续故障，全部覆盖经浏览器直取官方新闻室完成；McKinsey（Akamai 已可访问）与 Bain（Cloudflare 人机验证在浏览器内可通过）本轮均已补齐，McKinsey 4 条（AI operating system 10-13、AI value curve 10-14、资本项目 AI 团队 10-13、Antonio Castro 数据博客 10-13），Bain 3 条（采购 AI 盈利引擎 10-14、AI 信任度调研 10-14、Markel 特种保险 AI 访谈 10-14）。Bain 第 7 届全球技术报告新闻稿确认为 2026-09-29 发布，与库内 10-03 轮次事件重复，未重复计入。OW Forum 文章无日期无法确认，FTI/A&M/Kearney/Roland Berger 本周未单独补扫。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -196,6 +196,82 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-14",
+          "type": "research",
+          "title": "McKinsey 发布《The AI value curve》：量化 AI 经济学，约 2.5 万亿美元年机会",
+          "title_en": "McKinsey publishes The AI value curve: the economics of applying AI to existing work",
+          "summary": "McKinsey 于 2026-10-14 发布 22 页研究，提出 AI value curve 框架：对比任务当前成本与用 AI 完成的全部成本，找出自动化潜力最具成本效益的部署位置，测算在特定行业、地区与职业组合下约 2.5 万亿美元的全球年机会。三个结论：最强经济性来自增强高技能高薪酬工作而非大量低薪工作；价值大量存在于科技与金融之外的医疗、教育等行业；同一用例在一个市场能回本、在另一个市场不能。报告还给出宏观背景：到 2030 年约 7 万亿美元资本投入 AI 基建，需要约 7600 亿美元年利润池来支撑。",
+          "summary_en": "On October 14, 2026, McKinsey published a 22-page study introducing the AI value curve, which compares the cost of a task as performed today with the full cost of doing it with AI, revealing a roughly $2.5 trillion annual global opportunity across certain sectors, regions and occupations. It finds the strongest economics come from augmenting high-skilled, higher-wage work; substantial value sits beyond technology and financial services, including healthcare and education; and the same use case can pay off in one market but not another.",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage"
+          ],
+          "event_score": 80
+        },
+        {
+          "date": "2026-10-13",
+          "type": "research",
+          "title": "McKinsey 发布《The AI operating system》：CEO 用企业“第二大脑”重构管理本身",
+          "title_en": "McKinsey publishes The AI operating system: a new way for CEOs to run the enterprise",
+          "summary": "McKinsey 于 2026-10-13 发布 12 页长文，提出 AI operating system（AI OS）概念：把企业积累的数据、专业知识与制度性知识变成管理层的“第二大脑”。文中引用其 2026 State of AI 调查——大公司 40% 受访者在规模化 AI agent，但只有 6% 表示 AI 贡献至少 5% 的 EBIT；早期 AI OS 部署把规划周期加快最多 10 倍、约 12 周实现首次价值、向新领域扩展时 ROI 时间缩短 50%。核心论点是 AI 降低传统管理约束后，CEO 需要从日历驱动的评审与信息流转向持续干预、更分散的决策与更强的人类判断。这是 McKinsey 在 CEO 层面对 agentic AI 组织层的最新系统性输出。",
+          "summary_en": "On October 13, 2026, McKinsey published a 12-page article arguing that an AI operating system can become an enterprise's \"second brain,\" putting accumulated data, expertise and institutional knowledge to work for leaders from the C-suite to the front lines. It cites McKinsey's 2026 State of AI survey (40% of large-company respondents scaling AI agents, yet only 6% say AI generates at least 5% of EBIT) and early AI OS deployments that accelerated planning cycles up to tenfold, reached first value in about 12 weeks, and cut time to ROI by 50% as the system extended to new domains.",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-operating-system-a-new-way-for-ceos-to-run-the-enterprise",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "proprietary_assets"
+          ],
+          "event_score": 82
+        },
+        {
+          "date": "2026-10-13",
+          "type": "research",
+          "title": "McKinsey：资本项目的未来属于数字化与 AI 赋能的团队",
+          "title_en": "McKinsey: why the future of capital projects belongs to digital and AI-enabled teams",
+          "summary": "McKinsey 于 2026-10-13 发布资本项目研究：全球建筑支出预计从 2023 年 13 万亿美元升至 2040 年 22 万亿美元，而建筑业长期生产率自 2000 年以来仅改善 10%（整体经济 50%、制造业 90%）。文章主张领先企业正从试点转向重写项目的选择、设计、采购、建造与 steering 方式，用数字与 AI 把资本转化为产能的速度作为竞争变量。这是 McKinsey 在重工业/资本密集型场景的 AI 交付叙事延伸。",
+          "summary_en": "On October 13, 2026, McKinsey published research arguing that digital and AI are changing how capital projects are selected, designed, procured, built and steered. Global construction spending is projected to rise from $13 trillion in 2023 to $22 trillion by 2040, while construction productivity has improved only 10% since 2000 (versus 50% for the broader economy and 90% for manufacturing). Leaders are moving beyond pilots to rewire how projects are planned and delivered.",
+          "url": "https://www.mckinsey.com/capabilities/operations/our-insights/why-the-future-of-capital-projects-belongs-to-digital-and-ai-enabled-teams",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "delivery_production"
+          ],
+          "event_score": 74
+        },
+        {
+          "date": "2026-10-13",
+          "type": "research",
+          "title": "McKinsey 合伙人 Antonio Castro：AI 时代的企业数据优势“藏在眼前”",
+          "title_en": "McKinsey partner Antonio Castro on putting enterprise data to work in the age of AI",
+          "summary": "McKinsey 于 2026-10-13 发布官方博客文章，合伙人 Antonio Castro（《Rewired》第二版撰稿人）论证：AI 让强技术更容易构建、也更不构成差异化，新的竞争优势藏在企业自身数据与制度性知识里。核心观点是“每个模型和 agent 都需要可靠、可访问、定义清晰且有组织的数据”，而多数企业数据系统是为向后看的报表设计的，无法自动适配用于决策的 agent；不必整体修数据，而应从业务问题出发。该文是《Rewired》第二版六项核心能力系列的组成部分。",
+          "summary_en": "On October 13, 2026, McKinsey published a blog piece in which partner Antonio Castro argues that as AI makes powerful technology easier to build and less of a differentiator, the new competitive edge lies in companies' own data and institutional knowledge. Every model and agent needs reliable, accessible, clearly defined and organized data, he says, but most corporate data systems were designed for backward-looking reporting and will not automatically fit the agents used to make decisions.",
+          "url": "https://www.mckinsey.com/about-us/new-at-mckinsey-blog/antonio-castro-on-putting-enterprise-data-to-work-in-the-age-of-ai",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "proprietary_assets"
+          ],
+          "event_score": 70
+        },
         {
           "date": "2026-09-17",
           "type": "research",
@@ -931,6 +1007,63 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-14",
+          "type": "research",
+          "title": "Bain：AI 正把采购变成盈利引擎，重新设计运营模型的公司获得最高 5 倍回报",
+          "title_en": "Bain: AI is turning procurement into an earnings engine",
+          "summary": "Bain 于 2026-10-14 发布采购 AI 研究：AI-enabled 采购模型可带来最高 5 倍于初始投资的回报、10%–15% 的增量费用节约与超过 60% 的生产率提升；更大的机会在决策速度、供应商创新与风险调整后表现——这些贡献体现在 EBIT 而非采购预算里。文章主张品类经理从分析师演变为价值创造者（agent 做重阅读、人做判断），领先 CPO 正在围绕 AI 重塑采购流程、角色与决策权，而不是在旧模型上叠工具；风险在于供应商已在部署谈判 agent、定价智能与风险监控，仍在手工运作的采购团队在每一次商业交互中都处于劣势。",
+          "summary_en": "On October 14, 2026, Bain published research finding that AI-enabled procurement models can deliver returns of up to five times the initial investment, 10% to 15% incremental expense savings and productivity gains exceeding 60%. The bigger opportunity lies in decision speed, supplier innovation and risk-adjusted performance that show up in EBIT rather than the procurement budget. Leading CPOs are reshaping procurement processes, roles and decision rights around AI rather than layering tools onto the old model.",
+          "url": "https://www.bain.com/insights/ai-is-turning-procurement-into-an-earnings-engine/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "delivery_production",
+            "client_value_proof"
+          ],
+          "event_score": 80
+        },
+        {
+          "date": "2026-10-14",
+          "type": "research",
+          "title": "Bain 调研：当 AI 由员工自己推动时，员工的担忧更少",
+          "title_en": "Bain research: workers are less worried about AI if it's done by them, not to them",
+          "summary": "Bain 于 2026-10-14 发布生成式 AI 消费者/员工调研：美国 73% 受访者在个人生活中使用生成式 AI（2025 年 9 月为 53%），德法英平均个人使用率同期从 47% 升至 69%；约 50% 的早期采用者每天使用一次以上。但存在悖论——即便在最成熟的早期采用者中，对生成式 AI 准确性的信任度也在下降。文章主张协作式与自驱式部署（由员工自己做，而不是被施加）能缓解不信任，是把采用转化为价值的关键。",
+          "summary_en": "On October 14, 2026, Bain published survey research finding 73% of US consumers used generative AI in their personal lives (up from 53% in September 2025), with average personal usage in Germany, France and the UK rising from 47% to 69% over the same period. Yet trust in the technology's accuracy is falling even among early adopters. Collaborative and self-motivated deployment can help close the gap between adoption and value.",
+          "url": "https://www.bain.com/insights/workers-are-less-worried-about-ai-if-its-done-by-them-not-to-them/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage"
+          ],
+          "event_score": 72
+        },
+        {
+          "date": "2026-10-14",
+          "type": "client_proof",
+          "title": "Bain Executive Conversations：与 Markel CEO 谈特种保险的 AI 规模化",
+          "title_en": "Bain Executive Conversations: scaling AI in specialty insurance with Markel's Simon Wilson",
+          "summary": "Bain 于 2026-10-14 发布 Executive Conversations 访谈，金融服务业合伙人 Kyle Kinsell 对话 Markel Insurance CEO Simon Wilson。Wilson 把 AI 置于 Markel 竞争方式中心，主张以“创始人心态”把每条业务线从零重建而非边际优化，并讨论 AI 如何重塑承保经济学、为什么这一转变的赢家将在未来 12–18 个月内决定。该访谈是 Bain 在保险/金融服务 AI 场景的行业对话资产，也间接反映其客户侧 AI 叙事强度。",
+          "summary_en": "On October 14, 2026, Bain published an Executive Conversations interview in which financial services partner Kyle Kinsell speaks with Markel Insurance CEO Simon Wilson about putting AI at the center of how the specialty insurer competes — reimagining entire lines of business rather than optimizing them at the margins, and how AI is reshaping the economics of underwriting.",
+          "url": "https://www.bain.com/insights/scaling-ai-in-specialty-insurance-a-conversation-with-markels-simon-wilson/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "client_value_proof",
+            "industry_coverage",
+            "strategy_signal"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-09-29",
           "type": "research",
