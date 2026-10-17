@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-10-03",
-    "updated_at": "2026-10-11",
+    "previous_updated_at": "2026-10-11",
+    "updated_at": "2026-10-17",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-11 本次刷新窗口为 2026-10-04 至 10-11，净新增 3 条：L.E.K. S&P 500 AI 价值差距分析（10-09，旗舰级，其连续第七周产出 AI 信号）与医疗 AI 自建vs采购研究（10-08）、BCG 私人市场可持续报告中的 AI 风险与机会（10-06，零发布周后首篇）。覆盖说明：本轮 web_search 提供方大部分时间不可用，Deloitte、Bain、Accenture、McKinsey、KPMG、PwC、EY、Capgemini、Oliver Wyman 仅经官方页面部分覆盖（多家页面为 JS 渲染无法抓取），'本周无信号'状态未经充分核实，下轮优先补扫；OW Forum × NYSE CEO 调查与 Accenture Edge×AWS 直链两项 hold 继续挂账。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。 搜索服务恢复后经浏览器补扫各公司新闻室（Deloitte/Accenture/KPMG/Capgemini/OW Forum 等），本轮追加净新增 3 条（Accenture-Dell Business Group 10-08、KPMG × Workday/Google Cloud AI 体验层 10-08、PwC-Cohere 全球联盟 10-05）与回填 3 条（Deloitte 未来基础设施调查 10-01、PwC 数字信任洞察 10-01、PwC AI 技能鸿沟 09-29，均为上轮漏检）；另发现 KPMG 三条历史漏检（Q3 AI Pulse 09-24、Reality Defender 09-10、AIUC-1 08-27）留作补漏清单。Bain 官网 Cloudflare 拦截、McKinsey 官网拒绝访问、OW Forum 文章无日期，三家本轮覆盖仍不完整。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-17 本次刷新窗口为 2026-10-12 至 10-17，是大周，净新增 10 条覆盖 6 家公司：Deloitte 发布 Risk Clarity（AI-native 风险管理平台，经 Ascend 交付，10-14，本周最强单条）并与 Sirion 结盟（AI 合同管理，10-15）；Accenture 三连发（Workday FDE 计划 10-13、收购 Sagacity 10-13、UMass 医疗 AI 合作 10-15）；BCG 两篇（AI-first 技术职能研究 10-13、Fabriq 个性化 AI 产品资产 10-14）；KPMG 美国 CEO 展望 2026（10-15）；Capgemini 汽车 agentic AI 治理报告（10-12，结束四轮沉寂）；L.E.K. 人形机器人/物理 AI 研究（10-14）。覆盖说明：web_search 服务商本周持续故障，全部覆盖经浏览器直取官方新闻室完成；Bain（Cloudflare 拦截）与 McKinsey（Akamai 拒绝访问）连续第二周无法覆盖，OW Forum 文章无日期无法确认，FTI/A&M/Kearney/Roland Berger 本周未单独补扫。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -484,6 +484,44 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-14",
+          "type": "platform",
+          "title": "BCG X 发布 Fabriq 个性化 AI 平台资产",
+          "title_en": "BCG X releases Fabriq Personalization AI",
+          "summary": "BCG 于 2026-10-14 在 BCG X 产品库发布 Fabriq Personalization AI 平台资产，面向实时客户时刻的营销个性化，是 BCG X 连续两周的产品化输出（前有 Frontline Ops AI）。",
+          "summary_en": "On October 14, 2026, BCG X added Fabriq Personalization AI to its product library, a platform asset for meeting every customer in the moment — BCG X's second productized output in as many weeks after Frontline Ops AI.",
+          "url": "https://www.bcg.com/x/product-library/fabriq-marketing-personalization-platform",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "proprietary_assets",
+            "delivery_production",
+            "industry_coverage"
+          ],
+          "event_score": 74
+        },
+        {
+          "date": "2026-10-13",
+          "type": "research",
+          "title": "BCG 发布《The AI-First Tech Function》：CEO 需要知道的 AI 优先技术职能",
+          "title_en": "BCG publishes The AI-First Tech Function: what CEOs need to know",
+          "summary": "BCG 于 2026-10-13 发布面向 CEO 的 AI-first 技术职能研究，讨论 CTO/CIO 如何为 agentic AI 做准备、重构技术组织的定位与运作，延续其 agentic AI 组织层研究线。",
+          "summary_en": "On October 13, 2026, BCG published research for CEOs on building the AI-first tech function, covering how CTOs and CIOOs should prepare for agentic AI and reposition the technology organization.",
+          "url": "https://www.bcg.com/publications/2026/ceos-help-ctos-cios-prepare-agentic-ai",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "delivery_production"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-10-06",
           "type": "research",
@@ -1370,6 +1408,44 @@
       },
       "events": [
         {
+          "date": "2026-10-15",
+          "type": "partnership",
+          "title": "Deloitte 与 Sirion 结成战略联盟，交付 AI 驱动的合同生命周期管理",
+          "title_en": "Deloitte and Sirion launch strategic alliance for AI-powered contract lifecycle management",
+          "summary": "Deloitte 于 2026-10-15 宣布与合同生命周期管理厂商 Sirion 结成战略联盟，交付 AI 驱动的 CLM 解决方案，提升可见性、合规与企业价值。这是 Deloitte 在法务/合同 AI 场景的最新生态绑定。",
+          "summary_en": "On October 15, 2026, Deloitte and Sirion announced a strategic alliance to deliver AI-powered contract lifecycle management solutions that enhance visibility, compliance, and enterprise value.",
+          "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-and-sirion-launch-strategic-alliance.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "industry_coverage"
+          ],
+          "event_score": 78
+        },
+        {
+          "date": "2026-10-14",
+          "type": "platform",
+          "title": "Deloitte 发布 Risk Clarity：AI-native 风险管理平台（经 Ascend 交付）",
+          "title_en": "Deloitte launches Risk Clarity to modernize risk management with AI-powered intelligence",
+          "summary": "Deloitte 于 2026-10-14（纽约）发布 Risk Clarity，一个帮助企业加速企业风险全生命周期的 AI-native 解决方案，通过 agentic 能力实现，并经 Deloitte 的 AI 注入交付平台 Ascend 交付。这是 Deloitte 继 M&A Platform 之后本月第二个平台级 AI 产品。",
+          "summary_en": "On October 14, 2026, Deloitte launched Risk Clarity, an AI-native solution that helps organizations accelerate the enterprise risk lifecycle through agentic capabilities, delivered through Ascend, Deloitte's AI-infused service delivery platform — its second platform-level AI product this month after the M&A Platform.",
+          "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-launches-risk-clarity-to-help-organizations-modernize-risk-management-with-ai-powered-intelligence.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "proprietary_assets",
+            "delivery_production",
+            "governance_risk"
+          ],
+          "event_score": 82
+        },
+        {
           "date": "2026-10-01",
           "type": "research",
           "title": "Deloitte 2026 未来基础设施调查：AI 与复杂性重塑全球基建格局（上轮漏检回填）",
@@ -2183,6 +2259,25 @@
       },
       "events": [
         {
+          "date": "2026-10-15",
+          "type": "research",
+          "title": "KPMG 发布 2026 美国 CEO 展望：对 AI 进展有信心，但网络与地缘风险加剧",
+          "title_en": "KPMG US 2026 CEO Outlook: CEOs confident in AI progress amid intensifying cyber and geopolitical risks",
+          "summary": "KPMG 于 2026-10-15 发布 2026 美国 CEO Outlook：美国 CEO 对自身 AI 进展和美国经济有信心，但网络安全与地缘风险在加剧、通胀压力仍在。这是 KPMG 年度 CEO 调研的 AI 叙事更新。",
+          "summary_en": "On October 15, 2026, KPMG released its US CEO Outlook 2026, finding US CEOs confident in their AI progress and the strength of the US economy while cybersecurity and geopolitical risks intensify and inflation pressures persist.",
+          "url": "https://kpmg.com/us/en/media/news/kpmg-us-ceo-outlook-2026.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "governance_risk"
+          ],
+          "event_score": 74
+        },
+        {
           "date": "2026-10-08",
           "type": "partnership",
           "title": "KPMG 携手 Workday 与 Google Cloud 推出 AI 员工体验层",
@@ -2344,6 +2439,63 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-15",
+          "type": "client_proof",
+          "title": "UMass Memorial Health 携手 Accenture 与 Microsoft 推进 AI 医疗创新",
+          "title_en": "UMass Memorial Health announces AI-powered innovation initiative with Accenture and Microsoft",
+          "summary": "Accenture 于 2026-10-15 宣布 UMass Memorial Health 与 Accenture、Microsoft 的多年期合作：统一数据平台以提升医疗服务与运营并驱动 AI 创新。这是 Accenture 医疗 AI 方向的最新客户落地。",
+          "summary_en": "On October 15, 2026, Accenture announced a multi-year initiative between UMass Memorial Health, Accenture, and Microsoft to modernize the health system's data platform and drive AI-powered innovation in care delivery and operations.",
+          "url": "https://newsroom.accenture.com/news/2026/umass-memorial-health-announces-unified-data-platform-multi-year-initiative-investments-in-ai-powered-innovation-in-partnership-with-accenture-and-microsoft",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "client_value_proof",
+            "tech_partnership",
+            "industry_coverage"
+          ],
+          "event_score": 78
+        },
+        {
+          "date": "2026-10-13",
+          "type": "partnership",
+          "title": "Accenture 与 Workday 启动 forward deployed engineering 计划，重塑 agentic AI 时代的工作",
+          "title_en": "Accenture launches forward deployed engineering program with Workday to reinvent work for the agentic AI era",
+          "summary": "Accenture 于 2026-10-13（纽约）宣布与 Workday 合作启动联合 forward deployed engineering（FDE）计划，帮助组织在 AI 时代重新设计工作方式，把 FDE 模式延伸到 HR、财务与 IT 场景。这是 Accenture 本月第二个 FDE 相关动作（前有 Google Cloud 千人 FDE 团队）。",
+          "summary_en": "On October 13, 2026, Accenture and Workday announced a joint forward deployed engineering (FDE) program to help organizations reinvent how work gets done in the age of AI, extending the FDE model into HR, finance, and IT scenarios.",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-launches-forward-deployed-engineering-program-with-workday-to-reinvent-work-for-the-agentic-ai-era",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "strategy_signal"
+          ],
+          "event_score": 80
+        },
+        {
+          "date": "2026-10-13",
+          "type": "investment",
+          "title": "Accenture 收购 Sagacity Solutions，扩展 AI 驱动的客户智能",
+          "title_en": "Accenture acquires Sagacity Solutions to scale AI-driven customer intelligence across Accenture Song's UK & Ireland operations",
+          "summary": "Accenture 于 2026-10-13（伦敦）宣布收购英国数据与客户智能公司 Sagacity Solutions，增强 Accenture Song 规模化交付 AI 驱动客户重塑的能力，回应客户把数据、AI 与运营整合为成果导向项目的需求。",
+          "summary_en": "On October 13, 2026, Accenture acquired Sagacity, a UK-based data and customer intelligence firm, strengthening Accenture Song's capacity to deliver AI-powered customer reinvention at scale.",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-acquires-sagacity-solutions-to-scale-ai-driven-customer-intelligence-across-accenture-song-s-uk-ireland-operations",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "capital_ma",
+            "delivery_production",
+            "client_value_proof"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-10-08",
           "type": "partnership",
@@ -2615,6 +2767,25 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-10-12",
+          "type": "research",
+          "title": "Capgemini 发布汽车业 agentic AI 治理报告：68% 试用，仅 5% 治理成熟",
+          "title_en": "Capgemini report: 68% of automotive organizations use or pilot agentic AI for product development, but only 5% report mature AI governance",
+          "summary": "Capgemini 于 2026-10-12 发布汽车业研究报告：68% 的汽车组织正在产品开发中使用或试点 agentic AI，但仅 5% 报告拥有成熟的 AI 治理。这是 Capgemini 连续四轮沉寂后的首个 AI 净新增，直击 agentic AI 规模化的治理缺口。",
+          "summary_en": "On October 12, 2026, Capgemini published an automotive sector report finding 68% of organizations use or pilot agentic AI for product development while only 5% report mature AI governance — Capgemini's first AI signal after four quiet rounds, highlighting the governance gap in agentic AI scaling.",
+          "url": "https://www.capgemini.com/us-en/news/press-releases/68-of-automotive-organizations-use-or-pilot-agentic-ai-for-product-development-but-only-5-report-mature-ai-governance-2/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "governance_risk",
+            "industry_coverage"
+          ],
+          "event_score": 76
+        },
         {
           "date": "2026-09-07",
           "type": "client_proof",
@@ -2949,6 +3120,25 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-10-14",
+          "type": "research",
+          "title": "L.E.K. 发布人形机器人研究：物理 AI 的价值可能在哪里积累",
+          "title_en": "L.E.K. publishes Humanoid Robotics: assessing where value may accrue in physical AI",
+          "summary": "L.E.K. 于 2026-10-14 发布人形机器人与物理 AI 研究，评估物理 AI 价值链上价值可能积累的环节，延续其从软件 AI 向物理 AI 延伸的覆盖。",
+          "summary_en": "On October 14, 2026, L.E.K. published research on humanoid robotics, assessing where value may accrue in physical AI, extending its coverage from software AI into physical AI.",
+          "url": "https://www.lek.com/insights/technology/humanoid-robotics-assessing-where-value-may-accrue-physical-ai",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_official_page_fetch",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "strategy_signal"
+          ],
+          "event_score": 72
+        },
         {
           "date": "2026-10-09",
           "type": "research",
