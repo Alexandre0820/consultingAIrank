@@ -38,13 +38,19 @@ function snapshotFrom(commit) {
   const d = JSON.parse(out);
   const now = Date.parse(d.meta.updated_at + "T00:00:00Z");
   const rows = (d.companies || []).map((co) => {
-    const evs = (co.events || [])
-      .filter((e) => ts(e.date) <= now)
+    const dated = (co.events || []).filter((e) => ts(e.date) <= now);
+    const evs = dated
       .map((e) => eventWeight(e, now))
       .filter((w) => w > 0)
       .sort((a, b) => b - a);
     const total = evs.reduce((s, w, i) => s + w * decay(i), 0);
-    return { id: co.id, name: co.name, cn: co.cn || "", total };
+    return {
+      id: co.id,
+      name: co.name,
+      cn: co.cn || "",
+      total,
+      latest: Math.max(...dated.map((e) => ts(e.date)), 0),
+    };
   });
   const max = Math.max(...rows.map((r) => r.total), 0);
   const maxRaw = 100 * (1 - Math.exp(-max / CURVE));
@@ -55,8 +61,11 @@ function snapshotFrom(commit) {
       const n = Math.max(0, Math.min(1, (r.score - headFloor) / (maxRaw - headFloor)));
       r.score = headFloor + n * (100 - headFloor);
     }
+    // 与主榜口径一致：先取整到一位小数再排序，否则显示同分的两家会因取整前的
+    // 微小差异在这里排出与页面不同的先后。
+    r.score = Math.round(r.score * 10) / 10;
   });
-  rows.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+  rows.sort((a, b) => b.score - a.score || b.latest - a.latest || a.name.localeCompare(b.name));
   return { updatedAt: d.meta.updated_at, rows };
 }
 
