@@ -531,6 +531,12 @@
       "brand_note": null,
       "focus": "AI @ Scale、BCG X、生成式 AI、企业级 AI 转型",
       "confidence": "high",
+      "coverage": {
+        "coverage_confidence": "high",
+        "evidence_density": "high",
+        "notes": "官方类证据 15/23（新闻室 + BCG X 产品页），OpenAI 等合作方公告可交叉验证；维度标签覆盖 20/23。公开披露积极，但媒体与第三方互证充分，覆盖偏差风险低。",
+        "notes_en": "Official-tier sources cover 15 of 23 events (newsroom + BCG X product pages), cross-checkable via partner announcements from OpenAI and others; dimension tags cover 20/23. Disclosure is active but well-corroborated by media and third parties, so coverage bias risk is low."
+      },
       "scores": {
         "strategy_signal": 5,
         "tech_partnership": 5,

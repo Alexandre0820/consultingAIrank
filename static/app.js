@@ -13,6 +13,11 @@ const els = {
   wechatEyebrow: document.querySelector("#wechatEyebrow"),
   wechatTitle: document.querySelector("#wechatTitle"),
   wechatBody: document.querySelector("#wechatBody"),
+  wechatQrNote: document.querySelector("#wechatQrNote"),
+  digestForm: document.querySelector("#digestForm"),
+  digestEmail: document.querySelector("#digestEmail"),
+  digestSubmit: document.querySelector("#digestSubmit"),
+  digestNote: document.querySelector("#digestNote"),
   weeklyTitle: document.querySelector("#weeklyTitle"),
   deltaTitle: document.querySelector("#deltaTitle"),
   methodTitle: document.querySelector("#methodTitle"),
@@ -77,23 +82,30 @@ const I18N = {
     insightsTitle: "核心观察",
     insightsSubtitle: "从本周净新增的公开信号里，提炼对 AI 咨询行业的核心观察。",
     wechatEyebrow: "Praxis Advisory",
-    wechatTitle: "关注我们的微信公众号",
-    wechatBody: "扫描二维码，获取 AI 咨询行动榜更新、欧洲企业看中国 AI 的研究观察，以及 Praxis Advisory 的最新内容。",
+    wechatTitle: "榜单变化，每周一封",
+    wechatBody: "每周一封邮件，30 秒看完 17 家咨询公司的 AI 动作变化：谁升谁降、本周最强信号、谁在沉默。也可以扫码关注公众号直接向我们提问——某家公司最近在做什么、你的行业怎么选服务商，我们都会回复。",
+    wechatQrNote: "扫码关注公众号 · 可提问、可订阅周报",
+    digestPlaceholder: "你的邮箱，如 name@company.com",
+    digestSubmit: "订阅周报",
+    digestSending: "提交中…",
+    digestInvalid: "请输入有效的邮箱地址。",
+    digestOk: "订阅成功！第一封周报将于下周一送达。",
+    digestLocal: "当前是本地预览：表单已就绪，站点部署到 Netlify 后提交即生效。也可以先扫码，通过公众号直接提问。",
     weeklyTitle: "本周净新增事件",
     deltaTitle: "本周变化归因",
     methodTitle: "Method",
     methodCard1Title: "新闻证据层",
     methodCard1Body: "每条新闻记录日期、主体、事件类型、来源可信度与影响维度，用于说明公司最近做了什么，而不是直接给新闻本身打榜。",
-    methodCard2Title: "AI 行动力评分",
-    methodCard2Body: "重点看最近新闻动作，结合新鲜度、来源质量、动作强度与影响维度，评估一家公司近期把 AI 推进到真实工作流与组织动作中的力度。",
+    methodCard2Title: "相对行动力指数",
+    methodCard2Body: "每条事件按动作强度、新鲜度、来源可信度与置信度加权求和；每期以加权总和最高的公司为 100，其余按比例折算。它回答「相互之间的距离」：榜首为 100，证据量约为其一半的公司显示约 50。绝对证据强度作为辅助口径保留在维度对比页。",
     reset: "重置",
     tierLabel: "公司类型",
     eventLabel: "事件类型",
     searchLabel: "搜索",
     searchPlaceholder: "公司、AI 动作、合作方",
     all: "全部",
-    actionBoard: "AI 行动力评分榜",
-    actionSubtitle: "根据最近新闻动作对公司的 AI 行动力进行评估，新闻本身不单独展示分数。"
+    actionBoard: "AI 行动力指数榜",
+    actionSubtitle: "按最近 AI 动作的公司层评估：以当期证据最强的公司为 100，其余按证据权重比例折算；新闻本身不单独展示分数。"
   },
   en: {
     heroTitle: "AI Consulting Action Ranking",
@@ -106,23 +118,30 @@ const I18N = {
     insightsTitle: "Key Observations",
     insightsSubtitle: "Core observations on the AI consulting industry, drawn from this week's net-new public signals.",
     wechatEyebrow: "Praxis Advisory",
-    wechatTitle: "Follow Our WeChat Official Account",
-    wechatBody: "Scan the QR code for leaderboard updates, research on how European companies read the China AI ecosystem, and the latest insights from Praxis Advisory.",
+    wechatTitle: "The Board Moves. Every Monday.",
+    wechatBody: "One weekly email: who rose, who slipped, the strongest signal of the week, and who went quiet across 17 consulting firms — readable in 30 seconds. Or scan the QR code to follow our WeChat account and ask us directly: what a firm is actually doing in AI, or how to shortlist providers in your industry.",
+    wechatQrNote: "Follow us on WeChat · Ask & subscribe",
+    digestPlaceholder: "Your email, e.g. name@company.com",
+    digestSubmit: "Subscribe",
+    digestSending: "Submitting…",
+    digestInvalid: "Please enter a valid email address.",
+    digestOk: "Subscribed! Your first digest arrives next Monday.",
+    digestLocal: "Local preview: the form is ready and goes live once the site is deployed. Meanwhile, scan the QR code to reach us on WeChat.",
     weeklyTitle: "Net New Signals This Week",
     deltaTitle: "Weekly Rank Drivers",
     methodTitle: "Method",
     methodCard1Title: "Evidence layer",
     methodCard1Body: "Each event is logged with date, actor, event type, source credibility, and impacted dimensions to explain what a firm actually did.",
-    methodCard2Title: "AI action score",
-    methodCard2Body: "This score emphasizes recent actions, adjusting for freshness, source quality, signal strength, and impacted dimensions to estimate a firm's near-term execution intensity in AI.",
+    methodCard2Title: "Relative action index",
+    methodCard2Body: "Every event is weighted by signal strength, freshness, source credibility, and confidence, then summed per firm. Each period the firm with the highest weighted total is set to 100 and everyone else is scaled proportionally — it answers \"how far apart are we\": the leader is 100, a firm with roughly half the evidence shows about 50. The absolute evidence score remains a secondary metric on the Dimension Compare page.",
     reset: "Reset",
     tierLabel: "Firm Type",
     eventLabel: "Event Type",
     searchLabel: "Search",
     searchPlaceholder: "Firm, AI move, partner",
     all: "All",
-    actionBoard: "AI Action Ranking",
-    actionSubtitle: "Ranks firms by recent AI actions. News items are treated as evidence rather than scored as standalone entries."
+    actionBoard: "AI Action Index",
+    actionSubtitle: "Firms ranked by recent AI actions and indexed to the strongest firm at 100 each period; news items are treated as evidence, never scored standalone."
   }
 };
 
@@ -284,6 +303,9 @@ function applyStaticTranslations() {
   if (els.wechatEyebrow) els.wechatEyebrow.textContent = t("wechatEyebrow");
   if (els.wechatTitle) els.wechatTitle.textContent = t("wechatTitle");
   if (els.wechatBody) els.wechatBody.textContent = t("wechatBody");
+  if (els.wechatQrNote) els.wechatQrNote.textContent = t("wechatQrNote");
+  if (els.digestEmail) els.digestEmail.placeholder = t("digestPlaceholder");
+  if (els.digestSubmit) els.digestSubmit.textContent = t("digestSubmit");
   if (els.weeklyTitle) els.weeklyTitle.textContent = t("weeklyTitle");
   if (els.deltaTitle) els.deltaTitle.textContent = t("deltaTitle");
   if (els.methodTitle) els.methodTitle.textContent = t("methodTitle");
@@ -453,6 +475,7 @@ function evidenceMeta(company) {
     pendingCount,
     reportsCount,
     coverageConfidence,
+    coverage: company.coverage || null,
   };
 }
 
@@ -463,18 +486,10 @@ function coverageLabel(level) {
   return map[level] || (activeLanguage === "en" ? "Coverage not labeled" : "覆盖未标注");
 }
 
-function displayActionScore(totalWeight, maxWeight, minWeight) {
+function displayActionScore(totalWeight, maxWeight) {
   if (!Number.isFinite(totalWeight) || maxWeight <= 0) return 0;
-  const maxRaw = 100 * (1 - Math.exp(-maxWeight / ACTION_SCORE_CURVE));
-  const rawScore = 100 * (1 - Math.exp(-totalWeight / ACTION_SCORE_CURVE));
-  const headFloor = 90;
-
-  if (maxRaw <= headFloor || rawScore <= headFloor) {
-    return Math.round(rawScore * 10) / 10;
-  }
-
-  const normalized = Math.max(0, Math.min(1, (rawScore - headFloor) / (maxRaw - headFloor)));
-  return Math.round((headFloor + normalized * (100 - headFloor)) * 10) / 10;
+  // 相对行动力指数：当期证据加权总和最高的公司为 100，其余按比例折算。
+  return Math.round((totalWeight / maxWeight) * 1000) / 10;
 }
 
 function actionRankedCompanies(companies = data.companies) {
@@ -485,11 +500,10 @@ function actionRankedCompanies(companies = data.companies) {
       latestTimestamp: latestCompanySignal(company).latestTimestamp,
     }));
   const maxWeight = Math.max(...rawRows.map((row) => row.actionRaw.totalWeight), 0);
-  const minWeight = Math.min(...rawRows.map((row) => row.actionRaw.totalWeight), maxWeight);
   return rawRows
     .map((row) => ({
       ...row,
-      action: displayActionScore(row.actionRaw.totalWeight, maxWeight, minWeight),
+      action: displayActionScore(row.actionRaw.totalWeight, maxWeight),
     }))
     .sort((a, b) => b.action - a.action || b.latestTimestamp - a.latestTimestamp);
 }
@@ -589,15 +603,30 @@ function buildInsights() {
   return cards;
 }
 
+function evidenceDensityLabel(level) {
+  const map = activeLanguage === "en"
+    ? { high: "Deep evidence", medium: "Moderate evidence", low: "Thin evidence" }
+    : { high: "证据厚度·高", medium: "证据厚度·中", low: "证据厚度·低" };
+  return map[level] || "";
+}
+
 function renderEvidenceStrip(company) {
   const meta = evidenceMeta(company);
+  const densityPill = meta.coverage?.evidence_density
+    ? `<span class="evidence-pill evidence-pill--coverage">${evidenceDensityLabel(meta.coverage.evidence_density)}</span>`
+    : "";
+  const coverageNote = meta.coverage?.notes
+    ? `<p class="evidence-coverage-note">${escapeHtml(activeLanguage === "en" ? (meta.coverage.notes_en || meta.coverage.notes) : meta.coverage.notes)}</p>`
+    : "";
   return `
     <div class="evidence-strip">
       <span class="evidence-pill">${activeLanguage === "en" ? "Official evidence" : "官方证据"} ${meta.officialCount}</span>
       <span class="evidence-pill">${activeLanguage === "en" ? "Public reports" : "公开报告"} ${meta.reportsCount}</span>
       <span class="evidence-pill">${activeLanguage === "en" ? "Pending verification" : "待核验"} ${meta.pendingCount}</span>
       <span class="evidence-pill">${coverageLabel(meta.coverageConfidence)}</span>
+      ${densityPill}
     </div>
+    ${coverageNote}
   `;
 }
 
@@ -619,7 +648,7 @@ function cardAnchorId(company) {
 
 function renderRankNavigator(rows) {
   const topRows = rows.slice(0, 10);
-  const scoreLabel = activeLanguage === "en" ? "Action" : "行动力";
+  const scoreLabel = activeLanguage === "en" ? "Index" : "相对指数";
   return `
     <section class="rank-navigator-shell" aria-label="${activeLanguage === "en" ? "Quick rank navigation" : "排名快速导航"}">
       <div class="rank-navigator-shell__intro">
@@ -871,7 +900,7 @@ function deltaPerspective(rows) {
   const clientEvents = allNewEvents.filter((e) => e.event.type === "client_proof");
   if (clientEvents.length >= 1) {
     const names = [...new Set(clientEvents.map((e) => e.company.cn))].join("、");
-    paragraphs.push(`${names} 本周展示了客户交付案例。<b>客户证明是行动力评分中权重最高的信号类型之一</b>——它标志着 AI 能力已从内部试验阶段进入客户生产环境。从行业演进角度看，咨询公司的 AI 竞争正在从"能力声明"阶段向"价值验证"阶段过渡，能拿出可量化客户成果的公司将在下一竞争周期中占据结构性优势。`);
+    paragraphs.push(`${names} 本周展示了客户交付案例。<b>客户证明是行动力口径中权重最高的信号类型之一</b>——它标志着 AI 能力已从内部试验阶段进入客户生产环境。从行业演进角度看，咨询公司的 AI 竞争正在从"能力声明"阶段向"价值验证"阶段过渡，能拿出可量化客户成果的公司将在下一竞争周期中占据结构性优势。`);
   }
 
   // Paragraph 3: OpenAI ecosystem
@@ -1095,7 +1124,7 @@ async function init() {
   els.updatedAt.textContent = `数据更新：${data.meta.updated_at}（对比 ${comparisonStartDate()}）`;
   els.companyCount.textContent = String(data.companies.length);
   if (els.methodIntro) {
-    els.methodIntro.textContent = `我们不对单条新闻做公开排名，而是把新闻与公开报告作为证据，映射到公司的 AI 行动力评分，并公开展示证据厚度、待核验状态与覆盖置信度。当前方法参照 ${data.meta.scoring_model_file || "SCORING_MODEL.md"}。`;
+    els.methodIntro.textContent = `我们不对单条新闻做公开排名，而是把新闻与公开报告作为证据，映射到公司的相对行动力指数（当期证据最强者为 100，其余按比例），并公开展示证据厚度、待核验状态与覆盖置信度。当前方法参照 ${data.meta.scoring_model_file || "SCORING_MODEL.md"}。`;
   }
 
   populateFilters();
@@ -1122,6 +1151,43 @@ async function init() {
     renderScoreboard();
   });
 }
+
+function setupDigestForm() {
+  const form = els.digestForm;
+  if (!form) return;
+  const showNote = (kind, text) => {
+    const note = els.digestNote;
+    if (!note) return;
+    note.hidden = false;
+    note.className = `wechat-banner__note is-${kind}`;
+    note.textContent = text;
+  };
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const email = (els.digestEmail?.value || "").trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showNote("err", t("digestInvalid"));
+      els.digestEmail?.focus();
+      return;
+    }
+    const button = els.digestSubmit;
+    if (button) { button.disabled = true; button.textContent = t("digestSending"); }
+    try {
+      const body = new URLSearchParams({ "form-name": form.getAttribute("name") || "weekly-digest", email });
+      const honeypot = form.querySelector('input[name="company"]');
+      if (honeypot && honeypot.value) body.set("company", honeypot.value);
+      const response = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      showNote("ok", t("digestOk"));
+      form.reset();
+    } catch {
+      showNote("err", t("digestLocal"));
+    } finally {
+      if (button) { button.disabled = false; button.textContent = t("digestSubmit"); }
+    }
+  });
+}
+setupDigestForm();
 
 init().catch((error) => {
   els.scoreboard.innerHTML = `<div class="empty">${escapeHtml(error.message)}</div>`;

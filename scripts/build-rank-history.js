@@ -8,7 +8,6 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const OUT_PATH = path.join(ROOT, "data", "rank-history.json");
-const CURVE = 70;
 
 function ts(date) {
   if (!date) return 0;
@@ -53,17 +52,11 @@ function snapshotFrom(commit) {
     };
   });
   const max = Math.max(...rows.map((r) => r.total), 0);
-  const maxRaw = 100 * (1 - Math.exp(-max / CURVE));
-  const headFloor = 90;
   rows.forEach((r) => {
-    r.score = 100 * (1 - Math.exp(-r.total / CURVE));
-    if (maxRaw > headFloor && r.score > headFloor) {
-      const n = Math.max(0, Math.min(1, (r.score - headFloor) / (maxRaw - headFloor)));
-      r.score = headFloor + n * (100 - headFloor);
-    }
+    // 相对行动力指数：当期证据加权总和最高的公司为 100，其余按比例折算。
     // 与主榜口径一致：先取整到一位小数再排序，否则显示同分的两家会因取整前的
     // 微小差异在这里排出与页面不同的先后。
-    r.score = Math.round(r.score * 10) / 10;
+    r.score = max > 0 ? Math.round((r.total / max) * 1000) / 10 : 0;
   });
   rows.sort((a, b) => b.score - a.score || b.latest - a.latest || a.name.localeCompare(b.name));
   return { updatedAt: d.meta.updated_at, rows };
@@ -116,7 +109,7 @@ function main() {
   const payload = {
     meta: {
       generated_from: "git history of data/ai-consulting-leaderboard.json",
-      method: "每期用当期快照数据、按现行行动力算法重算；分数跨期可比",
+      method: "每期用当期快照数据、按现行相对行动力指数（当期榜首=100，其余按证据权重比例）重算；分数跨期可比",
       period_count: periods.length,
       first_period: periods[0],
       last_period: periods[periods.length - 1],

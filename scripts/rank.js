@@ -53,16 +53,8 @@ function recentActionScore(company, asOfDate) {
 
 function displayActionScore(totalWeight, maxWeight) {
   if (!Number.isFinite(totalWeight) || maxWeight <= 0) return 0;
-  const maxRaw = 100 * (1 - Math.exp(-maxWeight / ACTION_SCORE_CURVE));
-  const rawScore = 100 * (1 - Math.exp(-totalWeight / ACTION_SCORE_CURVE));
-  const headFloor = 90;
-
-  if (maxRaw <= headFloor || rawScore <= headFloor) {
-    return Math.round(rawScore * 10) / 10;
-  }
-
-  const normalized = Math.max(0, Math.min(1, (rawScore - headFloor) / (maxRaw - headFloor)));
-  return Math.round((headFloor + normalized * (100 - headFloor)) * 10) / 10;
+  // 相对行动力指数：当期证据加权总和最高的公司为 100，其余按比例折算。
+  return Math.round((totalWeight / maxWeight) * 1000) / 10;
 }
 
 function rankedRows(data, asOfDate) {
