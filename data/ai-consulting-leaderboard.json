@@ -623,6 +623,24 @@
           "event_score": 70
         },
         {
+          "date": "2026-09-30",
+          "type": "research",
+          "title": "BCG 发布《The Formula for Agentic AI Value》：2026 Applied AI Index 显示近半数企业已从 AI 获得可测价值",
+          "title_en": "BCG publishes 'The Formula for Agentic AI Value': 2026 Applied AI Index shows nearly half of firms capture measurable AI value",
+          "summary": "BCG 于 2026-09-30 发布年度旗舰研究 2026 Applied AI Index：48.5% 的受访企业已从 AI 产生可测量价值，头部 7.5% 的企业获得约 2.5 倍回报，agentic AI 的扩散是主要驱动；报告给出价值实现的公式化框架。回填说明：发布于 10-03 轮窗口内但当时被漏收，本轮经维度化补扫（thought_leadership 维度直取 publications 列表）核实回填。",
+          "summary_en": "On September 30, 2026, BCG released its flagship annual 2026 Applied AI Index: 48.5% of surveyed firms now generate measurable value from AI, the top 7.5% capture roughly 2.5x returns, and agentic AI adoption is the main driver. Backfilled via the dimension-oriented publications sweep after being missed in the 10-03 round.",
+          "url": "https://www.bcg.com/publications/2026/the-formula-for-agentic-ai-value",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "verified",
+          "event_score": 82,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
+        {
           "date": "2026-09-25",
           "type": "research",
           "title": "BCG 发布《Why AI Sales Can't Stop at the Close》：AI 产品需要新的商业化模型",
@@ -1495,6 +1513,23 @@
             "governance_risk"
           ],
           "event_score": 78
+        },
+        {
+          "date": "2026-05-11",
+          "type": "organization",
+          "title": "Oliver Wyman 任命 Jeremy Badman 为首任 Chief Data and AI Officer，三项高层任命加速 AI 整合",
+          "title_en": "Oliver Wyman names Jeremy Badman first Chief Data and AI Officer in senior appointments to accelerate AI integration",
+          "summary": "Oliver Wyman 于 2026-05-11 宣布三项高层任命以加速全所 AI 整合：Jeremy Badman 出任新设的 Chief Data and AI Officer（全所首位），与 AI Transformation 负责人及 Chief Transformation Officer 协同，把 AI 嵌入客户服务与内部运营。回填说明：人才维度（organization）常规新闻室扫描长期欠收，本轮经维度化人才扫描回填；库内仅有同期更局部的 Jayant Raman（APAC AI 合作负责人）任命。",
+          "summary_en": "On May 11, 2026, Oliver Wyman announced three senior leadership appointments to accelerate firmwide AI integration, headlined by Jeremy Badman taking the newly created role of Chief Data and AI Officer, working alongside the AI Transformation lead and Chief Transformation Officer. Backfilled via the dimension-oriented talent sweep; the newsroom-based weekly flow had missed it.",
+          "url": "https://www.consulting.us/news/13375/oliver-wyman-announces-senior-leadership-appointments-to-shepherd-ai-integration",
+          "source_level": "media",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_talent_news",
+          "verification_status": "verified",
+          "event_score": 78,
+          "dimension_tags": [
+            "strategy_signal"
+          ]
         },
         {
           "date": "2026-05",

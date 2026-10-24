@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "research_date": "2026-10-24",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-10-24",
+    "status": "staging",
+    "collection_method": "dimension_sweep_v1: 人才流动/治理/客户证明/白皮书四维度，新闻搜索 + publications 页面直取；两条已核实回填正式库（BCG Applied AI Index、OW Badman CDAIO）",
+    "notes": "维度化扫描首次试跑。结论：①白皮书与人才两个维度经新闻/出版物搜索即有产出（各回填 1 条漏网）；②治理与客户证明两个维度本周窗口无带日期的净新增新闻，搜索命中的是常设框架页/案例页——这两个维度应改为页面监控渠道（记录基线、盯变更），并作为方法论库素材而非事件榜素材；③organization 维度建议把 consulting.us/people 类人才新闻源加入周更检索模板。"
+  },
+  "items": [
+    {
+      "id": "dimsweep-20261024-001",
+      "published_at": "2026-08-01",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "organization",
+      "title": "McKinsey 任命 Jason Inacio 为 Distinguished Partner",
+      "summary": "2026-08 报道：Jason Inacio 获任命为 McKinsey Distinguished Partner。",
+      "why_it_matters": "若其职责与 AI/数据直接相关，属 organization 维度高价值信号；AI 关联度待核实官方公告。",
+      "url": "https://www.consulting.us/people/",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "dimension_sweep_talent_news",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "AI 关联度未核实，先入观察池，待官方公告确认职责范围。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "dimsweep-20261024-002",
+      "published_at": "2026-10-24",
+      "discovered_at": "2026-10-24",
+      "scope": "sector",
+      "company_ids": [],
+      "company_names": [],
+      "candidate_event_type": "governance",
+      "title": "治理维度渠道结论：常设框架页监控清单（非事件）",
+      "summary": "本轮治理维度新闻搜索无带日期净新增；命中的常设资产：BCG Responsible AI（五支柱框架页）、Deloitte AI Board Governance Roadmap、PwC Responsible AI and Data Governance、Accenture Responsible AI Governance。",
+      "why_it_matters": "治理维度的正确采集渠道是框架页基线监控（盯版本/内容变更），同时这批框架页是方法论库治理专题的直接素材。",
+      "url": "https://www.bcg.com/capabilities/artificial-intelligence/responsible-ai",
+      "source_level": "third_party",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_governance",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "governance_risk"
+      ],
+      "merge_recommendation": "skip",
+      "merge_rationale": "常设页面非事件，不入事件榜；转入方法论库素材清单与页面监控基线。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    }
+  ]
+}
