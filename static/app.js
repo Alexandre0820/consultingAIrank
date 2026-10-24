@@ -91,6 +91,7 @@ const I18N = {
     digestInvalid: "请输入有效的邮箱地址。",
     digestOk: "订阅成功！第一封周报将于下周一送达。",
     digestLocal: "当前是本地预览：表单已就绪，站点部署到 Netlify 后提交即生效。也可以先扫码，通过公众号直接提问。",
+    digestError: "提交暂时没有成功：线上表单可能尚未启用（Netlify 后台的 Form detection）。开启并重新部署后即可用；或先扫码，通过公众号直接提问。",
     weeklyTitle: "本周净新增事件",
     deltaTitle: "本周变化归因",
     methodTitle: "Method",
@@ -127,6 +128,7 @@ const I18N = {
     digestInvalid: "Please enter a valid email address.",
     digestOk: "Subscribed! Your first digest arrives next Monday.",
     digestLocal: "Local preview: the form is ready and goes live once the site is deployed. Meanwhile, scan the QR code to reach us on WeChat.",
+    digestError: "Submission didn't go through: the live form may not be enabled yet (Netlify form detection). Enable it in the dashboard and redeploy, or scan the QR code to reach us on WeChat.",
     weeklyTitle: "Net New Signals This Week",
     deltaTitle: "Weekly Rank Drivers",
     methodTitle: "Method",
@@ -1181,7 +1183,8 @@ function setupDigestForm() {
       showNote("ok", t("digestOk"));
       form.reset();
     } catch {
-      showNote("err", t("digestLocal"));
+      const isLocal = /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname);
+      showNote("err", t(isLocal ? "digestLocal" : "digestError"));
     } finally {
       if (button) { button.disabled = false; button.textContent = t("digestSubmit"); }
     }
