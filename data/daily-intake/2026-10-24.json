@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "research_date": "2026-10-24",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-10-17",
+    "status": "staging",
+    "collection_method": "web_search_recovered_full_17_firm_sweep",
+    "notes": "本次采集窗口为 2026-10-18 至 10-24。web_search 服务恢复，完成了统计以来首次真正意义的 17 家全量扫查（Monitor Deloitte/Strategy& 为品牌标签随母公司）。净新增 3 条（Accenture 两条 + OW 回填一条）；EY 10-20 欧洲发布为其 10-07 全球 CEO 展望的地区传播、按口径跳过；Capgemini 10-20 Hi PARIS 续约与 Bain 10-23 Snap Chart 缺一手链接，留痕 hold；Roland Berger（10-21/22 苏黎世高管活动为主）、FTI、A&M、L.E.K.、Deloitte、KPMG、PwC 窗口内无可确认净新增。Accenture 另有 GTC Berlin 的 AI Refinery 欧洲扩展线索，经核实为 2025 年 GTC EMEA 旧闻，已排除。"
+  },
+  "items": [
+    {
+      "id": "candidate-20261024-001",
+      "published_at": "2026-10-19",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "Accenture Federal Services × Google Public Sector：Gemini Launchpads 进联邦市场",
+      "summary": "为美国联邦机构构建/部署/规模化专属 AI agents，首批 Google Cloud 认证工程师培训纳入千人计划。",
+      "why_it_matters": "Accenture-Google 联盟向政府市场的延伸，公共服务场景的 agentic AI 交付渠道。",
+      "url": "https://newsroom.accenture.com/news/2026/accenture-federal-services-and-google-public-sector-establish-gemini-launchpads-to-power-purpose-built-agents-across-federal-missions",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照（10-17）、官方新闻稿、库内无重复；已并入 2026-10-24 周更，事件分 82。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261024-002",
+      "published_at": "2026-10-21",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "Accenture × TÜV SÜD Physical AI Safety Suite（GTC 柏林，10-21）",
+      "summary": "数字孪生 + AI 仿真加速物理 AI 安全认证，产线可提前最多 30% 投产。",
+      "why_it_matters": "物理 AI 安全认证方向的首个联合方案，官方、日期与城市署名明确。",
+      "url": "https://newsroom.accenture.com/news/2026/tuv-sud-and-accenture-accelerate-certification-of-physical-ai-in-automated-factories-and-warehouses-with-nvidia-technologies-to-drive-manufacturing-productivity",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "governance_risk",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "晚于上一快照、官方新闻稿、库内无重复；已并入 2026-10-24 周更，事件分 78。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261024-003",
+      "published_at": "2026-10-15",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "oliver_wyman"
+      ],
+      "company_names": [
+        "Oliver Wyman"
+      ],
+      "candidate_event_type": "research",
+      "title": "Oliver Wyman Forum《The AI Reality Check》（上轮漏检回填，同时结案三轮挂账）",
+      "summary": "战略/治理/劳动力三线框架，内含 OW Forum × NYSE CEO Agenda 2026（415 位 CEO）调查与 Quotient 能力。",
+      "why_it_matters": "OW 本年度旗舰级 AI 报告；三轮挂账的 CEO 调查即其组成部分。",
+      "url": "https://www.oliverwymanforum.com/artificial-intelligence/agentic-ai-strategy-governance-workforce.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_backfill",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "governance_risk",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "review_for_merge",
+      "merge_rationale": "发布日期 10-15 在上一轮窗口内且库内缺失；搜索恢复后核实官方链接，已并入 2026-10-24 周更，事件分 78。",
+      "leaderboard_action": "new_candidate",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261024-004",
+      "published_at": "2026-10-20",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "capgemini"
+      ],
+      "company_names": [
+        "Capgemini"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "Capgemini 续约 Hi PARIS AI 研究中心支持（10-20）",
+      "summary": "德国股市日历网站报道 Capgemini 于 10-20 续约对巴黎 AI 研究中心 Hi PARIS 的支持。",
+      "why_it_matters": "AI 研究投入信号，但仅见二手日历来源，无 Capgemini 一手新闻稿。",
+      "url": "https://www.ad-hoc-news.de/boerse/news/vorboerse/capgemini-stock-ai-research-support-renewed-on-october-20/70390287",
+      "source_level": "media",
+      "confidence": "low",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "无一手链接、信息单薄；下轮到 capgemini.com 定位官方稿后再评估。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261024-005",
+      "published_at": "2026-10-23",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "bain"
+      ],
+      "company_names": [
+        "Bain & Company"
+      ],
+      "candidate_event_type": "research",
+      "title": "Bain Snap Chart：多数软件采购者用 AI 寻找供应商（10-23）",
+      "summary": "Bain Snap Chart 短数据条：调查显示多数软件买家已用 AI 工具寻找供应商。",
+      "why_it_matters": "AI 改变 B2B 采购行为的小切口数据；Snap Chart 体量小，定分保守。",
+      "url": null,
+      "source_level": "official",
+      "confidence": "low",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "thought_leadership"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "搜索摘要给出日期（10-23）但未取得 bain.com 直链；下轮补链接后并入。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "candidate-20261024-006",
+      "published_at": "2026-10-20",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "ey"
+      ],
+      "company_names": [
+        "EY"
+      ],
+      "candidate_event_type": "research",
+      "title": "EY 欧洲 CEO AI ROI 调查地区发布（10-20）——判定为 10-07 全球报告的地区传播",
+      "summary": "媒体报道'EY-Parthenon：仅 17% 的欧洲 CEO 能衡量 AI ROI'；核实后确认其底层为 EY 10-07 发布的全球 CEO Outlook（ey.com 官方 PDF），10-20 为欧洲地区传播。",
+      "why_it_matters": "按口径，同一底层研究的后续地区传播不重复加分。",
+      "url": "https://www.ey.com/en_gl/ceo/ceo-outlook-global-report",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "verified",
+      "dimension_tags": [],
+      "merge_recommendation": "skip",
+      "merge_rationale": "地区传播、且全球报告发布日（10-07）早于本轮窗口；不入榜。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    }
+  ]
+}

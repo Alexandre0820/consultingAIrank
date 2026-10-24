@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-10-11",
-    "updated_at": "2026-10-17",
+    "previous_updated_at": "2026-10-17",
+    "updated_at": "2026-10-24",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-17 本次刷新窗口为 2026-10-12 至 10-17，是大周，净新增 17 条覆盖 8 家公司：Deloitte 发布 Risk Clarity（AI-native 风险管理平台，经 Ascend 交付，10-14，本周最强单条）并与 Sirion 结盟（AI 合同管理，10-15）；Accenture 三连发（Workday FDE 计划 10-13、收购 Sagacity 10-13、UMass 医疗 AI 合作 10-15）；McKinsey 四连发（AI operating system 10-13、AI value curve 10-14、资本项目 AI 团队 10-13、Antonio Castro 数据博客 10-13，此前两轮因 Akamai 拦截未覆盖）；Bain 三连发（采购 AI 盈利引擎 10-14、AI 信任度调研 10-14、Markel 特种保险 AI 访谈 10-14，此前两轮因 Cloudflare 拦截未覆盖）；BCG 两篇（AI-first 技术职能研究 10-13、Fabriq 个性化 AI 产品资产 10-14）；KPMG 美国 CEO 展望 2026（10-15）；Capgemini 汽车 agentic AI 治理报告（10-12，结束四轮沉寂）；L.E.K. 人形机器人/物理 AI 研究（10-14）。覆盖说明：web_search 服务商本周持续故障，全部覆盖经浏览器直取官方新闻室完成；McKinsey（Akamai 已可访问）与 Bain（Cloudflare 人机验证在浏览器内可通过）本轮均已补齐，McKinsey 4 条（AI operating system 10-13、AI value curve 10-14、资本项目 AI 团队 10-13、Antonio Castro 数据博客 10-13），Bain 3 条（采购 AI 盈利引擎 10-14、AI 信任度调研 10-14、Markel 特种保险 AI 访谈 10-14）。Bain 第 7 届全球技术报告新闻稿确认为 2026-09-29 发布，与库内 10-03 轮次事件重复，未重复计入。OW Forum 文章无日期无法确认，FTI/A&M/Kearney/Roland Berger 本周未单独补扫。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-24 本次刷新窗口为 2026-10-18 至 10-24，web_search 服务恢复，完成统计以来首次真正的 17 家全量扫查。净新增 2 条：Accenture Federal Services 与 Google Public Sector 设立 Gemini Launchpads（10-19，联邦市场 agentic AI 交付）、Accenture 与 TÜV SÜD 在 GTC 柏林发布 Physical AI Safety Suite（10-21，数字认证可提前 30% 投产）。回填 1 条：Oliver Wyman Forum《The AI Reality Check》（10-15，上轮搜索故障漏检；该报告整合了 OW Forum × NYSE CEO Agenda 2026 的 415 位 CEO 调查，同步结案三轮挂账）。EY 10-20 欧洲发布经核实为其 10-07 全球 CEO 展望的地区传播，按口径跳过；Capgemini Hi PARIS 续约与 Bain Snap Chart 缺一手链接留痕。Deloitte、KPMG、PwC、Bain、Roland Berger、FTI、A&M、L.E.K. 窗口内无可确认净新增。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },

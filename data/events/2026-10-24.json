@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "refresh_date": "2026-10-24",
+    "comparison_start": "2026-10-17",
+    "description": "Net-new events merged during this refresh. Window: 2026-10-18 to 10-24. Accenture added two official signals: Gemini Launchpads with Google Public Sector for US federal agencies (10-19) and the TÜV SÜD Physical AI Safety Suite with NVIDIA unveiled at GTC Berlin (10-21, digital certification could bring production online up to 30% sooner). One documented backfill from the 10-17 round missed during the search outage: Oliver Wyman Forum's The AI Reality Check (10-15), which incorporates the NYSE CEO Agenda 2026 survey of 415 CEOs and resolves the three-round hold. Full 17-firm sweep completed with the search provider recovered: Deloitte, KPMG, PwC, EY, Bain, Capgemini, Roland Berger, FTI Consulting, Alvarez & Marsal, and L.E.K. had no verifiable net-new signals in the window (EY's Oct 20 European release is a regional rollout of its Oct 7 global CEO Outlook; Capgemini's Oct 20 Hi PARIS renewal and Bain's Oct 23 snap chart lacked first-party links and were held)."
+  },
+  "events": [
+    {
+      "company_id": "accenture",
+      "date": "2026-10-19",
+      "type": "partnership",
+      "title": "Accenture Federal Services 与 Google Public Sector 设立 Gemini Launchpads，为美国联邦机构快速构建专属 AI agents",
+      "title_en": "Accenture Federal Services and Google Public Sector establish Gemini Launchpads for purpose-built federal AI agents",
+      "summary": "Accenture 于 2026-10-19 宣布 Accenture Federal Services 与 Google Public Sector 设立 Gemini Launchpads，帮助美国联邦机构构建、部署并规模化专属 AI agents，把生成式 AI 接入任务工作流；Accenture 将训练首批 Google Cloud 认证工程师，纳入其千人工程师计划。这是继 Gemini Enterprise Business Group 之后 Accenture-Google 联盟向联邦市场的延伸。",
+      "summary_en": "On October 19, 2026, Accenture Federal Services and Google Public Sector established Gemini Launchpads to help US federal agencies build, deploy, and scale purpose-built AI agents and integrate generative AI into mission workflows, with Accenture training an initial cohort of Google Cloud-skilled engineers as part of its broader 1,000-person effort.",
+      "url": "https://newsroom.accenture.com/news/2026/accenture-federal-services-and-google-public-sector-establish-gemini-launchpads-to-power-purpose-built-agents-across-federal-missions",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "industry_coverage"
+      ],
+      "event_score": 82
+    },
+    {
+      "company_id": "accenture",
+      "date": "2026-10-21",
+      "type": "partnership",
+      "title": "Accenture 与 TÜV SÜD 在 GTC 柏林发布 Physical AI Safety Suite：数字认证可让产线提前 30% 投产",
+      "title_en": "Accenture and TÜV SÜD unveil Physical AI Safety Suite with NVIDIA at GTC Berlin",
+      "summary": "Accenture 于 2026-10-21（柏林）在 NVIDIA GTC 上与 TÜV SÜD 联合发布 Physical AI Safety Suite 概念：用数字孪生与 AI 仿真加速自动导引车等机器人的安全部署与认证，TÜV SÜD 估计数字认证方式可使产线提前最多 30% 投产。这是 Accenture 在物理 AI 安全与认证方向的首个联合方案。",
+      "summary_en": "On October 21, 2026 in Berlin, Accenture and TÜV SÜD unveiled their joint Physical AI Safety Suite concept at NVIDIA GTC, using digital twins and AI simulations to speed safe deployment of robots such as AMRs, with digital certification potentially bringing production online up to 30% sooner.",
+      "url": "https://newsroom.accenture.com/news/2026/tuv-sud-and-accenture-accelerate-certification-of-physical-ai-in-automated-factories-and-warehouses-with-nvidia-technologies-to-drive-manufacturing-productivity",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_web_search",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production",
+        "governance_risk",
+        "industry_coverage"
+      ],
+      "event_score": 78
+    },
+    {
+      "company_id": "oliver_wyman",
+      "date": "2026-10-15",
+      "type": "research",
+      "title": "Oliver Wyman Forum 发布《The AI Reality Check》：整合 NYSE CEO Agenda 2026 的 415 位 CEO 调查（上轮漏检回填）",
+      "title_en": "Oliver Wyman Forum releases The AI Reality Check: Strategy, Governance, Workforce",
+      "summary": "Oliver Wyman Forum 于 2026-10-15 发布 The AI Reality Check: Strategy, Governance, Workforce，超越 AI 炒作，基于消费者研究、包含 Oliver Wyman Forum × NYSE CEO Agenda 2026（415 位 CEO）的深度调查以及 Quotient, AI by Oliver Wyman 的专业能力，给出 AI 战略、治理与劳动力的务实框架。该报告同时解开了此前连续三轮挂账的'OW Forum × NYSE CEO 调查'之谜——其核心调查即本报告组成部分。发布于 10-17 轮窗口内，因搜索故障漏检，本轮经搜索恢复后回填。",
+      "summary_en": "On October 15, 2026, the Oliver Wyman Forum released The AI Reality Check: Strategy, Governance, Workforce, going beyond the AI hype with consumer research, the Oliver Wyman Forum x NYSE CEO Agenda 2026 survey of 415 CEOs, and Quotient, AI by Oliver Wyman expertise. It resolves the previously unverified OW-NYSE CEO survey hold; missed during the 10-17 round's search outage and backfilled after the search provider recovered.",
+      "url": "https://www.oliverwymanforum.com/artificial-intelligence/agentic-ai-strategy-governance-workforce.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_backfill",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership",
+        "governance_risk",
+        "strategy_signal"
+      ],
+      "event_score": 78
+    }
+  ]
+}
