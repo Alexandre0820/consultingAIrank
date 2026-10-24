@@ -6,7 +6,7 @@
     "updated_at": "2026-10-24",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-24 本次刷新窗口为 2026-10-18 至 10-24，web_search 服务恢复，完成统计以来首次真正的 17 家全量扫查。净新增 2 条：Accenture Federal Services 与 Google Public Sector 设立 Gemini Launchpads（10-19，联邦市场 agentic AI 交付）、Accenture 与 TÜV SÜD 在 GTC 柏林发布 Physical AI Safety Suite（10-21，数字认证可提前 30% 投产）。回填 1 条：Oliver Wyman Forum《The AI Reality Check》（10-15，上轮搜索故障漏检；该报告整合了 OW Forum × NYSE CEO Agenda 2026 的 415 位 CEO 调查，同步结案三轮挂账）。EY 10-20 欧洲发布经核实为其 10-07 全球 CEO 展望的地区传播，按口径跳过；Capgemini Hi PARIS 续约与 Bain Snap Chart 缺一手链接留痕。Deloitte、KPMG、PwC、Bain、Roland Berger、FTI、A&M、L.E.K. 窗口内无可确认净新增。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-24 本次刷新窗口为 2026-10-18 至 10-24，web_search 服务恢复，完成统计以来首次真正的 17 家全量扫查。净新增 7 条：Accenture 两条（Gemini Launchpads 10-19、TÜV SÜD Physical AI Safety Suite 10-21）、KPMG 与 Microsoft 启动 Frontier Innovation Hub（10-21）、Deloitte 一线劳动力管理方案（10-20）、L.E.K. 两篇（仓库自动化 AI 10-23、欧洲品牌包装 AI 工具调查 10-21）。回填 1 条：Oliver Wyman Forum《The AI Reality Check》（10-15，上轮搜索故障漏检；该报告整合了 OW Forum × NYSE CEO Agenda 2026 的 415 位 CEO 调查，同步结案三轮挂账）。EY 10-20 欧洲发布经核实为其 10-07 全球 CEO 展望的地区传播，按口径跳过；Capgemini Hi PARIS 续约与 Bain Snap Chart 缺一手链接留痕。Deloitte、KPMG、PwC、Bain、Roland Berger、FTI、A&M、L.E.K. 窗口内无可确认净新增。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },

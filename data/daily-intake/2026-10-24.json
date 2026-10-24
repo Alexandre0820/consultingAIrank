@@ -5,7 +5,7 @@
     "leaderboard_snapshot_date": "2026-10-17",
     "status": "staging",
     "collection_method": "web_search_recovered_full_17_firm_sweep",
-    "notes": "本次采集窗口为 2026-10-18 至 10-24。web_search 服务恢复，完成了统计以来首次真正意义的 17 家全量扫查（Monitor Deloitte/Strategy& 为品牌标签随母公司）。净新增 3 条（Accenture 两条 + OW 回填一条）；EY 10-20 欧洲发布为其 10-07 全球 CEO 展望的地区传播、按口径跳过；Capgemini 10-20 Hi PARIS 续约与 Bain 10-23 Snap Chart 缺一手链接，留痕 hold；Roland Berger（10-21/22 苏黎世高管活动为主）、FTI、A&M、L.E.K.、Deloitte、KPMG、PwC 窗口内无可确认净新增。Accenture 另有 GTC Berlin 的 AI Refinery 欧洲扩展线索，经核实为 2025 年 GTC EMEA 旧闻，已排除。"
+    "notes": "本次采集窗口为 2026-10-18 至 10-24。web_search 服务恢复，完成了统计以来首次真正意义的 17 家全量扫查（Monitor Deloitte/Strategy& 为品牌标签随母公司）。净新增 3 条（Accenture 两条 + OW 回填一条）；EY 10-20 欧洲发布为其 10-07 全球 CEO 展望的地区传播、按口径跳过；Capgemini 10-20 Hi PARIS 续约与 Bain 10-23 Snap Chart 缺一手链接，留痕 hold；Roland Berger（10-21/22 苏黎世高管活动为主）、FTI、A&M、L.E.K.、Deloitte、KPMG、PwC 窗口内无可确认净新增。Accenture 另有 GTC Berlin 的 AI Refinery 欧洲扩展线索，经核实为 2025 年 GTC EMEA 旧闻，已排除。 浏览器逐家复查（用户质疑后）新发现：Deloitte 一线劳动力管理方案（10-20，入榜）、KPMG-Microsoft Frontier Innovation Hub（10-21，入榜）、L.E.K. 仓库自动化与品牌包装 AI 调查（10-21/23，入榜）；Deloitte 变革管理 ROI 研究（10-20，AI 仅为背景，hold）、L.E.K. 劳动力管理（10-19，AI 相关性待核，hold）、Accenture Dragos/SANS 电力网络防御基金会与 Avicado 收购（10-20，非 AI 特异，skip 留痕）。复查证明：搜索恢复后官方新闻室浏览器直取仍不可省略。"
   },
   "items": [
     {
@@ -178,6 +178,86 @@
       "dimension_tags": [],
       "merge_recommendation": "skip",
       "merge_rationale": "地区传播、且全球报告发布日（10-07）早于本轮窗口；不入榜。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "hold-20261024-001",
+      "published_at": "2026-10-20",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "deloitte"
+      ],
+      "company_names": [
+        "Deloitte"
+      ],
+      "candidate_event_type": "research",
+      "title": "Deloitte 变革管理 ROI 研究（每 1 美元变革投入最高 4 倍回报）",
+      "summary": "对约 1,000 名高管的调查：70% 称转型常不及预期，变革管理是转型（含 AI 转型）回报的关键驱动。",
+      "why_it_matters": "转型 ROI 视角有价值，但 AI 是研究背景而非主体论题。",
+      "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-survey-roi-of-change.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [
+        "thought_leadership"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "AI 特异性弱（标题与核心发现均非 AI）；如后续 Deloitte 把该研究接入 AI 服务叙事可再评估。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "hold-20261024-002",
+      "published_at": "2026-10-19",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "lek"
+      ],
+      "company_names": [
+        "L.E.K. Consulting"
+      ],
+      "candidate_event_type": "research",
+      "title": "L.E.K.《The New World of Workforce Management》（AI 相关性待核）",
+      "summary": "劳动力管理市场演进与价值分布研究；标题未提及 AI，内容相关性未核实。",
+      "why_it_matters": "若内容含 AI/自动化要素可并入；否则跳过。",
+      "url": "https://www.lek.com/insights/technology/new-world-workforce-management-where-value-will-accrue-market-evolves",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "partially_verified",
+      "dimension_tags": [],
+      "merge_recommendation": "hold",
+      "merge_rationale": "AI 相关性未核实，先留痕。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "skip-20261024-003",
+      "published_at": "2026-10-20",
+      "discovered_at": "2026-10-24",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "partnership",
+      "title": "Accenture/Dragos/SANS 为资源不足的美国公用事业成立网络防御基金会；另收购 Avicado（非 AI 特异，留痕）",
+      "summary": "两条窗口内官方动作：公用事业 OT 网络防御基金会（10-20）、收购建筑科技咨询公司 Avicado（10-20）；可见文本均未涉及 AI。",
+      "why_it_matters": "留痕以证明 Accenture 窗口内清单已核全。",
+      "url": "https://newsroom.accenture.com/news",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "daily_intake_browser_newsroom",
+      "verification_status": "verified",
+      "dimension_tags": [],
+      "merge_recommendation": "skip",
+      "merge_rationale": "非 AI 特异动作，不符合榜单口径。",
       "leaderboard_action": "watch_only",
       "matched_leaderboard_event_id": null
     }

@@ -6,7 +6,7 @@
     "updated_at": "2026-10-24",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-24 本次刷新窗口为 2026-10-18 至 10-24，web_search 服务恢复，完成统计以来首次真正的 17 家全量扫查。净新增 2 条：Accenture Federal Services 与 Google Public Sector 设立 Gemini Launchpads（10-19，联邦市场 agentic AI 交付）、Accenture 与 TÜV SÜD 在 GTC 柏林发布 Physical AI Safety Suite（10-21，数字认证可提前 30% 投产）。回填 1 条：Oliver Wyman Forum《The AI Reality Check》（10-15，上轮搜索故障漏检；该报告整合了 OW Forum × NYSE CEO Agenda 2026 的 415 位 CEO 调查，同步结案三轮挂账）。EY 10-20 欧洲发布经核实为其 10-07 全球 CEO 展望的地区传播，按口径跳过；Capgemini Hi PARIS 续约与 Bain Snap Chart 缺一手链接留痕。Deloitte、KPMG、PwC、Bain、Roland Berger、FTI、A&M、L.E.K. 窗口内无可确认净新增。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "MVP 数据集，不代表最终排名。2026-10-24 本次刷新窗口为 2026-10-18 至 10-24，web_search 服务恢复，完成统计以来首次真正的 17 家全量扫查。净新增 7 条：Accenture 两条（Gemini Launchpads 10-19、TÜV SÜD Physical AI Safety Suite 10-21）、KPMG 与 Microsoft 启动 Frontier Innovation Hub（10-21）、Deloitte 一线劳动力管理方案（10-20）、L.E.K. 两篇（仓库自动化 AI 10-23、欧洲品牌包装 AI 工具调查 10-21）。回填 1 条：Oliver Wyman Forum《The AI Reality Check》（10-15，上轮搜索故障漏检；该报告整合了 OW Forum × NYSE CEO Agenda 2026 的 415 位 CEO 调查，同步结案三轮挂账）。EY 10-20 欧洲发布经核实为其 10-07 全球 CEO 展望的地区传播，按口径跳过；Capgemini Hi PARIS 续约与 Bain Snap Chart 缺一手链接留痕。Deloitte、KPMG、PwC、Bain、Roland Berger、FTI、A&M、L.E.K. 窗口内无可确认净新增。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -1560,6 +1560,25 @@
       },
       "events": [
         {
+          "date": "2026-10-20",
+          "type": "platform",
+          "title": "Deloitte 发布首批上市的一线劳动力管理解决方案：AI 排班已为全球十大航空公司收回数十万小时",
+          "title_en": "Deloitte launches first-to-market Frontline Workforce Management solution",
+          "summary": "Deloitte 于 2026-10-20 发布一线劳动力管理解决方案（首创上市），把排班竞标、换班、休假、合规计算与人力成本分析统一到基于 AWS、Infor 与 ServiceNow 的连接系统；已在一家全球前十航空公司落地——自动化排班收回数十万小时、自主换班使缺勤率下降 15%。AI 能力包括智能任务优先级管理与集体谈判场景的实时建模。",
+          "summary_en": "On October 20, 2026, Deloitte launched its first-to-market Frontline Workforce Management solution, unifying shift bidding, swaps, time-off, compliance, and labor cost analysis on a connected system built on AWS, Infor, and ServiceNow — already delivering for a top 10 global airline with hundreds of thousands of hours recovered and a 15% drop in absenteeism from autonomous shift swaps, with AI-powered task prioritization and real-time collective bargaining modeling.",
+          "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-announces-frontline-workforce-management-solution.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "proprietary_assets",
+            "delivery_production",
+            "client_value_proof"
+          ],
+          "event_score": 78
+        },
+        {
           "date": "2026-10-15",
           "type": "partnership",
           "title": "Deloitte 与 Sirion 结成战略联盟，交付 AI 驱动的合同生命周期管理",
@@ -2410,6 +2429,25 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-21",
+          "type": "partnership",
+          "title": "KPMG 与 Microsoft 启动 Frontier Innovation Hub：加速可信 agentic AI 的企业级采用",
+          "title_en": "KPMG and Microsoft launch Frontier Innovation Hub to accelerate trusted agentic AI at enterprise scale",
+          "summary": "KPMG 于 2026-10-21 宣布与 Microsoft 开启合作新阶段：开设 KPMG and Microsoft Frontier Innovation Hub 共创环境，帮助组织加速采用可信的 agentic AI。这是 KPMG 在 CT&I 集团、Claude Digital Gateway、Workday/Google Cloud 体验层之后的又一个 AI 共创基础设施动作。",
+          "summary_en": "On October 21, 2026, KPMG and Microsoft announced a new phase of their collaboration with the opening of the KPMG and Microsoft Frontier Innovation Hub, a co-innovation environment designed to help organizations accelerate the adoption of trusted agentic AI.",
+          "url": "https://kpmg.com/us/en/media/news/kpmg-microsoft-launch-frontier-innovation-hub-to-accelerate-trusted-agentic-ai-enterprise-scale.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "tech_partnership",
+            "delivery_production",
+            "governance_risk"
+          ],
+          "event_score": 82
+        },
         {
           "date": "2026-10-15",
           "type": "research",
@@ -3311,6 +3349,43 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-10-23",
+          "type": "research",
+          "title": "L.E.K. 发布《Warehouse Automation》：AI、机器人与履约的未来",
+          "title_en": "L.E.K. publishes Warehouse Automation: AI, Robotics and the Future of Fulfilment",
+          "summary": "L.E.K. 于 2026-10-23 发布工业设备研究，讨论 AI 与机器人如何重塑仓储自动化与履约体系，延续其从软件 AI 向物理 AI 延伸的覆盖线。",
+          "summary_en": "On October 23, 2026, L.E.K. published research on warehouse automation, examining how AI and robotics are reshaping fulfilment, continuing its coverage line extending from software AI into physical AI.",
+          "url": "https://www.lek.com/insights/industrial-equipment-technology/warehouse-automation-ai-robotics-and-future-fulfilment",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage",
+            "delivery_production"
+          ],
+          "event_score": 74
+        },
+        {
+          "date": "2026-10-21",
+          "type": "research",
+          "title": "L.E.K. 发布欧洲品牌包装调查 2026：数字与 AI 工具把包装数据变成执行优势",
+          "title_en": "L.E.K. publishes European Brand Packaging Survey 2026: digital and AI tools turn packaging data into execution advantage",
+          "summary": "L.E.K. 于 2026-10-21 发布欧洲品牌包装年度调查，聚焦数字与 AI 工具如何把包装数据转化为执行优势，把 AI 议题延伸到包装与消费品类。",
+          "summary_en": "On October 21, 2026, L.E.K. published its European Brand Packaging Survey 2026, focusing on how digital and AI tools turn packaging data into execution advantage, extending AI coverage into packaging and consumer categories.",
+          "url": "https://www.lek.com/insights/paper-packaging/european-brand-packaging-survey-2026-digital-and-ai-tools-turning",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "daily_intake_browser_newsroom",
+          "verification_status": "verified",
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "event_score": 70
+        },
         {
           "date": "2026-10-14",
           "type": "research",
