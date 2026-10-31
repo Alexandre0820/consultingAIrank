@@ -6,7 +6,7 @@
     "updated_at": "2026-10-31",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-10-31 期：窗口 10-25 至 10-31，净新增 2 条（Capgemini Q3 + 年内第二次上调指引 10-30、Deloitte 2026 AI Forum 10-29）；维度化补扫回填上期漏网 2 条（BCG 2026 AI Maturity Matrix 10-20、EY-Parthenon CEO Outlook 调查 10-07，计入 10-24 期文件）。本周 BCG/Accenture/McKinsey/De­looitte/PwC/EY/KPMG/Bain/Capgemini/专业服务各公司均经新闻室与维度检索覆盖；治理与客户证明维度无带日期净新增新闻，渠道结论维持「框架页/案例页基线监控」。评分口径不变：相对行动力指数（当期榜首=100）；事件分锚点：财报类 82–84、旗舰研究 76–82、常规研究 70–76、品牌活动 60–65。",
+    "method_note": "2026-10-31 期：窗口 10-25 至 10-31，净新增 2 条（Capgemini Q3 + 年内第二次上调指引 10-30、Deloitte 2026 AI Forum 10-29）；维度化补扫回填上期漏网 2 条（BCG 2026 AI Maturity Matrix 10-20、EY-Parthenon CEO Outlook 调查 10-07，计入 10-24 期文件）。本周 BCG/Accenture/McKinsey/De­looitte/PwC/EY/KPMG/Bain/Capgemini/专业服务各公司均经新闻室与维度检索覆盖；治理与客户证明维度无带日期净新增新闻，渠道结论维持「框架页/案例页基线监控」。评分口径不变：相对行动力指数（当期榜首=100）；事件分锚点：财报类 82–84、旗舰研究 76–82、常规研究 70–76、品牌活动 60–65。补正（10-31 当日）：Deloitte《State of AI in the Enterprise》2026 版原为仅含年份的存根条目，经用户提示补全为 10-06 美国区新闻稿口径（3,235 位高管、AI 差距扩大、build differently 三板块），分数 74→82，维度标签 thought_leadership/strategy_signal/governance_risk；此次补正印证 insights 页面直取应纳入周更常规。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -1677,6 +1677,25 @@
           "event_score": 82
         },
         {
+          "date": "2026-10-06",
+          "type": "research",
+          "title": "Deloitte 发布《State of AI in the Enterprise》2026 版：3,235 位高管调查显示「AI 差距」扩大",
+          "title_en": "Deloitte releases State of AI in the Enterprise 2026: survey of 3,235 leaders finds a widening AI gap",
+          "summary": "Deloitte AI Institute 旗舰年度调查（约 3,235 位全球高管，美国区新闻稿 2026-10-06）：核心主题是领导者应当「build differently」——覆盖 AI 经济学、治理与 physical AI 三大板块；关键发现包括 AI 工具的可及性扩张快于企业实际部署、AI 带来的生产力提升多于真正的业务转型、领先采用者与其他企业之间的「AI 差距」正在扩大，86% 的组织计划在 2026 年增加 AI 投入。补正说明：原条目为仅含年份的存根（74 分），本次补全发布日期与调查细节，分数按旗舰年度调查口径上调至 82（对照 McKinsey State of AI 86）。",
+          "summary_en": "Deloitte AI Institute's flagship annual survey (~3,235 global leaders; US press release October 6, 2026) argues leaders should 'build differently' across AI economics, governance, and physical AI; key findings include access outpacing enterprise deployment, productivity gains outpacing true transformation, and a widening AI gap, with 86% of organizations planning to increase AI investment in 2026. Correction note: the original stub entry carried a year-only date and score 74; now completed and re-scored to 82, aligned with the flagship-survey calibration (McKinsey State of AI: 86).",
+          "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "verified",
+          "event_score": 82,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "governance_risk"
+          ]
+        },
+        {
           "date": "2026-10-01",
           "type": "research",
           "title": "Deloitte 2026 未来基础设施调查：AI 与复杂性重塑全球基建格局（上轮漏检回填）",
@@ -1891,16 +1910,6 @@
           "confidence": "medium",
           "event_score": 74,
           "notes": ""
-        },
-        {
-          "date": "2026",
-          "type": "research",
-          "title": "State of AI in the Enterprise 2026",
-          "summary": "Deloitte 发布 2026 企业 AI 状态报告，强调 AI 从试点走向规模化、agent 定制化和生产化。",
-          "url": "https://www.deloitte.com/us/en/about/press-room/state-of-ai-report-2026.html",
-          "source_level": "official",
-          "confidence": "high",
-          "event_score": 74
         },
         {
           "date": "2025",

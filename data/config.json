@@ -6,7 +6,7 @@
     "updated_at": "2026-10-31",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-10-31 期：窗口 10-25 至 10-31，净新增 2 条（Capgemini Q3 + 年内第二次上调指引 10-30、Deloitte 2026 AI Forum 10-29）；维度化补扫回填上期漏网 2 条（BCG 2026 AI Maturity Matrix 10-20、EY-Parthenon CEO Outlook 调查 10-07，计入 10-24 期文件）。本周 BCG/Accenture/McKinsey/De­looitte/PwC/EY/KPMG/Bain/Capgemini/专业服务各公司均经新闻室与维度检索覆盖；治理与客户证明维度无带日期净新增新闻，渠道结论维持「框架页/案例页基线监控」。评分口径不变：相对行动力指数（当期榜首=100）；事件分锚点：财报类 82–84、旗舰研究 76–82、常规研究 70–76、品牌活动 60–65。",
+    "method_note": "2026-10-31 期：窗口 10-25 至 10-31，净新增 2 条（Capgemini Q3 + 年内第二次上调指引 10-30、Deloitte 2026 AI Forum 10-29）；维度化补扫回填上期漏网 2 条（BCG 2026 AI Maturity Matrix 10-20、EY-Parthenon CEO Outlook 调查 10-07，计入 10-24 期文件）。本周 BCG/Accenture/McKinsey/De­looitte/PwC/EY/KPMG/Bain/Capgemini/专业服务各公司均经新闻室与维度检索覆盖；治理与客户证明维度无带日期净新增新闻，渠道结论维持「框架页/案例页基线监控」。评分口径不变：相对行动力指数（当期榜首=100）；事件分锚点：财报类 82–84、旗舰研究 76–82、常规研究 70–76、品牌活动 60–65。补正（10-31 当日）：Deloitte《State of AI in the Enterprise》2026 版原为仅含年份的存根条目，经用户提示补全为 10-06 美国区新闻稿口径（3,235 位高管、AI 差距扩大、build differently 三板块），分数 74→82，维度标签 thought_leadership/strategy_signal/governance_risk；此次补正印证 insights 页面直取应纳入周更常规。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
