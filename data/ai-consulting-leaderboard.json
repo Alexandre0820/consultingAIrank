@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-10-17",
-    "updated_at": "2026-10-24",
+    "previous_updated_at": "2026-10-24",
+    "updated_at": "2026-10-31",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "MVP 数据集，不代表最终排名。2026-10-24 本次刷新窗口为 2026-10-18 至 10-24，web_search 服务恢复，完成统计以来首次真正的 17 家全量扫查。净新增 7 条：Accenture 两条（Gemini Launchpads 10-19、TÜV SÜD Physical AI Safety Suite 10-21）、KPMG 与 Microsoft 启动 Frontier Innovation Hub（10-21）、Deloitte 一线劳动力管理方案（10-20）、L.E.K. 两篇（仓库自动化 AI 10-23、欧洲品牌包装 AI 工具调查 10-21）。回填 1 条：Oliver Wyman Forum《The AI Reality Check》（10-15，上轮搜索故障漏检；该报告整合了 OW Forum × NYSE CEO Agenda 2026 的 415 位 CEO 调查，同步结案三轮挂账）。EY 10-20 欧洲发布经核实为其 10-07 全球 CEO 展望的地区传播，按口径跳过；Capgemini Hi PARIS 续约与 Bain Snap Chart 缺一手链接留痕。Deloitte、KPMG、PwC、Bain、Roland Berger、FTI、A&M、L.E.K. 窗口内无可确认净新增。评分口径不变：事件信号分 + 来源可信度 + 单榜结构。",
+    "method_note": "2026-10-31 期：窗口 10-25 至 10-31，净新增 2 条（Capgemini Q3 + 年内第二次上调指引 10-30、Deloitte 2026 AI Forum 10-29）；维度化补扫回填上期漏网 2 条（BCG 2026 AI Maturity Matrix 10-20、EY-Parthenon CEO Outlook 调查 10-07，计入 10-24 期文件）。本周 BCG/Accenture/McKinsey/De­looitte/PwC/EY/KPMG/Bain/Capgemini/专业服务各公司均经新闻室与维度检索覆盖；治理与客户证明维度无带日期净新增新闻，渠道结论维持「框架页/案例页基线监控」。评分口径不变：相对行动力指数（当期榜首=100）；事件分锚点：财报类 82–84、旗舰研究 76–82、常规研究 70–76、品牌活动 60–65。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -566,6 +566,25 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-20",
+          "type": "research",
+          "title": "BCG 发布 2026 AI Maturity Matrix：75+ 经济体 AI 成熟度评估，日韩跻身 AI Pioneers",
+          "title_en": "BCG releases 2026 AI Maturity Matrix: 75+ economies assessed, Japan and South Korea join the AI Pioneers",
+          "summary": "BCG 于 2026-10-20 发布年度 AI Maturity Matrix：从 AI exposure 与 AI readiness 两个维度、33 项指标评估 75+ 个经济体，日本与韩国新晋加入加拿大、中国大陆、新加坡、英国、美国的 AI Pioneers 组；核心结论是「执行力而非雄心正在区分 AI 经济体」。知识密集型行业（信息与通信、金融服务、专业服务）AI 暴露度最高。回填说明：属上期窗口但上轮漏收，本轮经维度化补扫核实回填。",
+          "summary_en": "On October 20, 2026, BCG released its annual AI Maturity Matrix, assessing 75+ economies on AI exposure and AI readiness across 33 indicators; Japan and South Korea joined the AI Pioneers group. Core message: execution, not ambition, now separates AI economies. Backfilled via the dimension-oriented publications sweep after being missed last round.",
+          "url": "https://www.bcg.com/publications/2026/execution-not-ambition-now-separates-ai-economies",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "verified",
+          "event_score": 80,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal",
+            "industry_coverage"
+          ]
+        },
         {
           "date": "2026-10-14",
           "type": "platform",
@@ -2286,6 +2305,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-07",
+          "type": "research",
+          "title": "EY-Parthenon CEO Outlook 调查：50% CEO 视 AI 为最大生产力驱动，但 23% 难以转化为财务成果",
+          "title_en": "EY-Parthenon CEO Outlook survey: 50% of CEOs cite AI as top productivity driver, yet 23% struggle to convert gains into financial outcomes",
+          "summary": "EY-Parthenon 于 2026-10 上旬发布 CEO Outlook 脉冲调查（10-01 与 10-07 两个发布节点）：50% 的 CEO 认为 AI 是实质性生产力提升的最大驱动，几乎所有受访 CEO 都报告了 AI 带来的生产力收益，但 23% 难以把收益转化为可测量的财务成果；报告讨论 CEO 如何把 AI 生产力转化为持久价值。回填说明：属上期窗口但上轮漏收，10-28 的行业媒体二次传播按规则不入榜，回填以官方发布为准。",
+          "summary_en": "In early October 2026, EY-Parthenon released its CEO Outlook pulse survey: 50% of CEOs cite AI as the biggest driver of material productivity gains, nearly all report AI-driven gains, yet 23% struggle to convert them into measurable financial results. Backfilled from official releases; the October 28 secondary trade coverage is excluded under the republish rule.",
+          "url": "https://www.ey.com/en_gl/newsroom",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
         {
           "date": "2026-09-10",
           "type": "organization",

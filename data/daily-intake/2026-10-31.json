@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "research_date": "2026-10-31",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-10-24",
+    "status": "staging",
+    "collection_method": "weekly newsroom sweep + dimension_sweep_v1（人才/白皮书）：6 组检索；净新增 2 条入榜，上期回填 2 条（BCG Maturity Matrix、EY-Parthenon CEO Outlook），治理/客户证明维度无带日期净新增",
+    "notes": "①Accenture 10-28「财报」传闻与财年日历不符（Q1 应于 12 月发布），未入榜，待官方新闻室核实；②McKinsey「治理 65%」调查日期未证实，观察；③McKinsey Lilli 内部采用数据（72%/50 万 prompts/月）来自第三方分析且日期模糊，观察；④PwC Dan Priest 首任 US CAIO 任命缺日期，待核实后按 organization 回填。"
+  },
+  "items": [
+    {
+      "id": "cand-20261031-001",
+      "published_at": "2026-10-28",
+      "discovered_at": "2026-10-31",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "client_proof",
+      "title": "Accenture 财报 AI 数据（传闻）：400+ 客户启动首个 advanced AI 项目、Data & AI 收入环比 +4.7%",
+      "summary": "媒体报道Accenture 于 10-28 前后发布财报，含 400+ 客户启动首个 advanced AI 工作、Data & AI 收入 +4.7% 环比、新订单 -2%。",
+      "why_it_matters": "若属实为高价值客户证明事件；但与其财年日历不符（Q1 FY26 应 12 月发布），疑为日期或年份混淆。",
+      "url": "https://www.technologyreview.com/",
+      "source_level": "media",
+      "confidence": "low",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "client_value_proof",
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "日期与财年日历矛盾，待官方新闻室核实。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "cand-20261031-002",
+      "published_at": "2026-10-25",
+      "discovered_at": "2026-10-31",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "platform",
+      "title": "McKinsey Lilli 内部采用数据：72% 员工使用、月 prompt 超 50 万",
+      "summary": "第三方分析（约 10-25）引用 McKinsey 内部 AI 平台 Lilli 的采用数据：72% 员工使用、每月超 50 万次 prompt。",
+      "why_it_matters": "内部工具规模采用是 delivery_production 维度的先行信号；但来源为第三方且日期模糊。",
+      "url": "https://workclaw.com/",
+      "source_level": "third_party",
+      "confidence": "medium",
+      "discovery_channel": "dimension_sweep_platform",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "delivery_production"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "日期模糊 + 二手来源；待 McKinsey 官方口径。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "cand-20261031-003",
+      "published_at": null,
+      "discovered_at": "2026-10-31",
+      "scope": "company",
+      "company_ids": [
+        "mckinsey"
+      ],
+      "company_names": [
+        "McKinsey"
+      ],
+      "candidate_event_type": "governance",
+      "title": "McKinsey 治理调查：65% 资深治理负责人称缺乏 agentic AI 决策管理流程（日期未证实）",
+      "summary": "检索摘要提及 McKinsey 关于 AI 信任/治理的调查发现 65% 的资深治理负责人将「缺乏管理 agentic AI 决策的流程」列为首要关切。",
+      "why_it_matters": "若为独立新报告，governance_risk 维度高价值（该维度全库事件少）；也可能与 10-13《AI operating system》同源。",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights",
+      "source_level": "official",
+      "confidence": "low",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "governance_risk"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "发布日期与同源性未证实。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "cand-20261031-004",
+      "published_at": null,
+      "discovered_at": "2026-10-31",
+      "scope": "company",
+      "company_ids": [
+        "pwc"
+      ],
+      "company_names": [
+        "PwC"
+      ],
+      "candidate_event_type": "organization",
+      "title": "PwC 任命 Dan Priest 为首任 US Chief AI Officer（日期待核）",
+      "summary": "PwC 官方宣布任命 Dan Priest 为美国区首任 Chief AI Officer，主张帮客户「AI first」。",
+      "why_it_matters": "organization 维度直接信号（全库仅 7 条）；需核实任命日期以定窗口归属。",
+      "url": "https://www.pwc.com/us/en.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "dimension_sweep_talent_news",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "strategy_signal"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "缺任命日期；核实后按当期窗口回填。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    }
+  ]
+}
