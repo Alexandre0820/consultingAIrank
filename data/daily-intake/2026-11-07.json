@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "research_date": "2026-11-07",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-10-31",
+    "status": "staging",
+    "collection_method": "weekly newsroom sweep + dimension_sweep_v1（人才/白皮书）+ 观察项核实：净新增 7 条、L.E.K. 上期补扫 2 条、PwC Priest 官方回填 1 条",
+    "notes": "观察项处置：①PwC Dan Priest 已核实（2024-07-16 官方新闻稿）→ 回填 archive；②OpenAI Frontier Alliance「11-02 深化」查无实证（联盟 2026-02-23 首发、已在库）→ 关闭；③Accenture 10-28 财报传闻与财年日历矛盾，维持 hold；④McKinsey 治理 65% 调查日期仍未证实，维持 hold；⑤Lilli 72% 采用数据第三方来源，维持 hold。新观察：PwC Annual Corporate Directors Survey（71% 董事视 AI 为关键议题）本身发布日期待核（11-05 见于哈佛法学院论坛转引）。"
+  },
+  "items": [
+    {
+      "id": "cand-20261107-001",
+      "published_at": "2026-10",
+      "discovered_at": "2026-11-07",
+      "scope": "company",
+      "company_ids": [
+        "pwc"
+      ],
+      "company_names": [
+        "PwC"
+      ],
+      "candidate_event_type": "governance",
+      "title": "PwC 2026 Annual Corporate Directors Survey：71% 董事将 AI 列为董事会关键议题",
+      "summary": "PwC 年度董事调查（常规为 10 月发布）发现 71% 的公司董事将 AI 列为关键董事会议题；11-05 经哈佛法学院治理论坛转引。",
+      "why_it_matters": "governance_risk 维度信号；需核实调查官方发布日期以定窗口。",
+      "url": "https://www.pwc.com/us/en/services/governance-insights-center.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "governance_risk",
+        "thought_leadership"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "调查官方发布日期待核，11-05 为二手转引。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    }
+  ]
+}
