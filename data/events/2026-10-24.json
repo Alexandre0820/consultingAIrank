@@ -220,6 +220,25 @@
         "thought_leadership",
         "strategy_signal"
       ]
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-10-19",
+      "type": "partnership",
+      "title": "BCG 与劳动力市场情报公司 TalentNeuron 达成全球战略合作：用 AI 重新设计劳动力",
+      "title_en": "BCG and TalentNeuron form global strategic partnership to help companies redesign their workforces for AI",
+      "summary": "BCG 于 2026-10-19 宣布与 TalentNeuron（AI 驱动的劳动力市场数据与技能分析公司）达成全球战略合作：把 BCG 的人才、组织、战略与转型专业能力，与 TalentNeuron 的劳动力市场情报和技能分析技术结合，帮助企业在 AI、成本压力与技能变迁中用真实劳动力市场数据做更快、证据更充分的劳动力再设计决策。BCG 估计 50–55% 的美国岗位将被 AI 重塑。注：双方为战略合作而非并购。补扫说明：属上期窗口，合作方渠道公告漏收，本轮经合作方交叉验证回填（SCORING_MODEL 3.4「合作方官方渠道」原则的首次实际执行）。",
+      "summary_en": "On October 19, 2026, BCG announced a global strategic partnership with TalentNeuron (AI-powered labor market data and skills analytics), combining BCG's talent, organization, strategy, and transformation expertise with TalentNeuron's workforce intelligence to help firms redesign workforces for AI; BCG estimates 50–55% of US jobs will be reshaped. Note: a partnership, not an acquisition. Backfilled via partner-channel cross-check after being missed by the newsroom sweep.",
+      "url": "https://www.prnewswire.com/news-releases/talentneuron-and-bcg-partner-to-help-companies-redesign-their-workforces-for-ai-302912142.html",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_partner_channels",
+      "verification_status": "verified",
+      "event_score": 74,
+      "dimension_tags": [
+        "tech_partnership",
+        "strategy_signal"
+      ]
     }
   ]
 }
