@@ -1,40 +1,84 @@
-[
-  {
-    "company_id": "capgemini",
-    "date": "2026-10-30",
-    "type": "client_proof",
-    "title": "Capgemini Q3 营收 €60.7 亿（+12.6%）并年内第二次上调 2026 指引：AI 需求成为核心驱动",
-    "title_en": "Capgemini Q3 revenue €6,073M (+12.6%), raises 2026 guidance for the second time as AI demand drives growth",
-    "summary": "Capgemini 于 2026-10-30 发布 Q3 财报：营收 €6,073M，按现行汇率 +12.6%、固定汇率 +11.7%，订单额 +3.4%；年内第二次上调 2026 全年固定汇率增长指引至 9.0–9.5%（7 月曾上调至 8.5–9%），明确将上调归因于 AI 相关需求的强劲拉动与北美市场表现。继 7 月之后再次以财报口径验证「AI 工作正在转化为咨询收入」。",
-    "summary_en": "On October 30, 2026, Capgemini reported Q3 revenue of €6,073M (+12.6% reported, +11.7% constant currency) with bookings up 3.4%, and raised its 2026 constant-currency growth guidance to 9.0–9.5% — the second raise this year — explicitly attributing the upgrade to surging AI-related demand and North America strength.",
-    "url": "https://investors.capgemini.com/en/publication/q3-2026-revenues",
-    "source_level": "official",
-    "confidence": "high",
-    "discovery_channel": "dimension_sweep_client_proof",
-    "verification_status": "verified",
-    "event_score": 82,
-    "dimension_tags": [
-      "client_value_proof",
-      "strategy_signal"
-    ]
+{
+  "meta": {
+    "status": "published",
+    "note": "restored: 4 events (2 round + 2 backfill) previously dropped by build-format bug"
   },
-  {
-    "company_id": "deloitte",
-    "date": "2026-10-29",
-    "type": "research",
-    "title": "Deloitte 举办 2026 AI Forum：主题「AI That Means Business. ROI That Counts.」",
-    "title_en": "Deloitte hosts 2026 AI Forum under the theme 'AI That Means Business. ROI That Counts.'",
-    "summary": "Deloitte 于 2026-10-29 至 10-30 举办年度旗舰 AI Forum，聚集 AI 领袖与 C-suite 高管，议题覆盖 AI 用例与已实现结果、人才策略与生态伙伴合作，主题明确聚焦「算得出 ROI 的 AI」。属品牌与思想领导力活动：把 Deloitte 的 AI 叙事从能力展示进一步锚定在客户 ROI 上；论坛产出的报告与用例待后续入库。",
-    "summary_en": "On October 29–30, 2026, Deloitte hosted its flagship AI Forum, convening AI leaders and C-suite executives around use cases, realized results, talent strategies, and ecosystem partnerships under the theme 'AI That Means Business. ROI That Counts.'",
-    "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/events/ai-forum-2026.html",
-    "source_level": "official",
-    "confidence": "high",
-    "discovery_channel": "newsroom_sweep",
-    "verification_status": "verified",
-    "event_score": 62,
-    "dimension_tags": [
-      "thought_leadership",
-      "strategy_signal"
-    ]
-  }
-]
+  "events": [
+    {
+      "company_id": "capgemini",
+      "date": "2026-10-30",
+      "type": "client_proof",
+      "title": "Capgemini Q3 营收 €60.7 亿（+12.6%）并年内第二次上调 2026 指引：AI 需求成为核心驱动",
+      "title_en": "Capgemini Q3 revenue €6,073M (+12.6%), raises 2026 guidance for the second time as AI demand drives growth",
+      "summary": "Capgemini 于 2026-10-30 发布 Q3 财报：营收 €6,073M，按现行汇率 +12.6%、固定汇率 +11.7%，订单额 +3.4%；年内第二次上调 2026 全年固定汇率增长指引至 9.0–9.5%（7 月曾上调至 8.5–9%），明确将上调归因于 AI 相关需求的强劲拉动与北美市场表现。继 7 月之后再次以财报口径验证「AI 工作正在转化为咨询收入」。",
+      "summary_en": "On October 30, 2026, Capgemini reported Q3 revenue of €6,073M (+12.6% reported, +11.7% constant currency) with bookings up 3.4%, and raised its 2026 constant-currency growth guidance to 9.0–9.5% — the second raise this year — explicitly attributing the upgrade to surging AI-related demand and North America strength.",
+      "url": "https://investors.capgemini.com/en/publication/q3-2026-revenues",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_client_proof",
+      "verification_status": "verified",
+      "event_score": 82,
+      "dimension_tags": [
+        "client_value_proof",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "deloitte",
+      "date": "2026-10-29",
+      "type": "research",
+      "title": "Deloitte 举办 2026 AI Forum：主题「AI That Means Business. ROI That Counts.」",
+      "title_en": "Deloitte hosts 2026 AI Forum under the theme 'AI That Means Business. ROI That Counts.'",
+      "summary": "Deloitte 于 2026-10-29 至 10-30 举办年度旗舰 AI Forum，聚集 AI 领袖与 C-suite 高管，议题覆盖 AI 用例与已实现结果、人才策略与生态伙伴合作，主题明确聚焦「算得出 ROI 的 AI」。属品牌与思想领导力活动：把 Deloitte 的 AI 叙事从能力展示进一步锚定在客户 ROI 上；论坛产出的报告与用例待后续入库。",
+      "summary_en": "On October 29–30, 2026, Deloitte hosted its flagship AI Forum, convening AI leaders and C-suite executives around use cases, realized results, talent strategies, and ecosystem partnerships under the theme 'AI That Means Business. ROI That Counts.'",
+      "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/events/ai-forum-2026.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "verified",
+      "event_score": 62,
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "lek",
+      "date": "2026-10-23",
+      "type": "research",
+      "title": "L.E.K. 发布临床试验 AI 价值分析：哪些环节产生可测量影响",
+      "title_en": "L.E.K. analysis on where AI delivers measurable impact in clinical trials",
+      "summary": "L.E.K. 于 2026-10-23 发布临床试验 AI 分析：拆解 AI 在临床试验各环节产生可测量影响的位置。补扫说明：属上期窗口，上轮漏收，本轮维度化补扫回填。",
+      "summary_en": "On October 23, 2026, L.E.K. published an analysis on where AI delivers measurable impact across clinical-trial stages. Backfilled via the dimension sweep after being missed last round.",
+      "url": "https://www.lek.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_publications",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "lek",
+      "date": "2026-10-27",
+      "type": "research",
+      "title": "L.E.K. 发布 AI/GEO 消费者调查：2,650 名受访者中 30% 已用 AI 辅助购买决策",
+      "title_en": "L.E.K. survey of 2,650 consumers finds 30% used AI to inform purchase decisions",
+      "summary": "L.E.K. 于 2026-10-27 发布消费者调查（2,650 名受访者）：30% 的消费者已用 AI 工具辅助购买决策，GEO（生成式引擎优化）成为品牌触达的新变量。补扫说明：属上期窗口，上轮漏收，本轮回填。",
+      "summary_en": "On October 27, 2026, L.E.K. released a consumer survey (2,650 respondents) finding 30% used AI tools to inform purchase decisions. Backfilled via the dimension sweep.",
+      "url": "https://www.lek.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_publications",
+      "verification_status": "partially_verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    }
+  ]
+}

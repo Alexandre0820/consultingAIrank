@@ -6,7 +6,7 @@
     "updated_at": "2026-10-31",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-10-31 期：窗口 10-25 至 10-31，净新增 2 条（Capgemini Q3 + 年内第二次上调指引 10-30、Deloitte 2026 AI Forum 10-29）；维度化补扫回填上期漏网 2 条（BCG 2026 AI Maturity Matrix 10-20、EY-Parthenon CEO Outlook 调查 10-07，计入 10-24 期文件）。本周 BCG/Accenture/McKinsey/De­looitte/PwC/EY/KPMG/Bain/Capgemini/专业服务各公司均经新闻室与维度检索覆盖；治理与客户证明维度无带日期净新增新闻，渠道结论维持「框架页/案例页基线监控」。评分口径不变：相对行动力指数（当期榜首=100）；事件分锚点：财报类 82–84、旗舰研究 76–82、常规研究 70–76、品牌活动 60–65。补正（10-31 当日）：Deloitte《State of AI in the Enterprise》2026 版原为仅含年份的存根条目，经用户提示补全为 10-06 美国区新闻稿口径（3,235 位高管、AI 差距扩大、build differently 三板块），分数 74→82，维度标签 thought_leadership/strategy_signal/governance_risk；此次补正印证 insights 页面直取应纳入周更常规。",
+    "method_note": "2026-11-07 期：窗口 11-01 至 11-07，净新增 7 条（EY×3：CrowdStrike 联盟 78/AI Week 60/客服报告 74；KPMG 30 国私企审计 AI 76；Capgemini 金融多代理研究 72；BCG X×Nature 首届 AI for Discovery Awards 70；Bain《Proprietary Intelligence》74，日期精度为月份）。上期补扫回填 2 条（L.E.K. 临床试验 AI 10-23、消费者 AI/GEO 调查 10-27，计入 10-31 期文件）；观察项处置：PwC Priest（2024-07-16 官方）回填 archive、OpenAI 联盟 11-02 深化查无实证关闭、Accenture 财报传闻与麦肯锡治理调查维持 hold。本周 EY 产出最密（联盟+活动+报告），Bain 结束三周 quiet。评分口径不变：相对行动力指数（当期榜首=100）；锚点：联盟类 78、平台部署 76、研究 70–74、品牌活动 60。【构建缺陷修正】发现 events 轮次文件若写成裸数组会被 build-data 静默跳过：2026-10-31 与 2026-11-07 两个文件因此漏算。本提交先把 4 条漏算事件（Capgemini Q3、Deloitte AI Forum、L.E.K.×2）补回 10-31 期快照，下一条提交再开 11-07 期。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -567,6 +567,24 @@
       },
       "events": [
         {
+          "date": "2026-11-06",
+          "type": "partnership",
+          "title": "BCG X AI Science Institute 与 Nature 设立 AI for Discovery Awards 并公布首批获奖者",
+          "title_en": "BCG X AI Science Institute and Nature announce first AI for Discovery Awards winners",
+          "summary": "BCG X 的 AI Science Institute 与 Nature 于 2026-11-06（波士顿/伦敦）公布首届 AI for Discovery Awards 得主：四位研究者分别在健康、可持续与制造领域用 AI 推动科学发现。学术出版巨头 + 咨询 AI 研究所的组合，是 BCG X 科研路线的独特信号。",
+          "summary_en": "On November 6, 2026 (Boston/London), BCG X's AI Science Institute and Nature announced the first AI for Discovery Awards — four researchers applying AI across health, sustainability, and manufacturing.",
+          "url": "https://www.bcg.com/x",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "tech_partnership",
+            "thought_leadership"
+          ]
+        },
+        {
           "date": "2026-10-20",
           "type": "research",
           "title": "BCG 发布 2026 AI Maturity Matrix：75+ 经济体 AI 成熟度评估，日韩跻身 AI Pioneers",
@@ -1050,6 +1068,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11",
+          "type": "research",
+          "title": "Bain 发布《What's Still Missing from Your AI Strategy? Proprietary Intelligence》：差异化来自专有智能",
+          "title_en": "Bain publishes 'What's Still Missing from Your AI Strategy? Proprietary Intelligence'",
+          "summary": "Bain 于 11 月发布新报告，主张企业 AI 战略的差异化来自专有数据与专有智能（proprietary intelligence）的构建，而非通用模型调用；补上 Bain 近三周的 quiet 期。日期精度为月份。",
+          "summary_en": "In November, Bain published a new report arguing differentiated AI strategy comes from building proprietary data and intelligence rather than calling general models — ending Bain's quiet stretch.",
+          "url": "https://www.bain.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
         {
           "date": "2026-10-14",
           "type": "research",
@@ -1619,6 +1655,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-10-29",
+          "type": "research",
+          "title": "Deloitte 举办 2026 AI Forum：主题「AI That Means Business. ROI That Counts.」",
+          "title_en": "Deloitte hosts 2026 AI Forum under the theme 'AI That Means Business. ROI That Counts.'",
+          "summary": "Deloitte 于 2026-10-29 至 10-30 举办年度旗舰 AI Forum，聚集 AI 领袖与 C-suite 高管，议题覆盖 AI 用例与已实现结果、人才策略与生态伙伴合作，主题明确聚焦「算得出 ROI 的 AI」。属品牌与思想领导力活动：把 Deloitte 的 AI 叙事从能力展示进一步锚定在客户 ROI 上；论坛产出的报告与用例待后续入库。",
+          "summary_en": "On October 29–30, 2026, Deloitte hosted its flagship AI Forum, convening AI leaders and C-suite executives around use cases, realized results, talent strategies, and ecosystem partnerships under the theme 'AI That Means Business. ROI That Counts.'",
+          "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/events/ai-forum-2026.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "verified",
+          "event_score": 62,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
         {
           "date": "2026-10-20",
           "type": "platform",
@@ -2207,6 +2261,23 @@
           "event_score": 68
         },
         {
+          "date": "2024-07-16",
+          "type": "organization",
+          "title": "PwC US 任命 Dan Priest 为首任 US Chief AI Officer",
+          "title_en": "PwC US names Dan Priest its first US Chief AI Officer",
+          "summary": "PwC US 于 2024-07-16 任命 Dan Priest（PwC 老将，曾任 Cloud & Digital 负责人）为首任美国区 Chief AI Officer，同一公告还任命了可持续发展执行发起人。回填说明：上周观察项经核实有官方新闻稿，organization 维度回填；日期较早，按新鲜度衰减自然处理。",
+          "summary_en": "On July 16, 2024, PwC US named Dan Priest (a PwC veteran, formerly Cloud & Digital leader) its first US Chief AI Officer. Backfilled from last week's watch list after verifying the official press release.",
+          "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases/chief-ai-officer-sustainability-executive-sponsor.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_talent_news",
+          "verification_status": "verified",
+          "event_score": 78,
+          "dimension_tags": [
+            "strategy_signal"
+          ]
+        },
+        {
           "date": "2023-04-26",
           "type": "investment",
           "title": "PwC US 三年投入 10 亿美元扩展 AI 能力",
@@ -2314,6 +2385,59 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-03",
+          "type": "research",
+          "title": "EY 发布客户服务 AI 报告：头部组织核心客服 KPI 提升超 50%",
+          "title_en": "EY releases customer service AI report: top performers see over 50% improvement in core service KPIs",
+          "summary": "EY 于 2026-11-03 发布客户服务 AI 研究：表现最好的组织在核心客服 KPI 上实现超过 50% 的改善，为 AI 在运营场景的价值兑现提供了量化证据。",
+          "summary_en": "On November 3, 2026, EY released research finding AI delivered over 50% improvements across core customer service KPIs for top-performing organizations.",
+          "url": "https://www.ey.com/en_gl/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "thought_leadership",
+            "client_value_proof"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "type": "partnership",
+          "title": "EY 与 CrowdStrike 达成全球联盟：在 Falcon 平台上构建 AI 安全能力，覆盖 20+ 成员所",
+          "title_en": "EY and CrowdStrike form global alliance to build AI security capabilities on the Falcon platform across 20+ member firms",
+          "summary": "EY 于 11 月初宣布与 CrowdStrike 建立全球联盟：基于 Falcon 平台构建 AI 驱动的安全能力，覆盖 EY 20+ 成员所，并计划在未来一年内完成相关人才培训。将 AI 与网络安全深度绑定，是治理/风险维度与科技合作维度的双重信号。",
+          "summary_en": "EY announced a global alliance with CrowdStrike in early November: AI-powered security capabilities built on the Falcon platform across 20+ EY member firms, with workforce training planned over the next year.",
+          "url": "https://www.ey.com/en_gl/newsroom",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "partially_verified",
+          "event_score": 78,
+          "dimension_tags": [
+            "tech_partnership",
+            "governance_risk"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "type": "research",
+          "title": "EY 举办 AI Week：一周专题活动聚焦企业 AI 下一波浪潮",
+          "title_en": "EY runs AI Week: a week-long program on the next wave of AI for business",
+          "summary": "EY 于 11-02 至 11-06 举办 AI Week 专题活动，邀请趋势研究者与 EY 领导层讲解企业 AI 下一波浪潮。属品牌与思想领导力活动，与德勤 AI Forum 同类。",
+          "summary_en": "EY ran AI Week (November 2–6) featuring trendwatchers and EY leaders on the next wave of AI for business — a brand and thought-leadership program comparable to Deloitte's AI Forum.",
+          "url": "https://www.ey.com/en_gl",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "verified",
+          "event_score": 60,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
         {
           "date": "2026-10-07",
           "type": "research",
@@ -2516,6 +2640,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-05",
+          "type": "platform",
+          "title": "KPMG 在 30 个国家测试私企审计 AI 工具：首个同类规模化部署",
+          "title_en": "KPMG tests advanced AI tools for private-company audits across 30 countries — a first-of-its-kind rollout",
+          "summary": "KPMG 于 2026-11-05 披露在 30 个国家测试面向私营企业审计的高级 AI 工具，为同类首次规模化推广；审计是四大核心业务中标准化程度最高、AI 替代潜力最大的场景之一。",
+          "summary_en": "On November 5, 2026, KPMG disclosed it is testing advanced AI tools for audits of private companies across 30 countries — a first-of-its-kind rollout.",
+          "url": "https://kpmg.com/xx/en/media.html",
+          "source_level": "media",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "partially_verified",
+          "event_score": 76,
+          "dimension_tags": [
+            "delivery_production",
+            "proprietary_assets"
+          ]
+        },
         {
           "date": "2026-10-21",
           "type": "partnership",
@@ -3084,6 +3226,42 @@
       },
       "events": [
         {
+          "date": "2026-11-04",
+          "type": "research",
+          "title": "Capgemini 发布金融服务多代理 AI 研究：机构加速转向多代理体系以追求底线价值",
+          "title_en": "Capgemini releases multi-agent AI research for financial services: institutions accelerating shift for bottom-line value",
+          "summary": "Capgemini 于 2026-11-04 发布金融服务多代理 AI 研究：金融机构正加速转向多代理 AI 体系，以追求底线价值；延续其 10 月财报后「AI 需求 → 收入」的叙事。",
+          "summary_en": "On November 4, 2026, Capgemini released research on multi-agent AI in financial services: institutions are accelerating the transition to multi-agent systems in a drive for bottom-line value.",
+          "url": "https://www.capgemini.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "type": "client_proof",
+          "title": "Capgemini Q3 营收 €60.7 亿（+12.6%）并年内第二次上调 2026 指引：AI 需求成为核心驱动",
+          "title_en": "Capgemini Q3 revenue €6,073M (+12.6%), raises 2026 guidance for the second time as AI demand drives growth",
+          "summary": "Capgemini 于 2026-10-30 发布 Q3 财报：营收 €6,073M，按现行汇率 +12.6%、固定汇率 +11.7%，订单额 +3.4%；年内第二次上调 2026 全年固定汇率增长指引至 9.0–9.5%（7 月曾上调至 8.5–9%），明确将上调归因于 AI 相关需求的强劲拉动与北美市场表现。继 7 月之后再次以财报口径验证「AI 工作正在转化为咨询收入」。",
+          "summary_en": "On October 30, 2026, Capgemini reported Q3 revenue of €6,073M (+12.6% reported, +11.7% constant currency) with bookings up 3.4%, and raised its 2026 constant-currency growth guidance to 9.0–9.5% — the second raise this year — explicitly attributing the upgrade to surging AI-related demand and North America strength.",
+          "url": "https://investors.capgemini.com/en/publication/q3-2026-revenues",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_client_proof",
+          "verification_status": "verified",
+          "event_score": 82,
+          "dimension_tags": [
+            "client_value_proof",
+            "strategy_signal"
+          ]
+        },
+        {
           "date": "2026-10-12",
           "type": "research",
           "title": "Capgemini 发布汽车业 agentic AI 治理报告：68% 试用，仅 5% 治理成熟",
@@ -3437,6 +3615,24 @@
       },
       "events": [
         {
+          "date": "2026-10-27",
+          "type": "research",
+          "title": "L.E.K. 发布 AI/GEO 消费者调查：2,650 名受访者中 30% 已用 AI 辅助购买决策",
+          "title_en": "L.E.K. survey of 2,650 consumers finds 30% used AI to inform purchase decisions",
+          "summary": "L.E.K. 于 2026-10-27 发布消费者调查（2,650 名受访者）：30% 的消费者已用 AI 工具辅助购买决策，GEO（生成式引擎优化）成为品牌触达的新变量。补扫说明：属上期窗口，上轮漏收，本轮回填。",
+          "summary_en": "On October 27, 2026, L.E.K. released a consumer survey (2,650 respondents) finding 30% used AI tools to inform purchase decisions. Backfilled via the dimension sweep.",
+          "url": "https://www.lek.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
           "date": "2026-10-23",
           "type": "research",
           "title": "L.E.K. 发布《Warehouse Automation》：AI、机器人与履约的未来",
@@ -3454,6 +3650,24 @@
             "delivery_production"
           ],
           "event_score": 74
+        },
+        {
+          "date": "2026-10-23",
+          "type": "research",
+          "title": "L.E.K. 发布临床试验 AI 价值分析：哪些环节产生可测量影响",
+          "title_en": "L.E.K. analysis on where AI delivers measurable impact in clinical trials",
+          "summary": "L.E.K. 于 2026-10-23 发布临床试验 AI 分析：拆解 AI 在临床试验各环节产生可测量影响的位置。补扫说明：属上期窗口，上轮漏收，本轮维度化补扫回填。",
+          "summary_en": "On October 23, 2026, L.E.K. published an analysis on where AI delivers measurable impact across clinical-trial stages. Backfilled via the dimension sweep after being missed last round.",
+          "url": "https://www.lek.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_publications",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
         },
         {
           "date": "2026-10-21",

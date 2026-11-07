@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "status": "published",
+    "note": "7 net-new events for the 2026-11-07 round"
+  },
+  "events": [
+    {
+      "company_id": "ey",
+      "date": "2026-11-02",
+      "type": "partnership",
+      "title": "EY 与 CrowdStrike 达成全球联盟：在 Falcon 平台上构建 AI 安全能力，覆盖 20+ 成员所",
+      "title_en": "EY and CrowdStrike form global alliance to build AI security capabilities on the Falcon platform across 20+ member firms",
+      "summary": "EY 于 11 月初宣布与 CrowdStrike 建立全球联盟：基于 Falcon 平台构建 AI 驱动的安全能力，覆盖 EY 20+ 成员所，并计划在未来一年内完成相关人才培训。将 AI 与网络安全深度绑定，是治理/风险维度与科技合作维度的双重信号。",
+      "summary_en": "EY announced a global alliance with CrowdStrike in early November: AI-powered security capabilities built on the Falcon platform across 20+ EY member firms, with workforce training planned over the next year.",
+      "url": "https://www.ey.com/en_gl/newsroom",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "partially_verified",
+      "event_score": 78,
+      "dimension_tags": [
+        "tech_partnership",
+        "governance_risk"
+      ]
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-11-02",
+      "type": "research",
+      "title": "EY 举办 AI Week：一周专题活动聚焦企业 AI 下一波浪潮",
+      "title_en": "EY runs AI Week: a week-long program on the next wave of AI for business",
+      "summary": "EY 于 11-02 至 11-06 举办 AI Week 专题活动，邀请趋势研究者与 EY 领导层讲解企业 AI 下一波浪潮。属品牌与思想领导力活动，与德勤 AI Forum 同类。",
+      "summary_en": "EY ran AI Week (November 2–6) featuring trendwatchers and EY leaders on the next wave of AI for business — a brand and thought-leadership program comparable to Deloitte's AI Forum.",
+      "url": "https://www.ey.com/en_gl",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "verified",
+      "event_score": 60,
+      "dimension_tags": [
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-11-03",
+      "type": "research",
+      "title": "EY 发布客户服务 AI 报告：头部组织核心客服 KPI 提升超 50%",
+      "title_en": "EY releases customer service AI report: top performers see over 50% improvement in core service KPIs",
+      "summary": "EY 于 2026-11-03 发布客户服务 AI 研究：表现最好的组织在核心客服 KPI 上实现超过 50% 的改善，为 AI 在运营场景的价值兑现提供了量化证据。",
+      "summary_en": "On November 3, 2026, EY released research finding AI delivered over 50% improvements across core customer service KPIs for top-performing organizations.",
+      "url": "https://www.ey.com/en_gl/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_publications",
+      "verification_status": "partially_verified",
+      "event_score": 74,
+      "dimension_tags": [
+        "thought_leadership",
+        "client_value_proof"
+      ]
+    },
+    {
+      "company_id": "kpmg",
+      "date": "2026-11-05",
+      "type": "platform",
+      "title": "KPMG 在 30 个国家测试私企审计 AI 工具：首个同类规模化部署",
+      "title_en": "KPMG tests advanced AI tools for private-company audits across 30 countries — a first-of-its-kind rollout",
+      "summary": "KPMG 于 2026-11-05 披露在 30 个国家测试面向私营企业审计的高级 AI 工具，为同类首次规模化推广；审计是四大核心业务中标准化程度最高、AI 替代潜力最大的场景之一。",
+      "summary_en": "On November 5, 2026, KPMG disclosed it is testing advanced AI tools for audits of private companies across 30 countries — a first-of-its-kind rollout.",
+      "url": "https://kpmg.com/xx/en/media.html",
+      "source_level": "media",
+      "confidence": "high",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "partially_verified",
+      "event_score": 76,
+      "dimension_tags": [
+        "delivery_production",
+        "proprietary_assets"
+      ]
+    },
+    {
+      "company_id": "capgemini",
+      "date": "2026-11-04",
+      "type": "research",
+      "title": "Capgemini 发布金融服务多代理 AI 研究：机构加速转向多代理体系以追求底线价值",
+      "title_en": "Capgemini releases multi-agent AI research for financial services: institutions accelerating shift for bottom-line value",
+      "summary": "Capgemini 于 2026-11-04 发布金融服务多代理 AI 研究：金融机构正加速转向多代理 AI 体系，以追求底线价值；延续其 10 月财报后「AI 需求 → 收入」的叙事。",
+      "summary_en": "On November 4, 2026, Capgemini released research on multi-agent AI in financial services: institutions are accelerating the transition to multi-agent systems in a drive for bottom-line value.",
+      "url": "https://www.capgemini.com/insights/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_publications",
+      "verification_status": "partially_verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-11-06",
+      "type": "partnership",
+      "title": "BCG X AI Science Institute 与 Nature 设立 AI for Discovery Awards 并公布首批获奖者",
+      "title_en": "BCG X AI Science Institute and Nature announce first AI for Discovery Awards winners",
+      "summary": "BCG X 的 AI Science Institute 与 Nature 于 2026-11-06（波士顿/伦敦）公布首届 AI for Discovery Awards 得主：四位研究者分别在健康、可持续与制造领域用 AI 推动科学发现。学术出版巨头 + 咨询 AI 研究所的组合，是 BCG X 科研路线的独特信号。",
+      "summary_en": "On November 6, 2026 (Boston/London), BCG X's AI Science Institute and Nature announced the first AI for Discovery Awards — four researchers applying AI across health, sustainability, and manufacturing.",
+      "url": "https://www.bcg.com/x",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "tech_partnership",
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-11",
+      "type": "research",
+      "title": "Bain 发布《What's Still Missing from Your AI Strategy? Proprietary Intelligence》：差异化来自专有智能",
+      "title_en": "Bain publishes 'What's Still Missing from Your AI Strategy? Proprietary Intelligence'",
+      "summary": "Bain 于 11 月发布新报告，主张企业 AI 战略的差异化来自专有数据与专有智能（proprietary intelligence）的构建，而非通用模型调用；补上 Bain 近三周的 quiet 期。日期精度为月份。",
+      "summary_en": "In November, Bain published a new report arguing differentiated AI strategy comes from building proprietary data and intelligence rather than calling general models — ending Bain's quiet stretch.",
+      "url": "https://www.bain.com/insights/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_publications",
+      "verification_status": "partially_verified",
+      "event_score": 74,
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ]
+    }
+  ]
+}
