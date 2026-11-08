@@ -6,7 +6,7 @@
     "updated_at": "2026-11-07",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-11-07 期：窗口 11-01 至 11-07，净新增 7 条（EY×3：CrowdStrike 联盟 78/AI Week 60/客服报告 74；KPMG 30 国私企审计 AI 76；Capgemini 金融多代理研究 72；BCG X×Nature 首届 AI for Discovery Awards 70；Bain《Proprietary Intelligence》74，日期精度为月份）。上期补扫回填 2 条（L.E.K. 临床试验 AI 10-23、消费者 AI/GEO 调查 10-27，计入 10-31 期文件）；观察项处置：PwC Priest（2024-07-16 官方）回填 archive、OpenAI 联盟 11-02 深化查无实证关闭、Accenture 财报传闻与麦肯锡治理调查维持 hold。本周 EY 产出最密（联盟+活动+报告），Bain 结束三周 quiet。评分口径不变：相对行动力指数（当期榜首=100）；锚点：联盟类 78、平台部署 76、研究 70–74、品牌活动 60。【构建缺陷修正】发现 events 轮次文件若写成裸数组会被 build-data 静默跳过：2026-10-31 与 2026-11-07 两个文件因此漏算。本提交先把 4 条漏算事件（Capgemini Q3、Deloitte AI Forum、L.E.K.×2）补回 10-31 期快照，下一条提交再开 11-07 期。【2026-11-07 期开启】上一次提交已修正 10-31 期；本提交按窗口 11-01 至 11-07 计算新一期。【回填修正 11-07 当日】BCG×TalentNeuron 战略合作（10-19，合作方渠道公告，非并购）漏收，补回 10-24 期；原因为周扫未覆盖合作方官方渠道，SCORING_MODEL 3.4 合作方交叉验证原则自此进入常规执行。【信源升级 11-08】Google News RSS 渠道（17 家公司名 × AI × 7d）首次运行即捕获本周漏网 6 条并补入 11-07 期；数据源矩阵（data/sources.json）与周更 runbook v2 自本期起生效。",
+    "method_note": "2026-11-07 期：窗口 11-01 至 11-07，净新增 7 条（EY×3：CrowdStrike 联盟 78/AI Week 60/客服报告 74；KPMG 30 国私企审计 AI 76；Capgemini 金融多代理研究 72；BCG X×Nature 首届 AI for Discovery Awards 70；Bain《Proprietary Intelligence》74，日期精度为月份）。上期补扫回填 2 条（L.E.K. 临床试验 AI 10-23、消费者 AI/GEO 调查 10-27，计入 10-31 期文件）；观察项处置：PwC Priest（2024-07-16 官方）回填 archive、OpenAI 联盟 11-02 深化查无实证关闭、Accenture 财报传闻与麦肯锡治理调查维持 hold。本周 EY 产出最密（联盟+活动+报告），Bain 结束三周 quiet。评分口径不变：相对行动力指数（当期榜首=100）；锚点：联盟类 78、平台部署 76、研究 70–74、品牌活动 60。【构建缺陷修正】发现 events 轮次文件若写成裸数组会被 build-data 静默跳过：2026-10-31 与 2026-11-07 两个文件因此漏算。本提交先把 4 条漏算事件（Capgemini Q3、Deloitte AI Forum、L.E.K.×2）补回 10-31 期快照，下一条提交再开 11-07 期。【2026-11-07 期开启】上一次提交已修正 10-31 期；本提交按窗口 11-01 至 11-07 计算新一期。【回填修正 11-07 当日】BCG×TalentNeuron 战略合作（10-19，合作方渠道公告，非并购）漏收，补回 10-24 期；原因为周扫未覆盖合作方官方渠道，SCORING_MODEL 3.4 合作方交叉验证原则自此进入常规执行。【信源升级 11-08】Google News RSS 渠道（17 家公司名 × AI × 7d）首次运行即捕获本周漏网 6 条并补入 11-07 期；数据源矩阵（data/sources.json）与周更 runbook v2 自本期起生效。【RSS 矩阵首轮全覆盖 11-08】按公司梯队 × 专项维度的查询矩阵补扫两周窗口：11-07 期净新增 11 条（Bain SEA 指南+AI 中心、OW UAE 调查与 Quotient 伙伴负责人、Kearney×3、RB ERP AI、FTI×2、PwC×2），10-31 期回填 4 条（Bain 医药、Kearney×Qloo、FTI GC 调查、PwC 治疗学）。覆盖薄公司（Kearney/RB/FTI/OW/Bain/PwC）事件数显著补齐，统一检索模板原则全公司适用。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -1141,6 +1141,24 @@
       },
       "events": [
         {
+          "date": "2026-11-04",
+          "type": "research",
+          "title": "Bain 发布东南亚 CEO 的 AI 转型指南，并设立 AI Innovation Center",
+          "title_en": "Bain releases Southeast Asia CEOs' guide to AI transformation and launches an AI Innovation Center",
+          "summary": "Bain 于 2026-11-04 发布东南亚 CEO 的 AI 转型指南，并宣布设立 AI Innovation Center——研究与组织动作双信号，也是 Bain 深化东南亚市场的动作。",
+          "summary_en": "Bain released a Southeast Asia CEOs' guide to AI transformation and launched an AI Innovation Center on November 4, 2026.",
+          "url": "https://www.bain.com/about/media-center/press-room/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
+        {
           "date": "2026-11",
           "type": "research",
           "title": "Bain 发布《What's Still Missing from Your AI Strategy? Proprietary Intelligence》：差异化来自专有智能",
@@ -1156,6 +1174,24 @@
           "dimension_tags": [
             "thought_leadership",
             "strategy_signal"
+          ]
+        },
+        {
+          "date": "2026-10-26",
+          "type": "research",
+          "title": "Bain 发布医药行业 AI 研究：AI 已进入诊室，制药业需要整合方案",
+          "title_en": "Bain publishes pharma AI research: AI is in the exam room, pharma needs an integrated plan",
+          "summary": "Bain 于 2026-10-26 发布医药行业 AI 研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+          "summary_en": "Bain published pharma AI research on October 26, 2026. Backfilled via the RSS matrix sweep.",
+          "url": "https://www.bain.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
           ]
         },
         {
@@ -1439,6 +1475,24 @@
       },
       "events": [
         {
+          "date": "2026-11-03",
+          "type": "research",
+          "title": "Roland Berger 发布 ERP 转型与 AI 就绪度研究",
+          "title_en": "Roland Berger publishes ERP transformation & AI readiness research",
+          "summary": "Roland Berger 于 2026-11-03 发布 ERP 转型与 AI 就绪度研究——罗兰贝格事件数最少（此前仅 3 条），本轮开始系统性补齐。",
+          "summary_en": "Roland Berger published ERP transformation & AI readiness research on November 3, 2026 — RB has the fewest logged events and this begins a systematic fill.",
+          "url": "https://www.rolandberger.com/en/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
           "date": "2026-07-23",
           "type": "research",
           "title": "Roland Berger AI hub 在 7 月继续保持连续更新",
@@ -1526,6 +1580,76 @@
       },
       "events": [
         {
+          "date": "2026-11-07",
+          "type": "research",
+          "title": "Kearney 发布《AI's next hurdle: your organization》：下一道坎是组织",
+          "title_en": "Kearney publishes 'AI's next hurdle: your organization'",
+          "summary": "Kearney 于 2026-11-07 发布研究：AI 落地的下一道障碍在组织而非技术。",
+          "summary_en": "Kearney published 'AI's next hurdle: your organization' on November 7, 2026.",
+          "url": "https://www.kearney.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "type": "research",
+          "title": "Kearney 发布 2027 美容行业展望报告",
+          "title_en": "Kearney releases the 2027 Beauty Outlook Report",
+          "summary": "Kearney 于 2026-11-05 发布 2027 美容行业展望报告（PR Newswire 渠道）。",
+          "summary_en": "Kearney released its 2027 Beauty Outlook Report on November 5, 2026 (PR Newswire channel).",
+          "url": "https://www.kearney.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "type": "research",
+          "title": "Kearney 发布金融业 AI 研究：价值不在你以为的地方",
+          "title_en": "Kearney publishes 'AI in finance: the value isn't where you think it is'",
+          "summary": "Kearney 于 2026-11-03 发布金融业 AI 价值研究。",
+          "summary_en": "Kearney published 'AI in finance: the value isn't where you think it is' on November 3, 2026.",
+          "url": "https://www.kearney.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "type": "partnership",
+          "title": "Kearney 与 Qloo 达成合作：用文化 AI 解码消费者偏好",
+          "title_en": "Kearney taps Qloo's Cultural AI to decode what consumers want",
+          "summary": "Kearney 于 2026-10-27 宣布与 Qloo（文化亲和力 AI 公司）合作，把文化智能数据引入消费与增长咨询。补扫说明：属上期窗口，RSS 矩阵补扫回填（PR Newswire 渠道）。",
+          "summary_en": "Kearney announced a partnership with Qloo (cultural affinity AI) on October 27, 2026, bringing cultural intelligence data into consumer and growth consulting. Backfilled via the RSS matrix (PR Newswire channel).",
+          "url": "https://www.prnewswire.com/",
+          "source_level": "vendor_official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "tech_partnership"
+          ]
+        },
+        {
           "date": "2026-08-19",
           "type": "research",
           "title": "Kearney 发布 Transformation Study 2026《The adoption gap》：转型失败卡在采纳而非技术",
@@ -1604,6 +1728,42 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-11-05",
+          "type": "research",
+          "title": "Oliver Wyman 发布 UAE AI 职场调查：85% 员工已用 AI，67% 担心被替代",
+          "title_en": "Oliver Wyman survey: 85% of UAE employees use AI at work while 67% worry about job losses",
+          "summary": "Oliver Wyman 于 2026-11-05 发布阿联酋职场 AI 调查：85% 员工在工作中使用 AI，67% 担心因此失业，多家中东与行业媒体广泛报道。",
+          "summary_en": "Oliver Wyman released a UAE workforce AI survey on November 5, 2026: 85% of employees use AI at work and 67% fear job losses; widely covered across Middle East media.",
+          "url": "https://www.oliverwyman.com/our-expertise/insights.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "type": "organization",
+          "title": "Oliver Wyman 任命 Mario Rizk 为 Quotient 区域伙伴负责人",
+          "title_en": "Oliver Wyman names Mario Rizk regional partnerships lead for Quotient",
+          "summary": "Oliver Wyman 于 2026-11-04 任命 Mario Rizk 出任 Quotient（Oliver Wyman 的 AI 平台）区域伙伴关系负责人，加速 AI 平台生态拓展。人才/组织维度信号（Consultancy.me 渠道）。",
+          "summary_en": "Oliver Wyman named Mario Rizk regional partnerships lead for Quotient, its AI platform, on November 4, 2026 (Consultancy.me channel).",
+          "url": "https://www.consultancy-me.com/news",
+          "source_level": "media",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 66,
+          "dimension_tags": [
+            "proprietary_assets",
+            "strategy_signal"
+          ]
+        },
         {
           "date": "2026-10-15",
           "type": "research",
@@ -2181,6 +2341,60 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-07",
+          "type": "research",
+          "title": "PwC 发布卡塔尔 AI 优势研究：在家构建、向外扩展",
+          "title_en": "PwC publishes Qatar's AI advantage: built at home, scaled abroad",
+          "summary": "PwC 于 2026-11-07 发布卡塔尔 AI 优势研究。",
+          "summary_en": "PwC published Qatar's AI advantage research on November 7, 2026.",
+          "url": "https://www.pwc.com/gx/en/insights.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-06",
+          "type": "research",
+          "title": "PwC 发布《Code is strategy》：IT 版图如何定义商业模式",
+          "title_en": "PwC publishes 'Code is strategy: Why your IT landscape defines your business model'",
+          "summary": "PwC 于 2026-11-06 发布研究：IT 版图定义商业模式，AI 时代的代码即战略。",
+          "summary_en": "PwC published 'Code is strategy' on November 6, 2026.",
+          "url": "https://www.pwc.com/gx/en/insights.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "type": "research",
+          "title": "PwC 发布《The Future of Therapeutics》",
+          "title_en": "PwC publishes 'The Future of Therapeutics'",
+          "summary": "PwC 于 2026-10-30 发布治疗学未来研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+          "summary_en": "PwC published 'The Future of Therapeutics' on October 30, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.pwc.com/gx/en/industries/pharmaceuticals.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
         {
           "date": "2026-10-05",
           "type": "partnership",
@@ -3542,6 +3756,60 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-11-06",
+          "type": "research",
+          "title": "FTI 发布《AI Governance Is Becoming an Examination Issue》",
+          "title_en": "FTI publishes 'AI Governance Is Becoming an Examination Issue'",
+          "summary": "FTI 于 2026-11-06 发布 AI 治理研究：AI 治理正在成为审查议题。",
+          "summary_en": "FTI published 'AI Governance Is Becoming an Examination Issue' on November 6, 2026.",
+          "url": "https://www.fticonsulting.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "governance_risk"
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "type": "research",
+          "title": "FTI 发布 Agentic AI 时代的网络风险管理研究",
+          "title_en": "FTI publishes on the evolving cyber risk landscape in the age of agentic AI",
+          "summary": "FTI 于 2026-11-04 发布 agentic AI 时代网络风险格局研究。",
+          "summary_en": "FTI published research on the evolving cyber risk management landscape in the age of agentic AI on November 4, 2026.",
+          "url": "https://www.fticonsulting.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "governance_risk",
+            "thought_leadership"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "type": "research",
+          "title": "FTI Consulting 调查：不到一半的法务总监用 AI 扫描威胁",
+          "title_en": "FTI Consulting survey: under half of GCs use AI to scan for threats",
+          "summary": "FTI 于 2026-10-29 发布调查：不到一半的总法律顾问使用 AI 扫描威胁，法律行业 AI 采用存在明显缺口。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+          "summary_en": "FTI released a survey on October 29, 2026 finding under half of general counsel use AI to scan for threats. Backfilled via the RSS matrix.",
+          "url": "https://www.fticonsulting.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "governance_risk",
+            "thought_leadership"
+          ]
+        },
         {
           "date": "2026-07-22",
           "type": "research",

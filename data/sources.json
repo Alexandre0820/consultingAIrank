@@ -271,5 +271,60 @@
         "fixed_by": "D_google_news_rss（首次运行即验证）"
       }
     ]
+  },
+  "rss_query_matrix": {
+    "version": "1.0",
+    "updated_at": "2026-11-08",
+    "base_url": "https://news.google.com/rss/search?q={QUERY}&hl=en-US&gl=US&ceid=US:en",
+    "note": "每条查询 = 一条可复现的 RSS URL；按公司梯队 × 专项维度设计，两周窗口（when:14d）默认，并购专项 30d。",
+    "queries": [
+      {
+        "id": "Q1",
+        "tier": "big3_b4",
+        "query": "Bain \"AI\" when:14d（MBB/四大同型，替换公司名）",
+        "dims": "全部"
+      },
+      {
+        "id": "Q2",
+        "tier": "specialist",
+        "query": "\"Oliver Wyman\" AI when:14d",
+        "dims": "全部"
+      },
+      {
+        "id": "Q3",
+        "tier": "specialist",
+        "query": "\"Kearney\" OR \"Roland Berger\" AI when:14d",
+        "dims": "全部"
+      },
+      {
+        "id": "Q4",
+        "tier": "specialist",
+        "query": "\"FTI Consulting\" OR \"Alvarez & Marsal\" AI when:14d",
+        "dims": "全部"
+      },
+      {
+        "id": "Q5",
+        "tier": "specialist",
+        "query": "\"L.E.K.\" OR \"Strategy&\" OR \"Monitor Deloitte\" AI when:14d",
+        "dims": "全部"
+      },
+      {
+        "id": "Q6",
+        "tier": "ma_special",
+        "query": "consulting (acquires OR acquisition) AI when:30d",
+        "dims": [
+          "capital_ma"
+        ]
+      },
+      {
+        "id": "Q7",
+        "tier": "talent_special",
+        "query": "(appoints OR hires OR joins) AI chief OR partner when:14d + 公司名",
+        "dims": [
+          "organization"
+        ]
+      }
+    ],
+    "execution_evidence": "2026-11-08 首轮执行：覆盖薄公司共捕获 16 条（Bain 2、OW 2、Kearney 4、RB 1、FTI 2、PwC 3、L.E.K. 2 上期、PwC 上期 1）"
   }
 }

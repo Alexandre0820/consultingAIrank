@@ -248,6 +248,214 @@
         "thought_leadership",
         "strategy_signal"
       ]
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-11-04",
+      "type": "research",
+      "title": "Bain 发布东南亚 CEO 的 AI 转型指南，并设立 AI Innovation Center",
+      "title_en": "Bain releases Southeast Asia CEOs' guide to AI transformation and launches an AI Innovation Center",
+      "summary": "Bain 于 2026-11-04 发布东南亚 CEO 的 AI 转型指南，并宣布设立 AI Innovation Center——研究与组织动作双信号，也是 Bain 深化东南亚市场的动作。",
+      "summary_en": "Bain released a Southeast Asia CEOs' guide to AI transformation and launched an AI Innovation Center on November 4, 2026.",
+      "url": "https://www.bain.com/about/media-center/press-room/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "newsroom_sweep",
+      "verification_status": "partially_verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "oliver_wyman",
+      "date": "2026-11-05",
+      "type": "research",
+      "title": "Oliver Wyman 发布 UAE AI 职场调查：85% 员工已用 AI，67% 担心被替代",
+      "title_en": "Oliver Wyman survey: 85% of UAE employees use AI at work while 67% worry about job losses",
+      "summary": "Oliver Wyman 于 2026-11-05 发布阿联酋职场 AI 调查：85% 员工在工作中使用 AI，67% 担心因此失业，多家中东与行业媒体广泛报道。",
+      "summary_en": "Oliver Wyman released a UAE workforce AI survey on November 5, 2026: 85% of employees use AI at work and 67% fear job losses; widely covered across Middle East media.",
+      "url": "https://www.oliverwyman.com/our-expertise/insights.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "kearney",
+      "date": "2026-11-05",
+      "type": "research",
+      "title": "Kearney 发布 2027 美容行业展望报告",
+      "title_en": "Kearney releases the 2027 Beauty Outlook Report",
+      "summary": "Kearney 于 2026-11-05 发布 2027 美容行业展望报告（PR Newswire 渠道）。",
+      "summary_en": "Kearney released its 2027 Beauty Outlook Report on November 5, 2026 (PR Newswire channel).",
+      "url": "https://www.kearney.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "kearney",
+      "date": "2026-11-07",
+      "type": "research",
+      "title": "Kearney 发布《AI's next hurdle: your organization》：下一道坎是组织",
+      "title_en": "Kearney publishes 'AI's next hurdle: your organization'",
+      "summary": "Kearney 于 2026-11-07 发布研究：AI 落地的下一道障碍在组织而非技术。",
+      "summary_en": "Kearney published 'AI's next hurdle: your organization' on November 7, 2026.",
+      "url": "https://www.kearney.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "kearney",
+      "date": "2026-11-03",
+      "type": "research",
+      "title": "Kearney 发布金融业 AI 研究：价值不在你以为的地方",
+      "title_en": "Kearney publishes 'AI in finance: the value isn't where you think it is'",
+      "summary": "Kearney 于 2026-11-03 发布金融业 AI 价值研究。",
+      "summary_en": "Kearney published 'AI in finance: the value isn't where you think it is' on November 3, 2026.",
+      "url": "https://www.kearney.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "roland_berger",
+      "date": "2026-11-03",
+      "type": "research",
+      "title": "Roland Berger 发布 ERP 转型与 AI 就绪度研究",
+      "title_en": "Roland Berger publishes ERP transformation & AI readiness research",
+      "summary": "Roland Berger 于 2026-11-03 发布 ERP 转型与 AI 就绪度研究——罗兰贝格事件数最少（此前仅 3 条），本轮开始系统性补齐。",
+      "summary_en": "Roland Berger published ERP transformation & AI readiness research on November 3, 2026 — RB has the fewest logged events and this begins a systematic fill.",
+      "url": "https://www.rolandberger.com/en/insights/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "fti",
+      "date": "2026-11-06",
+      "type": "research",
+      "title": "FTI 发布《AI Governance Is Becoming an Examination Issue》",
+      "title_en": "FTI publishes 'AI Governance Is Becoming an Examination Issue'",
+      "summary": "FTI 于 2026-11-06 发布 AI 治理研究：AI 治理正在成为审查议题。",
+      "summary_en": "FTI published 'AI Governance Is Becoming an Examination Issue' on November 6, 2026.",
+      "url": "https://www.fticonsulting.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "governance_risk"
+      ]
+    },
+    {
+      "company_id": "fti",
+      "date": "2026-11-04",
+      "type": "research",
+      "title": "FTI 发布 Agentic AI 时代的网络风险管理研究",
+      "title_en": "FTI publishes on the evolving cyber risk landscape in the age of agentic AI",
+      "summary": "FTI 于 2026-11-04 发布 agentic AI 时代网络风险格局研究。",
+      "summary_en": "FTI published research on the evolving cyber risk management landscape in the age of agentic AI on November 4, 2026.",
+      "url": "https://www.fticonsulting.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "governance_risk",
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "pwc",
+      "date": "2026-11-06",
+      "type": "research",
+      "title": "PwC 发布《Code is strategy》：IT 版图如何定义商业模式",
+      "title_en": "PwC publishes 'Code is strategy: Why your IT landscape defines your business model'",
+      "summary": "PwC 于 2026-11-06 发布研究：IT 版图定义商业模式，AI 时代的代码即战略。",
+      "summary_en": "PwC published 'Code is strategy' on November 6, 2026.",
+      "url": "https://www.pwc.com/gx/en/insights.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "pwc",
+      "date": "2026-11-07",
+      "type": "research",
+      "title": "PwC 发布卡塔尔 AI 优势研究：在家构建、向外扩展",
+      "title_en": "PwC publishes Qatar's AI advantage: built at home, scaled abroad",
+      "summary": "PwC 于 2026-11-07 发布卡塔尔 AI 优势研究。",
+      "summary_en": "PwC published Qatar's AI advantage research on November 7, 2026.",
+      "url": "https://www.pwc.com/gx/en/insights.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "oliver_wyman",
+      "date": "2026-11-04",
+      "type": "organization",
+      "title": "Oliver Wyman 任命 Mario Rizk 为 Quotient 区域伙伴负责人",
+      "title_en": "Oliver Wyman names Mario Rizk regional partnerships lead for Quotient",
+      "summary": "Oliver Wyman 于 2026-11-04 任命 Mario Rizk 出任 Quotient（Oliver Wyman 的 AI 平台）区域伙伴关系负责人，加速 AI 平台生态拓展。人才/组织维度信号（Consultancy.me 渠道）。",
+      "summary_en": "Oliver Wyman named Mario Rizk regional partnerships lead for Quotient, its AI platform, on November 4, 2026 (Consultancy.me channel).",
+      "url": "https://www.consultancy-me.com/news",
+      "source_level": "media",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 66,
+      "dimension_tags": [
+        "proprietary_assets",
+        "strategy_signal"
+      ]
     }
   ]
 }

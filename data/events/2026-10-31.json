@@ -79,6 +79,81 @@
         "thought_leadership",
         "industry_coverage"
       ]
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-10-26",
+      "type": "research",
+      "title": "Bain 发布医药行业 AI 研究：AI 已进入诊室，制药业需要整合方案",
+      "title_en": "Bain publishes pharma AI research: AI is in the exam room, pharma needs an integrated plan",
+      "summary": "Bain 于 2026-10-26 发布医药行业 AI 研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+      "summary_en": "Bain published pharma AI research on October 26, 2026. Backfilled via the RSS matrix sweep.",
+      "url": "https://www.bain.com/insights/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "kearney",
+      "date": "2026-10-27",
+      "type": "partnership",
+      "title": "Kearney 与 Qloo 达成合作：用文化 AI 解码消费者偏好",
+      "title_en": "Kearney taps Qloo's Cultural AI to decode what consumers want",
+      "summary": "Kearney 于 2026-10-27 宣布与 Qloo（文化亲和力 AI 公司）合作，把文化智能数据引入消费与增长咨询。补扫说明：属上期窗口，RSS 矩阵补扫回填（PR Newswire 渠道）。",
+      "summary_en": "Kearney announced a partnership with Qloo (cultural affinity AI) on October 27, 2026, bringing cultural intelligence data into consumer and growth consulting. Backfilled via the RSS matrix (PR Newswire channel).",
+      "url": "https://www.prnewswire.com/",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "tech_partnership"
+      ]
+    },
+    {
+      "company_id": "fti",
+      "date": "2026-10-29",
+      "type": "research",
+      "title": "FTI Consulting 调查：不到一半的法务总监用 AI 扫描威胁",
+      "title_en": "FTI Consulting survey: under half of GCs use AI to scan for threats",
+      "summary": "FTI 于 2026-10-29 发布调查：不到一半的总法律顾问使用 AI 扫描威胁，法律行业 AI 采用存在明显缺口。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+      "summary_en": "FTI released a survey on October 29, 2026 finding under half of general counsel use AI to scan for threats. Backfilled via the RSS matrix.",
+      "url": "https://www.fticonsulting.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "governance_risk",
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "pwc",
+      "date": "2026-10-30",
+      "type": "research",
+      "title": "PwC 发布《The Future of Therapeutics》",
+      "title_en": "PwC publishes 'The Future of Therapeutics'",
+      "summary": "PwC 于 2026-10-30 发布治疗学未来研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+      "summary_en": "PwC published 'The Future of Therapeutics' on October 30, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.pwc.com/gx/en/industries/pharmaceuticals.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
     }
   ]
 }
