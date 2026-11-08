@@ -6,7 +6,7 @@
     "updated_at": "2026-11-07",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-11-07 期：窗口 11-01 至 11-07，净新增 7 条（EY×3：CrowdStrike 联盟 78/AI Week 60/客服报告 74；KPMG 30 国私企审计 AI 76；Capgemini 金融多代理研究 72；BCG X×Nature 首届 AI for Discovery Awards 70；Bain《Proprietary Intelligence》74，日期精度为月份）。上期补扫回填 2 条（L.E.K. 临床试验 AI 10-23、消费者 AI/GEO 调查 10-27，计入 10-31 期文件）；观察项处置：PwC Priest（2024-07-16 官方）回填 archive、OpenAI 联盟 11-02 深化查无实证关闭、Accenture 财报传闻与麦肯锡治理调查维持 hold。本周 EY 产出最密（联盟+活动+报告），Bain 结束三周 quiet。评分口径不变：相对行动力指数（当期榜首=100）；锚点：联盟类 78、平台部署 76、研究 70–74、品牌活动 60。【构建缺陷修正】发现 events 轮次文件若写成裸数组会被 build-data 静默跳过：2026-10-31 与 2026-11-07 两个文件因此漏算。本提交先把 4 条漏算事件（Capgemini Q3、Deloitte AI Forum、L.E.K.×2）补回 10-31 期快照，下一条提交再开 11-07 期。【2026-11-07 期开启】上一次提交已修正 10-31 期；本提交按窗口 11-01 至 11-07 计算新一期。【回填修正 11-07 当日】BCG×TalentNeuron 战略合作（10-19，合作方渠道公告，非并购）漏收，补回 10-24 期；原因为周扫未覆盖合作方官方渠道，SCORING_MODEL 3.4 合作方交叉验证原则自此进入常规执行。",
+    "method_note": "2026-11-07 期：窗口 11-01 至 11-07，净新增 7 条（EY×3：CrowdStrike 联盟 78/AI Week 60/客服报告 74；KPMG 30 国私企审计 AI 76；Capgemini 金融多代理研究 72；BCG X×Nature 首届 AI for Discovery Awards 70；Bain《Proprietary Intelligence》74，日期精度为月份）。上期补扫回填 2 条（L.E.K. 临床试验 AI 10-23、消费者 AI/GEO 调查 10-27，计入 10-31 期文件）；观察项处置：PwC Priest（2024-07-16 官方）回填 archive、OpenAI 联盟 11-02 深化查无实证关闭、Accenture 财报传闻与麦肯锡治理调查维持 hold。本周 EY 产出最密（联盟+活动+报告），Bain 结束三周 quiet。评分口径不变：相对行动力指数（当期榜首=100）；锚点：联盟类 78、平台部署 76、研究 70–74、品牌活动 60。【构建缺陷修正】发现 events 轮次文件若写成裸数组会被 build-data 静默跳过：2026-10-31 与 2026-11-07 两个文件因此漏算。本提交先把 4 条漏算事件（Capgemini Q3、Deloitte AI Forum、L.E.K.×2）补回 10-31 期快照，下一条提交再开 11-07 期。【2026-11-07 期开启】上一次提交已修正 10-31 期；本提交按窗口 11-01 至 11-07 计算新一期。【回填修正 11-07 当日】BCG×TalentNeuron 战略合作（10-19，合作方渠道公告，非并购）漏收，补回 10-24 期；原因为周扫未覆盖合作方官方渠道，SCORING_MODEL 3.4 合作方交叉验证原则自此进入常规执行。【信源升级 11-08】Google News RSS 渠道（17 家公司名 × AI × 7d）首次运行即捕获本周漏网 6 条并补入 11-07 期；数据源矩阵（data/sources.json）与周更 runbook v2 自本期起生效。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -196,6 +196,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-04",
+          "type": "research",
+          "title": "McKinsey 发布《The AI-enabled risk function of the future》",
+          "title_en": "McKinsey publishes 'The AI-enabled risk function of the future'",
+          "summary": "McKinsey 于 2026-11-04 发布风险职能 AI 化研究，描绘 AI 时代企业风险职能的目标形态。治理/风险维度的思想领导力信号。",
+          "summary_en": "On November 4, 2026, McKinsey published 'The AI-enabled risk function of the future'.",
+          "url": "https://www.mckinsey.com/capabilities/risk/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "governance_risk"
+          ]
+        },
         {
           "date": "2026-10-14",
           "type": "research",
@@ -582,6 +600,42 @@
           "dimension_tags": [
             "tech_partnership",
             "thought_leadership"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "type": "research",
+          "title": "BCG 发布《The Insurance CEO's Blueprint for Scaling AI》",
+          "title_en": "BCG publishes 'The Insurance CEO's Blueprint for Scaling AI'",
+          "summary": "BCG 于 2026-11-05 发布保险行业 CEO 的 AI 规模化蓝图，行业场景覆盖维度信号。",
+          "summary_en": "On November 5, 2026, BCG published the Insurance CEO's Blueprint for Scaling AI.",
+          "url": "https://www.bcg.com/publications",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "type": "research",
+          "title": "BCG 发布 11-Agent KYC 系统构建实践：多代理反洗钱合规的技术拆解",
+          "title_en": "BCG publishes lessons from building an 11-agent KYC system",
+          "summary": "BCG 于 2026-11-04 发布多代理 KYC（了解你的客户/反洗钱合规）系统构建实践：11 个 AI agent 协作的架构与经验。兼具方法论密度与交付证据属性。",
+          "summary_en": "On November 4, 2026, BCG published lessons from building an 11-agent KYC system — a technical breakdown of a multi-agent compliance architecture.",
+          "url": "https://www.bcg.com/publications",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "delivery_production"
           ]
         },
         {
@@ -1673,6 +1727,42 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-05",
+          "type": "platform",
+          "title": "Deloitte 上线 AI 驱动合规工具：用于遏制企业「洗绿」",
+          "title_en": "Deloitte launches AI-powered compliance tool to curb corporate greenwashing",
+          "summary": "Deloitte 于 2026-11-05 上线 AI 驱动的合规工具，帮助企业监测与遏制「洗绿」（greenwashing）风险，把 AI 用于监管合规场景。platform + governance 双维度信号，由 Google News RSS 渠道捕获（行业媒体 ESG Dive 报道）。",
+          "summary_en": "On November 5, 2026, Deloitte launched an AI-powered compliance tool to help companies monitor and curb greenwashing risk. Captured via the Google News RSS channel (ESG Dive coverage).",
+          "url": "https://www.esgdive.com/news/deloitte-launches-ai-powered-compliance-tool-greenwashing/",
+          "source_level": "media",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 78,
+          "dimension_tags": [
+            "proprietary_assets",
+            "governance_risk"
+          ]
+        },
+        {
+          "date": "2026-11-01",
+          "type": "research",
+          "title": "Deloitte 发布《AI Value Is Unlocked By Redesigning Work》：价值来自工作再设计",
+          "title_en": "Deloitte publishes 'AI Value Is Unlocked By Redesigning Work'",
+          "summary": "Deloitte 于 2026-11-01 发布研究：AI 价值的释放来自工作再设计而非工具堆叠，与其 ROI 导向叙事一致。",
+          "summary_en": "On November 1, 2026, Deloitte published 'AI Value Is Unlocked By Redesigning Work'.",
+          "url": "https://www.deloitte.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
         {
           "date": "2026-10-29",
           "type": "research",
@@ -2876,6 +2966,23 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-05",
+          "type": "client_proof",
+          "title": "Accenture 扩展与大型消费品客户的 AI 合作",
+          "title_en": "Accenture expands its AI work with a major consumer goods customer",
+          "summary": "Accenture 于 2026-11-05 被报道扩展与一家大型消费品客户的 AI 合作（客户未具名）。客户价值证明维度信号，客户细节待官方口径。",
+          "summary_en": "On November 5, 2026, Accenture was reported to expand its AI work with a major (unnamed) consumer goods customer.",
+          "url": "https://finance.yahoo.com/",
+          "source_level": "media",
+          "confidence": "medium",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "client_value_proof"
+          ]
+        },
         {
           "date": "2026-10-21",
           "type": "partnership",

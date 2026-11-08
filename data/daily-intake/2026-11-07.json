@@ -5,7 +5,7 @@
     "leaderboard_snapshot_date": "2026-10-31",
     "status": "staging",
     "collection_method": "weekly newsroom sweep + dimension_sweep_v1（人才/白皮书）+ 观察项核实：净新增 7 条、L.E.K. 上期补扫 2 条、PwC Priest 官方回填 1 条",
-    "notes": "观察项处置：①PwC Dan Priest 已核实（2024-07-16 官方新闻稿）→ 回填 archive；②OpenAI Frontier Alliance「11-02 深化」查无实证（联盟 2026-02-23 首发、已在库）→ 关闭；③Accenture 10-28 财报传闻与财年日历矛盾，维持 hold；④McKinsey 治理 65% 调查日期仍未证实，维持 hold；⑤Lilli 72% 采用数据第三方来源，维持 hold。新观察：PwC Annual Corporate Directors Survey（71% 董事视 AI 为关键议题）本身发布日期待核（11-05 见于哈佛法学院论坛转引）。"
+    "notes": "观察项处置：①PwC Dan Priest 已核实（2024-07-16 官方新闻稿）→ 回填 archive；②OpenAI Frontier Alliance「11-02 深化」查无实证（联盟 2026-02-23 首发、已在库）→ 关闭；③Accenture 10-28 财报传闻与财年日历矛盾，维持 hold；④McKinsey 治理 65% 调查日期仍未证实，维持 hold；⑤Lilli 72% 采用数据第三方来源，维持 hold。新观察：PwC Annual Corporate Directors Survey（71% 董事视 AI 为关键议题）本身发布日期待核（11-05 见于哈佛法学院论坛转引）。 11-08 补充：Google News RSS 渠道首次运行即捕获 6 条本周漏网事件（已入榜）+ 1 条负面信号方法论议题（FT 幻觉报道，待决策）。"
   },
   "items": [
     {
@@ -34,6 +34,34 @@
       ],
       "merge_recommendation": "hold",
       "merge_rationale": "调查官方发布日期待核，11-05 为二手转引。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "cand-20261108-001",
+      "published_at": "2026-11-04",
+      "discovered_at": "2026-11-08",
+      "scope": "company",
+      "company_ids": [
+        "accenture"
+      ],
+      "company_names": [
+        "Accenture"
+      ],
+      "candidate_event_type": "governance",
+      "title": "FT/Telegraph 报道：Accenture 被指发布的 AI 研究论文含大量幻觉内容",
+      "summary": "Financial Times 与 The Telegraph 于 11-04 报道：Accenture 被指控发布的一篇 AI 研究论文中存在大量 AI 幻觉（编造）内容。",
+      "why_it_matters": "榜单当前只有正向信号通道，没有负面事件的处理规则。此类声誉/治理事件是否入榜、如何计分（扣分项？还是仅在详情页披露？）需要方法论决策，涉及榜单中立性。",
+      "url": "https://www.ft.com/",
+      "source_level": "media",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "dimension_tags": [
+        "governance_risk"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "负面信号通道未定义，提交申报人决策。",
       "leaderboard_action": "watch_only",
       "matched_leaderboard_event_id": null
     }
