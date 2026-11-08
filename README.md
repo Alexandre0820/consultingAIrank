@@ -72,6 +72,8 @@ AI咨询行动榜/
 
 ## 周更维护流程
 
+> 搜索与采集的完整作业规程见 **SEARCH_RUNBOOK.md**（信源矩阵、查询矩阵、查重规则、打分校准、防错清单）——周更前必读。
+
 1. 把当天或本周候选新闻写入 `data/daily-intake/YYYY-MM-DD.json`。
 2. 复核后，把正式纳入的事件追加到 `data/events/YYYY-MM-DD.json`。
 3. 如果公司长期底座变化，例如 thought leadership 维度、报告列表、公司 notes，更新 `data/companies.json`。
