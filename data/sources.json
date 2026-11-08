@@ -10,71 +10,266 @@
       "description": "官方一手渠道：公司自己说的话。主干，但只覆盖『公司愿意宣传的』。",
       "cadence": "每周",
       "channels": [
-        { "id": "newsrooms", "name": "17 家官方新闻室", "url": "各公司 newsroom/press 页", "dims": ["全部"], "notes": "主干扫描，周更必做" },
-        { "id": "publications", "name": "17 家 insights/publications 子站直取", "url": "各公司 insights 页", "dims": ["thought_leadership", "industry_coverage"], "notes": "白皮书/报告漏检主修复（BCG Applied AI Index、Deloitte State of AI 教训）" },
-        { "id": "ir_earnings", "name": "财报与 IR 日历", "url": "各公司 investor relations 页", "dims": ["client_value_proof", "strategy_signal"], "notes": "事件驱动：财报日前后定向扫描（Capgemini Q3 教训）" },
-        { "id": "case_pages", "name": "17 家案例/客户故事页基线监控", "url": "各公司 case studies 页", "dims": ["client_value_proof"], "notes": "带日期事件少，以基线比对为主" },
-        { "id": "careers", "name": "17 家 careers 页 AI 岗位基线", "url": "各公司招聘页", "dims": ["organization"], "notes": "月度基线，岗位数变化是行动力领先指标" }
+        {
+          "id": "newsrooms",
+          "name": "17 家官方新闻室",
+          "url": "各公司 newsroom/press 页",
+          "dims": [
+            "全部"
+          ],
+          "notes": "主干扫描，周更必做"
+        },
+        {
+          "id": "publications",
+          "name": "17 家 insights/publications 子站直取",
+          "url": "各公司 insights 页",
+          "dims": [
+            "thought_leadership",
+            "industry_coverage"
+          ],
+          "notes": "白皮书/报告漏检主修复（BCG Applied AI Index、Deloitte State of AI 教训）"
+        },
+        {
+          "id": "ir_earnings",
+          "name": "财报与 IR 日历",
+          "url": "各公司 investor relations 页",
+          "dims": [
+            "client_value_proof",
+            "strategy_signal"
+          ],
+          "notes": "事件驱动：财报日前后定向扫描（Capgemini Q3 教训）"
+        },
+        {
+          "id": "case_pages",
+          "name": "17 家案例/客户故事页基线监控",
+          "url": "各公司 case studies 页",
+          "dims": [
+            "client_value_proof"
+          ],
+          "notes": "带日期事件少，以基线比对为主"
+        },
+        {
+          "id": "careers",
+          "name": "17 家 careers 页 AI 岗位基线",
+          "url": "各公司招聘页",
+          "dims": [
+            "organization"
+          ],
+          "notes": "月度基线，岗位数变化是行动力领先指标"
+        }
       ]
     },
     "tier2_partner_ecosystem": {
       "description": "合作方与生态渠道：公司不说、伙伴会说。TalentNeuron 漏检的直接修复。",
       "cadence": "每周",
       "channels": [
-        { "id": "model_vendors", "name": "模型厂商生态公告页", "url": "OpenAI / Anthropic / Microsoft / Google Cloud 官方 blog 与 partner 页", "dims": ["tech_partnership", "delivery_production"], "notes": "点名咨询公司的交付角色公告按 vendor_official 计" },
-        { "id": "platform_vendors", "name": "平台厂商公告页", "url": "ServiceNow / Workday / Salesforce / CrowdStrike 等", "dims": ["tech_partnership", "governance_risk"], "notes": "" },
-        { "id": "data_partners", "name": "数据与行业伙伴公告", "url": "TalentNeuron / Sirion / 行业数据商新闻页", "dims": ["tech_partnership"], "notes": "" }
+        {
+          "id": "model_vendors",
+          "name": "模型厂商生态公告页",
+          "url": "OpenAI / Anthropic / Microsoft / Google Cloud 官方 blog 与 partner 页",
+          "dims": [
+            "tech_partnership",
+            "delivery_production"
+          ],
+          "notes": "点名咨询公司的交付角色公告按 vendor_official 计"
+        },
+        {
+          "id": "platform_vendors",
+          "name": "平台厂商公告页",
+          "url": "ServiceNow / Workday / Salesforce / CrowdStrike 等",
+          "dims": [
+            "tech_partnership",
+            "governance_risk"
+          ],
+          "notes": ""
+        },
+        {
+          "id": "data_partners",
+          "name": "数据与行业伙伴公告",
+          "url": "TalentNeuron / Sirion / 行业数据商新闻页",
+          "dims": [
+            "tech_partnership"
+          ],
+          "notes": ""
+        }
       ]
     },
     "tier3_trade_and_aggregators": {
       "description": "行业贸易媒体与聚合渠道：第三方视角，人才任命与并购常在此首发。",
       "cadence": "每周（RSS 自动 + 人工复核）",
       "channels": [
-        { "id": "google_news_rss", "name": "Google News RSS（公司名矩阵 × AI × 7d）", "url": "news.google.com/rss/search?q=...&hl=en-US&gl=US&ceid=US:en", "dims": ["全部"], "notes": "2026-11-08 首次运行即捕获本周漏网 6 条；每周固定运行" },
-        { "id": "consultancy_uk", "name": "Consultancy.uk", "url": "https://www.consultancy.uk/news", "dims": ["全部"], "notes": "人才任命与行业横评汇总（PwC Priest 线索来源）" },
-        { "id": "consultancy_us", "name": "Consulting.us", "url": "https://www.consulting.us/news", "dims": ["全部"], "notes": "美区人才与 M&A（OW Badman 线索来源）" },
-        { "id": "consultancy_eu", "name": "Consultancy.eu", "url": "https://www.consultancy.eu/news", "dims": ["全部"], "notes": "欧洲区补充" },
-        { "id": "pr_wires", "name": "新闻稿分发线（PR Newswire / Business Wire）", "url": "prnewswire.com / businesswire.com 站内搜索", "dims": ["全部"], "notes": "TalentNeuron 公告实际首发渠道" },
-        { "id": "financial_press", "name": "财经媒体", "url": "Reuters / FT / CNBC / Bloomberg", "dims": ["client_value_proof", "governance_risk"], "notes": "财报与重大争议的权威来源；负面信号亦出于此" }
+        {
+          "id": "google_news_rss",
+          "name": "Google News RSS（公司名矩阵 × AI × 7d）",
+          "url": "news.google.com/rss/search?q=...&hl=en-US&gl=US&ceid=US:en",
+          "dims": [
+            "全部"
+          ],
+          "notes": "2026-11-08 首次运行即捕获本周漏网 6 条；每周固定运行"
+        },
+        {
+          "id": "consultancy_uk",
+          "name": "Consultancy.uk",
+          "url": "https://www.consultancy.uk/news",
+          "dims": [
+            "全部"
+          ],
+          "notes": "人才任命与行业横评汇总（PwC Priest 线索来源）"
+        },
+        {
+          "id": "consultancy_us",
+          "name": "Consulting.us",
+          "url": "https://www.consulting.us/news",
+          "dims": [
+            "全部"
+          ],
+          "notes": "美区人才与 M&A（OW Badman 线索来源）"
+        },
+        {
+          "id": "consultancy_eu",
+          "name": "Consultancy.eu",
+          "url": "https://www.consultancy.eu/news",
+          "dims": [
+            "全部"
+          ],
+          "notes": "欧洲区补充"
+        },
+        {
+          "id": "pr_wires",
+          "name": "新闻稿分发线（PR Newswire / Business Wire）",
+          "url": "prnewswire.com / businesswire.com 站内搜索",
+          "dims": [
+            "全部"
+          ],
+          "notes": "TalentNeuron 公告实际首发渠道"
+        },
+        {
+          "id": "financial_press",
+          "name": "财经媒体",
+          "url": "Reuters / FT / CNBC / Bloomberg",
+          "dims": [
+            "client_value_proof",
+            "governance_risk"
+          ],
+          "notes": "财报与重大争议的权威来源；负面信号亦出于此"
+        }
       ]
     },
     "tier4_structured_third_party": {
       "description": "结构化与第三方渠道：月度或事件驱动。",
       "cadence": "月度 / 事件驱动",
       "channels": [
-        { "id": "analyst_views", "name": "分析师与研究机构", "url": "Source Global Research / Vault / Forrester 相关公开部分", "dims": ["全部"], "notes": "对照与校准用，不入榜计分" },
-        { "id": "event_calendars", "name": "行业事件日历", "url": "AI Forum / Web Summit / Davos 议程页", "dims": ["thought_leadership"], "notes": "提前知道下周谁会发布" },
-        { "id": "gov_contracts", "name": "政府合同与监管公开记录", "url": "USAspending / Ted.europa.eu", "dims": ["client_value_proof"], "notes": "联邦业务（如 Accenture Federal）可结构化验证" }
+        {
+          "id": "analyst_views",
+          "name": "分析师与研究机构",
+          "url": "Source Global Research / Vault / Forrester 相关公开部分",
+          "dims": [
+            "全部"
+          ],
+          "notes": "对照与校准用，不入榜计分"
+        },
+        {
+          "id": "event_calendars",
+          "name": "行业事件日历",
+          "url": "AI Forum / Web Summit / Davos 议程页",
+          "dims": [
+            "thought_leadership"
+          ],
+          "notes": "提前知道下周谁会发布"
+        },
+        {
+          "id": "gov_contracts",
+          "name": "政府合同与监管公开记录",
+          "url": "USAspending / Ted.europa.eu",
+          "dims": [
+            "client_value_proof"
+          ],
+          "notes": "联邦业务（如 Accenture Federal）可结构化验证"
+        }
       ]
     },
     "tier5_cn_and_local": {
       "description": "中文与本土渠道：覆盖扩展（本土咨询机构）时启用，当前样本为欧美 17 家暂不激活。",
       "cadence": "待样本扩展",
       "channels": [
-        { "id": "cn_media", "name": "36氪 / 晚点 / 财新", "url": "-", "dims": ["全部"], "notes": "" },
-        { "id": "local_wechat", "name": "本土机构公众号", "url": "-", "dims": ["全部"], "notes": "本土机构样本加入后作为其主渠道" }
+        {
+          "id": "cn_media",
+          "name": "36氪 / 晚点 / 财新",
+          "url": "-",
+          "dims": [
+            "全部"
+          ],
+          "notes": ""
+        },
+        {
+          "id": "local_wechat",
+          "name": "本土机构公众号",
+          "url": "-",
+          "dims": [
+            "全部"
+          ],
+          "notes": "本土机构样本加入后作为其主渠道"
+        }
       ]
     }
   },
   "weekly_runbook_v2": {
-    "order": ["A_newsrooms", "B_publications", "C_partner_channels", "D_google_news_rss", "E_trade_press", "F_talent_and_careers", "G_ir_calendar_check"],
+    "order": [
+      "A_newsrooms",
+      "B_publications",
+      "C_partner_channels",
+      "D_google_news_rss",
+      "E_trade_press",
+      "F_talent_and_careers",
+      "G_ir_calendar_check"
+    ],
     "rules": [
       "每条事件仍按统一锚点打分：渠道只影响发现（discovery_channel 留痕），不影响分数",
       "合作方渠道公告按 vendor_official 权重计入（SCORING_MODEL 3.5）",
       "RSS/贸易媒体的二次传播不重复入榜，回溯到官方原始发布",
-      "负向信号（争议/诉讼/质量事件）当前无计分通道，一律入候选池 hold，待方法论决策",
+      "负向信号（争议/诉讼/质量事故）不在榜单范围内：不入池、不计分、不披露——2026-11-08 申报人决策；RSS 渠道遇到此类内容直接忽略",
       "所有渠道的发现记录 discovery_channel 必须留痕，季度按渠道统计产出率"
     ]
   },
   "miss_log": {
-    "purpose": "已发生漏检的记录（防再犯）：每条注明根因与对应修复渠道",
+    "purpose": "已发生漏检的记录（防再犯）：每条注明根因与对应修复渠道。负向信号按 2026-11-08 决策不梳理。",
     "entries": [
-      { "date": "2026-09-30", "missed": "BCG Applied AI Index", "root_cause": "仅扫新闻室", "fixed_by": "B_publications" },
-      { "date": "2026-10-06", "missed": "Deloitte State of AI（美国区发布）", "root_cause": "存根条目被查重误判为已覆盖", "fixed_by": "B_publications + 存根补全规则" },
-      { "date": "2026-10-19", "missed": "BCG × TalentNeuron 合作", "root_cause": "公告首发于合作方渠道", "fixed_by": "C_partner_channels + PR_wires" },
-      { "date": "2026-10-20", "missed": "BCG AI Maturity Matrix", "root_cause": "仅扫新闻室", "fixed_by": "B_publications" },
-      { "date": "2026-10-01", "missed": "EY-Parthenon CEO Outlook", "root_cause": "仅扫新闻室", "fixed_by": "B_publications" },
-      { "date": "2026-11-01/05", "missed": "Deloitte 合规工具、McKinsey 风险职能、BCG 保险蓝图等 6 条", "root_cause": "仅扫新闻室", "fixed_by": "D_google_news_rss（首次运行即验证）" }
+      {
+        "date": "2026-09-30",
+        "missed": "BCG Applied AI Index",
+        "root_cause": "仅扫新闻室",
+        "fixed_by": "B_publications"
+      },
+      {
+        "date": "2026-10-06",
+        "missed": "Deloitte State of AI（美国区发布）",
+        "root_cause": "存根条目被查重误判为已覆盖",
+        "fixed_by": "B_publications + 存根补全规则"
+      },
+      {
+        "date": "2026-10-19",
+        "missed": "BCG × TalentNeuron 合作",
+        "root_cause": "公告首发于合作方渠道",
+        "fixed_by": "C_partner_channels + PR_wires"
+      },
+      {
+        "date": "2026-10-20",
+        "missed": "BCG AI Maturity Matrix",
+        "root_cause": "仅扫新闻室",
+        "fixed_by": "B_publications"
+      },
+      {
+        "date": "2026-10-01",
+        "missed": "EY-Parthenon CEO Outlook",
+        "root_cause": "仅扫新闻室",
+        "fixed_by": "B_publications"
+      },
+      {
+        "date": "2026-11-01/05",
+        "missed": "Deloitte 合规工具、McKinsey 风险职能、BCG 保险蓝图等 6 条",
+        "root_cause": "仅扫新闻室",
+        "fixed_by": "D_google_news_rss（首次运行即验证）"
+      }
     ]
   }
 }

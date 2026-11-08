@@ -5,7 +5,7 @@
     "leaderboard_snapshot_date": "2026-10-31",
     "status": "staging",
     "collection_method": "weekly newsroom sweep + dimension_sweep_v1（人才/白皮书）+ 观察项核实：净新增 7 条、L.E.K. 上期补扫 2 条、PwC Priest 官方回填 1 条",
-    "notes": "观察项处置：①PwC Dan Priest 已核实（2024-07-16 官方新闻稿）→ 回填 archive；②OpenAI Frontier Alliance「11-02 深化」查无实证（联盟 2026-02-23 首发、已在库）→ 关闭；③Accenture 10-28 财报传闻与财年日历矛盾，维持 hold；④McKinsey 治理 65% 调查日期仍未证实，维持 hold；⑤Lilli 72% 采用数据第三方来源，维持 hold。新观察：PwC Annual Corporate Directors Survey（71% 董事视 AI 为关键议题）本身发布日期待核（11-05 见于哈佛法学院论坛转引）。 11-08 补充：Google News RSS 渠道首次运行即捕获 6 条本周漏网事件（已入榜）+ 1 条负面信号方法论议题（FT 幻觉报道，待决策）。"
+    "notes": "观察项处置：①PwC Dan Priest 已核实（2024-07-16 官方新闻稿）→ 回填 archive；②OpenAI Frontier Alliance「11-02 深化」查无实证（联盟 2026-02-23 首发、已在库）→ 关闭；③Accenture 10-28 财报传闻与财年日历矛盾，维持 hold；④McKinsey 治理 65% 调查日期仍未证实，维持 hold；⑤Lilli 72% 采用数据第三方来源，维持 hold。新观察：PwC Annual Corporate Directors Survey（71% 董事视 AI 为关键议题）本身发布日期待核（11-05 见于哈佛法学院论坛转引）。 11-08 补充：Google News RSS 渠道首次运行即捕获 6 条本周漏网事件（已入榜）+ 1 条负面信号方法论议题（FT 幻觉报道，待决策）。 申报人决策（11-08）：负向信号（争议/诉讼/质量事故）一律不梳理——榜单衡量正向行动力，负面评估留给市场。"
   },
   "items": [
     {
@@ -60,8 +60,8 @@
       "dimension_tags": [
         "governance_risk"
       ],
-      "merge_recommendation": "hold",
-      "merge_rationale": "负面信号通道未定义，提交申报人决策。",
+      "merge_recommendation": "skip",
+      "merge_rationale": "申报人决策（2026-11-08）：负面信号不在榜单范围内，不入池、不计分、不披露。",
       "leaderboard_action": "watch_only",
       "matched_leaderboard_event_id": null
     }
