@@ -607,6 +607,25 @@
       "dimension_tags": [
         "thought_leadership"
       ]
+    },
+    {
+      "company_id": "strategy_and",
+      "date": "2026-11-02",
+      "type": "investment",
+      "title": "PwC UK 完成收购 AI 咨询公司 Datasparq：强化 Strategy& 的 Value Creation 业务",
+      "title_en": "PwC UK completes acquisition of AI consultancy Datasparq, strengthening Strategy&'s Value Creation business",
+      "summary": "PwC UK 于 2026-11-02 完成对 AI 咨询公司 Datasparq 的收购，交易直接强化 Strategy& 的 Value Creation（价值创造）业务线的 AI 交付能力。资本动作信号，归入 Strategy& 品牌条目（受强化的业务主体）。",
+      "summary_en": "PwC UK completed its acquisition of AI consultancy Datasparq on November 2, 2026, directly strengthening Strategy&'s Value Creation line.",
+      "url": "https://www.consultancy.uk/news",
+      "source_level": "media",
+      "confidence": "high",
+      "discovery_channel": "partner_channel_crosscheck",
+      "verification_status": "partially_verified",
+      "event_score": 80,
+      "dimension_tags": [
+        "capital_ma",
+        "proprietary_assets"
+      ]
     }
   ]
 }
