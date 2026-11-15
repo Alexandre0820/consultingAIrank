@@ -551,6 +551,62 @@
         "thought_leadership",
         "industry_coverage"
       ]
+    },
+    {
+      "company_id": "kearney",
+      "date": "2026-11-05",
+      "type": "research",
+      "title": "Kearney 发布 2027 美容行业展望报告",
+      "title_en": "Kearney releases the 2027 Beauty Outlook Report",
+      "summary": "Kearney 于 2026-11-05 发布 2027 美容行业展望报告（PR Newswire 渠道）。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+      "summary_en": "Kearney released its 2027 Beauty Outlook Report on November 5, 2026 (PR Newswire channel). Backfilled via the RSS matrix.",
+      "url": "https://www.kearney.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "kearney",
+      "date": "2026-11-03",
+      "type": "research",
+      "title": "Kearney 发布金融业 AI 研究：价值不在你以为的地方",
+      "title_en": "Kearney publishes 'AI in finance: the value isn't where you think it is'",
+      "summary": "Kearney 于 2026-11-03 发布金融业 AI 价值研究。补扫说明：属上期窗口，回填。",
+      "summary_en": "Kearney published 'AI in finance: the value isn't where you think it is' on November 3, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.kearney.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "kearney",
+      "date": "2026-11-07",
+      "type": "research",
+      "title": "Kearney 发布《AI's next hurdle: your organization》：下一道坎是组织",
+      "title_en": "Kearney publishes 'AI's next hurdle: your organization'",
+      "summary": "Kearney 于 2026-11-07 发布研究：AI 落地的下一道障碍在组织而非技术。补扫说明：属上期窗口，回填。",
+      "summary_en": "Kearney published 'AI's next hurdle: your organization' on November 7, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.kearney.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership"
+      ]
     }
   ]
 }

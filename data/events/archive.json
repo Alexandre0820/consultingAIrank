@@ -997,6 +997,24 @@
       "source_level": "official",
       "confidence": "medium",
       "event_score": 72
+    },
+    {
+      "company_id": "pwc",
+      "date": "2024-07-16",
+      "type": "organization",
+      "title": "PwC US 任命 Dan Priest 为首任 US Chief AI Officer",
+      "title_en": "PwC US names Dan Priest its first US Chief AI Officer",
+      "summary": "PwC US 于 2024-07-16 任命 Dan Priest（PwC 老将，曾任 Cloud & Digital 负责人）为首任美国区 Chief AI Officer，同一公告还任命了可持续发展执行发起人。回填说明：上周观察项经核实有官方新闻稿，organization 维度回填；日期较早，按新鲜度衰减自然处理。",
+      "summary_en": "On July 16, 2024, PwC US named Dan Priest (a PwC veteran, formerly Cloud & Digital leader) its first US Chief AI Officer. Backfilled from last week's watch list after verifying the official press release.",
+      "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases/chief-ai-officer-sustainability-executive-sponsor.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_talent_news",
+      "verification_status": "verified",
+      "event_score": 78,
+      "dimension_tags": [
+        "strategy_signal"
+      ]
     }
   ]
 }
