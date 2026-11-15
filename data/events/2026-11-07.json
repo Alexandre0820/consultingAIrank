@@ -456,6 +456,101 @@
         "proprietary_assets",
         "strategy_signal"
       ]
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-11-05",
+      "type": "research",
+      "title": "McKinsey 发布《Reinventing the channel》：伙伴生态如何驱动 AI 增长",
+      "title_en": "McKinsey publishes 'Reinventing the channel: How can your partner ecosystem fuel AI growth?'",
+      "summary": "McKinsey 于 2026-11-05 发布伙伴生态驱动 AI 增长研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+      "summary_en": "McKinsey published partner-ecosystem research on November 5, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-11-06",
+      "type": "research",
+      "title": "McKinsey 发布汽车行业 AI 质量运营研究",
+      "title_en": "McKinsey publishes on AI transforming automotive quality operations",
+      "summary": "McKinsey 于 2026-11-06 发布汽车质量运营的 AI 转型研究。补扫说明：属上期窗口，回填。",
+      "summary_en": "McKinsey published automotive quality-operations AI research on November 6, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.mckinsey.com/industries/automotive-and-assembly/our-insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "pwc",
+      "date": "2026-11-03",
+      "type": "service_line",
+      "title": "PwC 推出 AI 托管服务：agentic 后台与中台运营",
+      "title_en": "PwC launches AI managed services: agentic back- and middle-office operations",
+      "summary": "PwC 于 2026-11-03 推出 AI 托管服务，用 agentic AI 运营企业后台与中台——服务线动作。补扫说明：属上期窗口，回填。",
+      "summary_en": "PwC launched AI managed services running agentic back- and middle-office operations on November 3, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.pwc.com/gx/en/services.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 74,
+      "dimension_tags": [
+        "delivery_production",
+        "proprietary_assets"
+      ]
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-11-03",
+      "type": "research",
+      "title": "BCG 估算：AI 生态到 2030 年每年需要 2.6 万亿美元投入",
+      "title_en": "BCG estimates the AI ecosystem needs $2.6 trillion a year by 2030",
+      "summary": "BCG 于 2026-11-03 发布估算：AI 生态系统到 2030 年每年需要 2.6 万亿美元投入，被广泛报道。补扫说明：属上期窗口，回填。",
+      "summary_en": "BCG estimated on November 3, 2026 that the AI ecosystem needs $2.6 trillion a year by 2030. Backfilled via the RSS matrix.",
+      "url": "https://www.bcg.com/publications",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 74,
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "capgemini",
+      "date": "2026-11-04",
+      "type": "research",
+      "title": "Capgemini 发布《Smarter Insurance Through Human-AI Collaboration》",
+      "title_en": "Capgemini publishes 'Smarter Insurance Through Human-AI Collaboration'",
+      "summary": "Capgemini 于 2026-11-04 发布保险业人机协作研究。补扫说明：属上期窗口，回填。",
+      "summary_en": "Capgemini published 'Smarter Insurance Through Human-AI Collaboration' on November 4, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.capgemini.com/insights/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
     }
   ]
 }

@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-10-31",
-    "updated_at": "2026-11-07",
+    "previous_updated_at": "2026-11-07",
+    "updated_at": "2026-11-15",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-11-07 期：窗口 11-01 至 11-07，净新增 7 条（EY×3：CrowdStrike 联盟 78/AI Week 60/客服报告 74；KPMG 30 国私企审计 AI 76；Capgemini 金融多代理研究 72；BCG X×Nature 首届 AI for Discovery Awards 70；Bain《Proprietary Intelligence》74，日期精度为月份）。上期补扫回填 2 条（L.E.K. 临床试验 AI 10-23、消费者 AI/GEO 调查 10-27，计入 10-31 期文件）；观察项处置：PwC Priest（2024-07-16 官方）回填 archive、OpenAI 联盟 11-02 深化查无实证关闭、Accenture 财报传闻与麦肯锡治理调查维持 hold。本周 EY 产出最密（联盟+活动+报告），Bain 结束三周 quiet。评分口径不变：相对行动力指数（当期榜首=100）；锚点：联盟类 78、平台部署 76、研究 70–74、品牌活动 60。【构建缺陷修正】发现 events 轮次文件若写成裸数组会被 build-data 静默跳过：2026-10-31 与 2026-11-07 两个文件因此漏算。本提交先把 4 条漏算事件（Capgemini Q3、Deloitte AI Forum、L.E.K.×2）补回 10-31 期快照，下一条提交再开 11-07 期。【2026-11-07 期开启】上一次提交已修正 10-31 期；本提交按窗口 11-01 至 11-07 计算新一期。【回填修正 11-07 当日】BCG×TalentNeuron 战略合作（10-19，合作方渠道公告，非并购）漏收，补回 10-24 期；原因为周扫未覆盖合作方官方渠道，SCORING_MODEL 3.4 合作方交叉验证原则自此进入常规执行。【信源升级 11-08】Google News RSS 渠道（17 家公司名 × AI × 7d）首次运行即捕获本周漏网 6 条并补入 11-07 期；数据源矩阵（data/sources.json）与周更 runbook v2 自本期起生效。【RSS 矩阵首轮全覆盖 11-08】按公司梯队 × 专项维度的查询矩阵补扫两周窗口：11-07 期净新增 11 条（Bain SEA 指南+AI 中心、OW UAE 调查与 Quotient 伙伴负责人、Kearney×3、RB ERP AI、FTI×2、PwC×2），10-31 期回填 4 条（Bain 医药、Kearney×Qloo、FTI GC 调查、PwC 治疗学）。覆盖薄公司（Kearney/RB/FTI/OW/Bain/PwC）事件数显著补齐，统一检索模板原则全公司适用。",
+    "method_note": "2026-11-15 期：窗口 11-08 至 11-15，RSS 查询矩阵第二轮（7 条查询 × when:14d）+ WebSearch 核实。净新增 25 条：McKinsey×4（银行业年度回顾 80 旗舰、agentic 业务规划 72、CFO ROI 70、医疗 2027 68）、BCG×2（Client Zero 自我转型实录 76、工业 AI 70）、Deloitte×4（收购 Flipside Crypto AI 业务 + Edisyl 84、董事会治理调查 74、保险展望 70、政府呼叫中心 68）、Accenture×1（Qantas 850 职位 AI 外包交易 78，路透）、PwC×4（85K 培训 72、批判性思维 68、收入周期 68、运营智能 68）、KPMG×2（Google Cloud+Wiz AI 威胁管理 78、泰国规模化 72）、Capgemini×1（AI 经济学快照 68）、Kearney×2、Roland Berger×1（TasteIndex 平台 70）、A&M×1（首个思想领导力事件 70）、FTI×1、Bain×2。上期补扫回填 5 条（McKinsey 伙伴生态/汽车质量、PwC AI 托管服务、BCG 2.6 万亿美元估算、Capgemini 保险人机协作，计入 11-07 期文件）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：收购+新公司 84、旗舰研究 80、联盟 78、大客户交易 78、自我转型实录 76、常规研究 68–74。A&M 结束长期 quiet（首个研究事件）；Kearney/RB/FTI/OW/Bain/PwC 覆盖继续补齐。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -196,6 +196,114 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-11",
+          "type": "research",
+          "title": "McKinsey 发布《What to expect in US healthcare in 2027 and beyond》",
+          "title_en": "McKinsey publishes US healthcare 2027 outlook",
+          "summary": "McKinsey 于 2026-11-11 发布美国医疗行业 2027 展望。",
+          "summary_en": "McKinsey published its US healthcare 2027 outlook on November 11, 2026.",
+          "url": "https://www.mckinsey.com/industries/healthcare/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-10",
+          "type": "research",
+          "title": "McKinsey 发布《Global Banking Annual Review 2026》：AI 分裂红利",
+          "title_en": "McKinsey releases Global Banking Annual Review 2026: the AI disruption dividend",
+          "summary": "McKinsey 年度旗舰《全球银行业年度回顾》2026 版（11-10）：主题为「AI 分裂红利」——银行业 AI 采用分化带来的估值与格局重塑；路透同步报道其中「银行试图遏制 AI agent 成本飙升」的发现。",
+          "summary_en": "McKinsey's flagship Global Banking Annual Review 2026 (Nov 10) centers on the AI disruption dividend; Reuters covered its finding on banks reining in soaring AI agent costs.",
+          "url": "https://www.mckinsey.com/industries/financial-services/our-insights/global-banking-annual-review",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "verified",
+          "event_score": 80,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-10",
+          "type": "research",
+          "title": "McKinsey 发布《Reinventing business planning with agentic AI》",
+          "title_en": "McKinsey publishes 'Reinventing business planning with agentic AI'",
+          "summary": "McKinsey 于 2026-11-10 发布 agentic AI 重塑业务规划研究。",
+          "summary_en": "McKinsey published 'Reinventing business planning with agentic AI' on November 10, 2026.",
+          "url": "https://www.mckinsey.com/capabilities/operations/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "delivery_production"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "type": "research",
+          "title": "McKinsey 发布《How CFOs can make AI pay off》",
+          "title_en": "McKinsey publishes 'How CFOs can make AI pay off'",
+          "summary": "McKinsey 于 2026-11-09 发布 CFO 视角的 AI 投资回报研究。",
+          "summary_en": "McKinsey published 'How CFOs can make AI pay off' on November 9, 2026.",
+          "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
+        {
+          "date": "2026-11-06",
+          "type": "research",
+          "title": "McKinsey 发布汽车行业 AI 质量运营研究",
+          "title_en": "McKinsey publishes on AI transforming automotive quality operations",
+          "summary": "McKinsey 于 2026-11-06 发布汽车质量运营的 AI 转型研究。补扫说明：属上期窗口，回填。",
+          "summary_en": "McKinsey published automotive quality-operations AI research on November 6, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.mckinsey.com/industries/automotive-and-assembly/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "type": "research",
+          "title": "McKinsey 发布《Reinventing the channel》：伙伴生态如何驱动 AI 增长",
+          "title_en": "McKinsey publishes 'Reinventing the channel: How can your partner ecosystem fuel AI growth?'",
+          "summary": "McKinsey 于 2026-11-05 发布伙伴生态驱动 AI 增长研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+          "summary_en": "McKinsey published partner-ecosystem research on November 5, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
         {
           "date": "2026-11-04",
           "type": "research",
@@ -585,6 +693,42 @@
       },
       "events": [
         {
+          "date": "2026-11-11",
+          "type": "research",
+          "title": "BCG 发布《Client Zero: Inside BCG's AI Transformation》：把自己当第一个客户",
+          "title_en": "BCG publishes 'Client Zero: Inside BCG's AI Transformation'",
+          "summary": "BCG 于 2026-11-11 发布自身 AI 转型实录：以「Client Zero」方式在内部构建并测试 AI 方案后再交付客户，并强调这是「活的转型」而非成稿剧本。自我转型实录是交付能力的直接证据（对照 EY 同名实践）。",
+          "summary_en": "BCG published its own AI transformation story on November 11, 2026: learning by doing as its own 'client zero' — a living transformation, not a finished playbook.",
+          "url": "https://www.bcg.com/publications",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "verified",
+          "event_score": 76,
+          "dimension_tags": [
+            "delivery_production",
+            "strategy_signal"
+          ]
+        },
+        {
+          "date": "2026-11-10",
+          "type": "research",
+          "title": "BCG 发布《For Industrial Companies, Winning with AI Takes More Than Tech》",
+          "title_en": "BCG publishes 'For Industrial Companies, Winning with AI Takes More Than Tech'",
+          "summary": "BCG 于 2026-11-10 发布工业企业 AI 赢法研究。",
+          "summary_en": "BCG published 'For Industrial Companies, Winning with AI Takes More Than Tech' on November 10, 2026.",
+          "url": "https://www.bcg.com/publications",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
           "date": "2026-11-06",
           "type": "partnership",
           "title": "BCG X AI Science Institute 与 Nature 设立 AI for Discovery Awards 并公布首批获奖者",
@@ -636,6 +780,24 @@
           "dimension_tags": [
             "thought_leadership",
             "delivery_production"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "type": "research",
+          "title": "BCG 估算：AI 生态到 2030 年每年需要 2.6 万亿美元投入",
+          "title_en": "BCG estimates the AI ecosystem needs $2.6 trillion a year by 2030",
+          "summary": "BCG 于 2026-11-03 发布估算：AI 生态系统到 2030 年每年需要 2.6 万亿美元投入，被广泛报道。补扫说明：属上期窗口，回填。",
+          "summary_en": "BCG estimated on November 3, 2026 that the AI ecosystem needs $2.6 trillion a year by 2030. Backfilled via the RSS matrix.",
+          "url": "https://www.bcg.com/publications",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
           ]
         },
         {
@@ -1141,6 +1303,42 @@
       },
       "events": [
         {
+          "date": "2026-11-15",
+          "type": "research",
+          "title": "Bain 发布 AI 数据中心繁荣统计洞察",
+          "title_en": "Bain publishes statistics on the AI data centre boom",
+          "summary": "Bain 于 2026-11-15 发布 AI 数据中心繁荣的统计洞察。",
+          "summary_en": "Bain published statistics on the AI data centre boom on November 15, 2026.",
+          "url": "https://www.bain.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-12",
+          "type": "research",
+          "title": "Bain 发布《The Future of Banking: Strategy for the AI Era》",
+          "title_en": "Bain publishes 'The Future of Banking: Strategy for the AI Era'",
+          "summary": "Bain 于 2026-11-12 发布 AI 时代的银行业战略研究。",
+          "summary_en": "Bain published 'The Future of Banking: Strategy for the AI Era' on November 12, 2026.",
+          "url": "https://www.bain.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
           "date": "2026-11-04",
           "type": "research",
           "title": "Bain 发布东南亚 CEO 的 AI 转型指南，并设立 AI Innovation Center",
@@ -1475,6 +1673,23 @@
       },
       "events": [
         {
+          "date": "2026-11-09",
+          "type": "platform",
+          "title": "Roland Berger 推出 TasteIndex AI 解决方案：用 AI 管理味觉与产品开发",
+          "title_en": "Roland Berger launches TasteIndex AI solution for taste management",
+          "summary": "Roland Berger 于 2026-11-09 推出 TasteIndex AI 解决方案，用 AI 管理味觉测试与产品开发——自有平台资产信号（罗兰贝格事件数最少的补强）。",
+          "summary_en": "Roland Berger launched TasteIndex, an AI solution for taste testing and product development, on November 9, 2026.",
+          "url": "https://www.rolandberger.com/en/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "proprietary_assets"
+          ]
+        },
+        {
           "date": "2026-11-03",
           "type": "research",
           "title": "Roland Berger 发布 ERP 转型与 AI 就绪度研究",
@@ -1579,6 +1794,41 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-11-11",
+          "type": "research",
+          "title": "Kearney 发布《Turning AI ambition into measurable value》",
+          "title_en": "Kearney publishes 'Turning AI ambition into measurable value: why transformation discipline matters'",
+          "summary": "Kearney 于 2026-11-11 发布研究：转型纪律是把 AI 雄心变成可测量价值的关键。",
+          "summary_en": "Kearney published 'Turning AI ambition into measurable value' on November 11, 2026.",
+          "url": "https://www.kearney.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
+        {
+          "date": "2026-11-11",
+          "type": "research",
+          "title": "Kearney 发布无接触无缝服务组织研究",
+          "title_en": "Kearney publishes on AI-driven touchless, seamless service organizations",
+          "summary": "Kearney 于 2026-11-11 发布 AI 驱动的无接触服务组织研究。",
+          "summary_en": "Kearney published research on AI-driven touchless, seamless service organizations on November 11, 2026.",
+          "url": "https://www.kearney.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "delivery_production"
+          ]
+        },
         {
           "date": "2026-11-07",
           "type": "research",
@@ -1887,6 +2137,78 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-12",
+          "type": "investment",
+          "title": "Deloitte 收购 Flipside Crypto 的 AI 业务并设立 Edisyl：定位「企业 AI 的知识层」",
+          "title_en": "Deloitte acquires Flipside Crypto's AI business and launches Edisyl Inc. — 'the knowledge layer for enterprise AI'",
+          "summary": "Deloitte 于 2026-11-12 公告：通过 D71 Ventures 收购 Flipside Crypto 的 AI 业务（交易于 7 月完成），并设立新公司 Edisyl——为企业现有 AI 工具补足专家领域上下文、解决「上下文缺口」。资本动作 + 自有资产双维度。",
+          "summary_en": "On November 12, 2026, Deloitte announced (via D71 Ventures) the acquisition of Flipside Crypto's AI business (closed in July) and the launch of Edisyl Inc., positioned as 'the knowledge layer for enterprise AI'.",
+          "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-announces-acquisition-of-flipside-cryptos-ai-business-and-launches-edisyl.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "verified",
+          "event_score": 84,
+          "dimension_tags": [
+            "capital_ma",
+            "proprietary_assets"
+          ]
+        },
+        {
+          "date": "2026-11-12",
+          "type": "research",
+          "title": "Deloitte 发布《2027 Insurance Outlook》",
+          "title_en": "Deloitte releases 2027 Insurance Outlook",
+          "summary": "Deloitte 于 2026-11-12 发布 2027 保险行业展望。",
+          "summary_en": "Deloitte released its 2027 Insurance Outlook on November 12, 2026.",
+          "url": "https://www.deloitte.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-11",
+          "type": "research",
+          "title": "Deloitte 研究：AI 可把政府呼叫中心变成智能前台",
+          "title_en": "Deloitte research: AI could turn government contact centers into an intelligent front door",
+          "summary": "Deloitte 于 2026-11-11 发布政府呼叫中心 AI 化研究。",
+          "summary_en": "Deloitte published research on AI-enabled government contact centers on November 11, 2026.",
+          "url": "https://www.deloitte.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-10",
+          "type": "research",
+          "title": "Deloitte 全球调查：AI 重塑劳动力，董事会面临治理挑战",
+          "title_en": "Deloitte global survey: boards face a governance challenge as AI reshapes the workforce",
+          "summary": "Deloitte 于 2026-11-10 发布全球调查：随着 AI 重塑劳动力，董事会面临治理挑战。",
+          "summary_en": "Deloitte released a global survey on November 10, 2026 on board governance challenges as AI reshapes the workforce.",
+          "url": "https://www.deloitte.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "thought_leadership",
+            "governance_risk"
+          ]
+        },
         {
           "date": "2026-11-05",
           "type": "platform",
@@ -2342,6 +2664,77 @@
       },
       "events": [
         {
+          "date": "2026-11-12",
+          "type": "research",
+          "title": "PwC 发布《AI in Revenue Cycle》：从单点方案到企业级价值",
+          "title_en": "PwC publishes 'AI in Revenue Cycle: From Point Solutions to Enterprise Value'",
+          "summary": "PwC 于 2026-11-12 发布医疗收入周期 AI 研究。",
+          "summary_en": "PwC published 'AI in Revenue Cycle' research on November 12, 2026.",
+          "url": "https://www.pwc.com/us/en/industries/health-industries.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-11",
+          "type": "research",
+          "title": "PwC 发布《How Operations Intelligence helps prove AI value》",
+          "title_en": "PwC publishes 'How Operations Intelligence helps prove AI value'",
+          "summary": "PwC 于 2026-11-11 发布运营智能证明 AI 价值的研究。",
+          "summary_en": "PwC published 'How Operations Intelligence helps prove AI value' on November 11, 2026.",
+          "url": "https://www.pwc.com/gx/en/insights.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "client_value_proof"
+          ]
+        },
+        {
+          "date": "2026-11-10",
+          "type": "research",
+          "title": "PwC 已培训 85,000 名员工使用 AI：下一步是教他们『不要盲信』",
+          "title_en": "PwC trained 85,000 workers on new technology — now it's teaching them not to over-trust it",
+          "summary": "PwC 于 2026-11-10 被报道已培训 85,000 名员工使用 AI 工具，当前重点转向批判性使用与验证——大规模人才投入 + 负责任 AI 叙事的双重信号（Inc. 报道）。",
+          "summary_en": "PwC has trained 85,000 workers to use AI tools and is now teaching critical use and verification (Inc., November 10, 2026) — a scale talent signal plus responsible-AI narrative.",
+          "url": "https://www.inc.com/",
+          "source_level": "media",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "delivery_production",
+            "strategy_signal"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "type": "research",
+          "title": "PwC 研究：AI 时代如何强化批判性思维与判断力",
+          "title_en": "PwC on strengthening critical thinking and judgment in the AI era",
+          "summary": "PwC 于 2026-11-09 发布 AI 时代批判性思维与判断力研究。",
+          "summary_en": "PwC published research on strengthening critical thinking and judgment in the AI era on November 9, 2026.",
+          "url": "https://www.pwc.com/gx/en/insights.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
+        {
           "date": "2026-11-07",
           "type": "research",
           "title": "PwC 发布卡塔尔 AI 优势研究：在家构建、向外扩展",
@@ -2375,6 +2768,24 @@
           "dimension_tags": [
             "thought_leadership",
             "strategy_signal"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "type": "service_line",
+          "title": "PwC 推出 AI 托管服务：agentic 后台与中台运营",
+          "title_en": "PwC launches AI managed services: agentic back- and middle-office operations",
+          "summary": "PwC 于 2026-11-03 推出 AI 托管服务，用 agentic AI 运营企业后台与中台——服务线动作。补扫说明：属上期窗口，回填。",
+          "summary_en": "PwC launched AI managed services running agentic back- and middle-office operations on November 3, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.pwc.com/gx/en/services.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "delivery_production",
+            "proprietary_assets"
           ]
         },
         {
@@ -2963,6 +3374,42 @@
       },
       "events": [
         {
+          "date": "2026-11-13",
+          "type": "partnership",
+          "title": "KPMG 联合 Google Cloud 与 Wiz 推出 AI Threat Management：企业 AI 规模化安全防御",
+          "title_en": "KPMG launches AI Threat Management with Google Cloud and Wiz",
+          "summary": "KPMG 于 2026-11-13 宣布与 Google Cloud 和 Wiz 合作推出 AI Threat Management 服务，帮助企业在 AI 规模化时防御新兴威胁。联盟 + 治理双维度。",
+          "summary_en": "KPMG announced AI Threat Management with Google Cloud and Wiz on November 13, 2026, helping enterprises defend against emerging threats at AI scale.",
+          "url": "https://kpmg.com/xx/en/media.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "verified",
+          "event_score": 78,
+          "dimension_tags": [
+            "tech_partnership",
+            "governance_risk"
+          ]
+        },
+        {
+          "date": "2026-11-12",
+          "type": "service_line",
+          "title": "KPMG 在泰国通过 Microsoft Copilot 与 Agent 365 规模化可信企业 AI",
+          "title_en": "KPMG scales trusted enterprise AI in Thailand through Microsoft Copilot and Agent 365",
+          "summary": "KPMG 于 2026-11-12 宣布在泰国通过 Microsoft Copilot 与 Microsoft Agent 365 规模化可信企业 AI 服务。",
+          "summary_en": "KPMG announced scaling trusted enterprise AI in Thailand through Microsoft Copilot and Agent 365 on November 12, 2026.",
+          "url": "https://kpmg.com/th/en/media.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "newsroom_sweep",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "delivery_production",
+            "tech_partnership"
+          ]
+        },
+        {
           "date": "2026-11-05",
           "type": "platform",
           "title": "KPMG 在 30 个国家测试私企审计 AI 工具：首个同类规模化部署",
@@ -3180,6 +3627,23 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-10",
+          "type": "client_proof",
+          "title": "Qantas 宣布裁减 850 个职位：与 Accenture 的多年期技术外包与 AI 化改造交易",
+          "title_en": "Qantas to cut 850 jobs under multi-year tech and AI outsourcing deal with Accenture",
+          "summary": "澳航 Qantas 于 2026-11-10 宣布裁减约 850 个职位（约 3% 员工），起于财务等企业职能，与 Accenture 的多年期技术外包与 AI 化改造交易直接相关（路透）。大型具名客户 + AI 驱动组织改造的客户证明事件。",
+          "summary_en": "Qantas announced ~850 job cuts (about 3% of staff) on November 10, 2026, tied to a multi-year technology offshoring and AI-driven transformation deal with Accenture (Reuters).",
+          "url": "https://www.reuters.com/business/world-at-work/australias-qantas-axe-850-jobs-offshoring-deal-with-accenture-2026-11-10",
+          "source_level": "media",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "verified",
+          "event_score": 78,
+          "dimension_tags": [
+            "client_value_proof"
+          ]
+        },
         {
           "date": "2026-11-05",
           "type": "client_proof",
@@ -3565,6 +4029,23 @@
       },
       "events": [
         {
+          "date": "2026-11-12",
+          "type": "research",
+          "title": "Capgemini 发布 AI 经济学研究快照",
+          "title_en": "Capgemini releases AI economics research snapshot",
+          "summary": "Capgemini 于 2026-11-12 发布 AI 经济学研究快照，延续其财报后的 AI 价值叙事。",
+          "summary_en": "Capgemini released an AI economics research snapshot on November 12, 2026.",
+          "url": "https://www.capgemini.com/insights/research-institute/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
+        {
           "date": "2026-11-04",
           "type": "research",
           "title": "Capgemini 发布金融服务多代理 AI 研究：机构加速转向多代理体系以追求底线价值",
@@ -3577,6 +4058,24 @@
           "discovery_channel": "dimension_sweep_publications",
           "verification_status": "partially_verified",
           "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "type": "research",
+          "title": "Capgemini 发布《Smarter Insurance Through Human-AI Collaboration》",
+          "title_en": "Capgemini publishes 'Smarter Insurance Through Human-AI Collaboration'",
+          "summary": "Capgemini 于 2026-11-04 发布保险业人机协作研究。补扫说明：属上期窗口，回填。",
+          "summary_en": "Capgemini published 'Smarter Insurance Through Human-AI Collaboration' on November 4, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.capgemini.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
           "dimension_tags": [
             "thought_leadership",
             "industry_coverage"
@@ -3757,6 +4256,23 @@
       },
       "events": [
         {
+          "date": "2026-11-09",
+          "type": "research",
+          "title": "FTI 发布 AI 叙事播种研究（AI Narrative Seeding）",
+          "title_en": "FTI publishes 'From Unknown to Viral: AI Narrative Seeding'",
+          "summary": "FTI 于 2026-11-09 发布 AI 叙事播种研究：生成式引擎时代的叙事管理。",
+          "summary_en": "FTI published 'From Unknown to Viral: AI Narrative Seeding' on November 9, 2026.",
+          "url": "https://www.fticonsulting.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
+        {
           "date": "2026-11-06",
           "type": "research",
           "title": "FTI 发布《AI Governance Is Becoming an Examination Issue》",
@@ -3919,6 +4435,23 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-11-10",
+          "type": "research",
+          "title": "A&M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律",
+          "title_en": "A&M publishes 'Bringing Discipline to AI Portfolio Decisions'",
+          "summary": "Alvarez & Marsal 于 2026-11-10 发布 AI 投资组合决策纪律研究——A&M 首个入库的思想领导力事件（此前长期 quiet）。",
+          "summary_en": "Alvarez & Marsal published 'Bringing Discipline to AI Portfolio Decisions' on November 10, 2026 — the firm's first logged thought-leadership event.",
+          "url": "https://www.alvarezandmarsal.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
         {
           "date": "2026-05-19",
           "type": "research",
