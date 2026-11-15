@@ -2,8 +2,8 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-11-07",
-    "updated_at": "2026-11-15",
+    "previous_updated_at": "2026-10-24",
+    "updated_at": "2026-10-31",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
     "method_note": "2026-11-15 期：窗口 11-08 至 11-15，RSS 查询矩阵第二轮（7 条查询 × when:14d）+ WebSearch 核实。净新增 25 条：McKinsey×4（银行业年度回顾 80 旗舰、agentic 业务规划 72、CFO ROI 70、医疗 2027 68）、BCG×2（Client Zero 自我转型实录 76、工业 AI 70）、Deloitte×4（收购 Flipside Crypto AI 业务 + Edisyl 84、董事会治理调查 74、保险展望 70、政府呼叫中心 68）、Accenture×1（Qantas 850 职位 AI 外包交易 78，路透）、PwC×4（85K 培训 72、批判性思维 68、收入周期 68、运营智能 68）、KPMG×2（Google Cloud+Wiz AI 威胁管理 78、泰国规模化 72）、Capgemini×1（AI 经济学快照 68）、Kearney×2、Roland Berger×1（TasteIndex 平台 70）、A&M×1（首个思想领导力事件 70）、FTI×1、Bain×2。上期补扫回填 5 条（McKinsey 伙伴生态/汽车质量、PwC AI 托管服务、BCG 2.6 万亿美元估算、Capgemini 保险人机协作，计入 11-07 期文件）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：收购+新公司 84、旗舰研究 80、联盟 78、大客户交易 78、自我转型实录 76、常规研究 68–74。A&M 结束长期 quiet（首个研究事件）；Kearney/RB/FTI/OW/Bain/PwC 覆盖继续补齐。【修正 11-15 当日】①补回 Kearney 三条上期漏网（美容展望 11-05、金融 AI 11-03、组织之坎 11-07）；②PwC Priest（2024-07-16）archive 回填此前漏提交，本批补提交；③QA 教训：验证探针必须同时覆盖 title 与 title_en（中英双语）。",
@@ -1999,7 +1999,7 @@
       "cn": "奥纬咨询",
       "tier": "Specialist Strategy",
       "parent": null,
-      "brand_note": null,
+      "brand_note": "Oliver Wyman 是 Marsh McLennan 旗下管理咨询品牌；2026 年起以「Oliver Wyman, a Marsh business」品牌运营，运营单元 Oliver Wyman Group 更名为 Marsh Management Consulting",
       "focus": "Quotient – AI by Oliver Wyman、风险与增长、行业场景",
       "confidence": "high",
       "scores": {
@@ -2065,6 +2065,24 @@
           "dimension_tags": [
             "proprietary_assets",
             "strategy_signal"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "type": "research",
+          "title": "Oliver Wyman 调查：仅 6% 的 CIO 认为 agentic AI 今天能发挥全部潜力",
+          "title_en": "Oliver Wyman survey: only 6% of CIOs say agents can reach full potential today",
+          "summary": "Oliver Wyman 于 2026-10-30 发布 CEO 与技术领袖平行调查：仅 6% 的 CIO 认为 agentic AI 今天能达到全部潜力，工作与应用层面的准备度是主要瓶颈。补扫说明：属上期窗口，浏览器直取 insights 页发现，回填。",
+          "summary_en": "Oliver Wyman released parallel surveys of CEOs and tech leaders on October 30, 2026: only 6% of CIOs say agents can reach full potential today. Backfilled via browser direct-fetch of the insights page.",
+          "url": "https://www.oliverwyman.com/our-expertise/insights/2026/oct/workforces-applications-agentic-ai.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "partner_channel_crosscheck",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "governance_risk"
           ]
         },
         {
@@ -2667,6 +2685,24 @@
           "source_level": "official",
           "confidence": "medium",
           "event_score": 62
+        },
+        {
+          "date": "2025-11",
+          "type": "research",
+          "title": "Monitor Deloitte 发布《TMT Predictions 2026》：AI 差距缩小但持续存在",
+          "title_en": "Monitor Deloitte releases TMT Predictions 2026: the AI gap narrows but persists",
+          "summary": "Monitor Deloitte（Tim Bottke 等）于 2025 年 11 月发布年度 TMT Predictions 2026：核心判断为「AI 差距缩小但持续存在」，生成式 AI 内嵌于现有搜索引擎的速度超过独立工具。回填说明：Monitor Deloitte 此前仅有观察存根，补入其旗舰年度系列（日期精度为月份）。",
+          "summary_en": "Monitor Deloitte's annual TMT Predictions 2026 (November 2025): the AI gap narrows but persists. Backfilled to fill the brand's observation stub (month-level precision).",
+          "url": "https://www.deloitte.com/monitor",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
         }
       ]
     },
@@ -3113,6 +3149,42 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-11-11",
+          "type": "research",
+          "title": "Strategy& 发布中东 AI 研究：卡塔尔 AI 市场到 2030 年将超 20 亿美元",
+          "title_en": "Strategy& Middle East AI research: Qatar's AI market to exceed $2 billion by 2030",
+          "summary": "Strategy& 于 2026-11-11 发布中东 AI 研究：卡塔尔 AI 市场（平台约 7 亿、产品约 5 亿美元等）到 2030 年将超过 20 亿美元，年增 25%；GCC 的 AI 投资浪潮领先企业采用。",
+          "summary_en": "Strategy& released Middle East AI research on November 11, 2026: Qatar's AI market to exceed $2 billion by 2030 (25% annual growth).",
+          "url": "https://www.strategyand.pwc.com/me/en/insights.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "type": "investment",
+          "title": "PwC UK 完成收购 AI 咨询公司 Datasparq：强化 Strategy& 的 Value Creation 业务",
+          "title_en": "PwC UK completes acquisition of AI consultancy Datasparq, strengthening Strategy&'s Value Creation business",
+          "summary": "PwC UK 于 2026-11-02 完成对 AI 咨询公司 Datasparq 的收购，交易直接强化 Strategy& 的 Value Creation（价值创造）业务线的 AI 交付能力。资本动作信号，归入 Strategy& 品牌条目（受强化的业务主体）。",
+          "summary_en": "PwC UK completed its acquisition of AI consultancy Datasparq on November 2, 2026, directly strengthening Strategy&'s Value Creation line.",
+          "url": "https://www.consultancy.uk/news",
+          "source_level": "media",
+          "confidence": "high",
+          "discovery_channel": "partner_channel_crosscheck",
+          "verification_status": "partially_verified",
+          "event_score": 80,
+          "dimension_tags": [
+            "capital_ma",
+            "proprietary_assets"
+          ]
+        },
         {
           "date": "2026",
           "type": "service_line",
