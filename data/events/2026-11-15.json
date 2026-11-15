@@ -471,6 +471,25 @@
         "thought_leadership",
         "industry_coverage"
       ]
+    },
+    {
+      "company_id": "strategy_and",
+      "date": "2026-11-11",
+      "type": "research",
+      "title": "Strategy& 发布中东 AI 研究：卡塔尔 AI 市场到 2030 年将超 20 亿美元",
+      "title_en": "Strategy& Middle East AI research: Qatar's AI market to exceed $2 billion by 2030",
+      "summary": "Strategy& 于 2026-11-11 发布中东 AI 研究：卡塔尔 AI 市场（平台约 7 亿、产品约 5 亿美元等）到 2030 年将超过 20 亿美元，年增 25%；GCC 的 AI 投资浪潮领先企业采用。",
+      "summary_en": "Strategy& released Middle East AI research on November 11, 2026: Qatar's AI market to exceed $2 billion by 2030 (25% annual growth).",
+      "url": "https://www.strategyand.pwc.com/me/en/insights.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
     }
   ]
 }

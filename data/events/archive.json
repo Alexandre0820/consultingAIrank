@@ -1015,6 +1015,25 @@
       "dimension_tags": [
         "strategy_signal"
       ]
+    },
+    {
+      "company_id": "monitor_deloitte",
+      "date": "2025-11",
+      "type": "research",
+      "title": "Monitor Deloitte 发布《TMT Predictions 2026》：AI 差距缩小但持续存在",
+      "title_en": "Monitor Deloitte releases TMT Predictions 2026: the AI gap narrows but persists",
+      "summary": "Monitor Deloitte（Tim Bottke 等）于 2025 年 11 月发布年度 TMT Predictions 2026：核心判断为「AI 差距缩小但持续存在」，生成式 AI 内嵌于现有搜索引擎的速度超过独立工具。回填说明：Monitor Deloitte 此前仅有观察存根，补入其旗舰年度系列（日期精度为月份）。",
+      "summary_en": "Monitor Deloitte's annual TMT Predictions 2026 (November 2025): the AI gap narrows but persists. Backfilled to fill the brand's observation stub (month-level precision).",
+      "url": "https://www.deloitte.com/monitor",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 74,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
     }
   ]
 }
