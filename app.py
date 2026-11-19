@@ -91,8 +91,8 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_static_asset(parsed.path.removeprefix("/static/"))
             return
 
-        # 顶层静态页面（assessment / history / dimensions 等），与导航里的相对链接对应。
-        if parsed.path.endswith(".html") and "/" not in parsed.path.lstrip("/"):
+        # 顶层静态页面与脚本（assessment / history / dimensions 及其 js），与导航里的相对链接对应。
+        if (parsed.path.endswith(".html") or parsed.path.endswith(".js")) and "/" not in parsed.path.lstrip("/"):
             self.send_static_asset(parsed.path.lstrip("/"))
             return
 
@@ -104,6 +104,28 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         if parsed.path in ("/api/leaderboard", "/data/ai-consulting-leaderboard.json"):
+            try:
+                payload = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+            except Exception as exc:
+                self.send_json({"error": "data_load_failed", "message": str(exc)}, status=500)
+                return
+            self.send_json(payload)
+            return
+
+        # data/ 目录只读直出（rank-history.json 等），与 Netlify publish="." 的 /data/* 路径一致。
+        if parsed.path.startswith("/data/") and parsed.path.endswith(".json"):
+            relative = parsed.path.removeprefix("/data/")
+            data_path = (DATA_DIR / relative).resolve()
+            try:
+                data_path.relative_to(DATA_DIR.resolve())
+            except ValueError:
+                self.send_json({"error": "not_found", "path": parsed.path}, status=404)
+                return
+            if data_path.is_file():
+                self.send_file(data_path, "application/json; charset=utf-8")
+                return
+            self.send_json({"error": "not_found", "path": parsed.path}, status=404)
+            return
             try:
                 payload = json.loads(DATA_PATH.read_text(encoding="utf-8"))
             except Exception as exc:
