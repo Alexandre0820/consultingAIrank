@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PwC 普华永道 AI 动作追踪 · 相对行动力指数 84.9 · AI咨询行动榜</title>
+    <meta name="description" content="PwC（普华永道）当前相对行动力指数 84.9（强），在 17 家传统咨询 / 专业服务公司中排名第 5；累计 22 条公开 AI 信号，最近动作：PwC 发布《AI in Revenue Cycle》：从单点方案到企业级价值。AI 投资、Microsoft/OpenAI 合作、Agent OS、治理与信任" />
+    <meta property="og:title" content="PwC 普华永道 AI 动作追踪 · 相对行动力指数 84.9 · AI咨询行动榜" />
+    <meta property="og:description" content="PwC（普华永道）当前相对行动力指数 84.9（强），在 17 家传统咨询 / 专业服务公司中排名第 5；累计 22 条公开 AI 信号，最近动作：PwC 发布《AI in Revenue Cycle》：从单点方案到企业级价值。AI 投资、Microsoft/OpenAI 合作、Agent OS、治理与信任" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI咨询行动榜","item":"../index.html"},{"@type":"ListItem","position":2,"name":"公司追踪","item":"./index.html"},{"@type":"ListItem","position":3,"name":"PwC"}]},{"@type":"WebPage","name":"PwC（普华永道） AI 动作追踪","description":"PwC（普华永道）当前相对行动力指数 84.9（强），在 17 家传统咨询 / 专业服务公司中排名第 5；累计 22 条公开 AI 信号，最近动作：PwC 发布《AI in Revenue Cycle》：从单点方案到企业级价值。AI 投资、Microsoft/OpenAI 合作、Agent OS、治理与信任","isPartOf":{"@type":"WebSite","name":"AI咨询行动榜 / AI Consulting Signal Index"},"about":{"@type":"Organization","name":"PwC","alternateName":"普华永道","description":"AI 投资、Microsoft/OpenAI 合作、Agent OS、治理与信任"}}]}</script>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .company-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .company-hero { padding: 40px 0 8px; }
+      .company-hero h1 { font-size: clamp(44px, 6vw, 84px); margin-bottom: 10px; }
+      .company-hero__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+      .company-hero__focus { max-width: 860px; color: #3e352d; font-size: 18px; line-height: 1.65; margin: 0; }
+      .company-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 26px 0 30px; }
+      .company-stats__item { border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: var(--panel); }
+      .company-stats__item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; letter-spacing: 0.08em; margin-bottom: 6px; }
+      .company-stats__item strong { font-size: 30px; line-height: 1; }
+      .company-stats__item em { font-style: normal; color: var(--muted); font-size: 13px; margin-left: 6px; }
+      .company-section { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 24px; padding: 20px; background: var(--panel); box-shadow: var(--shadow); }
+      .company-section > h2 { margin: 0 0 4px; font-size: 26px; }
+      .company-section > p.company-section__note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.6; margin: 0 0 14px; }
+      .company-section .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 800; }
+      .dimension-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+      .dimension-chip { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 800; background: rgba(255, 255, 255, 0.4); }
+      .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 4px 9px; color: #fff; background: var(--event-color, var(--ink)); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; }
+      .company-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin: 30px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+      .company-nav a { color: var(--red); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; text-decoration: none; }
+      .company-disclaimer { margin-top: 18px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; line-height: 1.6; }
+      .company-index-list { display: grid; gap: 10px; }
+      .company-index-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, 0.4); text-decoration: none; color: inherit; }
+      .company-index-item:hover { background: rgba(255, 255, 255, 0.7); }
+      .company-index-item .rank { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .company-index-item strong { font-size: 18px; }
+      .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
+      .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
+      .company-index-item .score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="../index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="../index.html">行动力榜单</a>
+          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
+          <a class="site-nav__link" href="../history.html">历史排名</a>
+          <a class="site-nav__link" href="../dimensions.html">维度对比</a>
+          <a class="site-nav__link" href="../assessment.html">自评工具</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="company-page">
+      <header class="company-hero">
+        <p class="eyebrow">Company Tracker · 公司追踪页</p>
+        <h1>普华永道</h1>
+        <div class="company-hero__meta">
+          <span class="evidence-pill">PwC</span>
+          <span class="evidence-pill">Big Four</span>
+          
+          <span class="evidence-pill">Strategy&amp; 可作为 PwC 旗下战略品牌观察，暂不独立计分。</span>
+        </div>
+        <p class="company-hero__focus">AI 投资、Microsoft/OpenAI 合作、Agent OS、治理与信任</p>
+      </header>
+
+      <section class="company-stats" aria-label="关键指标">
+        
+          <div class="company-stats__item">
+            <small>当前排名</small>
+            <strong>#5</strong><em>/17</em>
+          </div>
+          <div class="company-stats__item">
+            <small>相对行动力指数</small>
+            <strong>84.9</strong><em>· 强</em>
+          </div>
+          <div class="company-stats__item">
+            <small>累计公开 AI 信号</small>
+            <strong>22</strong><em>条</em>
+          </div>
+          <div class="company-stats__item">
+            <small>官方来源占比</small>
+            <strong>86%</strong><em>(19/22)</em>
+          </div>
+          <div class="company-stats__item">
+            <small>最近动作</small>
+            <strong>2026.11.12</strong><em>研究/指数</em>
+          </div>
+          <div class="company-stats__item">
+            <small>覆盖置信度</small>
+            <strong>high</strong><em></em>
+          </div>
+      </section>
+
+      
+      <section class="company-section" aria-label="人工观察">
+        <h2>人工观察</h2>
+        <p class="company-section__note">PwC 的 AI 叙事强调“trust + scale”，同时有明确资本投入和 Microsoft/OpenAI 合作。</p>
+      </section>
+
+      
+
+      
+      <section class="company-section" aria-label="公开 AI 研究">
+        <h2>公开 AI 研究（2 份）</h2>
+        <p class="company-section__note">该公司在 AI 议题上的持续研究与公开表达，体现 thought leadership 证据。</p>
+        <div class="report-list">
+          
+          <div class="report-item">
+            <div class="report-item__meta"><span>2026.06.15</span><span>PwC</span><span>official</span></div>
+            <strong>2026 AI Jobs Barometer</strong>
+            <p>PwC 的 AI Jobs Barometer 用劳动力与岗位视角研究 AI 影响，体现其把 AI 与组织、人才和经济结构结合的思考力。</p>
+            <a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer.html" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+          <div class="report-item">
+            <div class="report-item__meta"><span>2026.05.04</span><span>OpenAI / PwC</span><span>vendor_official</span></div>
+            <strong>OpenAI and PwC finance collaboration</strong>
+            <p>这不是传统白皮书，但它系统展示了 PwC 如何将 AI agents 嵌入 CFO Office 流程，兼具 client zero、流程重构与企业转型方法论价值。</p>
+            <a href="https://openai.com/so-DJ/index/openai-pwc-finance-collaboration/" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-section" aria-label="完整事件时间线">
+        <h2>完整事件时间线（22 条）</h2>
+        <p class="company-section__note">按时间倒序展示全部公开 AI 信号：日期、事件类型、摘要、影响维度、来源可信度、置信度与原文链接。评分口径见主榜 Method 说明。</p>
+        <div class="events">
+          
+        <article class="event">
+          <time>2026.11.12</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 发布《AI in Revenue Cycle》：从单点方案到企业级价值</h4>
+            <p>PwC 于 2026-11-12 发布医疗收入周期 AI 研究。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.pwc.com/us/en/industries/health-industries.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.11</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 发布《How Operations Intelligence helps prove AI value》</h4>
+            <p>PwC 于 2026-11-11 发布运营智能证明 AI 价值的研究。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.pwc.com/gx/en/insights.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.10</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 已培训 85,000 名员工使用 AI：下一步是教他们『不要盲信』</h4>
+            <p>PwC 于 2026-11-10 被报道已培训 85,000 名员工使用 AI 工具，当前重点转向批判性使用与验证——大规模人才投入 + 负责任 AI 叙事的双重信号（Inc. 报道）。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 72 · 来源 media · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.inc.com/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.09</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 研究：AI 时代如何强化批判性思维与判断力</h4>
+            <p>PwC 于 2026-11-09 发布 AI 时代批判性思维与判断力研究。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.pwc.com/gx/en/insights.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.07</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 发布卡塔尔 AI 优势研究：在家构建、向外扩展</h4>
+            <p>PwC 于 2026-11-07 发布卡塔尔 AI 优势研究。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.pwc.com/gx/en/insights.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.06</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 发布《Code is strategy》：IT 版图如何定义商业模式</h4>
+            <p>PwC 于 2026-11-06 发布研究：IT 版图定义商业模式，AI 时代的代码即战略。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.pwc.com/gx/en/insights.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.03</time>
+          <div>
+            <span class="badge" style="--event-color:#8a5cf6">AI 服务线</span>
+            <h4>PwC 推出 AI 托管服务：agentic 后台与中台运营</h4>
+            <p>PwC 于 2026-11-03 推出 AI 托管服务，用 agentic AI 运营企业后台与中台——服务线动作。补扫说明：属上期窗口，回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">自有 AI 平台与技术资产</span></div>
+            <div class="event-meta">事件分 74 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.pwc.com/gx/en/services.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.30</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 发布《The Future of Therapeutics》</h4>
+            <p>PwC 于 2026-10-30 发布治疗学未来研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.pwc.com/gx/en/industries/pharmaceuticals.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.05</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>PwC 与 Cohere 宣布全球联盟，加速安全可信的企业级 AI 采用</h4>
+            <p>PwC 于 2026-10-05 宣布与 Cohere 建立全球战略联盟，把 Cohere 的安全企业级 AI 平台与 PwC 的转型专长结合，率先在加拿大落地，面向安全与可信场景推进企业 AI 采用。这是 PwC 在 OpenAI、Anthropic、Microsoft 之外绑定的又一家前沿模型厂商。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">AI 治理与风险能力</span></div>
+            <div class="event-meta">事件分 84 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/accelerate-secure-enterprise-ai-adoption.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.01</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 2027 全球数字信任洞察：84% 高管预计前沿 AI 铺开后网络预算上升（上轮漏检回填）</h4>
+            <p>PwC 于 2026-10-01 发布 2027 Global Digital Trust Insights Survey：84% 的安全与财务负责人预期网络预算增加（去年为 78%），组织在 AI 快速演进的同时加倍投入网络安全。该条发布于 10-03 轮窗口内，因搜索服务故障漏检，经浏览器补扫 PwC 新闻室后回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">AI 治理与风险能力</span></div>
+            <div class="event-meta">事件分 74 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/senior-leaders-cyber-budget-rise.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.29</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC：AI 技能鸿沟扩大，最懂 AI 的员工正在流失（上轮漏检回填）</h4>
+            <p>PwC 于 2026-09-29 发布劳动力研究：不断扩大的 AI 技能鸿沟正在造成员工队伍分化，多数员工面临被落下的风险，而企业最 AI-savvy 的人才存在流失风险。该条发布于 10-03 轮窗口内，因搜索服务故障漏检，经浏览器补扫后回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/companies-risk-losing-ai-savvy-employees.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.02</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 发布全球 AI 基础设施投资预测：2050 年前累计将达 31.6 万亿美元</h4>
+            <p>PwC 于 2026-09-02 发布官方预测，到 2050 年全球 AI 基础设施投资将创纪录地达到 31.6 万亿美元，涵盖数据中心、电力与网络等资产。该条发布于上一轮刷新窗口内，属上轮漏检，本轮追溯回填；它把 AI 议题延伸到资本开支与宏观基础设施层面。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 74 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/global-investment-in-ai-infrastructure.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.22</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 发布 The intelligent enterprise in action: AI and the next era of customer experience</h4>
+            <p>PwC 于 2026-07-22 发布 webcast，系统阐述如何把 AI 嵌入决策机制、客户体验与 enterprise-wide performance。内容强调 proprietary data、agents 与 humans 的协同编排，以及把零散试点转化为全企业绩效的能力，属于高质量的官方 thought leadership 信号。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 81 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.pwc.com/us/en/library/webcasts/replay/ai-and-the-next-era-of-customer-experience.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.15</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>PwC 与 OpenAI 推出 agentic customer engagement and service 方案</h4>
+            <p>PwC US 于 2026-07-15 官方宣布推出与 OpenAI 共建的 agentic contact and service solutions，把营销、销售、commerce 与 service 放进同一个 AI-enabled operating model，并设立专门的 Center of Excellence 加速客户部署。这是本周最强的官方合作与交付信号之一。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">客户价值证明</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 92 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.pwc.com/us/en/about-us/newsroom/press-releases/pwc-openai-agentic-contact-service-solutions.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.23</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC AI Jobs Barometer 获新一轮媒体引用，强调 AI 岗位与薪资继续走强</h4>
+            <p>Consultancy.uk 依据 PwC 的最新 AI Jobs Barometer 报道，英国 AI 相关招聘与薪资继续跑赢整体就业市场；基于超过 10 亿条招聘广告的分析，PwC 指出企业对 AI 能力的需求正在加速，并从泛化兴趣转向更明确的专业能力要求。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 74 · 来源 media · 置信度 medium · 核验 pending</div>
+            <a href="https://www.consultancy.uk/news/44646/uk-ai-hiringand-wages-surge-as-they-outpace-jobs-market" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.15</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>PwC 发布 2026 AI Jobs Barometer</h4>
+            <p>PwC 基于超过 10 亿条职位数据发布 2026 AI Jobs Barometer，指出 AI 正在把入门岗位“高级化”，AI 暴露度高的初级岗位更早要求判断力、领导力和战略思维，体现其在 AI 与劳动力结构上的公开研究能力。</p>
+            
+            <div class="event-meta">事件分 84 · 来源 official · 置信度 high</div>
+            <a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.14</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>PwC 成为 OpenAI Partner Network 首发全球合作伙伴</h4>
+            <p>OpenAI 官方将 PwC 列为 OpenAI Partner Network 首发全球合作伙伴之一。OpenAI 页面直接引用 PwC 观点，强调将 frontier capabilities 与 transformation expertise 结合，帮助客户以 responsible 方式大规模部署 AI。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 治理与风险能力</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 88 · 来源 vendor_official · 置信度 high · 核验 verified</div>
+            <a href="https://openai.com/index/introducing-openai-partner-network/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.05.14</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>PwC 与 Anthropic 扩大合作，Claude 进入 PwC 交付体系</h4>
+            <p>行业报道显示 PwC 与 Anthropic 扩大合作，计划培训并认证3万名美国专业人员使用 Claude，并将 Claude Code、Claude Cowork 等能力扩展到全球专业服务体系。该事件待官方复核。</p>
+            
+            <div class="event-meta">事件分 86 · 来源 media · 置信度 medium</div>
+            <a href="https://www.digitalapplied.com/blog/pwc-anthropic-30000-professionals-claude" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.05.04</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>PwC 与 OpenAI 合作重构 CFO Office 的 AI agents</h4>
+            <p>PwC 与 OpenAI 围绕财务规划、预测、报告、采购、付款、财资、税务和会计结账等核心财务流程构建 AI agents；OpenAI 财务组织作为 Customer Zero，Codex 已处理5倍合同，IR-GPT 管理200+投资者互动。</p>
+            
+            <div class="event-meta">事件分 88 · 来源 vendor_official · 置信度 high</div>
+            <a href="https://openai.com/so-DJ/index/openai-pwc-finance-collaboration/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026</time>
+          <div>
+            <span class="badge" style="--event-color:#8a5cf6">AI 服务线</span>
+            <h4>AI consulting and transformation services</h4>
+            <p>PwC 官方 AI 服务页强调从 pilot 到 practice，覆盖 AI strategy、genAI、enterprise implementation、governance 和 industry AI solutions。</p>
+            
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high</div>
+            <a href="https://www.pwc.com/us/en/services/ai.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2024.07.16</time>
+          <div>
+            <span class="badge" style="--event-color:#e11d48">组织/岗位</span>
+            <h4>PwC US 任命 Dan Priest 为首任 US Chief AI Officer</h4>
+            <p>PwC US 于 2024-07-16 任命 Dan Priest（PwC 老将，曾任 Cloud &amp; Digital 负责人）为首任美国区 Chief AI Officer，同一公告还任命了可持续发展执行发起人。回填说明：上周观察项经核实有官方新闻稿，organization 维度回填；日期较早，按新鲜度衰减自然处理。</p>
+            <div class="dimension-chips"><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 78 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.pwc.com/us/en/about-us/newsroom/press-releases/chief-ai-officer-sustainability-executive-sponsor.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2023.04.26</time>
+          <div>
+            <span class="badge" style="--event-color:#ff8a00">投资/并购</span>
+            <h4>PwC US 三年投入 10 亿美元扩展 AI 能力</h4>
+            <p>PwC US 宣布三年 10 亿美元 AI 投资，基于 Microsoft 与 OpenAI 技术扩展生成式 AI 服务。</p>
+            
+            <div class="event-meta">事件分 82 · 来源 official · 置信度 high</div>
+            <a href="https://www.pwc.com/us/en/about-us/newsroom/press-releases/pwc-us-makes-billion-investment-in-ai-capabilities.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <nav class="company-nav" aria-label="公司页导航">
+        <span><a href="accenture.html">← 上一家：Accenture</a></span>
+        <a href="./index.html">全部公司追踪页</a>
+        <span><a href="bain.html">下一家：Bain →</a></span>
+      </nav>
+
+      <p class="company-disclaimer">本页由 AI咨询行动榜 自动生成，数据截至 2026.11.15 快照。分数是研究预览口径（相对行动力指数，当期榜首 = 100），不代表权威排名。事件均附原始来源链接，点开可自行核验。</p>
+    </main>
+  </body>
+</html>

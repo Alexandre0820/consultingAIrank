@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capgemini 凯捷 AI 动作追踪 · 相对行动力指数 65.4 · AI咨询行动榜</title>
+    <meta name="description" content="Capgemini（凯捷）当前相对行动力指数 65.4（观察），在 17 家传统咨询 / 专业服务公司中排名第 11；累计 11 条公开 AI 信号，最近动作：Capgemini 发布 AI 经济学研究快照。OpenAI Frontier Alliance、行业 AI 解决方案、全球交付" />
+    <meta property="og:title" content="Capgemini 凯捷 AI 动作追踪 · 相对行动力指数 65.4 · AI咨询行动榜" />
+    <meta property="og:description" content="Capgemini（凯捷）当前相对行动力指数 65.4（观察），在 17 家传统咨询 / 专业服务公司中排名第 11；累计 11 条公开 AI 信号，最近动作：Capgemini 发布 AI 经济学研究快照。OpenAI Frontier Alliance、行业 AI 解决方案、全球交付" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI咨询行动榜","item":"../index.html"},{"@type":"ListItem","position":2,"name":"公司追踪","item":"./index.html"},{"@type":"ListItem","position":3,"name":"Capgemini"}]},{"@type":"WebPage","name":"Capgemini（凯捷） AI 动作追踪","description":"Capgemini（凯捷）当前相对行动力指数 65.4（观察），在 17 家传统咨询 / 专业服务公司中排名第 11；累计 11 条公开 AI 信号，最近动作：Capgemini 发布 AI 经济学研究快照。OpenAI Frontier Alliance、行业 AI 解决方案、全球交付","isPartOf":{"@type":"WebSite","name":"AI咨询行动榜 / AI Consulting Signal Index"},"about":{"@type":"Organization","name":"Capgemini","alternateName":"凯捷","description":"OpenAI Frontier Alliance、行业 AI 解决方案、全球交付"}}]}</script>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .company-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .company-hero { padding: 40px 0 8px; }
+      .company-hero h1 { font-size: clamp(44px, 6vw, 84px); margin-bottom: 10px; }
+      .company-hero__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+      .company-hero__focus { max-width: 860px; color: #3e352d; font-size: 18px; line-height: 1.65; margin: 0; }
+      .company-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 26px 0 30px; }
+      .company-stats__item { border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: var(--panel); }
+      .company-stats__item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; letter-spacing: 0.08em; margin-bottom: 6px; }
+      .company-stats__item strong { font-size: 30px; line-height: 1; }
+      .company-stats__item em { font-style: normal; color: var(--muted); font-size: 13px; margin-left: 6px; }
+      .company-section { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 24px; padding: 20px; background: var(--panel); box-shadow: var(--shadow); }
+      .company-section > h2 { margin: 0 0 4px; font-size: 26px; }
+      .company-section > p.company-section__note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.6; margin: 0 0 14px; }
+      .company-section .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 800; }
+      .dimension-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+      .dimension-chip { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 800; background: rgba(255, 255, 255, 0.4); }
+      .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 4px 9px; color: #fff; background: var(--event-color, var(--ink)); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; }
+      .company-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin: 30px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+      .company-nav a { color: var(--red); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; text-decoration: none; }
+      .company-disclaimer { margin-top: 18px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; line-height: 1.6; }
+      .company-index-list { display: grid; gap: 10px; }
+      .company-index-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, 0.4); text-decoration: none; color: inherit; }
+      .company-index-item:hover { background: rgba(255, 255, 255, 0.7); }
+      .company-index-item .rank { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .company-index-item strong { font-size: 18px; }
+      .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
+      .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
+      .company-index-item .score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="../index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="../index.html">行动力榜单</a>
+          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
+          <a class="site-nav__link" href="../history.html">历史排名</a>
+          <a class="site-nav__link" href="../dimensions.html">维度对比</a>
+          <a class="site-nav__link" href="../assessment.html">自评工具</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="company-page">
+      <header class="company-hero">
+        <p class="eyebrow">Company Tracker · 公司追踪页</p>
+        <h1>凯捷</h1>
+        <div class="company-hero__meta">
+          <span class="evidence-pill">Capgemini</span>
+          <span class="evidence-pill">Technology Consulting / SI</span>
+          
+          
+        </div>
+        <p class="company-hero__focus">OpenAI Frontier Alliance、行业 AI 解决方案、全球交付</p>
+      </header>
+
+      <section class="company-stats" aria-label="关键指标">
+        
+          <div class="company-stats__item">
+            <small>当前排名</small>
+            <strong>#11</strong><em>/17</em>
+          </div>
+          <div class="company-stats__item">
+            <small>相对行动力指数</small>
+            <strong>65.4</strong><em>· 观察</em>
+          </div>
+          <div class="company-stats__item">
+            <small>累计公开 AI 信号</small>
+            <strong>11</strong><em>条</em>
+          </div>
+          <div class="company-stats__item">
+            <small>官方来源占比</small>
+            <strong>91%</strong><em>(10/11)</em>
+          </div>
+          <div class="company-stats__item">
+            <small>最近动作</small>
+            <strong>2026.11.12</strong><em>研究/指数</em>
+          </div>
+          <div class="company-stats__item">
+            <small>覆盖置信度</small>
+            <strong>high</strong><em></em>
+          </div>
+      </section>
+
+      
+      <section class="company-section" aria-label="人工观察">
+        <h2>人工观察</h2>
+        <p class="company-section__note">Capgemini 是 OpenAI Frontier Alliance founding member，强调行业解决方案、数据治理和多 agent workflow。</p>
+      </section>
+
+      
+
+      
+      <section class="company-section" aria-label="公开 AI 研究">
+        <h2>公开 AI 研究（2 份）</h2>
+        <p class="company-section__note">该公司在 AI 议题上的持续研究与公开表达，体现 thought leadership 证据。</p>
+        <div class="report-list">
+          
+          <div class="report-item">
+            <div class="report-item__meta"><span>2026</span><span>Capgemini Research Institute</span><span>official</span></div>
+            <strong>Research Institute: Generative AI</strong>
+            <p>Capgemini Research Institute 在生成式 AI、行业应用和企业采用上持续有结构化研究输出。</p>
+            <a href="https://www.capgemini.com/insights/research-library/?topics=generative-ai" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+          <div class="report-item">
+            <div class="report-item__meta"><span>2025.07.16</span><span>Capgemini Research Institute</span><span>official</span></div>
+            <strong>Rise of agentic AI: How trust is the key to human-AI collaboration</strong>
+            <p>Capgemini 对 agentic AI 的规模化采用、信任与 human-in-the-loop 的研究很成体系，应作为其 AI 转型公开思考力的代表性样本之一。</p>
+            <a href="https://www.capgemini.com/news/press-releases/trust-and-human-ai-collaboration-set-to-define-the-next-era-of-agentic-ai-unlocking-450-billion-opportunity-by-2028/" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-section" aria-label="完整事件时间线">
+        <h2>完整事件时间线（11 条）</h2>
+        <p class="company-section__note">按时间倒序展示全部公开 AI 信号：日期、事件类型、摘要、影响维度、来源可信度、置信度与原文链接。评分口径见主榜 Method 说明。</p>
+        <div class="events">
+          
+        <article class="event">
+          <time>2026.11.12</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Capgemini 发布 AI 经济学研究快照</h4>
+            <p>Capgemini 于 2026-11-12 发布 AI 经济学研究快照，延续其财报后的 AI 价值叙事。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.capgemini.com/insights/research-institute/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.04</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Capgemini 发布金融服务多代理 AI 研究：机构加速转向多代理体系以追求底线价值</h4>
+            <p>Capgemini 于 2026-11-04 发布金融服务多代理 AI 研究：金融机构正加速转向多代理 AI 体系，以追求底线价值；延续其 10 月财报后「AI 需求 → 收入」的叙事。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.capgemini.com/insights/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.04</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Capgemini 发布《Smarter Insurance Through Human-AI Collaboration》</h4>
+            <p>Capgemini 于 2026-11-04 发布保险业人机协作研究。补扫说明：属上期窗口，回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.capgemini.com/insights/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.30</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>Capgemini Q3 营收 €60.7 亿（+12.6%）并年内第二次上调 2026 指引：AI 需求成为核心驱动</h4>
+            <p>Capgemini 于 2026-10-30 发布 Q3 财报：营收 €6,073M，按现行汇率 +12.6%、固定汇率 +11.7%，订单额 +3.4%；年内第二次上调 2026 全年固定汇率增长指引至 9.0–9.5%（7 月曾上调至 8.5–9%），明确将上调归因于 AI 相关需求的强劲拉动与北美市场表现。继 7 月之后再次以财报口径验证「AI 工作正在转化为咨询收入」。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 82 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://investors.capgemini.com/en/publication/q3-2026-revenues" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.12</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Capgemini 发布汽车业 agentic AI 治理报告：68% 试用，仅 5% 治理成熟</h4>
+            <p>Capgemini 于 2026-10-12 发布汽车业研究报告：68% 的汽车组织正在产品开发中使用或试点 agentic AI，但仅 5% 报告拥有成熟的 AI 治理。这是 Capgemini 连续四轮沉寂后的首个 AI 净新增，直击 agentic AI 规模化的治理缺口。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">AI 治理与风险能力</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.capgemini.com/us-en/news/press-releases/68-of-automotive-organizations-use-or-pilot-agentic-ai-for-product-development-but-only-5-report-mature-ai-governance-2/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.07</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>Ambarella 选择 Capgemini 加速企业采用 Edge 与 Physical AI</h4>
+            <p>Capgemini 于 2026-09-07 发布企业新闻：边缘 AI 芯片公司 Ambarella 聘请 Capgemini 帮助加速企业客户对 Edge AI 与 Physical AI 的采用。这是 Capgemini 在 Physical AI 服务方向上获得的标志性客户合作，与其 Gartner Physical AI Services Market Shaper 定位相互印证。直链未抓取到，日期与标题来自 Capgemini 官方新闻列表页。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 medium · 核验 partially_verified</div>
+            <a href="https://www.capgemini.com/us-en/news/press-releases/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.30</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>Capgemini 上调 2026 增长指引：大型 AI 转型项目需求拉动订单，客户从实验走向 agentic AI 生产部署</h4>
+            <p>Capgemini 于 2026-07-30 发布 H1 2026 业绩并上调全年营收增速指引至 8.5%-9%（原 6.5%-8.5%），理由是大型 AI 转型项目需求提振订单；管理层称客户正从 AI 实验转向在核心业务流程部署 agentic AI，WNS 整合也扩大了 AI 运营项目管道。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 84 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.capgemini.com/news/press-releases/capgemini-upgrades-its-2026-outlook/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.29</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Capgemini 发布《The next leap in agentic AI chip design》</h4>
+            <p>Capgemini 于 2026-07-29 在 research library 发布 agentic AI 芯片设计主题洞察，延续其在半导体与 AI 基础设施议题上的研究输出。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 medium · 核验 observed</div>
+            <a href="https://www.capgemini.com/insights/research-library/the-next-leap-in-agentic-ai-chip-design/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.23</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Capgemini 发布 Agentic AI in Sales and Operations Planning</h4>
+            <p>Capgemini 于 2026-07-23 发布 S&amp;OP agentic AI 观点文章，讨论消费品牌如何借助 AI-powered adaptive planning 改善服务、降低成本并提升 forecast accuracy，同时预览其 S&amp;OP Intelligence Co-Pilot。它不只是泛 AI 叙事，而是较明确的行业场景与解决方案信号。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 79 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.capgemini.com/insights/research-library/agentic-ai-in-sales-and-operations-planning/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.05.11</time>
+          <div>
+            <span class="badge" style="--event-color:#ff8a00">投资/并购</span>
+            <h4>OpenAI DeployCo 获多家咨询与资本机构投资，Capgemini 被报道参与</h4>
+            <p>多家媒体报道 OpenAI 推出 Deployment Company，获得40亿美元以上初始资本，并收购 Tomoro 获取约150名 forward deployed engineers；报道提到 McKinsey、Bain &amp; Company、Capgemini 等参与投资。该事件待官方链接复核。</p>
+            
+            <div class="event-meta">事件分 91 · 来源 media · 置信度 low</div>
+            <a href="https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.02.23</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Capgemini 加入 OpenAI Frontier Alliance</h4>
+            <p>Capgemini 与 OpenAI 建立多年战略伙伴关系，围绕 Frontier 平台构建企业 AI 转型、行业解决方案和治理框架。</p>
+            
+            <div class="event-meta">事件分 82 · 来源 official · 置信度 high</div>
+            <a href="https://www.capgemini.com/us-en/news/press-releases/capgemini-joins-forces-with-openai-to-accelerate-new-era-of-ai-powered-enterprise-transformation-with-frontier-alliance/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <nav class="company-nav" aria-label="公司页导航">
+        <span><a href="kearney.html">← 上一家：Kearney</a></span>
+        <a href="./index.html">全部公司追踪页</a>
+        <span><a href="fti.html">下一家：FTI Consulting →</a></span>
+      </nav>
+
+      <p class="company-disclaimer">本页由 AI咨询行动榜 自动生成，数据截至 2026.11.15 快照。分数是研究预览口径（相对行动力指数，当期榜首 = 100），不代表权威排名。事件均附原始来源链接，点开可自行核验。</p>
+    </main>
+  </body>
+</html>

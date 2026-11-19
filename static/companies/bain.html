@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bain 贝恩 AI 动作追踪 · 相对行动力指数 82.5 · AI咨询行动榜</title>
+    <meta name="description" content="Bain（贝恩）当前相对行动力指数 82.5（强），在 17 家传统咨询 / 专业服务公司中排名第 6；累计 18 条公开 AI 信号，最近动作：Bain 发布 AI 数据中心繁荣统计洞察。AI 部署、PE 组合公司、企业级 AI 落地、OpenAI 合作" />
+    <meta property="og:title" content="Bain 贝恩 AI 动作追踪 · 相对行动力指数 82.5 · AI咨询行动榜" />
+    <meta property="og:description" content="Bain（贝恩）当前相对行动力指数 82.5（强），在 17 家传统咨询 / 专业服务公司中排名第 6；累计 18 条公开 AI 信号，最近动作：Bain 发布 AI 数据中心繁荣统计洞察。AI 部署、PE 组合公司、企业级 AI 落地、OpenAI 合作" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI咨询行动榜","item":"../index.html"},{"@type":"ListItem","position":2,"name":"公司追踪","item":"./index.html"},{"@type":"ListItem","position":3,"name":"Bain"}]},{"@type":"WebPage","name":"Bain（贝恩） AI 动作追踪","description":"Bain（贝恩）当前相对行动力指数 82.5（强），在 17 家传统咨询 / 专业服务公司中排名第 6；累计 18 条公开 AI 信号，最近动作：Bain 发布 AI 数据中心繁荣统计洞察。AI 部署、PE 组合公司、企业级 AI 落地、OpenAI 合作","isPartOf":{"@type":"WebSite","name":"AI咨询行动榜 / AI Consulting Signal Index"},"about":{"@type":"Organization","name":"Bain","alternateName":"贝恩","description":"AI 部署、PE 组合公司、企业级 AI 落地、OpenAI 合作"}}]}</script>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .company-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .company-hero { padding: 40px 0 8px; }
+      .company-hero h1 { font-size: clamp(44px, 6vw, 84px); margin-bottom: 10px; }
+      .company-hero__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+      .company-hero__focus { max-width: 860px; color: #3e352d; font-size: 18px; line-height: 1.65; margin: 0; }
+      .company-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 26px 0 30px; }
+      .company-stats__item { border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: var(--panel); }
+      .company-stats__item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; letter-spacing: 0.08em; margin-bottom: 6px; }
+      .company-stats__item strong { font-size: 30px; line-height: 1; }
+      .company-stats__item em { font-style: normal; color: var(--muted); font-size: 13px; margin-left: 6px; }
+      .company-section { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 24px; padding: 20px; background: var(--panel); box-shadow: var(--shadow); }
+      .company-section > h2 { margin: 0 0 4px; font-size: 26px; }
+      .company-section > p.company-section__note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.6; margin: 0 0 14px; }
+      .company-section .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 800; }
+      .dimension-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+      .dimension-chip { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 800; background: rgba(255, 255, 255, 0.4); }
+      .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 4px 9px; color: #fff; background: var(--event-color, var(--ink)); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; }
+      .company-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin: 30px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+      .company-nav a { color: var(--red); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; text-decoration: none; }
+      .company-disclaimer { margin-top: 18px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; line-height: 1.6; }
+      .company-index-list { display: grid; gap: 10px; }
+      .company-index-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, 0.4); text-decoration: none; color: inherit; }
+      .company-index-item:hover { background: rgba(255, 255, 255, 0.7); }
+      .company-index-item .rank { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .company-index-item strong { font-size: 18px; }
+      .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
+      .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
+      .company-index-item .score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="../index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="../index.html">行动力榜单</a>
+          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
+          <a class="site-nav__link" href="../history.html">历史排名</a>
+          <a class="site-nav__link" href="../dimensions.html">维度对比</a>
+          <a class="site-nav__link" href="../assessment.html">自评工具</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="company-page">
+      <header class="company-hero">
+        <p class="eyebrow">Company Tracker · 公司追踪页</p>
+        <h1>贝恩</h1>
+        <div class="company-hero__meta">
+          <span class="evidence-pill">Bain</span>
+          <span class="evidence-pill">MBB</span>
+          
+          
+        </div>
+        <p class="company-hero__focus">AI 部署、PE 组合公司、企业级 AI 落地、OpenAI 合作</p>
+      </header>
+
+      <section class="company-stats" aria-label="关键指标">
+        
+          <div class="company-stats__item">
+            <small>当前排名</small>
+            <strong>#6</strong><em>/17</em>
+          </div>
+          <div class="company-stats__item">
+            <small>相对行动力指数</small>
+            <strong>82.5</strong><em>· 强</em>
+          </div>
+          <div class="company-stats__item">
+            <small>累计公开 AI 信号</small>
+            <strong>18</strong><em>条</em>
+          </div>
+          <div class="company-stats__item">
+            <small>官方来源占比</small>
+            <strong>89%</strong><em>(16/18)</em>
+          </div>
+          <div class="company-stats__item">
+            <small>最近动作</small>
+            <strong>2026.11.15</strong><em>研究/指数</em>
+          </div>
+          <div class="company-stats__item">
+            <small>覆盖置信度</small>
+            <strong>high</strong><em></em>
+          </div>
+      </section>
+
+      
+      <section class="company-section" aria-label="人工观察">
+        <h2>人工观察</h2>
+        <p class="company-section__note">Bain 的差异化在 PE 与组合公司场景，AI 动作更偏“部署和价值实现”，而不只是工具发布。</p>
+      </section>
+
+      
+
+      
+      <section class="company-section" aria-label="公开 AI 研究">
+        <h2>公开 AI 研究（2 份）</h2>
+        <p class="company-section__note">该公司在 AI 议题上的持续研究与公开表达，体现 thought leadership 证据。</p>
+        <div class="report-list">
+          
+          <div class="report-item">
+            <div class="report-item__meta"><span>2026</span><span>Bain</span><span>official</span></div>
+            <strong>Artificial Intelligence Topics</strong>
+            <p>Bain 的 AI 专题页持续聚合企业级生成式 AI、价值落地与行业影响研究，体现其面向管理层的 AI 判断框架。</p>
+            <a href="https://www.bain.com/insights/topics/artificial-intelligence/" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+          <div class="report-item">
+            <div class="report-item__meta"><span>2026.05.11</span><span>Bain &amp; Company</span><span>official_press_release</span></div>
+            <strong>Bain and OpenAI: a new venture to deploy AI at enterprise scale</strong>
+            <p>Bain 与 OpenAI Deployment Company 的合作说明其 AI 叙事已从 advisory 转向 enterprise-scale deployment，本身也是极强的转型信号。</p>
+            <a href="https://www.bain.com/about/media-center/press-releases/2026/bain-company-openai-a-new-venture-to-deploy-ai-at-enterprise-scale/" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-section" aria-label="完整事件时间线">
+        <h2>完整事件时间线（18 条）</h2>
+        <p class="company-section__note">按时间倒序展示全部公开 AI 信号：日期、事件类型、摘要、影响维度、来源可信度、置信度与原文链接。评分口径见主榜 Method 说明。</p>
+        <div class="events">
+          
+        <article class="event">
+          <time>2026.11.15</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布 AI 数据中心繁荣统计洞察</h4>
+            <p>Bain 于 2026-11-15 发布 AI 数据中心繁荣的统计洞察。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 70 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.bain.com/insights/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.12</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布《The Future of Banking: Strategy for the AI Era》</h4>
+            <p>Bain 于 2026-11-12 发布 AI 时代的银行业战略研究。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.bain.com/insights/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.04</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布东南亚 CEO 的 AI 转型指南，并设立 AI Innovation Center</h4>
+            <p>Bain 于 2026-11-04 发布东南亚 CEO 的 AI 转型指南，并宣布设立 AI Innovation Center——研究与组织动作双信号，也是 Bain 深化东南亚市场的动作。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.bain.com/about/media-center/press-room/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布《What&#39;s Still Missing from Your AI Strategy? Proprietary Intelligence》：差异化来自专有智能</h4>
+            <p>Bain 于 11 月发布新报告，主张企业 AI 战略的差异化来自专有数据与专有智能（proprietary intelligence）的构建，而非通用模型调用；补上 Bain 近三周的 quiet 期。日期精度为月份。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 74 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.bain.com/insights/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.26</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布医药行业 AI 研究：AI 已进入诊室，制药业需要整合方案</h4>
+            <p>Bain 于 2026-10-26 发布医药行业 AI 研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 70 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.bain.com/insights/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.14</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain：AI 正把采购变成盈利引擎，重新设计运营模型的公司获得最高 5 倍回报</h4>
+            <p>Bain 于 2026-10-14 发布采购 AI 研究：AI-enabled 采购模型可带来最高 5 倍于初始投资的回报、10%–15% 的增量费用节约与超过 60% 的生产率提升；更大的机会在决策速度、供应商创新与风险调整后表现——这些贡献体现在 EBIT 而非采购预算里。文章主张品类经理从分析师演变为价值创造者（agent 做重阅读、人做判断），领先 CPO 正在围绕 AI 重塑采购流程、角色与决策权，而不是在旧模型上叠工具；风险在于供应商已在部署谈判 agent、定价智能与风险监控，仍在手工运作的采购团队在每一次商业交互中都处于劣势。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 80 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.bain.com/insights/ai-is-turning-procurement-into-an-earnings-engine/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.14</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 调研：当 AI 由员工自己推动时，员工的担忧更少</h4>
+            <p>Bain 于 2026-10-14 发布生成式 AI 消费者/员工调研：美国 73% 受访者在个人生活中使用生成式 AI（2025 年 9 月为 53%），德法英平均个人使用率同期从 47% 升至 69%；约 50% 的早期采用者每天使用一次以上。但存在悖论——即便在最成熟的早期采用者中，对生成式 AI 准确性的信任度也在下降。文章主张协作式与自驱式部署（由员工自己做，而不是被施加）能缓解不信任，是把采用转化为价值的关键。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.bain.com/insights/workers-are-less-worried-about-ai-if-its-done-by-them-not-to-them/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.14</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>Bain Executive Conversations：与 Markel CEO 谈特种保险的 AI 规模化</h4>
+            <p>Bain 于 2026-10-14 发布 Executive Conversations 访谈，金融服务业合伙人 Kyle Kinsell 对话 Markel Insurance CEO Simon Wilson。Wilson 把 AI 置于 Markel 竞争方式中心，主张以“创始人心态”把每条业务线从零重建而非边际优化，并讨论 AI 如何重塑承保经济学、为什么这一转变的赢家将在未来 12–18 个月内决定。该访谈是 Bain 在保险/金融服务 AI 场景的行业对话资产，也间接反映其客户侧 AI 叙事强度。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span><span class="dimension-chip">行业场景覆盖</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.bain.com/insights/scaling-ai-in-specialty-insurance-a-conversation-with-markels-simon-wilson/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.29</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布第 7 届全球技术报告：AI 需在 2031 年前创造约 6 万亿美元年收入才能支撑基建投入</h4>
+            <p>Bain 于 2026-09-29（波士顿）发布年度旗舰 Global Technology Report 2026：AI 必须在 2031 年前产生约 6 万亿美元年收入（其中 4.2 万亿为超出当前预期的新增收入）才能匹配基建投入，届时年度 AI 基础设施支出预计达约 1.5 万亿美元。报告同期发布数据中心、硬件、软件投资与数据变现四篇系列。这是继 4.7 万亿美元利润研究后 Bain 对 AI 经济账的又一次定调之作。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 86 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.bain.com/insights/new-innovation-is-required-to-fund-ais-6-trillion-buildout-technology-report-2026/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.15</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布炼油行业 Resilience Playbook：量化 AI 每桶 2-3 美元的利润增益</h4>
+            <p>Bain 于 2026-09-15（波士顿）发布面向下游炼油企业的韧性手册，量化 AI 带来的每桶 2-3 美元利润增益（按 15 万桶/日规模约合每年 1.1-1.65 亿美元），并给出四条落地策略；第三方分析称其为 AI 咨询从顾问服务转向运营托管的信号。官方新闻稿未能直接抓取，日期与要点经第三方分析（Futurum，09-16）核实。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 74 · 来源 media · 置信度 medium · 核验 partially_verified</div>
+            <a href="https://futurumgroup.com/insights/bains-refiner-ai-playbook-is-a-channel-wake-up-call/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.10</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布重磅研究：AI 将左右 4.7 万亿美元利润分配，重塑行业竞争格局</h4>
+            <p>Bain 于 2026-09-10 发布旗舰研究，测算 2025-2035 年 AI 将左右 4.7 万亿美元的企业利润归属，影响强度约为互联网革命的三倍、时间却缩短一半，近四分之三的行业将经历深度转型；同时指出回报不均，近 40% 的公司实际成本节约低于 10%。这是 Bain 本年度 AI 议题的定调之作，把 AI 从效率工具叙事升级为利润池迁移叙事。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 86 · 来源 official_press_release · 置信度 high · 核验 verified</div>
+            <a href="https://www.bain.com/about/media-center/press-releases/2026/ai-puts-$4.7-trillion-of-profits-at-stake-creating-a-competitive-battleground-across-industries" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.03</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布《FinOps for AI: From Managing Costs to Maximizing Value》</h4>
+            <p>Bain 于 2026-09-03（上一轮刷新当日，漏检回填）发布 FinOps for AI 简报，主张 AI 支出管理应从单纯控制成本转向价值最大化，把成本、用量与业务结果放在同一视图里实时跟踪和决策，回应企业 AI 投入回报核算的普遍痛点。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">AI 治理与风险能力</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.bain.com/insights/finops-for-ai-from-managing-costs-to-maximizing-value/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.08.25</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Bain 与 Anthropic 达成全球合作，以 Global Premier 级别加入 Claude Partner Network</h4>
+            <p>Bain 于 2026-08-25 宣布与 Anthropic 达成全球合作，以 Global Premier 级别加入 Claude Partner Network，把 Claude 模型与 Bain 的行业与转型方法论结合，加速客户企业级 AI 落地。该条发布于上一轮刷新窗口内（08-25），属上一轮漏检，本轮追溯回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 84 · 来源 official_press_release · 置信度 high · 核验 verified</div>
+            <a href="https://www.bain.com/about/media-center/press-releases/2026/bain-company-announces-partnership-with-anthropic-to-accelerate-clients-enterprise-ai-transformations/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.27</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 发布《What It Takes to Build the AI-Native Modern Bank》</h4>
+            <p>Bain 于 2026 年 7 月下旬发布 AI-native 现代银行分析，基于对 30+ 全球银行高管的访谈，论证 AI-native 银行将跑赢 AI-enabled 机构，并引用 Chime 等案例的量化结果（70% 客服交互 AI-first、75% 聊天机器人解决率）。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 medium · 核验 partially_verified</div>
+            <a href="https://www.bain.com/insights/what-it-takes-to-build-the-ai-native-modern-bank" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.03</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Bain 高管公开谈企业客户已从“讨论 AI”转向“用 AI 解具体业务问题”</h4>
+            <p>Business Insider 采访 Bain 首席营销官 Erika Serow，指出客户对 AI 的关注点已从概念性讨论转向解决具体业务问题。这是一条 thought leadership 信号，反映 Bain 对企业 AI 应用成熟阶段的判断。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 72 · 来源 media · 置信度 medium · 核验 single_source</div>
+            <a href="https://www.businessinsider.com/bain-cmo-erika-serow-cannes-lions-2026-7" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.14</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Bain 成为 OpenAI Partner Network 首发全球合作伙伴</h4>
+            <p>OpenAI 官方将 Bain 列为 OpenAI Partner Network 首发全球合作伙伴之一，并强调 Bain 将 OpenAI frontier AI 与战略、技术和 enterprise transformation 能力结合，帮助客户把 AI ambition 变成 enterprise-wide impact。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 87 · 来源 vendor_official · 置信度 high · 核验 verified</div>
+            <a href="https://openai.com/index/introducing-openai-partner-network/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.05.11</time>
+          <div>
+            <span class="badge" style="--event-color:#ff8a00">投资/并购</span>
+            <h4>Bain 投资 OpenAI Deployment Company</h4>
+            <p>Bain 投资 OpenAI 新成立的 Deployment Company，并扩展三年合作，优先服务 PE 客户及其组合公司。</p>
+            
+            <div class="event-meta">事件分 91 · 来源 official · 置信度 high</div>
+            <a href="https://www.bain.com/about/media-center/press-releases/2026/bain-company-openai-a-new-venture-to-deploy-ai-at-enterprise-scale/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026</time>
+          <div>
+            <span class="badge" style="--event-color:#8a5cf6">AI 服务线</span>
+            <h4>AI, Insights &amp; Solutions 服务线</h4>
+            <p>Bain 官方页面显示其 AI 服务覆盖数据科学、机器学习工程、AI 战略、产品管理和工程交付，并列出 2,500+ 已完成项目。</p>
+            
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high</div>
+            <a href="https://www.bain.com/vector-digital/ai-insights-and-solutions/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <nav class="company-nav" aria-label="公司页导航">
+        <span><a href="pwc.html">← 上一家：PwC</a></span>
+        <a href="./index.html">全部公司追踪页</a>
+        <span><a href="lek.html">下一家：L.E.K. Consulting →</a></span>
+      </nav>
+
+      <p class="company-disclaimer">本页由 AI咨询行动榜 自动生成，数据截至 2026.11.15 快照。分数是研究预览口径（相对行动力指数，当期榜首 = 100），不代表权威排名。事件均附原始来源链接，点开可自行核验。</p>
+    </main>
+  </body>
+</html>

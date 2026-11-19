@@ -40,11 +40,60 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    STATIC_CONTENT_TYPES = {
+        ".html": "text/html; charset=utf-8",
+        ".txt": "text/plain; charset=utf-8",
+        ".css": "text/css; charset=utf-8",
+        ".js": "text/javascript; charset=utf-8",
+        ".png": "image/png",
+        ".svg": "image/svg+xml",
+        ".json": "application/json; charset=utf-8",
+    }
+
+    def send_static_asset(self, relative: str):
+        """安全地提供 static/ 下由构建脚本生成的文件（公司追踪页、llms.txt、robots.txt）。"""
+        asset_path = (STATIC_DIR / relative).resolve()
+        try:
+            asset_path.relative_to(STATIC_DIR.resolve())
+        except ValueError:
+            self.send_error(404, "File not found")
+            return
+        if not asset_path.is_file():
+            self.send_error(404, "File not found")
+            return
+        content_type = self.STATIC_CONTENT_TYPES.get(asset_path.suffix)
+        if not content_type:
+            self.send_error(404, "File not found")
+            return
+        self.send_file(asset_path, content_type)
+
     def do_GET(self):
         parsed = urlparse(self.path)
 
         if parsed.path in ("/", "/index.html"):
             self.send_file(STATIC_DIR / "index.html", "text/html; charset=utf-8")
+            return
+
+        if parsed.path in ("/companies", "/companies/"):
+            self.send_static_asset("companies/index.html")
+            return
+
+        if parsed.path.startswith("/companies/"):
+            self.send_static_asset(parsed.path.removeprefix("/"))
+            return
+
+        if parsed.path in ("/robots.txt", "/llms.txt"):
+            self.send_static_asset(parsed.path.lstrip("/"))
+            return
+
+        # 与 Netlify（publish = "."）保持一致：/static/<path> 直接映射到 static/ 目录。
+        if parsed.path.startswith("/static/"):
+            self.send_static_asset(parsed.path.removeprefix("/static/"))
+            return
+
+        # 顶层静态页面（assessment / history / dimensions 等），与导航里的相对链接对应。
+        if parsed.path.endswith(".html") and "/" not in parsed.path.lstrip("/"):
+            self.send_static_asset(parsed.path.lstrip("/"))
             return
 
         if parsed.path in ("/styles.css", "/app.js", "/static/styles.css", "/static/app.js"):

@@ -1,2 +1,23 @@
 [build]
   publish = "."
+
+# 公司追踪页与 AI 爬虫入口：把站点根路径映射到 static/ 下的构建产物。
+[[redirects]]
+  from = "/robots.txt"
+  to = "/static/robots.txt"
+  status = 200
+
+[[redirects]]
+  from = "/llms.txt"
+  to = "/static/llms.txt"
+  status = 200
+
+[[redirects]]
+  from = "/companies"
+  to = "/static/companies/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/companies/*"
+  to = "/static/companies/:splat"
+  status = 200

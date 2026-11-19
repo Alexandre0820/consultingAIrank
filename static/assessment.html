@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 行动力自评工具 · 九维模型打分 · AI咨询行动榜</title>
+    <meta name="description" content="用 AI咨询行动榜 与 17 家咨询公司同款的九维模型,给你的公司(或你在评估的咨询公司)做 AI 行动力自评:0–5 打分、加权总分、17 家样本参考线,以及最弱维度的补证据清单。" />
+    <meta property="og:title" content="AI 行动力自评工具 · AI咨询行动榜" />
+    <meta property="og:description" content="九维模型 0–5 打分,加权 0–100 总分,17 家咨询公司样本参考线,附最弱维度补证据清单。" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .tool-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .tool-hero { padding: 40px 0 10px; }
+      .tool-hero h1 { font-size: clamp(40px, 5.5vw, 72px); margin-bottom: 10px; }
+      .tool-hero__intro { max-width: 860px; color: #3e352d; font-size: 17px; line-height: 1.7; margin: 0; }
+      .tool-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(300px, 1fr); gap: 18px; align-items: start; margin-top: 24px; }
+      @media (max-width: 980px) { .tool-grid { grid-template-columns: 1fr; } }
+      .tool-panel { border: 1px solid var(--line); border-radius: 24px; padding: 20px; background: var(--panel); box-shadow: var(--shadow); }
+      .tool-panel + .tool-panel { margin-top: 18px; }
+      .tool-panel > h2 { margin: 0 0 4px; font-size: 24px; }
+      .tool-panel > .panel-note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.6; margin: 0 0 16px; }
+      .firm-name { width: 100%; border: 1px solid var(--line); border-radius: 14px; padding: 11px 14px; background: rgba(255, 255, 255, 0.5); color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; font-weight: 600; }
+      .dim-row { display: grid; gap: 10px; border-top: 1px solid var(--line); padding: 16px 0; }
+      .dim-row:first-of-type { border-top: 0; }
+      .dim-row__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+      .dim-row__head strong { font-size: 19px; }
+      .dim-row__weight { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 800; }
+      .dim-row__desc { margin: 0; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.55; }
+      .scale { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+      .scale__label { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 800; }
+      .pill { border: 1px solid var(--line); border-radius: 999px; min-width: 40px; padding: 7px 10px; background: rgba(255, 255, 255, 0.42); color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 800; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
+      .pill:hover { background: rgba(255, 255, 255, 0.8); }
+      .pill.is-active { background: var(--ink); color: var(--paper-2); border-color: var(--ink); }
+      .anchors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 2px; }
+      @media (max-width: 700px) { .anchors { grid-template-columns: 1fr; } }
+      .anchors p { margin: 0; border-left: 2px solid var(--line); padding-left: 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11.5px; line-height: 1.5; }
+      .anchors b { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .result-card { position: sticky; top: 18px; }
+      .result-total { display: flex; align-items: baseline; gap: 12px; margin: 6px 0 4px; }
+      .result-total strong { font-size: 64px; line-height: 1; }
+      .result-total em { font-style: normal; color: var(--muted); font-size: 16px; }
+      .result-band { display: inline-flex; border-radius: 999px; padding: 6px 14px; background: var(--ink); color: var(--paper-2); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 14px; font-weight: 900; margin-bottom: 14px; }
+      .score-bar { position: relative; height: 16px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 255, 255, 0.42); margin-top: 4px; }
+      .score-bar__fill { position: absolute; inset: 2px auto 2px 2px; border-radius: 999px; background: linear-gradient(90deg, rgba(180, 35, 24, 0.55), var(--red)); transition: width 0.25s ease; }
+      .score-bar__median { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); opacity: 0.65; }
+      .score-line { display: grid; gap: 3px; margin-bottom: 10px; }
+      .score-line__head { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 800; }
+      .callout { border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; background: rgba(255, 255, 255, 0.4); margin: 0 0 10px; }
+      .callout h3 { margin: 0 0 6px; font-size: 16px; }
+      .callout ul { margin: 0; padding-left: 18px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.65; }
+      .tool-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .tool-button { border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; background: var(--ink); color: var(--paper-2); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; cursor: pointer; }
+      .tool-button--ghost { background: rgba(255, 255, 255, 0.42); color: var(--ink); }
+      .tool-button:hover { opacity: 0.88; }
+      .copy-note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; align-self: center; }
+      .method-foot { margin-top: 26px; border: 1px solid var(--line); border-radius: 24px; padding: 18px 20px; background: var(--panel); }
+      .method-foot h2 { margin: 0 0 6px; font-size: 20px; }
+      .method-foot p { margin: 0 0 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.65; }
+      .median-note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11.5px; line-height: 1.6; margin-top: 10px; }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="./index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="./index.html" data-nav="board">行动力榜单</a>
+          <a class="site-nav__link" href="./history.html" data-nav="history">历史排名</a>
+          <a class="site-nav__link" href="./dimensions.html" data-nav="dims">维度对比</a>
+          <a class="site-nav__link is-active" href="./assessment.html" data-nav="tool">自评工具</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="tool-page">
+      <header class="tool-hero">
+        <p class="eyebrow">Self-Assessment · 九维自评</p>
+        <h1>AI 行动力自评</h1>
+        <p class="tool-hero__intro">
+          用榜单同款的九维模型,给你的公司——或你在评估的咨询公司——打一个 AI 行动力分。
+          每个维度 0–5 分,按模型权重合成 0–100 总分;并排一条 17 家跟踪公司的参考中位线,
+          让你看见差距具体在哪,而不是只看见"我们还不够 AI"。
+        </p>
+      </header>
+
+      <div class="tool-grid">
+        <div>
+          <section class="tool-panel" aria-label="自评表">
+            <h2>第一步:逐维打分</h2>
+            <p class="panel-note">凭你掌握的公开证据与内部认知打分。拿不准时,选你能拿出证据的那个分数——这套模型对"说得好"和"做得到"是分开计分的。</p>
+            <div class="dim-row" style="border-top:0; padding-top:0;">
+              <input id="firmName" class="firm-name" type="text" placeholder="公司名(可选,用于生成结果摘要)" aria-label="公司名" />
+            </div>
+            <div id="dimList"></div>
+            <div class="tool-actions">
+              <button id="demoFill" class="tool-button tool-button--ghost" type="button">填入示例</button>
+              <button id="resetAll" class="tool-button tool-button--ghost" type="button">清空重填</button>
+            </div>
+          </section>
+
+          <section class="tool-panel" aria-label="补证据清单">
+            <h2>第三步:补最弱两维的证据</h2>
+            <p class="panel-note">总分提升最快的方式,从来不是把强的维度再刷高,而是给最弱的维度补上可查证的证据。</p>
+            <div id="evidencePanel"><p class="panel-note">先在上方完成打分,这里会给出最弱两个维度的补证据清单。</p></div>
+          </section>
+        </div>
+
+        <aside class="tool-panel result-card" id="resultCard" aria-label="评分结果">
+          <h2>第二步:看结果</h2>
+          <div id="resultBody">
+            <div class="result-total"><strong id="totalScore">–</strong><em>/ 100</em></div>
+            <span class="result-band" id="bandLabel">尚未开始</span>
+            <div id="bars"></div>
+            <p class="median-note">条内黑色竖线 = 17 家跟踪公司的人工九维分中位线(2026-08 口径,已停更,仅作粗对照)。</p>
+          </div>
+          <div class="tool-actions">
+            <button id="copySummary" class="tool-button" type="button">复制结果摘要</button>
+            <span class="copy-note" id="copyNote"></span>
+          </div>
+        </aside>
+      </div>
+
+      <section class="method-foot" aria-label="口径说明">
+        <h2>口径说明</h2>
+        <p>九个维度与权重与主榜评分模型完全一致(权重合计 1.0)。自评总分 = 各维度 0–5 分按权重加权后折算到 100 分制。</p>
+        <p>分数带:≥80 领先 / 65–79 强 / 50–64 活跃 / &lt;50 观察。这是绝对能力口径,与主榜的"相对行动力指数"(衡量近期公开动作)不同:一家公司可以行动力很高但底座还薄,反之亦然。</p>
+        <p>参考中位线来自榜单 17 家跟踪公司在人工九维分(2026-08-02 口径)上的中位数;该口径已停更,仅供定位差距,不代表当前公开动作水平。当前动作水平请看<a href="./index.html">主榜</a>。</p>
+        <p>本工具是研究预览,结果由你自评产生,不构成对任何公司的评价或采购建议。</p>
+      </section>
+    </main>
+
+    <script>
+      const DIMS = [
+        { id: "strategy_signal", name: "战略信号", weight: 0.1273,
+          desc: "AI 是否进入公司级战略、CEO 叙事、服务组合核心,而不只是零散报告或营销活动。",
+          anchors: ["AI 只是零散项目口号", "CEO 有 AI 叙事、组合里有 AI 专题", "AI 进入公司级战略与服务组合核心"],
+          evidence: ["找 1–2 条 CEO/全球高管对 AI 的可引用官方表态", "把 AI 写进服务组合与年度战略材料,而不是创新项目清单", "为 2–3 条业务线明确 AI 转型目标与问责人"] },
+        { id: "tech_partnership", name: "科技合作深度", weight: 0.1182,
+          desc: "是否与 OpenAI、Microsoft、Google、Anthropic、ServiceNow 等关键平台形成深度合作。",
+          anchors: ["无公开合作", "与主流平台有公开合作/联盟", "深度绑定:联合方案、共建实验室、专项基金"],
+          evidence: ["盘点现有模型/平台伙伴,公开 1 个联合方案", "与一家关键平台建立有交付角色的深度合作", "避免只挂在'伙伴计划'名单里——要有联合客户与交付证据"] },
+        { id: "proprietary_assets", name: "自有平台与技术资产", weight: 0.1273,
+          desc: "是否拥有自有平台、内部工具、知识库、Agent 框架、行业模型或可复用技术资产。",
+          anchors: ["无自有资产", "有内部工具但对外可见度低", "有命名平台/Agent 框架/行业模型,可公开验证"],
+          evidence: ["给内部 AI 工具/知识库一个正式名字与产品页", "沉淀 1 个可复用的行业模型或 Agent 框架", "把资产从项目产物升级为可对外演示的产品"] },
+        { id: "delivery_production", name: "AI 交付与生产化能力", weight: 0.1364,
+          desc: "能否把 AI 从 PoC 推向生产环境,包括交付团队、工程能力、行业工作流和规模化部署。",
+          anchors: ["停留在 PoC", "有规模化交付案例", "有工程团队/交付中心,生产部署可查证"],
+          evidence: ["统计正在生产环境运行的 AI 项目数,并公开统计口径", "组建或披露专职 AI 交付团队 / forward deployed engineering", "把 1 个 PoC 推到客户生产环境并留存可引用证据"] },
+        { id: "capital_ma", name: "并购与资本动作", weight: 0.0726,
+          desc: "是否通过投资、并购、战略合资或资本合作补齐 AI 能力。",
+          anchors: ["无动作", "有投资或小额收购", "收购 AI 公司/业务并完成能力整合"],
+          evidence: ["扫描能力缺口,列出 3 个收购/投资候选", "做 1 笔有整合计划的收购并公告能力归属", "把并购来的能力写进服务线,而不是只发公关稿"] },
+        { id: "industry_coverage", name: "行业场景覆盖", weight: 0.0909,
+          desc: "AI 动作是否覆盖金融、制造、医疗、零售、能源、法律、PE 等多个行业场景。",
+          anchors: ["单一行业试点", "3–5 个行业有 AI 场景", "多行业均有可查证场景与案例"],
+          evidence: ["把已有客户场景按行业整理成 AI 场景地图", "在 2 个新行业复用现有 AI 方案", "为每个目标行业准备 1 个可引用案例"] },
+        { id: "client_value_proof", name: "客户价值证明", weight: 0.1091,
+          desc: "是否有客户案例、效率提升、成本节约、收入增长、ROI 或可量化结果。",
+          anchors: ["无公开客户结果", "有案例但缺量化", "有可量化的 ROI/效率/收入结果"],
+          evidence: ["为客户结果建立量化口径(ROI / 工时 / 收入)", "把 1 个成功项目写成带客户署名的案例", "请客户做可公开的背书或联合演讲"] },
+        { id: "governance_risk", name: "AI 治理与风险能力", weight: 0.1273,
+          desc: "是否强调可信 AI、治理、合规、监控、安全、模型风险管理、负责任 AI。",
+          anchors: ["无治理动作", "有可信 AI 框架或治理研究", "治理产品化/认证级方案并服务客户"],
+          evidence: ["发布可信 AI / 治理框架,并说明落地机制", "把治理能力产品化:评审工具、监控方案、模型风险管理", "在 1 个强监管行业交付治理级项目"] },
+        { id: "thought_leadership", name: "AI 思考力 / 公开研究信号", weight: 0.0909,
+          desc: "是否持续发布有方法论密度的 AI 报告、调研、指数和管理洞察,体现对企业 AI 的判断与引导能力。",
+          anchors: ["偶尔营销文章", "有年度 AI 报告", "持续性旗舰研究/指数/调研,有方法论密度"],
+          evidence: ["建立旗舰研究的固定发布节奏(年度 / 半年度)", "用调研和指数替代观点文——有数据才有引用", "把研究绑定方法论,能回答'所以该怎么做'"] },
+      ];
+
+      const BANDS = [
+        { min: 80, label: "领先" },
+        { min: 65, label: "强" },
+        { min: 50, label: "活跃" },
+        { min: 0, label: "观察" },
+      ];
+      const STORE_KEY = "aicb-self-assessment-v1";
+
+      let medians = null;
+      let firmCount = null;
+
+      function bandOf(score) {
+        return BANDS.find((band) => score >= band.min).label;
+      }
+
+      function escapeHtml(text = "") {
+        return String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+      }
+
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORE_KEY);
+          if (raw) return JSON.parse(raw);
+        } catch (error) { /* 忽略本地存储不可用 */ }
+        return { name: "", scores: {} };
+      }
+
+      let state = loadState();
+
+      function saveState() {
+        try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (error) { /* 忽略 */ }
+      }
+
+      function renderDims() {
+        const list = document.getElementById("dimList");
+        list.innerHTML = DIMS.map((dim) => `
+          <div class="dim-row">
+            <div class="dim-row__head">
+              <strong>${escapeHtml(dim.name)}</strong>
+              <span class="dim-row__weight">权重 ${(dim.weight * 100).toFixed(1)}%</span>
+            </div>
+            <p class="dim-row__desc">${escapeHtml(dim.desc)}</p>
+            <div class="scale">
+              ${[0, 1, 2, 3, 4, 5].map((value) => `
+                <button class="pill" type="button" data-dim="${dim.id}" data-value="${value}"
+                  aria-pressed="${state.scores[dim.id] === value ? "true" : "false"}">${value}</button>`).join("")}
+            </div>
+            <div class="anchors">
+              <p><b>1</b> ${escapeHtml(dim.anchors[0])}</p>
+              <p><b>3</b> ${escapeHtml(dim.anchors[1])}</p>
+              <p><b>5</b> ${escapeHtml(dim.anchors[2])}</p>
+            </div>
+          </div>`).join("");
+        list.querySelectorAll(".pill").forEach((pill) => {
+          pill.addEventListener("click", () => {
+            const dimId = pill.dataset.dim;
+            state.scores[dimId] = Number(pill.dataset.value);
+            saveState();
+            refresh();
+          });
+        });
+      }
+
+      function totalScore() {
+        const total = DIMS.reduce((sum, dim) => sum + (state.scores[dim.id] ?? 0) * dim.weight, 0) * 20;
+        return Math.round(total * 10) / 10;
+      }
+
+      function answeredCount() {
+        return DIMS.filter((dim) => state.scores[dim.id] != null).length;
+      }
+
+      function renderResult() {
+        const count = answeredCount();
+        const total = totalScore();
+        document.getElementById("totalScore").textContent = count === 0 ? "–" : count === 9 ? total.toFixed(1) : `${total.toFixed(1)}*`;
+        document.getElementById("bandLabel").textContent = count === 0 ? "尚未开始" : count === 9 ? bandOf(total) : `已评 ${count}/9 维 · ${bandOf(total)}`;
+
+        const bars = document.getElementById("bars");
+        bars.innerHTML = DIMS.map((dim) => {
+          const value = state.scores[dim.id] ?? 0;
+          const hasValue = state.scores[dim.id] != null;
+          const median = medians ? medians[dim.id] : null;
+          const medianLeft = median != null ? (median / 5) * 100 : null;
+          return `
+            <div class="score-line">
+              <div class="score-line__head">
+                <span>${escapeHtml(dim.name)}${hasValue ? "" : " · 未评"}</span>
+                <span>${hasValue ? `${value}/5` : "–"}</span>
+              </div>
+              <div class="score-bar">
+                <div class="score-bar__fill" style="width:${(value / 5) * 100}%"></div>
+                ${medianLeft != null ? `<div class="score-bar__median" style="left:calc(${medianLeft}% - 1px)" title="17 家样本中位 ${median}/5"></div>` : ""}
+              </div>
+            </div>`;
+        }).join("");
+
+        renderEvidence();
+      }
+
+      function weakestDims(count = 2) {
+        return DIMS
+          .filter((dim) => state.scores[dim.id] != null)
+          .sort((a, b) => (state.scores[a.id] - state.scores[b.id]) || (b.weight - a.weight))
+          .slice(0, count);
+      }
+
+      function renderEvidence() {
+        const panel = document.getElementById("evidencePanel");
+        if (answeredCount() === 0) {
+          panel.innerHTML = "<p class='panel-note'>先在上方完成打分,这里会给出最弱两个维度的补证据清单。</p>";
+          return;
+        }
+        const weak = weakestDims();
+        panel.innerHTML = weak.map((dim) => `
+          <div class="callout">
+            <h3>${escapeHtml(dim.name)} · 当前 ${state.scores[dim.id]}/5</h3>
+            <ul>${dim.evidence.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          </div>`).join("");
+      }
+
+      function refresh() {
+        renderResult();
+        document.querySelectorAll(".pill").forEach((pill) => {
+          const value = state.scores[pill.dataset.dim];
+          pill.classList.toggle("is-active", value === Number(pill.dataset.value));
+          pill.setAttribute("aria-pressed", value === Number(pill.dataset.value) ? "true" : "false");
+        });
+      }
+
+      async function copySummary() {
+        const count = answeredCount();
+        if (count === 0) {
+          document.getElementById("copyNote").textContent = "先打分,再复制。";
+          return;
+        }
+        const name = document.getElementById("firmName").value.trim() || "我的公司";
+        const total = totalScore();
+        const sorted = [...DIMS].filter((dim) => state.scores[dim.id] != null).sort((a, b) => state.scores[b.id] - state.scores[a.id]);
+        const strong = sorted[0];
+        const weak = sorted[sorted.length - 1];
+        const partial = count === 9 ? "" : `(已评 ${count}/9 维)`;
+        const text = `我用「AI咨询行动榜」的九维模型给「${name}」做了 AI 行动力自评:总分 ${total.toFixed(1)}/100(${bandOf(total)})${partial}。最强:${strong.name} ${state.scores[strong.id]}/5;最弱:${weak.name} ${state.scores[weak.id]}/5。模型与 17 家咨询公司追踪数据见 AI咨询行动榜。`;
+        try {
+          await navigator.clipboard.writeText(text);
+          document.getElementById("copyNote").textContent = "已复制到剪贴板。";
+        } catch (error) {
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          textarea.remove();
+          document.getElementById("copyNote").textContent = "已复制到剪贴板。";
+        }
+      }
+
+      function fillDemo() {
+        state.name = "";
+        document.getElementById("firmName").value = "";
+        const demo = { strategy_signal: 3, tech_partnership: 2, proprietary_assets: 2, delivery_production: 2, capital_ma: 1, industry_coverage: 3, client_value_proof: 1, governance_risk: 2, thought_leadership: 3 };
+        state.scores = demo;
+        saveState();
+        refresh();
+      }
+
+      function resetAll() {
+        state = { name: "", scores: {} };
+        document.getElementById("firmName").value = "";
+        try { localStorage.removeItem(STORE_KEY); } catch (error) { /* 忽略 */ }
+        refresh();
+      }
+
+      async function loadMedians() {
+        try {
+          const response = await fetch("../data/ai-consulting-leaderboard.json");
+          const data = await response.json();
+          firmCount = data.companies.length;
+          medians = {};
+          for (const dim of DIMS) {
+            const values = data.companies.map((company) => company.scores?.[dim.id]).filter((value) => value != null).sort((a, b) => a - b);
+            medians[dim.id] = values.length ? values[Math.floor(values.length / 2)] : null;
+          }
+        } catch (error) {
+          medians = null;
+        }
+      }
+
+      document.getElementById("firmName").addEventListener("input", (event) => {
+        state.name = event.target.value;
+        saveState();
+      });
+      document.getElementById("copySummary").addEventListener("click", copySummary);
+      document.getElementById("demoFill").addEventListener("click", fillDemo);
+      document.getElementById("resetAll").addEventListener("click", resetAll);
+
+      (async () => {
+        document.getElementById("firmName").value = state.name || "";
+        renderDims();
+        await loadMedians();
+        refresh();
+      })();
+    </script>
+  </body>
+</html>

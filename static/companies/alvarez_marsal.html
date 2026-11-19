@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alvarez &amp; Marsal A&amp;M AI 动作追踪 · 相对行动力指数 35.7 · AI咨询行动榜</title>
+    <meta name="description" content="Alvarez &amp; Marsal（A&amp;M）当前相对行动力指数 35.7（观察），在 17 家传统咨询 / 专业服务公司中排名第 15；累计 4 条公开 AI 信号，最近动作：A&amp;M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律。applied AI、Global AI Board、operator-led delivery" />
+    <meta property="og:title" content="Alvarez &amp; Marsal A&amp;M AI 动作追踪 · 相对行动力指数 35.7 · AI咨询行动榜" />
+    <meta property="og:description" content="Alvarez &amp; Marsal（A&amp;M）当前相对行动力指数 35.7（观察），在 17 家传统咨询 / 专业服务公司中排名第 15；累计 4 条公开 AI 信号，最近动作：A&amp;M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律。applied AI、Global AI Board、operator-led delivery" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI咨询行动榜","item":"../index.html"},{"@type":"ListItem","position":2,"name":"公司追踪","item":"./index.html"},{"@type":"ListItem","position":3,"name":"Alvarez & Marsal"}]},{"@type":"WebPage","name":"Alvarez & Marsal（A&M） AI 动作追踪","description":"Alvarez & Marsal（A&M）当前相对行动力指数 35.7（观察），在 17 家传统咨询 / 专业服务公司中排名第 15；累计 4 条公开 AI 信号，最近动作：A&M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律。applied AI、Global AI Board、operator-led delivery","isPartOf":{"@type":"WebSite","name":"AI咨询行动榜 / AI Consulting Signal Index"},"about":{"@type":"Organization","name":"Alvarez & Marsal","alternateName":"A&M","description":"applied AI、Global AI Board、operator-led delivery"}}]}</script>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .company-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .company-hero { padding: 40px 0 8px; }
+      .company-hero h1 { font-size: clamp(44px, 6vw, 84px); margin-bottom: 10px; }
+      .company-hero__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+      .company-hero__focus { max-width: 860px; color: #3e352d; font-size: 18px; line-height: 1.65; margin: 0; }
+      .company-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 26px 0 30px; }
+      .company-stats__item { border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: var(--panel); }
+      .company-stats__item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; letter-spacing: 0.08em; margin-bottom: 6px; }
+      .company-stats__item strong { font-size: 30px; line-height: 1; }
+      .company-stats__item em { font-style: normal; color: var(--muted); font-size: 13px; margin-left: 6px; }
+      .company-section { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 24px; padding: 20px; background: var(--panel); box-shadow: var(--shadow); }
+      .company-section > h2 { margin: 0 0 4px; font-size: 26px; }
+      .company-section > p.company-section__note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.6; margin: 0 0 14px; }
+      .company-section .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 800; }
+      .dimension-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+      .dimension-chip { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 800; background: rgba(255, 255, 255, 0.4); }
+      .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 4px 9px; color: #fff; background: var(--event-color, var(--ink)); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; }
+      .company-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin: 30px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+      .company-nav a { color: var(--red); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; text-decoration: none; }
+      .company-disclaimer { margin-top: 18px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; line-height: 1.6; }
+      .company-index-list { display: grid; gap: 10px; }
+      .company-index-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, 0.4); text-decoration: none; color: inherit; }
+      .company-index-item:hover { background: rgba(255, 255, 255, 0.7); }
+      .company-index-item .rank { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .company-index-item strong { font-size: 18px; }
+      .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
+      .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
+      .company-index-item .score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="../index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="../index.html">行动力榜单</a>
+          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
+          <a class="site-nav__link" href="../history.html">历史排名</a>
+          <a class="site-nav__link" href="../dimensions.html">维度对比</a>
+          <a class="site-nav__link" href="../assessment.html">自评工具</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="company-page">
+      <header class="company-hero">
+        <p class="eyebrow">Company Tracker · 公司追踪页</p>
+        <h1>A&amp;M</h1>
+        <div class="company-hero__meta">
+          <span class="evidence-pill">Alvarez &amp; Marsal</span>
+          <span class="evidence-pill">Performance Improvement / Turnaround</span>
+          
+          
+        </div>
+        <p class="company-hero__focus">applied AI、Global AI Board、operator-led delivery</p>
+      </header>
+
+      <section class="company-stats" aria-label="关键指标">
+        
+          <div class="company-stats__item">
+            <small>当前排名</small>
+            <strong>#15</strong><em>/17</em>
+          </div>
+          <div class="company-stats__item">
+            <small>相对行动力指数</small>
+            <strong>35.7</strong><em>· 观察</em>
+          </div>
+          <div class="company-stats__item">
+            <small>累计公开 AI 信号</small>
+            <strong>4</strong><em>条</em>
+          </div>
+          <div class="company-stats__item">
+            <small>官方来源占比</small>
+            <strong>100%</strong><em>(4/4)</em>
+          </div>
+          <div class="company-stats__item">
+            <small>最近动作</small>
+            <strong>2026.11.10</strong><em>研究/指数</em>
+          </div>
+          <div class="company-stats__item">
+            <small>覆盖置信度</small>
+            <strong>high</strong><em></em>
+          </div>
+      </section>
+
+      
+      <section class="company-section" aria-label="人工观察">
+        <h2>人工观察</h2>
+        <p class="company-section__note">A&amp;M 2026 年明确设立 Global AI Board，强调把 AI 嵌入执行和客户交付，是运营型咨询公司的 AI 转型样本。</p>
+      </section>
+
+      
+
+      
+      <section class="company-section" aria-label="公开 AI 研究">
+        <h2>公开 AI 研究（1 份）</h2>
+        <p class="company-section__note">该公司在 AI 议题上的持续研究与公开表达，体现 thought leadership 证据。</p>
+        <div class="report-list">
+          
+          <div class="report-item">
+            <div class="report-item__meta"><span>2026.05.19</span><span>Alvarez &amp; Marsal</span><span>official</span></div>
+            <strong>Private Equity Firms Turn to Operational Value Creation as Geopolitical Shocks Derail Deal Recovery</strong>
+            <p>A&amp;M 已开始把 AI 纳入 PE 价值创造研究，但整体研究体系还在形成中。</p>
+            <a href="https://www.alvarezandmarsal.com/press-release/private-equity-firms-turn-to-operational-value-creation-as-geopolitical-shocks-derail-deal-recovery" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-section" aria-label="完整事件时间线">
+        <h2>完整事件时间线（4 条）</h2>
+        <p class="company-section__note">按时间倒序展示全部公开 AI 信号：日期、事件类型、摘要、影响维度、来源可信度、置信度与原文链接。评分口径见主榜 Method 说明。</p>
+        <div class="events">
+          
+        <article class="event">
+          <time>2026.11.10</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>A&amp;M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律</h4>
+            <p>Alvarez &amp; Marsal 于 2026-11-10 发布 AI 投资组合决策纪律研究——A&amp;M 首个入库的思想领导力事件（此前长期 quiet）。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span></div>
+            <div class="event-meta">事件分 70 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.alvarezandmarsal.com/insights" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.05.19</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>A&amp;M：PE 价值创造中 AI 采用率提升</h4>
+            <p>A&amp;M 私募股权价值创造调研显示，63%受访PE机构在价值创造活动中使用AI，高于2025年的41%；39%已在多个组合公司职能中部署AI并交付可衡量价值。</p>
+            
+            <div class="event-meta">事件分 78 · 来源 official · 置信度 high</div>
+            <a href="https://www.alvarezandmarsal.com/press-release/private-equity-firms-turn-to-operational-value-creation-as-geopolitical-shocks-derail-deal-recovery" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.05.05</time>
+          <div>
+            <span class="badge" style="--event-color:#e11d48">组织/岗位</span>
+            <h4>A&amp;M 成立 Global AI Board 并扩展 AI leadership</h4>
+            <p>A&amp;M 宣布新 AI leadership 和 Global AI Board，负责协调AI嵌入客户交付、内部运营、治理、风险管理和负责任扩展；管理层预计三年内AI将占其服务的50%。</p>
+            
+            <div class="event-meta">事件分 81 · 来源 official · 置信度 high</div>
+            <a href="https://www.alvarezandmarsal.com/press-release/alvarez-marsal-announces-expansion-of-ai-capabilities" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.05.05</time>
+          <div>
+            <span class="badge" style="--event-color:#e11d48">组织/岗位</span>
+            <h4>A&amp;M 扩展 AI 能力并成立 Global AI Board</h4>
+            <p>A&amp;M 宣布新 AI leadership 和 Global AI Board，强调把 AI 嵌入客户交付、治理、风险管理和可衡量结果。</p>
+            
+            <div class="event-meta">事件分 78 · 来源 official · 置信度 high</div>
+            <a href="https://www.alvarezandmarsal.com/press-release/alvarez-marsal-announces-expansion-of-ai-capabilities" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <nav class="company-nav" aria-label="公司页导航">
+        <span><a href="roland_berger.html">← 上一家：Roland Berger</a></span>
+        <a href="./index.html">全部公司追踪页</a>
+        <span><a href="strategy_and.html">下一家：Strategy&amp; →</a></span>
+      </nav>
+
+      <p class="company-disclaimer">本页由 AI咨询行动榜 自动生成，数据截至 2026.11.15 快照。分数是研究预览口径（相对行动力指数，当期榜首 = 100），不代表权威排名。事件均附原始来源链接，点开可自行核验。</p>
+    </main>
+  </body>
+</html>

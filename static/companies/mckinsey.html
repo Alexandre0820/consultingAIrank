@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>McKinsey 麦肯锡 AI 动作追踪 · 相对行动力指数 93.8 · AI咨询行动榜</title>
+    <meta name="description" content="McKinsey（麦肯锡）当前相对行动力指数 93.8（领先），在 17 家传统咨询 / 专业服务公司中排名第 2；累计 26 条公开 AI 信号，最近动作：McKinsey 发布《What to expect in US healthcare in 2027 and beyond》。企业级 AI 转型、agentic AI、workflow redesign、QuantumBlack" />
+    <meta property="og:title" content="McKinsey 麦肯锡 AI 动作追踪 · 相对行动力指数 93.8 · AI咨询行动榜" />
+    <meta property="og:description" content="McKinsey（麦肯锡）当前相对行动力指数 93.8（领先），在 17 家传统咨询 / 专业服务公司中排名第 2；累计 26 条公开 AI 信号，最近动作：McKinsey 发布《What to expect in US healthcare in 2027 and beyond》。企业级 AI 转型、agentic AI、workflow redesign、QuantumBlack" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI咨询行动榜","item":"../index.html"},{"@type":"ListItem","position":2,"name":"公司追踪","item":"./index.html"},{"@type":"ListItem","position":3,"name":"McKinsey"}]},{"@type":"WebPage","name":"McKinsey（麦肯锡） AI 动作追踪","description":"McKinsey（麦肯锡）当前相对行动力指数 93.8（领先），在 17 家传统咨询 / 专业服务公司中排名第 2；累计 26 条公开 AI 信号，最近动作：McKinsey 发布《What to expect in US healthcare in 2027 and beyond》。企业级 AI 转型、agentic AI、workflow redesign、QuantumBlack","isPartOf":{"@type":"WebSite","name":"AI咨询行动榜 / AI Consulting Signal Index"},"about":{"@type":"Organization","name":"McKinsey","alternateName":"麦肯锡","description":"企业级 AI 转型、agentic AI、workflow redesign、QuantumBlack"}}]}</script>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .company-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .company-hero { padding: 40px 0 8px; }
+      .company-hero h1 { font-size: clamp(44px, 6vw, 84px); margin-bottom: 10px; }
+      .company-hero__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+      .company-hero__focus { max-width: 860px; color: #3e352d; font-size: 18px; line-height: 1.65; margin: 0; }
+      .company-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 26px 0 30px; }
+      .company-stats__item { border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: var(--panel); }
+      .company-stats__item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; letter-spacing: 0.08em; margin-bottom: 6px; }
+      .company-stats__item strong { font-size: 30px; line-height: 1; }
+      .company-stats__item em { font-style: normal; color: var(--muted); font-size: 13px; margin-left: 6px; }
+      .company-section { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 24px; padding: 20px; background: var(--panel); box-shadow: var(--shadow); }
+      .company-section > h2 { margin: 0 0 4px; font-size: 26px; }
+      .company-section > p.company-section__note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.6; margin: 0 0 14px; }
+      .company-section .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 800; }
+      .dimension-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+      .dimension-chip { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 800; background: rgba(255, 255, 255, 0.4); }
+      .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 4px 9px; color: #fff; background: var(--event-color, var(--ink)); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; }
+      .company-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin: 30px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+      .company-nav a { color: var(--red); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; text-decoration: none; }
+      .company-disclaimer { margin-top: 18px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; line-height: 1.6; }
+      .company-index-list { display: grid; gap: 10px; }
+      .company-index-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, 0.4); text-decoration: none; color: inherit; }
+      .company-index-item:hover { background: rgba(255, 255, 255, 0.7); }
+      .company-index-item .rank { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .company-index-item strong { font-size: 18px; }
+      .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
+      .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
+      .company-index-item .score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="../index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="../index.html">行动力榜单</a>
+          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
+          <a class="site-nav__link" href="../history.html">历史排名</a>
+          <a class="site-nav__link" href="../dimensions.html">维度对比</a>
+          <a class="site-nav__link" href="../assessment.html">自评工具</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="company-page">
+      <header class="company-hero">
+        <p class="eyebrow">Company Tracker · 公司追踪页</p>
+        <h1>麦肯锡</h1>
+        <div class="company-hero__meta">
+          <span class="evidence-pill">McKinsey</span>
+          <span class="evidence-pill">MBB</span>
+          
+          
+        </div>
+        <p class="company-hero__focus">企业级 AI 转型、agentic AI、workflow redesign、QuantumBlack</p>
+      </header>
+
+      <section class="company-stats" aria-label="关键指标">
+        
+          <div class="company-stats__item">
+            <small>当前排名</small>
+            <strong>#2</strong><em>/17</em>
+          </div>
+          <div class="company-stats__item">
+            <small>相对行动力指数</small>
+            <strong>93.8</strong><em>· 领先</em>
+          </div>
+          <div class="company-stats__item">
+            <small>累计公开 AI 信号</small>
+            <strong>26</strong><em>条</em>
+          </div>
+          <div class="company-stats__item">
+            <small>官方来源占比</small>
+            <strong>96%</strong><em>(25/26)</em>
+          </div>
+          <div class="company-stats__item">
+            <small>最近动作</small>
+            <strong>2026.11.11</strong><em>研究/指数</em>
+          </div>
+          <div class="company-stats__item">
+            <small>覆盖置信度</small>
+            <strong>high</strong><em></em>
+          </div>
+      </section>
+
+      
+      <section class="company-section" aria-label="人工观察">
+        <h2>人工观察</h2>
+        <p class="company-section__note">McKinsey 的 AI 叙事已经从“AI 咨询”进入“企业级 AI coworker / agentic workflow”阶段；QuantumBlack 是其技术交付资产的重要抓手。</p>
+      </section>
+
+      
+
+      
+      <section class="company-section" aria-label="公开 AI 研究">
+        <h2>公开 AI 研究（1 份）</h2>
+        <p class="company-section__note">该公司在 AI 议题上的持续研究与公开表达，体现 thought leadership 证据。</p>
+        <div class="report-list">
+          
+          <div class="report-item">
+            <div class="report-item__meta"><span>2025</span><span>McKinsey / QuantumBlack</span><span>official</span></div>
+            <strong>The State of AI</strong>
+            <p>McKinsey 连续发布 State of AI 调研，是企业 AI 采用、组织与价值实现的重要基准研究。</p>
+            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-section" aria-label="完整事件时间线">
+        <h2>完整事件时间线（26 条）</h2>
+        <p class="company-section__note">按时间倒序展示全部公开 AI 信号：日期、事件类型、摘要、影响维度、来源可信度、置信度与原文链接。评分口径见主榜 Method 说明。</p>
+        <div class="events">
+          
+        <article class="event">
+          <time>2026.11.11</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《What to expect in US healthcare in 2027 and beyond》</h4>
+            <p>McKinsey 于 2026-11-11 发布美国医疗行业 2027 展望。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 68 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.mckinsey.com/industries/healthcare/our-insights" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.10</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《Global Banking Annual Review 2026》：AI 分裂红利</h4>
+            <p>McKinsey 年度旗舰《全球银行业年度回顾》2026 版（11-10）：主题为「AI 分裂红利」——银行业 AI 采用分化带来的估值与格局重塑；路透同步报道其中「银行试图遏制 AI agent 成本飙升」的发现。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 80 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/industries/financial-services/our-insights/global-banking-annual-review" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.10</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《Reinventing business planning with agentic AI》</h4>
+            <p>McKinsey 于 2026-11-10 发布 agentic AI 重塑业务规划研究。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.mckinsey.com/capabilities/operations/our-insights" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.09</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《How CFOs can make AI pay off》</h4>
+            <p>McKinsey 于 2026-11-09 发布 CFO 视角的 AI 投资回报研究。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 70 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.06</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布汽车行业 AI 质量运营研究</h4>
+            <p>McKinsey 于 2026-11-06 发布汽车质量运营的 AI 转型研究。补扫说明：属上期窗口，回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 70 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.05</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《Reinventing the channel》：伙伴生态如何驱动 AI 增长</h4>
+            <p>McKinsey 于 2026-11-05 发布伙伴生态驱动 AI 增长研究。补扫说明：属上期窗口，RSS 矩阵补扫回填。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 70 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.04</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《The AI-enabled risk function of the future》</h4>
+            <p>McKinsey 于 2026-11-04 发布风险职能 AI 化研究，描绘 AI 时代企业风险职能的目标形态。治理/风险维度的思想领导力信号。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">AI 治理与风险能力</span></div>
+            <div class="event-meta">事件分 70 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.mckinsey.com/capabilities/risk/our-insights" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.14</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《The AI value curve》：量化 AI 经济学，约 2.5 万亿美元年机会</h4>
+            <p>McKinsey 于 2026-10-14 发布 22 页研究，提出 AI value curve 框架：对比任务当前成本与用 AI 完成的全部成本，找出自动化潜力最具成本效益的部署位置，测算在特定行业、地区与职业组合下约 2.5 万亿美元的全球年机会。三个结论：最强经济性来自增强高技能高薪酬工作而非大量低薪工作；价值大量存在于科技与金融之外的医疗、教育等行业；同一用例在一个市场能回本、在另一个市场不能。报告还给出宏观背景：到 2030 年约 7 万亿美元资本投入 AI 基建，需要约 7600 亿美元年利润池来支撑。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 80 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-value-curve-the-economics-of-applying-ai-to-existing-work" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.13</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《The AI operating system》：CEO 用企业“第二大脑”重构管理本身</h4>
+            <p>McKinsey 于 2026-10-13 发布 12 页长文，提出 AI operating system（AI OS）概念：把企业积累的数据、专业知识与制度性知识变成管理层的“第二大脑”。文中引用其 2026 State of AI 调查——大公司 40% 受访者在规模化 AI agent，但只有 6% 表示 AI 贡献至少 5% 的 EBIT；早期 AI OS 部署把规划周期加快最多 10 倍、约 12 周实现首次价值、向新领域扩展时 ROI 时间缩短 50%。核心论点是 AI 降低传统管理约束后，CEO 需要从日历驱动的评审与信息流转向持续干预、更分散的决策与更强的人类判断。这是 McKinsey 在 CEO 层面对 agentic AI 组织层的最新系统性输出。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">自有 AI 平台与技术资产</span></div>
+            <div class="event-meta">事件分 82 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-ai-operating-system-a-new-way-for-ceos-to-run-the-enterprise" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.13</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey：资本项目的未来属于数字化与 AI 赋能的团队</h4>
+            <p>McKinsey 于 2026-10-13 发布资本项目研究：全球建筑支出预计从 2023 年 13 万亿美元升至 2040 年 22 万亿美元，而建筑业长期生产率自 2000 年以来仅改善 10%（整体经济 50%、制造业 90%）。文章主张领先企业正从试点转向重写项目的选择、设计、采购、建造与 steering 方式，用数字与 AI 把资本转化为产能的速度作为竞争变量。这是 McKinsey 在重工业/资本密集型场景的 AI 交付叙事延伸。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 74 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/operations/our-insights/why-the-future-of-capital-projects-belongs-to-digital-and-ai-enabled-teams" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.13</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 合伙人 Antonio Castro：AI 时代的企业数据优势“藏在眼前”</h4>
+            <p>McKinsey 于 2026-10-13 发布官方博客文章，合伙人 Antonio Castro（《Rewired》第二版撰稿人）论证：AI 让强技术更容易构建、也更不构成差异化，新的竞争优势藏在企业自身数据与制度性知识里。核心观点是“每个模型和 agent 都需要可靠、可访问、定义清晰且有组织的数据”，而多数企业数据系统是为向后看的报表设计的，无法自动适配用于决策的 agent；不必整体修数据，而应从业务问题出发。该文是《Rewired》第二版六项核心能力系列的组成部分。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">自有 AI 平台与技术资产</span></div>
+            <div class="event-meta">事件分 70 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/about-us/new-at-mckinsey-blog/antonio-castro-on-putting-enterprise-data-to-work-in-the-age-of-ai" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.17</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《Europe&#39;s new AI edge》：欧洲 AI 应用层机会</h4>
+            <p>McKinsey 于 2026-09-17 发布 TMT 研究，讨论欧洲 AI 机会正从模型实验转向用 AI 重设计企业工作流，应用层（application layer）是欧洲的差异化机会窗口。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 74 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/europes-new-ai-edge-the-emerging-application-layer-opportunity" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.16</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《The agentic transformation office》：用 agentic AI 重定义转型经济学</h4>
+            <p>McKinsey 于 2026-09-16 发布转型实践研究，主张成功的转型不再需要人海战术，agentic AI 可接管转型办公室的治理、进度更新、问题识别、技能培训与情绪跟踪等职能，直接改写大型转型的成本结构与人效模型。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/transformation/our-insights/the-agentic-transformation-office-redefining-the-economics-of-change" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.15</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《Technology Trends Outlook 2026》年度技术趋势报告</h4>
+            <p>McKinsey（QuantumBlack）于 2026-09-15 发布年度旗舰报告 Technology Trends Outlook 2026，评估当年最值得企业关注的前沿技术及其成熟度、投资与人才信号。该报告是 McKinsey 在 agentic AI 年度的定调之作。官网直链多次抓取超时，标题与日期经 QuantumBlack 官方洞察列表页核实。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 86 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.08.26</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布《The State of AI》2026 年度全球调查：采纳广泛但 ROI 兑现仍滞后</h4>
+            <p>McKinsey 于 2026-08-26 发布年度旗舰调查 State of AI 2026，基于 QuantumBlack 对 97 个国家约 1,719 名受访者的调研（5 月 4 日至 6 月 8 日执行），显示企业 AI 采纳继续扩散但仅约 37% 的受访者报告 AI 带来 EBIT 影响、约 6% 称得上 AI 高绩效组织。该条发布于上一轮刷新窗口内，属上轮漏检，本轮追溯回填；发布日期来自第三方转载核实，官网页面多次抓取超时。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 86 · 来源 official · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.08.11</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey 发布播客《Agentic AI and the future of global business services》</h4>
+            <p>McKinsey 于 2026-08-11 发布运营实践播客，讨论 agentic AI 如何重塑全球业务服务（GBS）的定位、人才与运营模式，指出 agent 编排能力将决定 GBS 从成本中心转向价值引擎的速度。该条属于上一快照（08-02）之后窗口内的回补净新增。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 72 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/operations/our-insights/agentic-ai-and-the-future-of-global-business-services" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.27</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey Rewired Takes：AI 解锁创造力，agent manager 角色崛起</h4>
+            <p>McKinsey 于 2026-07-27 在 Tech &amp; AI Insights 发布 Rewired Takes 文章，讨论企业如何重新设计工作流与团队结构、建立 AI agent manager 能力并规模化 AI 采纳；AI 正在解锁创造力并催生 agent manager 新角色。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/rewired-takes-how-ai-is-unlocking-creativity-and-heralding-the-rise-of-the-agent-manager" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.23</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>McKinsey Health Institute《The human advantage in an AI economy》：AI 时代脑资本成为新竞争优势</h4>
+            <p>McKinsey Health Institute 于 2026-07-23 发布播客与专题文章，讨论 AI 转型中保护 brain health、提升脑技能如何成为组织竞争优势。该内容在 7/29 日采集中标记为待复核，8/2 深挖后找到官方专题页并追溯回填入库。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">AI 治理与风险能力</span></div>
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/mhi/our-insights/the-human-advantage-in-an-ai-economy" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.15</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>从 adoption 到 impact：AI 转型的三个层次</h4>
+            <p>McKinsey 基于全球调研指出，组织要从个人采纳走向企业级价值捕获，关键在于重构工作流、重新设计岗位，并围绕 AI 可能创造最大价值的环节推进转型。这是很典型的 AI 思考力信号。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 79 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/from-adoption-to-impact-three-horizons-of-ai-transformation" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.14</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>重构客户体验：agentic era 下的 CX</h4>
+            <p>McKinsey 指出，随着 AI agents 参与实时决策，领先企业正在把客户体验从预设旅程重构为动态的跨渠道编排。这类内容把 AI 直接连接到经营与增长模式。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">行业场景覆盖</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 77 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/rewiring-customer-experience-for-the-agentic-era" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.13</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Rewired takes：规模化 AI 采纳的实战经验</h4>
+            <p>McKinsey Senior Partner Brooke Weddle 讨论企业如何从试点走向规模化，强调 workflow redesign、operating model、领导力和文化。它更像是对企业 AI 转型的行动指南，而不只是观点摘要。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">AI 治理与风险能力</span></div>
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/rewired-takes-practical-people-lessons-for-scaling-ai-adoption" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.07</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>你不能站在场边领导 AI</h4>
+            <p>McKinsey 指出 AI 已经从实验阶段进入运营现实，领导者需要亲自使用 AI 才能重塑工作方式、建立信任并推动规模化价值。它强化了麦肯锡在领导力和组织变革上的公开思考。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">AI 治理与风险能力</span></div>
+            <div class="event-meta">事件分 74 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/you-cant-lead-ai-from-the-sidelines" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.14</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>McKinsey / QuantumBlack 成为 OpenAI Partner Network 首发全球合作伙伴</h4>
+            <p>OpenAI 官方将 McKinsey / QuantumBlack 列为 OpenAI Partner Network 首发全球合作伙伴之一，强调 McKinsey 的战略与技术能力、QuantumBlack 的交付能力可帮助客户加速 adoption、create real value 并 deliver impact。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 88 · 来源 vendor_official · 置信度 high · 核验 verified</div>
+            <a href="https://openai.com/index/introducing-openai-partner-network/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.05.11</time>
+          <div>
+            <span class="badge" style="--event-color:#ff8a00">投资/并购</span>
+            <h4>OpenAI DeployCo 获多家咨询与资本机构投资，McKinsey 被报道参与</h4>
+            <p>多家媒体报道 OpenAI 推出 Deployment Company，获得40亿美元以上初始资本，并收购 Tomoro 获取约150名 forward deployed engineers；报道提到 McKinsey、Bain &amp; Company、Capgemini 等参与投资。该事件待官方链接复核。</p>
+            
+            <div class="event-meta">事件分 91 · 来源 media · 置信度 low</div>
+            <a href="https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.02.23</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>McKinsey 与 OpenAI 通过 Frontier Alliance 扩展合作</h4>
+            <p>双方多年合作，帮助企业客户部署 AI coworkers，覆盖 AI 战略、系统集成、工作流重构和全球规模化部署。</p>
+            
+            <div class="event-meta">事件分 82 · 来源 official · 置信度 high</div>
+            <a href="https://www.mckinsey.com/about-us/new-at-mckinsey-blog/mckinsey-and-openai-scale-ai-driven-transformations-with-new-frontier-alliance" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2025</time>
+          <div>
+            <span class="badge" style="--event-color:#00a88f">平台/工具</span>
+            <h4>Lilli：McKinsey 的生成式 AI 平台</h4>
+            <p>McKinsey 公开介绍 Lilli 的构建和规模化经验，显示其把内部知识、咨询方法和生成式 AI 结合为工作平台。</p>
+            
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 medium</div>
+            <a href="https://www.mckinsey.com/capabilities/tech-and-ai/how-we-help-clients/rewiring-the-way-mckinsey-works-with-lilli" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <nav class="company-nav" aria-label="公司页导航">
+        <span><a href="bcg.html">← 上一家：BCG</a></span>
+        <a href="./index.html">全部公司追踪页</a>
+        <span><a href="deloitte.html">下一家：Deloitte →</a></span>
+      </nav>
+
+      <p class="company-disclaimer">本页由 AI咨询行动榜 自动生成，数据截至 2026.11.15 快照。分数是研究预览口径（相对行动力指数，当期榜首 = 100），不代表权威排名。事件均附原始来源链接，点开可自行核验。</p>
+    </main>
+  </body>
+</html>

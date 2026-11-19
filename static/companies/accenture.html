@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accenture 埃森哲 AI 动作追踪 · 相对行动力指数 88.4 · AI咨询行动榜</title>
+    <meta name="description" content="Accenture（埃森哲）当前相对行动力指数 88.4（强），在 17 家传统咨询 / 专业服务公司中排名第 4；累计 20 条公开 AI 信号，最近动作：Qantas 宣布裁减 850 个职位：与 Accenture 的多年期技术外包与 AI 化改造交易。OpenAI 合作、企业 reinvention、AgentKit、全球交付" />
+    <meta property="og:title" content="Accenture 埃森哲 AI 动作追踪 · 相对行动力指数 88.4 · AI咨询行动榜" />
+    <meta property="og:description" content="Accenture（埃森哲）当前相对行动力指数 88.4（强），在 17 家传统咨询 / 专业服务公司中排名第 4；累计 20 条公开 AI 信号，最近动作：Qantas 宣布裁减 850 个职位：与 Accenture 的多年期技术外包与 AI 化改造交易。OpenAI 合作、企业 reinvention、AgentKit、全球交付" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI咨询行动榜","item":"../index.html"},{"@type":"ListItem","position":2,"name":"公司追踪","item":"./index.html"},{"@type":"ListItem","position":3,"name":"Accenture"}]},{"@type":"WebPage","name":"Accenture（埃森哲） AI 动作追踪","description":"Accenture（埃森哲）当前相对行动力指数 88.4（强），在 17 家传统咨询 / 专业服务公司中排名第 4；累计 20 条公开 AI 信号，最近动作：Qantas 宣布裁减 850 个职位：与 Accenture 的多年期技术外包与 AI 化改造交易。OpenAI 合作、企业 reinvention、AgentKit、全球交付","isPartOf":{"@type":"WebSite","name":"AI咨询行动榜 / AI Consulting Signal Index"},"about":{"@type":"Organization","name":"Accenture","alternateName":"埃森哲","description":"OpenAI 合作、企业 reinvention、AgentKit、全球交付"}}]}</script>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .company-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .company-hero { padding: 40px 0 8px; }
+      .company-hero h1 { font-size: clamp(44px, 6vw, 84px); margin-bottom: 10px; }
+      .company-hero__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+      .company-hero__focus { max-width: 860px; color: #3e352d; font-size: 18px; line-height: 1.65; margin: 0; }
+      .company-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 26px 0 30px; }
+      .company-stats__item { border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: var(--panel); }
+      .company-stats__item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; letter-spacing: 0.08em; margin-bottom: 6px; }
+      .company-stats__item strong { font-size: 30px; line-height: 1; }
+      .company-stats__item em { font-style: normal; color: var(--muted); font-size: 13px; margin-left: 6px; }
+      .company-section { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 24px; padding: 20px; background: var(--panel); box-shadow: var(--shadow); }
+      .company-section > h2 { margin: 0 0 4px; font-size: 26px; }
+      .company-section > p.company-section__note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.6; margin: 0 0 14px; }
+      .company-section .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 800; }
+      .dimension-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+      .dimension-chip { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 800; background: rgba(255, 255, 255, 0.4); }
+      .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 4px 9px; color: #fff; background: var(--event-color, var(--ink)); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; }
+      .company-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin: 30px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+      .company-nav a { color: var(--red); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; text-decoration: none; }
+      .company-disclaimer { margin-top: 18px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; line-height: 1.6; }
+      .company-index-list { display: grid; gap: 10px; }
+      .company-index-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, 0.4); text-decoration: none; color: inherit; }
+      .company-index-item:hover { background: rgba(255, 255, 255, 0.7); }
+      .company-index-item .rank { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .company-index-item strong { font-size: 18px; }
+      .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
+      .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
+      .company-index-item .score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="../index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="../index.html">行动力榜单</a>
+          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
+          <a class="site-nav__link" href="../history.html">历史排名</a>
+          <a class="site-nav__link" href="../dimensions.html">维度对比</a>
+          <a class="site-nav__link" href="../assessment.html">自评工具</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="company-page">
+      <header class="company-hero">
+        <p class="eyebrow">Company Tracker · 公司追踪页</p>
+        <h1>埃森哲</h1>
+        <div class="company-hero__meta">
+          <span class="evidence-pill">Accenture</span>
+          <span class="evidence-pill">Technology Consulting / SI</span>
+          
+          
+        </div>
+        <p class="company-hero__focus">OpenAI 合作、企业 reinvention、AgentKit、全球交付</p>
+      </header>
+
+      <section class="company-stats" aria-label="关键指标">
+        
+          <div class="company-stats__item">
+            <small>当前排名</small>
+            <strong>#4</strong><em>/17</em>
+          </div>
+          <div class="company-stats__item">
+            <small>相对行动力指数</small>
+            <strong>88.4</strong><em>· 强</em>
+          </div>
+          <div class="company-stats__item">
+            <small>累计公开 AI 信号</small>
+            <strong>20</strong><em>条</em>
+          </div>
+          <div class="company-stats__item">
+            <small>官方来源占比</small>
+            <strong>75%</strong><em>(15/20)</em>
+          </div>
+          <div class="company-stats__item">
+            <small>最近动作</small>
+            <strong>2026.11.10</strong><em>客户证明</em>
+          </div>
+          <div class="company-stats__item">
+            <small>覆盖置信度</small>
+            <strong>high</strong><em></em>
+          </div>
+      </section>
+
+      
+      <section class="company-section" aria-label="人工观察">
+        <h2>人工观察</h2>
+        <p class="company-section__note">Accenture 更像 AI-first SI 与转型伙伴，OpenAI 合作和全球交付能力使其在企业级部署上很强。</p>
+      </section>
+
+      
+
+      
+      <section class="company-section" aria-label="公开 AI 研究">
+        <h2>公开 AI 研究（2 份）</h2>
+        <p class="company-section__note">该公司在 AI 议题上的持续研究与公开表达，体现 thought leadership 证据。</p>
+        <div class="report-list">
+          
+          <div class="report-item">
+            <div class="report-item__meta"><span>2025</span><span>Accenture</span><span>official</span></div>
+            <strong>Technology Vision 2025</strong>
+            <p>Accenture 的 Technology Vision 系列虽不只聚焦 AI，但对 agentic systems 与 enterprise reinvention 的框架影响很强。</p>
+            <a href="https://www.accenture.com/us-en/insights/technology/technology-trends-2025" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+          <div class="report-item">
+            <div class="report-item__meta"><span>2026.06.08</span><span>Accenture / Carnegie Mellon University Software Engineering Institute</span><span>official</span></div>
+            <strong>AI Adoption Maturity Model</strong>
+            <p>Accenture 把 AI 从 experimentation 走向 predictable outcomes 的成熟度模型公开化，这比泛泛趋势报告更接近企业 AI 转型方法论资产。</p>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-and-the-carnegie-mellon-university-software-engineering-institute-launch-ai-adoption-maturity-model-to-help-organizations-scale-ai-with-predictable-outcomes" target="_blank" rel="noreferrer">查看报告 ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-section" aria-label="完整事件时间线">
+        <h2>完整事件时间线（20 条）</h2>
+        <p class="company-section__note">按时间倒序展示全部公开 AI 信号：日期、事件类型、摘要、影响维度、来源可信度、置信度与原文链接。评分口径见主榜 Method 说明。</p>
+        <div class="events">
+          
+        <article class="event">
+          <time>2026.11.10</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>Qantas 宣布裁减 850 个职位：与 Accenture 的多年期技术外包与 AI 化改造交易</h4>
+            <p>澳航 Qantas 于 2026-11-10 宣布裁减约 850 个职位（约 3% 员工），起于财务等企业职能，与 Accenture 的多年期技术外包与 AI 化改造交易直接相关（路透）。大型具名客户 + AI 驱动组织改造的客户证明事件。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 78 · 来源 media · 置信度 high · 核验 verified</div>
+            <a href="https://www.reuters.com/business/world-at-work/australias-qantas-axe-850-jobs-offshoring-deal-with-accenture-2026-11-10" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.11.05</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>Accenture 扩展与大型消费品客户的 AI 合作</h4>
+            <p>Accenture 于 2026-11-05 被报道扩展与一家大型消费品客户的 AI 合作（客户未具名）。客户价值证明维度信号，客户细节待官方口径。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 74 · 来源 media · 置信度 medium · 核验 partially_verified</div>
+            <a href="https://finance.yahoo.com/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.21</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Accenture 与 TÜV SÜD 在 GTC 柏林发布 Physical AI Safety Suite：数字认证可让产线提前 30% 投产</h4>
+            <p>Accenture 于 2026-10-21（柏林）在 NVIDIA GTC 上与 TÜV SÜD 联合发布 Physical AI Safety Suite 概念：用数字孪生与 AI 仿真加速自动导引车等机器人的安全部署与认证，TÜV SÜD 估计数字认证方式可使产线提前最多 30% 投产。这是 Accenture 在物理 AI 安全与认证方向的首个联合方案。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">AI 治理与风险能力</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 78 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/tuv-sud-and-accenture-accelerate-certification-of-physical-ai-in-automated-factories-and-warehouses-with-nvidia-technologies-to-drive-manufacturing-productivity" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.19</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Accenture Federal Services 与 Google Public Sector 设立 Gemini Launchpads，为美国联邦机构快速构建专属 AI agents</h4>
+            <p>Accenture 于 2026-10-19 宣布 Accenture Federal Services 与 Google Public Sector 设立 Gemini Launchpads，帮助美国联邦机构构建、部署并规模化专属 AI agents，把生成式 AI 接入任务工作流；Accenture 将训练首批 Google Cloud 认证工程师，纳入其千人工程师计划。这是继 Gemini Enterprise Business Group 之后 Accenture-Google 联盟向联邦市场的延伸。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 82 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-federal-services-and-google-public-sector-establish-gemini-launchpads-to-power-purpose-built-agents-across-federal-missions" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.15</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>UMass Memorial Health 携手 Accenture 与 Microsoft 推进 AI 医疗创新</h4>
+            <p>Accenture 于 2026-10-15 宣布 UMass Memorial Health 与 Accenture、Microsoft 的多年期合作：统一数据平台以提升医疗服务与运营并驱动 AI 创新。这是 Accenture 医疗 AI 方向的最新客户落地。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 78 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/umass-memorial-health-announces-unified-data-platform-multi-year-initiative-investments-in-ai-powered-innovation-in-partnership-with-accenture-and-microsoft" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.13</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Accenture 与 Workday 启动 forward deployed engineering 计划，重塑 agentic AI 时代的工作</h4>
+            <p>Accenture 于 2026-10-13（纽约）宣布与 Workday 合作启动联合 forward deployed engineering（FDE）计划，帮助组织在 AI 时代重新设计工作方式，把 FDE 模式延伸到 HR、财务与 IT 场景。这是 Accenture 本月第二个 FDE 相关动作（前有 Google Cloud 千人 FDE 团队）。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 80 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-launches-forward-deployed-engineering-program-with-workday-to-reinvent-work-for-the-agentic-ai-era" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.13</time>
+          <div>
+            <span class="badge" style="--event-color:#ff8a00">投资/并购</span>
+            <h4>Accenture 收购 Sagacity Solutions，扩展 AI 驱动的客户智能</h4>
+            <p>Accenture 于 2026-10-13（伦敦）宣布收购英国数据与客户智能公司 Sagacity Solutions，增强 Accenture Song 规模化交付 AI 驱动客户重塑的能力，回应客户把数据、AI 与运营整合为成果导向项目的需求。</p>
+            <div class="dimension-chips"><span class="dimension-chip">并购与资本动作</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 76 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-acquires-sagacity-solutions-to-scale-ai-driven-customer-intelligence-across-accenture-song-s-uk-ireland-operations" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.10.08</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Accenture 与 Dell 成立 Accenture Dell Business Group：帮企业在自有环境规模化私有 AI 与 agentic AI 负载</h4>
+            <p>Accenture 于 2026-10-08（纽约）宣布与 Dell Technologies 成立 Accenture Dell Business Group，把双方 20 多年的合作升级为专门业务组织，帮助企业在自有环境内规模化 AI、现代化基础设施并运行企业级 agentic AI 工作负载，强调数据控制与更可预测的经济性。这是继 Google Cloud 业务集团之后 Accenture 本月的第二个专属 AI 业务组织。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">自有 AI 平台与技术资产</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 86 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-and-dell-technologies-expand-collaboration-to-help-enterprises-scale-private-ai-and-modernize-infrastructure" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.23</time>
+          <div>
+            <span class="badge" style="--event-color:#ff8a00">投资/并购</span>
+            <h4>Accenture 战略投资 Within，结合其 work-to-agent 平台加速企业级 AI 采纳</h4>
+            <p>Accenture 于 2026-09-23 宣布战略投资 Within，并把自家 AI 交付规模与 Within 的 work-to-agent 平台结合，解决企业流程可见性与自动化的问题，帮助客户在企业范围加速 AI 采纳。这是 Accenture 在 agentic AI 供给侧的又一资本布局。</p>
+            <div class="dimension-chips"><span class="dimension-chip">并购与资本动作</span><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 78 · 来源 official_press_release · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.stocktitan.net/news/ACN/accenture-and-within-help-clients-accelerate-ai-across-the-pttumzvthrc1.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.22</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>Volvo Cars 成为 Accenture 与 Google Cloud 开源平台 Horizon 的首席行业伙伴：测试提速 9 倍、开发成本降 40%</h4>
+            <p>Accenture 与 Google Cloud 于 2026-09-22 宣布 Volvo Cars 出任 Horizon 平台首席行业伙伴。Horizon 是构建在 Google Cloud 上的开源软件开发平台，面向软件定义汽车的 gen-AI 开发（尤其 Android Automotive 信息娱乐系统），官方量化了测试提速最高 9 倍、信息娱乐开发成本降低最高 40%。这是 Accenture 平台资产获得头部车企背书的客户证明。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span><span class="dimension-chip">自有 AI 平台与技术资产</span><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 80 · 来源 official_press_release · 置信度 high · 核验 partially_verified</div>
+            <a href="https://www.stocktitan.net/news/ACN/accenture-and-google-cloud-transform-software-development-with-volvo-1efz48amr6oj.html" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.18</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Anthropic 任命 Accenture 为首个前沿模型「嵌入式评估方」，双方合计投入 20 亿美元</h4>
+            <p>Anthropic 于 2026-09-18 官宣与 Accenture 合作开展前沿模型独立评估：Accenture 作为首家「嵌入式评估方」派员入驻 Anthropic 内部（享有近似员工的访问权限），在模型部署前后进行压力测试、红队演练与安全审计；双方合计投入 20 亿美元（各 10 亿、五年期）。这是咨询公司首次进入前沿实验室的模型评估与保障链路，把 AI 治理与安全能力从咨询叙事推进到模型层的商业化角色。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 治理与风险能力</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 90 · 来源 vendor_official · 置信度 high · 核验 verified</div>
+            <a href="https://www.anthropic.com/news/accenture-embedded-evaluation" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.09.08</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Accenture 与 Google Cloud 成立 Gemini Enterprise Business Group，配置千人级 forward deployed engineers</h4>
+            <p>Accenture 于 2026-09-08 与 Google Cloud 宣布成立 Gemini Enterprise Business Group，联合开发 AI 解决方案、帮助客户在企业范围规模化部署 Gemini Enterprise 与 agentic AI，并计划组建约 1,000 人的 forward deployed engineering 团队嵌入客户现场。这是继 Accenture Edge 之后双方在 agentic AI 交付侧的又一次深度绑定，把联盟从方案层推进到专用业务组织。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">自有 AI 平台与技术资产</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 86 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-and-google-cloud-deepen-partnership-with-formation-of-new-accenture-gemini-enterprise-business-group" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.15</time>
+          <div>
+            <span class="badge" style="--event-color:#16a34a">客户证明</span>
+            <h4>Accenture 帮助欧盟 DG INTPA 将 AI Assistant 扩展到全球运营</h4>
+            <p>Accenture 于 2026-07-15 官方披露其为 European Commission DG INTPA 设计、构建并规模化 AI Assistant，服务已覆盖总部及全球 delegations，并形成 2,000+ regular users 与 400,000+ queries 的使用规模。这是本周非常强的 production-grade client proof。</p>
+            <div class="dimension-chips"><span class="dimension-chip">客户价值证明</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">行业场景覆盖</span><span class="dimension-chip">AI 治理与风险能力</span></div>
+            <div class="event-meta">事件分 90 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-helps-european-commission-s-directorate-general-for-international-partnerships-to-scale-ai-across-global-operations" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.07.08</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Accenture 与 Google Cloud 面向中型企业推出 agentic AI 方案</h4>
+            <p>ITPro 于 2026-07-08 报道，Google Cloud 与 Accenture 推出面向中型企业的新方案，目标是帮助更多企业把 AI 从 pilot 推向 production，并以更低复杂度部署 agentic AI 工作流。这是一条周内净新增的生态与交付信号，强化了 Accenture 在企业级 AI 生产化上的执行位势。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">行业场景覆盖</span></div>
+            <div class="event-meta">事件分 79 · 来源 media · 置信度 medium · 核验 single_source</div>
+            <a href="https://www.itpro.com/business/business-strategy/ai-projects-are-stalling-at-mid-market-firms-google-cloud-and-accenture-want-to-solve-that" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.30</time>
+          <div>
+            <span class="badge" style="--event-color:#0f766e">治理/风控</span>
+            <h4>Accenture 被报道要求员工减少不必要的 AI 使用以控制 token 成本</h4>
+            <p>ITPro 报道称，Accenture 内部提醒员工避免在低价值任务上过度使用 AI，以应对快速上升的 token 成本。这是一条治理与组织管理信号，说明其 AI 应用已进入成本与使用规范精细化阶段。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 治理与风险能力</span><span class="dimension-chip">AI 交付与生产化能力</span></div>
+            <div class="event-meta">事件分 74 · 来源 media · 置信度 medium · 核验 single_source</div>
+            <a href="https://www.itpro.com/technology/artificial-intelligence/what-were-seeing-right-now-is-just-rapid-escalation-in-ai-token-spend-accenture-tells-staff-to-stop-using-ai-for-unnecessary-tasks-amid-surging-costs" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.14</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>Accenture 成为 OpenAI Partner Network 首发全球合作伙伴</h4>
+            <p>OpenAI 官方将 Accenture 列为 OpenAI Partner Network 首发全球合作伙伴之一，并强调其 unmatched industry depth、global delivery scale 和把先进技术嵌入企业核心运营的能力。</p>
+            <div class="dimension-chips"><span class="dimension-chip">科技合作深度</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">战略信号</span></div>
+            <div class="event-meta">事件分 89 · 来源 vendor_official · 置信度 high · 核验 verified</div>
+            <a href="https://openai.com/index/introducing-openai-partner-network/" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.08</time>
+          <div>
+            <span class="badge" style="--event-color:#64748b">研究/指数</span>
+            <h4>Accenture 与 CMU SEI 推出 AI Adoption Maturity Model</h4>
+            <p>Accenture 官方宣布与 Carnegie Mellon University Software Engineering Institute 推出 research-validated AI Adoption Maturity Model，帮助组织从 AI experimentation 走向可预测、可重复的规模化结果。</p>
+            <div class="dimension-chips"><span class="dimension-chip">AI 思考力 / 公开研究信号</span><span class="dimension-chip">战略信号</span><span class="dimension-chip">AI 治理与风险能力</span></div>
+            <div class="event-meta">事件分 84 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-and-the-carnegie-mellon-university-software-engineering-institute-launch-ai-adoption-maturity-model-to-help-organizations-scale-ai-with-predictable-outcomes" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06.03</time>
+          <div>
+            <span class="badge" style="--event-color:#ff8a00">投资/并购</span>
+            <h4>Accenture 投资 AlphaSense，并合作把市场情报嵌入 agentic workflows</h4>
+            <p>Accenture 官方宣布通过 Accenture Ventures 投资 AlphaSense，并联合把 market intelligence 嵌入企业核心 agentic workflows，目标是提升决策速度、可靠性与业务结果。</p>
+            <div class="dimension-chips"><span class="dimension-chip">并购与资本动作</span><span class="dimension-chip">自有 AI 平台与技术资产</span><span class="dimension-chip">AI 交付与生产化能力</span><span class="dimension-chip">客户价值证明</span></div>
+            <div class="event-meta">事件分 86 · 来源 official · 置信度 high · 核验 verified</div>
+            <a href="https://newsroom.accenture.com/news/2026/accenture-and-alphasense-announce-strategic-investment-and-partnership-to-bring-agentic-workflows-for-market-intelligence-to-enterprises" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2026.06</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>ServiceNow 与 Accenture 推出 Forward Deployed Engineering 项目</h4>
+            <p>媒体报道显示 ServiceNow 与 Accenture 将 AI-native 工程团队与 Accenture 行业专家嵌入客户环境，推动 agentic AI 从试点走向生产；报道提到300+预构建 AI agent skills 和 AI Control Tower。该事件待官方链接复核。</p>
+            
+            <div class="event-meta">事件分 83 · 来源 media · 置信度 medium</div>
+            <a href="https://www.theconsultingreport.com/servicenow-and-accenture-partner-on-forward-deployed-engineering-to-scale-agentic-ai" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        <article class="event">
+          <time>2025</time>
+          <div>
+            <span class="badge" style="--event-color:#2457ff">科技合作</span>
+            <h4>OpenAI 与 Accenture 加速企业 reinvention</h4>
+            <p>双方合作推出旗舰 AI 项目，结合 OpenAI 企业产品与 Accenture 的行业、职能和交付能力，帮助客户把传统流程变成 AI-powered workflows。</p>
+            
+            <div class="event-meta">事件分 88 · 来源 official · 置信度 high</div>
+            <a href="https://newsroom.accenture.com/news/2025/openai-and-accenture-accelerate-enterprise-reinvention-with-advanced-ai" target="_blank" rel="noreferrer">查看来源 ↗</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <nav class="company-nav" aria-label="公司页导航">
+        <span><a href="deloitte.html">← 上一家：Deloitte</a></span>
+        <a href="./index.html">全部公司追踪页</a>
+        <span><a href="pwc.html">下一家：PwC →</a></span>
+      </nav>
+
+      <p class="company-disclaimer">本页由 AI咨询行动榜 自动生成，数据截至 2026.11.15 快照。分数是研究预览口径（相对行动力指数，当期榜首 = 100），不代表权威排名。事件均附原始来源链接，点开可自行核验。</p>
+    </main>
+  </body>
+</html>

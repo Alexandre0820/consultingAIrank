@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>公司追踪页目录 · 17 家咨询公司 AI 动作 · AI咨询行动榜</title>
+    <meta name="description" content="17 家传统咨询 / 专业服务公司的 AI 动作追踪页目录：每家公司一页，含当前排名、相对行动力指数、完整公开 AI 事件时间线、公开研究报告与全部来源链接。" />
+    <meta property="og:title" content="公司追踪页目录 · 17 家咨询公司 AI 动作 · AI咨询行动榜" />
+    <meta property="og:description" content="17 家传统咨询 / 专业服务公司的 AI 动作追踪页目录：每家公司一页，含当前排名、相对行动力指数、完整公开 AI 事件时间线、公开研究报告与全部来源链接。" />
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"公司追踪页目录","description":"17 家传统咨询 / 专业服务公司的 AI 动作追踪页目录：每家公司一页，含当前排名、相对行动力指数、完整公开 AI 事件时间线、公开研究报告与全部来源链接。数据截至 2026-11-15 快照。","hasPart":[{"@type":"WebPage","name":"BCG AI 动作追踪","position":1},{"@type":"WebPage","name":"McKinsey AI 动作追踪","position":2},{"@type":"WebPage","name":"Deloitte AI 动作追踪","position":3},{"@type":"WebPage","name":"Accenture AI 动作追踪","position":4},{"@type":"WebPage","name":"PwC AI 动作追踪","position":5},{"@type":"WebPage","name":"Bain AI 动作追踪","position":6},{"@type":"WebPage","name":"L.E.K. Consulting AI 动作追踪","position":7},{"@type":"WebPage","name":"KPMG AI 动作追踪","position":8},{"@type":"WebPage","name":"EY AI 动作追踪","position":9},{"@type":"WebPage","name":"Kearney AI 动作追踪","position":10},{"@type":"WebPage","name":"Capgemini AI 动作追踪","position":11},{"@type":"WebPage","name":"FTI Consulting AI 动作追踪","position":12},{"@type":"WebPage","name":"Oliver Wyman AI 动作追踪","position":13},{"@type":"WebPage","name":"Roland Berger AI 动作追踪","position":14},{"@type":"WebPage","name":"Alvarez & Marsal AI 动作追踪","position":15},{"@type":"WebPage","name":"Strategy& AI 动作追踪","position":16},{"@type":"WebPage","name":"Monitor Deloitte AI 动作追踪","position":17}]}</script>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .company-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .company-hero { padding: 40px 0 8px; }
+      .company-hero h1 { font-size: clamp(44px, 6vw, 84px); margin-bottom: 10px; }
+      .company-hero__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+      .company-hero__focus { max-width: 860px; color: #3e352d; font-size: 18px; line-height: 1.65; margin: 0; }
+      .company-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 26px 0 30px; }
+      .company-stats__item { border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: var(--panel); }
+      .company-stats__item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; letter-spacing: 0.08em; margin-bottom: 6px; }
+      .company-stats__item strong { font-size: 30px; line-height: 1; }
+      .company-stats__item em { font-style: normal; color: var(--muted); font-size: 13px; margin-left: 6px; }
+      .company-section { margin: 0 0 22px; border: 1px solid var(--line); border-radius: 24px; padding: 20px; background: var(--panel); box-shadow: var(--shadow); }
+      .company-section > h2 { margin: 0 0 4px; font-size: 26px; }
+      .company-section > p.company-section__note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.6; margin: 0 0 14px; }
+      .company-section .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 800; }
+      .dimension-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+      .dimension-chip { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 800; background: rgba(255, 255, 255, 0.4); }
+      .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 4px 9px; color: #fff; background: var(--event-color, var(--ink)); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11px; font-weight: 900; }
+      .company-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin: 30px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+      .company-nav a { color: var(--red); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: 900; text-decoration: none; }
+      .company-disclaimer { margin-top: 18px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; line-height: 1.6; }
+      .company-index-list { display: grid; gap: 10px; }
+      .company-index-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, 0.4); text-decoration: none; color: inherit; }
+      .company-index-item:hover { background: rgba(255, 255, 255, 0.7); }
+      .company-index-item .rank { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .company-index-item strong { font-size: 18px; }
+      .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
+      .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
+      .company-index-item .score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="../index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="../index.html">行动力榜单</a>
+          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
+          <a class="site-nav__link" href="../history.html">历史排名</a>
+          <a class="site-nav__link" href="../dimensions.html">维度对比</a>
+          <a class="site-nav__link" href="../assessment.html">自评工具</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="company-page">
+      <header class="company-hero">
+        <p class="eyebrow">Company Tracker · 公司追踪页</p>
+        <h1>17 家公司 AI 动作追踪</h1>
+        <p class="company-hero__focus">每家公司一页：当前排名、相对行动力指数、人工观察、公开 AI 研究清单，以及带来源链接的完整公开 AI 事件时间线。适合回答“某家咨询公司最近在 AI 上做了什么、证据是什么”。</p>
+      </header>
+      <section class="company-section">
+        <h2>按当前排名排序（当期榜首 = 100）</h2>
+        <p class="company-section__note">排序与主榜一致，数据截至 2026.11.15 快照。</p>
+        <div class="company-index-list">
+          
+          <a class="company-index-item" href="bcg.html">
+            <span class="rank">#1</span>
+            <span>
+              <strong>BCG</strong><em>波士顿咨询</em>
+              <small>32 条公开信号 · 最近动作 2026.11.11 · 研究/指数</small>
+            </span>
+            <span class="score">100.0</span>
+          </a>
+          <a class="company-index-item" href="mckinsey.html">
+            <span class="rank">#2</span>
+            <span>
+              <strong>McKinsey</strong><em>麦肯锡</em>
+              <small>26 条公开信号 · 最近动作 2026.11.11 · 研究/指数</small>
+            </span>
+            <span class="score">93.8</span>
+          </a>
+          <a class="company-index-item" href="deloitte.html">
+            <span class="rank">#3</span>
+            <span>
+              <strong>Deloitte</strong><em>德勤</em>
+              <small>24 条公开信号 · 最近动作 2026.11.12 · 投资/并购</small>
+            </span>
+            <span class="score">93.1</span>
+          </a>
+          <a class="company-index-item" href="accenture.html">
+            <span class="rank">#4</span>
+            <span>
+              <strong>Accenture</strong><em>埃森哲</em>
+              <small>20 条公开信号 · 最近动作 2026.11.10 · 客户证明</small>
+            </span>
+            <span class="score">88.4</span>
+          </a>
+          <a class="company-index-item" href="pwc.html">
+            <span class="rank">#5</span>
+            <span>
+              <strong>PwC</strong><em>普华永道</em>
+              <small>22 条公开信号 · 最近动作 2026.11.12 · 研究/指数</small>
+            </span>
+            <span class="score">84.9</span>
+          </a>
+          <a class="company-index-item" href="bain.html">
+            <span class="rank">#6</span>
+            <span>
+              <strong>Bain</strong><em>贝恩</em>
+              <small>18 条公开信号 · 最近动作 2026.11.15 · 研究/指数</small>
+            </span>
+            <span class="score">82.5</span>
+          </a>
+          <a class="company-index-item" href="lek.html">
+            <span class="rank">#7</span>
+            <span>
+              <strong>L.E.K. Consulting</strong><em>艾意凯</em>
+              <small>17 条公开信号 · 最近动作 2026.10.27 · 研究/指数</small>
+            </span>
+            <span class="score">77.5</span>
+          </a>
+          <a class="company-index-item" href="kpmg.html">
+            <span class="rank">#8</span>
+            <span>
+              <strong>KPMG</strong><em>毕马威</em>
+              <small>12 条公开信号 · 最近动作 2026.11.13 · 科技合作</small>
+            </span>
+            <span class="score">71.2</span>
+          </a>
+          <a class="company-index-item" href="ey.html">
+            <span class="rank">#9</span>
+            <span>
+              <strong>EY</strong><em>安永</em>
+              <small>13 条公开信号 · 最近动作 2026.11.03 · 研究/指数</small>
+            </span>
+            <span class="score">69.7</span>
+          </a>
+          <a class="company-index-item" href="kearney.html">
+            <span class="rank">#10</span>
+            <span>
+              <strong>Kearney</strong><em>科尔尼</em>
+              <small>12 条公开信号 · 最近动作 2026.11.11 · 研究/指数</small>
+            </span>
+            <span class="score">67.0</span>
+          </a>
+          <a class="company-index-item" href="capgemini.html">
+            <span class="rank">#11</span>
+            <span>
+              <strong>Capgemini</strong><em>凯捷</em>
+              <small>11 条公开信号 · 最近动作 2026.11.12 · 研究/指数</small>
+            </span>
+            <span class="score">65.4</span>
+          </a>
+          <a class="company-index-item" href="fti.html">
+            <span class="rank">#12</span>
+            <span>
+              <strong>FTI Consulting</strong><em>FTI Consulting</em>
+              <small>9 条公开信号 · 最近动作 2026.11.09 · 研究/指数</small>
+            </span>
+            <span class="score">57.7</span>
+          </a>
+          <a class="company-index-item" href="oliver_wyman.html">
+            <span class="rank">#13</span>
+            <span>
+              <strong>Oliver Wyman</strong><em>奥纬咨询</em>
+              <small>8 条公开信号 · 最近动作 2026.11.05 · 研究/指数</small>
+            </span>
+            <span class="score">53.4</span>
+          </a>
+          <a class="company-index-item" href="roland_berger.html">
+            <span class="rank">#14</span>
+            <span>
+              <strong>Roland Berger</strong><em>罗兰贝格</em>
+              <small>5 条公开信号 · 最近动作 2026.11.09 · 平台/工具</small>
+            </span>
+            <span class="score">39.5</span>
+          </a>
+          <a class="company-index-item" href="alvarez_marsal.html">
+            <span class="rank">#15</span>
+            <span>
+              <strong>Alvarez &amp; Marsal</strong><em>A&amp;M</em>
+              <small>4 条公开信号 · 最近动作 2026.11.10 · 研究/指数</small>
+            </span>
+            <span class="score">35.7</span>
+          </a>
+          <a class="company-index-item" href="strategy_and.html">
+            <span class="rank">#16</span>
+            <span>
+              <strong>Strategy&amp;</strong><em>Strategy&amp;</em>
+              <small>3 条公开信号 · 最近动作 2026.11.11 · 研究/指数</small>
+            </span>
+            <span class="score">30.1</span>
+          </a>
+          <a class="company-index-item" href="monitor_deloitte.html">
+            <span class="rank">#17</span>
+            <span>
+              <strong>Monitor Deloitte</strong><em>Monitor Deloitte</em>
+              <small>2 条公开信号 · 最近动作 2026 · AI 服务线</small>
+            </span>
+            <span class="score">15.2</span>
+          </a>
+        </div>
+      </section>
+      <p class="company-disclaimer">本页由 AI咨询行动榜 自动生成。分数是研究预览口径，不代表权威排名；每家公司页附全部事件原始来源。</p>
+    </main>
+  </body>
+</html>

@@ -79,6 +79,7 @@ const I18N = {
     filtersSubtitle: "左侧控制筛选；榜单按公司最近 AI 动作排序。",
     navBoard: "行动力榜单",
     navHistory: "历史排名",
+    navTool: "自评工具",
     insightsTitle: "核心观察",
     insightsSubtitle: "从本周净新增的公开信号里，提炼对 AI 咨询行业的核心观察。",
     wechatEyebrow: "Praxis Advisory",
@@ -116,6 +117,7 @@ const I18N = {
     filtersSubtitle: "Use the left panel to filter. The board ranks firms by their most recent AI actions.",
     navBoard: "Action Ranking",
     navHistory: "Rank History",
+    navTool: "Self-Assessment",
     insightsTitle: "Key Observations",
     insightsSubtitle: "Core observations on the AI consulting industry, drawn from this week's net-new public signals.",
     wechatEyebrow: "Praxis Advisory",
@@ -302,6 +304,7 @@ function applyStaticTranslations() {
   if (els.insightsSubtitle) els.insightsSubtitle.textContent = t("insightsSubtitle");
   document.querySelectorAll("[data-nav='board']").forEach((el) => (el.textContent = t("navBoard")));
   document.querySelectorAll("[data-nav='history']").forEach((el) => (el.textContent = t("navHistory")));
+  document.querySelectorAll("[data-nav='tool']").forEach((el) => (el.textContent = t("navTool")));
   if (els.wechatEyebrow) els.wechatEyebrow.textContent = t("wechatEyebrow");
   if (els.wechatTitle) els.wechatTitle.textContent = t("wechatTitle");
   if (els.wechatBody) els.wechatBody.textContent = t("wechatBody");
@@ -1031,6 +1034,8 @@ function renderActionCard(row, rank, previousRankMap) {
             ${tags.map((tag) => `<span class="dimension-chip">${escapeHtml(dimensionName(tag))}</span>`).join("")}
           </div>
         </div>
+
+        <a class="card-tracker-link" href="companies/${escapeHtml(company.id)}.html">${activeLanguage === "en" ? "Open company tracker" : "打开公司追踪页"} ↗</a>
 
         <details class="card-details" ${detailsOpen ? "open" : ""}>
           <summary class="card-details__summary">
