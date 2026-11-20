@@ -148,9 +148,9 @@ function buildPageShell({ title, description, body, jsonLd }) {
       <div class="site-nav__right">
         <div class="site-nav__links">
           <a class="site-nav__link" href="../index.html">行动力榜单</a>
-          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
           <a class="site-nav__link" href="../history.html">历史排名</a>
           <a class="site-nav__link" href="../dimensions.html">维度对比</a>
+          <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
           <a class="site-nav__link" href="../assessment.html">自评工具</a>
         </div>
       </div>
