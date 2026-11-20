@@ -79,6 +79,7 @@ const I18N = {
     filtersSubtitle: "左侧控制筛选；榜单按公司最近 AI 动作排序。",
     navBoard: "行动力榜单",
     navHistory: "历史排名",
+    navDims: "维度对比",
     navCompanies: "公司追踪",
     navTool: "自评工具",
     insightsTitle: "核心观察",
@@ -118,6 +119,7 @@ const I18N = {
     filtersSubtitle: "Use the left panel to filter. The board ranks firms by their most recent AI actions.",
     navBoard: "Action Ranking",
     navHistory: "Rank History",
+    navDims: "Dimension Compare",
     navCompanies: "Company Trackers",
     navTool: "Self-Assessment",
     insightsTitle: "Key Observations",
@@ -306,6 +308,7 @@ function applyStaticTranslations() {
   if (els.insightsSubtitle) els.insightsSubtitle.textContent = t("insightsSubtitle");
   document.querySelectorAll("[data-nav='board']").forEach((el) => (el.textContent = t("navBoard")));
   document.querySelectorAll("[data-nav='history']").forEach((el) => (el.textContent = t("navHistory")));
+  document.querySelectorAll("[data-nav='dims']").forEach((el) => (el.textContent = t("navDims")));
   document.querySelectorAll("[data-nav='companies']").forEach((el) => (el.textContent = t("navCompanies")));
   document.querySelectorAll("[data-nav='tool']").forEach((el) => (el.textContent = t("navTool")));
   if (els.wechatEyebrow) els.wechatEyebrow.textContent = t("wechatEyebrow");
