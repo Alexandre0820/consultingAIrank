@@ -134,11 +134,11 @@ function buildPageShell({ title, description, body, jsonLd }) {
       .company-index-list { display: grid; gap: 10px; }
       .company-index-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 18px; padding: 14px; background: rgba(255, 255, 255, 0.4); text-decoration: none; color: inherit; }
       .company-index-item:hover { background: rgba(255, 255, 255, 0.7); }
-      .company-index-item .rank { color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .company-index-item .idx-rank { align-self: center; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 22px; font-weight: 800; color: var(--red); background: rgba(255, 255, 255, 0.55); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; white-space: nowrap; }
       .company-index-item strong { font-size: 18px; }
       .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
       .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
-      .company-index-item .score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; }
+      .company-index-item .idx-score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; color: var(--ink); text-align: right; min-width: 64px; }
     </style>
   </head>
   <body>
@@ -329,12 +329,12 @@ function renderDirectoryPage(rows, typeMap, data) {
             const latest = [...events].sort((a, b) => eventTimestamp(b.date) - eventTimestamp(a.date))[0];
             return `
           <a class="company-index-item" href="${escapeHtml(company.id)}.html">
-            <span class="rank">#${index + 1}</span>
+            <span class="idx-rank">#${index + 1}</span>
             <span>
               <strong>${escapeHtml(company.name)}</strong><em>${escapeHtml(company.cn || company.tier || "")}</em>
               <small>${events.length} 条公开信号 · 最近动作 ${escapeHtml(shortDate(latest?.date))}${latest ? ` · ${escapeHtml(typeMap.get(latest.type)?.label || "")}` : ""}</small>
             </span>
-            <span class="score">${row.score.toFixed(1)}</span>
+            <span class="idx-score">${row.score.toFixed(1)}</span>
           </a>`;
           }).join("")}
         </div>
