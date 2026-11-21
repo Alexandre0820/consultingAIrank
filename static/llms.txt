@@ -1,6 +1,6 @@
 # AI咨询行动榜 / AI Consulting Signal Index
 
-> 追踪 17 家传统咨询 / 专业服务公司（MBB、Big Four、科技咨询、精品战略公司等）的公开 AI 动作：合作、平台、服务线、并购、组织、客户价值与治理。每条信号附原始来源链接与置信度。分数为研究预览口径的相对行动力指数（当期榜首 = 100），截至 2026-11-15 快照，不代表权威排名。
+> 追踪 17 家传统咨询 / 专业服务公司（MBB、Big Four、科技咨询、精品战略公司等）的公开 AI 动作：合作、平台、服务线、并购、组织、客户价值与治理。每条信号附原始来源链接与置信度。分数为研究预览口径的相对行动力指数（当期榜首 = 100），截至 2026-11-21 快照，不代表权威排名。
 
 ## 主榜与方法
 
@@ -10,23 +10,23 @@
 
 ## 公司追踪页
 
-- [BCG（波士顿咨询）](/static/companies/bcg.html): 排名 #1/17，指数 100.0，32 条公开信号。最近动作：BCG 发布《Client Zero: Inside BCG's AI Transformation》：把自己当第一个客户
-- [McKinsey（麦肯锡）](/static/companies/mckinsey.html): 排名 #2/17，指数 93.8，26 条公开信号。最近动作：McKinsey 发布《What to expect in US healthcare in 2027 and beyond》
-- [Deloitte（德勤）](/static/companies/deloitte.html): 排名 #3/17，指数 93.1，24 条公开信号。最近动作：Deloitte 收购 Flipside Crypto 的 AI 业务并设立 Edisyl：定位「企业 AI 的知识层」
-- [Accenture（埃森哲）](/static/companies/accenture.html): 排名 #4/17，指数 88.4，20 条公开信号。最近动作：Qantas 宣布裁减 850 个职位：与 Accenture 的多年期技术外包与 AI 化改造交易
-- [PwC（普华永道）](/static/companies/pwc.html): 排名 #5/17，指数 84.9，22 条公开信号。最近动作：PwC 发布《AI in Revenue Cycle》：从单点方案到企业级价值
-- [Bain（贝恩）](/static/companies/bain.html): 排名 #6/17，指数 82.5，18 条公开信号。最近动作：Bain 发布 AI 数据中心繁荣统计洞察
-- [L.E.K. Consulting（艾意凯）](/static/companies/lek.html): 排名 #7/17，指数 77.5，17 条公开信号。最近动作：L.E.K. 发布 AI/GEO 消费者调查：2,650 名受访者中 30% 已用 AI 辅助购买决策
-- [KPMG（毕马威）](/static/companies/kpmg.html): 排名 #8/17，指数 71.2，12 条公开信号。最近动作：KPMG 联合 Google Cloud 与 Wiz 推出 AI Threat Management：企业 AI 规模化安全防御
-- [EY（安永）](/static/companies/ey.html): 排名 #9/17，指数 69.7，13 条公开信号。最近动作：EY 发布客户服务 AI 报告：头部组织核心客服 KPI 提升超 50%
-- [Kearney（科尔尼）](/static/companies/kearney.html): 排名 #10/17，指数 67.0，12 条公开信号。最近动作：Kearney 发布《Turning AI ambition into measurable value》
-- [Capgemini（凯捷）](/static/companies/capgemini.html): 排名 #11/17，指数 65.4，11 条公开信号。最近动作：Capgemini 发布 AI 经济学研究快照
-- [FTI Consulting（FTI Consulting）](/static/companies/fti.html): 排名 #12/17，指数 57.7，9 条公开信号。最近动作：FTI 发布 AI 叙事播种研究（AI Narrative Seeding）
-- [Oliver Wyman（奥纬咨询）](/static/companies/oliver_wyman.html): 排名 #13/17，指数 53.4，8 条公开信号。最近动作：Oliver Wyman 发布 UAE AI 职场调查：85% 员工已用 AI，67% 担心被替代
-- [Roland Berger（罗兰贝格）](/static/companies/roland_berger.html): 排名 #14/17，指数 39.5，5 条公开信号。最近动作：Roland Berger 推出 TasteIndex AI 解决方案：用 AI 管理味觉与产品开发
-- [Alvarez & Marsal（A&M）](/static/companies/alvarez_marsal.html): 排名 #15/17，指数 35.7，4 条公开信号。最近动作：A&M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律
-- [Strategy&（Strategy&）](/static/companies/strategy_and.html): 排名 #16/17，指数 30.1，3 条公开信号。最近动作：Strategy& 发布中东 AI 研究：卡塔尔 AI 市场到 2030 年将超 20 亿美元
-- [Monitor Deloitte（Monitor Deloitte）](/static/companies/monitor_deloitte.html): 排名 #17/17，指数 15.2，2 条公开信号。最近动作：归入 Deloitte AI 与 Agentic Network 体系观察
+- [BCG（波士顿咨询）](/static/companies/bcg.html): 排名 #1/17，指数 100.0，36 条公开信号。最近动作：BCG 发布《CMOs Are Thinking Big with Agentic AI》：营销负责人该想得更大
+- [Deloitte（德勤）](/static/companies/deloitte.html): 排名 #2/17，指数 95.7，29 条公开信号。最近动作：Deloitte 发布 2027 制造业展望：AI 走过试点期（与航空航天防务、工程建造展望同系列）
+- [McKinsey（麦肯锡）](/static/companies/mckinsey.html): 排名 #3/17，指数 92.9，27 条公开信号。最近动作：McKinsey 与 Cognition 结盟：把 Devin 自主 AI 工程师带进企业软件工程
+- [Accenture（埃森哲）](/static/companies/accenture.html): 排名 #4/17，指数 91.1，25 条公开信号。最近动作：Accenture 与 AWS 量算 AI token 经济学：成本重构后支出最高降 85%
+- [PwC（普华永道）](/static/companies/pwc.html): 排名 #5/17，指数 85.1，24 条公开信号。最近动作：PwC 发布《AI is accelerating arrival of Q-Day》：量子计算对加密与安全的冲击
+- [Bain（贝恩）](/static/companies/bain.html): 排名 #6/17，指数 83.0，20 条公开信号。最近动作：Bain 调查：工作流重构是 AI 成功的关键变量
+- [EY（安永）](/static/companies/ey.html): 排名 #7/17，指数 78.4，19 条公开信号。最近动作：EY US 设立 Assurance Forward Deployed Engineers：把 AI 工程师嵌进审计一线
+- [KPMG（毕马威）](/static/companies/kpmg.html): 排名 #8/17，指数 77.5，16 条公开信号。最近动作：KPMG『Project Exponential』：100+ AI agents 并行完成 FTSE 250 公司审计试点
+- [L.E.K. Consulting（艾意凯）](/static/companies/lek.html): 排名 #9/17，指数 74.4，17 条公开信号。最近动作：L.E.K. 发布 AI/GEO 消费者调查：2,650 名受访者中 30% 已用 AI 辅助购买决策
+- [Capgemini（凯捷）](/static/companies/capgemini.html): 排名 #10/17，指数 70.1，14 条公开信号。最近动作：Capgemini 发布《Resilient by design》：human-agent operations 重塑供应链
+- [Kearney（科尔尼）](/static/companies/kearney.html): 排名 #11/17，指数 64.9，12 条公开信号。最近动作：Kearney 发布《Turning AI ambition into measurable value》
+- [FTI Consulting（FTI Consulting）](/static/companies/fti.html): 排名 #12/17，指数 60.6，11 条公开信号。最近动作：FTI 研究：AI 整合正在重塑工业行业结构
+- [Oliver Wyman（奥纬咨询）](/static/companies/oliver_wyman.html): 排名 #13/17，指数 58.2，9 条公开信号。最近动作：Oliver Wyman 收购 Synpulse：1200 人金融科技与 AI 咨询公司并入，押注 AI 金融服务咨询
+- [Roland Berger（罗兰贝格）](/static/companies/roland_berger.html): 排名 #14/17，指数 42.0，6 条公开信号。最近动作：Roland Berger 测算：全球 AI 市场 2040 年将达约 5 万亿欧元（24 倍增长）
+- [Alvarez & Marsal（A&M）](/static/companies/alvarez_marsal.html): 排名 #15/17，指数 33.7，4 条公开信号。最近动作：A&M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律
+- [Strategy&（Strategy&）](/static/companies/strategy_and.html): 排名 #16/17，指数 29.2，3 条公开信号。最近动作：Strategy& 发布中东 AI 研究：卡塔尔 AI 市场到 2030 年将超 20 亿美元
+- [Monitor Deloitte（Monitor Deloitte）](/static/companies/monitor_deloitte.html): 排名 #17/17，指数 14.7，2 条公开信号。最近动作：归入 Deloitte AI 与 Agentic Network 体系观察
 
 ## 使用说明
 
