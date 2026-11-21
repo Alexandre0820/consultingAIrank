@@ -1,0 +1,692 @@
+{
+  "meta": {
+    "status": "published",
+    "note": "36 net-new events for the 2026-11-21 round (window Nov 16–21)"
+  },
+  "events": [
+    {
+      "company_id": "oliver_wyman",
+      "date": "2026-11-19",
+      "type": "investment",
+      "title": "Oliver Wyman 收购 Synpulse：1200 人金融科技与 AI 咨询公司并入，押注 AI 金融服务咨询",
+      "title_en": "Oliver Wyman to acquire Synpulse, a 1,200-person financial services and AI engineering consultancy",
+      "summary": "Marsh 旗下 Oliver Wyman 于 2026-11-19 宣布收购全球金融服务科技与 AI 工程咨询公司 Synpulse（约 1,200 名员工），战略+技术实施能力合并，强化金融行业 AI 与数字化交付；预计 2027 年初完成交割。这是本周榜单单笔最重的资本动作。",
+      "summary_en": "On Nov 19, 2026, Marsh's Oliver Wyman agreed to acquire Synpulse (~1,200 staff), combining strategy with technology and AI engineering delivery for financial services; closing expected early 2027. The heaviest single capital move on the board this week.",
+      "url": "https://www.oliverwyman.com/media-center/2026/nov/marshs-oliver-wyman-to-acquire-financial-services-and-technology-consultancy-synpulse.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 84,
+      "dimension_tags": [
+        "capital_ma",
+        "delivery_production",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-11-16",
+      "type": "partnership",
+      "title": "McKinsey 与 Cognition 结盟：把 Devin 自主 AI 工程师带进企业软件工程",
+      "title_en": "McKinsey and Cognition form alliance around Devin, the autonomous AI software engineer",
+      "summary": "McKinsey 于 2026-11-16 宣布与 Cognition（Devin 自主 AI 编码 agent 开发商）建立战略联盟：双方共同识别企业软件工程中的 AI 机会、部署 Devin 平台并规模化采纳，以『可度量的业务价值』为核心卖点；多家媒体跟进报道 AI 编码采用的分化数据。",
+      "summary_en": "McKinsey announced a strategic alliance with Cognition (maker of Devin) on Nov 16, 2026 to identify AI opportunities in software engineering, deploy the Devin platform and scale adoption, selling measurable business value.",
+      "url": "https://www.mckinsey.com/about-us/overview/alliances/alliances-blog/mckinsey-and-cognition-collaborate-to-scale-agentic-software-development-and-deliver-measurable-business-value",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 78,
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production"
+      ]
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-11-18",
+      "type": "partnership",
+      "title": "BCG 与 Microsoft 扩展合作：以 Frontier 模式重塑企业级 AI 业务再造",
+      "title_en": "BCG and Microsoft expand collaboration with a new model for AI-powered business reimagination",
+      "summary": "BCG 于 2026-11-18 宣布与 Microsoft 扩展全球合作：BCG/BCG X 的业务再造、产品策略与快速 AI 工程能力，与 Microsoft 前置部署团队（forward-deployed teams）并肩作业，帮助客户成为『frontier firms』并兑现 AI 价值。",
+      "summary_en": "On Nov 18, 2026 BCG and Microsoft expanded their collaboration: BCG and BCG X bring business reimagination, product strategy and fast AI engineering alongside Microsoft's forward-deployed teams to turn clients into 'frontier firms'.",
+      "url": "https://www.bcg.com/press/18november2026-bcg-microsoft-expand-collaboration-ai-powered-business-reimagination",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 76,
+      "dimension_tags": [
+        "tech_partnership",
+        "delivery_production"
+      ]
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-11-19",
+      "type": "partnership",
+      "title": "Schneider Electric 与 BCG 携手：印度 AI 驱动智能制造加速",
+      "title_en": "Schneider Electric and BCG join forces to accelerate AI-driven smart manufacturing in India",
+      "summary": "Schneider Electric 与 BCG 于 2026-11-19 宣布合作，在印度推进 AI 驱动的智能制造与数字化工厂落地，多家行业媒体独立报道。",
+      "summary_en": "Schneider Electric and BCG announced a partnership on Nov 19, 2026 to advance AI-led smart manufacturing in India, independently covered by multiple trade outlets.",
+      "url": "https://www.bcg.com/press",
+      "source_level": "media",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "tech_partnership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "BCG 发布《CMOs Are Thinking Big with Agentic AI》：营销负责人该想得更大",
+      "title_en": "BCG publishes 'CMOs Are Thinking Big with Agentic AI. They Should Be Thinking Even Bigger.'",
+      "summary": "BCG 于 2026-11-20 发布 CMO agentic AI 专题：营销职能如何从试点走向 agentic 规模化。",
+      "summary_en": "BCG published a CMO-focused agentic AI piece on Nov 20, 2026 on moving marketing from pilots to agentic scale.",
+      "url": "https://www.bcg.com/publications",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "bcg",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "BCG 分析 AI 算力短缺：谁将是赢家与输家",
+      "title_en": "BCG: How the AI Compute Shortage Will Create Winners and Losers",
+      "summary": "BCG 于 2026-11-20 发布 AI 算力短缺研究：算力约束如何重塑企业 AI 战略与竞争格局。",
+      "summary_en": "BCG published research on Nov 20, 2026 on how the AI compute shortage reshapes enterprise AI strategy and competitive position.",
+      "url": "https://www.bcg.com/publications",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "deloitte",
+      "date": "2026-11-16",
+      "type": "platform",
+      "title": "Deloitte Digital 发布 Converge™ Front Office：agentic AI 套件打通营销与销售工作流",
+      "title_en": "Converge by Deloitte Front Office launches: agentic AI suite for commercial growth",
+      "summary": "Deloitte Digital 于 2026-11-16（纽约）发布 Converge™ by Deloitte Front Office——一套连接型 agentic AI 解决方案，把 AI 投资转化为商业增长：协调营销/销售的 AI agent、接入既有系统而非替换，基于 75 万+预测数据点的研究。",
+      "summary_en": "Deloitte Digital launched Converge Front Office (Nov 16, 2026, NY): a connected agentic AI suite coordinating marketing and sales agents on top of existing systems, grounded in research on 750k+ predictive data points.",
+      "url": "https://www.prnewswire.com/news-releases/converge-by-deloitte-front-office-launches-to-help-organizations-turn-ai-investments-into-commercial-growth-302939860.html",
+      "source_level": "official_press_release",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "proprietary_assets",
+        "delivery_production"
+      ]
+    },
+    {
+      "company_id": "deloitte",
+      "date": "2026-11-19",
+      "type": "partnership",
+      "title": "Deloitte 与 Alibaba Group 联合发布白皮书",
+      "title_en": "Deloitte and Alibaba Group jointly release a white paper",
+      "summary": "Deloitte 于 2026-11-19 宣布与 Alibaba Group 联合发布白皮书，聚焦企业级 AI 与云场景的方法论。",
+      "summary_en": "Deloitte announced a joint white paper with Alibaba Group on Nov 19, 2026 covering enterprise AI and cloud methodologies.",
+      "url": "https://www.deloitte.com/global/en.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "tech_partnership",
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "deloitte",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "Deloitte 发布 2027 制造业展望：AI 走过试点期（与航空航天防务、工程建造展望同系列）",
+      "title_en": "Deloitte 2027 Manufacturing Outlook: AI moves beyond pilots (series with A&D and E&C outlooks)",
+      "summary": "Deloitte 于 2026-11-17 起陆续发布 2027 行业展望系列（制造业 11-20、航空航天防务与工程建造 11-17），制造业篇主题为『AI 走过试点』——从 PoC 转向规模化生产部署。",
+      "summary_en": "Deloitte rolled out its 2027 industry outlook series from Nov 17 (A&D, E&C) through Nov 20 (Manufacturing), the latter themed 'AI moves beyond pilots' toward scaled deployment.",
+      "url": "https://www.deloitte.com/industries/manufacturing.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "deloitte",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "Deloitte 发布 2026 秋季欧洲 CFO 调查",
+      "title_en": "Deloitte European CFO Survey, Autumn 2026",
+      "summary": "Deloitte 于 2026-11-20 发布欧洲 CFO 秋季调查，覆盖 AI 投资、融资环境与财务职能优先级。",
+      "summary_en": "Deloitte published the Autumn 2026 European CFO Survey on Nov 20, covering AI investment and finance priorities.",
+      "url": "https://www.deloitte.com/global/en.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "deloitte",
+      "date": "2026-11-17",
+      "type": "organization",
+      "title": "Deloitte 瑞士：经济逆风下仍重投 AI 转型",
+      "title_en": "Deloitte Switzerland keeps investing heavily in AI transformation despite tough climate",
+      "summary": "Deloitte 于 2026-11-17 表示，尽管宏观环境承压，瑞士分所仍持续加码自身 AI 转型投入。",
+      "summary_en": "Deloitte said on Nov 17, 2026 that its Swiss practice keeps investing heavily in its own AI transformation despite economic headwinds.",
+      "url": "https://www.deloitte.com/ch/en.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 64,
+      "dimension_tags": [
+        "organization",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "pwc",
+      "date": "2026-11-17",
+      "type": "partnership",
+      "title": "PwC 与 Harvey 发布 Pillar Two Tax AI Assistant：21 国全球最低税合规助手",
+      "title_en": "PwC and Harvey launch the Pillar Two Tax AI Assistant covering 21 countries",
+      "summary": "PwC 与 Harvey 于 2026-11-17 发布 Pillar Two 税务 AI 助手：把 OECD 全球最低税规则与 21 国本地立法放进单一研究工具，带引用与 safe harbour 机制，服务跨国集团合规。",
+      "summary_en": "PwC and Harvey launched the Pillar Two Tax AI Assistant (Nov 17, 2026): OECD global minimum tax rules plus local law across 21 countries in one research tool, with citations and a safe-harbour mechanism.",
+      "url": "https://www.harvey.ai/blog/pillar-two-tax-ai-assistant-from-pwc-and-harvey",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "tech_partnership",
+        "proprietary_assets"
+      ]
+    },
+    {
+      "company_id": "pwc",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "PwC 发布《AI is accelerating arrival of Q-Day》：量子计算对加密与安全的冲击",
+      "title_en": "PwC publishes 'AI is accelerating arrival of Q-Day'",
+      "summary": "PwC 于 2026-11-20 发布研究：AI 正加速『Q-Day』（量子计算破解现有加密之日）到来，企业需提前布局后量子安全。",
+      "summary_en": "PwC published research on Nov 20, 2026 arguing AI is accelerating 'Q-Day', urging post-quantum security planning.",
+      "url": "https://www.pwc.com/gx/en/issues/cybersecurity.html",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 66,
+      "dimension_tags": [
+        "thought_leadership",
+        "governance_risk"
+      ]
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-11-18",
+      "type": "platform",
+      "title": "EY 发布 EY Agentic Cyber Defense Center：为 AI 驱动企业提供 agentic 安全运营（×Microsoft）",
+      "title_en": "EY announces EY Agentic Cyber Defense Center, integrated with Microsoft technologies",
+      "summary": "EY 于 2026-11-18 发布 EY Agentic Cyber Defense Center：扩展与 Microsoft 的联盟，用 agentic AI 自动化威胁检测与事件响应，内置策略管控与防篡改审计记录，服务规模化 AI 运营的企业。",
+      "summary_en": "EY launched its Agentic Cyber Defense Center (Nov 18, 2026), expanding the Microsoft alliance to automate threat detection and incident response with policy controls and tamper-evident records.",
+      "url": "https://www.ey.com/en_gl/newsroom/2026/11/ey-announces-ey-agentic-cyber-defense-center-to-help-ai-powered-enterprises-scale-secure-operations",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 76,
+      "dimension_tags": [
+        "proprietary_assets",
+        "governance_risk"
+      ]
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-11-19",
+      "type": "organization",
+      "title": "EY US 设立 Assurance Forward Deployed Engineers：把 AI 工程师嵌进审计一线",
+      "title_en": "EY US introduces Assurance Forward Deployed Engineers",
+      "summary": "EY US 于 2026-11-19 宣布设立 Assurance Forward Deployed Engineers（FDE），桥接审计专业与工程能力，是其审计业务 AI 化转型（继 4 月全球 FDE 岗位后）的又一组织动作；彭博等媒体跟进。",
+      "summary_en": "EY US announced Assurance Forward Deployed Engineers (Nov 19, 2026), bridging assurance professionals and engineering — another organizational step in its AI-driven assurance transformation, covered by Bloomberg Tax.",
+      "url": "https://www.ey.com/en_us/newsroom/2026/11/ey-us-introduces-assurance-forward-deployed-engineers",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 74,
+      "dimension_tags": [
+        "organization",
+        "delivery_production"
+      ]
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-11-16",
+      "type": "partnership",
+      "title": "EY 与 Stuut 结盟：agentic AI 重塑 order-to-cash 流程",
+      "title_en": "EY announces alliance with Stuut to modernize order-to-cash with agentic AI",
+      "summary": "EY 于 2026-11-16 宣布与 Stuut 结盟，用 agentic AI 帮企业现代化 order-to-cash（订单到收款）流程。",
+      "summary_en": "EY announced an alliance with Stuut (Nov 16, 2026) to modernize order-to-cash processes with agentic AI.",
+      "url": "https://www.ey.com/en_gl/newsroom",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "tech_partnership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-11-18",
+      "type": "organization",
+      "title": "EY 上线 ey.ai Academy MENA：加速中东非地区员工 AI 采纳",
+      "title_en": "EY launches ey.ai Academy to accelerate workforce AI adoption across MENA",
+      "summary": "EY 于 2026-11-18 推出 ey.ai Academy 中东北非项目，系统性提升员工 AI 采纳能力，多家区域媒体报道。",
+      "summary_en": "EY launched ey.ai Academy for MENA (Nov 18, 2026) to scale workforce AI adoption, covered by regional outlets.",
+      "url": "https://www.ey.com/en_gl/newsroom",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 66,
+      "dimension_tags": [
+        "organization",
+        "delivery_production"
+      ]
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-11-19",
+      "type": "investment",
+      "title": "EY Canada 宣布投入 8,000 万加元：押注 AI 与未来工作能力",
+      "title_en": "EY Canada invests CAD$80 million in AI and future-of-work capabilities",
+      "summary": "EY Canada 于 2026-11-19 宣布三年投入 8,000 万加元建设 AI 与未来工作相关能力，多家媒体跟进。",
+      "summary_en": "EY Canada announced a CAD$80M investment (Nov 19, 2026) in AI and future-of-work capabilities, covered by national media.",
+      "url": "https://www.ey.com/en_ca/newsroom",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "organization",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "ey",
+      "date": "2026-11-16",
+      "type": "research",
+      "title": "EY-Parthenon 展望 2027：全球交易量将在历史高位企稳",
+      "title_en": "EY-Parthenon forecasts US deal volume to stabilize at historically high levels in 2027",
+      "summary": "EY-Parthenon 于 2026-11-16 发布展望：2027 年美国并购交易量将在历史高位企稳并小幅上行约 2%，AI 尽调与估值工具是交易链路的增量变量。",
+      "summary_en": "EY-Parthenon forecast (Nov 16, 2026) US deal volume stabilizing at historically high levels in 2027, edging up ~2%.",
+      "url": "https://www.ey.com/en_gl/newsroom",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "kpmg",
+      "date": "2026-11-17",
+      "type": "platform",
+      "title": "KPMG Clara intelligence（KCi）美国发布：『AI 使能、人类担保』审计新阶段",
+      "title_en": "KPMG unveils US launch of KPMG Clara intelligence (KCi), the next era of AI-enabled, human-assured audit",
+      "summary": "KPMG 于 2026-11-17 发布 KCi：在全球 Clara 智能审计平台上把 AI agent 带进审计工作流——agent 承担常规任务、审计师负监督复核，计划 2027 年部署到全部非上市公司审计，上市公司分阶段推开。",
+      "summary_en": "KPMG launched KCi in the US (Nov 17, 2026): AI agents embedded in audit workflows under human assurance, planned for all private-company audits in 2027 with phased public-company rollout.",
+      "url": "https://kpmg.com/us/en/media/news/kpmg-unveils-next-era-of-ai-enabled-human-assured-audit-with-us-launch-of-kpmg-clara-intelligence.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 78,
+      "dimension_tags": [
+        "proprietary_assets",
+        "delivery_production"
+      ]
+    },
+    {
+      "company_id": "kpmg",
+      "date": "2026-11-18",
+      "type": "platform",
+      "title": "KPMG『Project Exponential』：100+ AI agents 并行完成 FTSE 250 公司审计试点",
+      "title_en": "KPMG's Project Exponential: 100+ AI agents run a parallel audit of a FTSE 250 company",
+      "summary": "据 FT 2026-11-18 报道，KPMG UK 完成首个 AI『并行审计』实验：100+ AI agents 覆盖审计全阶段（取数、分析、记录、起草发现），结论是『AI 提问比人类审计师更深』但仍需人工介入；The Times、IT Pro 等多家跟进。行业首次端到端试点。",
+      "summary_en": "Per FT (Nov 18, 2026), KPMG UK ran its first AI 'parallel audit': 100+ agents covered all audit phases and 'asked better questions' than humans, though human intervention remained; widely covered by The Times, IT Pro and others.",
+      "url": "https://www.ft.com/content/5168b3e9-75d0-4be0-9ccd-d327d6b16c05",
+      "source_level": "media",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 78,
+      "dimension_tags": [
+        "delivery_production",
+        "proprietary_assets"
+      ]
+    },
+    {
+      "company_id": "kpmg",
+      "date": "2026-11-18",
+      "type": "platform",
+      "title": "KPMG 发布 Vultron：面向客户的前沿 AI 网络安全与常设网络防御能力",
+      "title_en": "KPMG launches Vultron: frontier AI cybersecurity capabilities and always-on cyber defense",
+      "summary": "KPMG 于 2026-11-18 发布 KPMG Vultron，把前沿 AI 能力产品化为客户网络安全与常设防御服务。",
+      "summary_en": "KPMG launched Vultron (Nov 18, 2026), productizing frontier AI cybersecurity capabilities for clients.",
+      "url": "https://kpmg.com/us/en/media/news.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 74,
+      "dimension_tags": [
+        "proprietary_assets",
+        "governance_risk"
+      ]
+    },
+    {
+      "company_id": "kpmg",
+      "date": "2026-11-17",
+      "type": "partnership",
+      "title": "Microsoft 牵头 AI Transparency Initiative：KPMG 等 40+ 组织共建 agent 透明与治理标准",
+      "title_en": "Microsoft launches AI Transparency Initiative with KPMG and 40+ organizations",
+      "summary": "Microsoft 于 2026-11-17 联合 40+ 组织发起 AI Transparency Initiative，标准化企业对 AI agent 行为的『可见、可验证、可控制』；KPMG 为其中主要专业服务伙伴。同一生态事件横向计入 KPMG。",
+      "summary_en": "Microsoft launched the AI Transparency Initiative (Nov 17, 2026) with 40+ organizations including KPMG to standardize how enterprises see, verify and control AI agent behavior. Credited to KPMG as a named ecosystem participant.",
+      "url": "https://news.microsoft.com/source/2026/11/17/microsoft-and-organizations-across-industries-launch-ai-transparency-initiative-to-strengthen-enterprise-trust-in-ai-models-and-agents",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "governance_risk",
+        "tech_partnership"
+      ]
+    },
+    {
+      "company_id": "accenture",
+      "date": "2026-11-17",
+      "type": "partnership",
+      "title": "Microsoft 牵头 AI Transparency Initiative：Accenture 等 40+ 组织共建 agent 透明与治理标准",
+      "title_en": "Microsoft launches AI Transparency Initiative with Accenture and 40+ organizations",
+      "summary": "Microsoft 于 2026-11-17 联合 40+ 组织发起 AI Transparency Initiative，Accenture 为主要专业服务伙伴；同一生态事件横向计入 Accenture。",
+      "summary_en": "Microsoft launched the AI Transparency Initiative (Nov 17, 2026) with 40+ organizations including Accenture. Credited to Accenture as a named ecosystem participant.",
+      "url": "https://news.microsoft.com/source/2026/11/17/microsoft-and-organizations-across-industries-launch-ai-transparency-initiative-to-strengthen-enterprise-trust-in-ai-models-and-agents",
+      "source_level": "vendor_official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "governance_risk",
+        "tech_partnership"
+      ]
+    },
+    {
+      "company_id": "accenture",
+      "date": "2026-11-18",
+      "type": "research",
+      "title": "Accenture 发布第 20 期年度《Life Trends 2027》：AI 时代人们要『按自己的方式』进步",
+      "title_en": "Accenture Life Trends 2027 (20th annual): people want progress in an AI era, but on their own terms",
+      "summary": "Accenture Song 于 2026-11-18（纽约）发布第 20 年度 Life Trends 2027《Walking Contradictions》：五大趋势拆解 AI 时代消费者的连接、自主、信任与选择矛盾，含『是否该给 AI 一个关机键』等调查。",
+      "summary_en": "Accenture Song launched the 20th annual Life Trends 2027 (Nov 18, 2026), 'Walking Contradictions': five trends on connection, agency, trust and choice in the AI era, including whether consumers want an AI 'off switch'.",
+      "url": "https://newsroom.accenture.com/news/2026/accenture-life-trends-2027-finds-people-want-progress-in-an-ai-era-but-on-their-own-terms",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "accenture",
+      "date": "2026-11-19",
+      "type": "partnership",
+      "title": "Accenture 与 AWS 量算 AI token 经济学：成本重构后支出最高降 85%",
+      "title_en": "Accenture and AWS quantify AI token economics: cost restructuring cuts token spend up to 85%",
+      "summary": "Accenture 与 AWS 于 2026-11-19 公布基于 Amazon Bedrock 的序列化方法与成本重构实践：AI token 支出最高可降 85%，把『AI 经济学』变成可售卖的交付能力。",
+      "summary_en": "Accenture and AWS published (Nov 19, 2026) a sequenced Amazon Bedrock approach showing AI token spend can drop up to 85% through cost restructuring.",
+      "url": "https://aws.amazon.com/blogs/",
+      "source_level": "vendor_official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "tech_partnership",
+        "client_value_proof"
+      ]
+    },
+    {
+      "company_id": "accenture",
+      "date": "2026-11-17",
+      "type": "partnership",
+      "title": "Accenture 与 Google Cloud：1,000+ 校园 AI 培训计划（印度先行）",
+      "title_en": "Accenture and Google Cloud target 1,000+ campuses for AI training, starting in India",
+      "summary": "Accenture 与 Google Cloud 于 2026-11-17 宣布面向 1,000+ 学校与学院的 AI 培训计划，先落地印度，多家媒体独立报道。",
+      "summary_en": "Accenture and Google Cloud announced (Nov 17, 2026) an AI training program across 1,000+ schools and colleges, starting in India, covered by multiple outlets.",
+      "url": "https://www.accenture.com/us-en/about/newsroom",
+      "source_level": "media",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "tech_partnership",
+        "organization"
+      ]
+    },
+    {
+      "company_id": "accenture",
+      "date": "2026-11-16",
+      "type": "research",
+      "title": "Wharton × Accenture 研究：多数 AI agent 任务不需要『法拉利级』前沿模型",
+      "title_en": "Wharton and Accenture find most AI agent tasks don't need frontier models",
+      "summary": "Wharton 与 Accenture 于 2026-11-16 发布联合研究：多数企业 AI agent 任务用不到前沿模型，但企业却在为此付费——为『AI 经济学』提供量化框架；Fortune 等报道。",
+      "summary_en": "Wharton and Accenture published joint research (Nov 16, 2026): most enterprise AI agent tasks don't need frontier models though firms pay for them, covered by Fortune.",
+      "url": "https://www.accenture.com/us-en/insights",
+      "source_level": "media",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "client_value_proof"
+      ]
+    },
+    {
+      "company_id": "capgemini",
+      "date": "2026-11-17",
+      "type": "research",
+      "title": "Capgemini 发布 TechnoVision 2027：AI 从助手变成自主行动者",
+      "title_en": "Capgemini TechnoVision 2027: AI shifts from assistant to autonomous actor",
+      "summary": "Capgemini 于 2026-11-17 发布 TechnoVision 2027 五大技术趋势：Agentic Enterprise、可信安全 AI、机器速网络安全、Agentic R&D、Agentic Commerce——定调 2027 年『agent 自主化』。",
+      "summary_en": "Capgemini published TechnoVision 2027 (Nov 17, 2026): five trends — the Agentic Enterprise, trusted AI, machine-speed cybersecurity, agentic R&D and agentic commerce.",
+      "url": "https://www.capgemini.com/news/press-releases/technovision-top-5-tech-trends-to-watch-in-2027",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "thought_leadership",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "capgemini",
+      "date": "2026-11-18",
+      "type": "research",
+      "title": "Capgemini 调查：59% 企业 AI 超预算，59% 已用/试点 multi-agent 但仅 10% 完成编排",
+      "title_en": "Capgemini survey: 59% say AI spending exceeded expectations; 59% use multi-agent AI but only 10% fully orchestrate",
+      "summary": "Capgemini 于 2026-11-17/18 发布企业 AI 支出与 multi-agent 编排调查：59% 高管称 AI 花超预期，59% 已部署或试点 multi-agent，但只有 10% 做到完整编排——agent 治理缺口显性化。",
+      "summary_en": "Capgemini published survey findings (Nov 17-18, 2026): 59% of executives say AI spend exceeded expectations; 59% run or pilot multi-agent AI but only 10% fully orchestrate it.",
+      "url": "https://www.capgemini.com/insights/",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "governance_risk"
+      ]
+    },
+    {
+      "company_id": "capgemini",
+      "date": "2026-11-21",
+      "type": "research",
+      "title": "Capgemini 发布《Resilient by design》：human-agent operations 重塑供应链",
+      "title_en": "Capgemini publishes 'Resilient by design: Reinventing supply chains with human-agent operations'",
+      "summary": "Capgemini 于 2026-11-21 发布供应链研究：human-agent operations（人机协同运营）作为供应链韧性的新设计范式。",
+      "summary_en": "Capgemini published supply chain research (Nov 21, 2026) on human-agent operations as the new resilience paradigm.",
+      "url": "https://www.capgemini.com/insights/",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 66,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-11-19",
+      "type": "research",
+      "title": "Bain 调查：工作流重构是 AI 成功的关键变量",
+      "title_en": "Bain survey: workflow redesign is the key to AI success",
+      "summary": "Bain 于 2026-11-19 发布调查：AI 价值兑现取决于工作流重构，而非工具叠加。",
+      "summary_en": "Bain published a survey (Nov 19, 2026) tying AI value realization to workflow redesign rather than tool stacking.",
+      "url": "https://www.bain.com/insights/",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "client_value_proof"
+      ]
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-11-16",
+      "type": "service_line",
+      "title": "Bain 发布东南亚 CEO 的 AI 转型指南，并在新加坡上线 AI Innovation Hub",
+      "title_en": "Bain releases Southeast Asia CEOs' guide to AI transformation and launches AI Innovation Hub in Singapore",
+      "summary": "Bain 于 2026-11-16 面向东南亚发布 CEO AI 转型指南，同时在新加坡上线 AI Innovation Hub——区域 AI 服务能力实体化（新加坡经济发展局渠道披露）。",
+      "summary_en": "Bain released a Southeast Asia CEO guide to AI transformation and launched an AI Innovation Hub in Singapore (Nov 16, 2026), disclosed via EDB.",
+      "url": "https://www.bain.com/about-us/news-press-releases/",
+      "source_level": "vendor_official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "strategy_signal",
+        "organization"
+      ]
+    },
+    {
+      "company_id": "roland_berger",
+      "date": "2026-11-16",
+      "type": "research",
+      "title": "Roland Berger 测算：全球 AI 市场 2040 年将达约 5 万亿欧元（24 倍增长）",
+      "title_en": "Roland Berger: global AI business to surge ~24x to around EUR 5 trillion by 2040",
+      "summary": "Roland Berger 于 2026-11-16 发布测算：全球 AI 业务规模将按 24 倍增长、至 2040 年约 5 万亿欧元，回报兑现仍在后段；多家媒体转引。",
+      "summary_en": "Roland Berger estimates (Nov 16, 2026) the global AI business will grow ~24x to about EUR 5 trillion by 2040, with returns still to be realized.",
+      "url": "https://www.rolandberger.com/en/insights/",
+      "source_level": "media",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 66,
+      "dimension_tags": [
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "fti",
+      "date": "2026-11-16",
+      "type": "organization",
+      "title": "FTI Consulting 任命 Farid Zahran 为高级董事总经理：执掌中东 AI 与数字化转型",
+      "title_en": "FTI Consulting appoints Farid Zahran as Senior Managing Director to lead AI and digital transformation in the Middle East",
+      "summary": "FTI Consulting 于 2026-11-16 任命 Farid Zahran 为高级董事总经理，领导中东区 AI 与数字化转型业务；区域媒体与官方通稿同步。",
+      "summary_en": "FTI Consulting appointed Farid Zahran as Senior Managing Director (Nov 16, 2026) to lead AI and digital transformation in the Middle East.",
+      "url": "https://www.fticonsulting.com/about/news",
+      "source_level": "official_press_release",
+      "confidence": "high",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 66,
+      "dimension_tags": [
+        "organization",
+        "strategy_signal"
+      ]
+    },
+    {
+      "company_id": "fti",
+      "date": "2026-11-17",
+      "type": "research",
+      "title": "FTI 研究：AI 整合正在重塑工业行业结构",
+      "title_en": "FTI: Structural shift reshaping industrials — AI integration",
+      "summary": "FTI Consulting 于 2026-11-17 发布工业行业研究：AI 整合是重塑行业结构的结构性变量。",
+      "summary_en": "FTI Consulting published industrials research (Nov 17, 2026) on AI integration as a structural force reshaping the sector.",
+      "url": "https://www.fticonsulting.com/insights",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 66,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    }
+  ]
+}

@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-11-07",
-    "updated_at": "2026-11-15",
+    "previous_updated_at": "2026-11-15",
+    "updated_at": "2026-11-21",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-11-15 期：窗口 11-08 至 11-15，RSS 查询矩阵第二轮（7 条查询 × when:14d）+ WebSearch 核实。净新增 25 条：McKinsey×4（银行业年度回顾 80 旗舰、agentic 业务规划 72、CFO ROI 70、医疗 2027 68）、BCG×2（Client Zero 自我转型实录 76、工业 AI 70）、Deloitte×4（收购 Flipside Crypto AI 业务 + Edisyl 84、董事会治理调查 74、保险展望 70、政府呼叫中心 68）、Accenture×1（Qantas 850 职位 AI 外包交易 78，路透）、PwC×4（85K 培训 72、批判性思维 68、收入周期 68、运营智能 68）、KPMG×2（Google Cloud+Wiz AI 威胁管理 78、泰国规模化 72）、Capgemini×1（AI 经济学快照 68）、Kearney×2、Roland Berger×1（TasteIndex 平台 70）、A&M×1（首个思想领导力事件 70）、FTI×1、Bain×2。上期补扫回填 5 条（McKinsey 伙伴生态/汽车质量、PwC AI 托管服务、BCG 2.6 万亿美元估算、Capgemini 保险人机协作，计入 11-07 期文件）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：收购+新公司 84、旗舰研究 80、联盟 78、大客户交易 78、自我转型实录 76、常规研究 68–74。A&M 结束长期 quiet（首个研究事件）；Kearney/RB/FTI/OW/Bain/PwC 覆盖继续补齐。【修正 11-15 当日】①补回 Kearney 三条上期漏网（美容展望 11-05、金融 AI 11-03、组织之坎 11-07）；②PwC Priest（2024-07-16）archive 回填此前漏提交，本批补提交；③QA 教训：验证探针必须同时覆盖 title 与 title_en（中英双语）。",
+    "method_note": "2026-11-21 期：窗口 11-16 至 11-21，Google News RSS 查询矩阵 16 条（每家 when:10d + 并购/人才专项）+ WebSearch 定向核实 10 条。净新增 36 条：Oliver Wyman 收购 Synpulse（1200 人金融科技与 AI 咨询，84，本周最重）为 OW 首次登顶资本大动作；KPMG 大平台周——KCi 美国发布（78）+ FTSE 250 全审计 100+ agents 试点（78，FT 报道）+ Vultron（74）+ Microsoft AI Transparency Initiative（72）；EY 双平台+组织周——Agentic Cyber Defense Center（76）+ Assurance FDE（74）+ Canada 8000 万加元投入；McKinsey×Cognition Devin 联盟（78）；BCG×Microsoft Frontier 模式扩展（76）+ Schneider 印度制造（72）；Deloitte Converge Front Office 发布（72）；Accenture Life Trends 2027 第 20 期（72）+ Transparency Initiative（72）+ AWS token 经济学（70）；PwC×Harvey Pillar Two 21 国税务助手（72）；Capgemini TechnoVision 2027（72）。查重拦截：Bain 数据中心报告（11-15 期已有，11-17 报道为二次传播）、PwC 批判性思维/85000 培训（11-09/10 期已有，11-19 为同源后续）、Qantas（11-10 期已有）。负向信号排除：Deloitte 诉前承包商窃取 AI 商业秘密、Deloitte WA 大学报告返工、KPMG Canada 数据泄露、Accenture 葡萄牙裁员 950 人（按 2026-11-08 决策不入池不计分）。沉默公司：Kearney、A&M、L.E.K.、Strategy&、Monitor Deloitte（5 家）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：收购+AI 能力 84、平台发布/规模化 76-78、数据型联盟 72-78、年度旗舰研究 72、常规研究 66-68。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
