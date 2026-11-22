@@ -18,13 +18,13 @@
 - [Bain（贝恩）](/static/companies/bain.html): 排名 #6/17，指数 83.0，20 条公开信号。最近动作：Bain 调查：工作流重构是 AI 成功的关键变量
 - [EY（安永）](/static/companies/ey.html): 排名 #7/17，指数 78.4，19 条公开信号。最近动作：EY US 设立 Assurance Forward Deployed Engineers：把 AI 工程师嵌进审计一线
 - [KPMG（毕马威）](/static/companies/kpmg.html): 排名 #8/17，指数 77.5，16 条公开信号。最近动作：KPMG『Project Exponential』：100+ AI agents 并行完成 FTSE 250 公司审计试点
-- [L.E.K. Consulting（艾意凯）](/static/companies/lek.html): 排名 #9/17，指数 74.4，17 条公开信号。最近动作：L.E.K. 发布 AI/GEO 消费者调查：2,650 名受访者中 30% 已用 AI 辅助购买决策
+- [L.E.K. Consulting（艾意凯）](/static/companies/lek.html): 排名 #9/17，指数 75.9，18 条公开信号。最近动作：L.E.K. 发布《AI 如何重塑音乐产业经济学》
 - [Capgemini（凯捷）](/static/companies/capgemini.html): 排名 #10/17，指数 70.1，14 条公开信号。最近动作：Capgemini 发布《Resilient by design》：human-agent operations 重塑供应链
-- [Kearney（科尔尼）](/static/companies/kearney.html): 排名 #11/17，指数 64.9，12 条公开信号。最近动作：Kearney 发布《Turning AI ambition into measurable value》
+- [Kearney（科尔尼）](/static/companies/kearney.html): 排名 #11/17，指数 67.1，13 条公开信号。最近动作：Kearney 发布能源转型研究：AI 数据中心是最大扩张驱动力
 - [FTI Consulting（FTI Consulting）](/static/companies/fti.html): 排名 #12/17，指数 60.6，11 条公开信号。最近动作：FTI 研究：AI 整合正在重塑工业行业结构
 - [Oliver Wyman（奥纬咨询）](/static/companies/oliver_wyman.html): 排名 #13/17，指数 58.2，9 条公开信号。最近动作：Oliver Wyman 收购 Synpulse：1200 人金融科技与 AI 咨询公司并入，押注 AI 金融服务咨询
 - [Roland Berger（罗兰贝格）](/static/companies/roland_berger.html): 排名 #14/17，指数 42.0，6 条公开信号。最近动作：Roland Berger 测算：全球 AI 市场 2040 年将达约 5 万亿欧元（24 倍增长）
-- [Alvarez & Marsal（A&M）](/static/companies/alvarez_marsal.html): 排名 #15/17，指数 33.7，4 条公开信号。最近动作：A&M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律
+- [Alvarez & Marsal（A&M）](/static/companies/alvarez_marsal.html): 排名 #15/17，指数 37.8，5 条公开信号。最近动作：A&M 出席 SBR 科技企业峰会并发表 AI 采纳差距观点
 - [Strategy&（Strategy&）](/static/companies/strategy_and.html): 排名 #16/17，指数 29.2，3 条公开信号。最近动作：Strategy& 发布中东 AI 研究：卡塔尔 AI 市场到 2030 年将超 20 亿美元
 - [Monitor Deloitte（Monitor Deloitte）](/static/companies/monitor_deloitte.html): 排名 #17/17，指数 14.7，2 条公开信号。最近动作：归入 Deloitte AI 与 Agentic Network 体系观察
 
