@@ -1,0 +1,382 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>
+@page { size: 1280px 720px; margin: 0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { --ink:#171411; --muted:#746b5f; --red:#B42318; --paper:#FFF8EC; --paper2:#F6ECD9; --line:rgba(23,20,17,.16); --navy:#1B2F52; --gold:#C9A227; }
+body { font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; color:var(--ink); }
+.slide { width:1280px; height:720px; position:relative; overflow:hidden; page-break-after:always;
+  background: radial-gradient(900px 500px at -5% -8%, rgba(180,35,24,.10), transparent 60%),
+              radial-gradient(760px 480px at 105% 6%, rgba(27,47,82,.08), transparent 55%),
+              linear-gradient(150deg,#FFF8EC 0%,#F6ECD9 62%,#F0E0C4 100%); }
+.slide::before { content:""; position:absolute; inset:0; opacity:.35; pointer-events:none;
+  background-image: radial-gradient(rgba(23,20,17,.09) 1.4px, transparent 1.4px); background-size:30px 30px; }
+.foot { position:absolute; left:64px; right:64px; bottom:26px; display:flex; justify-content:space-between;
+  font-size:13px; color:var(--muted); font-weight:600; border-top:1px solid var(--line); padding-top:12px; }
+.serif { font-family:"Songti SC","Noto Serif SC",serif; }
+/* 封面 */
+.cover { display:flex; flex-direction:column; justify-content:center; padding:0 96px; }
+.cover .eyebrow { color:var(--red); letter-spacing:.34em; font-size:15px; font-weight:800; margin-bottom:22px; }
+.cover h1 { font-family:"Songti SC",serif; font-size:104px; letter-spacing:.02em; line-height:1.04; margin-bottom:18px; }
+.cover .sub { font-size:21px; color:#3e352d; line-height:1.7; max-width:900px; margin-bottom:34px; }
+.cover .strip { display:flex; gap:16px; }
+.cover .strip div { border:1px solid var(--line); background:rgba(255,255,255,.55); border-radius:16px; padding:14px 26px; text-align:center; }
+.cover .strip strong { display:block; font-size:30px; }
+.cover .strip small { color:var(--muted); font-size:12.5px; font-weight:700; }
+/* 通用内容页 */
+.head { padding:52px 64px 0; position:relative; }
+.head .eyebrow { color:var(--red); letter-spacing:.3em; font-size:13px; font-weight:800; margin-bottom:10px; }
+.head h2 { font-family:"Songti SC",serif; font-size:44px; margin-bottom:6px; }
+.head .lede { color:#3e352d; font-size:17px; line-height:1.6; max-width:1050px; }
+.body { padding:22px 64px 0; position:relative; }
+/* S2 三问 */
+.qgrid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin:10px 0 20px; }
+.qcard { border:1px solid var(--line); background:rgba(255,255,255,.55); border-radius:18px; padding:20px 22px; }
+.qcard b { font-size:22px; display:block; margin-bottom:8px; font-family:"Songti SC",serif; }
+.qcard p { font-size:14px; color:var(--muted); line-height:1.6; }
+.stance { border-left:6px solid var(--red); background:rgba(255,255,255,.5); border-radius:0 16px 16px 0; padding:16px 22px; font-size:16.5px; line-height:1.7; }
+.stance b { color:var(--red); }
+/* S3 方法 */
+.mgrid { display:grid; grid-template-columns: 1.05fr 1fr; gap:26px; }
+.dimbar { display:grid; gap:8px; }
+.dimbar .row { display:grid; grid-template-columns: 130px 1fr 52px; align-items:center; gap:10px; font-size:13.5px; }
+.dimbar .bar { height:13px; border-radius:99px; background:rgba(23,20,17,.08); overflow:hidden; }
+.dimbar .bar i { display:block; height:100%; background:linear-gradient(90deg,#B42318,#ff7a00); border-radius:99px; }
+.flow { display:grid; gap:10px; }
+.flow .step { border:1px solid var(--line); background:rgba(255,255,255,.55); border-radius:14px; padding:12px 16px; font-size:14px; line-height:1.55; }
+.flow .step b { color:var(--navy); }
+/* S4 收敛 */
+.conv { display:grid; grid-template-columns: 1.5fr 1fr; gap:26px; align-items:center; }
+.conv img { width:100%; border-radius:14px; border:1px solid var(--line); }
+.bignums { display:grid; gap:14px; }
+.bignums div { border:1px solid var(--line); background:rgba(255,255,255,.55); border-radius:16px; padding:16px 20px; }
+.bignums strong { font-size:34px; display:block; }
+.bignums small { color:var(--muted); font-size:13px; font-weight:700; }
+.punch { margin-top:6px; border-left:6px solid var(--red); padding:8px 0 8px 18px; font-size:17px; line-height:1.65; font-weight:700; }
+/* S5 总览 */
+table { width:100%; border-collapse:collapse; }
+th { text-align:left; font-size:13px; color:var(--muted); letter-spacing:.08em; padding:8px 10px; border-bottom:2px solid var(--line); }
+td { padding:8.5px 10px; border-bottom:1px solid var(--line); font-size:16.5px; }
+td.rk { font-weight:900; color:var(--red); width:52px; }
+td.nm strong { font-size:18px; } td.nm .en2 { color:var(--muted); font-size:13px; margin-left:10px; }
+td.sc { font-family:ui-monospace,Menlo,monospace; font-weight:800; width:80px; }
+td.dl { width:70px; font-weight:900; } td.dl.up { color:var(--red); } td.dl.down { color:#0d7a55; }
+td.kw { color:var(--muted); font-size:14px; }
+/* 公司页 */
+.firm .top { display:flex; align-items:center; gap:26px; padding:44px 64px 0; }
+.rankbadge { width:96px; height:96px; border-radius:24px; background:var(--ink); color:var(--paper); display:grid; place-items:center; font-size:40px; font-weight:900; font-family:ui-monospace,Menlo,monospace; }
+.firm h2 { font-family:"Songti SC",serif; font-size:46px; } .firm h2 .en { color:var(--muted); font-size:24px; margin-left:14px; }
+.firm .tier { color:var(--muted); font-size:15px; margin-top:6px; font-weight:700; }
+.indexbox { margin-left:auto; text-align:right; border:1px solid var(--line); background:rgba(255,255,255,.55); border-radius:18px; padding:14px 26px; }
+.indexbox small { display:block; color:var(--muted); font-size:12px; font-weight:800; letter-spacing:.1em; }
+.indexbox strong { font-size:52px; font-family:ui-monospace,Menlo,monospace; }
+.indexbox em { display:block; font-style:normal; font-size:14px; font-weight:800; margin-top:2px; }
+em.up { color:var(--red); } em.down { color:#0d7a55; } em.flat { color:var(--muted); }
+.firm .cols { display:grid; grid-template-columns: 460px 1fr; gap:30px; padding:16px 64px 0; }
+.firm .left img { width:100%; max-width:440px; display:block; margin:0 auto; }
+.radar-note { text-align:center; color:var(--muted); font-size:12.5px; font-weight:700; margin-top:2px; }
+.firm h3 { font-size:16px; color:var(--navy); letter-spacing:.12em; margin:12px 0 10px; font-weight:900; }
+.evt { display:grid; grid-template-columns: 52px 74px 1fr 56px; gap:10px; align-items:baseline; padding:8px 0; border-bottom:1px solid var(--line); font-size:14.5px; }
+.evt-date { color:var(--muted); font-family:ui-monospace,Menlo,monospace; font-size:12px; }
+.evt-tag { background:var(--navy); color:#fff; border-radius:99px; padding:2px 10px; font-size:11px; font-weight:800; justify-self:start; }
+.evt-title { line-height:1.4; }
+.evt-score { text-align:right; font-weight:900; color:var(--red); font-family:ui-monospace,Menlo,monospace; }
+.judge { border-left:6px solid var(--gold); background:rgba(255,255,255,.5); border-radius:0 14px 14px 0; padding:12px 18px; font-size:14.5px; line-height:1.72; }
+/* S16 收尾 */
+.endgrid { display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:8px; }
+.endcard { border:1px solid var(--line); background:rgba(255,255,255,.55); border-radius:18px; padding:20px 24px; }
+.endcard h3 { font-family:"Songti SC",serif; font-size:20px; margin-bottom:10px; }
+.endcard p { font-size:14.5px; line-height:1.75; color:#3e352d; }
+.endcard .link { color:#16418C; font-weight:800; }
+</style></head><body>
+
+<section class="slide cover">
+  <p class="eyebrow">AI CONSULTING SIGNAL INDEX · 第 20 期</p>
+  <h1>AI咨询行动榜</h1>
+  <p class="sub">17 家传统咨询 / 专业服务公司的 AI 动作,20 周跟踪,277 条带原始来源的公开证据。<br/>不问谁名气大,只看谁正在把 AI 变成合作、平台、并购、交付与客户价值。</p>
+  <div class="strip">
+    <div><strong>17</strong><small>家跟踪公司</small></div>
+    <div><strong>20</strong><small>期周度快照</small></div>
+    <div><strong>277</strong><small>条公开 AI 信号</small></div>
+    <div><strong>9</strong><small>个加权评估维度</small></div>
+    <div><strong>2026-11-21</strong><small>数据快照</small></div>
+  </div>
+  <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 1 / 16</span></div>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">WHY · 为什么做</p><h2>客户的三个问题,市面给不出答案</h2></div>
+  <div class="body">
+    <div class="qgrid">
+      <div class="qcard"><b>选哪家?</b><p>MBB、四大、埃森哲、精品战略公司都在喊 AI,但谁在真投入、谁在真交付,公开信息散落在几十个渠道里。</p></div>
+      <div class="qcard"><b>怎么选?</b><p>品牌声誉不等于 AI 能力。没有统一维度,比较就只能停留在案例故事和销售话术。</p></div>
+      <div class="qcard"><b>效果如何?</b><p>客户价值证明最稀缺:有量化结果、可核验的案例,比任何叙事都难找。</p></div>
+    </div>
+    <div class="stance">所以我们把<b>「发表的研究、真实的投资、构建的合作网络」</b>都做成证据,映射到九个加权维度,每周跟踪一次——<b>榜单衡量的是正向行动力</b>:争议、诉讼、质量事故等负向信号不入池、不计分。</div>
+    <div class="qgrid" style="margin-top:16px;">
+      <div class="qcard"><b style="font-size:16px;">选哪家 →</b><p>看主榜与公司追踪页:17 家公司每家一页,完整事件时间线,全部带原始来源链接。</p></div>
+      <div class="qcard"><b style="font-size:16px;">怎么选 →</b><p>用九个统一维度做横向比较,而不是比品牌故事;每一维都有 0–5 分锚点定义。</p></div>
+      <div class="qcard"><b style="font-size:16px;">效果如何 →</b><p>客户价值证明单独成维:有量化结果、可核验的案例才计分,叙事不计分。</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 2 / 16</span></div>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">HOW · 怎么做</p><h2>证据层 + 九维模型,每周一评</h2></div>
+  <div class="body">
+    <div class="mgrid">
+      <div class="dimbar">
+        <div class="row"><span>战略信号</span><span class="bar"><i style="width:93.10850439882698%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">12.7%</span></div><div class="row"><span>科技合作</span><span class="bar"><i style="width:86.51026392961877%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">11.8%</span></div><div class="row"><span>自有平台资产</span><span class="bar"><i style="width:93.10850439882698%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">12.7%</span></div><div class="row"><span>交付生产化</span><span class="bar"><i style="width:99.70674486803517%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">13.6%</span></div><div class="row"><span>并购资本</span><span class="bar"><i style="width:53.51906158357771%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">7.3%</span></div><div class="row"><span>行业覆盖</span><span class="bar"><i style="width:66.71554252199414%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">9.1%</span></div><div class="row"><span>客户价值</span><span class="bar"><i style="width:79.91202346041055%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">10.9%</span></div><div class="row"><span>治理风控</span><span class="bar"><i style="width:93.10850439882698%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">12.7%</span></div><div class="row"><span>思考力</span><span class="bar"><i style="width:66.71554252199414%"></i></span><span style="text-align:right;color:var(--muted);font-weight:800;">9.1%</span></div>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:6px;">九维权重合计 100%。每维 0–5 分人工评估,加权合成为 0–100 分;主榜显示口径为相对行动力指数(当期榜首 = 100)。</p>
+      </div>
+      <div class="flow">
+        <div class="step"><b>① 五层信源矩阵</b>:17 家官方新闻室 / 合作方生态 / Google News RSS 与贸易媒体 / 分析师与政府记录 / 中文本土——每周并发扫描。</div>
+        <div class="step"><b>② 查重与核实</b>:标题+英文双语关键词查重,二次传播不入榜;每条事件验证日期与来源分级(官方 / 合作方 / 媒体)。</div>
+        <div class="step"><b>③ 锚点打分</b>:收购+新能力 84、平台发布 76–78、联盟 72–78、旗舰研究 72、常规研究 66–68——同类校准,防「发得多=分高」。</div>
+        <div class="step"><b>④ 新鲜度衰减</b>:证据随时间衰减(30 天外开始打折),排名反映「最近谁在动」,而不是历史声量。</div>
+        <div class="step"><b>⑤ 全程可核验</b>:277 条事件全部带原始来源链接与置信度,公司追踪页可逐条点开对证。</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 3 / 16</span></div>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">FINDING · 关键发现</p><h2>排名正在收敛:它第一次可以被用于决策</h2></div>
+  <div class="body">
+    <div class="conv">
+      <img src="images/convergence-cn.png" alt="收敛曲线"/>
+      <div class="bignums">
+        <div><strong>2.47 → 0.47</strong><small>平均名次摆动:第 2 期 → 第 20 期</small></div>
+        <div><strong>12/17 → 6/17</strong><small>发生名次变动的公司数:早期 → 近期</small></div>
+        <div><strong>BCG</strong><small>自 9 月起连续稳居第 1</small></div>
+      </div>
+    </div>
+    <p class="punch">早期榜单证据薄,一条大新闻就能 reshuffle;20 周、277 条证据之后,排名只随有意义的证据移动——<span style="color:var(--red);">一个每周都在洗牌的榜单没法用于决策,而收敛之后的榜单开始可以。</span></p>
+  </div>
+  <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 4 / 16</span></div>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">BOARD · 本期榜单</p><h2>Top 10 总览(相对行动力指数,当期榜首 = 100)</h2></div>
+  <div class="body">
+    <table><thead><tr><th>排名</th><th>公司</th><th>指数</th><th>较上期</th><th>最新最强信号</th></tr></thead><tbody><tr><td class="rk">1</td><td class="nm">波士顿咨询<span class="en2">BCG</span></td><td class="sc">100.0</td><td class="dl flat">—</td><td class="kw">11-18 · BCG 与 Microsoft 扩展合作：以 Front</td></tr><tr><td class="rk">2</td><td class="nm">德勤<span class="en2">Deloitte</span></td><td class="sc">95.7</td><td class="dl up">▲1</td><td class="kw">11-12 · Deloitte 收购 Flipside Crypto </td></tr><tr><td class="rk">3</td><td class="nm">麦肯锡<span class="en2">McKinsey</span></td><td class="sc">92.9</td><td class="dl down">▼1</td><td class="kw">11-10 · McKinsey 发布《Global Banking A</td></tr><tr><td class="rk">4</td><td class="nm">埃森哲<span class="en2">Accenture</span></td><td class="sc">91.1</td><td class="dl flat">—</td><td class="kw">09-18 · Anthropic 任命 Accenture 为首个前沿</td></tr><tr><td class="rk">5</td><td class="nm">普华永道<span class="en2">PwC</span></td><td class="sc">85.1</td><td class="dl flat">—</td><td class="kw">10-05 · PwC 与 Cohere 宣布全球联盟，加速安全可信的企</td></tr><tr><td class="rk">6</td><td class="nm">贝恩<span class="en2">Bain</span></td><td class="sc">83.0</td><td class="dl flat">—</td><td class="kw">09-29 · Bain 发布第 7 届全球技术报告：AI 需在 203</td></tr><tr><td class="rk">7</td><td class="nm">安永<span class="en2">EY</span></td><td class="sc">78.4</td><td class="dl up">▲2</td><td class="kw">11-18 · EY 发布 EY Agentic Cyber Defen</td></tr><tr><td class="rk">8</td><td class="nm">毕马威<span class="en2">KPMG</span></td><td class="sc">77.5</td><td class="dl flat">—</td><td class="kw">11-17 · KPMG Clara intelligence（KCi）</td></tr><tr><td class="rk">9</td><td class="nm">艾意凯<span class="en2">L.E.K. Consulting</span></td><td class="sc">75.9</td><td class="dl down">▼2</td><td class="kw">10-23 · L.E.K. 发布《Warehouse Automati</td></tr><tr><td class="rk">10</td><td class="nm">凯捷<span class="en2">Capgemini</span></td><td class="sc">70.1</td><td class="dl up">▲1</td><td class="kw">10-30 · Capgemini Q3 营收 €60.7 亿（+12.</td></tr></tbody></table>
+    <p style="font-size:13px;color:var(--muted);margin-top:10px;">沉默公司:Strategy&、Monitor Deloitte(本窗零新增)。指数为研究预览口径,不代表权威排名。</p>
+  </div>
+  <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 5 / 16</span></div>
+</section>
+
+
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#1</div>
+      <div class="who">
+        <h2>波士顿咨询 <span class="en">BCG</span></h2>
+        <p class="tier">MBB</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>100.0</strong><em class="flat">— 与上期持平</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-bcg.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">11-18</span><span class="evt-tag">科技合作</span><span class="evt-title">BCG 与 Microsoft 扩展合作：以 Frontier 模式重塑企业级 AI 业务再造</span><span class="evt-score">76 分</span></div><div class="evt"><span class="evt-date">11-11</span><span class="evt-tag">研究/指数</span><span class="evt-title">BCG 发布《Client Zero: Inside BCG's AI Transformation》：把自己当第一个客户</span><span class="evt-score">76 分</span></div><div class="evt"><span class="evt-date">09-30</span><span class="evt-tag">研究/指数</span><span class="evt-title">BCG 发布《The Formula for Agentic AI Value》：2026 Applied AI Index 显示近半数企业已从 AI 获得可测价值</span><span class="evt-score">82 分</span></div><div class="evt"><span class="evt-date">11-03</span><span class="evt-tag">研究/指数</span><span class="evt-title">BCG 估算：AI 生态到 2030 年每年需要 2.6 万亿美元投入</span><span class="evt-score">74 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">研究密度与自我实验叠加:「Client Zero」把自己当第一个客户,与 Microsoft 的 Frontier 模式把联盟变成联合交付;近 60 天 19 条信号为全场最高。短板是自有平台资产相对少,高排名依赖联盟深度。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 6 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#2</div>
+      <div class="who">
+        <h2>德勤 <span class="en">Deloitte</span></h2>
+        <p class="tier">Big Four</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>95.7</strong><em class="up">▲ 较上期上升 1 位</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-deloitte.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">11-12</span><span class="evt-tag">投资/并购</span><span class="evt-title">Deloitte 收购 Flipside Crypto 的 AI 业务并设立 Edisyl：定位「企业 AI 的知识层」</span><span class="evt-score">84 分</span></div><div class="evt"><span class="evt-date">09-02</span><span class="evt-tag">AI 服务线</span><span class="evt-title">Deloitte 新设 Open Model Engineering 全球 practice：用开源+专有混合模型路径规模化 agentic AI</span><span class="evt-score">86 分</span></div><div class="evt"><span class="evt-date">08-31</span><span class="evt-tag">投资/并购</span><span class="evt-title">Deloitte 收购 Wavicle Data Solutions，扩张数据与 AI 工程能力并强化 Databricks 联盟</span><span class="evt-score">84 分</span></div><div class="evt"><span class="evt-date">10-14</span><span class="evt-tag">平台/工具</span><span class="evt-title">Deloitte 发布 Risk Clarity：AI-native 风险管理平台（经 Ascend 交付）</span><span class="evt-score">82 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">平台+并购双轮:Converge Front Office 套件家族化,收购 Flipside/Edisyl 补 AI 工程能力,行业展望系列铺满制造/防务/建造。把 AI 产品化成可售卖资产的动作最实;多线并进的聚焦度是下一观察点。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 7 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#3</div>
+      <div class="who">
+        <h2>麦肯锡 <span class="en">McKinsey</span></h2>
+        <p class="tier">MBB</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>92.9</strong><em class="down">▼ 较上期下降 1 位</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-mckinsey.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">11-10</span><span class="evt-tag">研究/指数</span><span class="evt-title">McKinsey 发布《Global Banking Annual Review 2026》：AI 分裂红利</span><span class="evt-score">80 分</span></div><div class="evt"><span class="evt-date">09-15</span><span class="evt-tag">研究/指数</span><span class="evt-title">McKinsey 发布《Technology Trends Outlook 2026》年度技术趋势报告</span><span class="evt-score">86 分</span></div><div class="evt"><span class="evt-date">08-26</span><span class="evt-tag">研究/指数</span><span class="evt-title">McKinsey 发布《The State of AI》2026 年度全球调查：采纳广泛但 ROI 兑现仍滞后</span><span class="evt-score">86 分</span></div><div class="evt"><span class="evt-date">11-16</span><span class="evt-tag">科技合作</span><span class="evt-title">McKinsey 与 Cognition 结盟：把 Devin 自主 AI 工程师带进企业软件工程</span><span class="evt-score">78 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">旗舰研究定调能力第一——全球银行业年度回顾、agentic 业务规划系列持续引导客户认知;Cognition 联盟补上 agentic 工程短板,QuantumBlack 是技术底座。交付类证据密度低于 BCG/Deloitte。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 8 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#4</div>
+      <div class="who">
+        <h2>埃森哲 <span class="en">Accenture</span></h2>
+        <p class="tier">Technology Consulting / SI</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>91.1</strong><em class="flat">— 与上期持平</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-accenture.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">09-18</span><span class="evt-tag">科技合作</span><span class="evt-title">Anthropic 任命 Accenture 为首个前沿模型「嵌入式评估方」，双方合计投入 20 亿美元</span><span class="evt-score">90 分</span></div><div class="evt"><span class="evt-date">10-08</span><span class="evt-tag">科技合作</span><span class="evt-title">Accenture 与 Dell 成立 Accenture Dell Business Group：帮企业在自有环境规模化私有 AI 与 agentic AI 负载</span><span class="evt-score">86 分</span></div><div class="evt"><span class="evt-date">09-08</span><span class="evt-tag">科技合作</span><span class="evt-title">Accenture 与 Google Cloud 成立 Gemini Enterprise Business Group，配置千人级 forward deployed engineers</span><span class="evt-score">86 分</span></div><div class="evt"><span class="evt-date">10-19</span><span class="evt-tag">科技合作</span><span class="evt-title">Accenture Federal Services 与 Google Public Sector 设立 Gemini Launchpads，为美国联邦机构快速构建专属 AI agents</span><span class="evt-score">82 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">联盟最广、客户证明最多:Qantas 大单、AWS token 经济学(最高降 85%)、Microsoft 透明度倡议;近 60 天 7 条联盟+3 条客户证明为前五中唯一。规模化交付与可量化价值证据最强;自有 IP 相对分散在联盟里。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 9 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#5</div>
+      <div class="who">
+        <h2>普华永道 <span class="en">PwC</span></h2>
+        <p class="tier">Big Four</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>85.1</strong><em class="flat">— 与上期持平</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-pwc.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">10-05</span><span class="evt-tag">科技合作</span><span class="evt-title">PwC 与 Cohere 宣布全球联盟，加速安全可信的企业级 AI 采用</span><span class="evt-score">84 分</span></div><div class="evt"><span class="evt-date">07-15</span><span class="evt-tag">科技合作</span><span class="evt-title">PwC 与 OpenAI 推出 agentic customer engagement and service 方案</span><span class="evt-score">92 分</span></div><div class="evt"><span class="evt-date">11-03</span><span class="evt-tag">AI 服务线</span><span class="evt-title">PwC 推出 AI 托管服务：agentic 后台与中台运营</span><span class="evt-score">74 分</span></div><div class="evt"><span class="evt-date">06-14</span><span class="evt-tag">科技合作</span><span class="evt-title">PwC 成为 OpenAI Partner Network 首发全球合作伙伴</span><span class="evt-score">88 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">垂直场景产品化:Harvey Pillar Two 税务助手覆盖 21 国合规,85,000 人培训是全场最大组织动作;量子安全等前瞻研究持续。把 AI 塞进具体合规场景的路径清晰;平台声量弱于 Deloitte/Accenture。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 10 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#6</div>
+      <div class="who">
+        <h2>贝恩 <span class="en">Bain</span></h2>
+        <p class="tier">MBB</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>83.0</strong><em class="flat">— 与上期持平</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-bain.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">09-29</span><span class="evt-tag">研究/指数</span><span class="evt-title">Bain 发布第 7 届全球技术报告：AI 需在 2031 年前创造约 6 万亿美元年收入才能支撑基建投入</span><span class="evt-score">86 分</span></div><div class="evt"><span class="evt-date">09-10</span><span class="evt-tag">研究/指数</span><span class="evt-title">Bain 发布重磅研究：AI 将左右 4.7 万亿美元利润分配，重塑行业竞争格局</span><span class="evt-score">86 分</span></div><div class="evt"><span class="evt-date">08-25</span><span class="evt-tag">科技合作</span><span class="evt-title">Bain 与 Anthropic 达成全球合作，以 Global Premier 级别加入 Claude Partner Network</span><span class="evt-score">84 分</span></div><div class="evt"><span class="evt-date">11</span><span class="evt-tag">研究/指数</span><span class="evt-title">Bain 发布《What's Still Missing from Your AI Strategy? Proprietary Intelligence》：差异化来自专有智能</span><span class="evt-score">74 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">研究节奏稳定:工作流重构调查、数据中心繁荣测算、东南亚 AI Innovation Hub 落地。判断:观点先行,平台与客户证明类证据待补——榜单位置目前靠研究密度支撑。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 11 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#7</div>
+      <div class="who">
+        <h2>安永 <span class="en">EY</span></h2>
+        <p class="tier">Big Four</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>78.4</strong><em class="up">▲ 较上期上升 2 位</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-ey.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">11-18</span><span class="evt-tag">平台/工具</span><span class="evt-title">EY 发布 EY Agentic Cyber Defense Center：为 AI 驱动企业提供 agentic 安全运营（×Microsoft）</span><span class="evt-score">76 分</span></div><div class="evt"><span class="evt-date">11-02</span><span class="evt-tag">科技合作</span><span class="evt-title">EY 与 CrowdStrike 达成全球联盟：在 Falcon 平台上构建 AI 安全能力，覆盖 20+ 成员所</span><span class="evt-score">78 分</span></div><div class="evt"><span class="evt-date">11-19</span><span class="evt-tag">组织/岗位</span><span class="evt-title">EY US 设立 Assurance Forward Deployed Engineers：把 AI 工程师嵌进审计一线</span><span class="evt-score">74 分</span></div><div class="evt"><span class="evt-date">11-03</span><span class="evt-tag">研究/指数</span><span class="evt-title">EY 发布客户服务 AI 报告：头部组织核心客服 KPI 提升超 50%</span><span class="evt-score">74 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">审计场景最激进:Agentic Cyber Defense Center(×Microsoft)、Assurance FDE 把工程师嵌进审计一线、加拿大 8,000 万加元投入。治理+审计双叙事正在变成产品;扩张速度与质量控制的平衡是关键变量。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 12 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#8</div>
+      <div class="who">
+        <h2>毕马威 <span class="en">KPMG</span></h2>
+        <p class="tier">Big Four</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>77.5</strong><em class="flat">— 与上期持平</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-kpmg.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">11-17</span><span class="evt-tag">平台/工具</span><span class="evt-title">KPMG Clara intelligence（KCi）美国发布：『AI 使能、人类担保』审计新阶段</span><span class="evt-score">78 分</span></div><div class="evt"><span class="evt-date">11-13</span><span class="evt-tag">科技合作</span><span class="evt-title">KPMG 联合 Google Cloud 与 Wiz 推出 AI Threat Management：企业 AI 规模化安全防御</span><span class="evt-score">78 分</span></div><div class="evt"><span class="evt-date">10-21</span><span class="evt-tag">科技合作</span><span class="evt-title">KPMG 与 Microsoft 启动 Frontier Innovation Hub：加速可信 agentic AI 的企业级采用</span><span class="evt-score">82 分</span></div><div class="evt"><span class="evt-date">07-21</span><span class="evt-tag">科技合作</span><span class="evt-title">KPMG 与 OpenAI 建立战略联盟，推进 AI-native enterprise workflows</span><span class="evt-score">91 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">行业首例试验者:FTSE 250 全审计 100+ AI agents 并行(FT 报道)、KCi 美国发布、Vultron 网络安全。审计工作流 AI 化走在四大会计师事务所最前;强监管场景里『人类担保』机制的可信度决定上限。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 13 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#9</div>
+      <div class="who">
+        <h2>艾意凯 <span class="en">L.E.K. Consulting</span></h2>
+        <p class="tier">Strategy Consulting</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>75.9</strong><em class="down">▼ 较上期下降 2 位</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-lek.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">10-23</span><span class="evt-tag">研究/指数</span><span class="evt-title">L.E.K. 发布《Warehouse Automation》：AI、机器人与履约的未来</span><span class="evt-score">74 分</span></div><div class="evt"><span class="evt-date">10-09</span><span class="evt-tag">研究/指数</span><span class="evt-title">L.E.K. 发布 S&amp;P 500 AI 价值差距分析：各行业的 AI 领先者是谁</span><span class="evt-score">80 分</span></div><div class="evt"><span class="evt-date">10-27</span><span class="evt-tag">研究/指数</span><span class="evt-title">L.E.K. 发布 AI/GEO 消费者调查：2,650 名受访者中 30% 已用 AI 辅助购买决策</span><span class="evt-score">72 分</span></div><div class="evt"><span class="evt-date">10-23</span><span class="evt-tag">研究/指数</span><span class="evt-title">L.E.K. 发布临床试验 AI 价值分析：哪些环节产生可测量影响</span><span class="evt-score">70 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">精品研究型选手:GEO 消费者调查、临床试验、音乐产业经济学等垂直 AI 研究稳定输出;无平台/并购动作。证据结构单一——研究一旦断档,排名支撑立即变薄。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 14 / 16</span></div>
+  </section>
+  <section class="slide firm">
+    <div class="top">
+      <div class="rankbadge">#10</div>
+      <div class="who">
+        <h2>凯捷 <span class="en">Capgemini</span></h2>
+        <p class="tier">Technology Consulting / SI</p>
+      </div>
+      <div class="indexbox"><small>相对行动力指数</small><strong>70.1</strong><em class="up">▲ 较上期上升 1 位</em></div>
+    </div>
+    <div class="cols">
+      <div class="left"><img src="images/radar-capgemini.png" alt="雷达图"/><p class="radar-note">人工九维分(2026-08 研究口径)· 0–5 分</p></div>
+      <div class="right">
+        <h3>近期动态(按证据分排序)</h3>
+        <div class="evt"><span class="evt-date">10-30</span><span class="evt-tag">客户证明</span><span class="evt-title">Capgemini Q3 营收 €60.7 亿（+12.6%）并年内第二次上调 2026 指引：AI 需求成为核心驱动</span><span class="evt-score">82 分</span></div><div class="evt"><span class="evt-date">11-17</span><span class="evt-tag">研究/指数</span><span class="evt-title">Capgemini 发布 TechnoVision 2027：AI 从助手变成自主行动者</span><span class="evt-score">72 分</span></div><div class="evt"><span class="evt-date">11-04</span><span class="evt-tag">研究/指数</span><span class="evt-title">Capgemini 发布金融服务多代理 AI 研究：机构加速转向多代理体系以追求底线价值</span><span class="evt-score">72 分</span></div><div class="evt"><span class="evt-date">10-12</span><span class="evt-tag">研究/指数</span><span class="evt-title">Capgemini 发布汽车业 agentic AI 治理报告：68% 试用，仅 5% 治理成熟</span><span class="evt-score">76 分</span></div>
+        <h3>我们的判断</h3>
+        <div class="judge">趋势研究强于平台证据:TechnoVision 2027 定调 agentic enterprise,multi-agent 编排调查有数据密度;工程底盘扎实但自有平台叙事分散。</div>
+      </div>
+    </div>
+    <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 15 / 16</span></div>
+  </section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">CAVEATS · 口径与使用</p><h2>怎么读,以及怎么不该读</h2></div>
+  <div class="body">
+    <div class="endgrid">
+      <div class="endcard"><h3>三条诚实声明</h3><p>① 这是<b>研究预览,不是权威排名</b>:指数衡量最近公开动作的强弱,不是综合能力或客户口碑。<br/><br/>② 榜单<b>只看公开可核验的动作</b>:沉默 ≠ 没做事,只是本周没有新增可验证信号。<br/><br/>③ <b>负向信号不计分</b>:争议与事故留给市场定价,榜单只衡量正向行动力。</p></div>
+      <div class="endcard"><h3>三个入口</h3><p><b>主榜</b>:每周更新,谁升谁降、最强信号、沉默名单——30 秒读完。<br/><br/><b>公司追踪页</b>:17 家公司每家一页,完整事件时间线+全部来源链接,适合尽调前的快查。<br/><br/><b>AI 行动力自评</b>:用同款九维模型给你的公司打分,与 17 家样本的中位线逐维对比,并给出最弱两维的补证据清单。</p></div>
+    </div>
+    <p class="punch" style="margin-top:22px;">榜单变化,每周一封:<span style="color:#16418C;">consultingrank.netlify.app</span> · Praxis Advisory</p>
+  </div>
+  <div class="foot"><span>AI咨询行动榜 · 第 20 期 · 数据截至 2026-11-21</span><span>Praxis Advisory · 16 / 16</span></div>
+</section>
+
+</body></html>
