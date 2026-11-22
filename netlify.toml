@@ -21,3 +21,23 @@
   from = "/companies/*"
   to = "/static/companies/:splat"
   status = 200
+
+[[redirects]]
+  from = "/assessment"
+  to = "/static/assessment.html"
+  status = 200
+
+[[redirects]]
+  from = "/assessment.html"
+  to = "/static/assessment.html"
+  status = 200
+
+[[redirects]]
+  from = "/history"
+  to = "/static/history.html"
+  status = 200
+
+[[redirects]]
+  from = "/dimensions"
+  to = "/static/dimensions.html"
+  status = 200
