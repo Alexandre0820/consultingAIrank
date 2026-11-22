@@ -157,6 +157,7 @@ RSS 负责"发现"，WebSearch 负责：
 | 10-01/07 | EY-Parthenon CEO Outlook | 仅扫新闻室 | insights 直取 |
 | 10-23/27 | L.E.K. 临床试验 AI、消费者 GEO 调查 | 仅扫新闻室 | RSS 矩阵 |
 | 11-01/05 | Deloitte 合规工具、McKinsey 风险职能、BCG 保险蓝图等 6 条 | 仅扫新闻室 | Google News RSS |
+| 11-21 | Kearney 能源转型 AI 数据中心研究、L.E.K. 音乐产业 AI 经济学、A&M AI 采纳差距观点（3 条差点判为沉默） | 低覆盖公司只跑了 RSS 矩阵，未按本手册对 Tier-B 公司做 insights 直取 | WebSearch 定向直查 + insights 页直取 |
 
 每条新漏检：先补数（按窗口归属回填），再追根因（渠道缺口 or 流程缺口），最后更新本文件与 sources.json。
 

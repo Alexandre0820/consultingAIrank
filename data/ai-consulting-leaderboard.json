@@ -6,7 +6,7 @@
     "updated_at": "2026-11-21",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-11-21 期：窗口 11-16 至 11-21，Google News RSS 查询矩阵 16 条（每家 when:10d + 并购/人才专项）+ WebSearch 定向核实 10 条。净新增 36 条：Oliver Wyman 收购 Synpulse（1200 人金融科技与 AI 咨询，84，本周最重）为 OW 首次登顶资本大动作；KPMG 大平台周——KCi 美国发布（78）+ FTSE 250 全审计 100+ agents 试点（78，FT 报道）+ Vultron（74）+ Microsoft AI Transparency Initiative（72）；EY 双平台+组织周——Agentic Cyber Defense Center（76）+ Assurance FDE（74）+ Canada 8000 万加元投入；McKinsey×Cognition Devin 联盟（78）；BCG×Microsoft Frontier 模式扩展（76）+ Schneider 印度制造（72）；Deloitte Converge Front Office 发布（72）；Accenture Life Trends 2027 第 20 期（72）+ Transparency Initiative（72）+ AWS token 经济学（70）；PwC×Harvey Pillar Two 21 国税务助手（72）；Capgemini TechnoVision 2027（72）。查重拦截：Bain 数据中心报告（11-15 期已有，11-17 报道为二次传播）、PwC 批判性思维/85000 培训（11-09/10 期已有，11-19 为同源后续）、Qantas（11-10 期已有）。负向信号排除：Deloitte 诉前承包商窃取 AI 商业秘密、Deloitte WA 大学报告返工、KPMG Canada 数据泄露、Accenture 葡萄牙裁员 950 人（按 2026-11-08 决策不入池不计分）。沉默公司：Kearney、A&M、L.E.K.、Strategy&、Monitor Deloitte（5 家）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：收购+AI 能力 84、平台发布/规模化 76-78、数据型联盟 72-78、年度旗舰研究 72、常规研究 66-68。",
+    "method_note": "2026-11-21 期：窗口 11-16 至 11-21，Google News RSS 查询矩阵 16 条（每家 when:10d + 并购/人才专项）+ WebSearch 定向核实 10 条。净新增 39 条（含低覆盖公司 insights 直查回填 3 条）：Oliver Wyman 收购 Synpulse（1200 人金融科技与 AI 咨询，84，本周最重）为 OW 首次登顶资本大动作；KPMG 大平台周——KCi 美国发布（78）+ FTSE 250 全审计 100+ agents 试点（78，FT 报道）+ Vultron（74）+ Microsoft AI Transparency Initiative（72）；EY 双平台+组织周——Agentic Cyber Defense Center（76）+ Assurance FDE（74）+ Canada 8000 万加元投入；McKinsey×Cognition Devin 联盟（78）；BCG×Microsoft Frontier 模式扩展（76）+ Schneider 印度制造（72）；Deloitte Converge Front Office 发布（72）；Accenture Life Trends 2027 第 20 期（72）+ Transparency Initiative（72）+ AWS token 经济学（70）；PwC×Harvey Pillar Two 21 国税务助手（72）；Capgemini TechnoVision 2027（72）。查重拦截：Bain 数据中心报告（11-15 期已有，11-17 报道为二次传播）、PwC 批判性思维/85000 培训（11-09/10 期已有，11-19 为同源后续）、Qantas（11-10 期已有）。负向信号排除：Deloitte 诉前承包商窃取 AI 商业秘密、Deloitte WA 大学报告返工、KPMG Canada 数据泄露、Accenture 葡萄牙裁员 950 人（按 2026-11-08 决策不入池不计分）。沉默公司：Strategy&、Monitor Deloitte（2 家）。Kearney（能源转型 AI 数据中心研究 66）、L.E.K.（音乐产业 AI 经济学 68）、A&M（AI 采纳差距峰会观点 60）经 insights 直查后回填——教训再次验证：低覆盖公司 RSS 覆盖弱，必须 insights 直取。评分口径不变：相对行动力指数（当期榜首=100）；锚点：收购+AI 能力 84、平台发布/规模化 76-78、数据型联盟 72-78、年度旗舰研究 72、常规研究 66-68。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -1937,6 +1937,24 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-11-20",
+          "type": "research",
+          "title": "Kearney 发布能源转型研究：AI 数据中心是最大扩张驱动力",
+          "title_en": "Kearney: the real energy transition has not happened yet — AI data centers as the biggest expansion driver",
+          "summary": "Kearney 于 2026-11-20 发布能源转型研究：真正的能源转型远未完成，两大扩张驱动为 AI 数据中心与空调负荷；下一代 AI 系统功耗之高将推动数据中心走向 800V 直流配电。",
+          "summary_en": "Kearney published (Nov 20, 2026) that the real energy transition is far from complete, with AI data centers among the biggest expansion drivers; next-gen AI systems push data centers toward 800V DC power distribution.",
+          "url": "https://www.kearney.com/industry/industrial-goods-services/article/the-real-energy-transition-has-not-happened-yet",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "web_search_fallback",
+          "verification_status": "verified",
+          "event_score": 66,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
         {
           "date": "2026-11-11",
           "type": "research",
@@ -5209,6 +5227,23 @@
       },
       "events": [
         {
+          "date": "2026-11-18",
+          "type": "organization",
+          "title": "A&M 出席 SBR 科技企业峰会并发表 AI 采纳差距观点",
+          "title_en": "A&M discusses the AI Adoption Gap at the SBR Technology Enterprise Summit 2026",
+          "summary": "A&M 于 2026-11-18 在 SBR Technology Enterprise Summit 2026 发表 AI 采纳差距观点：80% 企业获得生产力提升、但仅 37% 看到利润改善——属于活动衍生观点内容，非原创研究。",
+          "summary_en": "A&M shared views on the AI adoption gap (80% gain productivity, 37% see profit) at the SBR Technology Enterprise Summit 2026, published Nov 18, 2026 — event-derived commentary rather than original research.",
+          "url": "https://www.alvarezandmarsal.com/insights",
+          "source_level": "official",
+          "confidence": "medium",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 60,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
+        {
           "date": "2026-11-10",
           "type": "research",
           "title": "A&M 发布《Bringing Discipline to AI Portfolio Decisions》：AI 投资组合决策纪律",
@@ -5313,6 +5348,24 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-11-18",
+          "type": "research",
+          "title": "L.E.K. 发布《AI 如何重塑音乐产业经济学》",
+          "title_en": "L.E.K. publishes How AI Is Reshaping the Economics of the Music Industry",
+          "summary": "L.E.K. 于 2026-11-18 发布研究：AI 正在重塑音乐产业的经济学结构——创作、分发与变现链条的成本与价值分配。",
+          "summary_en": "L.E.K. published research (Nov 18, 2026) on AI reshaping the economics of the music industry across creation, distribution and monetization.",
+          "url": "https://www.lek.com/insights",
+          "source_level": "official",
+          "confidence": "medium",
+          "discovery_channel": "web_search_fallback",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
         {
           "date": "2026-10-27",
           "type": "research",

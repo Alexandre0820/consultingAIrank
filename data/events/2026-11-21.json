@@ -1,7 +1,7 @@
 {
   "meta": {
     "status": "published",
-    "note": "36 net-new events for the 2026-11-21 round (window Nov 16–21)"
+    "note": "39 net-new events for the 2026-11-21 round (window Nov 16-21; +3 backfilled after insight-page checks for low-coverage firms)"
   },
   "events": [
     {
@@ -682,6 +682,62 @@
       "confidence": "medium",
       "discovery_channel": "google_news_rss",
       "verification_status": "partially_verified",
+      "event_score": 66,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "lek",
+      "date": "2026-11-18",
+      "type": "research",
+      "title": "L.E.K. 发布《AI 如何重塑音乐产业经济学》",
+      "title_en": "L.E.K. publishes How AI Is Reshaping the Economics of the Music Industry",
+      "summary": "L.E.K. 于 2026-11-18 发布研究：AI 正在重塑音乐产业的经济学结构——创作、分发与变现链条的成本与价值分配。",
+      "summary_en": "L.E.K. published research (Nov 18, 2026) on AI reshaping the economics of the music industry across creation, distribution and monetization.",
+      "url": "https://www.lek.com/insights",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "web_search_fallback",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "alvarez_marsal",
+      "date": "2026-11-18",
+      "type": "organization",
+      "title": "A&M 出席 SBR 科技企业峰会并发表 AI 采纳差距观点",
+      "title_en": "A&M discusses the AI Adoption Gap at the SBR Technology Enterprise Summit 2026",
+      "summary": "A&M 于 2026-11-18 在 SBR Technology Enterprise Summit 2026 发表 AI 采纳差距观点：80% 企业获得生产力提升、但仅 37% 看到利润改善——属于活动衍生观点内容，非原创研究。",
+      "summary_en": "A&M shared views on the AI adoption gap (80% gain productivity, 37% see profit) at the SBR Technology Enterprise Summit 2026, published Nov 18, 2026 — event-derived commentary rather than original research.",
+      "url": "https://www.alvarezandmarsal.com/insights",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "google_news_rss",
+      "verification_status": "partially_verified",
+      "event_score": 60,
+      "dimension_tags": [
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "kearney",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "Kearney 发布能源转型研究：AI 数据中心是最大扩张驱动力",
+      "title_en": "Kearney: the real energy transition has not happened yet — AI data centers as the biggest expansion driver",
+      "summary": "Kearney 于 2026-11-20 发布能源转型研究：真正的能源转型远未完成，两大扩张驱动为 AI 数据中心与空调负荷；下一代 AI 系统功耗之高将推动数据中心走向 800V 直流配电。",
+      "summary_en": "Kearney published (Nov 20, 2026) that the real energy transition is far from complete, with AI data centers among the biggest expansion drivers; next-gen AI systems push data centers toward 800V DC power distribution.",
+      "url": "https://www.kearney.com/industry/industrial-goods-services/article/the-real-energy-transition-has-not-happened-yet",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "web_search_fallback",
+      "verification_status": "verified",
       "event_score": 66,
       "dimension_tags": [
         "thought_leadership",
