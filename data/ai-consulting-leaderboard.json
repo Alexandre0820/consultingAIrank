@@ -6,7 +6,7 @@
     "updated_at": "2026-11-28",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-11-28 期：双周合并更新（11-16 至 11-28；11-16–21 已由上轮覆盖 40 条）。本轮 RSS 查询矩阵（7 条 × when:14d）+ 查重后：净新增 8 条（11-22 至 11-28）——McKinsey×2（AI 经济学四案例 72、agentic factory 72）、BCG 制造业地图 70、Bain agent 支出治理 70、Deloitte 欧洲 CFO 调查 74、Capgemini 物理 AI 机器人 68、OW 12% 调查 72、KPMG GTR 金融服务章节 70；上期（11-21 轮）补扫回填 7 条漏网（McKinsey×2、PwC 投资会计 72、Bain×2、FTI×2，计入 11-21 期文件）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：旗舰/系列调查 74、案例研究 72、常规研究 68–70。负面信号按 2026-11-08 决策不梳理（Deloitte 起诉前承包商、Accenture 葡萄牙裁员等已忽略）。",
+    "method_note": "2026-11-28 期：双周合并更新（11-16 至 11-28；11-16–21 已由上轮覆盖 40 条）。本轮 RSS 查询矩阵（7 条 × when:14d）+ 查重后：净新增 8 条（11-22 至 11-28）——McKinsey×2（AI 经济学四案例 72、agentic factory 72）、BCG 制造业地图 70、Bain agent 支出治理 70、Deloitte 欧洲 CFO 调查 74、Capgemini 物理 AI 机器人 68、OW 12% 调查 72、KPMG GTR 金融服务章节 70；上期（11-21 轮）补扫回填 7 条漏网（McKinsey×2、PwC 投资会计 72、Bain×2、FTI×2，计入 11-21 期文件）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：旗舰/系列调查 74、案例研究 72、常规研究 68–70。负面信号按 2026-11-08 决策不梳理（Deloitte 起诉前承包商、Accenture 葡萄牙裁员等已忽略）。【11-28 补扫 11-28 当日】应用户要求对本期零捕获公司（EY/Accenture/L.E.K./Kearney/RB/A&M/Strategy&/Monitor/OW）做专项补扫：浏览器直取 insights 页 + 逐司 WebSearch。结果：Kearney 增材制造研究（11-27）入榜；RB 客服研究、A&M 定价洞察因日期未确认入观察池；EY/Accenture insights 为常青内容、OW/L.E.K./Strategy&/Monitor 本期真安静。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -2080,6 +2080,24 @@
         "brand_strength": 4
       },
       "events": [
+        {
+          "date": "2026-11-27",
+          "type": "research",
+          "title": "Kearney 发布《Innovation Unpacked：从原型到量产的增材制造》",
+          "title_en": "Kearney publishes 'Innovation Unpacked: From prototypes to production with additive manufacturing'",
+          "summary": "Kearney 于 2026-11-27 发布增材制造研究：从原型到量产的路径拆解。",
+          "summary_en": "Kearney published 'Innovation Unpacked: From prototypes to production with additive manufacturing' on November 27, 2026.",
+          "url": "https://www.kearney.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "websearch_direct",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
         {
           "date": "2026-11-20",
           "type": "research",

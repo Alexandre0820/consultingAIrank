@@ -5,7 +5,65 @@
     "leaderboard_snapshot_date": "2026-11-21",
     "status": "staging",
     "collection_method": "双周合并更新（窗口 11-16 至 11-28）：RSS 查询矩阵 7 条 × when:14d + WebSearch 核实；上期（11-21 轮，另一会话执行）漏网 7 条回填，本期净新增 8 条",
-    "notes": "Deloitte 黑五调查因 AI 关联度弱未入；Accenture 葡萄牙 950 裁员（与 Meta 相关）非正向 AI 信号未入；Accenture AI 合规/监管数据两条 Yahoo 分析为投资评论未入；FTI 假日零售调查 AI 关联弱未入。"
+    "notes": "Deloitte 黑五调查因 AI 关联度弱未入；Accenture 葡萄牙 950 裁员（与 Meta 相关）非正向 AI 信号未入；Accenture AI 合规/监管数据两条 Yahoo 分析为投资评论未入；FTI 假日零售调查 AI 关联弱未入。 11-28 补扫结论：①EY/Accenture insights 页为常青内容为主，11 月带日期事件已在库（EY Cyber Defense Center、AI Week、Accenture Life Trends）；②OW/L.E.K./Strategy&/Monitor 本 fortnight 无新带日期事件；③零捕获公司分两类——真安静 vs 内容无日期，后者待逐条日期核对后回填（RB、A&M 两条已入池）。"
   },
-  "items": []
+  "items": [
+    {
+      "id": "cand-20261128-w1",
+      "published_at": null,
+      "discovered_at": "2026-11-28",
+      "scope": "company",
+      "company_ids": [
+        "roland_berger"
+      ],
+      "company_names": [
+        "Roland Berger"
+      ],
+      "candidate_event_type": "research",
+      "title": "Roland Berger 研究《AI in customer service: from hype to measurable value》",
+      "summary": "罗兰贝格发布 2026 年 AI 客服研究：从炒作到可测量价值。",
+      "why_it_matters": "行业场景覆盖维度信号；但发布日期未在检索中确认。",
+      "url": "https://www.rolandberger.com/en/insights/",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "websearch_direct",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "发布日期未确认，待 RB insights 页日期核对后回填。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    },
+    {
+      "id": "cand-20261128-w2",
+      "published_at": null,
+      "discovered_at": "2026-11-28",
+      "scope": "company",
+      "company_ids": [
+        "alvarez_marsal"
+      ],
+      "company_names": [
+        "Alvarez & Marsal"
+      ],
+      "candidate_event_type": "research",
+      "title": "A&M 发布《The End of the AI Flat-Rate Era》",
+      "summary": "A&M 发布 AI 成本管理洞察：AI 统一定价时代结束。",
+      "why_it_matters": "AI 成本治理视角；发布日期未确认。",
+      "url": "https://www.alvarezandmarsal.com/insights",
+      "source_level": "official",
+      "confidence": "medium",
+      "discovery_channel": "websearch_direct",
+      "verification_status": "pending",
+      "dimension_tags": [
+        "thought_leadership"
+      ],
+      "merge_recommendation": "hold",
+      "merge_rationale": "发布日期未确认。",
+      "leaderboard_action": "watch_only",
+      "matched_leaderboard_event_id": null
+    }
+  ]
 }
