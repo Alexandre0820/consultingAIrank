@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>行业基准 · 九维分布与自评对标 · AI咨询行动榜</title>
+    <meta name="description" content="咨询行业 AI 行动力九维基准:17 家跟踪公司的外部评估分布、最普遍短板、分层画像,以及匿名自评提交聚合而成的社区基准。回答『我所在的类型,正常水平是什么样』。" />
+    <meta property="og:title" content="行业基准 · AI咨询行动榜" />
+    <meta property="og:description" content="九维分布基线、最普遍短板、分层画像与社区自评聚合。" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .bench-page { width: min(1320px, calc(100vw - 40px)); margin: 0 auto; padding: 0 0 64px; }
+      .bench-hero { padding: 40px 0 8px; }
+      .bench-hero h1 { font-size: clamp(40px, 5.5vw, 72px); margin-bottom: 10px; }
+      .bench-hero__intro { max-width: 900px; color: #3e352d; font-size: 17.5px; line-height: 1.7; margin: 0; }
+      .bench-panel { margin: 22px 0 0; border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; background: var(--panel); box-shadow: var(--shadow); }
+      .bench-panel > h2 { margin: 0 0 4px; font-size: 24px; }
+      .bench-panel > .panel-note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.65; margin: 0 0 18px; }
+      .band-row { display: grid; grid-template-columns: 150px 1fr 130px; gap: 14px; align-items: center; margin-bottom: 13px; }
+      .band-row .name { font-size: 14.5px; font-weight: 700; }
+      .band-track { position: relative; height: 30px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, 0.42); }
+      .band-fill { position: absolute; top: 5px; bottom: 5px; border-radius: 8px; background: linear-gradient(90deg, rgba(27, 47, 82, 0.30), rgba(27, 47, 82, 0.55)); }
+      .band-mark { position: absolute; top: -5px; bottom: -5px; width: 3px; background: var(--red); border-radius: 2px; }
+      .band-mark::after { content: "中位"; position: absolute; top: -17px; left: -12px; font-size: 10px; color: var(--red); font-weight: 800; white-space: nowrap; }
+      .band-nums { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; color: var(--muted); font-weight: 700; text-align: right; line-height: 1.5; }
+      .weak-row { display: grid; grid-template-columns: 150px 1fr 56px; gap: 14px; align-items: center; margin-bottom: 10px; }
+      .weak-bar { height: 16px; border-radius: 99px; background: linear-gradient(90deg, var(--red), #ff7a00); }
+      .weak-count { text-align: right; font-weight: 900; color: var(--red); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      table.bench-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+      .bench-table th { text-align: center; color: var(--muted); font-size: 12px; padding: 8px 6px; border-bottom: 2px solid var(--line); font-family: ui-sans-serif, system-ui, sans-serif; }
+      .bench-table td { padding: 8px 6px; border-bottom: 1px solid var(--line); text-align: center; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 700; }
+      .bench-table td.dim { text-align: left; font-family: inherit; font-weight: 700; }
+      .bench-table td.dim small { color: var(--muted); font-weight: 600; margin-left: 8px; }
+      .empty-state { border: 1.5px dashed var(--line); border-radius: 16px; padding: 26px; text-align: center; color: var(--muted); font-size: 14.5px; line-height: 1.7; }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+      .cta-row a { border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px; background: var(--ink); color: var(--paper-2); font-size: 13.5px; font-weight: 900; text-decoration: none; }
+      .cta-row a.ghost { background: rgba(255, 255, 255, 0.5); color: var(--ink); }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="site-nav__brand" href="./index.html">AI咨询行动榜</a>
+      <div class="site-nav__right">
+        <div class="site-nav__links">
+          <a class="site-nav__link" href="./index.html" data-nav="board">行动力榜单</a>
+          <a class="site-nav__link" href="./history.html" data-nav="history">历史排名</a>
+          <a class="site-nav__link" href="./dimensions.html" data-nav="dims">维度对比</a>
+          <a class="site-nav__link" href="./companies/" data-nav="companies">公司追踪</a>
+          <a class="site-nav__link" href="./assessment.html" data-nav="tool">自评工具</a>
+          <a class="site-nav__link is-active" href="./benchmark.html" data-nav="benchmark">行业基准</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bench-page">
+      <header class="bench-hero">
+        <p class="eyebrow">Industry Benchmark · 行业基准</p>
+        <h1>你所在的类型,正常水平是什么样</h1>
+        <p class="bench-hero__intro">
+          榜单回答"谁在前面",基准回答"正常是什么样"。下面是 17 家跟踪公司的外部评估分布、
+          全行业最普遍的短板、分层画像,以及匿名自评聚合出的社区基准——
+          它由每一个使用<a href="./assessment.html">自评工具</a>的人共同建成。
+        </p>
+      </header>
+
+      <section class="bench-panel" aria-label="九维分布基线">
+        <h2>九维分布 · 17 家外部评估基线</h2>
+        <p class="panel-note">色带 = 17 家在每一维的得分范围(min → max),红线 = 中位。人工九维分(2026-08 口径,已停更,仅作参照);0–5 分。</p>
+        <div id="bandList"></div>
+      </section>
+
+      <section class="bench-panel" aria-label="最普遍的短板">
+        <h2>最普遍的短板</h2>
+        <p class="panel-note">把 17 家在九维中各自的最低分维度做统计——如果一个维度被最多公司列为自己的最弱项,它就是行业级的普遍短板。</p>
+        <div id="weakList"></div>
+      </section>
+
+      <section class="bench-panel" aria-label="分层画像">
+        <h2>分层画像 · 按公司类型</h2>
+        <p class="panel-note">同一家公司在不同类型组内的中位数。n 为组内公司数。</p>
+        <div id="tierTable"></div>
+      </section>
+
+      <section class="bench-panel" aria-label="社区自评基准">
+        <h2>社区自评基准(匿名聚合)</h2>
+        <p class="panel-note">来自<a href="./assessment.html">自评工具</a>的匿名提交,人工复核后聚合发布。这是外部评估看不到的数据:从业者对自己公司的真实评估。</p>
+        <div id="communityBox"><div class="empty-state">加载中…</div></div>
+      </section>
+
+      <section class="bench-panel" aria-label="参与方式">
+        <h2>参与这个基准</h2>
+        <p class="panel-note">基准由参与者共建:提交自评扩充社区分布;在 17 家公司页的「证据缺口」区匿名补充公开渠道看不到的线索。</p>
+        <div class="cta-row">
+          <a href="./assessment.html">去自评并匿名提交</a>
+          <a class="ghost" href="./companies/">查看公司追踪页的证据缺口</a>
+          <a class="ghost" href="./index.html">回主榜</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const DIMS = [
+        { id: "strategy_signal", name: "战略信号" },
+        { id: "tech_partnership", name: "科技合作" },
+        { id: "proprietary_assets", name: "自有平台资产" },
+        { id: "delivery_production", name: "交付生产化" },
+        { id: "capital_ma", name: "并购资本" },
+        { id: "industry_coverage", name: "行业覆盖" },
+        { id: "client_value_proof", name: "客户价值" },
+        { id: "governance_risk", name: "治理风控" },
+        { id: "thought_leadership", name: "思考力" },
+      ];
+
+      function normTier(tier = "") {
+        if (tier.includes("MBB")) return "MBB";
+        if (tier.includes("Big Four")) return "四大系";
+        if (tier.includes("Technology")) return "科技咨询";
+        return "精品与专业";
+      }
+
+      function percentile(values, p) {
+        const v = [...values].sort((a, b) => a - b);
+        if (!v.length) return null;
+        const idx = (v.length - 1) * p;
+        const lo = Math.floor(idx), hi = Math.ceil(idx);
+        return v[lo] + (v[hi] - v[lo]) * (idx - lo);
+      }
+
+      function escapeHtml(t = "") {
+        return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      }
+
+      function renderBands(companies) {
+        const list = document.getElementById("bandList");
+        list.innerHTML = DIMS.map((dim) => {
+          const values = companies.map((c) => c.scores?.[dim.id]).filter((v) => v != null);
+          const min = Math.min(...values), max = Math.max(...values);
+          const p25 = percentile(values, 0.25), p50 = percentile(values, 0.5), p75 = percentile(values, 0.75);
+          const left = (min / 5) * 100, width = ((max - min) / 5) * 100, mid = (p50 / 5) * 100;
+          return `
+            <div class="band-row">
+              <span class="name">${escapeHtml(dim.name)}</span>
+              <div class="band-track">
+                <div class="band-fill" style="left:${left}%;width:${width}%"></div>
+                <div class="band-mark" style="left:calc(${mid}% - 1px)"></div>
+              </div>
+              <span class="band-nums">min ${min} · p50 ${p50} · max ${max}</span>
+            </div>`;
+        }).join("");
+      }
+
+      function renderWeak(companies) {
+        const counts = {};
+        companies.forEach((c) => {
+          const scored = DIMS.map((d) => ({ id: d.id, name: d.name, v: c.scores?.[d.id] ?? 0 }));
+          const weakest = scored.sort((a, b) => a.v - b.v)[0];
+          counts[weakest.id] = (counts[weakest.id] || { name: weakest.name, n: 0 });
+          counts[weakest.id].n += 1;
+        });
+        const rows = Object.values(counts).sort((a, b) => b.n - a.n);
+        const max = rows[0]?.n || 1;
+        document.getElementById("weakList").innerHTML = rows.map((row) => `
+          <div class="weak-row">
+            <span class="name">${escapeHtml(row.name)}</span>
+            <div class="weak-bar" style="width:${(row.n / max) * 100}%"></div>
+            <span class="weak-count">${row.n} 家</span>
+          </div>`).join("");
+      }
+
+      function renderTiers(companies) {
+        const groups = {};
+        companies.forEach((c) => {
+          const g = normTier(c.tier);
+          (groups[g] = groups[g] || []).push(c);
+        });
+        const names = Object.keys(groups);
+        const head = names.map((n) => `<th>${escapeHtml(n)}<br/><small style="font-weight:600;">n=${groups[n].length}</small></th>`).join("");
+        const rows = DIMS.map((dim) => {
+          const cells = names.map((n) => {
+            const vals = groups[n].map((c) => c.scores?.[dim.id]).filter((v) => v != null);
+            return `<td>${vals.length ? percentile(vals, 0.5).toFixed(1) : "–"}</td>`;
+          }).join("");
+          return `<tr><td class="dim">${escapeHtml(dim.name)}</td>${cells}</tr>`;
+        }).join("");
+        document.getElementById("tierTable").innerHTML = `
+          <table class="bench-table"><thead><tr><th style="text-align:left;">维度</th>${head}</tr></thead><tbody>${rows}</tbody></table>`;
+      }
+
+      async function renderCommunity() {
+        const box = document.getElementById("communityBox");
+        try {
+          const res = await fetch("../data/benchmark.json");
+          const data = await res.json();
+          if (!data.total_submissions) {
+            box.innerHTML = `<div class="empty-state">还没有匿名提交——<b>成为第一个</b>,你的九维评分会进入行业分布,并换回同类公司的对比报告。<br/><div class="cta-row" style="justify-content:center;"><a href="./assessment.html">去自评并提交</a></div></div>`;
+            return;
+          }
+          const rows = DIMS.map((dim) => {
+            const c = data.overall?.[dim.id];
+            return c ? `<tr><td class="dim">${escapeHtml(dim.name)}</td><td>${c.p25}</td><td><b>${c.p50}</b></td><td>${c.p75}</td></tr>` : "";
+          }).join("");
+          box.innerHTML = `
+            <p class="panel-note">样本 n=${data.total_submissions}(匿名提交,人工复核后聚合)。p25 / 中位 / p75。</p>
+            <table class="bench-table"><thead><tr><th style="text-align:left;">维度</th><th>p25</th><th>中位</th><th>p75</th></tr></thead><tbody>${rows}</tbody></table>`;
+        } catch (error) {
+          box.innerHTML = `<div class="empty-state">社区基准尚未生成——提交自评后,这里会出现聚合分布。</div>`;
+        }
+      }
+
+      (async () => {
+        const res = await fetch("../data/ai-consulting-leaderboard.json");
+        const data = await res.json();
+        renderBands(data.companies);
+        renderWeak(data.companies);
+        renderTiers(data.companies);
+        await renderCommunity();
+      })();
+    </script>
+  </body>
+</html>

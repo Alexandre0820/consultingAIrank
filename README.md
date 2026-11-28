@@ -120,6 +120,14 @@ http://127.0.0.1:8766/
 bash start-local.sh
 ```
 
+## 匿名提交数据管道(自评基准 / 证据线索)
+
+1. 前端两个表单(自评页 `benchmark-submission`、公司页 `evidence-clue`)在 Netlify 用 Forms 接收,本地由 `app.py` 的 `do_POST` 落盘到 `data/submissions/<form>/pending-*.jsonl`。
+2. Netlify 后台 → Forms → 导出 CSV,放入 `data/benchmark-submissions/`(基准)或复核后手工整理。
+3. **复核纪律**:只把人工确认过的文件留在目录里(本地把 `pending-` 前缀改成 `approved-`),垃圾/重复行直接删。
+4. 聚合:`node scripts/build-benchmark.js` → `data/benchmark.json`(仅聚合,无个体记录;分层展示要求 n≥5)→ 部署后行业基准页自动展示。
+5. `data/submissions/` 已加入 .gitignore,不进 git。
+
 ## 重要说明
 
 当前页面是 **研究预览版 / 非最终排名**。

@@ -57,6 +57,18 @@
       .method-foot h2 { margin: 0 0 6px; font-size: 20px; }
       .method-foot p { margin: 0 0 8px; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.65; }
       .median-note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11.5px; line-height: 1.6; margin-top: 10px; }
+      .bench-form { display: grid; gap: 12px; margin-top: 4px; }
+      .bench-form .bench-label { display: grid; gap: 6px; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 800; color: var(--muted); }
+      .bench-form select { border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; background: rgba(255, 255, 255, 0.6); font-size: 14px; color: var(--ink); }
+      .bench-consent { display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; line-height: 1.65; color: var(--muted); }
+      .bench-consent input { margin-top: 3px; }
+      .bench-consent[hidden] { display: none; }
+      .report-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+      .report-table th { text-align: left; color: var(--muted); font-size: 11px; letter-spacing: 0.06em; border-bottom: 1px solid var(--line); padding: 6px 8px; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .report-table td { padding: 7px 8px; border-bottom: 1px solid var(--line); }
+      .report-table td.num { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; }
+      .report-good { color: #0d7a55; font-weight: 800; }
+      .report-low { color: var(--red); font-weight: 800; }
     </style>
   </head>
   <body>
@@ -71,6 +83,7 @@
           <a class="site-nav__link" href="./dimensions.html" data-nav="dims">维度对比</a>
           <a class="site-nav__link" href="./companies/" data-nav="companies">公司追踪</a>
           <a class="site-nav__link is-active" href="./assessment.html" data-nav="tool">自评工具</a>
+          <a class="site-nav__link" href="./benchmark.html" data-nav="benchmark">行业基准</a>
         </div>
       </div>
     </nav>
@@ -122,6 +135,50 @@
           </div>
         </aside>
       </div>
+
+      <section class="tool-panel" id="benchPanel" style="margin-top:18px;" aria-label="匿名提交">
+        <h2>第四步:匿名提交,加入行业基准</h2>
+        <p class="panel-note">提交后,你的九维评分将<b>仅以聚合形式</b>进入行业基准库,换回两样本地算不出来的东西:同类公司的真实分布,以及「自评 vs 外部评估」的差距。不提交也可继续使用本页全部功能。</p>
+        <p class="panel-note" style="color:var(--red);font-weight:700;">提交条件:九个维度全部打分 + 勾选同意。只保存勾选的分数与标签,不存储邮箱/IP,不公开任何单条提交;聚合发布前经人工复核。</p>
+        <form id="benchForm" name="benchmark-submission" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="bench-form">
+          <input type="hidden" name="form-name" value="benchmark-submission" />
+          <input type="hidden" name="ajax" value="1" />
+          <p class="bench-consent" hidden aria-hidden="true"><label>勿填此字段<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <label class="bench-label">被评对象类型
+              <select name="segment_type" id="segmentType">
+                <option value="">请选择…</option>
+                <option value="consulting-mbb">咨询公司 · MBB</option>
+                <option value="consulting-big4">咨询公司 · 四大系</option>
+                <option value="consulting-tech">咨询公司 · 科技咨询/SI</option>
+                <option value="consulting-boutique">咨询公司 · 精品与专业策略</option>
+                <option value="enterprise">非咨询企业(评本司)</option>
+                <option value="other">其他</option>
+              </select>
+            </label>
+            <label class="bench-label">你的角色(可选)
+              <select name="segment_role" id="segmentRole">
+                <option value="consultant">咨询从业者</option>
+                <option value="buyer">企业决策者</option>
+                <option value="investor">投资人</option>
+                <option value="researcher">研究者/媒体</option>
+                <option value="other" selected>不便透露/其他</option>
+              </select>
+            </label>
+          </div>
+          <label class="bench-consent"><input type="checkbox" id="benchConsent" /> 我同意将本次九维评分匿名提交,用于聚合行业基准;聚合结果可能公开展示;不会关联我的身份。</label>
+          <div class="tool-actions" style="margin-top:2px;">
+            <button id="submitBenchmark" class="tool-button" type="button" disabled>匿名提交到行业基准</button>
+            <span class="copy-note" id="benchStatus"></span>
+          </div>
+        </form>
+      </section>
+
+      <section class="tool-panel" id="benchReport" hidden aria-label="你的对标报告">
+        <h2>你的对标报告(外部评估口径)</h2>
+        <p class="panel-note">「17 家中位」= 我们对 17 家跟踪公司的人工九维分;「同类中位」= 同一类型组的中位数。这是外部观察者口径——你的自评与它的差距本身就是信息,不是谁对谁错。</p>
+        <div id="benchReportBody"></div>
+      </section>
 
       <section class="method-foot" aria-label="口径说明">
         <h2>口径说明</h2>
@@ -182,6 +239,19 @@
 
       let medians = null;
       let firmCount = null;
+      let firmRows = [];
+
+      function normTier(tier = "") {
+        if (tier.includes("MBB")) return "MBB";
+        if (tier.includes("Big Four")) return "四大系";
+        if (tier.includes("Technology")) return "科技咨询";
+        return "精品与专业";
+      }
+
+      function medianOf(values) {
+        const v = [...values].sort((a, b) => a - b);
+        return v.length ? v[Math.floor(v.length / 2)] : null;
+      }
 
       function bandOf(score) {
         return BANDS.find((band) => score >= band.min).label;
@@ -293,8 +363,77 @@
           </div>`).join("");
       }
 
+      function refreshBenchButton() {
+        const ready = answeredCount() === 9
+          && document.getElementById("benchConsent").checked
+          && document.getElementById("segmentType").value;
+        document.getElementById("submitBenchmark").disabled = !ready;
+      }
+
+      function renderBenchReport() {
+        const seg = document.getElementById("segmentType").value;
+        const tierNames = { "consulting-mbb": "MBB", "consulting-big4": "四大系", "consulting-tech": "科技咨询", "consulting-boutique": "精品与专业" };
+        const tierName = tierNames[seg] || null;
+        const group = tierName ? firmRows.filter((row) => row.tier === tierName) : [];
+        const rows = DIMS.map((dim, i) => {
+          const mine = state.scores[dim.id] ?? 0;
+          const overallMed = medians ? medians[dim.id] : null;
+          const tierMed = group.length ? medianOf(group.map((row) => row.scores[i])) : null;
+          const above = firmRows.filter((row) => row.scores[i] < mine).length;
+          const delta = overallMed != null ? mine - overallMed : null;
+          const deltaHtml = delta == null ? "–" : delta > 0
+            ? `<span class="report-good">+${delta}</span>`
+            : delta < 0 ? `<span class="report-low">${delta}</span>` : `<span>±0</span>`;
+          return `<tr><td>${escapeHtml(dim.name)}</td><td class="num">${mine}/5</td>
+            <td class="num">${overallMed != null ? overallMed + "/5" : "–"}</td>
+            <td class="num">${tierMed != null ? tierMed + "/5" : "–"}</td>
+            <td>${deltaHtml}</td><td>高于 ${above}/17 家</td></tr>`;
+        }).join("");
+        const firmTotals = firmRows.map((row) => row.scores.reduce((sum, v, i) => sum + v * DIMS[i].weight, 0) * 20);
+        const medianTotal = medianOf(firmTotals);
+        const mineTotal = totalScore();
+        const totalHtml = mineTotal >= medianTotal
+          ? `<span class="report-good">+${(mineTotal - medianTotal).toFixed(1)}</span>`
+          : `<span class="report-low">${(mineTotal - medianTotal).toFixed(1)}</span>`;
+        document.getElementById("benchReportBody").innerHTML = `
+          <p class="panel-note">你的总分 <b>${mineTotal.toFixed(1)}</b> vs 17 家外部评估中位 <b>${medianTotal.toFixed(1)}</b>(差值 ${totalHtml});${tierName ? `同类组「${escapeHtml(tierName)}」n=${group.length}。` : "该类型样本待积累,暂只对照全体中位。"}</p>
+          <table class="report-table"><thead><tr><th>维度</th><th>你的评分</th><th>17家中位</th><th>同类中位</th><th>vs 中位</th><th>相对位置</th></tr></thead><tbody>${rows}</tbody></table>
+          <p class="median-note" style="margin-top:10px;">「自评 vs 外部评估」的差值会随聚合样本更新——它衡量的是认知差,不是对错。聚合结果见<a href="./benchmark.html">行业基准页</a>。</p>`;
+        document.getElementById("benchReport").hidden = false;
+        document.getElementById("benchReport").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      async function submitBenchmark() {
+        const btn = document.getElementById("submitBenchmark");
+        const status = document.getElementById("benchStatus");
+        btn.disabled = true;
+        status.textContent = "提交中…";
+        const body = new URLSearchParams();
+        body.append("form-name", "benchmark-submission");
+        body.append("ajax", "1");
+        body.append("consent", "yes");
+        body.append("segment_type", document.getElementById("segmentType").value);
+        body.append("segment_role", document.getElementById("segmentRole").value);
+        DIMS.forEach((dim) => body.append("d_" + dim.id, String(state.scores[dim.id] ?? 0)));
+        body.append("bot-field", document.querySelector('#benchForm [name="bot-field"]').value);
+        try {
+          const res = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
+          const result = await res.json();
+          if (result.ok) {
+            status.textContent = "已提交 ✓ 已进入待审队列,聚合后出现在行业基准页。";
+            renderBenchReport();
+          } else {
+            status.textContent = "提交失败:" + (result.error || "未知原因");
+          }
+        } catch (error) {
+          status.textContent = "网络错误——本地预览请先启动 python3 app.py,或到线上版本提交。";
+        }
+        refreshBenchButton();
+      }
+
       function refresh() {
         renderResult();
+        refreshBenchButton();
         document.querySelectorAll(".pill").forEach((pill) => {
           const value = state.scores[pill.dataset.dim];
           pill.classList.toggle("is-active", value === Number(pill.dataset.value));
@@ -355,6 +494,7 @@
             const values = data.companies.map((company) => company.scores?.[dim.id]).filter((value) => value != null).sort((a, b) => a - b);
             medians[dim.id] = values.length ? values[Math.floor(values.length / 2)] : null;
           }
+          firmRows = data.companies.map((company) => ({ tier: normTier(company.tier), scores: DIMS.map((dim) => company.scores?.[dim.id] ?? 0) }));
         } catch (error) {
           medians = null;
         }
@@ -365,6 +505,9 @@
         saveState();
       });
       document.getElementById("copySummary").addEventListener("click", copySummary);
+      document.getElementById("submitBenchmark").addEventListener("click", submitBenchmark);
+      document.getElementById("benchConsent").addEventListener("change", refreshBenchButton);
+      document.getElementById("segmentType").addEventListener("change", refreshBenchButton);
       document.getElementById("demoFill").addEventListener("click", fillDemo);
       document.getElementById("resetAll").addEventListener("click", resetAll);
 

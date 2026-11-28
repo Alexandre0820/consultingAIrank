@@ -6,9 +6,10 @@ It serves only the AI consulting action leaderboard files.
 """
 import json
 import os
+from datetime import datetime, timezone
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 APP_DIR = Path(__file__).resolve().parent
 STATIC_DIR = APP_DIR / "static"
@@ -126,13 +127,6 @@ class Handler(SimpleHTTPRequestHandler):
                 return
             self.send_json({"error": "not_found", "path": parsed.path}, status=404)
             return
-            try:
-                payload = json.loads(DATA_PATH.read_text(encoding="utf-8"))
-            except Exception as exc:
-                self.send_json({"error": "data_load_failed", "message": str(exc)}, status=500)
-                return
-            self.send_json(payload)
-            return
 
         if parsed.path == "/api/health":
             try:
@@ -149,6 +143,120 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         self.send_json({"error": "not_found", "path": parsed.path}, status=404)
+
+    # ———— 匿名提交（行业基准 / 证据线索）：本地测试与 Netlify Forms 用同一套表单标记 ————
+    BENCHMARK_SEGMENTS = ["consulting-mbb", "consulting-big4", "consulting-tech", "consulting-boutique", "enterprise", "other"]
+    ROLES = ["consultant", "buyer", "investor", "researcher", "other"]
+    CLUE_TYPES = ["partnership", "platform", "service_line", "investment", "organization", "governance", "research", "client_proof", "other"]
+
+    def _load_company_ids(self):
+        try:
+            companies = json.loads((DATA_DIR / "companies.json").read_text(encoding="utf-8"))
+            return [c["id"] for c in companies]
+        except Exception:
+            return []
+
+    def _validate_benchmark(self, fields):
+        if fields.get("bot-field", "").strip():
+            return False, "spam"
+        if fields.get("consent") != "yes":
+            return False, "consent_required"
+        if fields.get("segment_type") not in self.BENCHMARK_SEGMENTS:
+            return False, "bad_segment"
+        if fields.get("segment_role", "other") not in self.ROLES:
+            return False, "bad_role"
+        for dim in ["strategy_signal", "tech_partnership", "proprietary_assets", "delivery_production",
+                    "capital_ma", "industry_coverage", "client_value_proof", "governance_risk", "thought_leadership"]:
+            raw = fields.get(f"d_{dim}", "")
+            if raw not in {"0", "1", "2", "3", "4", "5"}:
+                return False, f"missing_or_bad_score_{dim}"
+        return True, ""
+
+    def _validate_clue(self, fields):
+        if fields.get("bot-field", "").strip():
+            return False, "spam"
+        company = fields.get("company", "")
+        if company != "other" and company not in self._load_company_ids():
+            return False, "bad_company"
+        clue_type = fields.get("clue_type", "")
+        if clue_type not in self.CLUE_TYPES:
+            return False, "bad_clue_type"
+        description = fields.get("description", "").strip()
+        if not description or len(description) > 2000:
+            return False, "description_required_1_2000_chars"
+        url = fields.get("source_url", "").strip()
+        if url and not url.startswith(("http://", "https://")):
+            return False, "bad_url"
+        return True, ""
+
+    def _save_submission(self, form_name, fields):
+        sub_dir = DATA_DIR / "submissions" / form_name
+        sub_dir.mkdir(parents=True, exist_ok=True)
+        record = {
+            "received_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            **{k: v for k, v in fields.items() if k != "bot-field"},
+        }
+        out = sub_dir / f"pending-{datetime.now(timezone.utc).date().isoformat()}.jsonl"
+        with out.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+        return record
+
+    def _send_thanks(self, title, message):
+        body = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>{title}</title>
+        <style>body{{font-family:'PingFang SC','Hiragino Sans GB',sans-serif;background:#FFF8EC;color:#171411;
+        display:grid;place-items:center;min-height:100vh;margin:0}}main{{max-width:520px;text-align:center;
+        background:rgba(255,255,255,.6);border:1px solid rgba(23,20,17,.16);border-radius:18px;padding:40px}}
+        h1{{font-size:24px}}p{{color:#746b5f;line-height:1.7}}a{{color:#B42318;font-weight:800}}</style></head>
+        <body><main><h1>{title}</h1><p>{message}</p><p><a href="/">返回 AI咨询行动榜</a></p></main></body></html>"""
+        data = body.encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
+    def do_POST(self):
+        parsed = urlparse(self.path)
+        if parsed.path != "/":
+            self.send_json({"error": "not_found", "path": parsed.path}, status=404)
+            return
+        try:
+            length = int(self.headers.get("Content-Length", "0"))
+        except ValueError:
+            length = 0
+        if length <= 0 or length > 65536:
+            self.send_json({"ok": False, "error": "bad_request"}, status=400)
+            return
+        content_type = self.headers.get("Content-Type", "")
+        if "application/x-www-form-urlencoded" not in content_type:
+            self.send_json({"ok": False, "error": "unsupported_content_type"}, status=415)
+            return
+        body = self.rfile.read(length).decode("utf-8", errors="replace")
+        fields = {k: v[0] for k, v in parse_qs(body, keep_blank_values=True).items()}
+        form_name = fields.get("form-name", "")
+
+        if form_name == "benchmark-submission":
+            ok, error = self._validate_benchmark(fields)
+        elif form_name == "evidence-clue":
+            ok, error = self._validate_clue(fields)
+        else:
+            ok, error = False, "unknown_form"
+
+        if not ok:
+            if fields.get("ajax") == "1":
+                self.send_json({"ok": False, "error": error}, status=400)
+            else:
+                self._send_thanks("提交未完成", f"原因：{error}。请返回检查表单后重新提交。")
+            return
+
+        self._save_submission(form_name, fields)
+        if fields.get("ajax") == "1":
+            self.send_json({"ok": True})
+        else:
+            self._send_thanks("已收到，谢谢你", "你的匿名提交已进入待审队列：人工复核后才会进入聚合基准，不会公开任何可识别个人的信息。")
+
+    def log_message(self, format, *args):
+        pass
 
 
 class ReusableThreadingHTTPServer(ThreadingHTTPServer):

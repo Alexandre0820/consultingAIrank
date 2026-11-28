@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 .workbuddy/
+
+# 匿名提交原始数据(含用户内容,不进 git;聚合产物 benchmark.json 可提交)
+data/submissions/

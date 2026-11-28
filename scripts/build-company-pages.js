@@ -139,6 +139,16 @@ function buildPageShell({ title, description, body, jsonLd }) {
       .company-index-item em { font-style: normal; color: var(--muted); margin-left: 8px; font-size: 14px; }
       .company-index-item small { display: block; color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; margin-top: 4px; }
       .company-index-item .idx-score { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 800; font-size: 20px; color: var(--ink); text-align: right; min-width: 64px; }
+      .gap-line { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      .gap-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12.5px; font-weight: 700; }
+      .gap-chip.ok { color: #0d7a55; background: rgba(13, 122, 85, 0.08); }
+      .gap-chip.miss { color: var(--red); background: rgba(180, 35, 24, 0.08); }
+      .clue-form { display: grid; gap: 10px; max-width: 720px; }
+      .clue-form label { display: grid; gap: 5px; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 800; color: var(--muted); }
+      .clue-form input, .clue-form select, .clue-form textarea { border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; background: rgba(255, 255, 255, 0.6); font-size: 14px; color: var(--ink); font-family: inherit; }
+      .clue-form textarea { min-height: 88px; resize: vertical; }
+      .clue-form .btn { justify-self: start; border: 0; border-radius: 999px; padding: 10px 22px; background: var(--ink); color: var(--paper-2); font-size: 13.5px; font-weight: 900; cursor: pointer; }
+      .clue-note { color: var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; line-height: 1.6; }
     </style>
   </head>
   <body>
@@ -152,6 +162,7 @@ function buildPageShell({ title, description, body, jsonLd }) {
           <a class="site-nav__link" href="../dimensions.html">维度对比</a>
           <a class="site-nav__link is-active" href="./index.html">公司追踪</a>
           <a class="site-nav__link" href="../assessment.html">自评工具</a>
+          <a class="site-nav__link" href="../benchmark.html">行业基准</a>
         </div>
       </div>
     </nav>
@@ -197,6 +208,15 @@ function renderCompanyPage(row, rank, total, typeMap, dimensionMap, prevRow, nex
   const officialShare = events.length ? Math.round((official / events.length) * 100) : 0;
   const reports = company.reports || [];
   const coverage = company.coverage || {};
+  const dimNames = { strategy_signal: "战略信号", tech_partnership: "科技合作", proprietary_assets: "自有平台资产", delivery_production: "交付生产化", capital_ma: "并购资本", industry_coverage: "行业覆盖", client_value_proof: "客户价值", governance_risk: "治理风控", thought_leadership: "思考力" };
+  const dimEvidence = Object.keys(dimNames).map((dimId) => ({
+    dimId,
+    name: dimNames[dimId],
+    n: (company.events || []).filter((ev) => (ev.dimension_tags || []).includes(dimId)).length,
+  }));
+  const gapCovered = dimEvidence.filter((d) => d.n > 0).length;
+  const gapGaps = dimEvidence.filter((d) => d.n === 0);
+  const gapChips = dimEvidence.map((d) => `<span class="gap-chip ${d.n > 0 ? "ok" : "miss"}">${d.n > 0 ? "✓" : "✗"} ${d.name}${d.n > 0 ? ` · ${d.n} 条` : " · 0 条"}</span>`).join("");
   const displayName = company.cn ? `${company.name}（${company.cn}）` : company.name;
   const description = `${displayName}当前相对行动力指数 ${row.score}（${scoreBand(row.score)}），在 ${total} 家传统咨询 / 专业服务公司中排名第 ${rank}；累计 ${events.length} 条公开 AI 信号，最近动作：${latestEvent ? latestEvent.title : "暂无"}。${company.focus || ""}`;
 
@@ -266,11 +286,52 @@ function renderCompanyPage(row, rank, total, typeMap, dimensionMap, prevRow, nex
         </div>
       </section>
 
+      <section class="company-section" aria-label="证据缺口">
+        <h2>证据缺口 · 我们还没看到什么</h2>
+        <p class="company-section__note">公开渠道不是全知的:下面是九个维度中,公开事件还没有直接覆盖的部分。如果你了解这家公司的真实 AI 动作,欢迎匿名补充线索——人工核实后计入榜单。</p>
+        <div class="gap-line">${gapChips}</div>
+        <p class="company-section__note" style="margin-top:10px;">已覆盖 ${gapCovered}/9 维 · 缺口 ${gapGaps.length} 维。线索默认匿名,可选择性留下联系方式。</p>
+      </section>
+
       <nav class="company-nav" aria-label="公司页导航">
         <span>${prevRow ? `<a href="${escapeHtml(prevRow.company.id)}.html">← 上一家：${escapeHtml(prevRow.company.name)}</a>` : ""}</span>
         <a href="./index.html">全部公司追踪页</a>
         <span>${nextRow ? `<a href="${escapeHtml(nextRow.company.id)}.html">下一家：${escapeHtml(nextRow.company.name)} →</a>` : ""}</span>
       </nav>
+
+      <section class="company-section" id="clue-form" aria-label="匿名补充线索">
+        <h2>匿名补充线索</h2>
+        <p class="company-section__note">只补充公开渠道看不到的信息(在谈项目、真实交付、团队构成、客户反馈)。线索经人工核实后才可能计入榜单;默认匿名,联系方式可选。</p>
+        <form class="clue-form" name="evidence-clue" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="evidence-clue" />
+          <p class="clue-note" hidden aria-hidden="true"><label>勿填此字段<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <input type="hidden" name="company" value="${escapeHtml(company.name)}" />
+          <label>线索类型
+            <select name="clue_type">
+              <option value="platform">平台 / 工具</option>
+              <option value="partnership">科技合作</option>
+              <option value="investment">投资 / 并购</option>
+              <option value="service_line">AI 服务线</option>
+              <option value="organization">组织 / 岗位</option>
+              <option value="governance">治理 / 风控</option>
+              <option value="research">研究 / 指数</option>
+              <option value="client_proof">客户证明</option>
+              <option value="other">其他</option>
+            </select>
+          </label>
+          <label>线索描述(必填,1–2000 字)
+            <textarea name="description" maxlength="2000" required placeholder="例:某项目实际交付团队规模、某合作的真实范围、某平台的内部采用情况…"></textarea>
+          </label>
+          <label>来源链接(可选)
+            <input name="source_url" type="url" placeholder="https://…" />
+          </label>
+          <label>联系方式(可选,愿意被跟进时填写)
+            <input name="contact" type="text" maxlength="120" placeholder="邮箱或任意联系方式,留空即完全匿名" />
+          </label>
+          <button class="btn" type="submit">匿名提交线索</button>
+          <p class="clue-note">提交进入待审队列,人工核实前不会出现在榜单上;我们不会公开任何可识别个人身份的信息。</p>
+        </form>
+      </section>
 
       <p class="company-disclaimer">本页由 AI咨询行动榜 自动生成，数据截至 ${escapeHtml(shortDate(asOfDate))} 快照。分数是研究预览口径（相对行动力指数，当期榜首 = 100），不代表权威排名。事件均附原始来源链接，点开可自行核验。</p>
     </main>`;
@@ -370,7 +431,8 @@ function buildLlmsTxt(rows, typeMap, data) {
   lines.push("");
   lines.push("- [AI 行动力评分榜（主榜）](/static/index.html): 17 家公司按最近 AI 动作加权排序，含每周净新增事件与核心观察");
   lines.push("- [公司追踪页目录](/static/companies/index.html): 每家公司一页的完整 AI 动作档案");
-  lines.push("- [AI 行动力自评工具](/static/assessment.html): 用同款九维模型给任意公司打 0–100 分，附 17 家样本参考线");
+  lines.push("- [AI 行动力自评工具](/static/assessment.html): 用同款九维模型给任意公司打 0–100 分，附 17 家样本参考线，支持匿名提交进聚合基准");
+  lines.push("- [行业基准](/static/benchmark.html): 九维分布基线、最普遍短板、分层画像与社区自评聚合");
   lines.push("");
   lines.push("## 公司追踪页");
   lines.push("");

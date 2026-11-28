@@ -82,6 +82,7 @@ const I18N = {
     navDims: "维度对比",
     navCompanies: "公司追踪",
     navTool: "自评工具",
+    navBenchmark: "行业基准",
     insightsTitle: "核心观察",
     insightsSubtitle: "从本周净新增的公开信号里，提炼对 AI 咨询行业的核心观察。",
     wechatEyebrow: "Praxis Advisory",
@@ -122,6 +123,7 @@ const I18N = {
     navDims: "Dimension Compare",
     navCompanies: "Company Trackers",
     navTool: "Self-Assessment",
+    navBenchmark: "Benchmark",
     insightsTitle: "Key Observations",
     insightsSubtitle: "Core observations on the AI consulting industry, drawn from this week's net-new public signals.",
     wechatEyebrow: "Praxis Advisory",
@@ -311,6 +313,7 @@ function applyStaticTranslations() {
   document.querySelectorAll("[data-nav='dims']").forEach((el) => (el.textContent = t("navDims")));
   document.querySelectorAll("[data-nav='companies']").forEach((el) => (el.textContent = t("navCompanies")));
   document.querySelectorAll("[data-nav='tool']").forEach((el) => (el.textContent = t("navTool")));
+  document.querySelectorAll("[data-nav='benchmark']").forEach((el) => (el.textContent = t("navBenchmark")));
   if (els.wechatEyebrow) els.wechatEyebrow.textContent = t("wechatEyebrow");
   if (els.wechatTitle) els.wechatTitle.textContent = t("wechatTitle");
   if (els.wechatBody) els.wechatBody.textContent = t("wechatBody");
