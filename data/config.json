@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-11-15",
-    "updated_at": "2026-11-21",
+    "previous_updated_at": "2026-11-21",
+    "updated_at": "2026-11-28",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-11-21 期：窗口 11-16 至 11-21，Google News RSS 查询矩阵 16 条（每家 when:10d + 并购/人才专项）+ WebSearch 定向核实 10 条。净新增 39 条（含低覆盖公司 insights 直查回填 3 条）：Oliver Wyman 收购 Synpulse（1200 人金融科技与 AI 咨询，84，本周最重）为 OW 首次登顶资本大动作；KPMG 大平台周——KCi 美国发布（78）+ FTSE 250 全审计 100+ agents 试点（78，FT 报道）+ Vultron（74）+ Microsoft AI Transparency Initiative（72）；EY 双平台+组织周——Agentic Cyber Defense Center（76）+ Assurance FDE（74）+ Canada 8000 万加元投入；McKinsey×Cognition Devin 联盟（78）；BCG×Microsoft Frontier 模式扩展（76）+ Schneider 印度制造（72）；Deloitte Converge Front Office 发布（72）；Accenture Life Trends 2027 第 20 期（72）+ Transparency Initiative（72）+ AWS token 经济学（70）；PwC×Harvey Pillar Two 21 国税务助手（72）；Capgemini TechnoVision 2027（72）。查重拦截：Bain 数据中心报告（11-15 期已有，11-17 报道为二次传播）、PwC 批判性思维/85000 培训（11-09/10 期已有，11-19 为同源后续）、Qantas（11-10 期已有）。负向信号排除：Deloitte 诉前承包商窃取 AI 商业秘密、Deloitte WA 大学报告返工、KPMG Canada 数据泄露、Accenture 葡萄牙裁员 950 人（按 2026-11-08 决策不入池不计分）。沉默公司：Strategy&、Monitor Deloitte（2 家）。Kearney（能源转型 AI 数据中心研究 66）、L.E.K.（音乐产业 AI 经济学 68）、A&M（AI 采纳差距峰会观点 60）经 insights 直查后回填——教训再次验证：低覆盖公司 RSS 覆盖弱，必须 insights 直取。评分口径不变：相对行动力指数（当期榜首=100）；锚点：收购+AI 能力 84、平台发布/规模化 76-78、数据型联盟 72-78、年度旗舰研究 72、常规研究 66-68。",
+    "method_note": "2026-11-28 期：双周合并更新（11-16 至 11-28；11-16–21 已由上轮覆盖 40 条）。本轮 RSS 查询矩阵（7 条 × when:14d）+ 查重后：净新增 8 条（11-22 至 11-28）——McKinsey×2（AI 经济学四案例 72、agentic factory 72）、BCG 制造业地图 70、Bain agent 支出治理 70、Deloitte 欧洲 CFO 调查 74、Capgemini 物理 AI 机器人 68、OW 12% 调查 72、KPMG GTR 金融服务章节 70；上期（11-21 轮）补扫回填 7 条漏网（McKinsey×2、PwC 投资会计 72、Bain×2、FTI×2，计入 11-21 期文件）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：旗舰/系列调查 74、案例研究 72、常规研究 68–70。负面信号按 2026-11-08 决策不梳理（Deloitte 起诉前承包商、Accenture 葡萄牙裁员等已忽略）。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },

@@ -2,11 +2,11 @@
   "meta": {
     "title": "AI咨询行动榜 / AI Consulting Signal Index",
     "version": "standalone-mvp-0.2",
-    "previous_updated_at": "2026-11-15",
-    "updated_at": "2026-11-21",
+    "previous_updated_at": "2026-11-21",
+    "updated_at": "2026-11-28",
     "timezone": "Asia/Shanghai",
     "status": "MVP 数据集，不代表最终排名",
-    "method_note": "2026-11-21 期：窗口 11-16 至 11-21，Google News RSS 查询矩阵 16 条（每家 when:10d + 并购/人才专项）+ WebSearch 定向核实 10 条。净新增 39 条（含低覆盖公司 insights 直查回填 3 条）：Oliver Wyman 收购 Synpulse（1200 人金融科技与 AI 咨询，84，本周最重）为 OW 首次登顶资本大动作；KPMG 大平台周——KCi 美国发布（78）+ FTSE 250 全审计 100+ agents 试点（78，FT 报道）+ Vultron（74）+ Microsoft AI Transparency Initiative（72）；EY 双平台+组织周——Agentic Cyber Defense Center（76）+ Assurance FDE（74）+ Canada 8000 万加元投入；McKinsey×Cognition Devin 联盟（78）；BCG×Microsoft Frontier 模式扩展（76）+ Schneider 印度制造（72）；Deloitte Converge Front Office 发布（72）；Accenture Life Trends 2027 第 20 期（72）+ Transparency Initiative（72）+ AWS token 经济学（70）；PwC×Harvey Pillar Two 21 国税务助手（72）；Capgemini TechnoVision 2027（72）。查重拦截：Bain 数据中心报告（11-15 期已有，11-17 报道为二次传播）、PwC 批判性思维/85000 培训（11-09/10 期已有，11-19 为同源后续）、Qantas（11-10 期已有）。负向信号排除：Deloitte 诉前承包商窃取 AI 商业秘密、Deloitte WA 大学报告返工、KPMG Canada 数据泄露、Accenture 葡萄牙裁员 950 人（按 2026-11-08 决策不入池不计分）。沉默公司：Strategy&、Monitor Deloitte（2 家）。Kearney（能源转型 AI 数据中心研究 66）、L.E.K.（音乐产业 AI 经济学 68）、A&M（AI 采纳差距峰会观点 60）经 insights 直查后回填——教训再次验证：低覆盖公司 RSS 覆盖弱，必须 insights 直取。评分口径不变：相对行动力指数（当期榜首=100）；锚点：收购+AI 能力 84、平台发布/规模化 76-78、数据型联盟 72-78、年度旗舰研究 72、常规研究 66-68。",
+    "method_note": "2026-11-28 期：双周合并更新（11-16 至 11-28；11-16–21 已由上轮覆盖 40 条）。本轮 RSS 查询矩阵（7 条 × when:14d）+ 查重后：净新增 8 条（11-22 至 11-28）——McKinsey×2（AI 经济学四案例 72、agentic factory 72）、BCG 制造业地图 70、Bain agent 支出治理 70、Deloitte 欧洲 CFO 调查 74、Capgemini 物理 AI 机器人 68、OW 12% 调查 72、KPMG GTR 金融服务章节 70；上期（11-21 轮）补扫回填 7 条漏网（McKinsey×2、PwC 投资会计 72、Bain×2、FTI×2，计入 11-21 期文件）。评分口径不变：相对行动力指数（当期榜首=100）；锚点：旗舰/系列调查 74、案例研究 72、常规研究 68–70。负面信号按 2026-11-08 决策不梳理（Deloitte 起诉前承包商、Accenture 葡萄牙裁员等已忽略）。",
     "primary_question": "谁正在把 AI 从咨询叙事转化为真实的企业工作流、平台能力、交付资产和可证明客户价值？",
     "scoring_model_file": "SCORING_MODEL.md"
   },
@@ -196,6 +196,77 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-24",
+          "type": "research",
+          "title": "McKinsey 发布《What is the agentic factory?》：金融服务业转型机器的更新",
+          "title_en": "McKinsey publishes 'What is the agentic factory?' for financial services",
+          "summary": "McKinsey 于 2026-11-24 发布金融服务业的「agentic factory」概念更新——把 agentic AI 的规模化运营比作可管理的工厂体系。",
+          "summary_en": "McKinsey published 'What is the agentic factory?' — an update on the machinery of transformation for financial services on November 24, 2026.",
+          "url": "https://www.mckinsey.com/industries/financial-services/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "delivery_production"
+          ]
+        },
+        {
+          "date": "2026-11-23",
+          "type": "research",
+          "title": "McKinsey 发布《AI economics in action》：四家企业的 AI 经济学实践",
+          "title_en": "McKinsey publishes 'AI economics in action: What four companies have done and learned'",
+          "summary": "McKinsey 于 2026-11-23 发布四家企业的 AI 经济学实践案例研究，把 ROI 议题落到具体企业动作。",
+          "summary_en": "McKinsey published 'AI economics in action: What four companies have done and learned' on November 23, 2026.",
+          "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "client_value_proof"
+          ]
+        },
+        {
+          "date": "2026-11-20",
+          "type": "research",
+          "title": "McKinsey 发布《Physical AI is breaking out of the box》：物理 AI 破箱而出",
+          "title_en": "McKinsey publishes 'Physical AI is breaking out of the box'",
+          "summary": "McKinsey 于 2026-11-20 发布物理 AI 研究：具身智能与机器人从实验室走向规模化。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+          "summary_en": "McKinsey published 'Physical AI is breaking out of the box' on November 20, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.mckinsey.com/industries/advanced-electronics/our-insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-20",
+          "type": "research",
+          "title": "McKinsey 发布《Advancing US economic mobility in the age of AI》",
+          "title_en": "McKinsey publishes 'Advancing US economic mobility in the age of AI'",
+          "summary": "McKinsey 于 2026-11-20 发布 AI 时代的美国经济流动性研究。补扫说明：属上期窗口，回填。",
+          "summary_en": "McKinsey published 'Advancing US economic mobility in the age of AI' on November 20, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.mckinsey.com/mgi/our-research",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership"
+          ]
+        },
         {
           "date": "2026-11-16",
           "type": "partnership",
@@ -710,6 +781,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-23",
+          "type": "research",
+          "title": "BCG 发布全球制造业地图研究：技术、地缘与能源如何重绘格局",
+          "title_en": "BCG publishes on how technology, geopolitics, and energy could redraw the global manufacturing map",
+          "summary": "BCG 于 2026-11-23 发布全球制造业格局研究：技术、地缘政治与能源三重变量下的重绘。",
+          "summary_en": "BCG published research on how technology, geopolitics, and energy could redraw the global manufacturing map on November 23, 2026.",
+          "url": "https://www.bcg.com/publications",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
         {
           "date": "2026-11-20",
           "type": "research",
@@ -1392,6 +1481,60 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-23",
+          "type": "research",
+          "title": "Bain 发布《AI Agents Are Spending. Are CFOs in Control?》",
+          "title_en": "Bain publishes 'AI Agents Are Spending. Are CFOs in Control?'",
+          "summary": "Bain 于 2026-11-23 发布研究：AI agent 自主消费兴起，CFO 对支出的控制权成为治理议题——agent 经济的治理视角。",
+          "summary_en": "Bain published 'AI Agents Are Spending. Are CFOs in Control?' on November 23, 2026 — the governance angle of agentic spending.",
+          "url": "https://www.bain.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "governance_risk"
+          ]
+        },
+        {
+          "date": "2026-11-20",
+          "type": "research",
+          "title": "Bain 发布《AI Is the New Search》：零售商如何在『答案经济』中胜出",
+          "title_en": "Bain publishes 'AI Is the New Search. Here's How Retailers Win the Answer'",
+          "summary": "Bain 于 2026-11-20 发布研究：AI 搜索正在取代传统搜索入口，零售商需要为『答案经济』重构触达。补扫说明：属上期窗口，回填。",
+          "summary_en": "Bain published 'AI Is the New Search' on November 20, 2026: retailers must restructure reach for the answer economy. Backfilled via the RSS matrix.",
+          "url": "https://www.bain.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-20",
+          "type": "research",
+          "title": "Bain 发布《Reality Check: Agentic Commerce in Retail》",
+          "title_en": "Bain publishes 'Reality Check: Agentic Commerce in Retail'",
+          "summary": "Bain 于 2026-11-20 发布零售业 agentic commerce 现实检验研究。补扫说明：属上期窗口，回填。",
+          "summary_en": "Bain published 'Reality Check: Agentic Commerce in Retail' on November 20, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.bain.com/insights/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
         {
           "date": "2026-11-19",
           "type": "research",
@@ -2193,6 +2336,24 @@
       },
       "events": [
         {
+          "date": "2026-11-25",
+          "type": "research",
+          "title": "Oliver Wyman 调查：仅 12% 企业领导者在高采用率下看到显著 AI 收益",
+          "title_en": "Oliver Wyman survey: only 12% of business leaders see big AI gains despite high adoption",
+          "summary": "Oliver Wyman 于 2026-11-25 发布调查（CNBC 报道）：尽管采用率高，仅 12% 的企业领导者看到显著 AI 收益——『AI 差距』叙事的又一量化证据。",
+          "summary_en": "Oliver Wyman released a survey on November 25, 2026 (CNBC coverage): only 12% of business leaders see big AI gains despite high adoption.",
+          "url": "https://www.cnbc.com/",
+          "source_level": "media",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
+        {
           "date": "2026-11-19",
           "type": "investment",
           "title": "Oliver Wyman 收购 Synpulse：1200 人金融科技与 AI 咨询公司并入，押注 AI 金融服务咨询",
@@ -2388,6 +2549,24 @@
         "brand_strength": 5
       },
       "events": [
+        {
+          "date": "2026-11-25",
+          "type": "research",
+          "title": "Deloitte 发布《2026 秋季欧洲 CFO 调查》",
+          "title_en": "Deloitte releases European CFO Survey, Autumn 2026",
+          "summary": "Deloitte 于 2026-11-25 发布秋季欧洲 CFO 调查（既有系列）。",
+          "summary_en": "Deloitte released the European CFO Survey, Autumn 2026 on November 25, 2026.",
+          "url": "https://www.deloitte.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 74,
+          "dimension_tags": [
+            "thought_leadership",
+            "strategy_signal"
+          ]
+        },
         {
           "date": "2026-11-20",
           "type": "research",
@@ -3038,6 +3217,24 @@
           "dimension_tags": [
             "thought_leadership",
             "governance_risk"
+          ]
+        },
+        {
+          "date": "2026-11-19",
+          "type": "research",
+          "title": "PwC 发布 AI 投资会计指引：算力成本与资本化处理",
+          "title_en": "PwC publishes on AI investment accounting: compute costs and capitalization",
+          "summary": "PwC 于 2026-11-19 发布 AI 投资的会计处理指引：算力成本资本化等企业 AI 支出的财务口径问题——四大专业条线的差异化信号。补扫说明：属上期窗口，回填。",
+          "summary_en": "PwC published guidance on November 19, 2026 on AI investment accounting: compute costs and capitalization. Backfilled via the RSS matrix.",
+          "url": "https://www.pwc.com/us/en/services/consulting.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 72,
+          "dimension_tags": [
+            "thought_leadership",
+            "proprietary_assets"
           ]
         },
         {
@@ -3913,6 +4110,24 @@
       },
       "events": [
         {
+          "date": "2026-11-23",
+          "type": "research",
+          "title": "KPMG Global Tech Report 2026 金融服务章节发布",
+          "title_en": "KPMG Global Tech Report 2026: Financial Services chapter",
+          "summary": "KPMG 于 2026-11-23 发布 Global Tech Report 2026 金融服务章节（kpmg.com 官方），延续主报告的 agent-empowered workflow 议题。",
+          "summary_en": "KPMG released the Financial Services chapter of its Global Tech Report 2026 on November 23, 2026.",
+          "url": "https://www.kpmg.com/xx/en/insights.html",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 70,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
           "date": "2026-11-18",
           "type": "platform",
           "title": "KPMG『Project Exponential』：100+ AI agents 并行完成 FTSE 250 公司审计试点",
@@ -4730,6 +4945,24 @@
       },
       "events": [
         {
+          "date": "2026-11-22",
+          "type": "research",
+          "title": "Capgemini 发布物理 AI 与机器人跨行业研究",
+          "title_en": "Capgemini publishes on how physical AI is transforming robotics across industries",
+          "summary": "Capgemini 于 2026-11-22 发布物理 AI 跨行业机器人转型研究。",
+          "summary_en": "Capgemini published research on physical AI transforming robotics across industries on November 22, 2026.",
+          "url": "https://www.capgemini.com/insights/research-institute/",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "google_news_rss",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
           "date": "2026-11-21",
           "type": "research",
           "title": "Capgemini 发布《Resilient by design》：human-agent operations 重塑供应链",
@@ -5011,6 +5244,24 @@
       },
       "events": [
         {
+          "date": "2026-11-18",
+          "type": "research",
+          "title": "FTI 发布阿联酋 AI 主管机构研究（UAE Federal Authority for AI and Data）",
+          "title_en": "FTI publishes on the UAE's Federal Authority for Artificial Intelligence and Data",
+          "summary": "FTI 于 2026-11-18 发布阿联酋 AI 与数据主管机构研究，中东 AI 治理版图信号。补扫说明：属上期窗口，回填。",
+          "summary_en": "FTI published research on the UAE's Federal Authority for Artificial Intelligence and Data on November 18, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.fticonsulting.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
+          "dimension_tags": [
+            "governance_risk",
+            "industry_coverage"
+          ]
+        },
+        {
           "date": "2026-11-17",
           "type": "research",
           "title": "FTI 研究：AI 整合正在重塑工业行业结构",
@@ -5023,6 +5274,24 @@
           "discovery_channel": "google_news_rss",
           "verification_status": "partially_verified",
           "event_score": 66,
+          "dimension_tags": [
+            "thought_leadership",
+            "industry_coverage"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "type": "research",
+          "title": "FTI 发布工业行业研究：AI 整合正在重塑行业结构",
+          "title_en": "FTI publishes on the structural shift reshaping industrials: AI integration",
+          "summary": "FTI 于 2026-11-16 发布研究：AI 整合正在重塑工业行业结构。补扫说明：属上期窗口，回填。",
+          "summary_en": "FTI published research on AI integration reshaping industrials on November 16, 2026. Backfilled via the RSS matrix.",
+          "url": "https://www.fticonsulting.com/insights",
+          "source_level": "official",
+          "confidence": "high",
+          "discovery_channel": "dimension_sweep_rss_matrix",
+          "verification_status": "partially_verified",
+          "event_score": 68,
           "dimension_tags": [
             "thought_leadership",
             "industry_coverage"

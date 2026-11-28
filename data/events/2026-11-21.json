@@ -743,6 +743,138 @@
         "thought_leadership",
         "industry_coverage"
       ]
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "McKinsey 发布《Physical AI is breaking out of the box》：物理 AI 破箱而出",
+      "title_en": "McKinsey publishes 'Physical AI is breaking out of the box'",
+      "summary": "McKinsey 于 2026-11-20 发布物理 AI 研究：具身智能与机器人从实验室走向规模化。补扫说明：属上期窗口，RSS 矩阵补扫回填。",
+      "summary_en": "McKinsey published 'Physical AI is breaking out of the box' on November 20, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.mckinsey.com/industries/advanced-electronics/our-insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "mckinsey",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "McKinsey 发布《Advancing US economic mobility in the age of AI》",
+      "title_en": "McKinsey publishes 'Advancing US economic mobility in the age of AI'",
+      "summary": "McKinsey 于 2026-11-20 发布 AI 时代的美国经济流动性研究。补扫说明：属上期窗口，回填。",
+      "summary_en": "McKinsey published 'Advancing US economic mobility in the age of AI' on November 20, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.mckinsey.com/mgi/our-research",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership"
+      ]
+    },
+    {
+      "company_id": "pwc",
+      "date": "2026-11-19",
+      "type": "research",
+      "title": "PwC 发布 AI 投资会计指引：算力成本与资本化处理",
+      "title_en": "PwC publishes on AI investment accounting: compute costs and capitalization",
+      "summary": "PwC 于 2026-11-19 发布 AI 投资的会计处理指引：算力成本资本化等企业 AI 支出的财务口径问题——四大专业条线的差异化信号。补扫说明：属上期窗口，回填。",
+      "summary_en": "PwC published guidance on November 19, 2026 on AI investment accounting: compute costs and capitalization. Backfilled via the RSS matrix.",
+      "url": "https://www.pwc.com/us/en/services/consulting.html",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 72,
+      "dimension_tags": [
+        "thought_leadership",
+        "proprietary_assets"
+      ]
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "Bain 发布《AI Is the New Search》：零售商如何在『答案经济』中胜出",
+      "title_en": "Bain publishes 'AI Is the New Search. Here's How Retailers Win the Answer'",
+      "summary": "Bain 于 2026-11-20 发布研究：AI 搜索正在取代传统搜索入口，零售商需要为『答案经济』重构触达。补扫说明：属上期窗口，回填。",
+      "summary_en": "Bain published 'AI Is the New Search' on November 20, 2026: retailers must restructure reach for the answer economy. Backfilled via the RSS matrix.",
+      "url": "https://www.bain.com/insights/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "bain",
+      "date": "2026-11-20",
+      "type": "research",
+      "title": "Bain 发布《Reality Check: Agentic Commerce in Retail》",
+      "title_en": "Bain publishes 'Reality Check: Agentic Commerce in Retail'",
+      "summary": "Bain 于 2026-11-20 发布零售业 agentic commerce 现实检验研究。补扫说明：属上期窗口，回填。",
+      "summary_en": "Bain published 'Reality Check: Agentic Commerce in Retail' on November 20, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.bain.com/insights/",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 70,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "fti",
+      "date": "2026-11-16",
+      "type": "research",
+      "title": "FTI 发布工业行业研究：AI 整合正在重塑行业结构",
+      "title_en": "FTI publishes on the structural shift reshaping industrials: AI integration",
+      "summary": "FTI 于 2026-11-16 发布研究：AI 整合正在重塑工业行业结构。补扫说明：属上期窗口，回填。",
+      "summary_en": "FTI published research on AI integration reshaping industrials on November 16, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.fticonsulting.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "thought_leadership",
+        "industry_coverage"
+      ]
+    },
+    {
+      "company_id": "fti",
+      "date": "2026-11-18",
+      "type": "research",
+      "title": "FTI 发布阿联酋 AI 主管机构研究（UAE Federal Authority for AI and Data）",
+      "title_en": "FTI publishes on the UAE's Federal Authority for Artificial Intelligence and Data",
+      "summary": "FTI 于 2026-11-18 发布阿联酋 AI 与数据主管机构研究，中东 AI 治理版图信号。补扫说明：属上期窗口，回填。",
+      "summary_en": "FTI published research on the UAE's Federal Authority for Artificial Intelligence and Data on November 18, 2026. Backfilled via the RSS matrix.",
+      "url": "https://www.fticonsulting.com/insights",
+      "source_level": "official",
+      "confidence": "high",
+      "discovery_channel": "dimension_sweep_rss_matrix",
+      "verification_status": "partially_verified",
+      "event_score": 68,
+      "dimension_tags": [
+        "governance_risk",
+        "industry_coverage"
+      ]
     }
   ]
 }

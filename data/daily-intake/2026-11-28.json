@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "research_date": "2026-11-28",
+    "timezone": "Asia/Shanghai",
+    "leaderboard_snapshot_date": "2026-11-21",
+    "status": "staging",
+    "collection_method": "双周合并更新（窗口 11-16 至 11-28）：RSS 查询矩阵 7 条 × when:14d + WebSearch 核实；上期（11-21 轮，另一会话执行）漏网 7 条回填，本期净新增 8 条",
+    "notes": "Deloitte 黑五调查因 AI 关联度弱未入；Accenture 葡萄牙 950 裁员（与 Meta 相关）非正向 AI 信号未入；Accenture AI 合规/监管数据两条 Yahoo 分析为投资评论未入；FTI 假日零售调查 AI 关联弱未入。"
+  },
+  "items": []
+}
